@@ -3,7 +3,6 @@
     "lang_name": "English",
     "lang_code": "en"
   },
-
   "nav": {
     "overview": "Overview",
     "merchant": "Merchant",
@@ -18,14 +17,12 @@
   "header": {
     "brand": "MPay Network"
   },
-
   "sidebar": {
     "book_title": "Consumer Wallet Docs",
     "section_getting_started": "Getting Started",
     "section_using_wallet": "Using Your Wallet",
     "section_settings": "Settings & Support",
     "section_other_docs": "Other Docs",
-
     "link_overview": "Overview",
     "link_getting_started": "Getting Started",
     "link_account_setup": "Account Setup",
@@ -38,7 +35,6 @@
     "link_consumer_docs": "Consumer Wallet Docs",
     "link_changelog": "Changelog"
   },
-
   "breadcrumb": {
     "docs": "Docs",
     "consumer_wallet": "Consumer Wallet",
@@ -57,13 +53,11 @@
     "security": "Security",
     "settings_security": "Settings & Security"
   },
-
   "page": {
     "title": "Getting Started with Consumer Wallet",
     "subtitle": "Everything you need to download, install, and set up your mPay Consumer Wallet. Follow this step-by-step guide to start making fast, secure payments in minutes.",
     "time_badge": "Estimated setup time: 5 minutes"
   },
-
   "toc": {
     "on_this_page": "On This Page",
     "requirements": "System Requirements",
@@ -76,7 +70,6 @@
     "screenshots": "Setup Walkthrough",
     "faq": "FAQ"
   },
-
   "requirements": {
     "heading": "System Requirements",
     "intro": "Before downloading, make sure your device meets the minimum requirements:",
@@ -91,7 +84,6 @@
     "nfc_callout_title": "NFC Requirement",
     "nfc_callout_body": "For tap-to-pay functionality, your device must have NFC hardware. Most modern smartphones (iPhone 7+ and Android with NFC) support this feature."
   },
-
   "download": {
     "heading": "Download & Install",
     "intro": "mPay Consumer Wallet is available for free on both major app stores. Choose your platform below:",
@@ -121,7 +113,6 @@
     "verify_callout_title": "Verify the Developer",
     "verify_callout_body": "Always verify that the developer is listed as \"mPay Network\" before downloading. Do not install apps from unofficial sources."
   },
-
   "signup": {
     "heading": "Sign Up",
     "intro": "Creating your mPay account is quick and straightforward. You'll need a valid phone number and email address.",
@@ -163,7 +154,6 @@
     "success_callout_title": "Account Created!",
     "success_callout_body": "Once you see the confirmation screen, your account is ready. You can now proceed to set up your profile and configure your wallet."
   },
-
   "first_login": {
     "heading": "First Login & Setup",
     "intro": "After creating your account, you'll be guided through the initial setup wizard. Here's what to expect:",
@@ -205,7 +195,6 @@
     "tip_callout_title": "Tip: Complete Verification Early",
     "tip_callout_body": "Verification process may take 24 to 48 hours, it is advisable to complete the profile as soon as possible in order to gain full access to mPay Wallet features."
   },
-
   "screenshots": {
     "heading": "Setup Walkthrough",
     "intro": "Here's a visual overview of the key screens you'll encounter during setup:",
@@ -228,7 +217,6 @@
     "step6_sublabel": "Dashboard Ready",
     "step6_caption": "Step 6: All Set!"
   },
-
   "faq": {
     "heading": "Frequently Asked Questions",
     "q1": "Can I use mPay Wallet on multiple devices?",
@@ -244,14 +232,12 @@
     "q6": "Is my personal data secure during registration?",
     "a6": "Absolutely. All data transmitted during registration is encrypted using industry-standard TLS 1.3. Your personal information is stored securely and never shared with third parties without your consent. Read our Privacy Policy for complete details on how we handle your data."
   },
-
   "pagination": {
     "previous": "Previous",
     "next": "Next",
     "prev_title": "Consumer Docs Home",
     "next_title": "Account Setup & Verification"
   },
-
   "lang_switcher": {
     "label": "Language"
   },
@@ -2050,5 +2036,304 @@
         "excerpt": "A comprehensive breakdown of MPay Network's fee structure, transaction limits, and how to optimize your costs as a merchant or consumer."
       }
     }
+  },
+  "dev_intro": {
+    "title": "Introduction",
+    "description": "Build complete applications from concept to deployment with an intelligent, agent-driven platform. Design, develop, test, secure, and launch—all in one place—while maintaining full human oversight at every stage."
+  },
+  "dev_features": {
+    "title": "Key Features",
+    "f1": {
+      "title": "Design Before Code",
+      "desc": "Plan your application thoroughly before writing a single line of code. Define the UI, system architecture, and functional specifications upfront to ensure a clear development roadmap and reduce costly iterations later."
+    },
+    "f2": {
+      "title": "Voice & Chat Driven",
+      "desc": "Interact with intelligent AI agents using natural voice or text commands. Build, modify, and refine your app in real time, making development intuitive, fast, and accessible even without deep programming expertise."
+    },
+    "f3": {
+      "title": "Post-Deployment Agents",
+      "desc": "Your AI assistants don't stop working when your app goes live. Continuously monitor, optimize, and enhance your application after deployment, ensuring it evolves alongside user needs and market trends."
+    },
+    "f4": {
+      "title": "Human Oversight",
+      "desc": "Maintain full control throughout the development lifecycle. Review every decision, approve updates, and guide the AI, combining automation with human judgment for reliable and high-quality results."
+    }
+  },
+  "dev_dashboard": {
+    "title": "Dashboard",
+    "intro": "This dashboard provides a clear, organized view of all your projects in one place. Key features include:",
+    "f1_title": "Project Overview:",
+    "f1_desc": "Each project is displayed as a card showing the project name and a brief description. This allows for quick recognition and easy access.",
+    "f2_title": "Search Functionality:",
+    "f2_desc": "A search bar at the top lets you find projects quickly by name.",
+    "f3_title": "Create & Manage Projects:",
+    "f3_desc": "Easily start a new project with the \"Create New Project\" button or log out with a single click.",
+    "f4_title": "Project Navigation:",
+    "f4_desc": "Clicking on a project card takes you directly to that project's workspace for further management and development.",
+    "f5_title": "Clean & Minimal Layout:",
+    "f5_desc": "The interface is simple and intuitive, focusing on productivity without distractions.",
+    "f6_title": "Project Count Indicator:",
+    "f6_desc": "Displays the total number of projects at the bottom right, helping users track their workload.",
+    "outro": "This dashboard acts as a central hub for managing, accessing, and launching all your ongoing projects efficiently."
+  },
+  "dev_create_project": {
+    "title": "Create a New Project",
+    "how_to_title": "How to Create a New Project",
+    "step1": "In the Dashboard, click on Create a New Project button",
+    "step2": "Enter the Project Name. Description is optional.",
+    "step3": "Click on Create Project button.",
+    "interface_intro": "This interface appears when a user chooses to create a new project from the dashboard. Key elements include:",
+    "f1_title": "Project Name Field:",
+    "f1_desc": "A text input where the user enters the name of their new project, e.g., \"My Awesome App.\" This is a required field.",
+    "f2_title": "Description Field:",
+    "f2_desc": "An optional text area for a brief description of the project, helping to clarify its purpose or scope.",
+    "f3_title": "Action Buttons:",
+    "f3_1": "<strong>Create Project</strong> – Confirms the creation of the project and adds it to the dashboard.",
+    "f3_2": "<strong>Cancel</strong> – Closes the popup without creating a project.",
+    "f4_title": "Clean Modal Design:",
+    "f4_desc": "The popup is centered with a minimal, distraction-free layout that clearly separates it from the blurred background dashboard.",
+    "f5_title": "User Guidance:",
+    "f5_desc": "Placeholder text in the fields guides the user on what information to provide.",
+    "outro": "This popup simplifies the process of starting a new project, ensuring users can quickly add and document their projects within the dashboard environment."
+  },
+  "dev_project_settings": {
+    "title": "Getting Started",
+    "intro": "This module is the essential configuration phase where you define the core identity and technical DNA of your application. This section bridges the gap between conceptualization and development by establishing the project's parameters, security protocols, and integration points.",
+    "core_obj_title": "Core Objectives:",
+    "obj1_title": "Architectural Alignment:",
+    "obj1_desc": "By selecting your specific Technology Stack (such as Node.js, Python, or C#), you calibrate the AI agents to generate code and documentation compatible with your preferred ecosystem.",
+    "obj2_title": "Environment Readiness:",
+    "obj2_desc": "Configure API Keys and Version Control to ensure your project is securely connected to external services and your codebase is tracked from day one.",
+    "obj3_title": "Legacy Integration:",
+    "obj3_desc": "Utilize the Reverse Engineer tool to ingest existing data or code, allowing the platform to understand and build upon your current technical foundation rather than starting from scratch.",
+    "submenus_title": "Getting started has the following core submenus:",
+    "sm1_title": "Project Settings",
+    "sm1_desc": "This is the command center for your application's identity. Use this section to define your Project Name and Description, and most importantly, configure your Technology Stack. By selecting your specific backend (e.g., Node.js), database, and frontend frameworks, you provide the necessary context for the AI agents to generate code and documentation that aligns with your environment.",
+    "sm2_title": "API Keys",
+    "sm2_desc": "Manage your secure connections and third-party integrations here. This section allows you to generate, store, and rotate Authentication Keys required for external services. Ensuring your API keys are correctly configured is essential for enabling seamless communication between your project and outside platforms.",
+    "sm3_title": "Version Control",
+    "sm3_desc": "Connect your project to your preferred Git provider (such as GitHub, GitLab, or Bitbucket). This section handles the synchronization between your local development environment and your remote repositories. You can track branch deployments, manage commits, and ensure that your codebase is properly versioned as you progress.",
+    "sm4_title": "Reverse Engineer",
+    "sm4_desc": "Accelerate your development by importing existing assets. This tool allows you to upload current codebases, database schemas, or documentation so the platform can \"read\" your existing work. It maps out your current architecture, making it easier to build new features that are consistent with your established logic and structure.",
+    "ps_title": "Project Settings",
+    "ps_intro": "The Project Settings page is where you establish the high-level identity of your project and calibrate the AI engine. The selections made here act as a \"North Star\" for all subsequent automated generations, ensuring that the code, diagrams, and business logic produced later are compatible with your specific environment.",
+    "ps_1_title": "1. General Information",
+    "ps_1_desc": "This subsection defines the metadata for your project.",
+    "ps_1_f1_title": "Project Name:",
+    "ps_1_f1_desc": "Enter a unique identifier for your application (e.g., Study_Tool). This name will appear across all exported documentation and reports.",
+    "ps_1_f2_title": "Description:",
+    "ps_1_f2_desc": "Provide a concise summary of the project's purpose. A well-defined description helps the AI contextualize the functional requirements and user roles it will generate later in the process.",
+    "ps_2_title": "2. Technology Stack Configuration",
+    "ps_2_desc": "The Technology Stack is the most critical component of the settings. It guides the AI agents in producing framework-specific syntax and architectural patterns.",
+    "ps_2_1_title": "2.1 Server / Backend",
+    "ps_2_1_desc": "Select the primary language and framework that will power your application logic. The system supports a wide array of environments, including:",
+    "ps_2_1_l1": "<strong>JavaScript/TypeScript:</strong> Node.js (Express, NestJS, Fastify, Koa, Hapi, AdonisJS).",
+    "ps_2_1_l2": "<strong>Python:</strong> Django, Flask, FastAPI, Tornado, Pyramid, Bottle, Sanic.",
+    "ps_2_1_l3": "<strong>PHP:</strong> Laravel, Symfony, Slim, CodeIgniter, Yii, CakePHP, Lumen.",
+    "ps_2_1_l4": "<strong>C#:</strong> ASP.NET Core, ASP.NET MVC, Web API, Blazor, Minimal API.",
+    "ps_2_2_title": "2.2 Database",
+    "ps_2_2_desc": "Identify the data persistence layer for your project. This selection informs how Data Objects and Database Schemas are visualized and scripted (e.g., SQL-based relational models vs. NoSQL document structures).",
+    "ps_2_3_title": "2.3 UI / Frontend Configuration",
+    "ps_2_3_desc": "The UI/Frontend section is dedicated to defining the \"Client Side\" of your application. This configuration ensures that the AI-generated user interfaces, component libraries, and frontend logic are consistent with modern web or mobile standards.",
+    "bp_title": "Implementation Best Practices",
+    "bp_desc": "To ensure the highest accuracy in your project outputs, follow these guidelines:",
+    "bp_1_title": "Precision Matters:",
+    "bp_1_desc": "Selecting a specific framework (like Node.js - NestJS) rather than a generic runtime (like Node.js) allows the system to generate more precise boilerplate code and folder structures.",
+    "bp_2_title": "Save Changes:",
+    "bp_2_desc": "Always click the Save Changes button in the top-right corner before navigating to other sections like API Keys or Business Flows to avoid losing your configuration.",
+    "bp_3_title": "Iterative Updates:",
+    "bp_3_desc": "You can return to this section at any time to update your stack if your project requirements pivot during the ideation phase."
+  },
+  "dev_api_keys": {
+    "title": "API Keys",
+    "intro": "The API Keys section is the central hub for managing your application's secure access to integrated AI models and third-party services. This page is split into two primary areas:",
+    "area1_title": "Key Management:",
+    "area1_desc": "Where you can view, create, and secure your personal API keys.",
+    "area2_title": "Usage Dashboard:",
+    "area2_desc": "Where you can track api requests, token consumption, and associated costs across all active models in real-time.",
+    "access_note": "Access this section from the main sidebar under the <strong>Getting Started</strong> category.",
+    "managing_title": "Managing Your Personal API Keys",
+    "managing_intro": "This section, found at the top of the page, lists all API keys currently configured for your account.",
+    "viewing_keys_title": "1. Viewing Keys",
+    "viewing_keys_desc": "If no keys have been set up yet, the dashboard will display a key icon with the message \"No personal API keys configured.\"",
+    "creating_keys_title": "2. Creating a New Key",
+    "creating_keys_step1": "Click the blue <strong>\"+ Add New Key\"</strong> button.",
+    "creating_keys_step2": "Follow the prompt to name and configure your new API key.",
+    "creating_keys_step3": "<strong>Warning:</strong> Ensure you copy and securely store the key upon creation. For security reasons, the full key may not be displayed again.",
+    "dashboard_title": "3. Usage Dashboard (Scrollable Section)",
+    "dashboard_intro": "The Usage Dashboard provides granular, real-time analytics on your project's interaction with the integrated AI services (e.g., Claude, Gemini).",
+    "dashboard_3_1_title": "3.1. Filter and Control",
+    "dashboard_3_1_intro": "Located in the top-right corner of the dashboard panel.",
+    "dashboard_3_1_f1_title": "Timeframe Filter:",
+    "dashboard_3_1_f1_desc": "Use the dropdown menu (e.g., \"Last 30 days\") to change the period for which data is displayed.",
+    "dashboard_3_1_f2_title": "Refresh Button:",
+    "dashboard_3_1_f2_desc": "Click this icon to instantly update all dashboard metrics with the latest data.",
+    "dashboard_3_2_title": "3.2. Key Metrics Overview",
+    "dashboard_3_2_intro": "Four key metric cards summarize the activity for the selected timeframe.",
+    "dashboard_3_2_f1_title": "Total Requests:",
+    "dashboard_3_2_f1_desc": "The aggregate number of distinct calls made to all API models.",
+    "dashboard_3_2_f2_title": "Total Tokens:",
+    "dashboard_3_2_f2_desc": "The total combined number of tokens processed (Prompt + Completion).",
+    "dashboard_3_2_f3_title": "Approx. Cost:",
+    "dashboard_3_2_f3_desc": "The estimated financial cost, in USD, accrued based on the current usage period.",
+    "dashboard_3_2_f4_title": "Cache Read Tokens:",
+    "dashboard_3_2_f4_desc": "The number of tokens retrieved from the cache, which often saves time and cost.",
+    "analyzing_title": "4. Analyzing Usage Data",
+    "analyzing_intro": "Below the key metric cards are detailed visualizations and tables for deeper analysis.",
+    "analyzing_4_1_title": "4.1. Daily Usage Chart",
+    "analyzing_4_1_intro": "This bar chart illustrates your Daily Usage (Tokens) over time.",
+    "analyzing_4_1_f1_title": "Hovering:",
+    "analyzing_4_1_f1_desc": "Hover over individual bars to see the exact token breakdown for that specific day, segmented by model.",
+    "analyzing_4_1_f2_title": "Legend:",
+    "analyzing_4_1_f2_desc": "The legend (e.g., claude-opus-4-x, gemini-1-5-pro-preview) shows which models are contributing to the daily volume.",
+    "analyzing_4_2_title": "4.2. Usage by Model",
+    "analyzing_4_2_intro": "This detailed table breaks down performance metrics by specific AI model:",
+    "model_cols": [
+      "<strong>MODEL:</strong> The name and provider of the AI model.",
+      "<strong>REQUESTS:</strong> Number of requests made to this specific model.",
+      "<strong>PROMPT TOKENS:</strong> Tokens sent to the model (input).",
+      "<strong>COMPLETION TOKENS:</strong> Tokens generated by the model (output).",
+      "<strong>TOTAL TOKENS:</strong> The sum of prompt and completion tokens.",
+      "<strong>CACHE READ/WRITE:</strong> Tokens retrieved from cache versus those written to cache.",
+      "<strong>AVG TIME:</strong> Average latency (response time) for requests.",
+      "<strong>COST:</strong> The specific cost associated with using that individual model."
+    ],
+    "transaction_title": "4.3. Transaction History (Detailed Logs)",
+    "transaction_intro": "Located at the bottom of the page (scroll down), this table provides a high-level transaction log for every single request.",
+    "filtering_title": "Filtering and Sorting",
+    "filtering_f1_title": "All Models Dropdown:",
+    "filtering_f1_desc": "Filter the log to show only transactions for a specific model (e.g., view only Claude logs).",
+    "filtering_f2_title": "All Status Dropdown:",
+    "filtering_f2_desc": "Filter by transaction status (e.g., view only \"Success\" or \"Error\" transactions).",
+    "log_title": "Log Data Columns",
+    "log_cols": [
+      "<strong>TIME:</strong> The exact timestamp of the request.",
+      "<strong>TOTAL TOKENS:</strong> The tokens used in that specific request.",
+      "<strong>CACHE READ/WRITE:</strong> Cache performance for that specific request.",
+      "<strong>TIME (MS):</strong> The total execution time of the request in milliseconds.",
+      "<strong>COST:</strong> The exact cost, in USD, incurred by this single transaction."
+    ]
+  },
+  "dev_vc": {
+    "title": "Version Control",
+    "intro": "The Version Control page is where you manage your project's integration with Git-based platforms (e.g., GitHub, GitLab, Bitbucket). By connecting a repository, you enable the platform to push updates, track changes, and maintain a \"Source of Truth\" for your application's codebase.",
+    "table_title": "Version Control Integrations Table",
+    "table_intro": "The main dashboard displays all active repository connections. The table includes the following key information:",
+    "table_f1_title": "Integration:",
+    "table_f1_desc": "The name of the connection (e.g., <em>Main Repository</em>). A folder icon indicates the specific directory mapping within the repository.",
+    "table_f2_title": "Repository:",
+    "table_f2_desc": "The full URL path to your remote Git repository (e.g., https://gitlab.com/.../studytool.git).",
+    "table_f3_title": "Branch:",
+    "table_f3_desc": "The specific branch currently targeted for synchronization (e.g., main).",
+    "table_f4_title": "Status:",
+    "table_f4_desc": "Indicates the current health of the connection. A <strong>CONNECTED</strong> badge signifies that the platform has successful read/write access.",
+    "table_f5_title": "Last Sync:",
+    "table_f5_desc": "Displays the timestamp of the most recent data exchange between the platform and your repository.",
+    "actions_title": "Management Actions",
+    "actions_intro": "On the right side of each integration row, you will find several quick-action icons to manage your repository:",
+    "actions_f1_title": "Sync History (Clock Icon):",
+    "actions_f1_desc": "View a log of previous synchronization events, including commits and updates.",
+    "actions_f2_title": "Push/Pull (Upload/Download Icons):",
+    "actions_f2_desc": "Manually trigger a data transfer. Use <strong>Push</strong> to send platform changes to your Git provider, or <strong>Pull</strong> to update the platform with external changes.",
+    "actions_f3_title": "Edit Integration (Pencil Icon):",
+    "actions_f3_desc": "Modify the connection settings, such as changing the target branch or updating credentials.",
+    "actions_f4_title": "Delete (Trash Icon):",
+    "actions_f4_desc": "Remove the integration from the project. <em>Note: This will stop synchronization but will not delete the code from your Git provider.</em>",
+    "bp_title": "Best Practices",
+    "bp_1_title": "Target Specific Branches:",
+    "bp_1_desc": "It is highly recommended to use a dedicated development or \"staging\" branch rather than your primary production branch to safely review generated code before merging.",
+    "bp_2_title": "Check Sync Status:",
+    "bp_2_desc": "Always verify the <strong>Last Sync</strong> time before starting a new design or ideation session to ensure you are working with the most recent version of your project.",
+    "bp_3_title": "Manual Refresh:",
+    "bp_3_desc": "Use the <strong>Refresh</strong> icon in the top-right corner of the panel to update the connection status if you have recently made changes on your Git provider's website."
+  },
+  "dev_re": {
+    "title": "Reverse Engineering",
+    "overview_title": "Overview",
+    "overview_desc": "The Reverse Engineer module utilizes AI-powered analysis to deconstruct your existing codebase, database schemas, or legacy documentation. It transforms raw data into <strong>Structured Concepts</strong>, allowing the platform to understand your current logic and build upon it without manual data entry.",
+    "tasks_title": "Diffusion Vision Tasks",
+    "tasks_intro": "This dashboard manages your reverse engineering workflows.",
+    "tasks_f1_title": "Task Status:",
+    "tasks_f1_desc": "If no analysis has been performed, the screen displays \"No reverse engineering tasks yet.\" * <strong>Process Flow:</strong> Once a task is initiated, this area will track the progress of the AI's analysis, displaying task names, timestamps, and completion statuses.",
+    "features_title": "Key Features & Functionality",
+    "features_f1_title": "Codebase Analysis:",
+    "features_f1_desc": "Upload or link existing source code to identify data structures, API endpoints, and business logic.",
+    "features_f2_title": "Schema Mapping:",
+    "features_f2_desc": "Ingest database SQL files to automatically generate <strong>Data Objects</strong> within the platform.",
+    "features_f3_title": "Structured Concept Generation:",
+    "features_f3_desc": "The AI converts its findings into high-level concepts that populate the Concept, Business Flows, and Data Objects sections in the sidebar.",
+    "start_title": "How to Start Reverse Engineering",
+    "start_intro": "To begin an analysis task:",
+    "start_step1": "Click the blue \"Start Reverse Engineer\" button (found both in the center of the screen and the top-right corner).",
+    "start_step2": "Select your <strong>Source Type</strong> (e.g., File Upload, Git Repository Link, or Database Connection).",
+    "start_step3": "Configure the <strong>Scope</strong> of the analysis by selecting specific folders or tables to include.",
+    "start_step4": "Launch the task and monitor the <strong>Diffusion Vision Tasks</strong> list for real-time updates.",
+    "why_title": "Why Use Reverse Engineering?",
+    "why_f1_title": "Accelerated Onboarding:",
+    "why_f1_desc": "Quickly bring an existing project or legacy system into the platform for modernization.",
+    "why_f2_title": "Consistency:",
+    "why_f2_desc": "Ensure that new features developed in the <strong>Development</strong> section are 100% compatible with your existing data structures.",
+    "why_f3_title": "Documentation Recovery:",
+    "why_f3_desc": "Generate fresh <strong>Requirements Docs</strong> and <strong>Technical Diagrams</strong> for projects that currently lack them."
+  },
+  "dev_struc": {
+    "title": "Structure & Ideation",
+    "intro_1": "The <strong>Structure & Ideation</strong> section is the architectural heart of the platform. It is here that the high-level goals defined in your <strong>Requirements</strong> are decomposed into functional, technical, and logical building blocks.",
+    "intro_2": "This section serves as a bridge, turning \"what\" the system should do into \"how\" it will actually work."
+  },
+  "dev_req": {
+    "submenu_title": "Structure & Ideation has the following submenus:",
+    "title": "1. Requirements",
+    "intro": "As the entry point for this category, this page stores the core vision of your project. It acts as the \"Source of Truth.\" Every other item in this menu is derived from the text provided here.",
+    "f1_title": "Usage:",
+    "f1_desc": "Define your MVP (Minimum Viable Product) features and user roles.",
+    "action_desc": "In this section, you can modify or add new requirements. Once all good, click on <strong>Save Requirements</strong> button."
+  },
+  "dev_concept": {
+    "title": "2. Concept",
+    "intro": "This module breaks your requirements down into individual <strong>Concept Blocks</strong>. For a project like \"Study Tool,\" concepts might include <em>User Authentication</em>, <em>Document Parsing</em>, or <em>Adaptive Algorithm</em>.",
+    "f1_title": "Usage:",
+    "f1_desc": "Map out the \"big ideas\" of your software to ensure all required functionality is accounted for."
+  },
+  "dev_bf": {
+    "title": "3. Business Flows",
+    "intro": "Business Flows visualize the step-by-step journey a user takes to complete a task.",
+    "f1_title": "Example:",
+    "f1_desc": "The sequence of events from a student uploading a PDF to the AI generating a summary and quiz.",
+    "f2_title": "Usage:",
+    "f2_desc": "Identify bottlenecks in the user experience before a single line of code is written."
+  },
+  "dev_do": {
+    "title": "4. Data Objects",
+    "intro": "This section defines the \"nouns\" of your system&mdash;the data structures that will be stored in your database.",
+    "f1_title": "Examples:",
+    "f1_desc": "User, StudyMaterial, QuizResult, SubscriptionPlan.",
+    "f2_title": "Usage:",
+    "f2_desc": "Define properties (e.g., email, timestamp, score) and how these objects relate to one another."
+  },
+  "dev_roles": {
+    "title": "5. Roles & Permissions",
+    "intro": "Security starts here. Define what different user types can see and do within the application.",
+    "f1_title": "Example:",
+    "f1_desc": "An Admin can delete users, while a Student can only view their own study materials.",
+    "f2_title": "Usage:",
+    "f2_desc": "Establish the Access Control List (ACL) for your API and Frontend."
+  },
+  "dev_br": {
+    "title": "6. Business Rules",
+    "intro": "Business Rules are the \"if/then\" logic that governs your app's behavior, independent of the code.",
+    "f1_title": "Example:",
+    "f1_desc": "\"If a user has a Free tier account, they can only upload 1 document per month.\"",
+    "f2_title": "Usage:",
+    "f2_desc": "Centralize the logic that determines how the business operates."
+  },
+  "dev_int": {
+    "title": "7. Integration Maps",
+    "intro": "This tool outlines how your application communicates with external systems.",
+    "f1_title": "Example:",
+    "f1_desc": "How your app talks to a Payment Gateway (Stripe) or an AI Model (OpenAI/Claude).",
+    "f2_title": "Usage:",
+    "f2_desc": "Visualize the data exchange points between your system and the outside world."
   }
 }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Consumer Wallet Docs - Home</title>
+    <title>Think4Ever Dev - Dashboard</title>
     <link href="css/theme.css" rel="stylesheet" type="text/css" />
     <link
       rel="stylesheet"
@@ -38,7 +38,6 @@
         backdrop-filter: saturate(180%) blur(20px);
         -webkit-backdrop-filter: saturate(180%) blur(20px);
         border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-        /* Matches sidebar right-border */
         z-index: 300;
         display: flex;
         align-items: center;
@@ -48,7 +47,6 @@
       .modern-header-inner {
         width: 100%;
         display: flex;
-        /* 100% width, no max-width */
         align-items: center;
         height: 100%;
       }
@@ -57,7 +55,6 @@
         display: flex;
         align-items: center;
         padding-left: 36px;
-        /* Matches sidebar exact width (36px + 240px + 24px) */
         height: 100%;
         box-sizing: border-box;
       }
@@ -83,7 +80,6 @@
         justify-content: space-between;
         flex: 1;
         padding: 0 40px;
-        /* Space inside the right part of the header */
         height: 100%;
       }
 
@@ -91,84 +87,6 @@
         display: flex;
         align-items: center;
         gap: 16px;
-      }
-
-      .modern-search-btn {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 220px;
-        padding: 8px 12px;
-        background-color: #f4f4f5;
-        border: 1px solid transparent;
-        border-radius: 8px;
-        font-family: 'Inter', sans-serif;
-        font-size: 0.875rem;
-        color: #71717a;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        outline: none;
-        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.02);
-      }
-
-      .modern-search-btn:hover {
-        background-color: #fff;
-        border-color: #e4e4e7;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-        color: #3f3f46;
-      }
-
-      .modern-search-btn .search-content {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .modern-search-btn .search-icon {
-        color: #a1a1aa;
-        font-size: 0.85rem;
-      }
-
-      .modern-search-shortcuts {
-        display: flex;
-        align-items: center;
-        gap: 4px;
-      }
-
-      .modern-search-shortcuts kbd {
-        font-family:
-          ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-        font-size: 0.7rem;
-        font-weight: 500;
-        padding: 2px 5px;
-        background-color: #fff;
-        border: 1px solid #e4e4e7;
-        border-radius: 4px;
-        color: #a1a1aa;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.02);
-      }
-
-      .modern-cta-btn {
-        padding: 8px 16px;
-        background: linear-gradient(180deg, #18181b 0%, #09090b 100%);
-        color: #ffffff;
-        border: 1px solid #000;
-        border-radius: 8px;
-        font-family: 'Inter', sans-serif;
-        font-size: 0.875rem;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        box-shadow:
-          0 1px 2px rgba(0, 0, 0, 0.1),
-          inset 0 1px 1px rgba(255, 255, 255, 0.15);
-      }
-
-      .modern-cta-btn:hover {
-        background: linear-gradient(180deg, #27272a 0%, #18181b 100%);
-        box-shadow:
-          0 3px 6px rgba(0, 0, 0, 0.15),
-          inset 0 1px 1px rgba(255, 255, 255, 0.15);
       }
 
       /* Responsive Utilities */
@@ -185,7 +103,6 @@
         max-width: 100% !important;
         width: 100% !important;
         margin: 0 !important;
-        /* Header height */
         display: flex !important;
         background: #ffffff;
       }
@@ -195,11 +112,7 @@
         width: 240px !important;
         min-width: 240px !important;
         background: #f8fafc !important;
-        /* Elegant subtle slate-50 */
         border-right: 1px solid #e2e8f0 !important;
-        /* Soft premium border */
-
-        /* Hardcode to match user fix */
         padding-left: 36px !important;
         padding-right: 24px !important;
         padding-top: 36px !important;
@@ -214,7 +127,6 @@
 
       .cd-sidebar-header h3 {
         color: #0f172a !important;
-        /* Slate 900 */
         font-family: 'Inter', sans-serif !important;
         font-size: 0.9375rem !important;
         font-weight: 600 !important;
@@ -226,7 +138,6 @@
 
       .cd-sidebar-header h3 i {
         color: #3b82f6 !important;
-        /* Bright blue pop for the wallet icon */
         margin-right: 10px !important;
         font-size: 1.1rem !important;
       }
@@ -240,7 +151,6 @@
         font-size: 0.725rem !important;
         font-weight: 600 !important;
         color: #64748b !important;
-        /* Slate 500 */
         text-transform: uppercase !important;
         letter-spacing: 0.08em !important;
         padding: 0 12px 10px 0 !important;
@@ -257,7 +167,6 @@
         font-family: 'Inter', sans-serif !important;
         font-size: 0.875rem !important;
         color: #475569 !important;
-        /* Slate 600 */
         border-radius: 6px !important;
         background: transparent !important;
         transition: all 0.2s ease !important;
@@ -272,14 +181,12 @@
         width: 24px !important;
         text-align: left !important;
         color: #94a3b8 !important;
-        /* Slate 400 */
         transition: color 0.2s ease !important;
         margin-top: 3px !important;
       }
 
       .cd-sidebar-nav li a:hover {
         background: #f1f5f9 !important;
-        /* Slate 100 */
         color: #0f172a !important;
       }
 
@@ -289,17 +196,13 @@
 
       .cd-sidebar-nav li a.active {
         background: #eff6ff !important;
-        /* Blue 50 */
         color: #1d4ed8 !important;
-        /* Blue 700 */
         font-weight: 600 !important;
         box-shadow: inset 3px 0 0 #3b82f6 !important;
-        /* Beautiful crisp active line on left */
       }
 
       .cd-sidebar-nav li a.active i {
         color: #2563eb !important;
-        /* Blue 600 */
       }
 
       .cd-main-content {
@@ -308,6 +211,27 @@
         padding-top: 56px !important;
         padding-left: 48px !important;
         padding-right: 48px !important;
+      }
+
+      /* Custom lists */
+      .cd-overview-ul {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        padding-left: 20px;
+        list-style-type: disc;
+      }
+
+      .cd-overview-ul li {
+        margin-bottom: 16px;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.9375rem;
+        color: #475569;
+        line-height: 1.6;
+      }
+
+      .cd-overview-ul li strong {
+        color: #0f172a;
+        font-weight: 600;
       }
     </style>
   </head>
@@ -357,24 +281,87 @@
         <div class="cgs-sidebar-overlay" id="cgsSidebarOverlay"></div>
         <!-- Sidebar -->
         <div id="consumerSidebar"></div>
+
         <!-- Main Content -->
         <main class="cd-main-content" id="cd-main">
           <!-- Page Title -->
           <h1
             class="cd-page-title"
             id="cdHomeTitle"
-            data-i18n="dev_intro.title"
+            data-i18n="dev_dashboard.title"
           >
-            Introduction
+            Dashboard
           </h1>
 
           <!-- Overview Section -->
           <section class="cd-overview" id="cdHomeOverview">
-            <p class="cd-overview-text" data-i18n="dev_intro.description">
-              Build complete applications from concept to deployment with an
-              intelligent, agent-driven platform. Design, develop, test, secure,
-              and launch—all in one place—while maintaining full human oversight
-              at every stage.
+            <p class="cd-overview-text" data-i18n="dev_dashboard.intro">
+              This dashboard provides a clear, organized view of all your
+              projects in one place. Key features include:
+            </p>
+
+            <ul class="cd-overview-ul">
+              <li>
+                <strong data-i18n="dev_dashboard.f1_title"
+                  >Project Overview:</strong
+                >
+                <span data-i18n="dev_dashboard.f1_desc"
+                  >Each project is displayed as a card showing the project name
+                  and a brief description. This allows for quick recognition and
+                  easy access.</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="dev_dashboard.f2_title"
+                  >Search Functionality:</strong
+                >
+                <span data-i18n="dev_dashboard.f2_desc"
+                  >A search bar at the top lets you find projects quickly by
+                  name.</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="dev_dashboard.f3_title"
+                  >Create & Manage Projects:</strong
+                >
+                <span data-i18n="dev_dashboard.f3_desc"
+                  >Easily start a new project with the "Create New Project"
+                  button or log out with a single click.</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="dev_dashboard.f4_title"
+                  >Project Navigation:</strong
+                >
+                <span data-i18n="dev_dashboard.f4_desc"
+                  >Clicking on a project card takes you directly to that
+                  project's workspace for further management and
+                  development.</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="dev_dashboard.f5_title"
+                  >Clean & Minimal Layout:</strong
+                >
+                <span data-i18n="dev_dashboard.f5_desc"
+                  >The interface is simple and intuitive, focusing on
+                  productivity without distractions.</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="dev_dashboard.f6_title"
+                  >Project Count Indicator:</strong
+                >
+                <span data-i18n="dev_dashboard.f6_desc"
+                  >Displays the total number of projects at the bottom right,
+                  helping users track their workload.</span
+                >
+              </li>
+            </ul>
+
+            <p class="cd-overview-text" data-i18n="dev_dashboard.outro">
+              This dashboard acts as a central hub for managing, accessing, and
+              launching all your ongoing projects efficiently.
             </p>
 
             <div
@@ -386,8 +373,8 @@
               "
             >
               <img
-                src="assets/images/introduction.png"
-                alt="Platform Overview"
+                src="assets/images/dashboard.jpg"
+                alt="Dashboard Overview Diagram"
                 style="
                   max-width: 100%;
                   border-radius: 8px;

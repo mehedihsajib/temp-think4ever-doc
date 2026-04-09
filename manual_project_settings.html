@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Think4Ever Dev - Project Settings (Getting Started)</title>
+    <link href="css/theme.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/consumer_docs_home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="assets/js/i18n.js"></script>
+    <style>
+      /* Basic reset for preview consistency */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: #f8fafc;
+      }
+
+      /* Premium Modern Header Styles */
+      .modern-header {
+        font-family: 'Inter', sans-serif;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 64px;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: saturate(180%) blur(20px);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        z-index: 300;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease;
+      }
+
+      .modern-header-inner {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+
+      .modern-header-logo-plate {
+        display: flex;
+        align-items: center;
+        padding-left: 36px;
+        height: 100%;
+        box-sizing: border-box;
+      }
+
+      .modern-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .modern-logo span {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #0f172a;
+        letter-spacing: -0.04em;
+      }
+
+      .modern-header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
+        padding: 0 40px;
+        height: 100%;
+      }
+
+      .modern-header-actions {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      /* Responsive Utilities */
+      @media (max-width: 1024px) {
+        .modern-header-logo-plate {
+          width: 240px;
+          min-width: 240px;
+          padding-left: 24px;
+        }
+      }
+
+      /* Modern Layout Overrides */
+      .consumer-docs-layout {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        display: flex !important;
+        background: #ffffff;
+      }
+
+      .cd-sidebar {
+        box-sizing: content-box !important;
+        width: 240px !important;
+        min-width: 240px !important;
+        background: #fcfcfd !important;
+        border-right: 1px solid #e2e8f0 !important;
+        padding-left: 36px !important;
+        padding-right: 24px !important;
+        padding-top: 36px !important;
+      }
+
+      .cd-main-content {
+        max-width: 1000px !important;
+        background: #ffffff !important;
+        padding-top: 56px !important;
+        padding-left: 56px !important;
+        padding-right: 56px !important;
+        padding-bottom: 100px !important;
+      }
+
+      /* Custom lists */
+      .cd-overview-ul {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        padding-left: 20px;
+        list-style-type: disc;
+      }
+
+      .cd-overview-ol {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        padding-left: 24px;
+        list-style-type: decimal;
+      }
+
+      .cd-overview-ul li,
+      .cd-overview-ol li {
+        margin-bottom: 16px;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.9375rem;
+        color: #475569;
+        line-height: 1.6;
+      }
+
+      .cd-overview-ul li strong,
+      .cd-overview-ol li strong {
+        color: #0f172a;
+        font-weight: 600;
+      }
+
+      .sub-list {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        padding-left: 20px;
+        list-style-type: circle;
+      }
+
+      .section-heading {
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        color: #1e293b;
+        margin-top: 48px;
+        margin-bottom: 16px;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 8px;
+      }
+
+      .sub-heading {
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        color: #334155;
+        margin-top: 32px;
+        margin-bottom: 12px;
+      }
+
+      .feature-box {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 24px;
+        margin: 24px 0;
+      }
+
+      .feature-box h4 {
+        margin-top: 0;
+        color: #0f172a;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.05rem;
+      }
+
+      .demo-img {
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e2e8f0;
+        margin-top: 24px;
+        margin-bottom: 32px;
+      }
+
+      /* Specific stylings matching the user request for varied design */
+      .bp-box {
+        background: #fffbeb;
+        border-left: 4px solid #fbbf24;
+        padding: 20px;
+        border-radius: 0 8px 8px 0;
+        margin-top: 32px;
+      }
+
+      .bp-box h3 {
+        color: #b45309;
+        margin-top: 0;
+        margin-bottom: 12px;
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="consumer-docs-home consumer-getting-started">
+      <!-- Site Header -->
+      <header class="modern-header" id="consumerHeader"></header>
+
+      <div class="consumer-docs-layout">
+        <!-- Sidebar -->
+        <div id="consumerSidebar"></div>
+
+        <!-- Main Content -->
+        <main class="cd-main-content" id="cd-main">
+          <!-- Page Title -->
+          <h1
+            class="cd-page-title"
+            id="cdHomeTitle"
+            data-i18n="dev_project_settings.title"
+          >
+            Getting Started
+          </h1>
+
+          <section class="cd-overview" id="cdHomeOverview">
+            <p class="cd-overview-text" data-i18n="dev_project_settings.intro">
+              This module is the essential configuration phase where you define
+              the core identity and technical DNA of your application. This
+              section bridges the gap between conceptualization and development
+              by establishing the project's parameters, security protocols, and
+              integration points.
+            </p>
+
+            <h3
+              class="sub-heading"
+              data-i18n="dev_project_settings.core_obj_title"
+              style="color: #0f172a"
+            >
+              Core Objectives:
+            </h3>
+            <ul class="cd-overview-ul">
+              <li>
+                <strong data-i18n="dev_project_settings.obj1_title"
+                  >Architectural Alignment:</strong
+                >
+                <span data-i18n="dev_project_settings.obj1_desc"
+                  >By selecting your specific Technology Stack (such as Node.js,
+                  Python, or C#), you calibrate the AI agents to generate code
+                  and documentation compatible with your preferred
+                  ecosystem.</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="dev_project_settings.obj2_title"
+                  >Environment Readiness:</strong
+                >
+                <span data-i18n="dev_project_settings.obj2_desc"
+                  >Configure API Keys and Version Control to ensure your project
+                  is securely connected to external services and your codebase
+                  is tracked from day one.</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="dev_project_settings.obj3_title"
+                  >Legacy Integration:</strong
+                >
+                <span data-i18n="dev_project_settings.obj3_desc"
+                  >Utilize the Reverse Engineer tool to ingest existing data or
+                  code, allowing the platform to understand and build upon your
+                  current technical foundation rather than starting from
+                  scratch.</span
+                >
+              </li>
+            </ul>
+
+            <img
+              src="assets/images/get-started-1.jpg"
+              alt="Project Settings Initial"
+              class="demo-img"
+            />
+
+            <h2
+              class="section-heading"
+              data-i18n="dev_project_settings.submenus_title"
+              style="border: none; margin-bottom: 0"
+            >
+              Getting started has the following core submenus:
+            </h2>
+            <img
+              src="assets/images/get-started-2.jpg"
+              alt="Submenus"
+              class="demo-img"
+              style="max-width: 250px; margin-top: 16px"
+            />
+
+            <div class="feature-box">
+              <h4 data-i18n="dev_project_settings.sm1_title">
+                Project Settings
+              </h4>
+              <p
+                style="
+                  font-family: 'Inter', sans-serif;
+                  font-size: 0.9375rem;
+                  color: #475569;
+                  line-height: 1.6;
+                  margin-top: 8px;
+                "
+                data-i18n="dev_project_settings.sm1_desc"
+              >
+                This is the command center for your application's identity. Use
+                this section to define your Project Name and Description, and
+                most importantly, configure your Technology Stack. By selecting
+                your specific backend (e.g., Node.js), database, and frontend
+                frameworks, you provide the necessary context for the AI agents
+                to generate code and documentation that aligns with your
+                environment.
+              </p>
+            </div>
+
+            <div class="feature-box">
+              <h4 data-i18n="dev_project_settings.sm2_title">API Keys</h4>
+              <p
+                style="
+                  font-family: 'Inter', sans-serif;
+                  font-size: 0.9375rem;
+                  color: #475569;
+                  line-height: 1.6;
+                  margin-top: 8px;
+                "
+                data-i18n="dev_project_settings.sm2_desc"
+              >
+                Manage your secure connections and third-party integrations
+                here. This section allows you to generate, store, and rotate
+                Authentication Keys required for external services. Ensuring
+                your API keys are correctly configured is essential for enabling
+                seamless communication between your project and outside
+                platforms.
+              </p>
+            </div>
+
+            <div class="feature-box">
+              <h4 data-i18n="dev_project_settings.sm3_title">
+                Version Control
+              </h4>
+              <p
+                style="
+                  font-family: 'Inter', sans-serif;
+                  font-size: 0.9375rem;
+                  color: #475569;
+                  line-height: 1.6;
+                  margin-top: 8px;
+                "
+                data-i18n="dev_project_settings.sm3_desc"
+              >
+                Connect your project to your preferred Git provider (such as
+                GitHub, GitLab, or Bitbucket). This section handles the
+                synchronization between your local development environment and
+                your remote repositories. You can track branch deployments,
+                manage commits, and ensure that your codebase is properly
+                versioned as you progress.
+              </p>
+            </div>
+
+            <div class="feature-box">
+              <h4 data-i18n="dev_project_settings.sm4_title">
+                Reverse Engineer
+              </h4>
+              <p
+                style="
+                  font-family: 'Inter', sans-serif;
+                  font-size: 0.9375rem;
+                  color: #475569;
+                  line-height: 1.6;
+                  margin-top: 8px;
+                "
+                data-i18n="dev_project_settings.sm4_desc"
+              >
+                Accelerate your development by importing existing assets. This
+                tool allows you to upload current codebases, database schemas,
+                or documentation so the platform can "read" your existing work.
+                It maps out your current architecture, making it easier to build
+                new features that are consistent with your established logic and
+                structure.
+              </p>
+            </div>
+
+            <h2
+              class="section-heading"
+              data-i18n="dev_project_settings.ps_title"
+              style="color: #ea580c; font-size: 1.5rem"
+            >
+              Project Settings
+            </h2>
+            <p
+              class="cd-overview-text"
+              data-i18n="dev_project_settings.ps_intro"
+            >
+              The Project Settings page is where you establish the high-level
+              identity of your project and calibrate the AI engine. The
+              selections made here act as a "North Star" for all subsequent
+              automated generations, ensuring that the code, diagrams, and
+              business logic produced later are compatible with your specific
+              environment.
+            </p>
+
+            <h3
+              class="sub-heading"
+              style="color: #1e3a8a; text-decoration: underline"
+              data-i18n="dev_project_settings.ps_1_title"
+            >
+              1. General Information
+            </h3>
+            <p
+              class="cd-overview-text"
+              data-i18n="dev_project_settings.ps_1_desc"
+              style="margin-bottom: 20px"
+            >
+              This subsection defines the metadata for your project.
+            </p>
+
+            <ul class="cd-overview-ul">
+              <li>
+                <strong data-i18n="dev_project_settings.ps_1_f1_title"
+                  >Project Name:</strong
+                >
+                <span data-i18n="dev_project_settings.ps_1_f1_desc"
+                  >Enter a unique identifier for your application (e.g.,
+                  Study_Tool). This name will appear across all exported
+                  documentation and reports.</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="dev_project_settings.ps_1_f2_title"
+                  >Description:</strong
+                >
+                <span data-i18n="dev_project_settings.ps_1_f2_desc"
+                  >Provide a concise summary of the project's purpose. A
+                  well-defined description helps the AI contextualize the
+                  functional requirements and user roles it will generate later
+                  in the process.</span
+                >
+              </li>
+            </ul>
+
+            <img
+              src="assets/images/get-started-3.jpg"
+              alt="General Information"
+              class="demo-img"
+            />
+
+            <h3
+              class="sub-heading"
+              style="color: #1e3a8a; text-decoration: underline"
+              data-i18n="dev_project_settings.ps_2_title"
+            >
+              2. Technology Stack Configuration
+            </h3>
+            <p
+              class="cd-overview-text"
+              data-i18n="dev_project_settings.ps_2_desc"
+            >
+              The Technology Stack is the most critical component of the
+              settings. It guides the AI agents in producing framework-specific
+              syntax and architectural patterns.
+            </p>
+
+            <img
+              src="assets/images/get-started-4.jpg"
+              alt="Technology Stack"
+              class="demo-img"
+            />
+
+            <h4
+              class="sub-heading"
+              data-i18n="dev_project_settings.ps_2_1_title"
+            >
+              2.1 Server / Backend
+            </h4>
+            <p
+              class="cd-overview-text"
+              data-i18n="dev_project_settings.ps_2_1_desc"
+            >
+              Select the primary language and framework that will power your
+              application logic. The system supports a wide array of
+              environments, including:
+            </p>
+            <ul class="cd-overview-ul">
+              <li data-i18n-html="dev_project_settings.ps_2_1_l1">
+                <strong>JavaScript/TypeScript:</strong> Node.js (Express,
+                NestJS, Fastify, Koa, Hapi, AdonisJS).
+              </li>
+              <li data-i18n-html="dev_project_settings.ps_2_1_l2">
+                <strong>Python:</strong> Django, Flask, FastAPI, Tornado,
+                Pyramid, Bottle, Sanic.
+              </li>
+              <li data-i18n-html="dev_project_settings.ps_2_1_l3">
+                <strong>PHP:</strong> Laravel, Symfony, Slim, CodeIgniter, Yii,
+                CakePHP, Lumen.
+              </li>
+              <li data-i18n-html="dev_project_settings.ps_2_1_l4">
+                <strong>C#:</strong> ASP.NET Core, ASP.NET MVC, Web API, Blazor,
+                Minimal API.
+              </li>
+            </ul>
+
+            <h4
+              class="sub-heading"
+              data-i18n="dev_project_settings.ps_2_2_title"
+            >
+              2.2 Database
+            </h4>
+            <p
+              class="cd-overview-text"
+              data-i18n="dev_project_settings.ps_2_2_desc"
+            >
+              Identify the data persistence layer for your project. This
+              selection informs how Data Objects and Database Schemas are
+              visualized and scripted (e.g., SQL-based relational models vs.
+              NoSQL document structures).
+            </p>
+
+            <img
+              src="assets/images/get-started-5.jpg"
+              alt="Database Selection"
+              class="demo-img"
+            />
+
+            <h4
+              class="sub-heading"
+              data-i18n="dev_project_settings.ps_2_3_title"
+            >
+              2.3 UI / Frontend Configuration
+            </h4>
+            <p
+              class="cd-overview-text"
+              data-i18n="dev_project_settings.ps_2_3_desc"
+            >
+              The UI/Frontend section is dedicated to defining the "Client Side"
+              of your application. This configuration ensures that the
+              AI-generated user interfaces, component libraries, and frontend
+              logic are consistent with modern web or mobile standards.
+            </p>
+
+            <img
+              src="assets/images/get-started-6.jpg"
+              alt="Frontend Selection"
+              class="demo-img"
+            />
+
+            <div class="bp-box">
+              <h3
+                data-i18n="dev_project_settings.bp_title"
+                style="text-decoration: underline"
+              >
+                Implementation Best Practices
+              </h3>
+              <p
+                style="
+                  font-family: 'Inter', sans-serif;
+                  font-size: 0.9375rem;
+                  color: #475569;
+                  line-height: 1.6;
+                "
+                data-i18n="dev_project_settings.bp_desc"
+              >
+                To ensure the highest accuracy in your project outputs, follow
+                these guidelines:
+              </p>
+
+              <ul class="cd-overview-ul" style="margin-bottom: 0">
+                <li>
+                  <strong data-i18n="dev_project_settings.bp_1_title"
+                    >Precision Matters:</strong
+                  >
+                  <span data-i18n="dev_project_settings.bp_1_desc"
+                    >Selecting a specific framework (like Node.js - NestJS)
+                    rather than a generic runtime (like Node.js) allows the
+                    system to generate more precise boilerplate code and folder
+                    structures.</span
+                  >
+                </li>
+                <li>
+                  <strong data-i18n="dev_project_settings.bp_2_title"
+                    >Save Changes:</strong
+                  >
+                  <span data-i18n="dev_project_settings.bp_2_desc"
+                    >Always click the Save Changes button in the top-right
+                    corner before navigating to other sections like API Keys or
+                    Business Flows to avoid losing your configuration.</span
+                  >
+                </li>
+                <li>
+                  <strong data-i18n="dev_project_settings.bp_3_title"
+                    >Iterative Updates:</strong
+                  >
+                  <span data-i18n="dev_project_settings.bp_3_desc"
+                    >You can return to this section at any time to update your
+                    stack if your project requirements pivot during the ideation
+                    phase.</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+    <div id="docFooter"></div>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/consumer_docs_home.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (window.I18n) {
+          window.I18n.init();
+        }
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  </body>
+</html>

@@ -387,7 +387,9 @@
       "security_tip_title": "Consiglio di Sicurezza",
       "security_tip_body": "Consigliamo di tenere attivi sia il PIN che la biometria.",
       "supported_regions_heading": "Regioni Supportate",
-      "regions": { "curacao": "Curaçao" },
+      "regions": {
+        "curacao": "Curaçao"
+      },
       "voip_warning_title": "Numeri VoIP non supportati",
       "voip_warning_body": "I numeri virtuali (Skype, Google Voice) non sono accettati."
     },
@@ -636,7 +638,10 @@
           "title": "Menu Sicurezza",
           "desc": "Impostazioni → Sicurezza → Cambia PIN."
         },
-        "2": { "title": "PIN a 6 cifre", "desc": "Scegline uno non ovvio." }
+        "2": {
+          "title": "PIN a 6 cifre",
+          "desc": "Scegline uno non ovvio."
+        }
       }
     },
     "biometric": {
@@ -646,8 +651,12 @@
     "privacy": {
       "heading": "Privacy",
       "data_options": {
-        "export": { "title": "Esporta Dati" },
-        "delete": { "title": "Elimina Account" }
+        "export": {
+          "title": "Esporta Dati"
+        },
+        "delete": {
+          "title": "Elimina Account"
+        }
       }
     }
   },
@@ -1330,6 +1339,304 @@
         "excerpt": "Una panoramica completa della struttura delle commissioni di MPay Network, dei limiti di transazione e di come ottimizzare i costi come commerciante o consumatore."
       }
     }
+  },
+  "dev_intro": {
+    "title": "Introduzione",
+    "description": "Crea applicazioni complete dal concetto alla distribuzione con una piattaforma intelligente basata su agenti. Progetta, sviluppa, testa, proteggi e lancia—tutto in un unico posto—mantenendo una supervisione umana completa in ogni fase."
+  },
+  "dev_features": {
+    "title": "Caratteristiche Principali",
+    "f1": {
+      "title": "Progettazione Prima del Codice",
+      "desc": "Pianifica la tua applicazione in modo approfondito prima di scrivere una singola riga di codice. Definisci l'interfaccia utente, l'architettura di sistema e le specifiche funzionali in anticipo per garantire una road map di sviluppo chiara e ridurre costose iterazioni successive."
+    },
+    "f2": {
+      "title": "Guidato da Voce e Chat",
+      "desc": "Interagisci con agenti IA intelligenti utilizzando comandi vocali o testuali naturali. Crea, modifica e perfeziona la tua app in tempo reale, rendendo lo sviluppo intuitivo, veloce e accessibile anche senza profonde competenze di programmazione."
+    },
+    "f3": {
+      "title": "Agenti Post-Distribuzione",
+      "desc": "I tuoi assistenti IA non smettono di lavorare quando la tua app va live. Monitora, ottimizza e migliora continuamente l'applicazione dopo la distribuzione, assicurandoti che si evolva insieme alle esigenze degli utenti e alle tendenze del mercato."
+    },
+    "f4": {
+      "title": "Supervisione Umana",
+      "desc": "Mantieni il pieno controllo per l'intero ciclo di vita dello sviluppo. Esamina ogni decisione, approva gli aggiornamenti e guida l'IA, combinando l'automazione con il giudizio umano per risultati affidabili e di alta qualità."
+    }
+  },
+  "dev_dashboard": {
+    "title": "Pannello di Controllo",
+    "intro": "Questo pannello fornisce una visuale chiara e organizzata di tutti i tuoi progetti in un unico posto. Le funzionalità chiave includono:",
+    "f1_title": "Panoramica del Progetto:",
+    "f1_desc": "Ogni progetto è visualizzato come una scheda contenente il nome del progetto e una breve descrizione. Ciò permette un rapido riconoscimento e facile accesso.",
+    "f2_title": "Funzionalità di Ricerca:",
+    "f2_desc": "Una barra di ricerca in alto ti permette di trovare rapidamente i progetti per nome.",
+    "f3_title": "Crea e Gestisci Progetti:",
+    "f3_desc": "Inizia facilmente un nuovo progetto con il pulsante \"Crea Nuovo Progetto\" o disconnettiti con un solo clic.",
+    "f4_title": "Navigazione del Progetto:",
+    "f4_desc": "Cliccando sulla scheda di un progetto si accede direttamente allo spazio di lavoro per ulteriori sviluppi e gestioni.",
+    "f5_title": "Layout Pulito e Minimale:",
+    "f5_desc": "L'interfaccia è semplice e intuitiva, focalizzata sulla produttività senza distrazioni.",
+    "f6_title": "Indicatore Conteggio Progetti:",
+    "f6_desc": "Mostra il numero totale di progetti in basso a destra, aiutando gli utenti a tenere traccia del proprio carico di lavoro.",
+    "outro": "Questo pannello funge da hub centrale per gestire, accedere e lanciare tutti i tuoi progetti attivi in modo efficiente."
+  },
+  "dev_create_project": {
+    "title": "Crea un Nuovo Progetto",
+    "how_to_title": "Come Creare un Nuovo Progetto",
+    "step1": "Nel Pannello di Controllo, clicca sul pulsante Crea un Nuovo Progetto.",
+    "step2": "Inserisci il Nome del Progetto. La descrizione è facoltativa.",
+    "step3": "Clicca sul pulsante Crea Progetto.",
+    "interface_intro": "Questa interfaccia appare quando un utente sceglie di creare un nuovo progetto dal pannello di controllo. Gli elementi chiave includono:",
+    "f1_title": "Campo Nome Progetto:",
+    "f1_desc": "Un campo di testo dove l'utente inserisce il nome del suo nuovo progetto, es. \"La Mia App Fantastica\". Questo è un campo obbligatorio.",
+    "f2_title": "Campo Descrizione:",
+    "f2_desc": "Un'area di testo opzionale per una breve descrizione del progetto, aiutando a chiarirne lo scopo.",
+    "f3_title": "Pulsanti di Azione:",
+    "f3_1": "<strong>Crea Progetto</strong> – Conferma la creazione del progetto e lo aggiunge al pannello di controllo.",
+    "f3_2": "<strong>Annulla</strong> – Chiude il popup senza creare un progetto.",
+    "f4_title": "Design Modale Pulito:",
+    "f4_desc": "Il popup è centrato con un layout minimale, senza distrazioni, che lo separa chiaramente dallo sfondo sfocato del pannello di controllo.",
+    "f5_title": "Guida Utente:",
+    "f5_desc": "Il testo segnaposto nei campi guida l'utente su quali informazioni fornire.",
+    "outro": "Questo popup semplifica il processo di avvio di un nuovo progetto, garantendo agli utenti di aggiungere e documentare rapidamente i loro progetti."
+  },
+  "dev_project_settings": {
+    "title": "Iniziare",
+    "intro": "Questo modulo è la fase di configurazione essenziale in cui si definisce l'identità fondamentale e il DNA tecnico.",
+    "core_obj_title": "Obiettivi Principali:",
+    "obj1_title": "Allineamento Architettonico:",
+    "obj1_desc": "Selezionando il Technology Stack si calibrano gli agenti AI per il proprio ecosistema preferito.",
+    "obj2_title": "Pronto per l'Ambiente:",
+    "obj2_desc": "Configura API Keys e Version Control.",
+    "obj3_title": "Integrazione Legacy:",
+    "obj3_desc": "Usa lo strumento Reverse Engineer per comprendere la base tecnica attuale.",
+    "submenus_title": "Sottomenù Core:",
+    "sm1_title": "Impostazioni Progetto",
+    "sm1_desc": "Il centro di comando per le identità dell'app.",
+    "sm2_title": "API Keys",
+    "sm2_desc": "Gestisci connessioni sicure con terzi.",
+    "sm3_title": "Controllo Versione",
+    "sm3_desc": "Connettiti a provider Git come GitHub o GitLab.",
+    "sm4_title": "Reverse Engineer",
+    "sm4_desc": "Importa basi d'uso esistenti per far «leggere» all'IA la tua app.",
+    "ps_title": "Impostazioni Progetto",
+    "ps_intro": "Qui stabilisci l'identità di alto livello del tuo ecosistema.",
+    "ps_1_title": "1. Informazioni Generali",
+    "ps_1_desc": "Definisce i metadati del progetto.",
+    "ps_1_f1_title": "Nome progetto:",
+    "ps_1_f1_desc": "Un identificatore unico.",
+    "ps_1_f2_title": "Descrizione:",
+    "ps_1_f2_desc": "Un riassunto conciso dello scopo del progetto.",
+    "ps_2_title": "2. Configurazione stack tecnologico",
+    "ps_2_desc": "Il componente più critico guida l'IA.",
+    "ps_2_1_title": "2.1 Server / Backend",
+    "ps_2_1_desc": "Seleziona framework di base logic app:",
+    "ps_2_1_l1": "<strong>JavaScript/TypeScript:</strong> Node.js, Express, etc.",
+    "ps_2_1_l2": "<strong>Python:</strong> Django, Flask, etc.",
+    "ps_2_1_l3": "<strong>PHP:</strong> Laravel, Symfony, etc.",
+    "ps_2_1_l4": "<strong>C#:</strong> ASP.NET Core, etc.",
+    "ps_2_2_title": "2.2 Database",
+    "ps_2_2_desc": "Livello di persistenza dei dati.",
+    "ps_2_3_title": "2.3 UI / Frontend",
+    "ps_2_3_desc": "Definisce il lato client del sito.",
+    "bp_title": "Best Practice",
+    "bp_desc": "Segui queste direttive per accuratezza:",
+    "bp_1_title": "Materia di Precisione:",
+    "bp_1_desc": "Selezione di framework specifici.",
+    "bp_2_title": "Salva Cambiamenti:",
+    "bp_2_desc": "Non dimenticare di premere il pulsante.",
+    "bp_3_title": "Aggiornamenti Iterativi:",
+    "bp_3_desc": "Aegguing e correggi quando vuoi."
+  },
+  "dev_api_keys": {
+    "title": "Chiavi API",
+    "intro": "L'hub centrale per la gestione sicura a modelli di intelligenza artificiale integrati.",
+    "area1_title": "Gestione delle Chiavi:",
+    "area1_desc": "Crea, visualizza e metti al sicuro le chiavi API personali.",
+    "area2_title": "Tabella di utilizzo:",
+    "area2_desc": "Per monitorare la tua fatturazione e richieste in tempo reale.",
+    "access_note": "Accedi a questa sezione sotto <strong>Iniziare</strong> nell'elenco a sinistra.",
+    "managing_title": "Gestione delle tue API Keis",
+    "managing_intro": "Tutte le chiavi configurate nel tuo conto.",
+    "viewing_keys_title": "1. Strumenti visualizzabili:",
+    "viewing_keys_desc": "Se non hai chiavi preparate, vedrai un'icona bianca e avviso.",
+    "creating_keys_title": "2. Creare una Nuova Chiave",
+    "creating_keys_step1": "Fai click sul bottone <strong>\"+ Add New Key\"</strong> blu.",
+    "creating_keys_step2": "Scegli un modello logico.",
+    "creating_keys_step3": "<strong>Attento:</strong> Non verranno visualizzati in nessun altro posto una volta creato.",
+    "dashboard_title": "3. Tabella di Uso (Scrorrible)",
+    "dashboard_intro": "Analitica in tempo reale degli agenti di IA (Claude, Gemini)",
+    "dashboard_3_1_title": "3.1. Filtri temporali",
+    "dashboard_3_1_intro": "Presenti all'angolo superiore del monitor:",
+    "dashboard_3_1_f1_title": "Filtraggio in tempistica:",
+    "dashboard_3_1_f1_desc": "Usalo per determinare la fatturazione del periodo.",
+    "dashboard_3_1_f2_title": "Refresca:",
+    "dashboard_3_1_f2_desc": "Ricorda di rinfrescare l'area interattiva.",
+    "dashboard_3_2_title": "3.2. Metrica d'eccezione",
+    "dashboard_3_2_intro": "4 riquadri ti aiuteranno a monitorarla:",
+    "dashboard_3_2_f1_title": "Richiesta d'appello totale:",
+    "dashboard_3_2_f1_desc": "Fatto complessivamente da IA ai modelli.",
+    "dashboard_3_2_f2_title": "Token totali:",
+    "dashboard_3_2_f2_desc": "Tra promt ed elaborato in uscita.",
+    "dashboard_3_2_f3_title": "Valore monetario:",
+    "dashboard_3_2_f3_desc": "Stimato in fatturazione corrente.",
+    "dashboard_3_2_f4_title": "Tokens di Cashe:",
+    "dashboard_3_2_f4_desc": "Recuperato, minimizza tempo d'impiego.",
+    "analyzing_title": "4. Analizzando i dati di utilizzo",
+    "analyzing_intro": "Presenti sotto il tabellone grafico per maggior visibilità analitico.",
+    "analyzing_4_1_title": "4.1. Uso grafico cronologico giornaliero",
+    "analyzing_4_1_intro": "Il grafico ti evidenzierà visivamente la crescita di log dell'IA",
+    "analyzing_4_1_f1_title": "Esplora grafico cronologico:",
+    "analyzing_4_1_f1_desc": "Sui singolari segmenti, apparirà un pop-up con spiegazioni d'uso.",
+    "analyzing_4_1_f2_title": "Sistematismo grafico:",
+    "analyzing_4_1_f2_desc": "Mette in risalto tutti i modelli impiegati nella tua struttura.",
+    "analyzing_4_2_title": "4.2. Uso per IA impiegato",
+    "analyzing_4_2_intro": "A tavola descriverà meticolossamente tutto quello di un singolar Modello elaborato.",
+    "model_cols": [
+      "<strong>IA SCELTO:</strong> Il nome o azienda del progetto artificiale.",
+      "<strong>TUTTE CHIESTE:</strong> Logiche di invio dati dal tuo utente in IA.",
+      "<strong>DATI IA-ENTRATA:</strong> Totale input alla intelligenza logica.",
+      "<strong>DATI IA USCITA:</strong> Il tuo vero Token finale per respondo generato.",
+      "<strong>DATI COMPLESSO DI IN+EX:</strong> Costituiscono il valore monetario e totale complessivo in token testuali.",
+      "<strong>CACHE READ/WRITE:</strong> Cashe memorabili temporanei, essenziali.",
+      "<strong>LAVORO TEMPO(MIL):</strong> Calcolato media.",
+      "<strong>PREZZO:</strong> Singolo IA a singolare esborso d'impiego e riprova totale."
+    ],
+    "transaction_title": "4.3. History Transazioni IA (Log Estesi)",
+    "transaction_intro": "A final di tavola (scrorla del tutto a fondo), vi sarà tabellone imponente della Log. Questo per evidenzia d'erro o riprova esatta al millisecondo d'esito.",
+    "filtering_title": "Ordinamenti IA - Errori:",
+    "filtering_f1_title": "In tutti Logiche: Dropdown all'area destra.",
+    "filtering_f1_desc": "Mostra del solo Claude/Gemini, come da un esempio, in unico prospett.",
+    "filtering_f2_title": "Ordinamenti In Tutte Logiche o Stato Error/Accept(Green/Succeso)",
+    "filtering_f2_desc": "Mostra solo quele ove l'IA logica fallisca/sia non in regola. Aiuta alla reingegnerizzazione per tua fine ed eccelso logica informatico.",
+    "log_title": "Singoli tabelloni log",
+    "log_cols": [
+      "<strong>TEMPO ASSIOLUTAMENTE:</strong> Alla micro esecuzione della fattispece, in fuso orario di app.",
+      "<strong>TOKEN E LOG COMPLESSO IN ASSIOLUTAM:</strong> Di quella vera logica richiesta da IA singolarmente in operazionale in quel tempo.",
+      "<strong>MEMORIA CACHE RAPIDA (RW):</strong> Perfomacia singolare log.",
+      "<strong>LAVORO TOTAL(IN MILESIC):</strong> Eseguizione ed attesesa tra prompt - IA responso della specifica. Impatta con la pazienza ed user log.",
+      "<strong>PREZO:</strong> Log. a dollaro. In totale centesimo diviso a quota proporzionale log, come in vero operaz."
+    ]
+  },
+  "dev_vc": {
+    "title": "Controllo di Versione",
+    "intro": "La pagina del Controllo Versione è dove si gestisce l'integrazione del progetto con repository Git.",
+    "table_title": "Tabella Integrazioni",
+    "table_intro": "Mostra tutte le connessioni archivio attive.",
+    "table_f1_title": "Integration:",
+    "table_f1_desc": "The name of the connection (e.g., <em>Main Repository</em>). A folder icon indicates the specific directory mapping within the repository.",
+    "table_f2_title": "Repository:",
+    "table_f2_desc": "The full URL path to your remote Git repository (e.g., https://gitlab.com/.../studytool.git).",
+    "table_f3_title": "Branch:",
+    "table_f3_desc": "The specific branch currently targeted for synchronization (e.g., main).",
+    "table_f4_title": "Status:",
+    "table_f4_desc": "Indicates the current health of the connection. A <strong>CONNECTED</strong> badge signifies that the platform has successful read/write access.",
+    "table_f5_title": "Last Sync:",
+    "table_f5_desc": "Displays the timestamp of the most recent data exchange between the platform and your repository.",
+    "actions_title": "Management Actions",
+    "actions_intro": "On the right side of each integration row, you will find several quick-action icons to manage your repository:",
+    "actions_f1_title": "Sync History (Clock Icon):",
+    "actions_f1_desc": "View a log of previous synchronization events, including commits and updates.",
+    "actions_f2_title": "Push/Pull (Upload/Download Icons):",
+    "actions_f2_desc": "Manually trigger a data transfer. Use <strong>Push</strong> to send platform changes to your Git provider, or <strong>Pull</strong> to update the platform with external changes.",
+    "actions_f3_title": "Edit Integration (Pencil Icon):",
+    "actions_f3_desc": "Modify the connection settings, such as changing the target branch or updating credentials.",
+    "actions_f4_title": "Delete (Trash Icon):",
+    "actions_f4_desc": "Remove the integration from the project. <em>Note: This will stop synchronization but will not delete the code from your Git provider.</em>",
+    "bp_title": "Best Practice",
+    "bp_1_title": "Target Specific Branches:",
+    "bp_1_desc": "It is highly recommended to use a dedicated development or \"staging\" branch rather than your primary production branch to safely review generated code before merging.",
+    "bp_2_title": "Check Sync Status:",
+    "bp_2_desc": "Always verify the <strong>Last Sync</strong> time before starting a new design or ideation session to ensure you are working with the most recent version of your project.",
+    "bp_3_title": "Manual Refresh:",
+    "bp_3_desc": "Use the <strong>Refresh</strong> icon in the top-right corner of the panel to update the connection status if you have recently made changes on your Git provider's website."
+  },
+  "dev_re": {
+    "title": "Ingegneria Inversa",
+    "overview_title": "Panoramica",
+    "overview_desc": "L'Intelligenza Artificiale decostruisce il tuo codice, schemi e trasforma in concetti strutturati.",
+    "tasks_title": "Attività di Visione Diffusa",
+    "tasks_intro": "Gestisce flussi di lavoro ingegneristici.",
+    "tasks_f1_title": "Task Status:",
+    "tasks_f1_desc": "If no analysis has been performed, the screen displays \"No reverse engineering tasks yet.\" * <strong>Process Flow:</strong> Once a task is initiated, this area will track the progress of the AI's analysis, displaying task names, timestamps, and completion statuses.",
+    "features_title": "Key Features & Functionality",
+    "features_f1_title": "Codebase Analysis:",
+    "features_f1_desc": "Upload or link existing source code to identify data structures, API endpoints, and business logic.",
+    "features_f2_title": "Schema Mapping:",
+    "features_f2_desc": "Ingest database SQL files to automatically generate <strong>Data Objects</strong> within the platform.",
+    "features_f3_title": "Structured Concept Generation:",
+    "features_f3_desc": "The AI converts its findings into high-level concepts that populate the Concept, Business Flows, and Data Objects sections in the sidebar.",
+    "start_title": "How to Start Reverse Engineering",
+    "start_intro": "To begin an analysis task:",
+    "start_step1": "Click the blue \"Start Reverse Engineer\" button (found both in the center of the screen and the top-right corner).",
+    "start_step2": "Select your <strong>Source Type</strong> (e.g., File Upload, Git Repository Link, or Database Connection).",
+    "start_step3": "Configure the <strong>Scope</strong> of the analysis by selecting specific folders or tables to include.",
+    "start_step4": "Launch the task and monitor the <strong>Diffusion Vision Tasks</strong> list for real-time updates.",
+    "why_title": "Why Use Reverse Engineering?",
+    "why_f1_title": "Accelerated Onboarding:",
+    "why_f1_desc": "Quickly bring an existing project or legacy system into the platform for modernization.",
+    "why_f2_title": "Consistency:",
+    "why_f2_desc": "Ensure that new features developed in the <strong>Development</strong> section are 100% compatible with your existing data structures.",
+    "why_f3_title": "Documentation Recovery:",
+    "why_f3_desc": "Generate fresh <strong>Requirements Docs</strong> and <strong>Technical Diagrams</strong> for projects that currently lack them."
+  },
+  "dev_struc": {
+    "title": "Struttura ed Ideazione",
+    "intro_1": "Il cuore architettonico della piattaforma.",
+    "intro_2": "Un ponte tra il 'cosa' e il 'come'."
+  },
+  "dev_req": {
+    "submenu_title": "Struttura ed Ideazione ha i seguenti sottomenu:",
+    "title": "1. Requisiti",
+    "intro": "Come punto di ingresso, questa pagina memorizza la visione principale del tuo progetto. Funge da \"Fonte di Verità\".",
+    "f1_title": "Utilizzo:",
+    "f1_desc": "Definisci le caratteristiche del tuo MVP (Minimum Viable Product) e i ruoli utente.",
+    "action_desc": "In questa sezione, puoi modificare o aggiungere nuovi requisiti. Una volta pronto, fai clic su <strong>Salva Requisiti</strong>."
+  },
+  "dev_concept": {
+    "title": "2. Concetto",
+    "intro": "Questo modulo scompone i tuoi requisiti in singoli <strong>Blocchi Concettuali</strong>.",
+    "f1_title": "Utilizzo:",
+    "f1_desc": "Traccia le \"grandi idee\" del tuo software per assicurarti che tutte le funzionalità siano coperte."
+  },
+  "dev_bf": {
+    "title": "3. Flussi Aziendali",
+    "intro": "I Flussi Aziendali visualizzano il percorso passo-passo di un utente per completare un'attività.",
+    "f1_title": "Esempio:",
+    "f1_desc": "La sequenza di eventi da quando uno studente carica un PDF a quando l'IA genera un riassunto e un quiz.",
+    "f2_title": "Utilizzo:",
+    "f2_desc": "Identifica colli di bottiglia nell'esperienza dell'utente prima ancora di scrivere una singola riga di codice."
+  },
+  "dev_do": {
+    "title": "4. Oggetti Dati",
+    "intro": "Questa sezione definisce i \"nomi\" del tuo sistema: le strutture dati che saranno memorizzate nel tuo database.",
+    "f1_title": "Esempi:",
+    "f1_desc": "Utente, MaterialeStudio, RisultatoQuiz, PianoAbbonamento.",
+    "f2_title": "Utilizzo:",
+    "f2_desc": "Definisci proprietà (ad es., email, timestamp, punteggio) e come questi oggetti si relazionano tra loro."
+  },
+  "dev_roles": {
+    "title": "5. Ruoli e Permessi",
+    "intro": "La sicurezza inizia qui. Definisci cosa possono vedere e fare i diversi tipi di utente.",
+    "f1_title": "Esempio:",
+    "f1_desc": "Un Admin può eliminare gli utenti, mentre uno Studente può solo visualizzare i propri materiali.",
+    "f2_title": "Utilizzo:",
+    "f2_desc": "Stabilisci la Lista di Controllo di Accesso (ACL) per la tua API e Frontend."
+  },
+  "dev_br": {
+    "title": "6. Regole Aziendali",
+    "intro": "Le Regole Aziendali sono la logica \"se/allora\" che governa il comportamento della tua app, indipendentemente dal codice.",
+    "f1_title": "Esempio:",
+    "f1_desc": "\"Se un utente ha un account di livello Gratuito, può caricare solo 1 documento al mese.\"",
+    "f2_title": "Utilizzo:",
+    "f2_desc": "Centralizza la logica che determina come opera l'azienda."
+  },
+  "dev_int": {
+    "title": "7. Mappe di Integrazione",
+    "intro": "Questo strumento delinea il modo in cui la tua applicazione comunica con i sistemi esterni.",
+    "f1_title": "Esempio:",
+    "f1_desc": "Come la tua app parla con un Gateway di Pagamento (Stripe) o un Modello AI (OpenAI/Claude).",
+    "f2_title": "Utilizzo:",
+    "f2_desc": "Visualizza i punti di scambio dati tra il tuo sistema e il mondo esterno."
   }
 }
-
