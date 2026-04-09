@@ -2,109 +2,152 @@
 (function() {
   'use strict';
 
-  // Sample data for search results
+  const uiText = {
+    breadcrumbs: {
+      think4ever: 'think4ever',
+      documentation: 'Documentation',
+      product: 'Product',
+      strategy: 'Strategy',
+      design: 'Design',
+      development: 'Development',
+      guides: 'Guides',
+      launch: 'Launch',
+      operations: 'Operations',
+      blog: 'Blog',
+      changelog: 'Changelog'
+    },
+    filters: {
+      docs: 'Docs',
+      guides: 'Guides',
+      blog: 'Blog',
+      changelog: 'Changelog'
+    }
+  };
+
   const allResults = [
     {
       id: 'r1',
-      type: 'merchant-docs',
-      breadcrumb: ['merchant_wallet', 'qr_payments'],
-      date: 'Mar 8, 2025',
+      type: 'docs',
+      breadcrumb: ['think4ever', 'documentation', 'product'],
+      date: '2026-04-01',
       readTime: '5 min',
-      page: 'merchant_qr_payments'
+      page: 'manual_introduction',
+      title: 'Introduction to think4ever',
+      excerpt: 'Start with the core platform vision, how multi-agent systems fit together, and what teams can accomplish with think4ever.'
     },
     {
       id: 'r2',
-      type: 'merchant-docs',
-      breadcrumb: ['merchant_wallet', 'nfc_payments'],
-      date: 'Mar 5, 2025',
+      type: 'docs',
+      breadcrumb: ['think4ever', 'documentation', 'product'],
+      date: '2026-04-02',
       readTime: '4 min',
-      page: 'merchant_nfc_payments'
+      page: 'manual_key_features',
+      title: 'Key Platform Features',
+      excerpt: 'Explore the product capabilities that power orchestration, collaboration, automation, and scalable agent workflows.'
     },
     {
       id: 'r3',
-      type: 'consumer-docs',
-      breadcrumb: ['consumer_wallet', 'making_payments'],
-      date: 'Mar 6, 2025',
+      type: 'docs',
+      breadcrumb: ['think4ever', 'documentation', 'product'],
+      date: '2026-04-03',
       readTime: '6 min',
-      page: 'consumer_making_payments'
+      page: 'manual_dashboard',
+      title: 'Dashboard Overview',
+      excerpt: 'Learn how the think4ever dashboard helps teams monitor projects, agents, and delivery progress in one place.'
     },
     {
       id: 'r4',
-      type: 'merchant-docs',
-      breadcrumb: ['merchant_wallet', 'transactions'],
-      date: 'Mar 3, 2025',
+      type: 'guides',
+      breadcrumb: ['think4ever', 'guides', 'launch'],
+      date: '2026-04-04',
       readTime: '4 min',
-      page: 'merchant_transactions'
+      page: 'manual_create_project',
+      title: 'Create a New Project',
+      excerpt: 'Set up a new initiative, define scope, and create the foundation for collaborative AI execution.'
     },
     {
       id: 'r5',
-      type: 'consumer-docs',
-      breadcrumb: ['consumer_wallet', 'wallet_management'],
-      date: 'Mar 2, 2025',
+      type: 'guides',
+      breadcrumb: ['think4ever', 'guides', 'operations'],
+      date: '2026-04-05',
       readTime: '5 min',
-      page: 'consumer_wallet_management'
+      page: 'manual_project_settings',
+      title: 'Project Settings',
+      excerpt: 'Configure project-level settings, collaboration preferences, and workspace controls for your team.'
     },
     {
       id: 'r6',
       type: 'blog',
-      breadcrumb: ['blog', 'product_updates'],
-      date: 'Feb 28, 2025',
+      breadcrumb: ['think4ever', 'blog'],
+      date: '2026-04-06',
       readTime: '3 min',
-      page: 'blog_post_detail'
+      page: 'blog_listing',
+      title: 'Inside the think4ever Product Journey',
+      excerpt: 'Read the latest platform stories, product updates, and ideas shaping our approach to multi-agent systems.'
     },
     {
       id: 'r7',
-      type: 'consumer-docs',
-      breadcrumb: ['consumer_wallet', 'p2p_transfers'],
-      date: 'Mar 1, 2025',
+      type: 'guides',
+      breadcrumb: ['think4ever', 'guides', 'strategy'],
+      date: '2026-04-03',
       readTime: '4 min',
-      page: 'consumer_p2p_transfers'
+      page: 'manual_business_flow',
+      title: 'Business Flow Mapping',
+      excerpt: 'Understand how business processes are translated into orchestrated workflows and collaborative decision paths.'
     },
     {
       id: 'r8',
       type: 'changelog',
-      breadcrumb: ['changelog', 'v2_5_0'],
-      date: 'Feb 25, 2025',
+      breadcrumb: ['think4ever', 'changelog'],
+      date: '2026-04-08',
       readTime: '2 min',
-      page: 'changelog_page'
+      page: 'changelog_page',
+      title: 'Latest think4ever Changelog',
+      excerpt: 'Review recent improvements, documentation changes, and product updates across the think4ever experience.'
     },
     {
       id: 'r9',
-      type: 'merchant-docs',
-      breadcrumb: ['merchant_wallet', 'account_setup'],
-      date: 'Mar 7, 2025',
+      type: 'docs',
+      breadcrumb: ['think4ever', 'documentation', 'development'],
+      date: '2026-04-05',
       readTime: '7 min',
-      page: 'merchant_account_setup'
+      page: 'manual_source_code',
+      title: 'Source Code Structure',
+      excerpt: 'See how think4ever organizes code, delivery assets, and implementation details across the platform.'
     },
     {
       id: 'r10',
-      type: 'merchant-docs',
-      breadcrumb: ['merchant_wallet', 'troubleshooting'],
-      date: 'Mar 4, 2025',
+      type: 'guides',
+      breadcrumb: ['think4ever', 'guides', 'design'],
+      date: '2026-04-07',
       readTime: '6 min',
-      page: 'merchant_troubleshooting'
+      page: 'manual_ui_design',
+      title: 'UI Design Guidance',
+      excerpt: 'Review interface structure, experience principles, and design decisions behind the think4ever product.'
     },
     {
       id: 'r11',
       type: 'blog',
-      breadcrumb: ['blog', 'security'],
-      date: 'Feb 20, 2025',
+      breadcrumb: ['think4ever', 'blog'],
+      date: '2026-03-30',
       readTime: '5 min',
-      page: 'blog_post_detail'
+      page: 'blog_listing',
+      title: 'Scaling Multi-Agent Collaboration',
+      excerpt: 'Practical insights on team workflows, system orchestration, and what it takes to scale coordinated AI.'
     },
     {
       id: 'r12',
-      type: 'consumer-docs',
-      breadcrumb: ['consumer_wallet', 'settings_security'],
-      date: 'Mar 1, 2025',
+      type: 'docs',
+      breadcrumb: ['think4ever', 'documentation', 'development'],
+      date: '2026-04-02',
       readTime: '5 min',
-      page: 'consumer_settings'
+      page: 'manual_database',
+      title: 'Database and Data Objects',
+      excerpt: 'Understand how structured data, schema decisions, and data objects support the think4ever platform.'
     }
   ];
 
-  // These would typically be localized from the server or a database.
-  // For this exercise, we will assume they are in English but UI labels are localized.
-  const recentSearches = ['QR code payments', 'NFC setup', 'transaction history', 'wallet top-up', 'KYC verification'];
+  const recentSearches = ['multi-agent systems', 'project settings', 'dashboard overview', 'ui design', 'changelog'];
 
   let currentFilter = 'all';
   let currentQuery = '';
@@ -121,17 +164,14 @@
   const paginationEl = document.getElementById('sr_pagination');
   const metaBarEl = document.querySelector('.sr-meta-bar');
   const recentSearchesEl = document.getElementById('sr_recent_searches');
+  const langWrapper = document.getElementById('langWrapper');
+  const langBtn = document.getElementById('modernLangBtn');
+  const langMenu = document.getElementById('modernLangMenu');
+  const currentLangCode = document.getElementById('current-lang-code');
 
   // Initialize
   function init() {
-    // Wait for I18n to be ready if it exists
-    if (window.I18n && typeof I18n.init === 'function') {
-      I18n.init().then(() => {
-        setupSearch();
-      });
-    } else {
-      setupSearch();
-    }
+    setupSearch();
   }
 
   function setupSearch() {
@@ -219,6 +259,21 @@
         searchInput.select();
       }
     });
+
+    if (langBtn && langMenu) {
+      langBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const isOpen = langMenu.classList.toggle('open');
+        langBtn.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      document.addEventListener('click', function(e) {
+        if (!langWrapper || !langWrapper.contains(e.target)) {
+          langMenu.classList.remove('open');
+          langBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
   }
 
   function updateClearButton() {
@@ -262,14 +317,6 @@
     saveRecentSearch(currentQuery);
   }
 
-  // Listen for language changes to update dynamic content
-  document.addEventListener('i18n:applied', function() {
-    renderRecentSearches();
-    if (currentQuery) {
-      renderResults(); // Refresh existing results with new language
-    }
-  });
-
   function showLoading() {
     metaBarEl.style.display = 'none';
     noResultsEl.style.display = 'none';
@@ -294,11 +341,11 @@
 
     const query = currentQuery.toLowerCase().trim();
 
-    // Filter by search query (check localized title and excerpt)
+    // Filter by search query
     if (query) {
       results = results.filter(result => {
-        const title = I18n.t(`search.results.${result.id}.title`).toLowerCase();
-        const excerpt = I18n.t(`search.results.${result.id}.excerpt`).toLowerCase();
+        const title = result.title.toLowerCase();
+        const excerpt = result.excerpt.toLowerCase();
         return title.includes(query) || excerpt.includes(query);
       });
     }
@@ -336,9 +383,9 @@
 
     // Update result count
     if (totalResults > 0) {
-      resultCountEl.innerHTML = I18n.t('search.results_found', { count: totalResults, query: escapeHtml(currentQuery) });
+      resultCountEl.innerHTML = `<strong>${totalResults}</strong> results found for <span class="sr-query-text">"${escapeHtml(currentQuery)}"</span>`;
     } else {
-      resultCountEl.innerHTML = I18n.t('search.results_none', { query: escapeHtml(currentQuery) });
+      resultCountEl.innerHTML = `No results found for <span class="sr-query-text">"${escapeHtml(currentQuery)}"</span>`;
     }
 
     // Update filter counts
@@ -367,30 +414,28 @@
     let html = '';
     pageResults.forEach(function(result, idx) {
       const breadcrumbHtml = result.breadcrumb.map((bc, i) => {
-        const localizedBc = I18n.t('breadcrumb.' + bc);
+        const label = uiText.breadcrumbs[bc] || bc;
         if (i < result.breadcrumb.length - 1) {
-          return `<span>${escapeHtml(localizedBc)}</span><span class="sr-bc-sep">/</span>`;
+          return `<span>${escapeHtml(label)}</span><span class="sr-bc-sep">/</span>`;
         }
-        return `<span>${escapeHtml(localizedBc)}</span>`;
+        return `<span>${escapeHtml(label)}</span>`;
       }).join('');
 
-      const localizedTitle = I18n.t(`search.results.${result.id}.title`);
-      const localizedExcerpt = I18n.t(`search.results.${result.id}.excerpt`);
       html += `
         <article class="sr-result-item sr-fade-in" style="animation-delay: ${idx * 50}ms" data-page="${result.page}" role="article">
           <div class="sr-result-item-header">
             <div class="sr-result-item-left">
               <div class="sr-result-breadcrumb">${breadcrumbHtml}</div>
-              <a href="#" class="sr-result-title" onclick="event.preventDefault(); load_page('${result.page}')" role="link">${localizedTitle}</a>
+              <a href="#" class="sr-result-title" onclick="event.preventDefault(); load_page('${result.page}')" role="link">${escapeHtml(result.title)}</a>
             </div>
             <span class="sr-result-type-badge type-${result.type}">
-              ${I18n.t('search.filters.' + (result.type === 'merchant-docs' ? 'merchant' : result.type === 'consumer-docs' ? 'consumer' : result.type))}
+              ${escapeHtml(uiText.filters[result.type] || result.type)}
             </span>
           </div>
-          <p class="sr-result-excerpt">${localizedExcerpt}</p>
+          <p class="sr-result-excerpt">${escapeHtml(result.excerpt)}</p>
           <div class="sr-result-meta">
             <span class="sr-result-meta-item"><i class="fa-regular fa-calendar" aria-hidden="true"></i> ${formatDate(result.date)}</span>
-            <span class="sr-result-meta-item"><i class="fa-regular fa-clock" aria-hidden="true"></i> ${I18n.t('search.meta.read_time', { count: parseInt(result.readTime) })}</span>
+            <span class="sr-result-meta-item"><i class="fa-regular fa-clock" aria-hidden="true"></i> ${escapeHtml(result.readTime)} read</span>
           </div>
           <span class="sr-result-arrow" aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
         </article>`;
@@ -462,7 +507,7 @@
       return;
     }
 
-    let html = `<h3 class="sr-recent-label">${I18n.t('search.recent_label')}</h3><div class="sr-recent-tags">`;
+    let html = `<h3 class="sr-recent-label">Recent searches</h3><div class="sr-recent-tags">`;
     recentSearches.forEach(term => {
       html += `<button class="sr-recent-tag" data-term="${escapeHtml(term)}"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i> ${escapeHtml(term)}</button>`;
     });
@@ -510,6 +555,24 @@
     return d.toLocaleDateString(locale, options);
   }
 
+  window.changeLanguage = function(lang) {
+    const safeLang = (lang || 'en').toLowerCase();
+    localStorage.setItem('mpay_locale', safeLang);
+
+    if (currentLangCode) {
+      currentLangCode.textContent = safeLang.toUpperCase();
+    }
+
+    document.querySelectorAll('[data-lang-btn]').forEach(function(btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-lang-btn') === safeLang);
+    });
+
+    if (langMenu && langBtn) {
+      langMenu.classList.remove('open');
+      langBtn.setAttribute('aria-expanded', 'false');
+    }
+  };
+
   function escapeHtml(str) {
     const div = document.createElement('div');
     div.textContent = str;
@@ -522,5 +585,8 @@
   } else {
     init();
   }
+
+  const storedLang = (localStorage.getItem('mpay_locale') || 'en').toLowerCase();
+  window.changeLanguage(storedLang);
 
 })();
