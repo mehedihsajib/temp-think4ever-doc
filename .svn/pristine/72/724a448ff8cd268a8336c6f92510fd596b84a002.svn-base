@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Consumer - P2P Transfers</title>
+        <link href="css/theme.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/global.css">
+        <link rel="stylesheet" href="assets/css/consumer_p2p_transfers.css">
+        <style>/* Basic reset for preview consistency */body { margin: 0; padding: 0; font-family: sans-serif; }</style>
+    </head>
+    <body>
+        <div class="docs-layout">
+            <!-- Sidebar Overlay (mobile) -->
+            <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+            <!-- Sidebar Toggle (mobile) -->
+            <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle navigation sidebar">
+                <i class="fa fa-bars"></i>
+            </button>
+            <!-- Sidebar -->
+            <aside class="docs-sidebar" id="cp2p_sidebar" role="navigation" aria-label="Consumer documentation navigation">
+                <div class="sidebar-section">
+                    <div class="sidebar-section-label">Consumer Wallet</div>
+                    <ul class="sidebar-nav">
+                        <li>
+                            <a onclick="load_page('consumer_docs_home')" tabindex="0"><i class="fa fa-home"></i> Overview</a>
+                        </li>
+                        <li>
+                            <a onclick="load_page('consumer_getting_started')" tabindex="0"><i class="fa fa-rocket"></i> Getting Started</a>
+                        </li>
+                        <li>
+                            <a onclick="load_page('consumer_account_setup')" tabindex="0"><i class="fa fa-user-circle"></i> Account Setup</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidebar-section">
+                    <div class="sidebar-section-label">Payments</div>
+                    <ul class="sidebar-nav">
+                        <li>
+                            <a onclick="load_page('consumer_making_payments')" tabindex="0"><i class="fa fa-credit-card"></i> Making Payments</a>
+                        </li>
+                        <li>
+                            <a onclick="load_page('consumer_wallet_management')" tabindex="0"><i class="fa fa-wallet"></i> Wallet Management</a>
+                        </li>
+                        <li>
+                            <a class="active" onclick="load_page('consumer_p2p_transfers')" tabindex="0" aria-current="page"><i class="fa fa-exchange-alt"></i> P2P Transfers</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sidebar-section">
+                    <div class="sidebar-section-label">Settings & Help</div>
+                    <ul class="sidebar-nav">
+                        <li>
+                            <a onclick="load_page('consumer_settings')" tabindex="0"><i class="fa fa-cog"></i> Settings & Security</a>
+                        </li>
+                        <li>
+                            <a onclick="load_page('consumer_troubleshooting')" tabindex="0"><i class="fa fa-life-ring"></i> Troubleshooting</a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <!-- Main Content -->
+            <main class="docs-main" id="main-content">
+                <div class="docs-content">
+                    <!-- Breadcrumb -->
+                    <nav class="breadcrumb" id="cp2p_breadcrumb" aria-label="Breadcrumb">
+                        <a onclick="load_page('landing_page')" tabindex="0">Docs</a>
+                        <span class="separator"><i class="fa fa-chevron-right"></i></span>
+                        <a onclick="load_page('consumer_docs_home')" tabindex="0">Consumer</a>
+                        <span class="separator"><i class="fa fa-chevron-right"></i></span>
+                        <span class="current">P2P Transfers</span>
+                    </nav>
+                    <!-- Page Title -->
+                    <h1 class="page-title" id="cp2p_title">Person-to-Person Transfers</h1>
+                    <p class="page-subtitle">Send, receive, and request money instantly from anyone in the MPay Network. P2P transfers are fast, secure, and fee-free for standard transactions.</p>
+                    <!-- P2P Illustration -->
+                    <div class="p2p-illustration" aria-hidden="true">
+                        <div class="p2p-phone">
+                            <i class="fa fa-mobile-alt"></i>
+                            <span>Sender</span>
+                        </div>
+                        <div class="p2p-arrow">
+                            <div class="p2p-arrow-line">
+                                <div class="dots">
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                </div>
+                                <i class="fa fa-arrow-right"></i>
+                            </div>
+                            <div class="p2p-amount">$50.00</div>
+                        </div>
+                        <div class="p2p-phone">
+                            <i class="fa fa-mobile-alt"></i>
+                            <span>Receiver</span>
+                        </div>
+                    </div>
+                    <!-- Transfer Methods -->
+                    <div class="transfer-methods-grid">
+                        <div class="transfer-method-card">
+                            <div class="transfer-method-icon">
+                                <i class="fa fa-paper-plane"></i>
+                            </div>
+                            <h4>Send Money</h4>
+                            <p>Transfer funds to any MPay user instantly</p>
+                        </div>
+                        <div class="transfer-method-card">
+                            <div class="transfer-method-icon">
+                                <i class="fa fa-inbox"></i>
+                            </div>
+                            <h4>Receive Money</h4>
+                            <p>Accept transfers via QR code or username</p>
+                        </div>
+                        <div class="transfer-method-card">
+                            <div class="transfer-method-icon">
+                                <i class="fa fa-hand-holding-usd"></i>
+                            </div>
+                            <h4>Request Payment</h4>
+                            <p>Send payment requests to other users</p>
+                        </div>
+                    </div>
+                    <!-- Section: Sending Money -->
+                    <section class="doc-section" id="cp2p_content_send">
+                        <h2 id="sending-money">Sending Money</h2>
+                        <div class="section-intro">
+                            <div class="section-intro-icon">
+                                <i class="fa fa-paper-plane"></i>
+                            </div>
+                            <div class="section-intro-content">
+                                <h4>Quick & Secure Transfers</h4>
+                                <p>Send money to anyone on the <b>mPay Network</b> in seconds. You can send via username, phone number, or QR code &#8212; whichever is most convenient.</p>
+                            </div>
+                        </div>
+                        <h3 id="send-by-username">Send by E-mail or Mobile Number</h3>
+                        <p>The newest way to send money is by searching for the recipient using their mPay <b>email</b> or <b>mobile number</b>.</p>
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-title">Launch the &quot;Pay to E-mail or Pay to Mobile&quot;</div>
+                                <div class="step-content">From the home screen, tap the <strong>either the &quot;Pay to Email&quot; </strong>
+                                    <span>or &quot;<b>Pay to Mobile&quot;</b></span>&nbsp;icon.&nbsp;
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title">Find the Recipient</div>
+                                <div class="step-content">Enter the recipient&apos;s mPay <b>e-mail</b> or <b>mobile number </b>in the search field. The app will show matching users in real-time. You can also select from your <strong>Recent Contacts</strong> or <strong>Favorites</strong> list.
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title">Enter the Amount</div>
+                                <div class="step-content">Type the amount you want to send. The app will display your wallet&apos;s current balance. You can optionally add a note or memo in <b>Description</b> field (e.g., <code>Dinner split</code>).
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title">Review and Confirm</div>
+                                <div class="step-content">Review the transfer details including recipient, amount, and any fees. Tap <strong>Confirm &amp; Send</strong> and authenticate with your <b>PIN</b> or <b>biometric</b>.
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title">Transfer Complete</div>
+                                <div class="step-content">You&apos;ll see a confirmation screen with a transaction reference number. The recipient is notified instantly.</div>
+                            </div>
+                        </div>
+                        <h3 id="send-by-username">Send by Scan from Gallery</h3>
+                        <p>One convenient way of sending money using <b>saved</b><span>&nbsp;QR code on your phone gallery</span></p>
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-title">Launch the &quot;Scan from Gallery&quot;</div>
+                                <div class="step-content">From the home screen, tap the <b>Scan from Gallery</b>&nbsp;icon.&nbsp;
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title">Upload the QR code on your gallery</div>
+                                <div class="step-content">The sender can upload the recipient&rsquo;s QR code from the mobile phone&rsquo;s gallery to initiate the transaction.</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title">Enter the Amount</div>
+                                <div class="step-content">Type the amount you want to send. The app will display your wallet&apos;s current balance. You can optionally add a note or memo in <b>Description</b> field (e.g., <code>Payment for clothes</code>).
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title">Review and Confirm</div>
+                                <div class="step-content">Review the transfer details including recipient, amount, and any fees. Tap <strong>Confirm &amp; Send</strong> and authenticate with your <b>PIN</b> or <b>biometric</b>.
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title">Transfer Complete</div>
+                                <div class="step-content">You&apos;ll see a confirmation screen with a transaction reference number. The recipient is notified instantly.</div>
+                            </div>
+                        </div>
+                        <h3 id="send-by-qr">Send via Scan to Pay</h3>
+                        <p><b>Scan to Pay</b> allows users to scan a QR code to quickly send money or make payments using their wallet.</p>
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-title">Tap &quot;Scan to Pay&quot;</div>
+                                <div class="step-content">From the home screen, tap the <strong>Scan to Pay icon</strong> in the <b>Send Money</b> section.
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title">Scan the Recipient's QR Code</div>
+                                <div class="step-content">Point your camera at the recipient&apos;s QR code. Once scanned, the recipient&apos;s details will automatically populated in Scan to Pay form.&nbsp;</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title">Enter Amount and Confirm</div>
+                                <div class="step-content">Enter the transfer amount, review the details, and confirm with your PIN or biometric authentication.</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title">Transfer Complete</div>
+                                <div class="step-content">You&apos;ll see a confirmation screen with a transaction <b>reference number.</b>&nbsp;
+                                    <p>The recipient is notified instantly.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 id="send-by-qr">Send via Pay by QR</h3>
+                        <p><b>Pay by QR</b> allows users to generate a QR code that the recipient can scan to receive money.</p>
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-title">Tap &quot;Pay by QR&quot;</div>
+                                <div class="step-content">From the home screen, tap the <strong>Pay by QR </strong>
+                                    <span>icon</span> in the <b>Send Money </b>
+                                    <span>section.</span>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title">Enter QR details</div>
+                                <div class="step-content">Users can define the amount, usage type (one-time or multiple), and expiry when generating a Pay by QR code.</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title">Review and Confirm</div>
+                                <div class="step-content">Review the details, and confirm with your <b>PIN</b> or <b>biometric</b> authentication.
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title">Transfer Complete</div>
+                                <div class="step-content">You&apos;ll see a confirmation screen with a transaction <b>reference number.</b>&nbsp;
+                                    <p>The recipient is notified instantly.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 id="transfer-limits">Transaction Limits</h3>
+                        <p>Transaction limits depend on what has been setup in <b>Admin Console</b><span>&nbsp;which could be a <b>global limit</b><span>&nbsp;or <b>user-level</b><span>&nbsp;limit.</span></span></span></p>
+                        <div class="limits-table-wrapper">
+</div>
+                        <div class="callout warning">
+                            <div class="callout-icon">
+                                <i class="fa fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="callout-content">
+                                <strong>Important</strong>
+                                <p>User transaction limits are defined and controlled by the mPay Network and cannot be modified within the application. However, customer can view their <b>accumulated </b><span>limits in&nbsp;<b>Profile Settings </b>&rarr; <b>Payment Limits</b>&nbsp;</span></p>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Section: Receiving Money -->
+                    <section class="doc-section" id="cp2p_content_receive">
+                        <h2 id="receiving-money">Receiving Money</h2>
+                        <div class="section-intro">
+                            <div class="section-intro-icon">
+                                <i class="fa fa-inbox"></i>
+                            </div>
+                            <div class="section-intro-content">
+                                <h4>Instant Incoming Transfers</h4>
+                                <p>When someone sends you money, it arrives in your wallet instantly. You'll receive a push notification and the amount is immediately available to spend.</p>
+                            </div>
+                        </div>
+                        <h3 id="receive-notification">Transfer Notifications</h3>
+                        <p>When a transfer or payment is is sent to your wallet account, you&apos;ll receive:</p>
+                        <ul>
+                            <li>
+                                <strong>Push notification</strong> — Shows sender name, amount, and memo
+                            </li>
+                            <li>
+                                <strong>In-app notification</strong> — Available in the Notifications center
+                            </li>
+                            <li>
+                                <strong>Email notification</strong> — If enabled in your notification settings
+                            </li>
+                            <li>
+                                <strong>SMS alert</strong> &#8212; Transaction alert to your registered mobile number
+                            </li>
+                        </ul>
+                        <h3 id="share-qr">Share Your Profile QR Code</h3>
+                        <p>Make it easy for others to send you money by sharing your <b>profile QR</b> code:</p>
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-title">Open Your QR Code</div>
+                                <div class="step-content">From the home screen, tap the&nbsp;<strong>Profile QR Code </strong>
+                                    <span>in the upper right corner of the page.&nbsp;</span>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title">Share or Display</div>
+                                <div class="step-content">Show the QR code on your screen for the sender to scan, or tap <strong>Share</strong> to send it via message, email, or social media.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="screenshot-placeholder">
+                            <i class="fa fa-image"></i>
+                            <span>Personal QR Code screen with amount field</span>
+                        </div>
+                        <h3 id="share-username">Share Your Username or Payment Link</h3>
+                        <p>You can also share your payment details in other ways:</p>
+                        <ul>
+                            <li>
+                                <strong>Username</strong> — Share your @username for others to find you in the app
+                            </li>
+                            <li>
+                                <strong>Payment Link</strong> — Generate a unique link that opens the MPay app with your details pre-filled
+                            </li>
+                            <li>
+                                <strong>Phone Number</strong> — If linked to your account, others can find you by phone number
+                            </li>
+                        </ul>
+                        <div class="code-block">
+                            <div class="code-block-header">
+                                <span>Payment Link Format</span>
+                                <button class="copy-btn">Copy</button>
+                            </div>
+                            <pre>https://pay.mpaynetwork.com/u/<span class="property">@yourusername</span>
+https://pay.mpaynetwork.com/u/<span class="property">@yourusername</span>?<span class="keyword">amount</span>=<span class="string">50.00</span>&<span class="keyword">note</span>=<span class="string">dinner</span></pre>
+                        </div>
+                        <div class="callout success">
+                            <div class="callout-icon">
+                                <i class="fa fa-check-circle"></i>
+                            </div>
+                            <div class="callout-content">
+                                <strong>No Fees for Receiving</strong>
+                                <p>Receiving P2P transfers on MPay Network is always free. There are no fees for incoming standard transfers.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Section: Requesting Money -->
+                    <section class="doc-section" id="cp2p_content_request">
+                        <h2 id="requesting-money">Requesting Money</h2>
+                        <div class="section-intro">
+                            <div class="section-intro-icon">
+                                <i class="fa fa-hand-holding-usd"></i>
+                            </div>
+                            <div class="section-intro-content">
+                                <h4>Payment Requests Made Easy</h4>
+                                <p>Need to collect money from a friend or split a bill? Send a payment request directly from the app. The recipient gets a notification and can pay with a single tap.</p>
+                            </div>
+                        </div>
+                        <h3 id="send-request">Request Money by QR</h3>
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-title">Open Request Screen</div>
+                                <div class="step-content">From the home screen, tap <strong>Request by QR</strong>
+                                    <span>&nbsp;in the <b>Receive Money</b><span>&nbsp;section.</span></span>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title">Set the Amount and Details</div>
+                                <div class="step-content">Enter the total amount and add a description (e.g., <code>Dinner at La Piazza - March 15</code>).&nbsp;
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title">Tap Submit to generate QR</div>
+                                <div class="step-content">Click on <b>Submit</b>
+                                    <span>&nbsp;button to generate a customized QR code.</span>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title">Share the QR to the Sender</div>
+                                <div class="step-content">Share the <b>QR code generated</b>
+                                    <span>&nbsp;to the <b>Sender</b><span>.</span></span>
+                                    <p><span><span>The sender will then send money using this QR via <b>Scan to Pay</b>.</span></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 id="manage-requests">Managing Payment Requests</h3>
+                        <p>Track all your pending, completed, and expired requests in one place:</p>
+                        <ul>
+                            <li>
+                                <strong>Pending</strong> — Requests awaiting payment from the recipient
+                            </li>
+                            <li>
+                                <strong>Completed</strong> — Requests that have been paid
+                            </li>
+                            <li>
+                                <strong>Declined</strong> — Requests that the recipient has declined
+                            </li>
+                            <li>
+                                <strong>Expired</strong> — Requests that were not responded to within 30 days
+                            </li>
+                        </ul>
+                        <p>To view your requests, go to <strong>Transfers → My Requests</strong>. You can also:</p>
+                        <ul>
+                            <li>
+                                <strong>Send a reminder</strong> — Tap on a pending request and select "Remind"
+                            </li>
+                            <li>
+                                <strong>Cancel a request</strong> — Swipe left or tap "Cancel" on any pending request
+                            </li>
+                            <li>
+                                <strong>Resend an expired request</strong> — Open the expired request and tap "Resend"
+                            </li>
+                        </ul>
+                        <h3 id="respond-to-request">Responding to a Request by QR</h3>
+                        <p>When someone sends you a <b>Request by QR code</b>, you being the <b>Sender</b><span>&nbsp;can send the money or pay using <b>Scan to Pay</b><span>&nbsp;or <b>Scan from Gallery.</b></span></span></p>
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-title">Review the Request</div>
+                                <div class="step-content">Is the person requesting money from you someone you trust?</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title">Send Money</div>
+                                <div class="step-content">Sender can use to pay the <b>Request by QR</b>
+                                    <span>&nbsp;code using either <b>Scan to Pay</b><span>&nbsp;or <b>Scan from Gallery</b><span>.&nbsp;</span></span></span>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title">Verify and Authenticate</div>
+                                <div class="step-content">Confirm the transaction with your <b>PIN</b> or <b>biometric</b> authentication. The money is transferred immediately.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="callout info">
+                            <div class="callout-icon">
+                                <i class="fa fa-info-circle"></i>
+                            </div>
+                            <div class="callout-content">
+                                <strong>Bill Splitting Pro Tip</strong>
+                                <p>When splitting a bill, you can attach a photo of the receipt to the request. This helps recipients verify the amount and increases payment speed.</p>
+                            </div>
+                        </div>
+                        <div class="callout danger">
+                            <div class="callout-icon">
+                                <i class="fa fa-shield-alt"></i>
+                            </div>
+                            <div class="callout-content">
+                                <strong>Fraud Warning</strong>
+                                <p>Never pay a request from someone you don't know. If you receive an unexpected payment request, verify the sender before paying. Report suspicious requests via <strong>Settings → Report an Issue</strong>.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- FAQ Section -->
+                    <section class="doc-section faq-section" id="cp2p_faq_accordion">
+                        <h2 id="faq">Frequently Asked Questions</h2>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="faq1-answer" tabindex="0">
+                                <span>Are P2P transfers free?</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer" id="faq1-answer" role="region">
+                                <div class="faq-answer-inner">
+                                    <p>Yes, standard P2P transfers between MPay wallet users are completely free. There are no fees for sending or receiving money. However, instant transfers to external bank accounts may incur a small fee (typically 1-2%).</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="faq2-answer" tabindex="0">
+                                <span>How long does a P2P transfer take?</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer" id="faq2-answer" role="region">
+                                <div class="faq-answer-inner">
+                                    <p>P2P transfers between MPay users are instant — the money appears in the recipient's wallet within seconds. In rare cases during high traffic, transfers may take up to 30 seconds to process.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="faq3-answer" tabindex="0">
+                                <span>Can I cancel a P2P transfer after sending?</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer" id="faq3-answer" role="region">
+                                <div class="faq-answer-inner">
+                                    <p>Once a P2P transfer is confirmed and sent, it cannot be reversed. If you sent money to the wrong person, you can contact the recipient through the app to request they send it back. You can also open a dispute through <strong>Help → Report a Problem</strong> within 24 hours.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="faq4-answer" tabindex="0">
+                                <span>Can I send money to someone who doesn't have MPay?</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer" id="faq4-answer" role="region">
+                                <div class="faq-answer-inner">
+                                    <p>You can invite non-MPay users to receive transfers. When you send money to a phone number not registered on MPay, the recipient receives an SMS with a link to download the app and claim the funds. Unclaimed transfers expire after 14 days and are automatically refunded.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="faq5-answer" tabindex="0">
+                                <span>How do I increase my transfer limits?</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer" id="faq5-answer" role="region">
+                                <div class="faq-answer-inner">
+                                    <p>Transfer limits are tied to your account verification level. To increase your limits:</p>
+                                    <p>1. Go to <strong>Settings → Account → Verification</strong>.<br>2. Complete the required verification steps for the next level.<br>3. Limits are updated automatically once verification is approved (typically within 24 hours).</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="faq6-answer" tabindex="0">
+                                <span>What happens if I send money to the wrong person?</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer" id="faq6-answer" role="region">
+                                <div class="faq-answer-inner">
+                                    <p>If you accidentally send money to the wrong recipient, you should:</p>
+                                    <p>1. Contact the recipient through the app's in-built messaging feature to request a return.<br>2. If the recipient is unresponsive, file a dispute within 24 hours through <strong>Help → Report a Problem → Wrong Recipient</strong>.<br>3. Our support team will mediate the situation. Please note that we cannot guarantee recovery of funds sent to the wrong person.</p>
+                                    <p>Always double-check the recipient's name and profile picture before confirming a transfer.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="faq7-answer" tabindex="0">
+                                <span>Can I schedule recurring P2P transfers?</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </button>
+                            <div class="faq-answer" id="faq7-answer" role="region">
+                                <div class="faq-answer-inner">
+                                    <p>Yes! You can set up recurring transfers for rent payments, allowances, or regular payments. After entering the transfer details, toggle on <strong>Make Recurring</strong> and choose your frequency (weekly, bi-weekly, or monthly). You can manage or cancel recurring transfers in <strong>Transfers → Scheduled</strong>.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Prev/Next Navigation -->
+                    <nav class="prev-next-nav" id="cp2p_prev_next" aria-label="Page navigation">
+                        <div class="prev-next-card" onclick="load_page('consumer_wallet_management')" tabindex="0" role="button" aria-label="Previous: Wallet Management">
+                            <span class="prev-next-label">Previous</span>
+                            <span class="prev-next-title"><i class="fa fa-arrow-left"></i> Wallet Management</span>
+                        </div>
+                        <div class="prev-next-card next" onclick="load_page('consumer_settings')" tabindex="0" role="button" aria-label="Next: Settings & Security">
+                            <span class="prev-next-label">Next</span>
+                            <span class="prev-next-title">Settings &amp; Security <i class="fa fa-arrow-right"></i></span>
+                        </div>
+                    </nav>
+                </div>
+                <!-- Table of Contents -->
+                <aside class="docs-toc" aria-label="Table of contents">
+                    <div class="toc-title">On this page</div>
+                    <ul class="toc-list">
+                        <li>
+                            <a href="#sending-money">Sending Money</a>
+                        </li>
+                        <li>
+                            <a href="#send-by-username" style="padding-left:24px;font-size:0.75rem">By Username/Phone</a>
+                        </li>
+                        <li>
+                            <a href="#send-by-qr" style="padding-left:24px;font-size:0.75rem">Via QR Code</a>
+                        </li>
+                        <li>
+                            <a href="#transfer-limits" style="padding-left:24px;font-size:0.75rem">Transfer Limits</a>
+                        </li>
+                        <li>
+                            <a href="#receiving-money">Receiving Money</a>
+                        </li>
+                        <li>
+                            <a href="#receive-notification" style="padding-left:24px;font-size:0.75rem">Notifications</a>
+                        </li>
+                        <li>
+                            <a href="#share-qr" style="padding-left:24px;font-size:0.75rem">Share QR Code</a>
+                        </li>
+                        <li>
+                            <a href="#share-username" style="padding-left:24px;font-size:0.75rem">Share Username</a>
+                        </li>
+                        <li>
+                            <a href="#requesting-money">Requesting Money</a>
+                        </li>
+                        <li>
+                            <a href="#send-request" style="padding-left:24px;font-size:0.75rem">Send a Request</a>
+                        </li>
+                        <li>
+                            <a href="#manage-requests" style="padding-left:24px;font-size:0.75rem">Manage Requests</a>
+                        </li>
+                        <li>
+                            <a href="#respond-to-request" style="padding-left:24px;font-size:0.75rem">Respond to Request</a>
+                        </li>
+                        <li>
+                            <a href="#faq">FAQ</a>
+                        </li>
+                    </ul>
+                </aside>
+            </main>
+        </div>
+        <script src="assets/js/navigation.js"></script>
+        <script src="assets/js/consumer_p2p_transfers.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    </body>
+</html>

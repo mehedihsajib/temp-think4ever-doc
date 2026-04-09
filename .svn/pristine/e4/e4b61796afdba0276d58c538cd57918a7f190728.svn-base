@@ -1,0 +1,857 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consumer Wallet Docs - Home</title>
+  <link href="css/theme.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/consumer_docs_home.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Basic reset for preview consistency */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    /* Premium Modern Header Styles */
+    .modern-header {
+      font-family: 'Inter', sans-serif;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 64px;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      /* Matches sidebar right-border */
+      z-index: 300;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+
+    .modern-header-inner {
+      width: 100%;
+      display: flex;
+      /* 100% width, no max-width */
+      align-items: center;
+      height: 100%;
+    }
+
+    .modern-header-logo-plate {
+      display: flex;
+      align-items: center;
+      padding-left: 36px;
+      /* Matches sidebar exact width (36px + 240px + 24px) */
+      width: 300px;
+      min-width: 300px;
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+    .modern-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .modern-logo img {
+      height: 28px;
+      width: auto;
+      border-radius: 6px;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .modern-logo span {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: -0.04em;
+    }
+
+    .modern-header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1;
+      padding: 0 40px;
+      /* Space inside the right part of the header */
+      height: 100%;
+    }
+
+    .modern-nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      height: 100%;
+    }
+
+    .modern-nav a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #52525b;
+      cursor: pointer;
+      text-decoration: none;
+      transition: color 0.2s ease;
+      position: relative;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    .modern-nav a:hover {
+      color: #09090b;
+    }
+
+    .modern-nav a.active {
+      color: #09090b;
+      font-weight: 600;
+    }
+
+    .modern-nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      /* Attaches to the top header border perfectly */
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: #09090b;
+      border-radius: 2px 2px 0 0;
+      z-index: 2;
+    }
+
+    .modern-header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .modern-search-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 220px;
+      padding: 8px 12px;
+      background-color: #f4f4f5;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.875rem;
+      color: #71717a;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      outline: none;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.02);
+    }
+
+    .modern-search-btn:hover {
+      background-color: #fff;
+      border-color: #e4e4e7;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      color: #3f3f46;
+    }
+
+    .modern-search-btn .search-content {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .modern-search-btn .search-icon {
+      color: #a1a1aa;
+      font-size: 0.85rem;
+    }
+
+    .modern-search-shortcuts {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .modern-search-shortcuts kbd {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 2px 5px;
+      background-color: #fff;
+      border: 1px solid #e4e4e7;
+      border-radius: 4px;
+      color: #a1a1aa;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.02);
+    }
+
+    .modern-cta-btn {
+      padding: 8px 16px;
+      background: linear-gradient(180deg, #18181b 0%, #09090b 100%);
+      color: #ffffff;
+      border: 1px solid #000;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+    }
+
+    .modern-cta-btn:hover {
+      background: linear-gradient(180deg, #27272a 0%, #18181b 100%);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+    }
+
+    /* Responsive Utilities */
+    @media (max-width: 1024px) {
+      .modern-header-logo-plate {
+        width: 240px;
+        min-width: 240px;
+        padding-left: 24px;
+      }
+
+      .modern-nav {
+        display: none;
+      }
+
+      /* Hide heavily padded nav on tablets */
+    }
+
+    /* Modern Layout Overrides */
+    .consumer-docs-layout {
+      max-width: 100% !important;
+      width: 100% !important;
+      margin: 0 !important;
+      /* Header height */
+      display: flex !important;
+      background: #ffffff;
+    }
+
+    .cd-sidebar {
+      box-sizing: content-box !important;
+      width: 240px !important;
+      min-width: 240px !important;
+      background: #f8fafc !important;
+      /* Elegant subtle slate-50 */
+      border-right: 1px solid #e2e8f0 !important;
+      /* Soft premium border */
+
+      /* Hardcode to match user fix */
+      padding-left: 36px !important;
+      padding-right: 24px !important;
+      padding-top: 36px !important;
+    }
+
+    /* Modernizing Sidebar Internal Elements */
+    .cd-sidebar-header {
+      padding: 0 !important;
+      border-bottom: none !important;
+      margin-bottom: 32px !important;
+    }
+
+    .cd-sidebar-header h3 {
+      color: #0f172a !important;
+      /* Slate 900 */
+      font-family: 'Inter', sans-serif !important;
+      font-size: 0.9375rem !important;
+      font-weight: 600 !important;
+      letter-spacing: -0.01em !important;
+      text-transform: none !important;
+      display: flex !important;
+      align-items: center !important;
+    }
+
+    .cd-sidebar-header h3 i {
+      color: #3b82f6 !important;
+      /* Bright blue pop for the wallet icon */
+      margin-right: 10px !important;
+      font-size: 1.1rem !important;
+    }
+
+    .cd-sidebar-section {
+      margin-bottom: 24px !important;
+    }
+
+    .cd-sidebar-section-label {
+      font-family: 'Inter', sans-serif !important;
+      font-size: 0.725rem !important;
+      font-weight: 600 !important;
+      color: #64748b !important;
+      /* Slate 500 */
+      text-transform: uppercase !important;
+      letter-spacing: 0.08em !important;
+      padding: 0 12px 10px 0 !important;
+      display: block !important;
+    }
+
+    .cd-sidebar-nav li {
+      padding: 0 !important;
+      margin-bottom: 2px !important;
+    }
+
+    .cd-sidebar-nav li a {
+      padding: 8px 12px !important;
+      font-family: 'Inter', sans-serif !important;
+      font-size: 0.875rem !important;
+      color: #475569 !important;
+      /* Slate 600 */
+      border-radius: 6px !important;
+      background: transparent !important;
+      transition: all 0.2s ease !important;
+      font-weight: 500 !important;
+      display: flex !important;
+      align-items: flex-start !important;
+      line-height: 1.5 !important;
+    }
+
+    .cd-sidebar-nav li a i {
+      font-size: 0.825rem !important;
+      width: 24px !important;
+      text-align: left !important;
+      color: #94a3b8 !important;
+      /* Slate 400 */
+      transition: color 0.2s ease !important;
+      margin-top: 3px !important;
+    }
+
+    .cd-sidebar-nav li a:hover {
+      background: #f1f5f9 !important;
+      /* Slate 100 */
+      color: #0f172a !important;
+    }
+
+    .cd-sidebar-nav li a:hover i {
+      color: #475569 !important;
+    }
+
+    .cd-sidebar-nav li a.active {
+      background: #eff6ff !important;
+      /* Blue 50 */
+      color: #1d4ed8 !important;
+      /* Blue 700 */
+      font-weight: 600 !important;
+      box-shadow: inset 3px 0 0 #3b82f6 !important;
+      /* Beautiful crisp active line on left */
+    }
+
+    .cd-sidebar-nav li a.active i {
+      color: #2563eb !important;
+      /* Blue 600 */
+    }
+
+    .cd-main-content {
+      max-width: 960px !important;
+      background: #ffffff !important;
+      padding-top: 56px !important;
+      padding-left: 48px !important;
+      padding-right: 48px !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="consumer-docs-home consumer-getting-started">
+    <!-- Skip to content -->
+    <a href="#cd-main" class="sr-only"
+      style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;"
+      onfocus="this.style.position='static';this.style.width='auto';this.style.height='auto';"
+      onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip
+      to main content</a>
+    <!-- Site Header -->
+    <header class="modern-header" id="consumerHeader">
+    </header>
+
+    <div class="consumer-docs-layout">
+       <!-- Mobile sidebar toggle -->
+         <button class="cgs-sidebar-toggle" id="cgsSidebarToggle" aria-label="Toggle navigation menu"
+            aria-expanded="false">
+            <i class="fa fa-bars"></i>
+        </button>
+        <!-- Sidebar overlay -->
+        <div class="cgs-sidebar-overlay" id="cgsSidebarOverlay"></div>
+        <!-- Sidebar -->
+       <div id="consumerSidebar">
+
+       </div>
+      <!-- Main Content -->
+      <main class="cd-main-content" id="cd-main">
+        <!-- Version Banner -->
+        <div class="cd-version-banner" id="cdHomeVersionBanner" role="status">
+          <i class="fa fa-info-circle" aria-hidden="true"></i>
+          <span>You are viewing documentation for
+            <span class="version-tag">v3.2.1</span> — the latest stable
+            release.</span>
+        </div>
+        <!-- Breadcrumb -->
+        <nav class="cd-breadcrumb" id="cdHomeBreadcrumb" aria-label="Breadcrumb">
+          <a onclick="load_page('index')" tabindex="0">Docs</a>
+          <span class="separator" aria-hidden="true"><i class="fa fa-chevron-right"></i></span>
+          <span class="current" aria-current="page">Consumer Wallet</span>
+        </nav>
+        <!-- Page Title -->
+        <h1 class="cd-page-title" id="cdHomeTitle">
+          Consumer Wallet Documentation
+        </h1>
+        <!-- Overview Section -->
+        <section class="cd-overview" id="cdHomeOverview" aria-labelledby="overview-heading">
+          <p class="cd-overview-text">
+            Welcome to the
+            <strong>MPay Network Consumer Wallet</strong> documentation. The
+            Consumer Wallet is your all-in-one mobile payment solution,
+            enabling you to make fast, secure payments at any MPay-enabled
+            merchant, send money to friends and family, and manage your
+            finances with ease.
+          </p>
+          <p class="cd-overview-text">
+            Whether you're paying at a coffee shop via QR code, tapping your
+            phone for an NFC payment, or sending money to a friend across the
+            country, the Consumer Wallet has you covered. This documentation
+            will guide you through everything from your first download to
+            advanced features.
+          </p>
+          <!-- Key Features Callout -->
+          <div class="cd-key-features">
+            <h3 id="overview-heading">
+              <i class="fa fa-star" aria-hidden="true"></i> Key Features
+            </h3>
+            <ul>
+              <li>
+                <i class="fa fa-check-circle" aria-hidden="true"></i> QR Code
+                Payments
+              </li>
+              <li>
+                <i class="fa fa-check-circle" aria-hidden="true"></i> NFC
+                Tap-to-Pay
+              </li>
+              <li>
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                Person-to-Person Transfers
+              </li>
+              <li>
+                <i class="fa fa-check-circle" aria-hidden="true"></i> Wallet
+                Top-up &amp; Withdrawal
+              </li>
+              <li>
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                Transaction History &amp; Receipts
+              </li>
+              <li>
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                Multi-layer Security
+              </li>
+              <li>
+                <i class="fa fa-check-circle" aria-hidden="true"></i> Instant
+                Notifications
+              </li>
+              <li>
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                Biometric Authentication
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- Quick Start Section -->
+        <section class="cd-quick-start" aria-labelledby="quickstart-heading">
+          <h2 class="cd-section-title" id="quickstart-heading">
+            Quick Start
+          </h2>
+          <p style="
+                font-size: 0.9375rem;
+                color: #334155;
+                line-height: 1.6;
+                margin: 0 0 20px;
+              ">
+            Get up and running with MPay Consumer Wallet in just a few steps:
+          </p>
+          <div class="cd-steps">
+            <div class="cd-step">
+              <div class="cd-step-indicator">
+                <div class="cd-step-number">1</div>
+                <div class="cd-step-line"></div>
+              </div>
+              <div class="cd-step-content">
+                <h4>Download &amp; Install</h4>
+                <p>
+                  Get the MPay Consumer Wallet from the App Store or Google
+                  Play Store.
+                </p>
+              </div>
+            </div>
+            <div class="cd-step">
+              <div class="cd-step-indicator">
+                <div class="cd-step-number">2</div>
+                <div class="cd-step-line"></div>
+              </div>
+              <div class="cd-step-content">
+                <h4>Create Your Account</h4>
+                <p>
+                  Sign up with your phone number and complete the quick
+                  verification process.
+                </p>
+              </div>
+            </div>
+            <div class="cd-step">
+              <div class="cd-step-indicator">
+                <div class="cd-step-number">3</div>
+                <div class="cd-step-line"></div>
+              </div>
+              <div class="cd-step-content">
+                <h4>Fund Your Wallet</h4>
+                <p>
+                  Add money to your wallet via bank transfer, debit card, or
+                  other supported methods.
+                </p>
+              </div>
+            </div>
+            <div class="cd-step">
+              <div class="cd-step-indicator">
+                <div class="cd-step-number">4</div>
+              </div>
+              <div class="cd-step-content">
+                <h4>Start Paying</h4>
+                <p>
+                  Scan a QR code or tap your phone at any MPay-enabled
+                  merchant to pay instantly.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Explore Documentation -->
+        <section aria-labelledby="explore-heading">
+          <h2 class="cd-section-title" id="explore-heading">
+            Explore Documentation
+          </h2>
+          <div class="cd-cards-grid">
+            <!-- Getting Started Card -->
+            <div class="cd-doc-card" id="cdHomeGettingStartedLink" data-navigate="consumer_getting_started" tabindex="0"
+              role="link" aria-label="Getting Started - Download, install, and set up your Consumer Wallet">
+              <div class="cd-doc-card-icon">
+                <i class="fa fa-rocket" aria-hidden="true"></i>
+              </div>
+              <h3 class="cd-doc-card-title">Getting Started</h3>
+              <p class="cd-doc-card-desc">
+                Download, install, and set up your Consumer Wallet. Complete
+                your first login and explore the app interface.
+              </p>
+              <div class="cd-doc-card-arrow">
+                Learn more
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              </div>
+            </div>
+            <!-- Account Setup Card -->
+            <div class="cd-doc-card" id="cdHomeAccountLink" data-navigate="consumer_account_setup" tabindex="0"
+              role="link" aria-label="Account Setup - Register your account and complete verification">
+              <div class="cd-doc-card-icon">
+                <i class="fa fa-user-circle" aria-hidden="true"></i>
+              </div>
+              <h3 class="cd-doc-card-title">Account Setup</h3>
+              <p class="cd-doc-card-desc">
+                Register your account, complete identity verification, and
+                customize your personal profile settings.
+              </p>
+              <div class="cd-doc-card-arrow">
+                Learn more
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              </div>
+            </div>
+            <!-- Making Payments Card -->
+            <div class="cd-doc-card" id="cdHomePaymentsLink" data-navigate="consumer_making_payments" tabindex="0"
+              role="link" aria-label="Making Payments - Pay with QR codes and NFC tap-to-pay">
+              <div class="cd-doc-card-icon">
+                <i class="fa fa-credit-card" aria-hidden="true"></i>
+              </div>
+              <h3 class="cd-doc-card-title">Making Payments</h3>
+              <p class="cd-doc-card-desc">
+                Learn how to pay at merchants using QR code scanning, NFC
+                tap-to-pay, and other supported payment methods.
+              </p>
+              <div class="cd-doc-card-arrow">
+                Learn more
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              </div>
+            </div>
+            <!-- Wallet Management Card -->
+            <div class="cd-doc-card" id="cdHomeWalletLink" data-navigate="consumer_wallet_management" tabindex="0"
+              role="link" aria-label="Wallet Management - Manage balance, top-up, and withdrawals">
+              <div class="cd-doc-card-icon">
+                <i class="fa fa-coins" aria-hidden="true"></i>
+              </div>
+              <h3 class="cd-doc-card-title">Wallet Management</h3>
+              <p class="cd-doc-card-desc">
+                Manage your wallet balance, top-up with various methods,
+                withdraw funds, and view transaction history.
+              </p>
+              <div class="cd-doc-card-arrow">
+                Learn more
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              </div>
+            </div>
+            <!-- P2P Transfers Card -->
+            <div class="cd-doc-card" id="cdHomeP2pLink" data-navigate="consumer_p2p_transfers" tabindex="0" role="link"
+              aria-label="P2P Transfers - Send money to friends and family">
+              <div class="cd-doc-card-icon">
+                <i class="fa fa-exchange-alt" aria-hidden="true"></i>
+              </div>
+              <h3 class="cd-doc-card-title">P2P Transfers</h3>
+              <p class="cd-doc-card-desc">
+                Send and receive money from other MPay users instantly. Split
+                bills, request payments, and manage contacts.
+              </p>
+              <div class="cd-doc-card-arrow">
+                Learn more
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              </div>
+            </div>
+            <!-- Settings & Security Card -->
+            <div class="cd-doc-card" id="cdHomeSettingsLink" data-navigate="consumer_settings" tabindex="0" role="link"
+              aria-label="Settings & Security - Configure app settings and security preferences">
+              <div class="cd-doc-card-icon">
+                <i class="fa fa-shield-alt" aria-hidden="true"></i>
+              </div>
+              <h3 class="cd-doc-card-title">Settings &amp; Security</h3>
+              <p class="cd-doc-card-desc">
+                Configure notification preferences, enable biometric login,
+                manage security settings, and protect your account.
+              </p>
+              <div class="cd-doc-card-arrow">
+                Learn more
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              </div>
+            </div>
+            <!-- Troubleshooting Card -->
+            <div class="cd-doc-card" id="cdHomeTroubleshootingLink" data-navigate="consumer_troubleshooting"
+              tabindex="0" role="link" aria-label="Troubleshooting - Common issues and solutions">
+              <div class="cd-doc-card-icon">
+                <i class="fa fa-life-ring" aria-hidden="true"></i>
+              </div>
+              <h3 class="cd-doc-card-title">Troubleshooting</h3>
+              <p class="cd-doc-card-desc">
+                Find solutions to common issues, error codes, payment
+                failures, and get help when something doesn't work as
+                expected.
+              </p>
+              <div class="cd-doc-card-arrow">
+                Learn more
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Prev/Next Navigation -->
+        <div class="cd-prev-next" id="cdHomePrevNext">
+          <div class="cd-prev-next-btn prev" onclick="load_page('index')" tabindex="0" role="link"
+            aria-label="Previous: Documentation Home">
+            <span class="cd-prev-next-label"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+              Previous</span>
+            <span class="cd-prev-next-title">Documentation Home</span>
+          </div>
+          <div class="cd-prev-next-btn next" onclick="load_page('consumer_getting_started')" tabindex="0" role="link"
+            aria-label="Next: Getting Started">
+            <span class="cd-prev-next-label">Next <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+            <span class="cd-prev-next-title">Getting Started</span>
+          </div>
+        </div>
+      </main>
+    </div>
+    <!-- Footer -->
+    <!-- <footer style="
+          background: #1e3a8a;
+          color: #fff;
+          padding: 40px 24px 24px;
+          margin-top: auto;
+        ">
+      <div style="
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+          ">
+        <div>
+          <div style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 16px;
+              ">
+            <img
+              src="https://dev.think4ever.com/uifiles/20260311/ed3d2c21991e3bef5e069713af9fa6ca/only_m_with_white_bg_logo.png"
+              alt="MPay Network" style="height: 32px; filter: brightness(0) invert(1)" />
+            <span style="
+                  font-family: 'Plus Jakarta Sans', sans-serif;
+                  font-weight: 700;
+                  font-size: 1rem;
+                ">MPay Network</span>
+          </div>
+          <p style="
+                font-size: 0.8125rem;
+                color: rgba(255, 255, 255, 0.7);
+                line-height: 1.6;
+                margin: 0;
+              ">
+            Secure, fast, and convenient digital payments for everyone.
+          </p>
+        </div>
+        <div>
+          <h4 style="
+                font-size: 0.8125rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                margin: 0 0 12px;
+                color: rgba(255, 255, 255, 0.9);
+              ">
+            Documentation
+          </h4>
+          <ul style="
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+              ">
+            <li>
+              <a onclick="load_page('merchant_docs_home')" style="
+                    font-size: 0.8125rem;
+                    color: rgba(255, 255, 255, 0.6);
+                    text-decoration: none;
+                    cursor: pointer;
+                  ">Merchant Wallet</a>
+            </li>
+            <li>
+              <a onclick="load_page('consumer_docs_home')" style="
+                    font-size: 0.8125rem;
+                    color: rgba(255, 255, 255, 0.6);
+                    text-decoration: none;
+                    cursor: pointer;
+                  ">Consumer Wallet</a>
+            </li>
+            <li>
+              <a onclick="load_page('changelog_page')" style="
+                    font-size: 0.8125rem;
+                    color: rgba(255, 255, 255, 0.6);
+                    text-decoration: none;
+                    cursor: pointer;
+                  ">Changelog</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="
+                font-size: 0.8125rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                margin: 0 0 12px;
+                color: rgba(255, 255, 255, 0.9);
+              ">
+            Resources
+          </h4>
+          <ul style="
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+              ">
+            <li>
+              <a onclick="load_page('blog_listing')" style="
+                    font-size: 0.8125rem;
+                    color: rgba(255, 255, 255, 0.6);
+                    text-decoration: none;
+                    cursor: pointer;
+                  ">Blog</a>
+            </li>
+            <li>
+              <a onclick="load_page('feedback_form')" style="
+                    font-size: 0.8125rem;
+                    color: rgba(255, 255, 255, 0.6);
+                    text-decoration: none;
+                    cursor: pointer;
+                  ">Feedback</a>
+            </li>
+            <li>
+              <a onclick="load_page('search_results')" style="
+                    font-size: 0.8125rem;
+                    color: rgba(255, 255, 255, 0.6);
+                    text-decoration: none;
+                    cursor: pointer;
+                  ">Search</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="
+                font-size: 0.8125rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                margin: 0 0 12px;
+                color: rgba(255, 255, 255, 0.9);
+              ">
+            Legal
+          </h4>
+          <ul style="
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+              ">
+            <li>
+              <a onclick="load_page('privacy_policy')" style="
+                    font-size: 0.8125rem;
+                    color: rgba(255, 255, 255, 0.6);
+                    text-decoration: none;
+                    cursor: pointer;
+                  ">Privacy Policy</a>
+            </li>
+            <li>
+              <a onclick="load_page('terms_of_service')" style="
+                    font-size: 0.8125rem;
+                    color: rgba(255, 255, 255, 0.6);
+                    text-decoration: none;
+                    cursor: pointer;
+                  ">Terms of Service</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div style="
+            max-width: 1280px;
+            margin: 24px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            text-align: center;
+          ">
+        <p style="
+              font-size: 0.75rem;
+              color: rgba(255, 255, 255, 0.5);
+              margin: 0;
+            ">
+          &copy; 2025 MPay Network. All rights reserved.
+        </p>
+      </div>
+    </footer> -->
+  </div>
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/consumer_docs_home.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+
+</html>

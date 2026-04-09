@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumer - Settings & Security</title>
+    <link href="css/theme.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/consumer_settings.css">
+    <style>
+        /* Basic reset for preview consistency */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Site Header -->
+    <header class="modern-header" id="consumerHeader">
+    </header>
+    <div class="consumer-settings-page consumer-getting-started">
+        <!-- Skip to content -->
+        <a href="#main-content" class="sr-only"
+            style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;"
+            onfocus="this.style.position='fixed';this.style.left='16px';this.style.top='16px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';this.style.zIndex='9999';this.style.background='#2563eb';this.style.color='#fff';this.style.padding='12px 24px';this.style.borderRadius='8px';this.style.fontSize='14px';this.style.fontWeight='600';"
+            onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip
+            to main content</a>
+        <!-- Sidebar Overlay (mobile) -->
+        <button class="cgs-sidebar-toggle" id="cgsSidebarToggle" aria-label="Toggle navigation menu"
+            aria-expanded="false">
+            <i class="fa fa-bars"></i>
+        </button>
+        <!-- Sidebar overlay -->
+        <div class="cgs-sidebar-overlay" id="cgsSidebarOverlay"></div>
+        <!-- Sidebar -->
+        <div id="consumerSidebar">
+
+        </div>
+        <!-- Main Content -->
+        <div class="docs-main">
+            <div class="docs-content-wrapper">
+                <main class="docs-content" id="main-content">
+                    <!-- Breadcrumb -->
+                    <nav class="breadcrumb" id="csec_breadcrumb" aria-label="Breadcrumb">
+                        <a onclick="load_page('index')" tabindex="0" data-i18n="settings.breadcrumb.docs">Docs</a>
+                        <span class="breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></span>
+                        <a onclick="load_page('consumer_docs_home')" tabindex="0" data-i18n="settings.breadcrumb.consumer">Consumer</a>
+                        <span class="breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></span>
+                        <span class="breadcrumb-current" data-i18n="settings.breadcrumb.settings_security">Settings & Security</span>
+                    </nav>
+                    <!-- Page Title -->
+                    <h1 class="doc-page-title" id="csec_title" data-i18n="settings.title">Settings & Security</h1>
+                    <p class="doc-page-subtitle" data-i18n="settings.subtitle">
+                        Learn how to configure your MPay Consumer Wallet settings, manage security preferences,
+                        enable biometric authentication, and protect your account with advanced security features. </p>
+                    <!-- Security Visual -->
+                    <div class="security-visual">
+                        <div class="security-visual-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div class="security-visual-content">
+                            <h4 data-i18n="settings.visual.title">Your Security Matters</h4>
+                            <p data-i18n="settings.visual.body">MPay uses bank-grade encryption and multiple security layers to keep your wallet and
+                                transactions safe. Configure these settings to maximize your protection.</p>
+                        </div>
+                    </div>
+                    <!-- Section: PIN Management -->
+                    <section class="doc-section" id="csec_content_pin">
+                        <h2 class="doc-section-title" id="section-pin" data-i18n="settings.pin.heading">PIN Management</h2>
+                        <p data-i18n="settings.pin.intro">
+                            Your transaction PIN is a 6-digit code used to authorize payments and sensitive account
+                            operations.
+                            It is separate from your device lock screen and provides an additional layer of security.
+                        </p>
+                        <h4 data-i18n="settings.pin.setting_heading">Setting Your PIN</h4>
+                        <p data-i18n="settings.pin.setting_intro">When you first set up your mPay wallet, you&apos;ll be prompted to create a transaction PIN.
+                            Follow these steps:</p>
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-title" data-i18n="settings.pin.steps.1.title">Navigate to Security Settings</div>
+                                <div class="step-desc" data-i18n-html="settings.pin.steps.1.desc">Open the app menu and tap <strong>Profile Settings</strong> →
+                                    <strong>Security</strong> → <strong>Change PIN</strong>.
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title" data-i18n="settings.pin.steps.2.title">Enter a 6-Digit PIN</div>
+                                <div class="step-desc" data-i18n-html="settings.pin.steps.2.desc">Choose a PIN that you can remember but that isn't easily
+                                    guessable. Avoid sequential numbers like <code>123456</code> or repeated digits like
+                                    <code>111111</code>.
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title" data-i18n="settings.pin.steps.3.title">Confirm Your PIN</div>
+                                <div class="step-desc" data-i18n="settings.pin.steps.3.desc">Re-enter your PIN to confirm. The system will verify both entries
+                                    match before saving.</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title" data-i18n="settings.pin.steps.4.title">PIN Saved Successfully</div>
+                                <div class="step-desc" data-i18n="settings.pin.steps.4.desc">Your PIN is now active. You'll use it to approve transactions,
+                                    transfers, and account changes.</div>
+                            </div>
+                        </div>
+                        <h4 data-i18n="settings.pin.changing_heading">Changing Your PIN</h4>
+                        <p data-i18n="settings.pin.changing_intro">To change your existing PIN, you'll need to verify your current PIN first:</p>
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-title" data-i18n="settings.pin.changing_steps.1.title">Go to Settings → Security → Change PIN</div>
+                                <div class="step-desc" data-i18n="settings.pin.changing_steps.1.desc">Navigate to the PIN management section in your security settings.
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title" data-i18n="settings.pin.changing_steps.2.title">Enter Current PIN</div>
+                                <div class="step-desc" data-i18n="settings.pin.changing_steps.2.desc">Verify your identity by entering your current 6-digit PIN.</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title" data-i18n="settings.pin.changing_steps.3.title">Enter & Confirm New PIN</div>
+                                <div class="step-desc" data-i18n="settings.pin.changing_steps.3.desc">Type your new PIN and confirm it. Your new PIN takes effect
+                                    immediately.</div>
+                            </div>
+                        </div>
+                        <div class="callout callout-warning">
+                            <div class="callout-icon">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </div>
+                            <div class="callout-content">
+                                <strong data-i18n="settings.pin.tips_title">PIN Security Tips</strong>
+                                <p data-i18n="settings.pin.tips_body">Never share your PIN with anyone, including MPay support staff. MPay will never ask
+                                    you for your PIN via phone, email, or SMS. After 5 failed PIN attempts, your account
+                                    will be temporarily locked for 30 minutes.</p>
+                            </div>
+                        </div>
+                        <h4 data-i18n="settings.pin.forgot_title">Forgot Your PIN?</h4>
+                        <p data-i18n-html="settings.pin.forgot_body">
+                            If you forget your transaction PIN, tap <strong>"Forgot PIN"</strong> on the PIN entry
+                            screen.
+                            You'll need to verify your identity through your registered email or phone number to reset
+                            it. </p>
+                    </section>
+                    <!-- Section: Biometric Authentication -->
+                    <section class="doc-section" id="csec_content_biometric">
+                        <h2 class="doc-section-title" id="section-biometric" data-i18n="settings.biometric.heading">Biometric Authentication</h2>
+                        <p data-i18n="settings.biometric.intro">
+                            Enable fingerprint or Face ID authentication for quick and secure access to your wallet.
+                            Biometric login adds convenience while maintaining strong security. </p>
+                        <div class="method-cards">
+                            <div class="method-card">
+                                <div class="method-card-icon">
+                                    <i class="fa-solid fa-fingerprint"></i>
+                                </div>
+                                <h5 data-i18n="settings.biometric.methods.fingerprint.title">Fingerprint</h5>
+                                <p data-i18n="settings.biometric.methods.fingerprint.desc">Use your registered fingerprint for fast wallet access and transaction approval.</p>
+                                <span class="recommended-badge" data-i18n="settings.biometric.methods.fingerprint.badge">Most Common</span>
+                            </div>
+                            <div class="method-card">
+                                <div class="method-card-icon">
+                                    <i class="fa-solid fa-face-smile"></i>
+                                </div>
+                                <h5 data-i18n="settings.biometric.methods.faceid.title">Face ID</h5>
+                                <p data-i18n="settings.biometric.methods.faceid.desc">Authenticate with facial recognition for a seamless hands-free experience.</p>
+                                <span class="recommended-badge" data-i18n="settings.biometric.methods.faceid.badge">Recommended</span>
+                            </div>
+                        </div>
+                        <h4 data-i18n="settings.biometric.enabling_heading">Enabling Biometric Login</h4>
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-title" data-i18n="settings.biometric.steps.1.title">Open Security Settings</div>
+                                <div class="step-desc" data-i18n-html="settings.biometric.steps.1.desc">Go to <strong>Settings</strong> → <strong>Security</strong> →
+                                    <strong>Biometric Authentication</strong>.
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title" data-i18n="settings.biometric.steps.2.title">Toggle Biometric Login</div>
+                                <div class="step-desc" data-i18n="settings.biometric.steps.2.desc">Turn on the biometric authentication toggle. Your device must
+                                    have at least one fingerprint or Face ID enrolled.</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title" data-i18n="settings.biometric.steps.3.title">Verify with PIN</div>
+                                <div class="step-desc" data-i18n-html="settings.biometric.steps.3.desc">Enter your transaction PIN to confirm the change. This ensures
+                                    only you can enable biometrics.</div>
+                            </div>
+                            <div class="step">
+                                <div class="step-title" data-i18n="settings.biometric.steps.4.title">Test Your Biometric</div>
+                                <div class="step-desc" data-i18n="settings.biometric.steps.4.desc">You'll be prompted to scan your fingerprint or face to verify it
+                                    works correctly.</div>
+                            </div>
+                        </div>
+                        <div class="toggle-demo">
+                            <div class="toggle-switch active" role="switch" aria-checked="true"
+                                aria-label="Biometric login" tabindex="0"></div>
+                            <span class="toggle-label" data-i18n="settings.biometric.toggles.access">Biometric Login for Wallet Access</span>
+                        </div>
+                        <div class="toggle-demo">
+                            <div class="toggle-switch" role="switch" aria-checked="false"
+                                aria-label="Biometric for transactions" tabindex="0"></div>
+                            <span class="toggle-label" data-i18n="settings.biometric.toggles.transactions">Biometric Approval for Transactions</span>
+                        </div>
+                        <div class="callout callout-info">
+                            <div class="callout-icon">
+                                <i class="fa-solid fa-circle-info"></i>
+                            </div>
+                            <div class="callout-content">
+                                <strong data-i18n="settings.biometric.requirements_title">Device Requirements</strong>
+                                <p data-i18n="settings.biometric.requirements_body">Biometric authentication requires a compatible device with enrolled biometrics. If
+                                    your device doesn't support biometrics, this option will be unavailable. You can
+                                    always fall back to PIN authentication.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Section: Two-Factor Authentication -->
+                    <!-- Section: Notification Settings -->
+                    <section class="doc-section" id="csec_content_notifications">
+                        <h2 class="doc-section-title" id="section-notifications" data-i18n="settings.notifications.heading">Notification Settings</h2>
+                        <p data-i18n="settings.notifications.intro">
+                            Configure how and when MPay sends you alerts about transactions, security events, and
+                            account activity.
+                            Keeping notifications enabled helps you monitor your account in real time. </p>
+                        <h4 data-i18n="settings.notifications.channels_heading">Available Notification Channels</h4>
+                        <div class="settings-card">
+                            <div class="settings-card-icon">
+                                <i class="fa-solid fa-bell"></i>
+                            </div>
+                            <div class="settings-card-content">
+                                <h5 data-i18n="settings.notifications.channels.push.title">Push Notifications</h5>
+                                <p data-i18n="settings.notifications.channels.push.desc">Real-time alerts delivered directly to your device. Recommended for transaction
+                                    alerts and security notifications.</p>
+                            </div>
+                        </div>
+                        <div class="settings-card">
+                            <div class="settings-card-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="settings-card-content">
+                                <h5 data-i18n="settings.notifications.channels.email.title">Email Notifications</h5>
+                                <p data-i18n="settings.notifications.channels.email.desc">Detailed notifications sent to your registered email address. Includes transaction
+                                    receipts and monthly summaries.</p>
+                            </div>
+                        </div>
+                        <div class="settings-card">
+                            <div class="settings-card-icon">
+                                <i class="fa-solid fa-comment-sms"></i>
+                            </div>
+                            <div class="settings-card-content">
+                                <h5 data-i18n="settings.notifications.channels.sms.title">SMS Alerts</h5>
+                                <p data-i18n="settings.notifications.channels.sms.desc">Critical alerts via text message. Used for high-value transactions and security
+                                    events when push is unavailable.</p>
+                            </div>
+                        </div>
+                        <h4 data-i18n="settings.notifications.types_heading">Configurable Alert Types</h4>
+                        <ul class="option-list">
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <span data-i18n-html="settings.notifications.types.transaction"><strong>Transaction Alerts</strong> — Every payment sent or received</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <span data-i18n-html="settings.notifications.types.promotional"><strong>Promotional</strong> — News, offers, and feature announcements</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <span data-i18n-html="settings.notifications.types.summary"><strong>Weekly Summary</strong> — Weekly spending and activity digest</span>
+                            </li>
+                        </ul>
+                        <div class="callout callout-success">
+                            <div class="callout-icon">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+                            <div class="callout-content">
+                                <strong data-i18n="settings.notifications.pro_tip_title">Pro Tip</strong>
+                                <p data-i18n-html="settings.notifications.pro_tip_body">We recommend keeping <strong>Transaction Alerts</strong> and <strong>Security
+                                        Alerts</strong> enabled at all times. These help you quickly detect unauthorized
+                                    activity on your account.</p>
+                            </div>
+                        </div>
+                        <h4 data-i18n="settings.notifications.managing_heading">Managing Notifications</h4>
+                        <p data-i18n-html="settings.notifications.managing_body">
+                            To adjust your notification preferences, navigate to <strong>Settings</strong> →
+                            <strong>Notifications</strong>.
+                            Use the toggles to enable or disable each notification type per channel. Changes take effect
+                            immediately. </p>
+                        <div class="toggle-demo">
+                            <div class="toggle-switch active" role="switch" aria-checked="true"
+                                aria-label="Transaction alerts" tabindex="0"></div>
+                            <span class="toggle-label" data-i18n="settings.notifications.toggles.transaction">Transaction Alerts (Push)</span>
+                        </div>
+                        <div class="toggle-demo">
+                            <div class="toggle-switch active" role="switch" aria-checked="true"
+                                aria-label="Security alerts" tabindex="0"></div>
+                            <span class="toggle-label" data-i18n="settings.notifications.toggles.security">Security Alerts (Push + Email)</span>
+                        </div>
+                        <div class="toggle-demo">
+                            <div class="toggle-switch" role="switch" aria-checked="false"
+                                aria-label="Promotional notifications" tabindex="0"></div>
+                            <span class="toggle-label" data-i18n="settings.notifications.toggles.promotional">Promotional Notifications</span>
+                        </div>
+                    </section>
+                    <!-- Section: Privacy Settings -->
+                    <section class="doc-section" id="csec_content_privacy">
+                        <h2 class="doc-section-title" id="section-privacy" data-i18n="settings.privacy.heading">Privacy Settings</h2>
+                        <p data-i18n="settings.privacy.intro">
+                            MPay gives you full control over your personal data and privacy preferences.
+                            Manage how your information is used, shared, and stored. </p>
+                        <h4 data-i18n="settings.privacy.controls_heading">Privacy Controls</h4>
+                        <div class="privacy-grid">
+                            <div class="privacy-option">
+                                <div class="privacy-option-title" data-i18n-html="settings.privacy.controls.visibility.title">
+                                    <i class="fa-solid fa-eye-slash"></i> Profile Visibility
+                                </div>
+                                <div class="privacy-option-desc" data-i18n="settings.privacy.controls.visibility.desc">Control who can see your display name and profile
+                                    picture when sending or receiving payments.</div>
+                            </div>
+                            <div class="privacy-option">
+                                <div class="privacy-option-title" data-i18n-html="settings.privacy.controls.analytics.title">
+                                    <i class="fa-solid fa-chart-simple"></i> Analytics & Usage Data
+                                </div>
+                                <div class="privacy-option-desc" data-i18n="settings.privacy.controls.analytics.desc">Choose whether to share anonymized usage data to help
+                                    improve the MPay experience.</div>
+                            </div>
+                            <div class="privacy-option">
+                                <div class="privacy-option-title" data-i18n-html="settings.privacy.controls.location.title">
+                                    <i class="fa-solid fa-location-dot"></i> Location Data
+                                </div>
+                                <div class="privacy-option-desc" data-i18n="settings.privacy.controls.location.desc">Manage location access. Used for fraud detection and
+                                    nearby merchant features.</div>
+                            </div>
+                            <div class="privacy-option">
+                                <div class="privacy-option-title" data-i18n-html="settings.privacy.controls.contacts.title">
+                                    <i class="fa-solid fa-address-book"></i> Contacts Access
+                                </div>
+                                <div class="privacy-option-desc" data-i18n="settings.privacy.controls.contacts.desc">Allow MPay to access your contacts for easy P2P
+                                    transfers. Fully optional.</div>
+                            </div>
+                        </div>
+                        <h4 data-i18n="settings.privacy.data_heading">Data Management</h4>
+                        <p data-i18n="settings.privacy.data_intro">You have the right to access, export, and delete your personal data at any time:</p>
+                        <ul class="option-list">
+                            <li>
+                                <i class="fa-solid fa-download"></i>
+                                <span data-i18n-html="settings.privacy.data_options.export.title"><strong>Export Data</strong> — Download a copy of all your personal data and
+                                    transaction history</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-clock-rotate-left"></i>
+                                <span data-i18n-html="settings.privacy.data_options.activity.title"><strong>Activity Log</strong> — Review a complete log of account activity and
+                                    access events</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-trash-can"></i>
+                                <span data-i18n-html="settings.privacy.data_options.delete.title"><strong>Delete Account</strong> — Permanently delete your account and all
+                                    associated data</span>
+                            </li>
+                        </ul>
+                        <div class="callout callout-warning">
+                            <div class="callout-icon">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </div>
+                            <div class="callout-content">
+                                <strong data-i18n="settings.privacy.deletion_title">Account Deletion</strong>
+                                <p data-i18n="settings.privacy.deletion_body">Account deletion is permanent and cannot be undone. Before deleting, ensure your
+                                    wallet balance is zero and all pending transactions are completed. Regulatory
+                                    requirements may require us to retain certain transaction records for up to 7 years.
+                                </p>
+                            </div>
+                        </div>
+                        <h4 data-i18n="settings.privacy.policy_heading">Privacy Policy</h4>
+                        <p data-i18n-html="settings.privacy.policy_body">
+                            For complete details on how MPay collects, uses, and protects your data, please review our
+                            <a onclick="load_page('privacy_policy')" tabindex="0"
+                                style="color: var(--color-primary, #2563eb); cursor: pointer; text-decoration: underline;">Privacy
+                                Policy</a>. </p>
+                    </section>
+                    <!-- Section: FAQ -->
+                    <section class="doc-section faq-section" id="csec_faq_accordion">
+                        <h2 class="doc-section-title" id="section-faq" data-i18n="settings.faq.heading">Frequently Asked Questions</h2>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
+                                <span data-i18n="settings.faq.questions.1.q">What happens if I forget my transaction PIN?</span>
+                                <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                            </button>
+                            <div class="faq-answer" id="faq-1" role="region">
+                                <div class="faq-answer-inner" data-i18n="settings.faq.questions.1.a">
+                                    Tap "Forgot PIN" on the PIN entry screen. You'll need to verify your identity
+                                    through your registered email or phone number. A PIN reset link will be sent to you.
+                                    After verification, you can set a new 6-digit PIN. Your account may be temporarily
+                                    restricted during the reset process for security.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
+                                <span data-i18n="settings.faq.questions.2.q">Can I use both fingerprint and Face ID?</span>
+                                <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                            </button>
+                            <div class="faq-answer" id="faq-2" role="region">
+                                <div class="faq-answer-inner" data-i18n="settings.faq.questions.2.a">
+                                    You can only use the biometric method supported by your device. Most devices support
+                                    either fingerprint or Face ID, not both simultaneously. If your device supports
+                                    both, you can choose which one to use as your primary biometric method in the
+                                    security settings.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
+                                <span data-i18n="settings.faq.questions.3.q">How do I recover my account if I lose my 2FA device?</span>
+                                <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                            </button>
+                            <div class="faq-answer" id="faq-3" role="region">
+                                <div class="faq-answer-inner" data-i18n="settings.faq.questions.3.a">
+                                    Use one of your backup codes to log in and disable 2FA. If you don't have backup
+                                    codes, contact MPay support with your registered email and a government-issued ID
+                                    for identity verification. The recovery process typically takes 24-48 hours for
+                                    security reasons.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
+                                <span data-i18n="settings.faq.questions.4.q">Why am I not receiving push notifications?</span>
+                                <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                            </button>
+                            <div class="faq-answer" id="faq-4" role="region">
+                                <div class="faq-answer-inner" data-i18n="settings.faq.questions.4.a">
+                                    First, check that notifications are enabled in both the MPay app settings and your
+                                    device's system settings. On Android, ensure the app isn't being restricted by
+                                    battery optimization. On iOS, check the Notification Center settings. If
+                                    notifications still aren't working, try logging out and back in, or reinstalling the
+                                    app.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
+                                <span data-i18n="settings.faq.questions.5.q">Can I download my transaction history?</span>
+                                <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                            </button>
+                            <div class="faq-answer" id="faq-5" role="region">
+                                <div class="faq-answer-inner" data-i18n-html="settings.faq.questions.5.a">
+                                    Yes! Go to <strong>Settings → Privacy → Export Data</strong> to download a complete
+                                    copy of your transaction history. You can export in CSV or PDF format. The export
+                                    will be sent to your registered email address and typically arrives within a few
+                                    minutes.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="faq-6">
+                                <span data-i18n="settings.faq.questions.6.q">Is my PIN stored on MPay servers?</span>
+                                <i class="fa-solid fa-chevron-down faq-chevron"></i>
+                            </button>
+                            <div class="faq-answer" id="faq-6" role="region">
+                                <div class="faq-answer-inner" data-i18n="settings.faq.questions.6.a">
+                                    No. Your PIN is never stored in plain text. MPay uses strong one-way hashing
+                                    (bcrypt) to store a hashed version of your PIN. This means even MPay employees
+                                    cannot see your actual PIN. All PIN verification happens securely server-side by
+                                    comparing hashes.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Prev/Next Navigation -->
+                    <nav class="doc-pagination" id="csec_prev_next" aria-label="Page navigation">
+                        <a class="doc-pagination-link prev" onclick="load_page('consumer_p2p_transfers')" tabindex="0"
+                            role="link"> <span class="doc-pagination-label"> <i class="fa-solid fa-arrow-left"></i>
+                                <span data-i18n="settings.pagination.prev">Previous</span> </span> <span class="doc-pagination-title" data-i18n="settings.pagination.prev_title">P2P Transfers</span> </a>
+                        <a class="doc-pagination-link next" onclick="load_page('consumer_troubleshooting')" tabindex="0"
+                            role="link"> <span class="doc-pagination-label">
+                                <span data-i18n="settings.pagination.next">Next</span> <i class="fa-solid fa-arrow-right"></i> </span> <span
+                                class="doc-pagination-title" data-i18n="settings.pagination.next_title">Troubleshooting</span> </a>
+                    </nav>
+                </main>
+                <!-- Table of Contents -->
+                <aside class="docs-toc" role="navigation" aria-label="Table of contents">
+                    <div class="toc-title" data-i18n="settings.toc.title">On This Page</div>
+                    <ul class="toc-list">
+                        <li>
+                            <a class="toc-link active" data-target="section-pin" href="#section-pin" data-i18n="settings.toc.pin">PIN Management</a>
+                        </li>
+                        <li>
+                            <a class="toc-link" data-target="section-biometric" href="#section-biometric" data-i18n="settings.toc.biometric">Biometric
+                                Authentication</a>
+                        </li>
+                        <li>
+                            <a class="toc-link" data-target="section-2fa" href="#section-2fa" data-i18n="settings.toc.2fa">Two-Factor
+                                Authentication</a>
+                        </li>
+                        <li>
+                            <a class="toc-link" data-target="section-notifications"
+                                href="#section-notifications" data-i18n="settings.toc.notifications">Notification Settings</a>
+                        </li>
+                        <li>
+                            <a class="toc-link" data-target="section-privacy" href="#section-privacy" data-i18n="settings.toc.privacy">Privacy
+                                Settings</a>
+                        </li>
+                        <li>
+                            <a class="toc-link" data-target="section-faq" href="#section-faq" data-i18n="settings.toc.faq">FAQ</a>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </div>
+    <div id="docFooter"></div>
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/consumer_settings.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.I18n) {
+                window.I18n.init();
+            }
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+
+</html>

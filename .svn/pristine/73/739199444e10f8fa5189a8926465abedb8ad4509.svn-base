@@ -1,0 +1,1919 @@
+{
+  "meta": {
+    "lang_name": "Nederlands",
+    "lang_code": "nl"
+  },
+  "nav": {
+    "overview": "Overzicht",
+    "merchant": "Handelaar",
+    "consumer": "Consument",
+    "blog": "Blog",
+    "changelog": "Changelog",
+    "search_placeholder": "Zoeken in documentatie...",
+    "dashboard": "Dashboard",
+    "feedback": "Feedback"
+  },
+  "header": {
+    "brand": "MPay Network"
+  },
+  "sidebar": {
+    "book_title": "Consument Portefeuille Docs",
+    "section_getting_started": "Aan de slag",
+    "section_using_wallet": "Uw Portefeuille Gebruiken",
+    "section_settings": "Instellingen & Ondersteuning",
+    "section_other_docs": "Andere Docs",
+    "link_overview": "Overzicht",
+    "link_getting_started": "Aan de slag",
+    "link_account_setup": "Account Instellen",
+    "link_making_payments": "Betalingen Doen",
+    "link_wallet_management": "Portefeuille Beheer",
+    "link_p2p_transfers": "Geld verzenden en ontvangen",
+    "link_settings_security": "Instellingen & Beveiliging",
+    "link_troubleshooting": "Probleemoplossing",
+    "link_merchant_docs": "Handelaar Portefeuille Docs",
+    "link_consumer_docs": "Handelaar Consumentenwallet Docs",
+    "link_changelog": "Changelog"
+  },
+  "breadcrumb": {
+    "docs": "Documentatie",
+    "consumer_wallet": "Consumentenwallet",
+    "merchant_wallet": "Merchant Wallet",
+    "getting_started": "Aan de slag",
+    "qr_payments": "QR-code betalingen",
+    "nfc_payments": "NFC betalingen",
+    "making_payments": "Betalingen uitvoeren",
+    "transactions": "Transacties",
+    "wallet_management": "Wallet-beheer",
+    "p2p_transfers": "Geld verzenden en ontvangen",
+    "product_updates": "Productupdates",
+    "v2_5_0": "v2.5.0",
+    "account_setup": "Accountinstelling",
+    "troubleshooting": "Probleemoplossing",
+    "security": "Beveiliging",
+    "settings_security": "Instellingen & Beveiliging"
+  },
+  "page": {
+    "title": "Aan de slag met de Consumenten Portefeuille",
+    "subtitle": "Alles wat u moet weten om uw mPay Consumenten Portefeuille te downloaden, installeren en in te stellen. Volg deze stap-voor-stap gids om binnen enkele minuten te beginnen met snelle, veilige betalingen.",
+    "time_badge": "Geschatte insteltijd: 5 minuten"
+  },
+  "toc": {
+    "on_this_page": "Op deze pagina",
+    "requirements": "Systeemvereisten",
+    "download": "Downloaden & Installeren",
+    "install_steps": "Installatiestappen",
+    "signup": "Aanmelden",
+    "first_login": "Eerste Login & Setup",
+    "profile_setup": "Profiel Instellen",
+    "wallet_setup": "Portefeuille Configuratie",
+    "screenshots": "Walkthrough van de Instellingen",
+    "faq": "FAQ"
+  },
+  "requirements": {
+    "heading": "Systeemvereisten",
+    "intro": "Zorg er voor het downloaden voor dat uw apparaat voldoet aan de minimale vereisten:",
+    "ios": {
+      "name": "iOS",
+      "desc": "iOS 15.0 of hoger. Compatibel met iPhone 8 en nieuwer. Ongeveer 85 MB opslagruimte vereist."
+    },
+    "android": {
+      "name": "Android",
+      "desc": "Android 10.0 (API level 29) of hoger. Ongeveer 60 MB opslagruimte vereist."
+    },
+    "nfc_callout_title": "NFC Vereiste",
+    "nfc_callout_body": "Voor tap-to-pay functionaliteit moet uw apparaat over NFC-hardware beschikken. De meeste moderne smartphones (iPhone 7+ en Android met NFC) ondersteunen deze functie."
+  },
+  "download": {
+    "heading": "Downloaden & Installeren",
+    "intro": "De mPay Consumenten Portefeuille is gratis beschikbaar in beide grote app stores. Kies hieronder uw platform:",
+    "ios_btn": "App Store",
+    "ios_btn_pre": "Download in de",
+    "android_btn": "Google Play",
+    "android_btn_pre": "Ontdek het op",
+    "install_steps_heading": "Installatiestappen",
+    "steps": {
+      "1": {
+        "title": "Open uw app store",
+        "content": "Open de <strong>App Store</strong> (iOS) or <strong>Google Play Store</strong> (Android) op uw apparaat."
+      },
+      "2": {
+        "title": "Zoek naar mPay Wallet",
+        "content": "Typ <code>mPay Consumer Wallet</code> in de zoekbalk. Zoek naar de officiële app met het mPay-logo and \"mPay Network\" als ontwikkelaar."
+      },
+      "3": {
+        "title": "Downloaden en installeren",
+        "content": "Tik op <strong>Download</strong> (iOS) of <strong>Installeren</strong> (Android). De app wordt automatisch gedownload en geïnstalleerd. Mogelijk wordt u gevraagd om u te authenticeren met uw apparaatwachtwoord, Face ID of vingerafdruk."
+      },
+      "4": {
+        "title": "Open de app",
+        "content": "Tik na de installatie op <strong>Openen</strong> of zoek het mPay-icoon op uw startscherm. De app start met het welkomstscherm."
+      }
+    },
+    "verify_callout_title": "Verifieer de Ontwikkelaar",
+    "verify_callout_body": "Verifieer altijd of de ontwikkelaar vermeld staat als \"mPay Network\" voordat u downloadt. Installeer geen apps van onofficiële bronnen."
+  },
+  "signup": {
+    "heading": "Aanmelden",
+    "intro": "Uw mPay-account aanmaken is snel en eenvoudig. U heeft een geldig telefoonnummer and e-mailadres nodig.",
+    "steps": {
+      "1": {
+        "title": "Bent u een bestaande mPay-klant?",
+        "content": "Op het welkomstscherm wordt u gevraagd of u <strong>\"Een bestaande klant bent?\"</strong>. Voor nieuwe klanten tikt u op de knop <strong>NEE</strong>. Als u al een account heeft, selecteert u de knop <strong>JA</strong>."
+      },
+      "2": {
+        "title": "Nieuw Consumenten Registratieformulier",
+        "content": "De gebruiker wordt naar het <strong>Nieuwe Consument Registreren</strong> formulier geleid."
+      },
+      "3": {
+        "title": "Vereiste Klantinformatie",
+        "content": "De <strong>Gebruikers-ID</strong>, het <strong>E-mailadres</strong>, en het <strong>Mobiele Nummer</strong> moeten uniek zijn voor elke klant.",
+        "info_callout": "Tijdens de indiening van de registratie verifieert het systeem of de <strong>Gebruikers-ID</strong>, het <strong>E-mailadres</strong> en het <strong>Mobiele Nummer</strong> al in gebruik zijn door bestaande mPay-klanten."
+      },
+      "4": {
+        "title": "Vul alle verplichte velden in",
+        "intro": "Voer uw basisinformatie in:",
+        "field_name": "<strong>Voor- en Achternaam</strong> — Zoals vermeld op uw identiteitsbewijs",
+        "field_email": "<strong>E-mailadres</strong> — Een geldig e-mailadres voor meldingen en herstel",
+        "field_mobile": "<strong>Mobiel Nummer</strong> — Moet een geldig mobiel nummer zijn dat SMS ontvangt voor verificatie",
+        "field_referral": "<strong>Referral Code</strong> — Optioneel veld voor de verwijzingscode van de verwijzende mPay-klant."
+      },
+      "5": {
+        "title": "Akkoord gaan met de voorwaarden",
+        "intro": "Er zijn twee verplichte selectievakjes die geaccepteerd moeten worden voordat de registratie kan worden voortgezet:",
+        "check_terms": "Accepteer de <strong>Algemene Voorwaarden</strong>",
+        "check_security": "Beveiligingsbeleid dat slechts één gebruiker per apparaat toestaat, waarin staat: <em>\"Ik ga ermee akkoord dat het registreren van een nieuwe klant het bestaande account dat aan dit apparaat is gekoppeld, zal verwijderen.\"</em>"
+      },
+      "6": {
+        "title": "Optie om E-mail en Mobiel te Gebruiken in de Handelaar App",
+        "intro": "Kies of uw e-mailadres en mobiele nummer ook gebruikt kunnen worden om u te identificeren in de Handelaar App.",
+        "check_terms": "Accepteer de <strong>Algemene Voorwaarden</strong>",
+        "check_security": "Beveiligingsbeleid dat slechts één gebruiker per apparaat toestaat, waarin staat: <em>\"Ik ga ermee akkoord dat het registreren van een nieuwe klant het bestaande account dat aan dit apparaat is gekoppeld, zal verwijderen.\"</em>"
+      }
+    },
+    "success_callout_title": "Account Aangemaakt!",
+    "success_callout_body": "Zodra u het bevestigingsscherm ziet, is uw account klaar. U kunt nu doorgaan met het instellen van uw profiel en uw portefeuille configureren."
+  },
+  "first_login": {
+    "heading": "Eerste Login & Setup",
+    "intro": "Na het aanmaken van uw account wordt u door de initiële installatiewizard geleid. Dit is wat u kunt verwachten:",
+    "profile_heading": "Profiel Instellen",
+    "profile_steps": {
+      "1": {
+        "title": "Voeg uw persoonlijke gegevens toe",
+        "content": "Voer uw volledige naam in zoals deze op uw door de overheid uitgegeven identiteitsbewijs staat. Voeg optioneel een profielfoto toe voor eenvoudige identificatie tijdens P2P-overboekingen."
+      },
+      "2": {
+        "title": "Beveiliging instellen",
+        "content": "Configureer uw favoriete authenticatiemethode:",
+        "pin": "<strong>PIN-code</strong> — Stel een 6-cijferige PIN in voor snelle toegang",
+        "biometric": "<strong>Biometrie</strong> — Schakel Face ID of vingerafdrukauthenticatie in",
+        "recommend": "We raden aan om beide in te schakelen voor maximale beveiliging"
+      },
+      "3": {
+        "title": "Meldingen inschakelen",
+        "content_pre": "Sta pushmeldingen toe om direct betalingsbevestigingen, beveiligingswaarschuwingen en promotie-aanbiedingen te ontvangen. U kunt meldingsvoorkeuren later aanpassen in ",
+        "settings_link": "Instellingen",
+        "content_post": "."
+      }
+    },
+    "wallet_heading": "Portefeuille Configuratie",
+    "wallet_steps": {
+      "1": {
+        "title": "Personaliseer uw profiel",
+        "content": "Stel een profielfoto in voor uw portefeuille-account."
+      },
+      "2": {
+        "title": "Meldingsvoorkeuren Beheren",
+        "content": "U kunt een meldingsoptie aan- of uitzetten op basis van uw eigen voorkeuren."
+      },
+      "3": {
+        "title": "De installatie voltooien",
+        "content": "Tik op <strong>Installatie Voltooien</strong> om op uw portefeuille-dashboard te komen. U bent klaar om te beginnen met betalen!"
+      }
+    },
+    "tip_callout_title": "Tip: Voltooi de Verificatie Vroegtijdig",
+    "tip_callout_body": "Het verificatieproces kan 24 tot 48 uur duren; het is raadzaam om het profiel zo snel mogelijk te voltooien om volledige toegang te krijgen tot de functies van de mPay-portefeuille."
+  },
+  "screenshots": {
+    "heading": "Walkthrough van de Instellingen",
+    "intro": "Hier is een visueel overzicht van de belangrijkste schermen die u tijdens de installatie tegenkomt:",
+    "step1_label": "Welkomstscherm",
+    "step1_sublabel": "Account Aanmaken of Inloggen",
+    "step1_caption": "Stap 1: Welkomstscherm",
+    "step2_label": "Telefoonverificatie",
+    "step2_sublabel": "Voer OTP-code in",
+    "step2_caption": "Stap 2: Telefoon Verifiëren",
+    "step3_label": "Beveiligingsinstellingen",
+    "step3_sublabel": "PIN & Biometrie",
+    "step3_caption": "Stap 3: Beveiliging Instellen",
+    "step4_label": "Profielinfo",
+    "step4_sublabel": "Naam & Foto",
+    "step4_caption": "Stap 4: Uw Profiel",
+    "step5_label": "Portefeuille Setup",
+    "step5_sublabel": "Valuta & Financiering",
+    "step5_caption": "Stap 5: Portefeuille Configureren",
+    "step6_label": "Helemaal Klaar!",
+    "step6_sublabel": "Dashboard Gereed",
+    "step6_caption": "Stap 6: Klaar voor Gebruik!"
+  },
+  "faq": {
+    "heading": "Veelgestelde Vragen",
+    "q1": "Kan ik de mPay Wallet op meerdere apparaten gebruiken?",
+    "a1": "Ja, u kunt op meerdere apparaten inloggen op uw mPay-account. Om veiligheidsredenen kan echter <b>slechts één apparaat tegelijk actief zijn</b>. Inloggen op een nieuw apparaat meldt u automatisch af op het vorige apparaat.",
+    "q2": "Wat als ik de OTP-code niet ontvang?",
+    "a2": "Als u de OTP niet binnen 60 seconden ontvangt, tikt u op de knop \"Code Opnieuw Verzenden\". Zorg ervoor dat uw telefoon signaal heeft en dat SMS niet geblokkeerd is. Als het probleem aanhoudt, probeer dan de optie \"Bel Mij\" voor spraakverificatie. Raadpleeg onze gids voor probleemoplossing voor meer oplossingen.",
+    "q3": "Is er een minimale storting om de portefeuille te gaan gebruiken?",
+    "a3": "Nee, er is geen minimale storting vereist. U kunt uw account aanmaken en de app verkennen zonder geld toe te voegen. Wanneer u klaar bent om een betaling te doen, kunt u uw portefeuille met elk gewenst bedrag financieren. Bekijk Portefeuillebeheer voor financieringsopties en limieten.",
+    "q4": "Kan ik mijn telefoonnummer na registratie wijzigen?",
+    "a4": "Ja, u kunt uw telefoonnummer bijwerken op de pagina Instellingen. U moet uw identiteit en het nieuwe telefoonnummer verifiëren via OTP. Het oude nummer wordt na een succesvolle verificatie losgekoppeld. Uit veiligheidsoverwegingen geldt er een afkoelperiode van 24 uur voordat bepaalde functies na een nummerwijziging weer worden ingeschakeld.",
+    "q5": "Wat moet ik doen als de app vastloopt tijdens de installatie?",
+    "a5": "Als de app vastloopt tijdens de installatie, open deze dan gewoon opnieuw. Uw voortgang wordt automatisch bij elke stap opgeslagen. Als het probleem aanhoudt, probeer dan het app-cachegeheugen te wissen (Android) of de app opnieuw te installeren (iOS). Zorg ervoor dat u de nieuwste versie hebt geïnstalleerd. Bezoek onze pagina voor probleemoplossing voor meer hulp.",
+    "q6": "Zijn mijn persoonlijke gegevens veilig tijdens de registratie?",
+    "a6": "Absoluut. Alle gegevens die tijdens de registratie worden verzonden, zijn gecodeerd met de industriestandaard TLS 1.3. Uw persoonlijke gegevens worden veilig opgeslagen en nooit met derden gedeeld zonder uw toestemming. Lees ons Privacybeleid voor volledige details over hoe we met uw gegevens omgaan."
+  },
+  "pagination": {
+    "previous": "Vorige",
+    "next": "Volgende",
+    "prev_title": "Consument Docs Home",
+    "next_title": "Account Instellen & Verificatie"
+  },
+  "lang_switcher": {
+    "label": "Taal"
+  },
+  "merchant_sidebar": {
+    "title": "Handelaar Portefeuille",
+    "section_getting_started": "Aan de slag",
+    "overview": "Overzicht",
+    "getting_started": "Aan de slag",
+    "account_setup": "Account Instellen & Verificatie",
+    "section_payments": "Betalingen",
+    "qr_payments": "QR-code Betalingen",
+    "nfc_payments": "NFC Betalingen",
+    "section_management": "Beheer",
+    "transaction_management": "Transactiebeheer",
+    "settings_config": "Instellingen & Configuratie",
+    "section_support": "Ondersteuning",
+    "troubleshooting": "Probleemoplossing"
+  },
+  "home": {
+    "version_banner": "U bekijkt de documentatie voor <span class=\"version-tag\">v3.2.1</span> — de nieuwste stabiele release.",
+    "breadcrumb": {
+      "docs": "Docs",
+      "consumer_wallet": "Consument Portefeuille"
+    },
+    "title": "Documentatie Consumenten Portefeuille",
+    "overview": {
+      "p1": "Welkom bij de documentatie van de <strong>MPay Network Consumenten Portefeuille</strong>. De Consumenten Portefeuille is uw alles-in-één mobiele betalingsoplossing, waarmee u snel en veilig kunt betalen bij elke door mPay ondersteunde handelaar, geld kunt overmaken naar vrienden en familie, en uw financiën met gemak kunt beheren.",
+      "p2": "Of u nu bij een koffiebar betaalt via een QR-code, uw telefoon tikt voor een NFC-betaling, of geld stuurt naar een vriend aan de andere kant van het land, de Consumenten Portefeuille heeft de oplossing. Deze documentatie leidt u door alles heen, van uw eerste download tot geavanceerde functies."
+    },
+    "features": {
+      "heading": "Belangrijkste Functies",
+      "qr": "QR-code Betalingen",
+      "nfc": "NFC Tap-to-Pay",
+      "p2p": "Persoon-tot-Persoon Overboekingen",
+      "wallet": "Portefeuille Opwaarderen & Opnemen",
+      "history": "Transactiegeschiedenis & Bewijzen",
+      "security": "Meervoudige Beveiliging",
+      "notifications": "Directe Meldingen",
+      "biometric": "Biometrische Authenticatie"
+    },
+    "quick_start": {
+      "heading": "Snel aan de slag",
+      "intro": "Ga aan de slag met de MPay Consumenten Portefeuille in slechts enkele stappen:",
+      "step1": {
+        "title": "Downloaden & Installeren",
+        "description": "Krijg de MPay Consumenten Portefeuille in de App Store of Google Play Store."
+      },
+      "step2": {
+        "title": "Uw account aanmaken",
+        "description": "Meld u aan met uw telefoonnummer en voltooi het snelle verificatieproces."
+      },
+      "step3": {
+        "title": "Uw portefeuille financieren",
+        "description": "Voeg geld toe aan uw portefeuille via bankoverschrijving, pinpas of andere ondersteunde methoden."
+      },
+      "step4": {
+        "title": "Beginnen met betalen",
+        "description": "Scan een QR-code of tik met uw telefoon bij een mPay-handelaar om direct te betalen."
+      }
+    },
+    "explore": {
+      "heading": "Verken de Documentatie",
+      "learn_more": "Meer informatie",
+      "getting_started": {
+        "title": "Aan de slag",
+        "description": "Download, installeer en stel uw Consumenten Portefeuille in. Voltooi uw eerste login en verken de app-interface."
+      },
+      "account_setup": {
+        "title": "Account Instellen",
+        "description": "Registreer uw account, voltooi identiteitsverificatie en pas uw persoonlijke profielinstellingen aan."
+      },
+      "making_payments": {
+        "title": "Betalingen Doen",
+        "description": "Leer hoe u bij handelaren kunt betalen met behulp van QR-codescans, NFC tap-to-pay en andere ondersteunde betalingsmethoden."
+      },
+      "wallet_management": {
+        "title": "Portefeuille Beheer",
+        "description": "Beheer uw portefeuillesaldo, waardeer op met verschillende methoden, neem geld op en bekijk uw transactiegeschiedenis."
+      },
+      "p2p_transfers": {
+        "title": "P2P Overboekingen",
+        "description": "Stuur en ontvang direct geld van andere mPay-gebruikers. Deel rekeningen, vraag betalingen aan en beheer contacten."
+      },
+      "settings_security": {
+        "title": "Instellingen & Beveiliging",
+        "description": "Configureer meldingsvoorkeuren, schakel biometrisch inloggen in, beheer beveiligingsinstellingen en bescherm uw account."
+      },
+      "troubleshooting": {
+        "title": "Probleemoplossing",
+        "description": "Vind oplossingen voor veelvoorkomende problemen, foutcodes, mislukte betalingen en krijg hulp wanneer iets niet werkt zoals verwacht."
+      }
+    },
+    "pagination": {
+      "prev": "Vorige",
+      "prev_title": "Documentatie Home",
+      "next": "Volgende",
+      "next_title": "Aan de slag"
+    }
+  },
+  "account_setup": {
+    "breadcrumb": {
+      "docs": "Docs",
+      "consumer": "Consument",
+      "account_setup": "Account Instellen"
+    },
+    "title": "Account Instellen & Verificatie",
+    "subtitle": "Leer hoe u uw mPay Consumenten Portefeuille-account registreert, identiteitsverificatie voltooit en uw profielvoorkeuren configureert.",
+    "registration": {
+      "heading": "Registratie",
+      "intro": "Het aanmaken van uw mPay Consumenten Portefeuille-account is snel en eenvoudig. Alles wat u nodig heeft is een geldig telefoonnummer om aan de slag te gaan.",
+      "wallet_registration": "Portefeuille Registratie",
+      "intro_2": "Uw mobiele nummer en e-mailadres fungeren als een van de unieke identificatiemiddelen in het mPay-netwerk. Volg deze stappen om te registreren of aan te melden:",
+      "steps": {
+        "1": {
+          "title": "Bent u een bestaande mPay-klant?",
+          "content": "Op het welkomstscherm wordt u gevraagd of u <strong>\"Een bestaande klant bent?\"</strong>. Voor nieuwe klanten tikt u op de knop <strong>NEE</strong>. Als u al een account heeft, selecteert u in plaats daarvan de knop <strong>JA</strong>."
+        },
+        "2": {
+          "title": "Nieuw Klant Registratieformulier",
+          "content": "De gebruiker wordt naar het <strong>Nieuwe Consument Registreren</strong> formulier geleid."
+        },
+        "3": {
+          "title": "Vereiste Klantinformatie",
+          "content": "De <strong>Gebruikers-ID</strong>, het <strong>E-mailadres</strong>, en het <strong>Mobiele Nummer</strong> moeten uniek zijn voor elke klant."
+        },
+        "4": {
+          "title": "Maak uw PIN aan",
+          "content": "Stel een 6-cijferige PIN in die u gebruikt om transacties te autoriseren en toegang te krijgen tot uw portefeuille. Kies iets veiligs maar memorabels."
+        },
+        "5": {
+          "title": "Algemene Voorwaarden Accepteren",
+          "content_pre": "Bekijk en accepteer de mPay Network ",
+          "tos": "Algemene Voorwaarden",
+          "privacy": "Privacybeleid",
+          "content_mid": " and ",
+          "content_post": "."
+        },
+        "6": {
+          "title": "Beveiligingsvragen Instellen",
+          "content": "Stel beveiligingsvragen in, die worden gebruikt voor account-herstel en het resetten van wachtwoorden. Klik op de knop <strong>Verzenden</strong>."
+        },
+        "7": {
+          "title": "OTP Verificatie",
+          "content": "Er wordt een SMS naar uw geregistreerde mobiele nummer gestuurd met een <strong>OTP (One-Time PIN). </strong>",
+          "ensure": "Zorg ervoor dat u de juiste OTP verifieert.",
+          "success": "Er verschijnt een succesmelding dat de registratie is voltooid, tik op de knop <strong>OK</strong>."
+        },
+        "8": {
+          "title": "PIN Configuratie",
+          "content": "De klant is <strong>verplicht</strong> om een PIN in te stellen voor de portefeuille-applicatie.",
+          "pin_def": "De <strong>PIN</strong> fungeert als de beveiligde toegangscode van uw applicatie.",
+          "pin_req": "Gebruikers moeten hun PIN invoeren telkens wanneer ze inloggen om hun identiteit te verifiëren en toegang te krijgen tot de applicatie."
+        },
+        "9": {
+          "title": "Biometrie Instellen voor Inloggen",
+          "content": "De klant kan ook biometrische gegevens gebruiken om in te loggen bij de portefeuille-applicatie als een extra beveiligingslaag.",
+          "default": "Als biometrie is ingesteld, gebruiken we <strong>Face ID</strong> of <strong>Touch ID</strong> om <strong>standaard</strong> in te loggen bij de portefeuille-applicatie."
+        }
+      },
+      "security_tip_title": "Beveiligingstip",
+      "security_tip_body": "Het wordt aanbevolen om beide beveiligingsmaatregelen ingeschakeld te houden om een sterkere bescherming voor uw portefeuille-applicatie te garanderen.",
+      "supported_regions_heading": "Ondersteunde Regio's",
+      "supported_regions_intro": "De mPay Consumenten Portefeuille is momenteel beschikbaar in de volgende regio's:",
+      "regions": {
+        "curacao": "Curaçao"
+      },
+      "voip_warning_title": "VoIP-nummers worden niet ondersteund",
+      "voip_warning_body": "Virtuele telefoonnummers (Google Voice, Skype, etc.) worden niet geaccepteerd voor registratie. U moet een nummer van een mobiele provider gebruiken."
+    },
+    "verification": {
+      "heading": "Identiteitsverificatie",
+      "intro": "mPay moet de identiteit van haar klanten verifiëren om fraude te voorkomen. Raadpleeg hieronder meer informatie over de profielstatus van de klant:",
+      "tiers_heading": "Status van Portefeuille-account",
+      "tiers": {
+        "incomplete": {
+          "badge": "Onvolledig Profiel",
+          "title": "Nieuw Geregistreerde Gebruiker",
+          "f1": "Account aangemaakt",
+          "f2": "Moet profiel voltooien",
+          "f3": "ID-documenten uploaden",
+          "f4": "Beperkte Toegang"
+        },
+        "pending": {
+          "badge": "Niet Geverifieerd",
+          "title": "Wacht op Verificatie",
+          "f1": "Heeft profiel voltooid",
+          "f2": "ID-documenten geüpload",
+          "f3": "Profiel is <strong>in behandeling</strong>",
+          "f4": "Beperkte Toegang",
+          "f5": "Verificatieproces duurt maximaal 48 uur"
+        },
+        "verified": {
+          "badge": "Geverifieerd",
+          "title": "Profiel Volledig Geverifieerd",
+          "f1": "Identiteit is geverifieerd",
+          "f2": "Volledige toegang",
+          "f3": "Portefeuille-account beheren",
+          "f4": "Geld Verzenden/Ontvangen",
+          "f5": "Geavanceerde analyses"
+        }
+      },
+      "how_to_heading": "Hoe u uw Identiteit Kunt Verifiëren",
+      "how_to_intro": "Na een succesvolle registratie logt u in op uw mPay Wallet-applicatie om het <strong>Profiel te Voltooien</strong> door relevante identificatiedocumenten te uploaden.",
+      "how_to_steps": {
+        "1": {
+          "title": "Voer adresgegevens en andere vereiste informatie in",
+          "content": "Zorg ervoor dat het adres overeenkomt met het door de overheid uitgegeven identiteitsbewijs dat wordt ingediend bij het verificatieproces."
+        },
+        "2": {
+          "title": "Upload een door de overheid uitgegeven identiteitsbewijs",
+          "content": "Maak een duidelijke foto van uw geldige identiteitsbewijs. Ondersteunde documenten zijn paspoorten, nationale identiteitskaarten en rijbewijzen."
+        },
+        "3": {
+          "title": "Maak een foto voor uw profielfoto",
+          "content": "Maak een live selfie voor gezichtsvergelijking. Ons systeem vergelijkt uw gezicht met uw ID-foto. Zorg voor goede verlichting en verwijder accessoires zoals een zonnebril."
+        },
+        "4": {
+          "title": "Wacht op Beoordeling",
+          "content": "Het mPay-netwerk zal alle gegevens van de klant zorgvuldig beoordelen; het verificatieproces kan 24 tot 48 uur duren. Ongeacht het resultaat van het verificatieproces, wordt de klant op de hoogte gesteld via SMS en e-mail."
+        }
+      },
+      "required_docs_heading": "Vereiste Documenten",
+      "table": {
+        "doc": "Document",
+        "consumer": "Consument",
+        "merchant": "Handelaar",
+        "notes": "Opmerkingen",
+        "required": "Vereist",
+        "optional": "Optioneel",
+        "row1_name": "Overheids-ID (Paspoort / Nationale ID / Rijbewijs)",
+        "row1_notes": "Moet geldig en niet verlopen zijn",
+        "row2_name": "Selfie Foto",
+        "row2_notes": "Live opname, geen uploads",
+        "row3_name": "Adresbewijs",
+        "row3_notes": "Nutsrekening, bankafschrift (laatste 3 maanden)",
+        "row4_name": "Fiscaal Identificatienummer",
+        "row4_notes": "BSN, TIN of equivalent"
+      },
+      "data_secure_title": "Uw gegevens zijn veilig",
+      "data_secure_body": "Alle documenten worden end-to-end gecodeerd en verwerkt door onze gecertificeerde KYC-partner. We slaan nooit onbewerkte beelden op nadat de verificatie is voltooid. Zie ons <a onclick=\"load_page('privacy_policy')\" style=\"color: #166534; cursor: pointer; text-decoration: underline;\">Privacybeleid</a> voor details.",
+      "status_heading": "Verificatiestatus Controleren",
+      "status_intro": "U kunt uw huidige verificatiestatus op elk moment controleren:",
+      "status_list": {
+        "1": "Open de mPay-app en log in.",
+        "2": "Afhankelijk van de status van de klant ontvangt de gebruiker na het inloggen een bericht:"
+      },
+      "status_indicators": "Statusindicatoren:",
+      "verified_status": "<strong>Geverifieerd</strong> — U heeft toegang tot de app-functionaliteiten. Tijdens de eerste keer inloggen nadat het account is geverifieerd, krijgt u het bericht <strong>\"Gefeliciteerd! Uw account is volledig geverifieerd!\"</strong>",
+      "pending_status": "<strong>In behandeling</strong> — Wordt beoordeeld en toont het bericht <strong>\"Uw account wordt nog beoordeeld.\" </strong>",
+      "rejected_status": "<strong>Afgewezen</strong> — de klant ziet het bericht <strong>Er is een probleem met uw account, neem contact op met support@mpaynetwork.com voor meer details.</strong>"
+    },
+    "profile": {
+      "heading": "Profielconfiguratie",
+      "intro": "Personaliseer uw mPay-profiel zodat vrienden en handelaren u gemakkelijk kunnen identificeren tijdens transacties.",
+      "preview": {
+        "name": "Alex Johnson",
+        "phone": "+1 (555) 012-3456",
+        "status": "Account Geverifieerd"
+      },
+      "fields_heading": "Profielvelden",
+      "fields": {
+        "name": {
+          "title": "Volledige Naam",
+          "content": "De naam die aan anderen wordt getoond tijdens transacties. Kan uw echte naam of een bijnaam zijn."
+        },
+        "photo": {
+          "title": "Profielfoto",
+          "content": "Upload een foto of maak een nieuwe. Optioneel maar aanbevolen voor P2P-overboekingen."
+        },
+        "email": {
+          "title": "E-mailadres",
+          "content": "Wordt gebruikt voor transactiebewijzen en account-herstel. Sterk aanbevolen."
+        },
+        "language": {
+          "title": "Voorkeurstaal",
+          "content": "Stel uw weergavetaal in. Ondersteunt momenteel Engels, Spaans, Frans, Duits en Portugees."
+        },
+        "qr": {
+          "title": "QR-profiel",
+          "content": "Uw profiel-QR die wordt gebruikt voor het ontvangen van geld op uw portefeuille-account."
+        },
+        "notifications": {
+          "title": "Meldingsvoorkeuren",
+          "content": "Configureer pushmeldingen, e-mailwaarschuwingen en SMS voor betalings- en beveiligingsgebeurtenissen."
+        }
+      },
+      "edit_heading": "Uw Profiel Bewerken",
+      "edit_intro": "Om uw profielinformatie te <b>bewerken</b>:",
+      "edit_steps": {
+        "1": "1. Open de mPay-app",
+        "2": "2. Tik op het <strong>profielicoon</strong> in de rechterbovenhoek (of ga naar <strong>Instellingen &rarr; Profiel</strong>)",
+        "3": "3. Tik op de knop <strong>\"Bewerken\"</strong> naast het veld dat u wilt wijzigen",
+        "4": "4. Breng uw wijzigingen aan en tik op <strong>\"Opslaan\"</strong>"
+      },
+      "phone_change_title": "Het wijzigen van uw telefoonnummer is onderworpen aan goedkeuring en verificatie door het mPay-netwerk",
+      "phone_change_body": "Bel de mPay-hotline of stuur een e-mail naar support@mpaynetwork.com.",
+      "security_heading": "Initiële Beveiligingsinstellingen",
+      "security_intro": "Tijdens het instellen van uw account raden we ten zeerste aan om deze beveiligingsfuncties te configureren:",
+      "security_list": {
+        "biometric": "<strong>Biometrische Authenticatie:</strong> Schakel vingerafdruk of Face ID in voor snelle, veilige toegang",
+        "pin": "<strong>Transactie-PIN:</strong> Uw 6-cijferige PIN is vereist voor alle transacties — deel deze nooit met iemand"
+      },
+      "never_share_title": "Deel nooit uw PIN of OTP-codes",
+      "never_share_body": "mPay zal u nooit vragen om uw PIN of OTP via telefoon, e-mail of chat. Iedereen die hierom vraagt, probeert fraude te plegen. Meld verdachte activiteiten onmiddellijk via de app."
+    },
+    "faq": {
+      "heading": "Veelgestelde Vragen",
+      "q1": "Kan ik registreren met een telefoonnummer uit een ander land?",
+      "a1": "Ja, u kunt zich registreren met elke ondersteunde landcode. Sommige functies kunnen echter beperkt zijn op basis van uw registratieregio. Transactielimieten en beschikbare functies kunnen per land verschillen als gevolg van lokale regelgeving.",
+      "q2": "Hoe lang duurt identiteitsverificatie?",
+      "a2": "Tier 2 (Standaard) verificatie is geautomatiseerd en wordt doorgaans binnen 5 minuten voltooid. Tier 3 (Premium) verificatie kan een handmatige beoordeling vereisen en kan tot 48 kantooruren duren. U ontvangt een pushmelding wanneer de beoordeling is voltooid.",
+      "q3": "Wat gebeurt er als mijn verificatie wordt afgewezen?",
+      "a3": "Als uw verificatie wordt afgewezen, ontvangt u een melding met de specifieke reden (bijv. wazige foto, verlopen document, naam komt niet overeen). U kunt uw documenten opnieuw indienen via <strong>Instellingen → Account → Verificatie</strong>. Er is geen limiet aan het aantal pogingen, maar herhaaldelijke mislukkingen kunnen leiden tot een tijdelijke afkoelperiode.",
+      "q4": "Kan ik mijn weergavenaam na registratie wijzigen?",
+      "a4": "Ja, u kunt uw weergavenaam op elk gewenst moment wijzigen via <strong>Instellingen → Profiel → Profiel Bewerken</strong>. Houd er rekening mee dat als u Tier 2- of Tier 3-verificatie hebt voltooid, uw officiële naam in het dossier niet kan worden gewijzigd zonder herverificatie. Uw weergavenaam (getoond aan andere gebruikers) staat los van uw officiële naam.",
+      "q5": "Ik heb de OTP-code niet ontvangen. Wat moet ik doen?",
+      "a5": "Wacht ten minste 60 seconden en tik vervolgens op \"Code Opnieuw Verzenden\". Als u deze nog steeds niet ontvangt: (1) zorg ervoor dat uw telefoon signaal heeft, (2) controleer of uw nummer correct is, (3) controleer uw map met spam of geblokkeerde berichten, (4) probeer uw telefoon opnieuw op te starten. Als het probleem aanhoudt, bezoek dan onze <a onclick=\"load_page('consumer_troubleshooting')\" style=\"color: var(--color-primary); cursor: pointer; text-decoration: underline;\">pagina voor probleemoplossing</a>.",
+      "q6": "Zijn mijn persoonlijke gegevens veilig tijdens verificatie?",
+      "a6": "Absoluut. Alle documenten worden verzonden met behulp van end-to-end encryptie (AES-256). Onze KYC-verificatie wordt afgehandeld door een gecertificeerde partner die voldoet aan SOC 2 Type II. Onbewerkte documentafbeeldingen worden verwijderd nadat de verificatie is voltooid. Alleen het verificatieresultaat en een hash worden opgeslagen. Lees meer in ons <a onclick=\"load_page('privacy_policy')\" style=\"color: var(--color-primary); cursor: pointer; text-decoration: underline;\">Privacybeleid</a>."
+    },
+    "pagination": {
+      "previous": "Vorige",
+      "next": "Volgende",
+      "prev_title": "Aan de slag",
+      "next_title": "Betalingen Doen"
+    },
+    "toc": {
+      "title": "Op deze pagina",
+      "registration": "Registratie",
+      "phone_registration": "Registratie Telefoonnummer",
+      "supported_regions": "Ondersteunde Regio's",
+      "identity_verification": "Identiteitsverificatie",
+      "verification_tiers": "Verificatieniveaus",
+      "how_to_verify": "Hoe te Verifiëren",
+      "required_documents": "Vereiste Documenten",
+      "checking_status": "Status Controleren",
+      "profile_configuration": "Profielconfiguratie",
+      "profile_fields": "Profielvelden",
+      "editing_profile": "Uw Profiel Bewerken",
+      "security_setup": "Beveiligingsinstellingen",
+      "faq": "FAQ"
+    }
+  },
+  "making_payments": {
+    "breadcrumb": {
+      "docs": "Docs",
+      "consumer": "Consument",
+      "current": "Betalingen Doen"
+    },
+    "title": "Betalingen Doen",
+    "subtitle": "Leer hoe u snel en veilig betalingen kunt doen met de mPay Consumenten Portefeuille. Of u nu een QR-code scant, de uwe laat zien of tikt met NFC — betalen is nog nooit zo eenvoudig geweest.",
+    "method_cards": {
+      "qr": {
+        "title": "QR-code Betalingen",
+        "body": "Scan of toon een QR-code om direct betalingen te doen bij elke mPay-handelaar."
+      },
+      "nfc": {
+        "title": "NFC Tap-to-Pay",
+        "body": "Houd uw telefoon gewoon bij de terminal voor een contactloze betalingservaring."
+      }
+    },
+    "scan_qr": {
+      "heading": "QR-codes Scannen",
+      "intro": "De meest voorkomende manier om te betalen is door de QR-code van een handelaar te scannen. Dit proces duurt slechts enkele seconden en verwerkt uw betaling veilig via het mPay-netwerk.",
+      "how_to_title": "Hoe u Scant om te Betalen",
+      "steps": {
+        "1": {
+          "title": "Tik op \"Scan om te Betalen\"",
+          "body": "Tik vanaf het startscherm op het <strong>Scannen om te Betalen icoon</strong> in de sectie <b>Geld Verzenden</b>."
+        },
+        "2": {
+          "title": "Scan de QR-code van de Ontvanger",
+          "body": "Richt uw camera op de QR-code van de ontvanger. Eenmaal gescand, worden de gegevens van de ontvanger automatisch ingevuld in het Scan om te Betalen-formulier."
+        },
+        "3": {
+          "title": "Bedrag Invoeren en Bevestigen",
+          "body": "Voer het bedrag van de overboeking in, controleer de details en bevestig met uw PIN of biometrische authenticatie."
+        },
+        "4": {
+          "title": "Overboeking Voltooid",
+          "body": "U ziet een bevestigingsscherm met een transactie <b>referentienummer.</b> <p>De ontvanger wordt direct op de hoogte gesteld.</p>"
+        }
+      },
+      "visual_label": "Lijn de QR-code uit binnen het kader",
+      "tip_title": "Tip: Snelkoppeling voor Betalen",
+      "tip_body": "U kunt de QR-scanner ook rechtstreeks starten door dubbel op het mPay-icoon op uw startscherm te tikken, of door de snelkoppeling \"Scannen\" in de widget van het meldingenvenster te gebruiken."
+    },
+    "show_qr": {
+      "heading": "Uw QR-code Tonen",
+      "intro": "Sommige handelaren scannen liever uw QR-code met hun terminal of apparaat. In dit geval toont u gewoon uw persoonlijke betalings-QR-code zodat zij deze kunnen scannen.",
+      "how_to_title": "Hoe u uw QR-code Toont",
+      "steps": {
+        "1": {
+          "title": "Open uw Betalingscode",
+          "body": "Tik op <strong>\"Betalen\"</strong> op het startscherm en selecteer vervolgens <strong>\"Mijn QR-code Tonen\"</strong>. Uw persoonlijke betalings-QR-code wordt weergegeven."
+        },
+        "2": {
+          "title": "Aan de Handelaar Tonen",
+          "body": "Houd uw telefoon stil terwijl de QR-code zichtbaar is. De handelaar scant deze met zijn mPay-terminal of apparaatcamera."
+        },
+        "3": {
+          "title": "Bevestigen op uw Apparaat",
+          "body": "Nadat de handelaar heeft gescand en het bedrag heeft ingevoerd, ontvangt u een pushmelding. Bevestig het betalingsbedrag en authentiseer om te voltooien."
+        }
+      },
+      "visual_label": "Toon dit aan de handelaar",
+      "security_title": "Beveiligingsopmerking",
+      "security_body": "Uw betalings-QR-code wordt om de 60 seconden vernieuwd voor de veiligheid. Deel nooit een screenshot van uw QR-code. Toon deze alleen bij het verkooppunt wanneer u een betaling doet."
+    },
+    "nfc_tap": {
+      "heading": "NFC Tap-to-Pay",
+      "intro": "Als uw apparaat NFC ondersteunt en de handelaar een NFC-terminal heeft, kunt u betalen door simpelweg uw telefoon tegen hun betalingsapparaat te tikken — scannen is niet nodig.",
+      "how_to_title": "Hoe u NFC-betalingen Gebruikt",
+      "steps": {
+        "1": {
+          "title": "Schakel NFC in",
+          "body": "Zorg ervoor dat NFC is ingeschakeld in uw telefooninstellingen en in de mPay-app onder <strong>Instellingen → Betalingsmethoden → NFC-betalingen</strong>."
+        },
+        "2": {
+          "title": "Dichtbij Terminal Houden",
+          "body": "Wanneer de terminal van de handelaar het bedrag toont, houdt u de achterkant van uw telefoon (bij de NFC-antenne) binnen 4 cm van de betalingsterminal."
+        },
+        "3": {
+          "title": "Authentiseren",
+          "body": "Een trilling of toon bevestigt de verbinding. Authentiseer met biometrie of uw PIN. De betaling wordt in minder dan 2 seconden verwerkt."
+        },
+        "4": {
+          "title": "Betaling Voltooid",
+          "body": "U ziet een groen vinkje en ontvangt zowel een in-app melding als een optioneel SMS-bewijs."
+        }
+      },
+      "visual_phone": "Uw Telefoon",
+      "visual_terminal": "Betalingsterminal",
+      "antenna_title": "Locatie NFC-antenne",
+      "antenna_body": "De NFC-antenne bevindt zich meestal bovenaan in het midden van de achterkant van uw telefoon. Verwijder dikke hoesjes als u problemen heeft met verbinden."
+    },
+    "confirmation": {
+      "heading": "Betalingsbevestiging",
+      "intro": "Na elke succesvolle betaling ontvangt u direct een bevestiging met transactiegegevens. Dit dient als uw digitale bewijs.",
+      "receipt_title": "Wat is Inbegrepen in uw Bewijs",
+      "receipt_intro": "Elke betalingsbevestiging bevat de volgende details:",
+      "receipt": {
+        "success": "Betaling Succesvol",
+        "merchant": "Coffee House Downtown",
+        "transaction_id": "Transactie-ID",
+        "datetime": "Datum & Tijd",
+        "method": "Betalingsmethode",
+        "status": "Status",
+        "completed": "Voltooid",
+        "balance": "Portefeuillesaldo"
+      },
+      "share_title": "Bewijzen Delen & Exporteren",
+      "share_body": "Tik op de knop <strong>\"Delen\"</strong> op een bewijs om het te verzenden via e-mail, berichten-apps of op te slaan als PDF.",
+      "failed_title": "Mislukte of In Behandeling Zijnde Betalingen",
+      "failed_intro": "Als een betaling mislukt of in behandeling blijft, ziet u een ander statusscherm:",
+      "failed_list": {
+        "pending": "<strong>In behandeling:</strong> De betaling wordt verwerkt. Dit wordt meestal binnen 30 seconden opgelost.",
+        "failed": "<strong>Mislukt:</strong> De betaling kon niet worden voltooid. Controleer uw saldo en verbinding.",
+        "refunded": "<strong>Terugbetaald:</strong> De handelaar heeft een terugbetaling gestart. Het geld wordt binnen 1-3 werkdagen teruggestort."
+      }
+    },
+    "history": {
+      "heading": "Transactiegeschiedenis",
+      "intro": "Houd al uw eerdere betalingen op één plek bij. Uw transactiegeschiedenis houdt een volledig overzicht bij van elke betaling via de mPay Wallet.",
+      "access_title": "Toegang tot uw Geschiedenis",
+      "access_body": "Ga naar <strong>Home → Transacties</strong> of veeg omhoog op het startscherm.",
+      "sample_title": "Voorbeeld Transactiegeschiedenis",
+      "table": {
+        "date": "Datum",
+        "merchant": "Handelaar",
+        "method": "Methode",
+        "amount": "Bedrag",
+        "status": "Status",
+        "completed": "Voltooid",
+        "pending": "In behandeling"
+      },
+      "export_title": "Uw Gegevens Exporteren",
+      "export_body": "U kunt uw transactiegeschiedenis exporteren als CSV of PDF door op de knop <strong>\"Exporteren\"</strong> te tikken."
+    },
+    "overview": {
+      "heading": "Overzicht Betalingsstroom",
+      "intro": "Hier is een visuele walkthrough van het volledige betalingsproces van begin tot eind.",
+      "steps": {
+        "1": "Tik op \"Betalen\" op het startscherm",
+        "2": "Kies QR-scan of NFC-tik",
+        "3": "Scan de QR-code van de handelaar",
+        "4": "Controleer het betalingsbedrag",
+        "5": "Authentiseer met biometrie",
+        "6": "Betaling bevestigd!"
+      }
+    },
+    "faq": {
+      "heading": "Veelgestelde Vragen",
+      "q1": "Wat is het maximale bedrag dat ik per transactie kan betalen?",
+      "a1": "De standaard transactielimiet is $5.000 per betaling. Geverifieerde accounts (KYC-niveau 2) kunnen hogere limieten aanvragen. U kunt uw limieten beheren in <strong>Instellingen → Betalingslimieten</strong>.",
+      "q2": "Kan ik betalen zonder internetverbinding?",
+      "a2": "NFC-betalingen kunnen in offline modus werken voor kleine transacties (onder $50) indien geconfigureerd. QR-code betalingen vereisen altijd een internetverbinding.",
+      "q3": "Wat moet ik doen als de QR-scanner de code niet herkent?",
+      "a3": "Zorg voor voldoende verlichting en maak uw lens schoon. Als het mislukt, vraag dan om een nieuwe code of voer de handelaars-ID handmatig in.",
+      "q4": "Wordt NFC-betaling ondersteund op alle apparaten?",
+      "a4": "NFC-betalingen vereisen een apparaat met een NFC-chip. De meeste telefoons na 2018 en iPhones vanaf de 7 ondersteunen NFC.",
+      "q5": "Zijn er kosten verbonden aan het doen van betalingen?",
+      "a5": "De mPay Consumenten Portefeuille brengt geen kosten in rekening voor betalingen aan handelaren. De verwerker handelt de kosten af.",
+      "q6": "Kan ik een betaling annuleren nadat deze is verzonden?",
+      "a6": "Voltooide betalingen kunnen niet rechtstreeks worden geannuleerd. Neem contact op met de handelaar voor een terugbetaling of meld een geschil bij <b>Transacties</b>."
+    },
+    "pagination": {
+      "previous": "Vorige",
+      "next": "Volgende",
+      "prev_title": "Account Instellen",
+      "next_title": "Portefeuille Beheer"
+    },
+    "toc": {
+      "title": "Op deze pagina",
+      "scan_qr": "QR-codes Scannen",
+      "show_qr": "Uw QR-code Tonen",
+      "nfc_tap": "NFC Tap-to-Pay",
+      "confirmation": "Betalingsbevestiging",
+      "history": "Betalingsgeschiedenis",
+      "flow": "Overzicht Betalingsstroom",
+      "faq": "Veelgestelde vragen"
+    }
+  },
+  "wallet_management": {
+    "breadcrumb": {
+      "docs": "Docs",
+      "consumer": "Consument",
+      "current": "Portefeuille Beheer"
+    },
+    "title": "Portefeuille Beheer",
+    "subtitle": "Leer hoe u uw saldo controleert, geld toevoegt, geld opneemt en uw transactielimieten begrijpt.",
+    "overview": {
+      "title": "Uw mPay Portefeuille",
+      "body": "Uw mPay-portefeuille is een beveiligde digitale portefeuille die uw geld bewaart en u in staat stelt betalingen te doen, geld over te maken en uw financiën te beheren — allemaal vanaf uw smartphone."
+    },
+    "balance": {
+      "heading": "Uw Saldo Controleren",
+      "intro": "Uw portefeuillesaldo is altijd zichtbaar op het startscherm van de mPay-app. Hier is alles wat u moet weten over het bekijken en begrijpen van uw saldo.",
+      "demo": {
+        "label": "Beschikbaar Saldo",
+        "currency": "Antilliaanse Guldens (XCG)",
+        "topup": "Opwaarderen",
+        "withdraw": "Opnemen",
+        "history": "Geschiedenis"
+      },
+      "how_to_title": "Hoe u uw Saldo Bekijkt",
+      "steps": {
+        "1": {
+          "title": "Open de mPay-app",
+          "desc": "Start de mPay Consumenten-app op uw apparaat. Uw saldo verschijnt prominent op het startscherm."
+        },
+        "2": {
+          "title": "Bekijk Beschikbaar Saldo",
+          "desc": "Uw beschikbare saldo wordt bovenaan het scherm weergegeven. Dit is het bedrag dat u direct kunt uitgeven of overmaken."
+        },
+        "3": {
+          "title": "Zichtbaarheid van Saldo Omschakelen",
+          "desc": "Tik op het <strong>oog-icoon</strong> om uw saldo te verbergen of te tonen voor privacy wanneer u in het openbaar bent."
+        }
+      },
+      "callout": "<strong>In behandeling zijnde transacties</strong> kunnen uw beschikbare saldo tijdelijk verlagen. Bedragen in behandeling worden apart weergegeven onder uw hoofdsaldo."
+    },
+    "topup": {
+      "heading": "Opwaardeermethoden",
+      "intro": "Voeg geld toe aan uw mPay-portefeuille met een van de volgende methoden. Elke methode heeft verschillende verwerkingstijden en kosten.",
+      "methods": {
+        "bank": {
+          "title": "Bankoverschrijving",
+          "desc": "Maak geld over van lokale banken naar uw mPay-portefeuille via Instant Payment verwerking. Veilig en snel.",
+          "time": "Direct"
+        },
+        "wallet": {
+          "title": "Portefeuille naar Portefeuille",
+          "desc": "Laad direct uw portefeuille op door een andere mPay-klant te vragen u geld te sturen en hen contant te betalen.",
+          "time": "Direct"
+        },
+        "agent": {
+          "title": "Contant Agent",
+          "desc": "Bezoek een erkende mPay-handelaar bij u in de buurt om contant geld in uw portefeuille te storten. Toon uw mPay QR-code aan de handelaar.",
+          "time": "Direct"
+        }
+      }
+    },
+    "withdraw": {
+      "heading": "Opnames",
+      "intro": "Neem geld op uit uw portefeuille naar uw gekoppelde bankrekening. mPay ondersteunt directe opnames naar grote lokale banken.",
+      "callout": "<strong>Belangrijk:</strong> mPay houdt zich aan het beleid van de Centrale Bank van Curaçao. Zorg ervoor dat de bankrekeninggegevens nauwkeurig en correct zijn vóór de transactie om vertragingen te voorkomen."
+    },
+    "limits": {
+      "heading": "Transactielimieten",
+      "intro1": "mPay handhaaft transactielimieten om uw account te beschermen. Uw limieten hangen af van vele factoren, zoals het type klant (Consument of Handelaar), en worden berekend op basis van dagelijkse, maandelijkse en jaarlijkse accumulatie.",
+      "intro2": "Hier is een voorbeeldtabel met limieten (deze worden beheerd door het mPay-netwerk)",
+      "table": {
+        "type": "Transactietype",
+        "consumer": "Consument",
+        "merchant": "Handelaar",
+        "cashier": "Kassier",
+        "scan_pay": "Scannen om te Betalen",
+        "pay_bills": "Facturen Betalen",
+        "pay_email": "Betalen via E-mail",
+        "pay_mobile": "Betalen via Mobiel",
+        "transfer_bank": "Overboeken naar Bank",
+        "managed_by": "Beheerd door<br>Handelaarseigenaar"
+      },
+      "how_to_increase": "Hoe u uw Limieten Kunt Verhogen",
+      "callout_view": "<strong>Bekijk uw huidige limieten:</strong> Ga naar <strong>Profielinstellingen → Portefeuillelimieten</strong> om uw huidige limiet, gebruik en resterende limieten voor de dag/maand te zien.",
+      "callout_increase": "<strong>Uw limiet verhogen?</strong> Neem contact op met mPay Support voor dit verzoek; dit is onderworpen aan beoordeling en goedkeuring."
+    },
+    "faq": {
+      "heading": "Veelgestelde Vragen",
+      "q1": "Hoe lang duurt het voordat mijn opwaardering verschijnt?",
+      "a1": "Kaartopwaarderingen verschijnen direct. Bankoverschrijvingen duren doorgaans 1-2 werkdagen, afhankelijk van uw bank. Opwaarderingen via contant-agenten zijn ook direct zodra ze door de agent zijn bevestigd. U ontvangt een pushmelding zodra het geld is bijgeschreven.",
+      "q2": "Kan ik geld opnemen naar de bankrekening van iemand anders?",
+      "a2": "Nee. Om beveiligingsredenen kunnen opnames alleen worden gedaan naar bankrekeningen die op dezelfde naam staan geregistreerd als uw mPay-account. Dit is een wettelijke vereiste om fraude en witwassen te voorkomen. Als u geld naar iemand anders moet sturen, gebruik dan de functie <strong>P2P Overboeking</strong>.",
+      "q3": "Wat gebeurt er als ik mijn transactielimiet overschrijd?",
+      "a3": "De transactie wordt geweigerd en u ziet een foutmelding waarin wordt uitgelegd dat u uw limiet heeft bereikt. U kunt wachten tot de limiet wordt gereset (dagelijkse limieten worden om middernacht UTC gereset, maandelijkse limieten op de 1e van elke maand) of uw verificatieniveau verhogen voor hogere limieten.",
+      "q4": "Zijn er kosten verbonden aan het aanhouden van een portefeuillesaldo?",
+      "a4": "Nee. Er zijn geen maandelijkse kosten, administratiekosten of inactiviteitskosten voor uw mPay-portefeuille. Uw saldo blijft van u. De enige kosten die van toepassing kunnen zijn, zijn voor bepaalde opwaardeermethoden (creditcard) en spoedopnames.",
+      "q5": "Kan ik terugkerende/automatische opwaarderingen instellen?",
+      "a5": "Ja! Ga naar <strong>Instellingen → Automatisch Opwaarderen</strong> om automatische saldo-aanvulling te configureren. U kunt een drempelbedrag voor het minimale saldo en een opwaardeerbedrag instellen. Wanneer uw saldo onder de drempel zakt, zal mPay automatisch opwaarderen vanaf uw voorkeursbron.",
+      "q6": "Wat gebeurt er met mijn saldo als ik mijn telefoon verlies?",
+      "a6": "Uw saldo is veilig — het wordt veilig opgeslagen op mPay-servers, niet op uw apparaat. Als u uw telefoon verliest, neem dan onmiddellijk contact op met mPay-ondersteuning om uw account te bevriezen. Wanneer u een nieuw apparaat heeft, logt u in met uw gegevens en wordt uw volledige saldo hersteld. Schakel wissen op afstand in op uw telefoon als extra voorzorgsmaatregel."
+    },
+    "pagination": {
+      "prev": "Vorige",
+      "prev_title": "Betalingen Doen",
+      "next": "Volgende",
+      "next_title": "P2P Overboekingen"
+    },
+    "toc": {
+      "title": "Op deze pagina",
+      "balance": "Uw Saldo Controleren",
+      "topup": "Opwaardeermethoden",
+      "withdraw": "Opnames",
+      "limits": "Transactielimieten",
+      "faq": "Veelgestelde vragen"
+    }
+  },
+  "p2p_transfers": {
+    "breadcrumb": {
+      "docs": "Docs",
+      "consumer": "Consument",
+      "current": "P2P Overboekingen"
+    },
+    "title": "Geld Verzenden en Ontvangen",
+    "subtitle": "Stuur, ontvang en vraag direct geld aan bij iedereen in het <b>mPay</b>-netwerk. Geld verzenden en ontvangen is snel, veilig en kosteloos voor standaardtransacties.",
+    "illustration": {
+      "sender": "Verzender",
+      "receiver": "Ontvanger"
+    },
+    "methods_grid": {
+      "send": {
+        "title": "Geld Verzenden",
+        "desc": "Transfer fondsen direct naar elke mPay-gebruiker, snel en beveiligd."
+      },
+      "receive": {
+        "title": "Geld Ontvangen",
+        "desc": "Accepteer overboekingen via QR-code, e-mail of mobiel nummer."
+      },
+      "request": {
+        "title": "Betalingsverzoek",
+        "desc": "Stuur betalingsverzoeken naar andere gebruikers door een QR-code te genereren."
+      }
+    },
+    "send": {
+      "heading": "Geld Verzenden",
+      "intro_title": "Snelle & Veilige Overboekingen",
+      "intro_body": "Stuur binnen enkele seconden geld naar iedereen op het <b>mPay-netwerk</b>. U kunt verzenden via gebruikersnaam, telefoonnummer of QR-code — wat voor u het handigst is."
+    },
+    "send_email_mobile": {
+      "title": "Verzenden via E-mail of Mobiel Nummer",
+      "intro": "De nieuwste manier om geld te verzenden is door de ontvanger te zoeken met hun mPay <b>e-mail</b> of <b>mobiel nummer</b>.",
+      "steps": {
+        "1": {
+          "title": "Start de \"Betalen via E-mail of Betalen via Mobiel\"",
+          "body": "Tik vanaf het startscherm op het icoon <strong>\"Betalen via E-mail\" </strong> <span>of \"<b>Betalen via Mobiel\"</b></span>."
+        },
+        "2": {
+          "title": "Vind de Ontvanger",
+          "body": "Voer het mPay <b>e-mailadres</b> of <b>mobiele nummer</b> van de ontvanger in het zoekveld in. De app toont overeenkomende gebruikers in real-time. U kunt ook kiezen uit uw lijst met <strong>Recente Contacten</strong> of <strong>Favorieten</strong>."
+        },
+        "3": {
+          "title": "Voer het Bedrag in",
+          "body": "Typ het bedrag dat u wilt verzenden. De app toont het huidige saldo van uw portefeuille. U kunt optioneel een notitie of memo toevoegen in het veld <b>Omschrijving</b> (bijv. <code>Diner gedeeld</code>)."
+        },
+        "4": {
+          "title": "Controleren en Bevestigen",
+          "body": "Controleer de details van de overboeking, inclusief ontvanger, bedrag en eventuele kosten. Tik op <strong>Bevestigen & Verzenden</strong> and authentiseer met uw <b>PIN</b> of <b>biometrie</b>."
+        },
+        "5": {
+          "title": "Overboeking Voltooid",
+          "body": "U ziet een bevestigingsscherm met een transactiereferentienummer. De ontvanger wordt direct op de hoogte gesteld."
+        }
+      }
+    },
+    "send_gallery": {
+      "title": "Verzenden via Scan uit Galerij",
+      "intro": "Een handige manier om geld te verzenden met behulp van een <b>opgeslagen</b> <span>QR-code in de galerij van uw telefoon</span>",
+      "steps": {
+        "1": {
+          "title": "Start de \"Scannen uit Galerij\"",
+          "body": "Tik vanaf het startscherm op het icoon <b>Scannen uit Galerij</b>."
+        },
+        "2": {
+          "title": "Upload de QR-code uit uw galerij",
+          "body": "De verzender kan de QR-code van de ontvanger uploaden vanuit de galerij van de mobiele telefoon om de transactie te starten."
+        },
+        "3": {
+          "title": "Voer het Bedrag in",
+          "body": "Typ het bedrag dat u wilt verzenden. De app toont het huidige saldo van uw portefeuille. U kunt optioneel een notitie of memo toevoegen in het veld <b>Omschrijving</b> (bijv. <code>Betaling voor kleding</code>)."
+        },
+        "4": {
+          "title": "Controleren en Bevestigen",
+          "body": "Controleer de details van de overboeking, inclusief ontvanger, bedrag en eventuele kosten. Tik op <strong>Bevestigen & Verzenden</strong> and authentiseer met uw <b>PIN</b> of <b>biometrie</b>."
+        },
+        "5": {
+          "title": "Overboeking Voltooid",
+          "body": "U ziet een bevestigingsscherm met een transactiereferentienummer. De ontvanger wordt direct op de hoogte gesteld."
+        }
+      }
+    },
+    "send_scan_pay": {
+      "title": "Verzenden via Scan om te Betalen",
+      "intro": "<b>Scan om te Betalen</b> stelt gebruikers in staat een QR-code te scannen om snel geld te verzenden of betalingen te doen met hun portefeuille.",
+      "steps": {
+        "1": {
+          "title": "Tik op \"Scan om te Betalen\"",
+          "body": "Tik vanaf het startscherm op het <strong>Scannen om te Betalen icoon</strong> in de sectie <b>Geld Verzenden</b>."
+        },
+        "2": {
+          "title": "Scan de QR-code van de Ontvanger",
+          "body": "Richt uw camera op de QR-code van de ontvanger. Eenmaal gescand, worden de gegevens van de ontvanger automatisch ingevuld in het Scan om te Betalen-formulier."
+        },
+        "3": {
+          "title": "Bedrag Invoeren en Bevestigen",
+          "body": "Voer het bedrag van de overboeking in, controleer de details en bevestig met uw PIN of biometrische authenticatie."
+        },
+        "4": {
+          "title": "Overboeking Voltooid",
+          "body": "U ziet een bevestigingsscherm met een transactie <b>referentienummer.</b> <p>De ontvanger wordt direct op de hoogte gesteld.</p>"
+        }
+      }
+    },
+    "send_pay_qr": {
+      "title": "Verzenden via Betalen met QR",
+      "intro": "<b>Betalen met QR</b> stelt gebruikers in staat een QR-code te genereren die de ontvanger kan scannen om geld te ontvangen.",
+      "steps": {
+        "1": {
+          "title": "Tik op \"Betalen met QR\"",
+          "body": "Tik vanaf het startscherm op het <strong>Betalen met QR </strong> <span>icoon</span> in de sectie <b>Geld Verzenden </b> <span>.</span>"
+        },
+        "2": {
+          "title": "Voer QR-gegevens in",
+          "body": "Gebruikers kunnen het bedrag, het type gebruik (eenmalig of meervoudig) en de vervaldatum definiëren bij het genereren van een Betalen met QR-code."
+        },
+        "3": {
+          "title": "Controleren en Bevestigen",
+          "body": "Controleer de details en bevestig met uw <b>PIN</b> of <b>biometrische</b> authenticatie."
+        },
+        "4": {
+          "title": "Overboeking Voltooid",
+          "body": "U ziet een bevestigingsscherm met een transactie <b>referentienummer.</b> <p>De ontvanger wordt direct op de hoogte gesteld.</p>"
+        }
+      }
+    },
+    "limits": {
+      "title": "Transactielimieten",
+      "desc": "Transactielimieten zijn afhankelijk van wat er is ingesteld in de <b>Admin Console</b>, wat een <b>globale limiet</b> of een limiet op <b>gebruikersniveau</b> kan zijn.",
+      "callout": {
+        "title": "Belangrijk",
+        "body": "Gebruikerslimieten voor transacties worden gedefinieerd en beheerd door het mPay-netwerk en kunnen niet binnen de applicatie worden gewijzigd. De klant kan echter zijn <b>geaccumuleerde</b> limieten bekijken in <b>Profielinstellingen → Betalingslimieten</b>"
+      }
+    },
+    "receive": {
+      "heading": "Geld Ontvangen",
+      "intro_title": "Directe Inkomende Overboekingen",
+      "intro_body": "Wanneer iemand u geld stuurt, komt het direct in uw portefeuille aan. U ontvangt een pushmelding en het bedrag is onmiddellijk beschikbaar om uit te geven.",
+      "notifications": {
+        "title": "Meldingen van Overboekingen",
+        "intro": "Wanneer een overboeking of betaling naar uw portefeuille-account wordt verzonden, ontvangt u:",
+        "list": {
+          "push": "<strong>Pushmelding</strong> — Toont naam afzender, bedrag en memo",
+          "in_app": "<strong>In-app melding</strong> — Beschikbaar in het Meldingencentrum",
+          "email": "<strong>E-mailmelding</strong> — Indien ingeschakeld in uw meldingsinstellingen",
+          "sms": "<strong>SMS-alert</strong> — Transactiemelding naar uw geregistreerde mobiele nummer"
+        }
+      },
+      "share_qr": {
+        "title": "Deel uw Profiel-QR-code",
+        "intro": "Maak het anderen gemakkelijk om u geld te sturen door uw <b>profiel-QR</b>-code te delen:",
+        "steps": {
+          "1": {
+            "title": "Open uw QR-code",
+            "body": "Tik vanaf het startscherm op de <strong>Profiel-QR-code</strong> in de rechterbovenhoek van de pagina."
+          },
+          "2": {
+            "title": "Delen of Tonen",
+            "body": "Toon de QR-code op uw scherm zodat de verzender deze kan scannen, of tik op <strong>Delen</strong> om deze te verzenden via bericht, e-mail of sociale media."
+          }
+        },
+        "placeholder": "Persoonlijk QR-codescherm met bedragveld"
+      },
+      "fees_callout": {
+        "title": "Geen Kosten voor Ontvangen",
+        "body": "Het ontvangen van P2P-overboekingen op het mPay-netwerk is altijd gratis. Er zijn geen kosten verbonden aan inkomende standaardoverboekingen."
+      }
+    },
+    "request": {
+      "heading": "Geld Aanvragen",
+      "intro_title": "Betalingsverzoeken Gemakkelijk Gemaakt",
+      "intro_body": "Wilt u geld innen van een vriend of een rekening delen? Stuur direct een betalingsverzoek vanuit de app. De ontvanger krijgt een melding en kan met één tik betalen.",
+      "req_qr": {
+        "title": "Geld Aanvragen via QR",
+        "steps": {
+          "1": {
+            "title": "Open Aanvraagscherm",
+            "body": "Tik vanaf het startscherm op <strong>Aanvragen via QR</strong> <span> in de sectie <b>Geld Ontvangen</b>.</span>"
+          },
+          "2": {
+            "title": "Stel het Bedrag en de Details in",
+            "body": "Voer het totale bedrag in en voeg een omschrijving toe (bijv. <code>Diner bij La Piazza - 15 maart</code>)."
+          },
+          "3": {
+            "title": "Tik op Verzenden om QR te genereren",
+            "body": "Klik op de knop <b>Verzenden</b> <span> om een aangepaste QR-code te genereren.</span>"
+          },
+          "4": {
+            "title": "Deel de QR met de Verzender",
+            "body": "Deel de <b>gegenereerde QR-code</b> <span> met de <b>Verzender</b>.</span> <p>De verzender stuurt dan geld met deze QR via <b>Scan om te Betalen</b>.</p>"
+          }
+        }
+      },
+      "respond_qr": {
+        "title": "Reageren op een Aanvraag via QR",
+        "intro": "Wanneer iemand u een <b>Aanvraag via QR-code</b> stuurt, kunt u als <b>Verzender</b> het geld sturen of betalen via <b>Scan om te Betalen</b> of <b>Scannen uit Galerij.</b>",
+        "steps": {
+          "1": {
+            "title": "Beoordeel de Aanvraag",
+            "body": "Is de persoon die geld bij u aanvraagt iemand die u vertrouwt?"
+          },
+          "2": {
+            "title": "Geld Verzenden",
+            "body": "De verzender kan de <b>Aanvraag via QR</b> code betalen met <b>Scan om te Betalen</b> of <b>Scannen uit Galerij</b>."
+          },
+          "3": {
+            "title": "Verifiëren en Authentiseren",
+            "body": "Bevestig de transactie met uw <b>PIN</b> of <b>biometrische</b> authenticatie. Het geld wordt direct overgemaakt."
+          }
+        }
+      },
+      "tip_callout": {
+        "title": "Pro-tip voor Geld Verzenden",
+        "body": "Verifieer altijd de aanvrager voordat u een betaling doet, om potentiële fraude te voorkomen."
+      },
+      "fraud_callout": {
+        "title": "Fraudewaarschuwing",
+        "body": "Betaal nooit een verzoek van iemand die u niet kent. Als u een onverwacht betalingsverzoek ontvangt, verifieer dan de afzender voordat u betaalt. Meld verdachte verzoeken bij <strong>fraud@mpaynetwork.com</strong>."
+      }
+    },
+    "faq": {
+      "heading": "Veelgestelde Vragen",
+      "q1": "Zijn Geld Verzenden transacties gratis?",
+      "a1": "Ja, standaard P2P-overboekingen tussen mPay-gebruikers zijn volledig gratis. Er zijn geen kosten voor het verzenden of ontvangen van geld. Instant overboekingen naar externe bankrekeningen kunnen echter een kleine vergoeding met zich meebrengen (meestal 1-2%).",
+      "q2": "Hoe lang duurt een P2P-overboeking?",
+      "a2": "P2P-overboekingen tussen mPay-gebruikers zijn direct — het geld verschijnt binnen enkele seconden in de portefeuille van de ontvanger. In zeldzame gevallen kan de verwerking tot 30 seconden duren.",
+      "q3": "Kan ik een P2P-overboeking annuleren na verzending?",
+      "a3": "Zodra een P2P-overboeking is bevestigd en verzonden, kan deze niet meer ongedaan worden gemaakt. Als u geld naar de verkeerde persoon heeft gestuurd, kunt u via de app contact opnemen met de ontvanger om te vragen of zij het terugstorten. U kunt ook binnen 24 uur een geschil openen via <strong>Help → Een probleem melden</strong>.",
+      "q4": "Kan ik geld sturen naar iemand die geen mPay heeft?",
+      "a4": "U kunt niet-mPay gebruikers uitnodigen om overboekingen te ontvangen. Wanneer u geld stuurt naar een telefoonnummer dat niet geregistreerd is op mPay, ontvangt de ontvanger een SMS met een link om de app te downloaden en het geld te claimen. Niet-geclaimde overboekingen vervallen na 14 dagen en worden automatisch teruggestort.",
+      "q5": "Hoe verhoog ik mijn overboeklimieten?",
+      "a5": "Overboeklimieten zijn gekoppeld aan het verificatieniveau van uw account. Om uw limieten te verhogen: <p>1. Ga naar <strong>Instellingen → Account → Verificatie</strong>.<br>2. Voltooi de vereiste verificatiestappen voor het volgende niveau.<br>3. Limieten worden automatisch bijgewerkt zodra de verificatie is goedgekeurd (meestal binnen 24 uur).</p>",
+      "q6": "Wat gebeurt er als ik geld naar de verkeerde persoon stuur?",
+      "a6": "Als u per ongeluk geld naar de verkeerde ontvanger stuurt, moet u: <p>1. Contact opnemen met de ontvanger via de ingebouwde berichtenfunctie van de app om een terugbetaling aan te vragen.<br>2. Als de ontvanger niet reageert, dien dan binnen 24 uur een geschil in via <strong>Help → Een probleem melden → Verkeerde ontvanger</strong>.<br>3. Ons ondersteuningsteam zal de situatie bemiddelen. Houd er rekening mee dat we de terugvordering van gelden die naar de verkeerde persoon zijn gestuurd niet kunnen garanderen.</p> Controleer altijd de naam en profielfoto van de ontvanger voordat u een overboeking bevestigt.",
+      "q7": "Kan ik terugkerende P2P-overboekingen instellen?",
+      "a7": "Ja! U kunt terugkerende overboekingen instellen voor huurbetalingen, toelagen of regelmatige betalingen. Schakel na het invoeren van de overboekingsgegevens <strong>Maak Terugkerend</strong> in en kies uw frequentie (wekelijks, tweewekelijks of maandelijks). U kunt terugkerende overboekingen beheren of annuleren in <strong>Overboekingen → Gepland</strong>."
+    },
+    "pagination": {
+      "prev": "Vorige",
+      "prev_title": "Portefeuille Beheer",
+      "next": "Volgende",
+      "next_title": "Instellingen & Beveiliging"
+    },
+    "toc": {
+      "title": "Op deze pagina",
+      "sending": "Geld Verzenden",
+      "by_username": "Via gebruikersnaam/mobiel",
+      "via_qr": "Via QR-code",
+      "limits": "Overboeklimieten",
+      "receiving": "Geld Ontvangen",
+      "notifications": "Meldingen",
+      "share_qr": "QR-code delen",
+      "share_username": "Gebruikersnaam delen",
+      "requesting": "Geld Aanvragen",
+      "send_request": "Een verzoek sturen",
+      "manage_requests": "Verzoeken beheren",
+      "respond_request": "Reageren op verzoek",
+      "faq": "FAQ"
+    }
+  },
+  "settings": {
+    "breadcrumb": {
+      "docs": "Docs",
+      "consumer": "Consument",
+      "settings_security": "Instellingen & Beveiliging"
+    },
+    "title": "Instellingen & Beveiliging",
+    "subtitle": "Leer hoe u de instellingen van uw mPay Consumenten Portefeuille configureert, beveiligingsvoorkeuren beheert, biometrische authenticatie inschakelt en uw account beschermt met geavanceerde beveiligingsfuncties.",
+    "visual": {
+      "title": "Uw Beveiliging is Belangrijk",
+      "body": "mPay gebruikt encryptie van bankniveau en meerdere beveiligingslagen om uw portefeuille en transacties veilig te houden. Configureer deze instellingen voor maximale bescherming."
+    },
+    "pin": {
+      "heading": "PIN-beheer",
+      "intro": "Uw transactie-PIN is een 6-cijferige code die wordt gebruikt om betalingen en gevoelige accountbewerkingen te autoriseren. Deze staat los van de vergrendeling van uw apparaat en biedt een extra beveiligingslaag.",
+      "setting_heading": "Uw PIN Instellen",
+      "setting_intro": "Wanneer u uw mPay-portefeuille voor het eerst configureert, wordt u gevraagd een transactie-PIN aan te maken. Volg deze stappen:",
+      "steps": {
+        "1": {
+          "title": "Navigeer naar Beveiligingsinstellingen",
+          "desc": "Open het app-menu en tik op <strong>Profielinstellingen</strong> → <strong>Beveiliging</strong> → <strong>PIN Wijzigen</strong>."
+        },
+        "2": {
+          "title": "Voer een 6-cijferige PIN in",
+          "desc": "Kies een PIN die u kunt onthouden, maar die niet gemakkelijk te raden is. Vermijd opeenvolgende getallen zoals <code>123456</code> of herhalende cijfers zoals <code>111111</code>."
+        },
+        "3": {
+          "title": "Bevestig uw PIN",
+          "desc": "Voer uw PIN opnieuw in om te bevestigen. Het systeem zal controleren of beide invoerpogingen overeenkomen voordat deze worden opgeslagen."
+        },
+        "4": {
+          "title": "PIN Succesvol Opgeslagen",
+          "desc": "Uw PIN is nu actief. U gebruikt deze om transacties, overboekingen en accountwijzigingen goed te keuren."
+        }
+      },
+      "changing_heading": "Uw PIN Wijzigen",
+      "changing_intro": "Om uw bestaande PIN te wijzigen, moet u eerst uw huidige PIN verifiëren:",
+      "changing_steps": {
+        "1": {
+          "title": "Ga naar Instellingen → Beveiliging → PIN Wijzigen",
+          "desc": "Navigeer naar de sectie PIN-beheer in uw beveiligingsinstellingen."
+        },
+        "2": {
+          "title": "Voer Huidige PIN in",
+          "desc": "Verifieer uw identiteit door uw huidige 6-cijferige PIN in te voeren."
+        },
+        "3": {
+          "title": "Nieuwe PIN Invoeren & Bevestigen",
+          "desc": "Typ uw nieuwe PIN en bevestig deze. Uw nieuwe PIN wordt onmiddellijk van kracht."
+        }
+      },
+      "tips_title": "Veiligheidstips voor PIN",
+      "tips_body": "Deel uw PIN nooit met iemand, ook niet met de medewerkers van mPay-ondersteuning. mPay zal u nooit naar uw PIN vragen via telefoon, e-mail of SMS. Na 5 mislukte PIN-pogingen wordt uw account tijdelijk geblokkeerd voor 30 minuten.",
+      "forgot_title": "Uw PIN Vergeten?",
+      "forgot_body": "Als u uw transactie-PIN bent vergeten, tikt u op <strong>\"PIN vergeten\"</strong> op het PIN-invoerscherm. U moet uw identiteit verifiëren via uw geregistreerde e-mailadres of telefoonnummer om deze te resetten."
+    },
+    "biometric": {
+      "heading": "Biometrische Authenticatie",
+      "intro": "Schakel vingerafdruk- of Face ID-authenticatie in voor snelle en veilige toegang tot uw portefeuille. Biometrisch inloggen voegt gemak toe met behoud van sterke beveiliging.",
+      "methods": {
+        "fingerprint": {
+          "title": "Vingerafdruk",
+          "desc": "Gebruik uw geregistreerde vingerafdruk voor snelle toegang tot de portefeuille en goedkeuring van transacties.",
+          "badge": "Meest voorkomend"
+        },
+        "faceid": {
+          "title": "Face ID",
+          "desc": "Authentiseren met gezichtsherkenning voor een naadloze handsfree ervaring.",
+          "badge": "Aanbevolen"
+        }
+      },
+      "enabling_heading": "Biometrisch Inloggen Inschakelen",
+      "steps": {
+        "1": {
+          "title": "Beveiligingsinstellingen Openen",
+          "desc": "Ga naar <strong>Instellingen</strong> → <strong>Beveiliging</strong> → <strong>Biometrische Authenticatie</strong>."
+        },
+        "2": {
+          "title": "Biometrisch Inloggen Omschakelen",
+          "desc": "Zet de schakelaar voor biometrische authenticatie aan. Uw apparaat moet ten minste één geregistreerde vingerafdruk of Face ID hebben."
+        },
+        "3": {
+          "title": "Verifiëren met PIN",
+          "desc": "Voer uw transactie-PIN in om de wijziging te bevestigen. Dit zorgt ervoor dat alleen u biometrie kunt inschakelen."
+        },
+        "4": {
+          "title": "Uw Biometrie Testen",
+          "desc": "U wordt gevraagd uw vingerafdruk of gezicht te scannen om te controleren of het correct werkt."
+        }
+      },
+      "toggles": {
+        "access": "Biometrisch inloggen voor toegang tot portefeuille",
+        "transactions": "Biometrische goedkeuring voor transacties"
+      },
+      "requirements_title": "Apparaatvereisten",
+      "requirements_body": "Biometrische authenticatie vereist een compatibel apparaat met geregistreerde biometrie. Als uw apparaat geen biometrie ondersteunt, is deze optie niet beschikbaar. U kunt altijd terugvallen op PIN-authenticatie."
+    },
+    "notifications": {
+      "heading": "Meldingsinstellingen",
+      "intro": "Configureer hoe en wanneer mPay u waarschuwingen stuurt over transacties, beveiligingsgebeurtenissen en accountactiviteit. Door meldingen ingeschakeld te houden, kunt u uw account in real-time controleren.",
+      "channels_heading": "Beschikbare Meldingskanalen",
+      "channels": {
+        "push": {
+          "title": "Pushmeldingen",
+          "desc": "Real-time waarschuwingen die direct op uw apparaat worden afgeleverd. Aanbevolen voor transactie-alerts en beveiligingsmeldingen."
+        },
+        "email": {
+          "title": "E-mailmeldingen",
+          "desc": "Gedetailleerde meldingen verzonden naar uw geregistreerde e-mailadres. Inclusief transactiebewijzen en maandelijkse overzichten."
+        },
+        "sms": {
+          "title": "SMS-alerts",
+          "desc": "Kritieke waarschuwingen via tekstbericht. Gebruikt voor transacties met hoge waarde en beveiligingsgebeurtenissen wanneer push niet beschikbaar is."
+        }
+      },
+      "types_heading": "Configureerbare Beltoontypen",
+      "types": {
+        "transaction": "<strong>Transactie-alerts</strong> — Elke verzonden of ontvangen betaling",
+        "promotional": "<strong>Promotioneel</strong> — Nieuws, aanbiedingen en aankondigingen van functies",
+        "summary": "<strong>Wekelijks overzicht</strong> — Wekelijks overzicht van bestedingen en activiteit"
+      },
+      "pro_tip_title": "Pro-tip",
+      "pro_tip_body": "We raden aan om <strong>Transactie-alerts</strong> en <strong>Beveiligingsalerts</strong> te allen tijde ingeschakeld te houden. Hiermee kunt u ongeoorloofde activiteiten op uw account snel detecteren.",
+      "managing_heading": "Meldingen Beheren",
+      "managing_body": "Om uw meldingsvoorkeuren aan te passen, gaat u naar <strong>Instellingen</strong> → <strong>Meldingen</strong>. Gebruik de schakelaars om elk meldingstype per kanaal in of uit te schakelen. Wijzigingen worden onmiddellijk van kracht.",
+      "toggles": {
+        "transaction": "Transactie-alerts (Push)",
+        "security": "Beveiligingsalerts (Push + E-mail)",
+        "promotional": "Promotionele meldingen"
+      }
+    },
+    "privacy": {
+      "heading": "Privacyinstellingen",
+      "intro": "mPay geeft u volledige controle over uw persoonlijke gegevens en privacyvoorkeuren. Beheer hoe uw informatie wordt gebruikt, gedeeld en opgeslagen.",
+      "controls_heading": "Privacyregelaars",
+      "controls": {
+        "visibility": {
+          "title": "Profielzichtbaarheid",
+          "desc": "Bepaal wie uw weergavenaam en profielfoto kan zien bij het verzenden of ontvangen van betalingen."
+        },
+        "analytics": {
+          "title": "Analyse- & Gebruiksgegevens",
+          "desc": "Kies of u geanonimiseerde gebruiksgegevens wilt delen om de mPay-ervaring te helpen verbeteren."
+        },
+        "location": {
+          "title": "Locatiegegevens",
+          "desc": "Beheer toegang tot locatiegegevens. Wordt gebruikt voor fraudedetectie en functies voor handelaren in de buurt."
+        },
+        "contacts": {
+          "title": "Toegang tot Contacten",
+          "desc": "Sta mPay toe om toegang te krijgen tot uw contacten voor eenvoudige P2P-overboekingen. Volledig optioneel."
+        }
+      },
+      "data_heading": "Gegevensbeheer",
+      "data_intro": "U heeft het recht om op elk moment toegang te krijgen tot uw persoonlijke gegevens, deze te exporteren en te verwijderen:",
+      "data_options": {
+        "export": {
+          "title": "Gegevens Exporteren",
+          "desc": "Download een kopie van al uw persoonlijke gegevens en transactiegeschiedenis"
+        },
+        "activity": {
+          "title": "Activiteitenlogboek",
+          "desc": "Bekijk een volledig logboek van accountactiviteiten en toegangsgebeurtenissen"
+        },
+        "delete": {
+          "title": "Account Verwijderen",
+          "desc": "Verwijder permanent uw account en alle bijbehorende gegevens"
+        }
+      },
+      "deletion_title": "Account Verwijderen",
+      "deletion_body": "Het verwijderen van een account is permanent en kan niet ongedaan worden gemaakt. Zorg er voor het verwijderen voor dat uw portefeuillesaldo nul is en alle openstaande transacties zijn voltooid. Wettelijke vereisten kunnen ons verplichten om bepaalde transactiegegevens tot 7 jaar te bewaren.",
+      "policy_heading": "Privacybeleid",
+      "policy_body": "Voor volledige details over hoe mPay uw gegevens verzamelt, gebruikt en beschermt, raadpleegt u ons <a onclick=\"load_page('privacy_policy')\" tabindex=\"0\" style=\"color: var(--color-primary, #2563eb); cursor: pointer; text-decoration: underline;\">Privacybeleid</a>."
+    },
+    "faq": {
+      "heading": "Veelgestelde Vragen",
+      "questions": {
+        "1": {
+          "q": "Wat gebeurt er als ik mijn transactie-PIN ben vergeten?",
+          "a": "Tik op \"PIN vergeten\" op het PIN-invoerscherm. U moet uw identiteit verifiëren via uw geregistreerde e-mailadres of telefoonnummer. Er wordt een link voor het resetten van de PIN naar u verzonden. Na verificatie kunt u een nieuwe 6-cijferige PIN instellen. Uw account kan tijdens het resetproces tijdelijk worden beperkt uit veiligheidsoverwegingen."
+        },
+        "2": {
+          "q": "Kan ik zowel vingerafdruk als Face ID gebruiken?",
+          "a": "U kunt alleen de biometrische methode gebruiken die door uw apparaat wordt ondersteund. De meeste apparaten ondersteunen ofwel vingerafdruk of Face ID, niet beide tegelijkertijd. Als uw apparaat beide ondersteunt, kunt u in de beveiligingsinstellingen kiezen welke u als primaire biometrische methode wilt gebruiken."
+        },
+        "3": {
+          "q": "Hoe kan ik mijn account herstellen als ik mijn 2FA-apparaat verlies?",
+          "a": "Gebruik een van uw back-upcodes om in te loggen en 2FA uit te schakelen. Als u geen back-upcodes heeft, neem dan contact op met de mPay-ondersteuning met uw geregistreerde e-mailadres en een door de overheid uitgegeven identiteitsbewijs voor identiteitsverificatie. Het herstelproces duurt om veiligheidsredenen doorgaans 24-48 uur."
+        },
+        "4": {
+          "q": "Waarom ontvang ik geen pushmeldingen?",
+          "a": "Controleer eerst of meldingen zijn ingeschakeld in zowel de mPay-app-instellingen als de systeeminstellingen van uw apparaat. Zorg er op Android voor dat de app niet wordt beperkt door batterijoptimalisatie. Controleer op iOS de instellingen van het Berichtencentrum. Als meldingen nog steeds niet werken, probeer dan uit en weer in te loggen, of de app opnieuw te installeren."
+        },
+        "5": {
+          "q": "Kan ik mijn transactiegeschiedenis downloaden?",
+          "a": "Ja! Ga naar <strong>Instellingen → Privacy → Gegevens Exporteren</strong> om een volledige kopie van uw transactiegeschiedenis te downloaden. U kunt exporteren in CSV- of PDF-formaat. De export wordt verzonden naar uw geregistreerde e-mailadres en komt meestal binnen enkele minuten aan."
+        },
+        "6": {
+          "q": "Wordt mijn PIN opgeslagen op mPay-servers?",
+          "a": "Nee. Uw PIN wordt nooit in duidelijke tekst opgeslagen. mPay gebruikt sterke eenrichtings-hashing (bcrypt) om een gehashte versie van uw PIN op te slaan. Dit betekent dat zelfs medewerkers van mPay uw werkelijke PIN niet kunnen zien. Alle PIN-verificatie gebeurt veilig aan de serverzijde door hashes te vergelijken."
+        }
+      }
+    },
+    "pagination": {
+      "prev": "Vorige",
+      "prev_title": "P2P Overboekingen",
+      "next": "Volgende",
+      "next_title": "Probleemoplossing"
+    },
+    "toc": {
+      "title": "Op deze pagina",
+      "pin": "PIN-beheer",
+      "biometric": "Biometrische Authenticatie",
+      "2fa": "Twee-factor Authenticatie",
+      "notifications": "Meldingsinstellingen",
+      "privacy": "Privacyinstellingen",
+      "faq": "FAQ"
+    }
+  },
+  "troubleshooting": {
+    "breadcrumb": {
+      "docs": "Documentatie",
+      "consumer": "Consument",
+      "current": "Probleemoplossing"
+    },
+    "title": "Probleemoplossing",
+    "subtitle": "Vind oplossingen voor veelvoorkomende problemen, begrijp foutcodes en leer hoe u problemen met uw mPay Consumenten Portefeuille kunt oplossen.",
+    "search_placeholder": "Zoek problemen, foutcodes en FAQ's...",
+    "diagnostic": {
+      "title": "Snelle Diagnostische Tool",
+      "intro": "Voer een snelle controle uit om potentiële problemen met uw portefeuille-instellingen te identificeren. Deze diagnose verifieert veelvoorkomende configuratiepunten.",
+      "check_internet": "Internetverbinding",
+      "check_version": "App-versie up-to-date",
+      "check_permissions": "Vereiste machtigingen verleend",
+      "check_nfc": "NFC-hardware beschikbaar",
+      "check_storage": "Voldoende opslagruimte",
+      "btn": "Diagnose Uitvoeren",
+      "running": "Bezig met uitvoeren..."
+    },
+    "common_issues": {
+      "title": "Veelvoorkomende Problemen",
+      "desc": "Hieronder vindt u de meest voorkomende problemen en hun stapsgewijze oplossingen.",
+      "issue1": {
+        "title": "Kan geen Verbinding maken met Server",
+        "summary": "App toont \"Verbindingsfout\" of het laden duurt te lang.",
+        "causes": "Mogelijke Oorzaken",
+        "cause1": "Onstabiele internetverbinding (Wi-Fi of mobiele data)",
+        "cause2": "mPay Netwerkservers kunnen in onderhoud zijn",
+        "cause3": "VPN- of proxy-interferentie",
+        "cause4": "Verouderde app-versie",
+        "solution": "Oplossing",
+        "step1": "Controleer uw internetverbinding door een webpagina in uw browser te openen.",
+        "step2": "Schakel de vliegtuigmodus in en uit en probeer het opnieuw.",
+        "step3": "Schakel eventuele VPN- of proxydiensten tijdelijk uit.",
+        "step4": "Update de mPay Consumenten Portefeuille app vanuit uw app store.",
+        "step5": "Als het probleem aanhoudt, controleer dan de <a href=\"#\" style=\"color:#2563eb;\">mPay Statuspagina</a> voor lopende incidenten.",
+        "callout": "Serveronderhoud duurt doorgaans 15-30 minuten en wordt gepland tijdens daluren (02:00 — 04:00 lokale tijd)."
+      },
+      "issue2": {
+        "title": "QR-code Scant Niet",
+        "summary": "Camera kan QR-codes van handelaren niet detecteren of lezen.",
+        "causes": "Mogelijke Oorzaken",
+        "cause1": "Cameratoestemming niet verleend aan de app",
+        "cause2": "Slechte lichtomstandigheden",
+        "cause3": "Beschadigde of wazige QR-code",
+        "cause4": "Cameralens is vuil of geblokkeerd",
+        "solution": "Oplossing",
+        "step1": "Ga naar <strong>Instellingen → App-machtigingen</strong> en zorg ervoor dat cameratoegang is ingeschakeld voor mPay.",
+        "step2": "Reinig uw cameralens met een zachte doek.",
+        "step3": "Zorg voor voldoende verlichting — gebruik de zaklantaarnschakelaar in de scannerweergave.",
+        "step4": "Houd uw telefoon stil, ongeveer 15-30 cm van de QR-code.",
+        "step5": "Als de QR-code op een scherm staat, verminder dan de schittering door de hoek aan te passen.",
+        "callout": "Als de QR-code beschadigd of corrupt lijkt, vraag de handelaar dan om een nieuwe te genereren."
+      },
+      "issue3": {
+        "title": "NFC-betaling Mislukt",
+        "summary": "Tikken-om-te-betalen niet gedetecteerd of transactie wordt niet voltooid.",
+        "causes": "Mogelijke Oorzaken",
+        "cause1": "NFC is uitgeschakeld op uw apparaat",
+        "cause2": "Telefoonhoesje blokkeert de NFC-antenne",
+        "cause3": "Apparaat niet correct op de terminal geplaatst",
+        "cause4": "Onvoldoende portefeuillesaldo",
+        "solution": "Oplossing",
+        "step1": "Schakel NFC in bij de instellingen van uw telefoon: <span class=\"ctr-code\">Instellingen → Verbonden apparaten → NFC</span>",
+        "step2": "Verwijder dikke telefoonhoesjes of metalen accessoires die NFC kunnen blokkeren.",
+        "step3": "Houd de achterkant van uw telefoon 2-3 seconden plat tegen de terminal.",
+        "step4": "Zorg ervoor dat uw portefeuille voldoende saldo heeft voor de transactie.",
+        "callout": "De locatie van de NFC-antenne varieert per telefoonmodel. De meeste Android-telefoons hebben deze in het middenboven-gedeelte van de achterkant. iPhones gebruiken de bovenrand."
+      },
+      "issue4": {
+        "title": "Biometrisch Inloggen Werkt Niet",
+        "summary": "Vingerafdruk- of gezichtsherkenning slaagt er niet in te authenticeren.",
+        "causes": "Mogelijke Oorzaken",
+        "cause1": "Biometrische gegevens gewijzigd op het apparaat (nieuwe vingerafdruk toegevoegd)",
+        "cause2": "Biometrische hardwaresensor vuil of beschadigd",
+        "cause3": "Biometrische toestemming ingetrokken voor de app",
+        "solution": "Oplossing",
+        "step1": "Log in met uw PIN-code als back-up.",
+        "step2": "Ga naar <strong>mPay Instellingen → Beveiliging → Biometrisch Inloggen</strong> en schakel het opnieuw in.",
+        "step3": "Indien gevraagd, registreer uw biometrische gegevens opnieuw.",
+        "step4": "Reinig de vingerafdruksensor of zorg ervoor dat gezichtsherkenning een duidelijke zichtlijn heeft."
+      },
+      "issue5": {
+        "title": "P2P Overboeking Vastgelopen of In Behandeling",
+        "summary": "Geld verzonden maar ontvanger heeft het niet ontvangen.",
+        "causes": "Mogelijke Oorzaken",
+        "cause1": "Netwerkcongestie veroorzaakt vertragingen",
+        "cause2": "Account van de ontvanger kan beperkingen hebben",
+        "cause3": "Transactiebedrag overschrijdt dagelijkse limieten",
+        "cause4": "Compliance-beoordeling voor grote bedragen",
+        "solution": "Oplossing",
+        "step1": "Controleer de transactiestatus in <strong>Activiteit → Transactiegeschiedenis</strong>.",
+        "step2": "Als de status \"In verwerking\" is, wacht dan maximaal 30 minuten op voltooiing.",
+        "step3": "Als de status \"In afwachting van beoordeling\" is, wordt uw transactie gecontroleerd. U ontvangt een melding zodra dit is opgelost.",
+        "step4": "Indien langer dan 2 uur vastgelopen, neem contact op met ondersteuning met de Transactie-ID.",
+        "callout": "<strong>Verzend niet</strong> dezelfde overboeking opnieuw terwijl de originele nog in verwerking is. Dit kan leiden tot een dubbele afschrijving."
+      },
+      "issue6": {
+        "title": "Opwaarderen of Opname Mislukt",
+        "summary": "Kan geen geld toevoegen of opnemen uit de portefeuille.",
+        "causes": "Mogelijke Oorzaken",
+        "cause1": "Bankrekening of kaart niet geverifieerd",
+        "cause2": "Dagelijkse of maandelijkse limieten overschreden",
+        "cause3": "Bank weigert de transactie",
+        "cause4": "Accountverificatie onvolledig",
+        "solution": "Oplossing",
+        "step1": "Verifieer uw gekoppelde bankrekening/kaart in <strong>Instellingen → Betaalmethoden</strong>.",
+        "step2": "Controleer uw huidige limieten in <strong>Instellingen → Limieten</strong>.",
+        "step3": "Voltooi KYC-verificatie om hogere limieten te ontgrendelen.",
+        "step4": "Neem contact op met uw bank om er zeker van te zijn dat er geen beperkingen zijn voor online transacties."
+      }
+    },
+    "error_codes": {
+      "title": "Foutcodes Referentie",
+      "desc": "Als u een foutcode tegenkomt in de app, gebruik dan deze referentietabel om te begrijpen wat het betekent en hoe u het kunt oplossen.",
+      "filters": {
+        "all": "Alle",
+        "low": "Laag",
+        "medium": "Gemiddeld",
+        "high": "Hoog",
+        "critical": "Kritiek"
+      },
+      "table": {
+        "code": "Code",
+        "description": "Omschrijving",
+        "severity": "Ernst",
+        "resolution": "Oplossing"
+      },
+      "e1001": {
+        "desc": "Netwerkverbinding Time-out",
+        "res": "Controleer de internetverbinding en probeer het opnieuw. Schakel tussen Wi-Fi en mobiele data."
+      },
+      "e1002": {
+        "desc": "Authenticatie Mislukt",
+        "res": "Voer uw inloggegevens opnieuw in. Als het probleem aanhoudt, reset uw wachtwoord via e-mailherstel."
+      },
+      "e1003": {
+        "desc": "Sessie Verlopen",
+        "res": "Log opnieuw in. Dit is normaal na 30 minuten inactiviteit."
+      },
+      "e2001": {
+        "desc": "Onvoldoende Saldo",
+        "res": "Waardeer uw portefeuille op voordat u de transactie opnieuw probeert."
+      },
+      "e2002": {
+        "desc": "Transactielimiet Overschreden",
+        "res": "U heeft uw dagelijkse/maandelijkse limiet bereikt. Voltooi KYC voor hogere limieten of wacht op reset."
+      },
+      "e2003": {
+        "desc": "Betaling Geweigerd door Handelaar",
+        "res": "De terminal van de handelaar heeft de betaling geweigerd. Controleer het bedrag en probeer het opnieuw, of gebruik een andere betaalmethode."
+      },
+      "e2004": {
+        "desc": "Dubbele Transactie Gedetecteerd",
+        "res": "Het systeem heeft een mogelijke dubbele transactie gedetecteerd. Controleer uw transactiegeschiedenis voordat u het opnieuw probeert."
+      },
+      "e3001": {
+        "desc": "QR-code Ongeldig of Verlopen",
+        "res": "Vraag de handelaar om een nieuwe QR-code te genereren. QR-codes verlopen na 5 minuten."
+      },
+      "e3002": {
+        "desc": "NFC niet ondersteund",
+        "res": "Uw apparaat ondersteunt geen NFC. Gebruik QR-code scannen voor betalingen."
+      },
+      "e4001": {
+        "desc": "Account Opgeschort",
+        "res": "Uw account is tijdelijk opgeschort. Neem onmiddellijk contact op met de ondersteuning voor een oplossing."
+      },
+      "e4002": {
+        "desc": "KYC-verificatie Vereist",
+        "res": "Voltooi identiteitsverificatie via Instellingen → Account → Identiteit Verifiëren."
+      },
+      "e5001": {
+        "desc": "Opwaarderen Mislukt",
+        "res": "Controleer uw gekoppelde bank- of kaartgegevens. Neem contact op met uw bank als het probleem aanhoudt."
+      },
+      "e5002": {
+        "desc": "Vertraging bij Verwerking Opname",
+        "res": "Opnames kunnen 1-3 werkdagen duren. Geen actie vereist tenzij het langer dan 5 dagen duurt."
+      },
+      "e9999": {
+        "desc": "Interne Serverfout",
+        "res": "Er is een onverwachte fout opgetreden. Start de app opnieuw en probeer het opnieuw. Neem contact op met ondersteuning als het probleem aanhoudt."
+      },
+      "callout": "U kunt uw foutcode vinden door op de foutmelding in de app te tikken. De code verschijnt onderaan het foutvenster. Vermeld deze code wanneer u contact opneemt met de ondersteuning voor een snellere afhandeling."
+    },
+    "contact_support": {
+      "title": "Contact Ondersteuning",
+      "desc": "Als u uw probleem niet kunt oplossen met de bovenstaande gidsen, staat ons ondersteuningsteam klaar om te helpen.",
+      "ticket": {
+        "title": "Ondersteuningsticket",
+        "desc": "Dien een gedetailleerd ondersteuningsverzoek in en ontvang binnen 24 uur een reactie.",
+        "link": "Ticket Indienen"
+      },
+      "email": {
+        "title": "E-mail Ons",
+        "desc": "Stuur een e-mail naar ons ondersteuningsteam voor complexe problemen of accountvragen.",
+        "link": "support@mpaynetwork.com"
+      },
+      "chat": {
+        "title": "In-App Chat",
+        "desc": "Gebruik de ingebouwde chatfunctie voor real-time hulp tijdens kantooruren.",
+        "link": "Open in App"
+      },
+      "checklist_title": "Houd het volgende gereed voordat u contact opneemt met de ondersteuning:",
+      "check1": "Uw geregistreerde e-mailadres of telefoonnummer",
+      "check2": "Foutcode (indien van toepassing)",
+      "check3": "Transactie-ID (voor betalingsproblemen)",
+      "check4": "Apparaatmodel en OS-versie",
+      "check5": "App-versie (te vinden in Instellingen → Over)"
+    },
+    "faq": {
+      "title": "Veelgestelde Vragen",
+      "desc": "Snelle antwoorden op de meest voorkomende vragen over de Consumenten Portefeuille.",
+      "q1": "Hoe reset ik mijn portefeuille-PIN?",
+      "a1": "<p>Ga naar <strong>Instellingen → Beveiliging → PIN Wijzigen</strong>. U moet eerst uw identiteit verifiëren met uw geregistreerde e-mail of telefoonnummer. Voer uw huidige PIN in (of gebruik de optie \"PIN Vergeten\") en stel vervolgens een nieuwe 6-cijferige PIN in.</p><p>Als u uw PIN volledig bent vergeten, tikt u op \"PIN Vergeten\" op het inlogscherm en volgt u de herstelstappen. U ontvangt een verificatiecode via SMS of e-mail.</p>",
+      "q2": "Kan ik mPay Portefeuille op meerdere apparaten gebruiken?",
+      "a2": "<p>Om veiligheidsredenen kan uw mPay Consumenten Portefeuille slechts op één apparaat tegelijk actief zijn. Als u inlogt op een nieuw apparaat, wordt uw vorige sessie automatisch beëindigd.</p><p>Om van apparaat te wisselen, installeert u de app op uw nieuwe apparaat, logt u in met uw gegevens en verifieert u uw identiteit. Al uw gegevens worden automatisch gesynchroniseerd.</p>",
+      "q3": "Wat zijn de dagelijkse transactielimieten?",
+      "a3": "<p>Transactielimieten hangen af van uw verificatieniveau:</p><ul style=\"padding-left:20px;margin:8px 0;\"><li><strong>Basis (niet geverifieerd):</strong> $100/dag, $500/maand</li><li><strong>Geverifieerd (KYC voltooid):</strong> $5.000/dag, $25.000/maand</li><li><strong>Premium:</strong> $25.000/dag, $100.000/maand</li></ul><p>U kunt uw huidige limieten en verificatieniveau controleren in <strong>Instellingen → Account → Limieten</strong>.</p>",
+      "q4": "Hoe lang duurt het verwerken van terugbetalingen?",
+      "a4": "<p>Terugbetalingen die door handelaren zijn gestart, verschijnen doorgaans binnen 1-3 werkdagen in uw portefeuille. U ontvangt een pushmelding wanneer de terugbetaling is bijgeschreven. Houd voor terugbetalingen naar uw gekoppelde bankrekening rekening met 3-5 extra werkdagen.</p><p>U kunt de status van terugbetalingen volgen in <strong>Activiteit → Transactiegeschiedenis</strong> — terugbetaalde transacties zijn gemarkeerd met een groen \"Terugbetaald\" label.</p>",
+      "q5": "Waarom staat mijn account op \"In Behandeling\"?",
+      "a5": "<p>Accountbeoordelingen worden automatisch geactiveerd door ons beveiligingssysteem wanneer ongebruikelijke activiteit wordt gedetecteerd. Dit kan gebeuren bij:</p><ul style=\"padding-left:20px;margin:8px 0;\"><li>Meerdere mislukte inlogpogingen</li><li>Grote of ongebruikelijke transactiepatronen</li><li>Inloggen vanaf een nieuwe locatie of apparaat</li><li>Onvolledige KYC-verificatie</li></ul><p>Beoordelingen worden doorgaans binnen 24-48 uur voltooid. Tijdens de beoordeling kunt u nog steeds uw saldo en geschiedenis bekijken, maar kunnen transacties tijdelijk beperkt zijn. Neem contact op met ondersteuning als de beoordeling langer duurt dan verwacht.</p>",
+      "q6": "Hoe verwijder ik mijn account permanent?",
+      "a6": "<p>Om uw account te verwijderen, gaat u naar <strong>Instellingen → Account → Account Verwijderen</strong>. Voor verwijdering moet u:</p><ul style=\"padding-left:20px;margin:8px 0;\"><li>Al het resterende saldo opnemen naar uw bankrekening</li><li>Zorgen dat er geen transacties in behandeling zijn</li><li>Uw identiteit bevestigen via e-mail/telefoonverificatie</li></ul><p>Accountverwijdering is permanent en kan niet ongedaan worden gemaakt. Uw transactiegeschiedenis wordt 7 jaar bewaard zoals vereist door financiële regelgeving, maar uw persoonlijke profiel wordt geanonimiseerd.</p>"
+    },
+    "pagination": {
+      "prev": "Vorige",
+      "prev_title": "Instellingen & Beveiliging",
+      "next": "Terug naar Overzicht",
+      "next_title": "Consumentendoc Home"
+    },
+    "toc": {
+      "title": "Op deze pagina",
+      "issues": "Veelvoorkomende Problemen",
+      "errors": "Foutcodes Referentie",
+      "support": "Contact Ondersteuning",
+      "faq": "Veelgestelde Vragen"
+    }
+  },
+  "merchant_home": {
+    "version_banner": {
+      "text": "U bekijkt de documentatie voor <strong>MPay Merchant Wallet v2.4</strong>. Op zoek naar een andere versie?",
+      "changelog": "Bekijk wijzigingslogboek",
+      "badge": "Nieuwste"
+    },
+    "breadcrumb": {
+      "docs": "Docs",
+      "current": "Merchant Wallet"
+    },
+    "title": "Merchant Wallet Documentatie",
+    "subtitle": "Alles wat u nodig hebt om uw MPay Merchant Wallet in te stellen, te configureren en te beheren.",
+    "overview": {
+      "title": "Overzicht",
+      "p1": "De mPay Merchant Wallet is een krachtige oplossing voor het accepteren van mobiele betalingen, ontworpen voor bedrijven van elke omvang. Accepteer naadloos betalingen via QR-codes, NFC 'tap-to-pay' en directe overboekingen — allemaal vanaf uw smartphone.",
+      "p2": "Met de Merchant Wallet kunt u uw transacties beheren, gedetailleerde rapporten genereren, betalingsvoorkeuren configureren en uw klanten een snelle, veilige afrekenervaring bieden.",
+      "feature1": "Accepteer direct betalingen via QR-codes",
+      "feature2": "NFC 'tap-to-pay' contactloze betalingen",
+      "feature3": "Realtime monitoring van transacties",
+      "feature4": "Gedetailleerde verkooprapporten & analyses",
+      "feature5": "Ondersteuning voor meerdere valuta's",
+      "feature6": "Beveiliging & versleuteling op bankniveau",
+      "feature7": "Aanpasbaar bedrijfsprofiel",
+      "feature8": "Exporteer transacties (CSV, PDF)",
+      "info_callout": "<strong>Nieuw bij mPay?</strong> Begin met onze <a onclick=\"load_page('merchant_getting_started')\" tabindex=\"0\">Aan de slag-gids</a> om de app te downloaden en binnen enkele minuten uw eerste merchant-account in te stellen."
+    },
+    "quick_start": {
+      "title": "Aan de slag",
+      "subtitle": "Ga aan de slag in vier eenvoudige stappen:",
+      "step1": {
+        "title": "Downloaden & Installeren",
+        "desc": "Download de MPay Merchant Wallet via de App Store of Google Play."
+      },
+      "step2": {
+        "title": "Uw account aanmaken",
+        "desc": "Registreer met uw bedrijfsgegevens en voltooi het bedrijfsprofiel."
+      },
+      "step3": {
+        "title": "Voltooi het verificatieproces",
+        "desc": "Dien de relevante bedrijfsdocumenten in en wacht tot uw profiel is geverifieerd."
+      },
+      "step4": {
+        "title": "Begin met het accepteren van betalingen",
+        "desc": "U bent er klaar voor! Accepteer uw eerste betaling en beheer transacties moeiteloos."
+      }
+    },
+    "explore": {
+      "title": "Documentatie Verkennen",
+      "subtitle": "Duik in gedetailleerde handleidingen voor elke functie van de Merchant Wallet.",
+      "getting_started": {
+        "title": "Aan de slag",
+        "desc": "Download, installeer en stel de Merchant Wallet in. Perfect voor nieuwe gebruikers."
+      },
+      "account": {
+        "title": "Accountinstelling & Verificatie",
+        "desc": "Registreer uw bedrijf, voltooi de KYC-verificatie en stel uw merchant-profiel in."
+      },
+      "qr": {
+        "title": "Betalingen via QR-code",
+        "desc": "Genereer, toon en beheer QR-codes voor eenvoudige betalingen door klanten."
+      },
+      "nfc": {
+        "title": "NFC-betalingen",
+        "desc": "Schakel NFC 'tap-to-pay' in en configureer dit voor snelle contactloze transacties."
+      },
+      "transactions": {
+        "title": "Transactiebeheer",
+        "desc": "Bekijk, zoek, filter en exporteer uw betalingstransacties en rapporten."
+      },
+      "settings": {
+        "title": "Instellingen & Configuratie",
+        "desc": "Configureer meldingen, beveiligingsinstellingen, betalingsvoorkeuren en meer."
+      },
+      "troubleshooting": {
+        "title": "Probleemoplossing",
+        "desc": "Vind oplossingen voor veelvoorkomende problemen, foutcodes en neem contact op met de klantenservice."
+      }
+    },
+    "pagination": {
+      "next": "Volgende",
+      "next_title": "Aan de slag"
+    }
+  },
+  "changelog": {
+    "ui": {
+      "title": "Wijzigingslogboek & Release-opmerkingen",
+      "description": "Volg alle updates en verbeteringen aan MPay Network Wallet",
+      "filter_wallet": "Wallet",
+      "filter_all": "Alle Wallets",
+      "filter_merchant": "Merchant Wallet",
+      "filter_consumer": "Consumenten Wallet",
+      "filter_tags": "Tags",
+      "tag_new_feature": "Nieuwe functie",
+      "tag_bug_fix": "Foutoplossing",
+      "tag_improvement": "Verbetering",
+      "tag_breaking_change": "Ingrijpende verandering",
+      "tag_security": "Beveiliging",
+      "filters_active": "Filters actief",
+      "clear_all": "Alles wissen",
+      "showing_releases_html": "Toont <strong>{{count}} releases</strong>",
+      "showing_of_releases_html": "Toont <strong>{{count}}</strong> van <strong>{{total}} releases</strong>",
+      "empty_title": "Geen releases gevonden",
+      "empty_text": "Probeer uw filters aan te passen om meer resultaten te zien.",
+      "empty_reset": "Filters herstellen",
+      "back_home": "Terug naar Home",
+      "latest": "Nieuwste",
+      "both_wallets": "Beide Wallets",
+      "merchant": "Merchant",
+      "consumer": "Consument",
+      "scroll_top": "Naar boven scrollen"
+    },
+    "entries": {
+      "v2_3_0": [
+        "Biometrische authenticatie-ondersteuning voor NFC-betalingen op beide wallets",
+        "Meertalige ondersteuning: Spaans, Frans, Portugees en Arabisch",
+        "Vernieuwde transactiegeschiedenis met geavanceerde filtering en exportopties",
+        "Verbeterde onboarding-flow met interactieve tutorials",
+        "Toegankelijkheidsproblemen opgelost met schermlezer-navigatie in betalingsflows"
+      ],
+      "v2_2_1": [
+        "Time-out bij het genereren van QR-codes op oudere Android-apparaten opgelost",
+        "Onjuiste valutanotatie in transactiebewijzen gecorrigeerd",
+        "TLS-certificaatpinning bijgewerkt voor verbeterde API-beveiliging",
+        "Vertragingen in pushmeldingen voor betalingsbevestigingen gecorrigeerd"
+      ],
+      "v2_2_0": [
+        "P2P-overboekingen ondersteunen nu geplande en periodieke betalingen",
+        "Nieuwe opwaardeermethoden voor wallets: bankoverschrijving en debetkaart",
+        "Verbeterd betalingsbevestigingsscherm met merchant-gegevens en kaartlocatie",
+        "Transactiebewijzen delen via WhatsApp, sms en e-mail toegevoegd"
+      ],
+      "v2_1_2": [
+        "NFC-betalingslezer reageert weer na slaapstand",
+        "Berekeningsverschil in afwikkelingsrapport opgelost",
+        "Tijdzoneweergave in transactietijdstempels gecorrigeerd"
+      ],
+      "v2_1_0": [
+        "Dynamische QR-codes met aanpasbare betalingsbedragen en omschrijvingen",
+        "Realtime tracking van betalingsstatus met live meldingen",
+        "v1 API-endpoints verouderd — stap vóór 1 maart over op v2 API's",
+        "Minimale OS-vereisten bijgewerkt: iOS 15+ en Android 10+",
+        "Ondersteuning voor donkere modus in alle schermen"
+      ],
+      "v2_0_3": [
+        "Beveiligingslek in sessietoken-verversingsmechanisme gedicht",
+        "Wallet-saldo wordt nu direct bijgewerkt na voltooiing van P2P-overboeking",
+        "Verbeterde versleuteling voor opgeslagen betalingsgegevens"
+      ],
+      "v2_0_0": [
+        "Volledig nieuw UI-ontwerp met nieuwe koningsblauwe merkidentiteit",
+        "Ondersteuning voor NFC 'tap-to-pay' voor zowel merchant- als consumentenwallets",
+        "Nieuw merchant-dashboard met verkoopanalyses en inzichten",
+        "Gemigreerd naar nieuwe beveiligde infrastructuur voor betalingsverwerking",
+        "Legacy-integraties voor betalingsmethoden verwijderd (v1 kaartverwerking)",
+        "KYC-verificatie gestroomlijnd met scannen van documenten"
+      ],
+      "v1_8_0": [
+        "Batch-export van transacties in CSV-, PDF- en Excel-formaten",
+        "QR-codes scannen is 40% sneller dankzij nieuwe camera-engine",
+        "Aanpasbare meldingsvoorkeuren per transactietype"
+      ]
+    }
+  },
+  "search": {
+    "title": "Zoekresultaten",
+    "hero_title": "Documentatie Zoeken",
+    "input_placeholder": "Zoek documenten, blog, changelog...",
+    "btn_search": "Zoeken",
+    "recent_label": "Recente Zoekopdrachten",
+    "results_found": "<strong>{{count}}</strong> resultaten gevonden voor <span class=\"sr-query-text\">\"{{query}}\"</span>",
+    "results_none": "<strong>0</strong> resultaten gevonden voor <span class=\"sr-query-text\">\"{{query}}\"</span>",
+    "filters": {
+      "all": "Alle",
+      "merchant": "Handelaar Docs",
+      "consumer": "Consument Docs",
+      "blog": "Blog",
+      "changelog": "Changelog"
+    },
+    "no_results": {
+      "title": "Geen resultaten gevonden",
+      "text": "We konden geen overeenkomsten vinden voor uw zoekopdracht. Probeer uw zoekwoorden aan te passen of blader rechtstreeks door onze documentatie.",
+      "tips_title": "Zoektips:",
+      "tip_broader": "Probeer bredere of alternatieve zoekwoorden",
+      "tip_spelling": "Controleer uw spelling en probeer het opnieuw",
+      "tip_fewer": "Gebruik minder woorden om de zoekopdracht te verbreden",
+      "tip_related": "Probeer te zoeken naar een gerelateerd onderwerp"
+    },
+    "back_home": "Terug naar Home",
+    "quick_links": {
+      "feedback": "Feedback verzenden"
+    },
+    "meta": {
+      "read_time": "{{count}} min leestijd"
+    },
+    "results": {
+      "r1": {
+        "title": "Aan de slag met QR-code betalingen",
+        "excerpt": "Leer hoe u <mark>QR-code</mark> betalingen kunt instellen en accepteren in uw merchant wallet. Genereer dynamische <mark>QR-codes</mark> voor elk bedrag en begin direct met het accepteren van betalingen."
+      },
+      "r2": {
+        "title": "NFC Tap-to-Pay installatiehandleiding",
+        "excerpt": "Configureer <mark>NFC</mark> tap-to-pay functionaliteit voor contactloze <mark>betalingen</mark>. Stel uw apparaat in staat om betalingen te accepteren met een simpele tik."
+      },
+      "r3": {
+        "title": "Betalingen uitvoeren als consument",
+        "excerpt": "Scan <mark>QR-codes</mark> van verkopers of gebruik <mark>NFC</mark> om snel en veilig <mark>betalingen</mark> uit te voeren. Volg onze stap-voor-stap gids om uw eerste transactie te voltooien."
+      },
+      "r4": {
+        "title": "Transactiebeheer & Export",
+        "excerpt": "Bekijk, filter en exporteer uw <mark>betaling</mark> transactiegeschiedenis. Download rapporten in CSV- of PDF-formaat voor de boekhouding."
+      },
+      "r5": {
+        "title": "Methoden voor het opwaarderen en opnemen van wallets",
+        "excerpt": "Stort geld in uw wallet via bankoverschrijving, kaart of andere <mark>betaalmethoden</mark>. Neem uw saldo veilig op naar uw bankrekening."
+      },
+      "r6": {
+        "title": "MPay Network lanceert ondersteuning voor NFC-betalingen",
+        "excerpt": "We zijn verheugd aan te kondigen dat ondersteuning voor contactloze <mark>NFC-betalingen</mark> nu beschikbaar is voor alle merchants. Tap-to-pay is er."
+      },
+      "r7": {
+        "title": "P2P-overboekingen tussen gebruikers",
+        "excerpt": "Stuur direct geld naar vrienden en familie via hun telefoonnummer of wallet-ID. Geen kosten voor persoonlijke <mark>betalingen</mark>."
+      },
+      "r8": {
+        "title": "Versie 2.5.0 — Verbeteringen aan QR-codes",
+        "excerpt": "Dynamische <mark>QR-code</mark> generatie met aangepaste bedragen toegevoegd, <mark>QR-scansnelheid</mark> met 40% verbeterd en weergaveproblemen op oudere apparaten opgelost."
+      },
+      "r9": {
+        "title": "Accountinstelling & KYC-verificatie",
+        "excerpt": "Voltooi uw merchant-accountregistratie en KYC-verificatie om <mark>betalingen</mark> te accepteren. Upload vereiste documenten en verifieer uw bedrijf."
+      },
+      "r10": {
+        "title": "Problemen met betalingsfouten oplossen",
+        "excerpt": "Veelvoorkomende <mark>betaling</mark> foutcodes en hun oplossingen. Los problemen op met mislukte transacties, problemen met het scannen van <mark>QR-codes</mark> en <mark>NFC-verbindingsfouten</mark>."
+      },
+      "r11": {
+        "title": "Beste praktijken voor beveiliging bij digitale betalingen",
+        "excerpt": "Bescherm uw <mark>betaalgegevens</mark> met deze essentiële beveiligingstips. Schakel tweestapsverificatie in, gebruik sterke wachtwoorden en controleer transacties."
+      },
+      "r12": {
+        "title": "Consumenten-app beveiliging & privacy-instellingen",
+        "excerpt": "Configureer uw beveiligingsvoorkeuren, inclusief biometrisch inloggen, <mark>betaallimieten</mark>, transactiemeldingen en privacyinstellingen."
+      }
+    }
+  },
+  "landing": {
+    "title": "MPay Wallet Documentatie",
+    "nav": {
+      "merchant": "Handelaars Docs",
+      "consumer": "Consumenten Docs",
+      "blog": "Blog & Updates",
+      "feedback": "Feedback Verzenden",
+      "changelog": "Changelog & Release Notes",
+      "search": "Zoeken"
+    },
+    "search": {
+      "trigger_text": "Zoek docs...",
+      "kbd_hint": "Ctrl K",
+      "modal_placeholder": "Zoek in documentatie...",
+      "modal_empty": "Begin met typen om te zoeken...",
+      "esc_hint": "ESC"
+    },
+    "hero": {
+      "badge": "Documentatieportaal v2.0",
+      "title": "MPay Network Wallet Documentatie",
+      "subtitle": "Uw QR & NFC Wallet Oplossing — uitgebreide gidsen voor handelaars en consumenten om MPay Network in te stellen, te beheren en ermee te groeien.",
+      "tagline": "Alles wat u nodig heeft om betalingen te accepteren en te doen, op één plek.",
+      "cta_merchant": "Handelaars Wallet Docs",
+      "cta_consumer": "Consumenten Wallet Docs",
+      "phone_status": "MPay Wallet",
+      "amount_label": "Bedrag",
+      "scan_btn": "Scan om te Betalen"
+    },
+    "features": {
+      "label": "Functies",
+      "title": "Alles wat u Nodig Heeft voor Digitale Betalingen",
+      "desc": "MPay Network biedt een compleet ecosysteem voor QR- en NFC-betalingen. Ontdek de functies die naadloze transacties mogelijk maken.",
+      "qr_title": "QR-code Betalingen",
+      "qr_desc": "Genereer en scan QR-codes voor directe, contactloze transacties. Werkt offline en ondersteunt dynamische betalingsbedragen.",
+      "nfc_title": "NFC Tap-to-Pay",
+      "nfc_desc": "Tik gewoon op uw telefoon om betalingen te doen of te ontvangen. Snel, veilig en ondersteund door moderne apparaten.",
+      "merchant_tools_title": "Handelaars Tools",
+      "merchant_tools_desc": "Uitgebreid dashboard met analyses, transactiebeheer en zakelijke inzichten om uw bedrijf te laten groeien.",
+      "consumer_wallet_title": "Consumenten Wallet",
+      "consumer_wallet_desc": "Eenvoudig te gebruiken digitale portemonnee voor dagelijkse betalingen, P2P-overboekingen en saldobeheer. Betaal overal en altijd.",
+      "secure_title": "Veilig & Betrouwbaar",
+      "secure_desc": "Encryptie op bankniveau, multi-factor authenticatie en real-time fraude-detectie om uw geld veilig te houden.",
+      "multilingual_title": "Meertalige Ondersteuning",
+      "multilingual_desc": "Beschikbaar in het Engels, Spaans, Frans, Nederlands en Papiamentu. Bereik een breder publiek met gelokaliseerde ervaringen."
+    },
+    "quicknav": {
+      "label": "Snelle Navigatie",
+      "title": "Verken de Documentatie",
+      "desc": "Spring direct naar de sectie die u nodig heeft. Of u nu een handelaar of een consument bent, wij hebben u gedekt.",
+      "merchant_card_title": "Handelaars Wallet Documentatie",
+      "merchant_card_desc": "Configuratiegidsen, betalingsverwerking, QR & NFC integratie, transactiebeheer en probleemoplossing voor handelaars.",
+      "merchant_card_link": "Ontdek Handelaars Docs",
+      "consumer_card_title": "Consumenten Wallet Documentatie",
+      "consumer_card_desc": "Aan de slag, betalingen doen, uw portemonnee beheren, P2P-overboekingen en beveiligingsinstellingen voor consumenten.",
+      "consumer_card_link": "Ontdek Consumenten Docs",
+      "blog_desc": "Laatste nieuws, aankondigingen van functies en tips om het meeste uit MPay Network te halen.",
+      "blog_link": "Lees Blog",
+      "feedback": "Feedback Verzenden",
+      "feedback_desc": "Rapporteer bugs, vraag functies aan of deel uw gedachten om ons te helpen verbeteren.",
+      "feedback_link": "Geef Feedback",
+      "changelog_desc": "Volg alle updates, verbeteringen en oplossingen in elke versie van beide wallets.",
+      "changelog_link": "Bekijk Changelog"
+    },
+    "footer": {
+      "desc": "De complete QR & NFC digitale portemonnee-oplossing voor handelaars en consumenten. Snel, veilig en toegankelijk.",
+      "col_docs": "Documentatie",
+      "col_community": "Gemeenschap",
+      "col_legal": "Juridisch",
+      "link_privacy": "Privacybeleid",
+      "link_terms": "Servicevoorwaarden",
+      "link_contact": "Contact",
+      "copyright": "© 2026 MPay Network. Alle rechten voorbehouden."
+    }
+  }
+}

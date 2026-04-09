@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumer - Troubleshooting</title>
+    <link href="css/theme.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/consumer_troubleshooting.css">
+    <style>
+        /* Basic reset for preview consistency */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Site Header -->
+    <header class="modern-header" id="consumerHeader">
+    </header>
+    <div class="consumer-troubleshooting-page">
+        <!-- Skip to content -->
+        <a href="#ctr-main-content" class="sr-only"
+            style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;"
+            onfocus="this.style.position='fixed';this.style.left='16px';this.style.top='16px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';this.style.zIndex='9999';this.style.background='#2563eb';this.style.color='#fff';this.style.padding='12px 24px';this.style.borderRadius='8px';this.style.fontSize='14px';this.style.fontWeight='600';"
+            onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip
+            to main content</a>
+        <!-- Site Header -->
+        <header class="site-header"
+            style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid #bfdbfe;height:64px;display:flex;align-items:center;padding:0 24px;">
+            <div style="display:flex;align-items:center;gap:12px;flex:1;">
+                <img src="https://dev.think4ever.com/uifiles/20260311/ed3d2c21991e3bef5e069713af9fa6ca/only_m_with_white_bg_logo.png"
+                    alt="MPay Network" style="height:36px;cursor:pointer;" onclick="load_page('index')">
+                <span
+                    style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1.125rem;color:#1e3a8a;cursor:pointer;"
+                    onclick="load_page('index')">MPay Network</span>
+                <span style="color:#bfdbfe;margin:0 4px;">|</span>
+                <span style="font-size:0.875rem;color:#64748b;">Docs</span>
+            </div>
+            <nav style="display:flex;align-items:center;gap:24px;" aria-label="Main navigation">
+                <a style="font-size:0.875rem;color:#334155;text-decoration:none;cursor:pointer;font-weight:500;"
+                    onclick="load_page('merchant_docs_home')">Merchant Docs</a>
+                <a style="font-size:0.875rem;color:#2563eb;text-decoration:none;cursor:pointer;font-weight:600;"
+                    onclick="load_page('consumer_docs_home')">Consumer Docs</a>
+                <a style="font-size:0.875rem;color:#334155;text-decoration:none;cursor:pointer;font-weight:500;"
+                    onclick="load_page('blog_listing')">Blog</a>
+                <a style="font-size:0.875rem;color:#334155;text-decoration:none;cursor:pointer;font-weight:500;"
+                    onclick="load_page('changelog_page')">Changelog</a>
+            </nav>
+        </header>
+        <div class="ctr-layout">
+            <!-- Sidebar Overlay (mobile) -->
+            <button class="cgs-sidebar-toggle" id="cgsSidebarToggle" aria-label="Toggle navigation menu"
+                aria-expanded="false">
+                <i class="fa fa-bars"></i>
+            </button>
+            <!-- Sidebar overlay -->
+            <div class="cgs-sidebar-overlay" id="cgsSidebarOverlay"></div>
+            <!-- Sidebar -->
+            <div id="consumerSidebar">
+
+            </div>
+            <!-- Main Content -->
+            <div class="ctr-main">
+                <main id="ctr-main-content" class="ctr-content">
+                    <!-- Breadcrumb -->
+                    <nav class="ctr-breadcrumb" aria-label="Breadcrumb">
+                        <a onclick="load_page('index')" style="cursor:pointer;" data-i18n="troubleshooting.breadcrumb.docs">Docs</a>
+                        <span class="separator"><i class="fa fa-chevron-right"></i></span>
+                        <a onclick="load_page('consumer_docs_home')" style="cursor:pointer;" data-i18n="troubleshooting.breadcrumb.consumer">Consumer</a>
+                        <span class="separator"><i class="fa fa-chevron-right"></i></span>
+                        <span class="current" data-i18n="troubleshooting.breadcrumb.current">Troubleshooting</span>
+                    </nav>
+                    <!-- Page Title -->
+                    <h1 class="ctr-page-title" id="ctr_title" data-i18n="troubleshooting.title">Troubleshooting</h1>
+                    <p class="ctr-page-subtitle" data-i18n="troubleshooting.subtitle">Find solutions to common issues, understand error codes, and learn how
+                        to resolve problems with your MPay Consumer Wallet.</p>
+                    <!-- Search -->
+                    <div class="ctr-search-bar">
+                        <i class="fa fa-search search-icon"></i>
+                        <input type="text" id="ctr_search_input" placeholder="Search issues, error codes, and FAQs..."
+                            aria-label="Search troubleshooting topics" data-i18n="troubleshooting.search_placeholder" data-i18n-attr="placeholder">
+                    </div>
+                    <!-- Self-Diagnostic Tool -->
+                    <div class="ctr-diagnostic">
+                        <h4 data-i18n="troubleshooting.diagnostic.title"><i class="fa fa-stethoscope" style="color:#2563eb;"></i> Quick Diagnostic Tool</h4>
+                        <p data-i18n="troubleshooting.diagnostic.intro">Run a quick check to identify potential issues with your wallet setup. This diagnostic
+                            verifies common configuration points.</p>
+                        <div class="ctr-diagnostic-checks">
+                            <div class="ctr-diagnostic-item" data-check="internet">
+                                <span class="check-icon"><i class="fa fa-circle"></i></span>
+                                <span data-i18n="troubleshooting.diagnostic.check_internet">Internet connectivity</span>
+                            </div>
+                            <div class="ctr-diagnostic-item" data-check="app-version">
+                                <span class="check-icon"><i class="fa fa-circle"></i></span>
+                                <span data-i18n="troubleshooting.diagnostic.check_version">App version up to date</span>
+                            </div>
+                            <div class="ctr-diagnostic-item" data-check="permissions">
+                                <span class="check-icon"><i class="fa fa-circle"></i></span>
+                                <span data-i18n="troubleshooting.diagnostic.check_permissions">Required permissions granted</span>
+                            </div>
+                            <div class="ctr-diagnostic-item" data-check="nfc">
+                                <span class="check-icon"><i class="fa fa-circle"></i></span>
+                                <span data-i18n="troubleshooting.diagnostic.check_nfc">NFC hardware available</span>
+                            </div>
+                            <div class="ctr-diagnostic-item" data-check="storage">
+                                <span class="check-icon"><i class="fa fa-circle"></i></span>
+                                <span data-i18n="troubleshooting.diagnostic.check_storage">Sufficient storage space</span>
+                            </div>
+                        </div>
+                        <button id="ctr_diagnostic_btn" class="ctr-diagnostic-btn" type="button" data-i18n="troubleshooting.diagnostic.btn">
+                            <i class="fa fa-play"></i> Run Diagnostics
+                        </button>
+                    </div>
+                    <!-- Common Issues Section -->
+                    <section class="ctr-section" id="common-issues">
+                        <h2 class="ctr-section-title" data-i18n="troubleshooting.common_issues.title">Common Issues</h2>
+                        <p class="ctr-section-desc" data-i18n="troubleshooting.common_issues.desc">Below are the most frequently encountered problems and their
+                            step-by-step solutions.</p>
+                        <!-- Issue 1 -->
+                        <div class="ctr-issue-card">
+                            <div class="ctr-issue-header" tabindex="0" role="button" aria-expanded="false"
+                                aria-controls="issue-body-1">
+                                <div class="ctr-issue-icon orange">
+                                    <i class="fa fa-wifi"></i>
+                                </div>
+                                <div class="ctr-issue-info">
+                                    <h3 class="ctr-issue-title" data-i18n="troubleshooting.common_issues.issue1.title">Unable to Connect to Server</h3>
+                                    <p class="ctr-issue-summary" data-i18n="troubleshooting.common_issues.issue1.summary">App shows "Connection Error" or takes too long to load.
+                                    </p>
+                                </div>
+                                <div class="ctr-issue-toggle">
+                                    <i class="fa fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="ctr-issue-body" id="issue-body-1" aria-hidden="true">
+                                <h4 data-i18n="troubleshooting.common_issues.issue1.causes">Possible Causes</h4>
+                                <ul>
+                                    <li data-i18n="troubleshooting.common_issues.issue1.cause1">Unstable internet connection (Wi-Fi or mobile data)</li>
+                                    <li data-i18n="troubleshooting.common_issues.issue1.cause2">MPay Network servers may be undergoing maintenance</li>
+                                    <li data-i18n="troubleshooting.common_issues.issue1.cause3">VPN or proxy interference</li>
+                                    <li data-i18n="troubleshooting.common_issues.issue1.cause4">Outdated app version</li>
+                                </ul>
+                                <h4 data-i18n="troubleshooting.common_issues.issue1.solution">Solution</h4>
+                                <div class="ctr-steps">
+                                    <div class="ctr-step">
+                                        <span class="ctr-step-num">1</span>
+                                        <span class="ctr-step-content" data-i18n="troubleshooting.common_issues.issue1.step1">Check your internet connection by opening a web
+                                            page in your browser.</span>
+                                    </div>
+                                    <div class="ctr-step">
+                                        <span class="ctr-step-num">2</span>
+                                        <span class="ctr-step-content" data-i18n="troubleshooting.common_issues.issue1.step2">Toggle airplane mode on and off, then
+                                            retry.</span>
+                                    </div>
+                                    <div class="ctr-step">
+                                        <span class="ctr-step-num">3</span>
+                                        <span class="ctr-step-content" data-i18n="troubleshooting.common_issues.issue1.step3">Disable any VPN or proxy services
+                                            temporarily.</span>
+                                    </div>
+                                    <div class="ctr-step">
+                                        <span class="ctr-step-num">4</span>
+                                        <span class="ctr-step-content" data-i18n="troubleshooting.common_issues.issue1.step4">Update the MPay Consumer Wallet app from your app
+                                            store.</span>
+                                    </div>
+                                    <div class="ctr-step">
+                                        <span class="ctr-step-num">5</span>
+                                        <span class="ctr-step-content" data-i18n="troubleshooting.common_issues.issue1.step5">If the issue persists, check <a href="#"
+                                                style="color:#2563eb;">MPay Status Page</a> for ongoing
+                                            incidents.</span>
+                                    </div>
+                                </div>
+                                <div class="ctr-callout info">
+                                    <span class="ctr-callout-icon"><i class="fa fa-info-circle"></i></span>
+                                    <span data-i18n="troubleshooting.common_issues.issue1.callout">Server maintenance typically lasts 15-30 minutes and is scheduled during
+                                        off-peak hours (2:00 AM — 4:00 AM local time).</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Issue 2 -->
+                        <div class="ctr-issue-card">
+                            <div class="ctr-issue-header" tabindex="0" role="button" aria-expanded="false"
+                                aria-controls="issue-body-2">
+                                <div class="ctr-issue-icon red">
+                                    <i class="fa fa-qrcode"></i>
+                                </div>
+                                <div class="ctr-issue-info">
+                                    <h3 class="ctr-issue-title" data-i18n="troubleshooting.common_issues.issue2.title">QR Code Not Scanning</h3>
+                                    <p class="ctr-issue-summary" data-i18n="troubleshooting.common_issues.issue2.summary">Camera unable to detect or read merchant QR codes.</p>
+                                </div>
+                                <div class="ctr-issue-toggle">
+                                    <i class="fa fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="ctr-issue-body" id="issue-body-2" aria-hidden="true">
+                                <h4 data-i18n="troubleshooting.common_issues.issue2.causes">Possible Causes</h4>
+                                <ul>
+                                    <li data-i18n="troubleshooting.common_issues.issue2.cause1">Camera permission not granted to the app</li>
+                                    <li data-i18n="troubleshooting.common_issues.issue2.cause2">Poor lighting conditions</li>
+                                    <li data-i18n="troubleshooting.common_issues.issue2.cause3">Damaged or blurry QR code</li>
+                                    <li data-i18n="troubleshooting.common_issues.issue2.cause4">Camera lens is dirty or obstructed</li>
+                                </ul>
+                                <h4 data-i18n="troubleshooting.common_issues.issue2.solution">Solution</h4>
+                                <div class="ctr-steps">
+                                    <div class="ctr-step">
+                                        <span class="ctr-step-num">1</span>
+                                        <span class="ctr-step-content" data-i18n="troubleshooting.common_issues.issue2.step1">Go to <strong>Settings → App Permissions</strong>
+                                            and ensure camera access is enabled for MPay.</span>
+                                    </div>
+                                    <div class="ctr-step">
+                                        <span class="ctr-step-num">2</span>
+                                        <span class="ctr-step-content" data-i18n="troubleshooting.common_issues.issue2.step2">Clean your camera lens with a soft cloth.</span>
+                                    </div>
+                                    <div class="ctr-step">
+                                        <span class="ctr-step-num">3</span>
+                                        <span class="ctr-step-content" data-i18n="troubleshooting.common_issues.issue2.step3">Ensure adequate lighting — use the flashlight
+                                            toggle in the scanner view.</span>
+                                    </div>
+                                    <div class="ctr-step">
+                                        <span class="ctr-step-num">4</span>
+                                        <span class="ctr-step-content" data-i18n="troubleshooting.common_issues.issue2.step4">Hold your phone steady, about 6-12 inches from
+                                            the QR code.</span>
+                                    </div>
+                                    <div class="ctr-step">
+                                        <span class="ctr-step-num">5</span>
+                                        <span class="ctr-step-content" data-i18n="troubleshooting.common_issues.issue2.step5">If the QR code is on a screen, reduce screen
+                                            glare by adjusting the angle.</span>
+                                    </div>
+                                </div>
+                                <div class="ctr-callout warning">
+                                    <span class="ctr-callout-icon"><i class="fa fa-exclamation-triangle"></i></span>
+                                    <span data-i18n="troubleshooting.common_issues.issue2.callout">If the QR code appears damaged or corrupted, ask the merchant to regenerate a
+                                        new one.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Issue 3 -->
+                        <div class="ctr-issue-card">
+                            <div class="ctr-issue-header" tabindex="0" role="button" aria-expanded="false"
+                                aria-controls="issue-body-3">
+                                <div class="ctr-issue-icon blue">
+                                    <i class="fa fa-broadcast-tower"></i>
+                                </div>
+                                <div class="ctr-issue-info">
+                                    <h3 class="ctr-issue-title" data-i18n="troubleshooting.common_issues.issue3.title">NFC Payment Failing</h3>
+                                    <p class="ctr-issue-summary" data-i18n="troubleshooting.common_issues.issue3.summary">Tap-to-pay not detected or transaction not completing.
+                                    </p>
+                                </div>
+                                <div class="ctr-issue-toggle">
+                                    <i class="fa fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="ctr-issue-body" id="issue-body-3" aria-hidden="true">
+                                <h4 data-i18n="troubleshooting.common_issues.issue3.causes">Possible Causes</h4>
+                                <ul>
+                                    <li data-i18n="troubleshooting.common_issues.issue3.cause1">NFC is disabled on your device</li>
+                                    <li data-i18n="troubleshooting.common_issues.issue3.cause2">Phone case is blocking the NFC antenna</li>
+                                    <li data-i18n="troubleshooting.common_issues.issue3.cause3">Device not positioned correctly on the terminal</li>
+                                    <li data-i18n="troubleshooting.common_issues.issue3.cause4">Insufficient wallet balance</li>
+                                </ul>
+                                <h4 data-i18n="troubleshooting.common_issues.issue3.solution">Solution</h4>
+                                <div class="ctr-steps">
+                                    <div class="ctr-step">
+                                        <span class="ctr-step-num">1</span>
+                                        <span class="ctr-step-content" data-i18n="troubleshooting.common_issues.issue3.step1">Enable NFC in your phone's Settings: <span
+                                                class="ctr-code">Settings → Connected Devices → NFC</span></span>
+                                    </div>
+                                    <div class="ctr-step">
+                                        <span class="ctr-step-num">2</span>
+                                        <span class="ctr-step-content" data-i18n="troubleshooting.common_issues.issue3.step2">Remove any thick phone case or metal accessories
+                                            that may block NFC.</span>
+                                    </div>
+                                    <div class="ctr-step">
+                                        <span class="ctr-step-num">3</span>
+                                        <span class="ctr-step-content" data-i18n="troubleshooting.common_issues.issue3.step3">Hold the back of your phone flat against the
+                                            terminal for 2-3 seconds.</span>
+                                    </div>
+                                    <div class="ctr-step">
+                                        <span class="ctr-step-num">4</span>
+                                        <span class="ctr-step-content" data-i18n="troubleshooting.common_issues.issue3.step4">Ensure your wallet has sufficient balance for the
+                                            transaction.</span>
+                                    </div>
+                                </div>
+                                <div class="ctr-callout info">
+                                    <span class="ctr-callout-icon"><i class="fa fa-info-circle"></i></span>
+                                    <span data-i18n="troubleshooting.common_issues.issue3.callout">NFC antenna location varies by phone model. Most Android phones have it in the
+                                        upper-middle back area. iPhones use the top edge.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Issue 4 -->
+                        <div class="ctr-issue-card">
+                            <div class="ctr-issue-header" tabindex="0" role="button" aria-expanded="false"
+                                aria-controls="issue-body-4">
+                                <div class="ctr-issue-icon green">
+                                    <i class="fa fa-fingerprint"></i>
+                                </div>
+                                <div class="ctr-issue-info">
+                                    <h3 class="ctr-issue-title" data-i18n="troubleshooting.common_issues.issue4.title">Biometric Login Not Working</h3>
+                                    <p class="ctr-issue-summary" data-i18n="troubleshooting.common_issues.issue4.summary">Fingerprint or face recognition fails to authenticate.
+                                    </p>
+                                </div>
+                                <div class="ctr-issue-toggle">
+                                    <i class="fa fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="ctr-issue-body" id="issue-body-4" aria-hidden="true">
+                                <h4 data-i18n="troubleshooting.common_issues.issue4.causes">Possible Causes</h4>
+                                <ul>
+                                    <li data-i18n="troubleshooting.common_issues.issue4.cause1">Biometric data changed on the device (new fingerprint added)</li>
+                                    <li data-i18n="troubleshooting.common_issues.issue4.cause2">Biometric hardware sensor dirty or damaged</li>
+                                    <li data-i18n="troubleshooting.common_issues.issue4.cause3">Biometric permission revoked for the app</li>
+                                </ul>
+                                <h4 data-i18n="troubleshooting.common_issues.issue4.solution">Solution</h4>
+                                <div class="ctr-steps">
+                                    <div class="ctr-step">
+                                        <span class="ctr-step-num">1</span>
+                                        <span class="ctr-step-content" data-i18n="troubleshooting.common_issues.issue4.step1">Log in using your PIN code as a fallback.</span>
+                                    </div>
+                                    <div class="ctr-step">
+                                        <span class="ctr-step-num">2</span>
+                                        <span class="ctr-step-content" data-i18n="troubleshooting.common_issues.issue4.step2">Go to <strong>MPay Settings → Security →
+                                                Biometric Login</strong> and re-enable it.</span>
+                                    </div>
+                                    <div class="ctr-step">
+                                        <span class="ctr-step-num">3</span>
+                                        <span class="ctr-step-content" data-i18n="troubleshooting.common_issues.issue4.step3">If prompted, re-register your biometric
+                                            data.</span>
+                                    </div>
+                                    <div class="ctr-step">
+                                        <span class="ctr-step-num">4</span>
+                                        <span class="ctr-step-content" data-i18n="troubleshooting.common_issues.issue4.step4">Clean the fingerprint sensor or ensure face
+                                            recognition has clear line of sight.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Issue 5 -->
+                        <div class="ctr-issue-card">
+                            <div class="ctr-issue-header" tabindex="0" role="button" aria-expanded="false"
+                                aria-controls="issue-body-5">
+                                <div class="ctr-issue-icon purple">
+                                    <i class="fa fa-exchange-alt"></i>
+                                </div>
+                                <div class="ctr-issue-info">
+                                    <h3 class="ctr-issue-title" data-i18n="troubleshooting.common_issues.issue5.title">P2P Transfer Stuck or Pending</h3>
+                                    <p class="ctr-issue-summary" data-i18n="troubleshooting.common_issues.issue5.summary">Money sent but recipient hasn't received it.</p>
+                                </div>
+                                <div class="ctr-issue-toggle">
+                                    <i class="fa fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="ctr-issue-body" id="issue-body-5" aria-hidden="true">
+                                <h4 data-i18n="troubleshooting.common_issues.issue5.causes">Possible Causes</h4>
+                                <ul>
+                                    <li data-i18n="troubleshooting.common_issues.issue5.cause1">Network congestion causing delays</li>
+                                    <li data-i18n="troubleshooting.common_issues.issue5.cause2">Recipient's account may have restrictions</li>
+                                    <li data-i18n="troubleshooting.common_issues.issue5.cause3">Transaction amount exceeds daily limits</li>
+                                    <li data-i18n="troubleshooting.common_issues.issue5.cause4">Compliance review for large amounts</li>
+                                </ul>
+                                <h4 data-i18n="troubleshooting.common_issues.issue5.solution">Solution</h4>
+                                <div class="ctr-steps">
+                                    <div class="ctr-step">
+                                        <span class="ctr-step-num">1</span>
+                                        <span class="ctr-step-content" data-i18n="troubleshooting.common_issues.issue5.step1">Check the transaction status in <strong>Activity
+                                                → Transaction History</strong>.</span>
+                                    </div>
+                                    <div class="ctr-step">
+                                        <span class="ctr-step-num">2</span>
+                                        <span class="ctr-step-content" data-i18n="troubleshooting.common_issues.issue5.step2">If status is "Processing", wait up to 30 minutes
+                                            for completion.</span>
+                                    </div>
+                                    <div class="ctr-step">
+                                        <span class="ctr-step-num">3</span>
+                                        <span class="ctr-step-content" data-i18n="troubleshooting.common_issues.issue5.step3">If status is "Pending Review", your transaction
+                                            is being reviewed. You'll receive a notification once resolved.</span>
+                                    </div>
+                                    <div class="ctr-step">
+                                        <span class="ctr-step-num">4</span>
+                                        <span class="ctr-step-content" data-i18n="troubleshooting.common_issues.issue5.step4">If stuck for more than 2 hours, contact support
+                                            with the Transaction ID.</span>
+                                    </div>
+                                </div>
+                                <div class="ctr-callout danger">
+                                    <span class="ctr-callout-icon"><i class="fa fa-exclamation-circle"></i></span>
+                                    <span data-i18n="troubleshooting.common_issues.issue5.callout"><strong>Do not</strong> send the same transfer again while the original is
+                                        still processing. This may result in a double charge.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Issue 6 -->
+                        <div class="ctr-issue-card">
+                            <div class="ctr-issue-header" tabindex="0" role="button" aria-expanded="false"
+                                aria-controls="issue-body-6">
+                                <div class="ctr-issue-icon red">
+                                    <i class="fa fa-plus-circle"></i>
+                                </div>
+                                <div class="ctr-issue-info">
+                                    <h3 class="ctr-issue-title" data-i18n="troubleshooting.common_issues.issue6.title">Top-Up or Withdrawal Failed</h3>
+                                    <p class="ctr-issue-summary" data-i18n="troubleshooting.common_issues.issue6.summary">Unable to add funds or withdraw from wallet.</p>
+                                </div>
+                                <div class="ctr-issue-toggle">
+                                    <i class="fa fa-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="ctr-issue-body" id="issue-body-6" aria-hidden="true">
+                                <h4 data-i18n="troubleshooting.common_issues.issue6.causes">Possible Causes</h4>
+                                <ul>
+                                    <li data-i18n="troubleshooting.common_issues.issue6.cause1">Bank account or card not verified</li>
+                                    <li data-i18n="troubleshooting.common_issues.issue6.cause2">Daily or monthly limits exceeded</li>
+                                    <li data-i18n="troubleshooting.common_issues.issue6.cause3">Bank rejecting the transaction</li>
+                                    <li data-i18n="troubleshooting.common_issues.issue6.cause4">Account verification incomplete</li>
+                                </ul>
+                                <h4 data-i18n="troubleshooting.common_issues.issue6.solution">Solution</h4>
+                                <div class="ctr-steps">
+                                    <div class="ctr-step">
+                                        <span class="ctr-step-num">1</span>
+                                        <span class="ctr-step-content" data-i18n="troubleshooting.common_issues.issue6.step1">Verify your linked bank account/card in
+                                            <strong>Settings → Payment Methods</strong>.</span>
+                                    </div>
+                                    <div class="ctr-step">
+                                        <span class="ctr-step-num">2</span>
+                                        <span class="ctr-step-content" data-i18n="troubleshooting.common_issues.issue6.step2">Check your current limits in <strong>Settings →
+                                                Limits</strong>.</span>
+                                    </div>
+                                    <div class="ctr-step">
+                                        <span class="ctr-step-num">3</span>
+                                        <span class="ctr-step-content" data-i18n="troubleshooting.common_issues.issue6.step3">Complete KYC verification to unlock higher
+                                            limits.</span>
+                                    </div>
+                                    <div class="ctr-step">
+                                        <span class="ctr-step-num">4</span>
+                                        <span class="ctr-step-content" data-i18n="troubleshooting.common_issues.issue6.step4">Contact your bank to ensure no holds or blocks on
+                                            online transactions.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                               <!-- Error Codes Section -->
+                    <section class="ctr-section" id="error-codes">
+                        <h2 class="ctr-section-title" data-i18n="troubleshooting.error_codes.title">Error Codes Reference</h2>
+                        <p class="ctr-section-desc" data-i18n="troubleshooting.error_codes.desc">If you encounter an error code in the app, use this reference table
+                            to understand what it means and how to resolve it.</p>
+                        <div class="ctr-filter-tabs">
+                            <button class="ctr-filter-tab active" data-filter="all" type="button" data-i18n="troubleshooting.error_codes.filters.all">All</button>
+                            <button class="ctr-filter-tab" data-filter="low" type="button" data-i18n="troubleshooting.error_codes.filters.low">Low</button>
+                            <button class="ctr-filter-tab" data-filter="medium" type="button" data-i18n="troubleshooting.error_codes.filters.medium">Medium</button>
+                            <button class="ctr-filter-tab" data-filter="high" type="button" data-i18n="troubleshooting.error_codes.filters.high">High</button>
+                            <button class="ctr-filter-tab" data-filter="critical" type="button" data-i18n="troubleshooting.error_codes.filters.critical">Critical</button>
+                        </div>
+                        <div class="ctr-table-container">
+                            <table class="ctr-table" role="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" data-i18n="troubleshooting.error_codes.table.code">Code</th>
+                                        <th scope="col" data-i18n="troubleshooting.error_codes.table.description">Description</th>
+                                        <th scope="col" data-i18n="troubleshooting.error_codes.table.severity">Severity</th>
+                                        <th scope="col" data-i18n="troubleshooting.error_codes.table.resolution">Resolution</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr data-severity="medium">
+                                        <td><span class="ctr-error-code">E1001</span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e1001.desc">Network Connection Timeout</td>
+                                        <td><span class="ctr-severity medium"><i class="fa fa-circle"
+                                                     style="font-size:6px;"></i> <span data-i18n="troubleshooting.error_codes.filters.medium">Medium</span></span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e1001.res">Check internet connection and retry. Switch between Wi-Fi and mobile data.
+                                        </td>
+                                    </tr>
+                                    <tr data-severity="high">
+                                        <td><span class="ctr-error-code">E1002</span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e1002.desc">Authentication Failed</td>
+                                        <td><span class="ctr-severity high"><i class="fa fa-circle"
+                                                     style="font-size:6px;"></i> <span data-i18n="troubleshooting.error_codes.filters.high">High</span></span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e1002.res">Re-enter your credentials. If persists, reset password via email recovery.
+                                        </td>
+                                    </tr>
+                                    <tr data-severity="low">
+                                        <td><span class="ctr-error-code">E1003</span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e1003.desc">Session Expired</td>
+                                        <td><span class="ctr-severity low"><i class="fa fa-circle"
+                                                     style="font-size:6px;"></i> <span data-i18n="troubleshooting.error_codes.filters.low">Low</span></span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e1003.res">Log in again. This is normal after 30 minutes of inactivity.</td>
+                                    </tr>
+                                    <tr data-severity="high">
+                                        <td><span class="ctr-error-code">E2001</span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e2001.desc">Insufficient Balance</td>
+                                        <td><span class="ctr-severity high"><i class="fa fa-circle"
+                                                     style="font-size:6px;"></i> <span data-i18n="troubleshooting.error_codes.filters.high">High</span></span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e2001.res">Top up your wallet before retrying the transaction.</td>
+                                    </tr>
+                                    <tr data-severity="critical">
+                                        <td><span class="ctr-error-code">E2002</span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e2002.desc">Transaction Limit Exceeded</td>
+                                        <td><span class="ctr-severity critical"><i class="fa fa-circle"
+                                                     style="font-size:6px;"></i> <span data-i18n="troubleshooting.error_codes.filters.critical">Critical</span></span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e2002.res">You've reached your daily/monthly limit. Complete KYC for higher limits or
+                                            wait for reset.</td>
+                                    </tr>
+                                    <tr data-severity="medium">
+                                        <td><span class="ctr-error-code">E2003</span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e2003.desc">Payment Declined by Merchant</td>
+                                        <td><span class="ctr-severity medium"><i class="fa fa-circle"
+                                                     style="font-size:6px;"></i> <span data-i18n="troubleshooting.error_codes.filters.medium">Medium</span></span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e2003.res">The merchant's terminal rejected the payment. Verify amount and retry, or
+                                            use a different payment method.</td>
+                                    </tr>
+                                    <tr data-severity="high">
+                                        <td><span class="ctr-error-code">E2004</span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e2004.desc">Duplicate Transaction Detected</td>
+                                        <td><span class="ctr-severity high"><i class="fa fa-circle"
+                                                     style="font-size:6px;"></i> <span data-i18n="troubleshooting.error_codes.filters.high">High</span></span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e2004.res">The system detected a possible duplicate. Check your transaction history
+                                            before retrying.</td>
+                                    </tr>
+                                    <tr data-severity="medium">
+                                        <td><span class="ctr-error-code">E3001</span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e3001.desc">QR Code Invalid or Expired</td>
+                                        <td><span class="ctr-severity medium"><i class="fa fa-circle"
+                                                     style="font-size:6px;"></i> <span data-i18n="troubleshooting.error_codes.filters.medium">Medium</span></span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e3001.res">Ask the merchant to generate a new QR code. QR codes expire after 5 minutes.
+                                        </td>
+                                    </tr>
+                                    <tr data-severity="low">
+                                        <td><span class="ctr-error-code">E3002</span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e3002.desc">NFC Not Supported</td>
+                                        <td><span class="ctr-severity low"><i class="fa fa-circle"
+                                                     style="font-size:6px;"></i> <span data-i18n="troubleshooting.error_codes.filters.low">Low</span></span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e3002.res">Your device doesn't support NFC. Use QR code scanning for payments instead.
+                                        </td>
+                                    </tr>
+                                    <tr data-severity="critical">
+                                        <td><span class="ctr-error-code">E4001</span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e4001.desc">Account Suspended</td>
+                                        <td><span class="ctr-severity critical"><i class="fa fa-circle"
+                                                     style="font-size:6px;"></i> <span data-i18n="troubleshooting.error_codes.filters.critical">Critical</span></span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e4001.res">Your account has been temporarily suspended. Contact support immediately for
+                                            resolution.</td>
+                                    </tr>
+                                    <tr data-severity="high">
+                                        <td><span class="ctr-error-code">E4002</span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e4002.desc">KYC Verification Required</td>
+                                        <td><span class="ctr-severity high"><i class="fa fa-circle"
+                                                     style="font-size:6px;"></i> <span data-i18n="troubleshooting.error_codes.filters.high">High</span></span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e4002.res">Complete identity verification in Settings → Account → Verify Identity.</td>
+                                    </tr>
+                                    <tr data-severity="medium">
+                                        <td><span class="ctr-error-code">E5001</span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e5001.desc">Top-Up Failed</td>
+                                        <td><span class="ctr-severity medium"><i class="fa fa-circle"
+                                                     style="font-size:6px;"></i> <span data-i18n="troubleshooting.error_codes.filters.medium">Medium</span></span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e5001.res">Verify your linked bank/card details. Contact your bank if the issue
+                                            continues.</td>
+                                    </tr>
+                                    <tr data-severity="low">
+                                        <td><span class="ctr-error-code">E5002</span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e5002.desc">Withdrawal Processing Delay</td>
+                                        <td><span class="ctr-severity low"><i class="fa fa-circle"
+                                                     style="font-size:6px;"></i> <span data-i18n="troubleshooting.error_codes.filters.low">Low</span></span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e5002.res">Withdrawals may take 1-3 business days. No action needed unless it exceeds 5
+                                            days.</td>
+                                    </tr>
+                                    <tr data-severity="critical">
+                                        <td><span class="ctr-error-code">E9999</span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e9999.desc">Internal Server Error</td>
+                                        <td><span class="ctr-severity critical"><i class="fa fa-circle"
+                                                     style="font-size:6px;"></i> <span data-i18n="troubleshooting.error_codes.filters.critical">Critical</span></span></td>
+                                        <td data-i18n="troubleshooting.error_codes.e9999.res">An unexpected error occurred. Restart the app and retry. If persists,
+                                            contact support.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="ctr-callout info" style="margin-top:20px;">
+                            <span class="ctr-callout-icon"><i class="fa fa-info-circle"></i></span>
+                            <span data-i18n="troubleshooting.error_codes.callout">You can find your error code by tapping the error message in the app. The code appears
+                                at the bottom of the error dialog. Include this code when contacting support for faster
+                                resolution.</span>
+                        </div>
+                    </section>
+                    <!-- Contact Support Section -->
+                    <section class="ctr-section" id="contact-support">
+                        <h2 class="ctr-section-title" data-i18n="troubleshooting.contact_support.title">Contact Support</h2>
+                        <p class="ctr-section-desc" data-i18n="troubleshooting.contact_support.desc">If you can't resolve your issue using the guides above, our support
+                            team is here to help.</p>
+                        <div class="ctr-support-grid">
+                            <div class="ctr-support-card" onclick="load_page('feedback_form')" tabindex="0"
+                                role="button" aria-label="Submit a support ticket">
+                                <div class="ctr-support-card-icon">
+                                    <i class="fa fa-headset"></i>
+                                </div>
+                                <h4 data-i18n="troubleshooting.contact_support.ticket.title">Support Ticket</h4>
+                                <p data-i18n="troubleshooting.contact_support.ticket.desc">Submit a detailed support request and get a response within 24 hours.</p>
+                                <span class="ctr-support-card-link"><span data-i18n="troubleshooting.contact_support.ticket.link">Submit Ticket</span> <i
+                                        class="fa fa-arrow-right"></i></span>
+                            </div>
+                            <div class="ctr-support-card" tabindex="0" role="button" aria-label="Email support">
+                                <div class="ctr-support-card-icon">
+                                    <i class="fa fa-envelope"></i>
+                                </div>
+                                <h4 data-i18n="troubleshooting.contact_support.email.title">Email Us</h4>
+                                <p data-i18n="troubleshooting.contact_support.email.desc">Send an email to our support team for complex issues or account inquiries.</p>
+                                <span class="ctr-support-card-link"><span data-i18n="troubleshooting.contact_support.email.link">support@mpaynetwork.com</span> <i
+                                        class="fa fa-arrow-right"></i></span>
+                            </div>
+                            <div class="ctr-support-card" tabindex="0" role="button" aria-label="In-app help">
+                                <div class="ctr-support-card-icon">
+                                    <i class="fa fa-comments"></i>
+                                </div>
+                                <h4 data-i18n="troubleshooting.contact_support.chat.title">In-App Chat</h4>
+                                <p data-i18n="troubleshooting.contact_support.chat.desc">Use the built-in chat feature for real-time assistance during business hours.</p>
+                                <span class="ctr-support-card-link"><span data-i18n="troubleshooting.contact_support.chat.link">Open in App</span> <i class="fa fa-arrow-right"></i></span>
+                            </div>
+                        </div>
+                        <div class="ctr-callout success" style="margin-top:16px;">
+                            <span class="ctr-callout-icon"><i class="fa fa-lightbulb"></i></span>
+                            <div>
+                                <strong data-i18n="troubleshooting.contact_support.checklist_title">Before contacting support, please have the following ready:</strong>
+                                <ul style="margin:8px 0 0;padding-left:20px;">
+                                    <li data-i18n="troubleshooting.contact_support.check1">Your registered email address or phone number</li>
+                                    <li data-i18n="troubleshooting.contact_support.check2">Error code (if applicable)</li>
+                                    <li data-i18n="troubleshooting.contact_support.check3">Transaction ID (for payment issues)</li>
+                                    <li data-i18n="troubleshooting.contact_support.check4">Device model and OS version</li>
+                                    <li data-i18n="troubleshooting.contact_support.check5">App version (found in Settings → About)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+               </section>
+                    <!-- FAQ Section -->
+                    <section class="ctr-section" id="faq">
+                        <h2 class="ctr-section-title" data-i18n="troubleshooting.faq.title">Frequently Asked Questions</h2>
+                        <p class="ctr-section-desc" data-i18n="troubleshooting.faq.desc">Quick answers to the most common questions about the Consumer
+                            Wallet.</p>
+                        <div class="ctr-faq-item">
+                            <div class="ctr-faq-question" tabindex="0" role="button" aria-expanded="false">
+                                <span data-i18n="troubleshooting.faq.q1">How do I reset my wallet PIN?</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </div>
+                            <div class="ctr-faq-answer" aria-hidden="true" data-i18n="troubleshooting.faq.a1">
+                                <p>Go to <strong>Settings → Security → Change PIN</strong>. You'll need to verify your
+                                    identity using your registered email or phone number first. Enter your current PIN
+                                    (or use the "Forgot PIN" option), then set a new 6-digit PIN.</p>
+                                <p>If you've forgotten your PIN entirely, tap "Forgot PIN" on the login screen and
+                                    follow the recovery steps. You'll receive a verification code via SMS or email.</p>
+                            </div>
+                        </div>
+                        <div class="ctr-faq-item">
+                            <div class="ctr-faq-question" tabindex="0" role="button" aria-expanded="false">
+                                <span data-i18n="troubleshooting.faq.q2">Can I use MPay Wallet on multiple devices?</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </div>
+                            <div class="ctr-faq-answer" aria-hidden="true" data-i18n="troubleshooting.faq.a2">
+                                <p>For security purposes, your MPay Consumer Wallet can only be active on one device at
+                                    a time. If you log in on a new device, your previous session will be automatically
+                                    ended.</p>
+                                <p>To switch devices, simply install the app on your new device, log in with your
+                                    credentials, and verify your identity. All your data will sync automatically.</p>
+                            </div>
+                        </div>
+                        <div class="ctr-faq-item">
+                            <div class="ctr-faq-question" tabindex="0" role="button" aria-expanded="false">
+                                <span data-i18n="troubleshooting.faq.q3">What are the daily transaction limits?</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </div>
+                            <div class="ctr-faq-answer" aria-hidden="true" data-i18n="troubleshooting.faq.a3">
+                                <p>Transaction limits depend on your verification level:</p>
+                                <ul style="padding-left:20px;margin:8px 0;">
+                                    <li>
+                                        <strong>Basic (unverified):</strong> $100/day, $500/month
+                                    </li>
+                                    <li>
+                                        <strong>Verified (KYC complete):</strong> $5,000/day, $25,000/month
+                                    </li>
+                                    <li>
+                                        <strong>Premium:</strong> $25,000/day, $100,000/month
+                                    </li>
+                                </ul>
+                                <p>You can check your current limits and verification level in <strong>Settings →
+                                        Account → Limits</strong>.</p>
+                            </div>
+                        </div>
+                        <div class="ctr-faq-item">
+                            <div class="ctr-faq-question" tabindex="0" role="button" aria-expanded="false">
+                                <span data-i18n="troubleshooting.faq.q4">How long do refunds take to process?</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </div>
+                            <div class="ctr-faq-answer" aria-hidden="true" data-i18n="troubleshooting.faq.a4">
+                                <p>Refunds initiated by merchants typically appear in your wallet within 1-3 business
+                                    days. You'll receive a push notification when the refund is credited. For refunds to
+                                    your linked bank account, allow an additional 3-5 business days.</p>
+                                <p>You can track refund status in <strong>Activity → Transaction History</strong> —
+                                    refunded transactions are marked with a green "Refunded" badge.</p>
+                            </div>
+                        </div>
+                        <div class="ctr-faq-item">
+                            <div class="ctr-faq-question" tabindex="0" role="button" aria-expanded="false">
+                                <span data-i18n="troubleshooting.faq.q5">Why is my account showing "Under Review"?</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </div>
+                            <div class="ctr-faq-answer" aria-hidden="true" data-i18n="troubleshooting.faq.a5">
+                                <p>Account reviews are triggered automatically by our security system when unusual
+                                    activity is detected. This may happen if:</p>
+                                <ul style="padding-left:20px;margin:8px 0;">
+                                    <li>Multiple failed login attempts</li>
+                                    <li>Large or unusual transaction patterns</li>
+                                    <li>Login from a new location or device</li>
+                                    <li>Incomplete KYC verification</li>
+                                </ul>
+                                <p>Reviews typically complete within 24-48 hours. During review, you can still view your
+                                    balance and history, but transactions may be temporarily restricted. Contact support
+                                    if the review takes longer than expected.</p>
+                            </div>
+                        </div>
+                        <div class="ctr-faq-item">
+                            <div class="ctr-faq-question" tabindex="0" role="button" aria-expanded="false">
+                                <span data-i18n="troubleshooting.faq.q6">How do I delete my account permanently?</span>
+                                <i class="fa fa-chevron-down"></i>
+                            </div>
+                            <div class="ctr-faq-answer" aria-hidden="true" data-i18n="troubleshooting.faq.a6">
+                                <p>To delete your account, go to <strong>Settings → Account → Delete Account</strong>.
+                                    Before deletion, you must:</p>
+                                <ul style="padding-left:20px;margin:8px 0;">
+                                    <li>Withdraw all remaining balance to your bank account</li>
+                                    <li>Ensure no pending transactions exist</li>
+                                    <li>Confirm your identity via email/phone verification</li>
+                                </ul>
+                                <p>Account deletion is permanent and cannot be undone. Your transaction history will be
+                                    retained for 7 years as required by financial regulations, but your personal profile
+                                    will be anonymized.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Prev / Next Navigation -->
+                    <div class="ctr-prev-next" id="ctr_prev_next">
+                        <div class="ctr-nav-card" onclick="load_page('consumer_settings')" tabindex="0" role="link"
+                            aria-label="Previous: Settings & Security">
+                            <span class="ctr-nav-label"><i class="fa fa-arrow-left"></i> <span data-i18n="troubleshooting.pagination.prev">Previous</span></span>
+                            <span class="ctr-nav-title" data-i18n="troubleshooting.pagination.prev_title">Settings & Security</span>
+                        </div>
+                        <div class="ctr-nav-card next" onclick="load_page('consumer_docs_home')" tabindex="0"
+                            role="link" aria-label="Next: Consumer Docs Home">
+                            <span class="ctr-nav-label"><span data-i18n="troubleshooting.pagination.next">Back to Overview</span> <i class="fa fa-arrow-right"></i></span>
+                            <span class="ctr-nav-title" data-i18n="troubleshooting.pagination.next_title">Consumer Docs Home</span>
+                        </div>
+                    </div>
+                </main>
+                <!-- Table of Contents -->
+                <aside class="ctr-toc" aria-label="Table of contents">
+                    <p class="ctr-toc-title" data-i18n="troubleshooting.toc.title">On This Page</p>
+                    <ul class="ctr-toc-list">
+                        <li>
+                            <a href="#common-issues" class="ctr-toc-link active" data-i18n="troubleshooting.toc.issues">Common Issues</a>
+                        </li>
+                        <li>
+                            <a href="#error-codes" class="ctr-toc-link" data-i18n="troubleshooting.toc.errors">Error Codes Reference</a>
+                        </li>
+                        <li>
+                            <a href="#contact-support" class="ctr-toc-link" data-i18n="troubleshooting.toc.support">Contact Support</a>
+                        </li>
+                        <li>
+                            <a href="#faq" class="ctr-toc-link" data-i18n="troubleshooting.toc.faq">FAQ</a>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </div>
+    <div id="docFooter"></div>
+    <script src="assets/js/i18n.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.I18n) {
+                window.I18n.init();
+            }
+        });
+    </script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/consumer_troubleshooting.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+
+</html>

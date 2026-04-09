@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchant - NFC Payments</title>
+    <link href="css/theme.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/merchant_nfc_payments.css">
+    <style>
+        /* Basic reset for preview consistency */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Site Header -->
+    <header class="modern-header" id="consumerHeader">
+    </header>
+    <div class="merchant-nfc-page">
+        <!-- Skip to content -->
+        <a href="#mnfc-main-content" class="sr-only"
+            style="position:absolute;left:-9999px;top:0;z-index:999;background:#2563eb;color:#fff;padding:8px 16px;font-size:14px;">Skip
+            to main content</a>
+        <!-- Sidebar Overlay -->
+
+        <div class="docs-layout">
+            <!-- Mobile sidebar toggle -->
+            <button class="cgs-sidebar-toggle" id="cgsSidebarToggle" aria-label="Toggle navigation menu"
+                aria-expanded="false">
+                <i class="fa fa-bars"></i>
+            </button>
+            <!-- Sidebar overlay -->
+            <div class="cgs-sidebar-overlay" id="cgsSidebarOverlay"></div>
+            <!-- Sidebar -->
+            <div id="merchantSidebar">
+
+            </div>
+            <!-- Main Content Area -->
+            <div class="docs-main">
+                <div class="docs-content" id="mnfc-main-content">
+                    <!-- Breadcrumb -->
+                    <nav class="breadcrumb" id="mnfc_breadcrumb" aria-label="Breadcrumb">
+                        <a onclick="load_page('index')">Docs</a>
+                        <span class="separator"><i class="fa fa-chevron-right"></i></span>
+                        <a onclick="load_page('merchant_docs_home')">Merchant</a>
+                        <span class="separator"><i class="fa fa-chevron-right"></i></span>
+                        <span class="current">NFC Payments</span>
+                    </nav>
+                    <!-- Page Title -->
+                    <h1 class="page-title" id="mnfc_title">NFC Tap-to-Pay Payments</h1>
+                    <p class="page-subtitle">Accept contactless payments instantly using NFC technology. Customers
+                        simply tap their phone or card on your device to complete a transaction — fast, secure, and
+                        convenient.</p>
+                    <!-- NFC Hero Visual -->
+                    <div class="nfc-hero-visual">
+                        <div class="nfc-animation-container">
+                            <div class="nfc-icon-center">
+                                <i class="fa fa-wifi"></i>
+                            </div>
+                            <div class="nfc-wave"></div>
+                            <div class="nfc-wave"></div>
+                            <div class="nfc-wave"></div>
+                        </div>
+                        <div class="nfc-hero-text">
+                            <h3>Contactless Payment Made Simple</h3>
+                            <p>MPay's NFC payment system lets you accept tap payments in under 2 seconds. No card
+                                readers needed — your smartphone is all you need.</p>
+                        </div>
+                    </div>
+                    <!-- Section: Setting Up NFC -->
+                    <section class="doc-section" id="mnfc_content_setup">
+                        <h2 id="setting-up-nfc">Setting Up NFC</h2>
+                        <p>Before you can accept NFC payments, you need to enable NFC on your device and configure the
+                            MPay Merchant app to accept contactless payments.</p>
+                        <h3 id="enable-nfc-device">Enable NFC on Your Device</h3>
+                        <div class="callout info">
+                            <div class="callout-icon">
+                                <i class="fa fa-info-circle"></i>
+                            </div>
+                            <div class="callout-content">
+                                <strong>Prerequisite</strong>
+                                <p>Your device must have built-in NFC hardware. Check the <a
+                                        href="#compatible-devices">Compatible Devices</a> section below to confirm your
+                                    device is supported.</p>
+                            </div>
+                        </div>
+                        <h4>Android Devices</h4>
+                        <div class="steps">
+                            <div class="step" data-step="1">
+                                <div class="step-title">Open Device Settings</div>
+                                <div class="step-desc">Navigate to <strong>Settings</strong> on your Android device. You
+                                    can find it in the app drawer or by swiping down on the notification shade.
+                                </div>
+                            </div>
+                            <div class="step" data-step="2">
+                                <div class="step-title">Find NFC Settings</div>
+                                <div class="step-desc">Go to <strong>Connected Devices</strong> → <strong>Connection
+                                        Preferences</strong> → <strong>NFC</strong>. On some devices, search for "NFC"
+                                    in Settings.
+                                </div>
+                            </div>
+                            <div class="step" data-step="3">
+                                <div class="step-title">Enable NFC</div>
+                                <div class="step-desc">Toggle NFC to <strong>ON</strong>. Also enable <strong>Android
+                                        Beam</strong> or <strong>Tap & Pay</strong> if available on your device.
+                                </div>
+                            </div>
+                            <div class="step" data-step="4">
+                                <div class="step-title">Verify NFC is Active</div>
+                                <div class="step-desc">An NFC icon should appear in your status bar. You can also check
+                                    by opening the MPay app — the NFC indicator will turn green.</div>
+                            </div>
+                        </div>
+                        <h4>iOS Devices</h4>
+                        <div class="steps">
+                            <div class="step" data-step="1">
+                                <div class="step-title">Check iOS Version</div>
+                                <div class="step-desc">Ensure your iPhone is running <strong>iOS 14.0 or later</strong>.
+                                    Go to <strong>Settings</strong> → <strong>General</strong> → <strong>About</strong>
+                                    to verify.
+                                </div>
+                            </div>
+                            <div class="step" data-step="2">
+                                <div class="step-title">NFC is Always On</div>
+                                <div class="step-desc">On iPhone 7 and later, NFC is enabled by default and cannot be
+                                    manually toggled. Simply ensure MPay has permission to use NFC capabilities.</div>
+                            </div>
+                            <div class="step" data-step="3">
+                                <div class="step-title">Grant NFC Permission</div>
+                                <div class="step-desc">When first using NFC in the MPay app, you'll see a permission
+                                    prompt. Tap <strong>Allow</strong> to enable NFC reader mode.
+                                </div>
+                            </div>
+                        </div>
+                        <h3 id="configure-nfc-mpay">Configure NFC in MPay</h3>
+                        <p>Once NFC is enabled on your device, configure the MPay Merchant app to accept NFC payments:
+                        </p>
+                        <div class="steps">
+                            <div class="step" data-step="1">
+                                <div class="step-title">Open MPay Merchant App</div>
+                                <div class="step-desc">Launch the MPay Merchant app and navigate to
+                                    <strong>Settings</strong> → <strong>Payment Methods</strong>.
+                                </div>
+                            </div>
+                            <div class="step" data-step="2">
+                                <div class="step-title">Enable NFC Payments</div>
+                                <div class="step-desc">Toggle <strong>Accept NFC Payments</strong> to ON. The app will
+                                    verify that your device supports NFC and it's properly configured.
+                                </div>
+                            </div>
+                            <div class="step" data-step="3">
+                                <div class="step-title">Set Default Amount (Optional)</div>
+                                <div class="step-desc">You can set a default payment amount for quick NFC transactions.
+                                    Go to <strong>NFC Settings</strong> → <strong>Default Amount</strong> and enter your
+                                    preferred value.
+                                </div>
+                            </div>
+                            <div class="step" data-step="4">
+                                <div class="step-title">Test NFC Connection</div>
+                                <div class="step-desc">Tap the <strong>Test NFC</strong> button. The app will attempt to
+                                    read any nearby NFC device. If successful, you'll see a green confirmation.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span class="code-lang">Settings Path</span>
+                                <button class="code-copy-btn" aria-label="Copy to clipboard">
+                                    <i class="fa fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="code-body">
+                                <code>MPay Merchant App → Settings → Payment Methods → NFC Payments → Enable</code>
+                            </div>
+                        </div>
+                        <div class="callout success">
+                            <div class="callout-icon">
+                                <i class="fa fa-check-circle"></i>
+                            </div>
+                            <div class="callout-content">
+                                <strong>You're all set!</strong>
+                                <p>Once NFC is enabled and configured, you'll see a green NFC indicator on your
+                                    dashboard. You're ready to accept contactless payments.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <hr class="section-divider">
+                    <!-- Section: Accepting NFC Payments -->
+                    <section class="doc-section" id="mnfc_content_accepting">
+                        <h2 id="accepting-nfc-payments">Accepting NFC Payments</h2>
+                        <p>Follow these steps to accept an NFC tap-to-pay transaction from a customer.</p>
+                        <!-- NFC Flow Illustration -->
+                        <div class="nfc-flow-illustration">
+                            <div class="flow-step">
+                                <div class="flow-step-icon">
+                                    <i class="fa fa-dollar-sign"></i>
+                                </div>
+                                <div class="flow-step-label">Enter Amount</div>
+                            </div>
+                            <div class="flow-arrow">
+                                <i class="fa fa-arrow-right"></i>
+                            </div>
+                            <div class="flow-step">
+                                <div class="flow-step-icon">
+                                    <i class="fa fa-wifi"></i>
+                                </div>
+                                <div class="flow-step-label">Tap to Pay</div>
+                            </div>
+                            <div class="flow-arrow">
+                                <i class="fa fa-arrow-right"></i>
+                            </div>
+                            <div class="flow-step">
+                                <div class="flow-step-icon">
+                                    <i class="fa fa-shield-alt"></i>
+                                </div>
+                                <div class="flow-step-label">Authenticate</div>
+                            </div>
+                            <div class="flow-arrow">
+                                <i class="fa fa-arrow-right"></i>
+                            </div>
+                            <div class="flow-step">
+                                <div class="flow-step-icon">
+                                    <i class="fa fa-check-circle"></i>
+                                </div>
+                                <div class="flow-step-label">Confirmed</div>
+                            </div>
+                        </div>
+                        <h3 id="step-by-step-accepting">Step-by-Step Guide</h3>
+                        <div class="steps">
+                            <div class="step" data-step="1">
+                                <div class="step-title">Open the Payment Screen</div>
+                                <div class="step-desc">From the MPay Merchant dashboard, tap the <strong>Accept
+                                        Payment</strong> button or the <strong>"+" icon</strong> at the bottom of the
+                                    screen.
+                                </div>
+                            </div>
+                            <div class="step" data-step="2">
+                                <div class="step-title">Select NFC as Payment Method</div>
+                                <div class="step-desc">Choose <strong>NFC / Tap to Pay</strong> from the payment method
+                                    options. If NFC is your default, this may already be selected.
+                                </div>
+                            </div>
+                            <div class="step" data-step="3">
+                                <div class="step-title">Enter the Payment Amount</div>
+                                <div class="step-desc">Use the numeric keypad to enter the payment amount. You can also
+                                    add an optional description or reference number for the transaction.</div>
+                            </div>
+                            <div class="step" data-step="4">
+                                <div class="step-title">Tap "Ready to Accept"</div>
+                                <div class="step-desc">Tap the <strong>Ready to Accept</strong> button. Your device will
+                                    enter NFC listening mode and display an animated NFC indicator showing it's ready.
+                                </div>
+                            </div>
+                            <div class="step" data-step="5">
+                                <div class="step-title">Customer Taps Their Device</div>
+                                <div class="step-desc">Ask the customer to tap their phone (with MPay Consumer app open)
+                                    or NFC-enabled card on the back of your device. Hold devices together for 1-2
+                                    seconds.</div>
+                            </div>
+                            <div class="step" data-step="6">
+                                <div class="step-title">Payment Confirmation</div>
+                                <div class="step-desc">Both devices will vibrate and show a success animation. A receipt
+                                    is generated instantly and can be shared via SMS, email, or printed.</div>
+                            </div>
+                        </div>
+                        <div class="callout warning">
+                            <div class="callout-icon">
+                                <i class="fa fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="callout-content">
+                                <strong>Important Tip</strong>
+                                <p>Ensure there are no thick phone cases or metal objects between the two devices. NFC
+                                    requires close proximity (within 4 cm) for a reliable connection.</p>
+                            </div>
+                        </div>
+                        <h3 id="transaction-limits">Transaction Limits</h3>
+                        <p>NFC payments have the following limits based on your merchant verification level:</p>
+                        <ul>
+                            <li>
+                                <strong>Basic Verification:</strong> Up to <code class="inline">$500</code> per
+                                transaction, <code class="inline">$2,000</code> daily limit
+                            </li>
+                            <li>
+                                <strong>Standard Verification:</strong> Up to <code class="inline">$2,500</code> per
+                                transaction, <code class="inline">$10,000</code> daily limit
+                            </li>
+                            <li>
+                                <strong>Premium Verification:</strong> Up to <code class="inline">$10,000</code> per
+                                transaction, <code class="inline">$50,000</code> daily limit
+                            </li>
+                        </ul>
+                        <p>To increase your limits, complete additional <a onclick="load_page('merchant_account_setup')"
+                                style="color:#2563eb;cursor:pointer;text-decoration:underline;">verification steps</a>.
+                        </p>
+                    </section>
+                    <hr class="section-divider">
+                    <!-- Section: Compatible Devices -->
+                    <section class="doc-section" id="mnfc_content_devices">
+                        <h2 id="compatible-devices">Compatible Devices</h2>
+                        <p>NFC payments require a device with NFC hardware. Below are the supported devices and their
+                            compatibility levels.</p>
+                        <h3 id="device-requirements">Minimum Requirements</h3>
+                        <div class="requirements-grid">
+                            <div class="requirement-card">
+                                <div class="requirement-icon">
+                                    <i class="fa fa-mobile-alt"></i>
+                                </div>
+                                <div class="requirement-info">
+                                    <h4>NFC Hardware</h4>
+                                    <p>Device must have built-in NFC chip. External NFC adapters are not supported.</p>
+                                </div>
+                            </div>
+                            <div class="requirement-card">
+                                <div class="requirement-icon">
+                                    <i class="fa fa-microchip"></i>
+                                </div>
+                                <div class="requirement-info">
+                                    <h4>Processor</h4>
+                                    <p>ARM-based processor with Secure Element or Host Card Emulation (HCE) support.</p>
+                                </div>
+                            </div>
+                            <div class="requirement-card">
+                                <div class="requirement-icon">
+                                    <i class="fab fa-android"></i>
+                                </div>
+                                <div class="requirement-info">
+                                    <h4>Android 8.0+</h4>
+                                    <p>Android Oreo (API 26) or later with Google Play Services enabled.</p>
+                                </div>
+                            </div>
+                            <div class="requirement-card">
+                                <div class="requirement-icon">
+                                    <i class="fab fa-apple"></i>
+                                </div>
+                                <div class="requirement-info">
+                                    <h4>iOS 14.0+</h4>
+                                    <p>iPhone 7 or later running iOS 14 or newer for Core NFC framework support.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 id="device-list">Supported Device List</h3>
+                        <div class="device-table-wrapper">
+                            <table class="device-table">
+                                <thead>
+                                    <tr>
+                                        <th>Device</th>
+                                        <th>Platform</th>
+                                        <th>NFC Type</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>iPhone 15 / 14 / 13 / 12 Series</td>
+                                        <td>iOS 16+</td>
+                                        <td>Core NFC</td>
+                                        <td><span class="status-badge supported"><i class="fa fa-check-circle"></i>
+                                                Fully Supported</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>iPhone 11 / XS / XR / X</td>
+                                        <td>iOS 14+</td>
+                                        <td>Core NFC</td>
+                                        <td><span class="status-badge supported"><i class="fa fa-check-circle"></i>
+                                                Fully Supported</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>iPhone 8 / 7</td>
+                                        <td>iOS 14+</td>
+                                        <td>Core NFC (Limited)</td>
+                                        <td><span class="status-badge partial"><i class="fa fa-exclamation-circle"></i>
+                                                Partial</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Samsung Galaxy S24 / S23 / S22</td>
+                                        <td>Android 12+</td>
+                                        <td>HCE</td>
+                                        <td><span class="status-badge supported"><i class="fa fa-check-circle"></i>
+                                                Fully Supported</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Samsung Galaxy A54 / A53 / A34</td>
+                                        <td>Android 12+</td>
+                                        <td>HCE</td>
+                                        <td><span class="status-badge supported"><i class="fa fa-check-circle"></i>
+                                                Fully Supported</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Google Pixel 8 / 7 / 6</td>
+                                        <td>Android 13+</td>
+                                        <td>HCE</td>
+                                        <td><span class="status-badge supported"><i class="fa fa-check-circle"></i>
+                                                Fully Supported</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>OnePlus 12 / 11 / 10</td>
+                                        <td>Android 12+</td>
+                                        <td>HCE</td>
+                                        <td><span class="status-badge supported"><i class="fa fa-check-circle"></i>
+                                                Fully Supported</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Xiaomi 14 / 13 / Redmi Note 12</td>
+                                        <td>Android 11+</td>
+                                        <td>HCE</td>
+                                        <td><span class="status-badge partial"><i class="fa fa-exclamation-circle"></i>
+                                                Partial</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Devices without NFC hardware</td>
+                                        <td>Any</td>
+                                        <td>N/A</td>
+                                        <td><span class="status-badge unsupported"><i class="fa fa-times-circle"></i>
+                                                Not Supported</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="callout info">
+                            <div class="callout-icon">
+                                <i class="fa fa-info-circle"></i>
+                            </div>
+                            <div class="callout-content">
+                                <strong>"Partial" Support Explained</strong>
+                                <p>Devices with partial support can read NFC tags and process payments but may have
+                                    limitations with background NFC reading or slower response times. All core payment
+                                    features work correctly.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <hr class="section-divider">
+                    <!-- Section: NFC Troubleshooting -->
+                    <section class="doc-section" id="mnfc_content_troubleshoot">
+                        <h2 id="nfc-troubleshooting">NFC Troubleshooting</h2>
+                        <p>If you're experiencing issues with NFC payments, review these common problems and solutions.
+                        </p>
+                        <div class="trouble-item open">
+                            <button class="trouble-header" aria-expanded="true" aria-controls="trouble-1-body"
+                                role="button" tabindex="0">
+                                <span class="trouble-icon"><i class="fa fa-exclamation"></i></span>
+                                <span>NFC not detected — "No NFC hardware found"</span>
+                                <span class="trouble-chevron"><i class="fa fa-chevron-down"></i></span>
+                            </button>
+                            <div class="trouble-body" id="trouble-1-body">
+                                <p>This error means the app cannot find NFC hardware on your device. Try these steps:
+                                </p>
+                                <ul>
+                                    <li>Verify your device model is in the <a href="#compatible-devices">compatible
+                                            devices list</a>
+                                    </li>
+                                    <li>Go to <strong>Settings → Connected Devices → NFC</strong> and ensure it's turned
+                                        ON
+                                    </li>
+                                    <li>Restart your device and try again</li>
+                                    <li>Check if any device management software is blocking NFC access</li>
+                                    <li>If using a phone case, try removing it — some cases block NFC signals</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="trouble-item">
+                            <button class="trouble-header" aria-expanded="false" aria-controls="trouble-2-body"
+                                role="button" tabindex="0">
+                                <span class="trouble-icon"><i class="fa fa-exclamation"></i></span>
+                                <span>Payment fails with "Connection timeout"</span>
+                                <span class="trouble-chevron"><i class="fa fa-chevron-down"></i></span>
+                            </button>
+                            <div class="trouble-body" id="trouble-2-body">
+                                <p>A connection timeout means the NFC handshake took too long. Common causes:</p>
+                                <ul>
+                                    <li>
+                                        <strong>Distance:</strong> Devices must be within 4 cm (about 1.5 inches) of
+                                        each other
+                                    </li>
+                                    <li>
+                                        <strong>Alignment:</strong> Align the NFC chips — usually located in the
+                                        center-back of the phone
+                                    </li>
+                                    <li>
+                                        <strong>Hold steady:</strong> Keep both devices still for at least 2 seconds
+                                        during the tap
+                                    </li>
+                                    <li>
+                                        <strong>Interference:</strong> Move away from other NFC-enabled devices or metal
+                                        surfaces
+                                    </li>
+                                    <li>
+                                        <strong>Network:</strong> Ensure you have a stable internet connection (Wi-Fi or
+                                        cellular data)
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="trouble-item">
+                            <button class="trouble-header" aria-expanded="false" aria-controls="trouble-3-body"
+                                role="button" tabindex="0">
+                                <span class="trouble-icon"><i class="fa fa-exclamation"></i></span>
+                                <span>Frequent disconnections during NFC payment</span>
+                                <span class="trouble-chevron"><i class="fa fa-chevron-down"></i></span>
+                            </button>
+                            <div class="trouble-body" id="trouble-3-body">
+                                <p>If NFC connections drop frequently:</p>
+                                <ul>
+                                    <li>Ensure both devices have NFC enabled and are running the latest MPay app version
+                                    </li>
+                                    <li>Disable battery optimization for the MPay app: <strong>Settings → Battery → MPay
+                                            → Don't optimize</strong>
+                                    </li>
+                                    <li>Remove any thick or metallic phone cases</li>
+                                    <li>Update your device firmware/OS to the latest version</li>
+                                    <li>Try restarting the NFC service: toggle NFC off and back on in device settings
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="trouble-item">
+                            <button class="trouble-header" aria-expanded="false" aria-controls="trouble-4-body"
+                                role="button" tabindex="0">
+                                <span class="trouble-icon"><i class="fa fa-exclamation"></i></span>
+                                <span>"Payment declined" error on NFC tap</span>
+                                <span class="trouble-chevron"><i class="fa fa-chevron-down"></i></span>
+                            </button>
+                            <div class="trouble-body" id="trouble-4-body">
+                                <p>A declined payment may be due to:</p>
+                                <ul>
+                                    <li>
+                                        <strong>Insufficient funds:</strong> The customer's wallet balance may be too
+                                        low
+                                    </li>
+                                    <li>
+                                        <strong>Transaction limit exceeded:</strong> Daily or per-transaction limits may
+                                        have been reached
+                                    </li>
+                                    <li>
+                                        <strong>Account restrictions:</strong> The customer's account may be locked or
+                                        unverified
+                                    </li>
+                                    <li>
+                                        <strong>Security hold:</strong> Unusual activity may have triggered a security
+                                        review
+                                    </li>
+                                    <li>Contact <strong>support@mpaynetwork.com</strong> if the issue persists with
+                                        error code
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="trouble-item">
+                            <button class="trouble-header" aria-expanded="false" aria-controls="trouble-5-body"
+                                role="button" tabindex="0">
+                                <span class="trouble-icon"><i class="fa fa-exclamation"></i></span>
+                                <span>NFC works but is very slow</span>
+                                <span class="trouble-chevron"><i class="fa fa-chevron-down"></i></span>
+                            </button>
+                            <div class="trouble-body" id="trouble-5-body">
+                                <p>Slow NFC transactions can be improved by:</p>
+                                <ul>
+                                    <li>Closing unnecessary background apps to free up device resources</li>
+                                    <li>Ensuring a strong internet connection (switch to Wi-Fi if cellular is weak)</li>
+                                    <li>Updating the MPay app to the latest version for performance improvements</li>
+                                    <li>Clearing the MPay app cache: <strong>Settings → Apps → MPay → Clear
+                                            Cache</strong>
+                                    </li>
+                                    <li>Ensuring your device's NFC antenna area is clean and undamaged</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="callout danger">
+                            <div class="callout-icon">
+                                <i class="fa fa-exclamation-circle"></i>
+                            </div>
+                            <div class="callout-content">
+                                <strong>Still having issues?</strong>
+                                <p>If none of the above solutions work, visit our <a
+                                        onclick="load_page('merchant_troubleshooting')"
+                                        style="color:#dc2626;cursor:pointer;text-decoration:underline;">comprehensive
+                                        troubleshooting guide</a> or contact support at
+                                    <strong>support@mpaynetwork.com</strong> with your device model and error code.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <hr class="section-divider">
+                    <!-- Section: FAQ -->
+                    <section class="doc-section" id="mnfc_faq_accordion">
+                        <h2 id="faq">Frequently Asked Questions</h2>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" role="button" tabindex="0">
+                                <span class="faq-q-icon">Q</span>
+                                <span>Can I accept NFC payments without an internet connection?</span>
+                                <span class="faq-chevron"><i class="fa fa-chevron-down"></i></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>NFC payments require an active internet connection to verify the transaction in
+                                    real-time. However, MPay supports an <strong>offline queue</strong> mode — if you
+                                    briefly lose connection, the transaction is queued and processed automatically when
+                                    connectivity is restored. Offline queue supports up to 5 pending transactions.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" role="button" tabindex="0">
+                                <span class="faq-q-icon">Q</span>
+                                <span>What's the maximum distance for NFC tap-to-pay?</span>
+                                <span class="faq-chevron"><i class="fa fa-chevron-down"></i></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>NFC operates at a maximum range of <strong>4 cm (approximately 1.5 inches)</strong>.
+                                    For the best experience, we recommend touching the devices back-to-back. The short
+                                    range is a security feature that prevents unauthorized interception of payment data.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" role="button" tabindex="0">
+                                <span class="faq-q-icon">Q</span>
+                                <span>Is NFC payment secure? Can someone intercept my transaction?</span>
+                                <span class="faq-chevron"><i class="fa fa-chevron-down"></i></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Yes, NFC payments with MPay are extremely secure. All transactions are encrypted
+                                    using <strong>AES-256 encryption</strong> and secured with <strong>tokenized payment
+                                        data</strong>. The 4 cm range makes interception virtually impossible.
+                                    Additionally, each transaction requires explicit confirmation from both the merchant
+                                    and customer devices. No sensitive financial data is transmitted during the NFC
+                                    handshake.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" role="button" tabindex="0">
+                                <span class="faq-q-icon">Q</span>
+                                <span>Can customers pay with contactless bank cards via NFC?</span>
+                                <span class="faq-chevron"><i class="fa fa-chevron-down"></i></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Currently, MPay NFC payments work between the <strong>MPay Merchant app</strong> and
+                                    the <strong>MPay Consumer app</strong> (or Consumer's linked digital wallet). Direct
+                                    contactless bank card acceptance (Visa/Mastercard contactless) is planned for a
+                                    future release. Check our <a onclick="load_page('changelog_page')"
+                                        style="color:#2563eb;cursor:pointer;text-decoration:underline;">changelog</a>
+                                    for updates.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" role="button" tabindex="0">
+                                <span class="faq-q-icon">Q</span>
+                                <span>Do I need a special reader or accessory for NFC payments?</span>
+                                <span class="faq-chevron"><i class="fa fa-chevron-down"></i></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>No! That's the beauty of MPay's NFC solution. Your <strong>smartphone is the payment
+                                        terminal</strong>. No additional hardware, card readers, or accessories are
+                                    needed. Just ensure your phone has built-in NFC capability and you're good to go.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" role="button" tabindex="0">
+                                <span class="faq-q-icon">Q</span>
+                                <span>How fast is an NFC payment compared to QR code?</span>
+                                <span class="faq-chevron"><i class="fa fa-chevron-down"></i></span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>NFC payments are typically <strong>faster than QR code payments</strong>. An NFC
+                                    tap-to-pay transaction completes in <strong>1-3 seconds</strong>, while a QR code
+                                    payment takes around <strong>5-8 seconds</strong> (including scanning time). NFC is
+                                    ideal for high-volume, quick-service environments like cafes and transit.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Prev / Next Navigation -->
+                    <nav class="prev-next-nav" id="mnfc_prev_next" aria-label="Page navigation">
+                        <div class="pn-card prev" onclick="load_page('merchant_qr_payments')" role="link" tabindex="0"
+                            aria-label="Previous page: QR Code Payments">
+                            <span class="pn-label"><i class="fa fa-arrow-left"></i> Previous</span>
+                            <span class="pn-title">QR Code Payments</span>
+                        </div>
+                        <div class="pn-card next" onclick="load_page('merchant_transactions')" role="link" tabindex="0"
+                            aria-label="Next page: Transaction Management">
+                            <span class="pn-label">Next <i class="fa fa-arrow-right"></i></span>
+                            <span class="pn-title">Transaction Management</span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- Table of Contents -->
+            <aside class="docs-toc" role="navigation" aria-label="Table of contents">
+                <div class="toc-title">On This Page</div>
+                <ul class="toc-list">
+                    <li>
+                        <a href="#setting-up-nfc" class="active">Setting Up NFC</a>
+                    </li>
+                    <li>
+                        <a href="#enable-nfc-device" class="toc-sub">Enable NFC on Device</a>
+                    </li>
+                    <li>
+                        <a href="#configure-nfc-mpay" class="toc-sub">Configure in MPay</a>
+                    </li>
+                    <li>
+                        <a href="#accepting-nfc-payments">Accepting NFC Payments</a>
+                    </li>
+                    <li>
+                        <a href="#step-by-step-accepting" class="toc-sub">Step-by-Step Guide</a>
+                    </li>
+                    <li>
+                        <a href="#transaction-limits" class="toc-sub">Transaction Limits</a>
+                    </li>
+                    <li>
+                        <a href="#compatible-devices">Compatible Devices</a>
+                    </li>
+                    <li>
+                        <a href="#device-requirements" class="toc-sub">Requirements</a>
+                    </li>
+                    <li>
+                        <a href="#device-list" class="toc-sub">Device List</a>
+                    </li>
+                    <li>
+                        <a href="#nfc-troubleshooting">NFC Troubleshooting</a>
+                    </li>
+                    <li>
+                        <a href="#faq">FAQ</a>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+        <!-- Scroll to Top Button -->
+        <button class="scroll-top-btn" id="mnfc-scroll-top" aria-label="Scroll to top">
+            <i class="fa fa-arrow-up"></i>
+        </button>
+    </div>
+    <div id="docFooter"></div>
+    <script src="assets/js/i18n.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.I18n) {
+                window.I18n.init();
+            }
+        });
+    </script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/merchant_nfc_payments.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+
+</html>

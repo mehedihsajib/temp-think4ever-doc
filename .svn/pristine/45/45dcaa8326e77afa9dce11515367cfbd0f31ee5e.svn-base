@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchant - Transaction Management</title>
+    <link href="css/theme.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/merchant_transactions.css">
+    <style>
+        /* Basic reset for preview consistency */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="merchant-transactions-page">
+        <!-- Skip to content -->
+        <a href="#main-content" class="sr-only"
+            style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;"
+            onfocus="this.style.position='static';this.style.width='auto';this.style.height='auto';"
+            onblur="this.style.position='absolute';this.style.width='1px';this.style.height='1px';">
+            Skip to main content </a>
+        <!-- Site Header -->
+        <header class="modern-header" id="consumerHeader">
+        </header>
+        <div class="docs-layout">
+            <!-- Mobile sidebar toggle -->
+            <button class="cgs-sidebar-toggle" id="cgsSidebarToggle" aria-label="Toggle navigation menu"
+                aria-expanded="false">
+                <i class="fa fa-bars"></i>
+            </button>
+            <!-- Sidebar overlay -->
+            <div class="cgs-sidebar-overlay" id="cgsSidebarOverlay"></div>
+            <!-- Sidebar -->
+            <div id="merchantSidebar">
+
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="docs-main">
+                <main id="main-content" class="docs-content">
+                    <!-- Mobile sidebar toggle -->
+                    <button class="mobile-sidebar-toggle" aria-label="Toggle navigation sidebar">
+                        <i class="fa fa-bars" aria-hidden="true"></i> Menu
+                    </button>
+                    <!-- Breadcrumb -->
+                    <nav id="mt_breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+                        <a onclick="load_page('index')">Docs</a>
+                        <span class="breadcrumb-separator"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                        <a onclick="load_page('merchant_docs_home')">Merchant</a>
+                        <span class="breadcrumb-separator"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                        <span class="breadcrumb-current">Transaction Management</span>
+                    </nav>
+                    <!-- Page Title -->
+                    <h1 id="mt_title" class="doc-page-title">Transaction Management</h1>
+                    <p class="doc-page-subtitle">
+                        Learn how to view, filter, and manage all your transactions. Export reports for accounting,
+                        process refunds, and understand settlement cycles. </p>
+                    <!-- Section: Transaction History -->
+                    <section id="mt_content_history" class="doc-section" aria-labelledby="section-history">
+                        <h2 id="section-history" class="doc-section-title">Transaction History</h2>
+                        <p>
+                            The Transaction History screen provides a comprehensive view of all payments received
+                            through your MPay Merchant Wallet. You can access it from the main dashboard by tapping the
+                            <strong>Transactions</strong> tab. </p>
+                        <h3>Accessing Your Transactions</h3>
+                        <ol class="steps">
+                            <li class="step">
+                                <span class="step-number">1</span>
+                                <div class="step-title">Open the mPay Merchant App</div>
+                                <div class="step-content">Launch the app and sign in if you haven't already.</div>
+                            </li>
+                            <li class="step">
+                                <span class="step-number">2</span>
+                                <div class="step-title">Navigate to Transaction History</div>
+                                <div class="step-content">Tap the <code>History</code> icon in the bottom navigation
+                                    bar.
+                                </div>
+                            </li>
+                            <li class="step">
+                                <span class="step-number">3</span>
+                                <div class="step-title">Browse Your History</div>
+                                <div class="step-content">Transactions are listed in reverse chronological order with
+                                    the most recent appearing first.</div>
+                            </li>
+                        </ol>
+                        <h3>Filtering & Searching</h3>
+                        <p>
+                            Use the filter bar at the top of the transaction list to narrow down results. You can
+                            combine multiple filters simultaneously. </p>
+                        <!-- Filter bar mockup -->
+                        <div class="filter-bar-mockup">
+                            <div class="filter-item">
+                                <i class="fa fa-calendar" aria-hidden="true"></i>
+                                <span class="filter-item-label">Date Range:</span>
+                                <span>Last 30 days</span>
+                            </div>
+                            <div class="filter-item">
+                                <i class="fa fa-filter" aria-hidden="true"></i>
+                                <span class="filter-item-label">Status:</span>
+                                <span>All</span>
+                            </div>
+                            <div class="filter-item">
+                                <i class="fa fa-credit-card" aria-hidden="true"></i>
+                                <span class="filter-item-label">Type:</span>
+                                <span>Scan to Pay</span>
+                            </div>
+                            <div class="filter-item">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                                <span>Search by ID, amount...</span>
+                            </div>
+                            <button class="filter-btn" aria-label="Apply filters">
+                                <i class="fa fa-check" aria-hidden="true"></i> Apply
+                            </button>
+                        </div>
+                        <p>Available filter options include:</p>
+                        <ul>
+                            <li>
+                                <strong>Date Range</strong> — Select predefined ranges (Today, This Week, This Month) or
+                                set a custom date range.
+                            </li>
+                            <li>
+                                <strong>Transaction Status</strong> — Filter by Completed, Pending, Failed, or Refunded.
+                            </li>
+                            <li>
+                                <strong>Payment Type</strong> — QR Code, NFC, or All.
+                            </li>
+                            <li>
+                                <strong>Amount Range</strong> — Set minimum and maximum amount thresholds.
+                            </li>
+                            <li>
+                                <strong>Search</strong> — Search by transaction ID, customer name, or reference number.
+                            </li>
+                        </ul>
+                        <div class="callout callout-info">
+                            <div class="callout-icon">
+                                <i class="fa fa-lightbulb" aria-hidden="true"></i>
+                            </div>
+                            <div class="callout-content">
+                                <strong>Pro Tip</strong>
+                                You can save frequently used filter combinations as presets. Tap the bookmark icon in
+                                the filter bar to save your current filters.
+
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Section: Transaction Details -->
+                    <section id="mt_content_details" class="doc-section" aria-labelledby="section-details">
+                        <h2 id="section-details" class="doc-section-title">Transaction Details</h2>
+                        <p>
+                            Tap any transaction in your history list to view its complete details. Each transaction
+                            record contains comprehensive information about the payment. </p>
+                        <!-- Transaction card mockup -->
+                        <div class="txn-card-mockup" aria-label="Example transaction detail card">
+                            <div class="txn-card-header">
+                                <span class="txn-card-id">#TXN-2025-00847</span>
+                                <span class="status-badge status-completed"><i class="fa fa-check-circle"
+                                        aria-hidden="true"></i> Completed</span>
+                            </div>
+                            <div style="text-align:center;padding:12px 0;">
+                                <div class="txn-card-amount">XCG 124.50</div>
+                            </div>
+                            <div class="txn-card-row">
+                                <span class="txn-card-label">Transaction Type</span>
+                                <span class="txn-card-value"><i class="fa fa-qrcode" aria-hidden="true"
+                                        style="margin-right:4px;"></i> QR Code</span>
+                            </div>
+                            <div class="txn-card-row">
+                                <span class="txn-card-label">Customer Name</span>
+                                <span class="txn-card-value">John D.</span>
+                            </div>
+                            <div class="txn-card-row">
+                                <span class="txn-card-label">Date & Time</span>
+                                <span class="txn-card-value">Mar 11, 2025 · 2:34 PM</span>
+                            </div>
+                            <div class="txn-card-row">
+                                <span class="txn-card-label">Fee</span>
+                                <span class="txn-card-value">&nbsp;XCG1.87</span>
+                            </div>
+                            <div class="txn-card-row">
+                                <span class="txn-card-label">Net Amount</span>
+                                <span class="txn-card-value" style="font-weight:700;color:#1e3a8a;">XCG 122.63</span>
+                            </div>
+                        </div>
+                        <h3>Transaction Detail Fields</h3>
+                        <p>The full transaction detail view includes the following information:</p>
+                        <ul>
+                            <li>
+                                <strong>Transaction ID</strong> — Unique identifier for the transaction (format:
+                                <code>TXN-YYYY-XXXXX</code>)
+                            </li>
+                            <li>
+                                <strong>Amount</strong> — The gross payment amount
+                            </li>
+                            <li>
+                                <strong>Fee</strong> — Processing fee deducted from the transaction
+                            </li>
+                            <li>
+                                <strong>Net Amount</strong> — Amount you receive after fees
+                            </li>
+                            <li>
+                                <strong>Payment Type</strong>&nbsp;&#8212; Scan to Pay, Pay Bills etc
+                            </li>
+                            <li>
+                                <strong>Customer Info</strong> — Customer name (if available) and wallet reference
+                            </li>
+                            <li>
+                                <strong>Timestamp</strong> — Exact date and time of the transaction
+                            </li>
+                            <li>
+                                <strong>Reference Number</strong> &#8212; For Bill Payments
+                            </li>
+                        </ul>
+                    </section>
+                    <!-- Section: Refunds & Reversals -->
+                    <section id="mt_content_refunds" class="doc-section" aria-labelledby="section-refunds">
+                        <div class="callout callout-warning">
+                            <div class="callout-icon">
+                                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                            </div>
+                            <div class="callout-content">
+                                <strong>Important</strong>
+                                Refunds cannot be reversed once initiated. The original processing fee is not refunded.
+                                Double-check the amount before confirming.
+                            </div>
+                        </div>
+                        <div class="callout callout-danger">
+                            <div class="callout-icon">
+                                <i class="fa fa-ban" aria-hidden="true"></i>
+                            </div>
+                            <div class="callout-content">
+                                <strong>Refund Not Available?</strong>
+                                Refunds are not available for transactions older than 90 days, transactions that are
+                                still in "Pending" status, or transactions that have already been fully refunded.
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Section: Exporting Reports 
+                        <section id="mt_content_export" class="doc-section" aria-labelledby="section-export">
+                            <h2 id="section-export" class="doc-section-title">Exporting Reports</h2>
+                            <p>
+            Export your transaction data for accounting, tax preparation, or record-keeping purposes. MPay supports multiple export formats to fit your workflow. </p>
+                            <h3>Available Export Formats</h3>
+                            <div class="export-formats">
+                                <div class="export-format-card">
+                                    <div class="export-icon">
+                                        <i class="fa fa-file-csv" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="export-format-name">CSV</div>
+                                    <div class="export-format-desc">Comma-separated values for spreadsheet applications like Excel or Google Sheets.</div>
+                                </div>
+                                <div class="export-format-card">
+                                    <div class="export-icon">
+                                        <i class="fa fa-file-pdf" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="export-format-name">PDF</div>
+                                    <div class="export-format-desc">Formatted report suitable for printing or sharing with your accountant.</div>
+                                </div>
+                                <div class="export-format-card">
+                                    <div class="export-icon">
+                                        <i class="fa fa-file-excel" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="export-format-name">XLSX</div>
+                                    <div class="export-format-desc">Native Excel format with pre-formatted columns and summary calculations.</div>
+                                </div>
+                            </div>
+                            <h3>How to Export</h3>
+                            <ol class="steps">
+                                <li class="step">
+                                    <span class="step-number">1</span>
+                                    <div class="step-title">Go to Transactions</div>
+                                    <div class="step-content">Open the Transactions screen and apply any filters you want (date range, status, etc.).</div>
+                                </li>
+                                <li class="step">
+                                    <span class="step-number">2</span>
+                                    <div class="step-title">Tap the Export Button</div>
+                                    <div class="step-content">Tap the <code><i class="fa fa-download" aria-hidden="true"></i> Export</code> button in the top-right corner of the transaction list.
+                                    </div>
+                                </li>
+                                <li class="step">
+                                    <span class="step-number">3</span>
+                                    <div class="step-title">Choose Format</div>
+                                    <div class="step-content">Select your preferred format (CSV, PDF, or XLSX).</div>
+                                </li>
+                                <li class="step">
+                                    <span class="step-number">4</span>
+                                    <div class="step-title">Download or Share</div>
+                                    <div class="step-content">The file will be generated and you can download it or share it directly via email.</div>
+                                </li>
+                            </ol>
+                            <div class="callout callout-info">
+                                <div class="callout-icon">
+                                    <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                </div>
+                                <div class="callout-content">
+                                    <strong>Export Limits</strong>
+                                    You can export up to 10,000 transactions per file. For larger datasets, use the date range filter to break exports into smaller batches.
+                                </div>
+                            </div>
+                        </section> -->
+                    <!-- Section: Settlement Reports
+                        <section id="mt_content_settlements" class="doc-section" aria-labelledby="section-settlements">
+                            <h2 id="section-settlements" class="doc-section-title">Settlement Reports</h2>
+                            <p>
+            Settlements are the process by which your transaction funds are transferred to your linked bank account. Understanding the settlement cycle helps you manage cash flow effectively. </p>
+                            <h3>Settlement Cycle</h3>
+                            <p>The standard settlement process follows this timeline:</p>  -->
+                    <!-- Settlement timeline visual 
+                            <div class="settlement-timeline" role="img" aria-label="Settlement process timeline">
+                                <div class="settlement-step">
+                                    <div class="settlement-dot">
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    </div>
+                                    <div>
+                                        <div class="settlement-label">Transaction</div>
+                                        <div class="settlement-desc">Payment received</div>
+                                    </div>
+                                </div>
+                                <div class="settlement-step">
+                                    <div class="settlement-dot">
+                                        <i class="fa fa-hourglass-half" aria-hidden="true"></i>
+                                    </div>
+                                    <div>
+                                        <div class="settlement-label">Processing</div>
+                                        <div class="settlement-desc">T+0 to T+1</div>
+                                    </div>
+                                </div>
+                                <div class="settlement-step">
+                                    <div class="settlement-dot">
+                                        <i class="fa fa-layer-group" aria-hidden="true"></i>
+                                    </div>
+                                    <div>
+                                        <div class="settlement-label">Batching</div>
+                                        <div class="settlement-desc">End of day</div>
+                                    </div>
+                                </div>
+                                <div class="settlement-step">
+                                    <div class="settlement-dot">
+                                        <i class="fa fa-university" aria-hidden="true"></i>
+                                    </div>
+                                    <div>
+                                        <div class="settlement-label">Settlement</div>
+                                        <div class="settlement-desc">T+1 to T+2</div>
+                                    </div>
+                                </div>
+                                <div class="settlement-step">
+                                    <div class="settlement-dot" style="background:#22c55e;">
+                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                    </div>
+                                    <div>
+                                        <div class="settlement-label">Deposited</div>
+                                        <div class="settlement-desc">In your bank</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h3>Settlement Schedule</h3>
+                            <div class="doc-table-container">
+                                <table class="doc-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Plan</th>
+                                            <th>Settlement Frequency</th>
+                                            <th>Cutoff Time</th>
+                                            <th>Deposit Timing</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Standard</strong></td>
+                                            <td>Daily</td>
+                                            <td>11:59 PM local</td>
+                                            <td>Next business day (T+1)</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Express</strong></td>
+                                            <td>Same day</td>
+                                            <td>3:00 PM local</td>
+                                            <td>Same day (T+0)</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Weekly</strong></td>
+                                            <td>Weekly</td>
+                                            <td>Sunday 11:59 PM</td>
+                                            <td>Monday (T+1)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h3>Viewing Settlement Reports</h3>
+                            <p>Settlement reports provide a summary of all transactions included in a specific settlement batch.</p>
+                            <ol>
+                                <li>Navigate to <code>Transactions → Settlements</code> tab.
+                                </li>
+                                <li>Select a settlement batch by date to view its details.</li>
+                                <li>Review the batch summary: total transactions, gross amount, total fees, and net deposit.</li>
+                                <li>Tap <strong>Download Report</strong> to export the settlement details.
+                                </li>
+                            </ol>
+                            <div class="callout callout-success">
+                                <div class="callout-icon">
+                                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                </div>
+                                <div class="callout-content">
+                                    <strong>Reconciliation Tip</strong>
+                                    Match each settlement report with your bank statement deposit to ensure all funds have been received correctly. The settlement ID appears in your bank transaction description.
+                                </div>
+                            </div>
+                        </section> -->
+                    <!-- FAQ Section -->
+                    <section id="mt_faq_accordion" class="doc-section faq-section" aria-labelledby="section-faq">
+                        <h2 id="section-faq" class="doc-section-title">Frequently Asked Questions</h2>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
+                                <span>How far back can I view my transaction history?</span>
+                                <i class="fa fa-chevron-down faq-chevron" aria-hidden="true"></i>
+                            </button>
+                            <div id="faq-1" class="faq-answer" role="region">
+                                <div class="faq-answer-inner">
+                                    You can view up to 24 months of transaction history directly in the app. For older
+                                    records, contact our support team to request archived data exports.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
+                                <span>Why is my transaction still showing as "Pending"?</span>
+                                <i class="fa fa-chevron-down faq-chevron" aria-hidden="true"></i>
+                            </button>
+                            <div id="faq-2" class="faq-answer" role="region">
+                                <div class="faq-answer-inner">
+                                    Transactions typically move from Pending to Completed within 1-5 minutes. If a
+                                    transaction remains pending for more than 30 minutes, it may indicate a processing
+                                    issue. Check your internet connection and try refreshing. If the issue persists,
+                                    contact support with the transaction ID.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
+                                <span>Can I refund a transaction after the 90-day window?</span>
+                                <i class="fa fa-chevron-down faq-chevron" aria-hidden="true"></i>
+                            </button>
+                            <div id="faq-3" class="faq-answer" role="region">
+                                <div class="faq-answer-inner">
+                                    In-app refunds are limited to 90 days. For refunds beyond this period, you'll need
+                                    to contact our support team who can process exceptional refunds on a case-by-case
+                                    basis. Additional verification may be required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
+                                <span>How long does it take for a refund to appear in the customer's account?</span>
+                                <i class="fa fa-chevron-down faq-chevron" aria-hidden="true"></i>
+                            </button>
+                            <div id="faq-4" class="faq-answer" role="region">
+                                <div class="faq-answer-inner">
+                                    Refunds to MPay wallets are typically instant. Bank account refunds may take 1-3
+                                    business days depending on the customer's bank. The customer will receive a
+                                    notification once the refund is processed on our end.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
+                                <span>Can I export transactions through an API?</span>
+                                <i class="fa fa-chevron-down faq-chevron" aria-hidden="true"></i>
+                            </button>
+                            <div id="faq-5" class="faq-answer" role="region">
+                                <div class="faq-answer-inner">
+                                    Yes! MPay provides a REST API for programmatic access to transaction data. Visit our
+                                    <strong>API Documentation</strong> for details on available endpoints,
+                                    authentication, and rate limits. API access requires a Business or Enterprise plan.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false" aria-controls="faq-6">
+                                <span>Why is there a difference between the transaction amount and my settlement
+                                    deposit?</span>
+                                <i class="fa fa-chevron-down faq-chevron" aria-hidden="true"></i>
+                            </button>
+                            <div id="faq-6" class="faq-answer" role="region">
+                                <div class="faq-answer-inner">
+                                    The difference is typically due to processing fees, which are deducted before
+                                    settlement. The Net Amount shown in each transaction reflects the amount after fees.
+                                    Your settlement report provides a detailed breakdown of gross amounts, fees, and net
+                                    deposits for each batch.
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Prev/Next Pagination -->
+                    <nav id="mt_prev_next" class="doc-pagination" aria-label="Page navigation">
+                        <a class="doc-pagination-link prev" onclick="load_page('merchant_nfc_payments')"> <span
+                                class="doc-pagination-label"> <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                                Previous </span> <span class="doc-pagination-title">NFC Payments</span> </a>
+                        <a class="doc-pagination-link next" onclick="load_page('merchant_settings')"> <span
+                                class="doc-pagination-label">
+                                Next <i class="fa fa-arrow-right" aria-hidden="true"></i> </span> <span
+                                class="doc-pagination-title">Settings & Configuration</span> </a>
+                    </nav>
+                </main>
+                <!-- Table of Contents -->
+                <aside class="docs-toc" aria-label="Table of contents">
+                    <div class="toc-title">On This Page</div>
+                    <ul class="toc-list">
+                        <li>
+                            <a class="toc-link active" href="#section-history">Transaction History</a>
+                        </li>
+                        <li>
+                            <a class="toc-link" href="#section-details">Transaction Details</a>
+                        </li>
+                        <li>
+                            <a class="toc-link" href="#section-refunds">Refunds & Reversals</a>
+                        </li>
+                        <li>
+                            <a class="toc-link" href="#section-export">Exporting Reports</a>
+                        </li>
+                        <li>
+                            <a class="toc-link" href="#section-settlements">Settlement Reports</a>
+                        </li>
+                        <li>
+                            <a class="toc-link" href="#section-faq">FAQ</a>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+        <!-- Scroll to top button -->
+        <button class="scroll-to-top" aria-label="Scroll to top">
+            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+        </button>
+    </div>
+    <div id="docFooter"></div>
+    <script src="assets/js/i18n.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.I18n) {
+                window.I18n.init();
+            }
+        });
+    </script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/merchant_transactions.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+
+</html>

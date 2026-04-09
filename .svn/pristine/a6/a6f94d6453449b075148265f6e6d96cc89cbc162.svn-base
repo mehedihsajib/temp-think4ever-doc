@@ -1,0 +1,1268 @@
+{
+  "meta": {
+    "lang_name": "French",
+    "lang_code": "fr"
+  },
+  "nav": {
+    "overview": "Aperçu",
+    "merchant": "Marchand",
+    "consumer": "Particulier",
+    "blog": "Blog",
+    "changelog": "Journal des modifications",
+    "search_placeholder": "Rechercher dans la documentation...",
+    "dashboard": "Tableau de bord"
+  },
+  "sidebar": {
+    "book_title": "Doc Portefeuille Particulier",
+    "section_getting_started": "Premiers pas",
+    "section_using_wallet": "Utiliser votre portefeuille",
+    "section_settings": "Paramètres et assistance",
+    "section_other_docs": "Autres documents",
+    "link_overview": "Aperçu",
+    "link_getting_started": "Premiers pas",
+    "link_account_setup": "Configuration du compte",
+    "link_making_payments": "Effectuer des paiements",
+    "link_wallet_management": "Gestion du portefeuille",
+    "link_p2p_transfers": "Transferts P2P",
+    "link_settings_security": "Paramètres et sécurité",
+    "link_troubleshooting": "Dépannage",
+    "link_merchant_docs": "Doc Portefeuille Marchand",
+    "link_changelog": "Journal des modifications"
+  },
+  "breadcrumb": {
+    "docs": "Docs",
+    "consumer_wallet": "Portefeuille Particulier",
+    "getting_started": "Premiers pas"
+  },
+  "page": {
+    "title": "Premiers pas avec le Portefeuille Particulier",
+    "subtitle": "Tout ce dont vous avez besoin pour télécharger, installer et configurer votre portefeuille mPay. Suivez ce guide étape par étape pour commencer à effectuer des paiements rapides et sécurisés en quelques minutes.",
+    "time_badge": "Temps de configuration estimé : 5 minutes"
+  },
+  "toc": {
+    "on_this_page": "Sur cette page",
+    "requirements": "Configuration requise",
+    "download": "Téléchargement et installation",
+    "install_steps": "Étapes d'installation",
+    "signup": "S'inscrire",
+    "first_login": "Première connexion et configuration",
+    "profile_setup": "Configuration du profil",
+    "wallet_setup": "Configuration du portefeuille",
+    "screenshots": "Aperçu de la configuration",
+    "faq": "FAQ"
+  },
+  "requirements": {
+    "heading": "Configuration requise",
+    "intro": "Avant de télécharger, assurez-vous que votre appareil répond aux exigences minimales :",
+    "ios": {
+      "name": "iOS",
+      "desc": "iOS 15.0 ou version ultérieure. Compatible avec l'iPhone 8 et les modèles plus récents. Environ 85 Mo de stockage requis."
+    },
+    "android": {
+      "name": "Android",
+      "desc": "Android 10.0 (API niveau 29) ou version ultérieure. Environ 60 Mo de stockage requis."
+    },
+    "nfc_callout_title": "Exigence NFC",
+    "nfc_callout_body": "Pour la fonctionnalité de paiement sans contact (tap-to-pay), votre appareil doit disposer du matériel NFC. La plupart des smartphones modernes (iPhone 7+ et Android avec NFC) prennent en charge cette fonctionnalité."
+  },
+  "download": {
+    "heading": "Téléchargement et installation",
+    "intro": "Le portefeuille mPay est disponible gratuitement sur les deux principaux magasins d'applications. Choisissez votre plateforme ci-dessous :",
+    "ios_btn": "App Store",
+    "ios_btn_pre": "Télécharger dans l'",
+    "android_btn": "Google Play",
+    "android_btn_pre": "Disponible sur",
+    "install_steps_heading": "Étapes d'installation",
+    "steps": {
+      "1": {
+        "title": "Ouvrez votre magasin d'applications",
+        "content": "Ouvrez l'<strong>App Store</strong> (iOS) ou le <strong>Google Play Store</strong> (Android) sur votre appareil."
+      },
+      "2": {
+        "title": "Recherchez mPay Wallet",
+        "content": "Tapez <code>mPay Consumer Wallet</code> dans la barre de recherche. Recherchez l'application officielle avec le logo mPay et \"mPay Network\" comme développeur."
+      },
+      "3": {
+        "title": "Téléchargez et installez",
+        "content": "Appuyez sur <strong>Obtenir</strong> (iOS) ou <strong>Installer</strong> (Android). L'application se téléchargera et s'installera automatiquement. Vous devrez peut-être vous authentifier avec votre mot de passe, Face ID ou empreinte digitale."
+      },
+      "4": {
+        "title": "Ouvrez l'application",
+        "content": "Une fois installée, appuyez sur <strong>Ouvrir</strong> ou trouvez l'icône mPay sur votre écran d'accueil. L'application se lancera sur l'écran de bienvenue."
+      }
+    },
+    "verify_callout_title": "Vérifiez le développeur",
+    "verify_callout_body": "Vérifiez toujours que le développeur est répertorié comme \"mPay Network\" avant de télécharger. N'installez pas d'applications provenant de sources non officielles."
+  },
+  "signup": {
+    "heading": "S'inscrire",
+    "intro": "La création de votre compte mPay est rapide et simple. Vous aurez besoin d'un numéro de téléphone et d'une adresse e-mail valides.",
+    "steps": {
+      "1": {
+        "title": "Êtes-vous déjà client mPay ?",
+        "content": "Sur l'écran de bienvenue, il vous sera demandé si vous <strong>\"Êtes déjà client ?\"</strong>. Pour les nouveaux clients, appuyez sur le bouton <strong>NON</strong>. Si vous avez déjà un compte, sélectionnez le bouton <strong>OUI</strong>."
+      },
+      "2": {
+        "title": "Formulaire d'inscription",
+        "content": "L'utilisateur est redirigé vers le formulaire <strong>Inscription d'un nouveau particulier</strong>."
+      },
+      "3": {
+        "title": "Informations requises",
+        "content": "L'<strong>Identifiant utilisateur</strong>, l'<strong>Adresse e-mail</strong> et le <strong>Numéro de mobile</strong> doivent être uniques pour chaque client.",
+        "info_callout": "Lors de la soumission de l'inscription, le système vérifie si ces informations sont déjà utilisées par des clients mPay existants."
+      },
+      "4": {
+        "title": "Remplissez tous les champs",
+        "intro": "Saisissez vos informations de base :",
+        "field_name": "<strong>Prénom et Nom</strong> — Tels qu'ils apparaissent sur votre pièce d'identité",
+        "field_email": "<strong>Adresse e-mail</strong> — Une adresse valide pour les notifications et la récupération",
+        "field_mobile": "<strong>Numéro de mobile</strong> — Doit être un numéro valide pour recevoir le SMS de vérification",
+        "field_referral": "<strong>Code de parrainage</strong> — Champ optionnel si vous avez été parrainé."
+      },
+      "5": {
+        "title": "Acceptez les conditions",
+        "intro": "Deux cases doivent être cochées avant de poursuivre :",
+        "check_terms": "Accepter les <strong>Conditions Générales</strong>",
+        "check_security": "Politique de sécurité stipulant qu'un seul utilisateur est autorisé par appareil : <em>\"J'accepte que l'inscription d'un nouveau client supprime le compte existant lié à cet appareil.\"</em>"
+      },
+      "6": {
+        "title": "Option d'identification sur l'App Marchand",
+        "intro": "Choisissez si votre e-mail et votre numéro de mobile peuvent être utilisés pour vous identifier sur l'application Marchand.",
+        "check_terms": "Accepter les <strong>Conditions Générales</strong>",
+        "check_security": "Politique de sécurité (un seul utilisateur par appareil)."
+      }
+    },
+    "success_callout_title": "Compte créé !",
+    "success_callout_body": "Dès que l'écran de confirmation apparaît, votre compte est prêt. Vous pouvez maintenant configurer votre profil et votre portefeuille."
+  },
+  "first_login": {
+    "heading": "Première connexion et configuration",
+    "intro": "Après avoir créé votre compte, vous serez guidé par un assistant de configuration initiale :",
+    "profile_heading": "Configuration du profil",
+    "profile_steps": {
+      "1": {
+        "title": "Ajoutez vos informations personnelles",
+        "content": "Saisissez votre nom complet tel qu'il figure sur votre pièce d'identité officielle. Ajoutez éventuellement une photo de profil pour être identifié facilement lors des transferts P2P."
+      },
+      "2": {
+        "title": "Configurez la sécurité",
+        "content": "Choisissez votre méthode d'authentification préférée :",
+        "pin": "<strong>Code PIN</strong> — Définissez un code à 6 chiffres pour un accès rapide",
+        "biometric": "<strong>Biométrie</strong> — Activez Face ID ou l'authentification par empreinte digitale",
+        "recommend": "Nous recommandons d'activer les deux pour une sécurité maximale"
+      },
+      "3": {
+        "title": "Activez les notifications",
+        "content_pre": "Autorisez les notifications push pour recevoir des confirmations de paiement instantanées, des alertes de sécurité et des offres. Vous pourrez les personnaliser plus tard dans les ",
+        "settings_link": "Paramètres",
+        "content_post": "."
+      }
+    },
+    "wallet_heading": "Configuration du portefeuille",
+    "wallet_steps": {
+      "1": {
+        "title": "Personnalisez votre profil",
+        "content": "Définissez une photo de profil pour votre compte de portefeuille."
+      },
+      "2": {
+        "title": "Gestion des préférences de notification",
+        "content": "Vous pouvez activer ou désactiver les options de notification selon vos préférences."
+      },
+      "3": {
+        "title": "Terminez la configuration",
+        "content": "Appuyez sur <strong>Terminer la configuration</strong> pour accéder à votre tableau de bord. Vous êtes prêt à payer !"
+      }
+    },
+    "tip_callout_title": "Conseil : Vérifiez votre identité tôt",
+    "tip_callout_body": "Le processus de vérification peut prendre de 24 à 48 heures. Il est conseillé de compléter votre profil dès que possible pour accéder à toutes les fonctionnalités."
+  },
+  "screenshots": {
+    "heading": "Aperçu de la configuration",
+    "intro": "Voici un aperçu visuel des principaux écrans lors de la configuration :",
+    "step1_label": "Écran de bienvenue",
+    "step1_sublabel": "Créer un compte ou se connecter",
+    "step1_caption": "Étape 1 : Écran de bienvenue",
+    "step2_label": "Vérification du téléphone",
+    "step2_sublabel": "Saisir le code OTP",
+    "step2_caption": "Étape 2 : Vérifier le téléphone",
+    "step3_label": "Sécurité",
+    "step3_sublabel": "PIN et Biométrie",
+    "step3_caption": "Étape 3 : Configurer la sécurité",
+    "step4_label": "Infos du profil",
+    "step4_sublabel": "Nom et Photo",
+    "step4_caption": "Étape 4 : Votre profil",
+    "step5_label": "Configuration du portefeuille",
+    "step5_sublabel": "Devise et Financement",
+    "step5_caption": "Étape 5 : Configurer le portefeuille",
+    "step6_label": "C'est prêt !",
+    "step6_sublabel": "Tableau de bord prêt",
+    "step6_caption": "Étape 6 : Prêt à partir !"
+  },
+  "faq": {
+    "heading": "Foire Aux Questions",
+    "q1": "Puis-je utiliser mPay Wallet sur plusieurs appareils ?",
+    "a1": "Oui, vous pouvez vous connecter sur plusieurs appareils. Cependant, pour des raisons de sécurité, <b>un seul appareil peut être actif à la fois</b>. Se connecter sur un nouvel appareil déconnectera automatiquement le précédent.",
+    "q2": "Que faire si je ne reçois pas le code OTP ?",
+    "a2": "Si vous ne recevez pas l'OTP dans les 60 secondes, appuyez sur \"Renvoyer le code\". Assurez-vous d'avoir du réseau. Si le problème persiste, essayez l'option \"Appelez-moi\" pour une vérification vocale.",
+    "q3": "Y a-t-il un dépôt minimum pour commencer ?",
+    "a3": "Non, aucun dépôt minimum n'est requis. Vous pouvez créer votre compte et explorer l'application sans fonds. Vous créditerez votre portefeuille au moment de payer.",
+    "q4": "Puis-je changer mon numéro après l'inscription ?",
+    "a4": "Oui, via la page Paramètres. Vous devrez vérifier votre identité et le nouveau numéro par OTP. Une période de carence de 24h peut s'appliquer pour certaines fonctions.",
+    "q5": "Que faire si l'application plante pendant la configuration ?",
+    "a5": "Réouvrez-la simplement. Votre progression est sauvegardée à chaque étape. Si cela persiste, videz le cache (Android) ou réinstallez l'application (iOS).",
+    "q6": "Mes données sont-elles sécurisées lors de l'inscription ?",
+    "a6": "Absolument. Toutes les données sont cryptées via le standard TLS 1.3. Vos informations sont stockées de manière sécurisée et jamais partagées sans votre consentement."
+  },
+  "pagination": {
+    "previous": "Précédent",
+    "next": "Suivant",
+    "prev_title": "Accueil Documentation",
+    "next_title": "Configuration et Vérification"
+  },
+  "lang_switcher": {
+    "label": "Langue"
+  },
+  "merchant_sidebar": {
+    "title": "Portefeuille Marchand",
+    "section_getting_started": "Premiers pas",
+    "overview": "Aperçu",
+    "getting_started": "Premiers pas",
+    "account_setup": "Configuration et Vérification",
+    "section_payments": "Paiements",
+    "qr_payments": "Paiements par Code QR",
+    "nfc_payments": "Paiements NFC",
+    "section_management": "Gestion",
+    "transaction_management": "Gestion des transactions",
+    "settings_config": "Paramètres et Configuration",
+    "section_support": "Assistance",
+    "troubleshooting": "Dépannage"
+  },
+  "home": {
+    "version_banner": "Vous consultez la documentation de la version <span class=\"version-tag\">v3.2.1</span> — la dernière version stable.",
+    "breadcrumb": {
+      "docs": "Docs",
+      "consumer_wallet": "Portefeuille Particulier"
+    },
+    "title": "Documentation Portefeuille Particulier",
+    "overview": {
+      "p1": "Bienvenue dans la documentation du <strong>Portefeuille Particulier MPay Network</strong>. C'est votre solution de paiement mobile tout-en-un, vous permettant de payer rapidement chez les marchands MPay, d'envoyer de l'argent à vos proches et de gérer vos finances facilement.",
+      "p2": "Que ce soit par code QR dans un café, via NFC ou pour envoyer de l'argent à un ami à l'autre bout du pays, nous avons ce qu'il vous faut. Ce guide vous accompagne du téléchargement aux fonctionnalités avancées."
+    },
+    "features": {
+      "heading": "Fonctionnalités clés",
+      "qr": "Paiements par Code QR",
+      "nfc": "Paiement sans contact NFC",
+      "p2p": "Transferts entre particuliers",
+      "wallet": "Rechargement et Retrait",
+      "history": "Historique et Reçus",
+      "security": "Sécurité multicouche",
+      "notifications": "Notifications instantanées",
+      "biometric": "Authentification biométrique"
+    },
+    "quick_start": {
+      "heading": "Démarrage rapide",
+      "intro": "Soyez opérationnel en quelques étapes :",
+      "step1": {
+        "title": "Télécharger et Installer",
+        "description": "Obtenez l'application sur l'App Store ou le Google Play Store."
+      },
+      "step2": {
+        "title": "Créer votre compte",
+        "description": "Inscrivez-vous avec votre numéro et complétez la vérification."
+      },
+      "step3": {
+        "title": "Créditer votre compte",
+        "description": "Ajoutez des fonds par virement, carte ou autres méthodes."
+      },
+      "step4": {
+        "title": "Commencer à payer",
+        "description": "Scannez ou tapez votre téléphone chez n'importe quel marchand MPay."
+      }
+    },
+    "explore": {
+      "heading": "Explorer la documentation",
+      "learn_more": "En savoir plus",
+      "getting_started": {
+        "title": "Premiers pas",
+        "description": "Installation, configuration et exploration de l'interface."
+      },
+      "account_setup": {
+        "title": "Configuration du compte",
+        "description": "Enregistrement, vérification d'identité et personnalisation du profil."
+      },
+      "making_payments": {
+        "title": "Effectuer des paiements",
+        "description": "Apprenez à payer par QR, NFC et autres méthodes."
+      },
+      "wallet_management": {
+        "title": "Gestion du portefeuille",
+        "description": "Gérer le solde, recharger, retirer et voir l'historique."
+      },
+      "p2p_transfers": {
+        "title": "Transferts P2P",
+        "description": "Envoyer et recevoir de l'argent instantanément entre utilisateurs."
+      },
+      "settings_security": {
+        "title": "Paramètres et Sécurité",
+        "description": "Notifications, biométrie et protection du compte."
+      },
+      "troubleshooting": {
+        "title": "Dépannage",
+        "description": "Solutions aux problèmes courants et codes d'erreur."
+      }
+    },
+    "pagination": {
+      "prev": "Précédent",
+      "prev_title": "Accueil Documentation",
+      "next": "Suivant",
+      "next_title": "Premiers pas"
+    }
+  },
+  "account_setup": {
+    "breadcrumb": {
+      "docs": "Docs",
+      "consumer": "Particulier",
+      "account_setup": "Configuration du compte"
+    },
+    "title": "Configuration et Vérification du compte",
+    "subtitle": "Apprenez à enregistrer votre compte, vérifier votre identité et configurer vos préférences.",
+    "registration": {
+      "heading": "Inscription",
+      "intro": "Créer votre compte est rapide. Un numéro de téléphone valide suffit pour commencer.",
+      "wallet_registration": "Enregistrement du portefeuille",
+      "intro_2": "Votre mobile et e-mail servent d'identifiants uniques sur le réseau. Suivez ces étapes :",
+      "steps": {
+        "1": {
+          "title": "Êtes-vous déjà client mPay ?",
+          "content": "Indiquez si vous possédez déjà un compte pour migrer vos données ou cliquez sur <strong>NON</strong> pour un nouveau compte."
+        },
+        "2": {
+          "title": "Formulaire d'inscription",
+          "content": "Remplissez le formulaire <strong>Inscription d'un nouveau particulier</strong>."
+        },
+        "3": {
+          "title": "Informations requises",
+          "content": "L'<strong>ID utilisateur</strong>, l'<strong>E-mail</strong> et le <strong>Mobile</strong> doivent être uniques."
+        },
+        "4": {
+          "title": "Créez votre PIN",
+          "content": "Définissez un code à 6 chiffres pour autoriser vos transactions."
+        },
+        "5": {
+          "title": "Accepter les conditions",
+          "content_pre": "Consultez et acceptez les ",
+          "tos": "Conditions d'utilisation",
+          "privacy": "Politique de confidentialité",
+          "content_mid": " et la ",
+          "content_post": "."
+        },
+        "6": {
+          "title": "Questions de sécurité",
+          "content": "Configurez vos questions pour la récupération du compte."
+        },
+        "7": {
+          "title": "Vérification OTP",
+          "content": "Validez le code reçu par SMS."
+        },
+        "8": {
+          "title": "Configuration du PIN",
+          "content": "Le PIN est obligatoire pour chaque connexion et transaction."
+        },
+        "9": {
+          "title": "Biométrie",
+          "content": "Activez Face ID ou Touch ID pour plus de simplicité."
+        }
+      },
+      "security_tip_title": "Conseil de sécurité",
+      "security_tip_body": "Il est recommandé d'activer à la fois le PIN et la biométrie.",
+      "supported_regions_heading": "Régions supportées",
+      "supported_regions_intro": "Le service est actuellement disponible dans :",
+      "regions": {
+        "curacao": "Curaçao"
+      },
+      "voip_warning_title": "Numéros VoIP non supportés",
+      "voip_warning_body": "Les numéros virtuels (Google Voice, Skype) ne sont pas acceptés."
+    },
+    "verification": {
+      "heading": "Vérification d'identité (KYC)",
+      "intro": "mPay vérifie l'identité pour prévenir la fraude. Voici les différents statuts :",
+      "tiers_heading": "Statuts du compte",
+      "tiers": {
+        "incomplete": {
+          "badge": "Profil incomplet",
+          "title": "Nouvel utilisateur",
+          "f1": "Compte créé",
+          "f2": "Profil à compléter",
+          "f3": "Documents à télécharger",
+          "f4": "Accès limité"
+        },
+        "pending": {
+          "badge": "Non vérifié",
+          "title": "En attente de vérification",
+          "f1": "Profil complété",
+          "f2": "Documents envoyés",
+          "f3": "Statut <strong>En attente</strong>",
+          "f4": "Accès limité",
+          "f5": "Délai : jusqu'à 48h"
+        },
+        "verified": {
+          "badge": "Vérifié",
+          "title": "Profil entièrement vérifié",
+          "f1": "Identité validée",
+          "f2": "Accès complet",
+          "f3": "Gérer le compte librement",
+          "f4": "Envoyer/Recevoir des fonds",
+          "f5": "Analyses avancées"
+        }
+      },
+      "how_to_heading": "Comment vérifier votre identité",
+      "how_to_intro": "Connectez-vous et allez dans <strong>Compléter le profil</strong> pour envoyer vos documents.",
+      "how_to_steps": {
+        "1": {
+          "title": "Détails de l'adresse",
+          "content": "L'adresse doit correspondre à votre pièce d'identité."
+        },
+        "2": {
+          "title": "Pièce d'identité officielle",
+          "content": "Photo claire du passeport, carte d'identité ou permis de conduire."
+        },
+        "3": {
+          "title": "Selfie",
+          "content": "Selfie en direct pour comparaison faciale. Retirez vos lunettes de soleil."
+        },
+        "4": {
+          "title": "Examen",
+          "content": "Délai de 24 à 48 heures. Notification par SMS et e-mail."
+        }
+      },
+      "required_docs_heading": "Documents requis",
+      "table": {
+        "doc": "Document",
+        "consumer": "Particulier",
+        "merchant": "Marchand",
+        "notes": "Notes",
+        "required": "Requis",
+        "optional": "Optionnel",
+        "row1_name": "Pièce d'identité officielle",
+        "row1_notes": "Valide et non expirée",
+        "row2_name": "Selfie",
+        "row2_notes": "Capture en direct uniquement",
+        "row3_name": "Justificatif de domicile",
+        "row3_notes": "Facture ou relevé de moins de 3 mois",
+        "row4_name": "Identifiant fiscal",
+        "row4_notes": "TIN ou équivalent"
+      },
+      "data_secure_title": "Vos données sont protégées",
+      "data_secure_body": "Cryptage de bout en bout. Nous ne stockons pas les images brutes après vérification.",
+      "status_heading": "Vérifier le statut",
+      "status_intro": "Consultez votre statut à tout moment dans l'application :",
+      "status_list": {
+        "1": "Ouvrez mPay et connectez-vous.",
+        "2": "Un message s'affichera selon votre état :"
+      },
+      "status_indicators": "Indicateurs :",
+      "verified_status": "<strong>Vérifié</strong> — Accès total.",
+      "pending_status": "<strong>En attente</strong> — En cours d'examen.",
+      "rejected_status": "<strong>Rejeté</strong> — Problème avec le compte, contactez le support."
+    },
+    "profile": {
+      "heading": "Configuration du profil",
+      "intro": "Personnalisez votre compte pour être reconnu par vos proches et les marchands.",
+      "preview": {
+        "name": "Alex Johnson",
+        "phone": "+1 (555) 012-3456",
+        "status": "Compte vérifié"
+      },
+      "fields_heading": "Champs du profil",
+      "fields": {
+        "name": {
+          "title": "Nom complet",
+          "content": "Nom affiché lors des transactions."
+        },
+        "photo": {
+          "title": "Photo de profil",
+          "content": "Optionnel mais recommandé pour les transferts P2P."
+        },
+        "email": {
+          "title": "E-mail",
+          "content": "Pour les reçus et la récupération."
+        },
+        "language": {
+          "title": "Langue préférée",
+          "content": "Supporte l'anglais, l'espagnol, le français, l'allemand et le portugais."
+        },
+        "qr": {
+          "title": "Code QR de profil",
+          "content": "Pour recevoir de l'argent facilement."
+        },
+        "notifications": {
+          "title": "Préférences de notification",
+          "content": "Alertes push, e-mail et SMS."
+        }
+      },
+      "edit_heading": "Modifier votre profil",
+      "edit_intro": "Pour <b>modifier</b> vos informations :",
+      "edit_steps": {
+        "1": "1. Ouvrez l'application",
+        "2": "2. Appuyez sur l'icône profil (ou Paramètres → Profil)",
+        "3": "3. Appuyez sur \"Modifier\"",
+        "4": "4. Enregistrez les changements"
+      },
+      "phone_change_title": "Changer de numéro nécessite une approbation",
+      "phone_change_body": "Contactez la hotline ou support@mpaynetwork.com.",
+      "security_heading": "Sécurité initiale",
+      "security_intro": "Configurez impérativement :",
+      "security_list": {
+        "biometric": "<strong>Biométrie :</strong> Empreinte ou Face ID.",
+        "pin": "<strong>PIN de transaction :</strong> Ne le partagez jamais."
+      },
+      "never_share_title": "Ne partagez jamais vos codes",
+      "never_share_body": "mPay ne demandera jamais votre PIN ou OTP par téléphone ou e-mail."
+    },
+    "faq": {
+      "heading": "Questions Fréquentes",
+      "q1": "Puis-je m'inscrire avec un numéro étranger ?",
+      "a1": "Oui, si le pays est supporté. Les limites peuvent varier.",
+      "q2": "Combien de temps dure la vérification ?",
+      "a2": "Quelques minutes pour l'automatisée, jusqu'à 48h pour la manuelle.",
+      "q3": "Que se passe-t-il si je suis rejeté ?",
+      "a3": "Vous recevrez le motif précis (photo floue, etc.) pour recommencer.",
+      "q4": "Changer mon nom d'affichage ?",
+      "a4": "Oui, via les paramètres. Le nom légal, lui, nécessite une nouvelle vérification.",
+      "q5": "OTP non reçu ?",
+      "a5": "Attendez 60s, vérifiez le numéro et le réseau, ou consultez le dépannage.",
+      "q6": "Sécurité des données ?",
+      "a6": "Cryptage AES-256 et partenaire KYC certifié SOC 2."
+    },
+    "pagination": {
+      "previous": "Précédent",
+      "next": "Suivant",
+      "prev_title": "Premiers pas",
+      "next_title": "Effectuer des paiements"
+    },
+    "toc": {
+      "title": "Sur cette page",
+      "registration": "Inscription",
+      "phone_registration": "Inscription par téléphone",
+      "supported_regions": "Régions supportées",
+      "identity_verification": "Vérification d'identité",
+      "verification_tiers": "Niveaux de vérification",
+      "how_to_verify": "Comment vérifier",
+      "required_documents": "Documents requis",
+      "checking_status": "Vérifier le statut",
+      "profile_configuration": "Configuration du profil",
+      "profile_fields": "Champs du profil",
+      "editing_profile": "Modifier le profil",
+      "security_setup": "Sécurité",
+      "faq": "FAQ"
+    }
+  },
+  "making_payments": {
+    "breadcrumb": {
+      "docs": "Docs",
+      "consumer": "Particulier",
+      "current": "Effectuer des paiements"
+    },
+    "title": "Effectuer des paiements",
+    "subtitle": "Apprenez à payer rapidement avec mPay. Scanner un QR, montrer le vôtre ou utiliser le NFC : payer n'a jamais été aussi simple.",
+    "method_cards": {
+      "qr": {
+        "title": "Paiements par Code QR",
+        "body": "Scannez ou présentez un code QR chez n'importe quel marchand."
+      },
+      "nfc": {
+        "title": "Paiement sans contact NFC",
+        "body": "Approchez votre téléphone du terminal pour payer."
+      }
+    },
+    "scan_qr": {
+      "heading": "Scanner des codes QR",
+      "intro": "C'est la méthode la plus courante. C'est rapide et sécurisé.",
+      "how_to_title": "Comment scanner pour payer",
+      "how_to_intro": "<strong>Scanner pour payer</strong> permet d'envoyer de l'argent ou payer instantanément.",
+      "steps": {
+        "1": {
+          "title": "Appuyez sur \"Scanner pour payer\"",
+          "body": "Sur l'accueil, section <b>Envoyer de l'argent</b>."
+        },
+        "2": {
+          "title": "Scannez le code du destinataire",
+          "body": "Les détails s'afficheront automatiquement."
+        },
+        "3": {
+          "title": "Saisissez le montant",
+          "body": "Confirmez avec votre PIN ou biométrie."
+        },
+        "4": {
+          "title": "Transfert terminé",
+          "body": "Un écran de confirmation avec numéro de référence s'affiche."
+        }
+      },
+      "visual_label": "Alignez le code QR dans le cadre",
+      "tip_title": "Conseil : Raccourci",
+      "tip_body": "Lancez le scanner en double-tapant l'icône mPay sur votre accueil."
+    },
+    "show_qr": {
+      "heading": "Montrer votre code QR",
+      "intro": "Certains marchands préfèrent scanner votre code avec leur terminal.",
+      "how_to_title": "Comment montrer votre QR",
+      "steps": {
+        "1": {
+          "title": "Ouvrez votre code de paiement",
+          "body": "Appuyez sur <strong>\"Payer\"</strong> puis <strong>\"Montrer mon code QR\"</strong>."
+        },
+        "2": {
+          "title": "Présentez au marchand",
+          "body": "Le marchand le scanne avec son appareil."
+        },
+        "3": {
+          "title": "Confirmez",
+          "body": "Recevez une notification, vérifiez le montant et validez."
+        }
+      },
+      "visual_label": "Montrez ceci au marchand",
+      "security_title": "Note de sécurité",
+      "security_body": "Le code s'actualise toutes les 60 secondes. Ne faites jamais de capture d'écran."
+    },
+    "nfc_tap": {
+      "heading": "Paiement sans contact NFC",
+      "intro": "Approchez simplement votre téléphone du terminal — aucun scan requis.",
+      "how_to_title": "Comment utiliser le NFC",
+      "steps": {
+        "1": {
+          "title": "Activez le NFC",
+          "body": "Dans les paramètres du téléphone et de l'app."
+        },
+        "2": {
+          "title": "Approchez du terminal",
+          "body": "À moins de 4cm du lecteur."
+        },
+        "3": {
+          "title": "Authentifiez",
+          "body": "Une vibration confirme la connexion. Validez par PIN ou biométrie."
+        },
+        "4": {
+          "title": "Paiement terminé",
+          "body": "Le reçu s'affiche instantanément."
+        }
+      },
+      "visual_phone": "Votre téléphone",
+      "visual_terminal": "Terminal de paiement",
+      "antenna_title": "Position de l'antenne NFC",
+      "antenna_body": "Généralement en haut au dos du téléphone. Retirez les coques trop épaisses."
+    },
+    "confirmation": {
+      "heading": "Confirmation de paiement",
+      "intro": "Chaque paiement réussi génère un reçu numérique immédiat.",
+      "receipt_title": "Contenu du reçu",
+      "receipt_intro": "Chaque confirmation inclut :",
+      "receipt": {
+        "success": "Paiement réussi",
+        "merchant": "Nom du marchand",
+        "transaction_id": "ID Transaction",
+        "datetime": "Date et Heure",
+        "method": "Méthode de paiement",
+        "status": "Statut",
+        "completed": "Terminé",
+        "balance": "Solde restant"
+      },
+      "share_title": "Partager les reçus",
+      "share_body": "Envoyez le reçu par e-mail ou messagerie en PDF.",
+      "failed_title": "Échecs ou attentes",
+      "failed_intro": "Si un paiement ne passe pas :",
+      "failed_list": {
+        "pending": "<strong>En attente :</strong> Traitement en cours (max 30s).",
+        "failed": "<strong>Échec :</strong> Vérifiez votre solde ou connexion.",
+        "refunded": "<strong>Remboursé :</strong> Délai de 1 à 3 jours ouvrés."
+      }
+    },
+    "history": {
+      "heading": "Historique des transactions",
+      "intro": "Suivez toutes vos dépenses au même endroit.",
+      "access_title": "Accéder à l'historique",
+      "access_body": "Menu Accueil → Transactions.",
+      "sample_title": "Exemple d'historique",
+      "table": {
+        "date": "Date",
+        "merchant": "Marchand",
+        "method": "Méthode",
+        "amount": "Montant",
+        "status": "Statut",
+        "completed": "Terminé",
+        "pending": "En attente"
+      },
+      "export_title": "Exporter vos données",
+      "export_body": "Téléchargez l'historique en CSV ou PDF."
+    },
+    "overview": {
+      "heading": "Flux de paiement",
+      "intro": "Aperçu visuel du processus :",
+      "steps": {
+        "1": "Appuyer sur \"Payer\"",
+        "2": "Choisir QR ou NFC",
+        "3": "Scanner ou approcher",
+        "4": "Vérifier le montant",
+        "5": "Valider (Biométrie/PIN)",
+        "6": "Confirmé !"
+      }
+    },
+    "faq": {
+      "heading": "Questions Fréquentes",
+      "q1": "Montant maximum ?",
+      "a1": "5 000 $ par défaut. Demandez une augmentation via le support.",
+      "q2": "Payer sans connexion ?",
+      "a2": "Le NFC peut fonctionner hors ligne pour les petits montants (< 50 $). Le QR nécessite Internet.",
+      "q3": "QR non reconnu ?",
+      "a3": "Nettoyez la lentille ou augmentez la luminosité.",
+      "q4": "NFC compatible ?",
+      "a4": "iPhone 7+ et la plupart des Android post-2018.",
+      "q5": "Frais ?",
+      "a5": "Aucun frais pour le consommateur lors d'un paiement marchand.",
+      "q6": "Annuler un paiement ?",
+      "a6": "Impossible. Contactez le marchand pour un remboursement."
+    },
+    "pagination": {
+      "previous": "Précédent",
+      "next": "Suivant",
+      "prev_title": "Configuration du compte",
+      "next_title": "Gestion du portefeuille"
+    },
+    "toc": {
+      "title": "Sur cette page",
+      "scan_qr": "Scanner des codes QR",
+      "show_qr": "Montrer votre code QR",
+      "nfc_tap": "Paiement NFC",
+      "confirmation": "Confirmation",
+      "history": "Historique",
+      "flow": "Flux de paiement",
+      "faq": "FAQs"
+    }
+  },
+  "wallet_management": {
+    "breadcrumb": {
+      "docs": "Docs",
+      "consumer": "Particulier",
+      "current": "Gestion du portefeuille"
+    },
+    "title": "Gestion du portefeuille",
+    "subtitle": "Apprenez à vérifier votre solde, ajouter des fonds, retirer de l'argent et comprendre vos limites.",
+    "overview": {
+      "title": "Votre Portefeuille mPay",
+      "body": "C'est un espace numérique sécurisé pour stocker vos fonds et gérer vos finances depuis votre smartphone."
+    },
+    "balance": {
+      "heading": "Vérifier votre solde",
+      "intro": "Le solde est visible dès l'accueil de l'application.",
+      "demo": {
+        "label": "Solde disponible",
+        "currency": "Florins des Antilles (XCG)",
+        "topup": "Recharger",
+        "withdraw": "Retirer",
+        "history": "Historique"
+      },
+      "how_to_title": "Comment voir votre solde",
+      "steps": {
+        "1": {
+          "title": "Ouvrez l'application",
+          "desc": "Il s'affiche en haut de l'écran d'accueil."
+        },
+        "2": {
+          "title": "Solde disponible",
+          "desc": "C'est le montant que vous pouvez dépenser immédiatement."
+        },
+        "3": {
+          "title": "Masquer le solde",
+          "desc": "Appuyez sur l'<strong>icône œil</strong> pour plus de discrétion en public."
+        }
+      },
+      "callout": "Les <strong>transactions en attente</strong> peuvent réduire temporairement votre solde disponible."
+    },
+    "topup": {
+      "heading": "Méthodes de rechargement",
+      "intro": "Ajoutez des fonds via ces canaux :",
+      "methods": {
+        "bank": {
+          "title": "Virement bancaire",
+          "desc": "Depuis n'importe quelle banque locale.",
+          "time": "Instantané"
+        },
+        "wallet": {
+          "title": "Portefeuille à portefeuille",
+          "desc": "Demandez à un autre utilisateur de vous envoyer des fonds.",
+          "time": "Instantané"
+        },
+        "agent": {
+          "title": "Agent de change / Marchand",
+          "desc": "Déposez du liquide chez un marchand mPay agréé.",
+          "time": "Instantané"
+        }
+      }
+    },
+    "withdraw": {
+      "heading": "Retraits",
+      "intro": "Transférez vos fonds vers votre compte bancaire lié.",
+      "callout": "Respectez les politiques de la Banque Centrale. Vérifiez bien vos coordonnées bancaires."
+    },
+    "limits": {
+      "heading": "Limites de transaction",
+      "intro1": "Des limites s'appliquent pour protéger votre compte. Elles sont quotidiennes, mensuelles et annuelles.",
+      "intro2": "Exemples de limites (gérées par mPay Network) :",
+      "table": {
+        "type": "Type de transaction",
+        "consumer": "Particulier",
+        "merchant": "Marchand",
+        "cashier": "Caissier",
+        "scan_pay": "Scanner pour payer",
+        "pay_bills": "Payer des factures",
+        "pay_email": "Payer par e-mail",
+        "pay_mobile": "Payer par mobile",
+        "transfer_bank": "Vers la banque",
+        "managed_by": "Géré par<br>le Marchand"
+      },
+      "how_to_increase": "Comment augmenter vos limites",
+      "callout_view": "Consultez vos limites actuelles dans <strong>Profil → Limites du portefeuille</strong>.",
+      "callout_increase": "Contactez le support mPay pour toute demande d'augmentation (sujet à examen)."
+    },
+    "faq": {
+      "heading": "Questions Fréquentes",
+      "q1": "Temps de rechargement ?",
+      "a1": "Instantané pour les cartes et agents. 1 à 2 jours pour certains virements selon la banque.",
+      "q2": "Retirer vers le compte d'un tiers ?",
+      "a2": "Non. Le compte bancaire doit être à votre nom (réglementation anti-blanchiment).",
+      "q3": "Limite dépassée ?",
+      "a3": "La transaction sera déclinée. Attendez la réinitialisation à minuit ou le 1er du mois.",
+      "q4": "Frais de tenue de compte ?",
+      "a4": "Aucun. Pas de frais mensuels ni d'inactivité.",
+      "q5": "Rechargement automatique ?",
+      "a5": "Oui, configurez-le dans les paramètres pour ne jamais manquer de fonds.",
+      "q6": "Téléphone perdu ?",
+      "a6": "Votre argent est en sécurité sur nos serveurs. Contactez-nous pour geler le compte."
+    },
+    "pagination": {
+      "prev": "Précédent",
+      "prev_title": "Effectuer des paiements",
+      "next": "Suivant",
+      "next_title": "Transferts P2P"
+    },
+    "toc": {
+      "title": "Sur cette page",
+      "balance": "Vérifier le solde",
+      "topup": "Méthodes de rechargement",
+      "withdraw": "Retraits",
+      "limits": "Limites",
+      "faq": "FAQ"
+    }
+  },
+  "p2p_transfers": {
+    "breadcrumb": {
+      "docs": "Docs",
+      "consumer": "Particulier",
+      "current": "Transferts P2P"
+    },
+    "title": "Envoyer et recevoir de l'argent",
+    "subtitle": "Envoyez et demandez de l'argent instantanément à n'importe qui sur le réseau mPay. C'est rapide, sûr et gratuit pour les transferts standards.",
+    "illustration": {
+      "sender": "Expéditeur",
+      "receiver": "Destinataire"
+    },
+    "methods_grid": {
+      "send": {
+        "title": "Envoyer de l'argent",
+        "desc": "Transfert instantané et sécurisé."
+      },
+      "receive": {
+        "title": "Recevoir de l'argent",
+        "desc": "Par QR, e-mail ou numéro de mobile."
+      },
+      "request": {
+        "title": "Demander un paiement",
+        "desc": "Générez un QR pour vous faire payer."
+      }
+    },
+    "send": {
+      "heading": "Envoyer de l'argent",
+      "intro_title": "Transferts rapides",
+      "intro_body": "Envoyez des fonds en quelques secondes via l'identifiant, le téléphone ou le code QR."
+    },
+    "send_email_mobile": {
+      "title": "Par E-mail ou Mobile",
+      "intro": "Recherchez le destinataire directement via ses coordonnées.",
+      "steps": {
+        "1": {
+          "title": "Lancez l'opération",
+          "body": "Appuyez sur \"Payer par Email\" ou \"Payer par Mobile\"."
+        },
+        "2": {
+          "title": "Trouvez le destinataire",
+          "body": "Saisissez ses coordonnées. Utilisez vos <strong>Favoris</strong> pour aller plus vite."
+        },
+        "3": {
+          "title": "Montant",
+          "body": "Indiquez la somme et ajoutez éventuellement un mémo (ex: <code>Part resto</code>)."
+        },
+        "4": {
+          "title": "Vérifiez",
+          "body": "Appuyez sur <strong>Confirmer et envoyer</strong> après vérification."
+        },
+        "5": {
+          "title": "Terminé",
+          "body": "Le destinataire est prévenu immédiatement."
+        }
+      }
+    },
+    "send_gallery": {
+      "title": "Depuis la galerie photo",
+      "intro": "Utilisez un code QR sauvegardé sur votre téléphone.",
+      "steps": {
+        "1": {
+          "title": "Scanner depuis la galerie",
+          "body": "Appuyez sur l'icône dédiée."
+        },
+        "2": {
+          "title": "Téléchargez le code",
+          "body": "Sélectionnez l'image du QR code reçu."
+        },
+        "3": {
+          "title": "Montant et validation",
+          "body": "Saisissez la somme et validez."
+        }
+      }
+    },
+    "send_scan_pay": {
+      "title": "Via Scanner pour payer",
+      "intro": "Scannez directement le code sur l'écran d'un ami.",
+      "steps": {
+        "1": { "title": "Icône Scanner", "body": "Disponible sur l'accueil." },
+        "2": { "title": "Scannez", "body": "Pointez la caméra." },
+        "3": { "title": "Confirmez", "body": "PIN ou biométrie." },
+        "4": { "title": "Succès", "body": "C'est fait !" }
+      }
+    },
+    "send_pay_qr": {
+      "title": "Via Générer un QR",
+      "intro": "Créez un code que l'autre personne scannera pour prélever les fonds.",
+      "steps": {
+        "1": { "title": "Payer par QR", "body": "Appuyez sur l'icône." },
+        "2": {
+          "title": "Détails",
+          "body": "Définissez le montant et l'expiration."
+        },
+        "3": { "title": "Validez", "body": "PIN/Biométrie." },
+        "4": { "title": "Partagez", "body": "Montrez le code généré." }
+      }
+    },
+    "limits": {
+      "title": "Limites de transfert",
+      "desc": "Gérées par la console d'administration.",
+      "callout": {
+        "title": "Important",
+        "body": "Consultez vos consommations dans Paramètres → Limites de paiement."
+      }
+    },
+    "receive": {
+      "heading": "Recevoir de l'argent",
+      "intro_title": "Réception instantanée",
+      "intro_body": "L'argent arrive immédiatement sur votre compte. Vous recevez une notification push.",
+      "notifications": {
+        "title": "Alertes de transfert",
+        "intro": "Vous recevez :",
+        "list": {
+          "push": "<strong>Push</strong> — Nom, montant et mémo",
+          "in_app": "<strong>In-app</strong> — Dans le centre de notifications",
+          "email": "<strong>E-mail</strong> — Si activé",
+          "sms": "<strong>SMS</strong> — Alerte sur votre mobile"
+        }
+      },
+      "share_qr": {
+        "title": "Partager votre QR de profil",
+        "intro": "Facilitez l'envoi pour vos amis :",
+        "steps": {
+          "1": {
+            "title": "Ouvrez votre QR",
+            "body": "Icône en haut à droite de l'accueil."
+          },
+          "2": {
+            "title": "Partagez",
+            "body": "Montrez l'écran ou envoyez par message."
+          }
+        },
+        "placeholder": "Écran du QR personnel"
+      },
+      "fees_callout": {
+        "title": "Gratuit à la réception",
+        "body": "Recevoir des transferts P2P est toujours gratuit sur le réseau mPay."
+      }
+    },
+    "request": {
+      "heading": "Demander de l'argent",
+      "intro_title": "Collectes simplifiées",
+      "intro_body": "Besoin de partager une addition ? Envoyez une demande de paiement.",
+      "req_qr": {
+        "title": "Demande par QR",
+        "steps": {
+          "1": {
+            "title": "Écran de demande",
+            "body": "Menu Recevoir → Demande par QR."
+          },
+          "2": { "title": "Montant", "body": "Indiquez la somme et le motif." },
+          "3": { "title": "Générez", "body": "Appuyez sur Soumettre." },
+          "4": {
+            "title": "Partagez",
+            "body": "Envoyez le code à l'expéditeur."
+          }
+        }
+      },
+      "respond_qr": {
+        "title": "Répondre à une demande",
+        "intro": "Si on vous demande de l'argent :",
+        "steps": {
+          "1": {
+            "title": "Vérifiez",
+            "body": "Connaissez-vous l'expéditeur ?"
+          },
+          "2": { "title": "Payez", "body": "Utilisez le scanner." },
+          "3": { "title": "Validez", "body": "L'argent est transféré." }
+        }
+      },
+      "tip_callout": {
+        "title": "Conseil Pro",
+        "body": "Vérifiez toujours l'identité du demandeur."
+      },
+      "fraud_callout": {
+        "title": "Alerte Fraude",
+        "body": "Ne payez jamais d'inconnus. Signalez les demandes suspectes à fraud@mpaynetwork.com."
+      }
+    },
+    "faq": {
+      "heading": "Questions Fréquentes",
+      "q1": "Est-ce vraiment gratuit ?",
+      "a1": "Oui entre portefeuilles mPay. Des frais s'appliquent seulement vers les banques externes.",
+      "q2": "Délai ?",
+      "a2": "Instantané (quelques secondes).",
+      "q3": "Annuler ?",
+      "a3": "Impossible une fois envoyé. Demandez un renvoi au destinataire ou ouvrez un litige.",
+      "q4": "Envoyer à un non-utilisateur ?",
+      "a4": "Oui. Il recevra un SMS avec un lien pour télécharger l'app et récupérer les fonds (délai 14 jours).",
+      "q5": "Augmenter les limites ?",
+      "a5": "Passez au niveau de vérification supérieur.",
+      "q6": "Erreur de destinataire ?",
+      "a6": "Contactez-le via l'app ou signalez le problème dans les 24h.",
+      "q7": "Transferts récurrents ?",
+      "a7": "Oui, activez l'option \"Récurrent\" pour le loyer ou l'argent de poche."
+    },
+    "pagination": {
+      "prev": "Précédent",
+      "prev_title": "Gestion du portefeuille",
+      "next": "Suivant",
+      "next_title": "Paramètres et Sécurité"
+    },
+    "toc": {
+      "title": "Sur cette page",
+      "sending": "Envoyer de l'argent",
+      "by_username": "Par identifiant",
+      "via_qr": "Par QR Code",
+      "limits": "Limites",
+      "receiving": "Recevoir",
+      "notifications": "Notifications",
+      "share_qr": "Partager le QR",
+      "share_username": "Partager l'ID",
+      "requesting": "Demander",
+      "send_request": "Envoyer une demande",
+      "manage_requests": "Gérer les demandes",
+      "respond_request": "Répondre",
+      "faq": "FAQ"
+    }
+  },
+  "settings": {
+    "breadcrumb": {
+      "docs": "Docs",
+      "consumer": "Particulier",
+      "settings_security": "Paramètres et Sécurité"
+    },
+    "title": "Paramètres et Sécurité",
+    "subtitle": "Configurez votre portefeuille, gérez la biométrie et protégez votre compte.",
+    "visual": {
+      "title": "Votre sécurité est notre priorité",
+      "body": "Cryptage de niveau bancaire. Configurez ces options pour une protection maximale."
+    },
+    "pin": {
+      "heading": "Gestion du PIN",
+      "intro": "Code à 6 chiffres pour autoriser les paiements. Distinct du verrouillage téléphone.",
+      "setting_heading": "Définir votre PIN",
+      "setting_intro": "Étapes de création :",
+      "steps": {
+        "1": {
+          "title": "Menu Sécurité",
+          "desc": "Paramètres → Sécurité → Changer le PIN."
+        },
+        "2": {
+          "title": "Saisissez 6 chiffres",
+          "desc": "Évitez 123456 ou 111111."
+        },
+        "3": {
+          "title": "Confirmez",
+          "desc": "Saisissez-le une deuxième fois."
+        },
+        "4": { "title": "Activé", "desc": "Le PIN est maintenant requis." }
+      },
+      "changing_heading": "Changer le PIN",
+      "changing_intro": "Vous devrez valider l'ancien avant de définir le nouveau.",
+      "changing_steps": {
+        "1": { "title": "Paramètres", "desc": "Allez dans la section PIN." },
+        "2": { "title": "Ancien PIN", "desc": "Vérifiez votre identité." },
+        "3": { "title": "Nouveau", "desc": "Prend effet immédiatement." }
+      },
+      "tips_title": "Conseils PIN",
+      "tips_body": "Après 5 échecs, le compte est bloqué 30 minutes.",
+      "forgot_title": "PIN oublié ?",
+      "forgot_body": "Appuyez sur \"PIN oublié\" pour recevoir un lien de réinitialisation par e-mail."
+    },
+    "biometric": {
+      "heading": "Authentification biométrique",
+      "intro": "Empreinte ou Face ID pour plus de confort.",
+      "methods": {
+        "fingerprint": {
+          "title": "Empreinte",
+          "desc": "Accès rapide par toucher.",
+          "badge": "Courant"
+        },
+        "faceid": {
+          "title": "Face ID",
+          "desc": "Reconnaissance faciale.",
+          "badge": "Recommandé"
+        }
+      },
+      "enabling_heading": "Activer la biométrie",
+      "steps": {
+        "1": { "title": "Sécurité", "desc": "Menu Paramètres → Sécurité." },
+        "2": { "title": "Activer", "desc": "Basculez le bouton." },
+        "3": {
+          "title": "Confirmez par PIN",
+          "desc": "Sécurité supplémentaire."
+        },
+        "4": { "title": "Testez", "desc": "Vérifiez que cela fonctionne." }
+      },
+      "toggles": {
+        "access": "Biométrie pour l'accès",
+        "transactions": "Biométrie pour les paiements"
+      },
+      "requirements_title": "Appareils compatibles",
+      "requirements_body": "Nécessite un matériel compatible. Sinon, le PIN reste la solution par défaut."
+    },
+    "notifications": {
+      "heading": "Paramètres de notification",
+      "intro": "Contrôlez comment mPay vous alerte.",
+      "channels_heading": "Canaux disponibles",
+      "channels": {
+        "push": {
+          "title": "Notifications Push",
+          "desc": "Alertes temps réel sur mobile."
+        },
+        "email": { "title": "E-mail", "desc": "Reçus détaillés et résumés." },
+        "sms": { "title": "SMS", "desc": "Alertes critiques." }
+      },
+      "types_heading": "Types d'alertes",
+      "types": {
+        "transaction": "<strong>Transactions</strong> — Chaque mouvement de fonds",
+        "promotional": "<strong>Promotions</strong> — Offres et nouveautés",
+        "summary": "<strong>Résumé hebdo</strong> — Analyse des dépenses"
+      },
+      "pro_tip_title": "Conseil Pro",
+      "pro_tip_body": "Gardez les alertes de <strong>Sécurité</strong> activées en permanence.",
+      "managing_heading": "Gérer les alertes",
+      "managing_body": "Paramètres → Notifications.",
+      "toggles": {
+        "transaction": "Alertes transaction (Push)",
+        "security": "Alertes sécurité (Push + Email)",
+        "promotional": "Offres promotionnelles"
+      }
+    },
+    "privacy": {
+      "heading": "Confidentialité",
+      "intro": "Gérez vos données personnelles.",
+      "controls_heading": "Contrôles",
+      "controls": {
+        "visibility": {
+          "title": "Visibilité du profil",
+          "desc": "Qui peut voir votre nom et photo."
+        },
+        "analytics": {
+          "title": "Analyses",
+          "desc": "Partage anonyme pour améliorer l'app."
+        },
+        "location": {
+          "title": "Localisation",
+          "desc": "Pour la fraude et les marchands proches."
+        },
+        "contacts": {
+          "title": "Accès aux contacts",
+          "desc": "Pour faciliter les transferts P2P."
+        }
+      },
+      "data_heading": "Gestion des données",
+      "data_intro": "Vos droits :",
+      "data_options": {
+        "export": {
+          "title": "Exporter",
+          "desc": "Copie de vos données et historique."
+        },
+        "activity": {
+          "title": "Journal d'activité",
+          "desc": "Consulter les connexions."
+        },
+        "delete": {
+          "title": "Supprimer le compte",
+          "desc": "Action définitive."
+        }
+      },
+      "deletion_title": "Suppression de compte",
+      "deletion_body": "Irréversible. Solde doit être à zéro. Certaines données sont conservées 7 ans (loi).",
+      "policy_heading": "Politique de confidentialité",
+      "policy_body": "Consultez notre <a onclick=\"load_page('privacy_policy')\" style=\"color: #2563eb; cursor: pointer; text-decoration: underline;\">Politique de confidentialité</a>."
+    },
+    "faq": {
+      "heading": "Questions Fréquentes",
+      "questions": {
+        "1": {
+          "q": "PIN oublié ?",
+          "a": "Utilisez le lien de récupération par e-mail. Le compte peut être limité temporairement."
+        },
+        "2": {
+          "q": "Empreinte + Face ID ?",
+          "a": "Selon l'appareil, un seul est souvent actif."
+        },
+        "3": {
+          "q": "Perte appareil 2FA ?",
+          "a": "Utilisez vos codes de secours ou contactez le support (délai 24-48h)."
+        },
+        "4": {
+          "q": "Pas de notifications ?",
+          "a": "Vérifiez les réglages système d'iOS/Android et l'optimisation batterie."
+        },
+        "5": {
+          "q": "Télécharger l'historique ?",
+          "a": "Oui, via Paramètres → Confidentialité → Exporter (CSV/PDF)."
+        },
+        "6": {
+          "q": "PIN stocké ?",
+          "a": "Non. Hachage sécurisé (bcrypt). Personne ne peut le lire."
+        }
+      }
+    },
+    "pagination": {
+      "prev": "Précédent",
+      "prev_title": "Transferts P2P",
+      "next": "Suivant",
+      "next_title": "Dépannage"
+    },
+    "toc": {
+      "title": "Sur cette page",
+      "pin": "Gestion du PIN",
+      "biometric": "Biométrie",
+      "2fa": "Authentification 2FA",
+      "notifications": "Notifications",
+      "privacy": "Confidentialité",
+      "faq": "FAQ"
+    }
+  }
+}

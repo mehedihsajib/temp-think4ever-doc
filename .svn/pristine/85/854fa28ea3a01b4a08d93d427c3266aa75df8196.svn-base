@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>404 - Page Not Found</title>
+        <link href="css/theme.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/global.css">
+        <link rel="stylesheet" href="assets/css/not_found_404.css">
+        <style>/* Basic reset for preview consistency */body { margin: 0; padding: 0; font-family: sans-serif; }</style>
+    </head>
+    <body>
+        <div class="not-found-page">
+            <!-- Skip to content -->
+            <a href="#not-found-main" class="sr-only" style="position:absolute;top:-40px;left:0;background:#2563eb;color:#fff;padding:8px 16px;z-index:1000;font-size:14px;border-radius:0 0 8px 0;" onfocus="this.style.top='0'" onblur="this.style.top='-40px'">Skip to main content</a>
+            <!-- Header -->
+            <header class="not-found-header" role="banner">
+                <a class="not-found-header-logo" onclick="load_page('index')" role="link" tabindex="0" aria-label="MPay Network Home"> <img src="https://dev.think4ever.com/uifiles/20260311/ed3d2c21991e3bef5e069713af9fa6ca/only_m_with_white_bg_logo.png" alt="MPay Network Logo"/> <span>MPay Network</span> </a>
+                <nav class="not-found-header-nav" role="navigation" aria-label="Main navigation">
+                    <a href="#" onclick="load_page('merchant_docs_home'); return false;">Merchant Docs</a>
+                    <a href="#" onclick="load_page('consumer_docs_home'); return false;">Consumer Docs</a>
+                    <a href="#" onclick="load_page('blog_listing'); return false;">Blog</a>
+                </nav>
+            </header>
+            <!-- Main Content -->
+            <main id="not-found-main" class="not-found-main" role="main">
+                <div class="not-found-content">
+                    <!-- 404 Visual -->
+                    <div class="not-found-visual" aria-hidden="true">
+                        <div class="not-found-particles">
+                            <div class="not-found-particle"></div>
+                            <div class="not-found-particle"></div>
+                            <div class="not-found-particle"></div>
+                            <div class="not-found-particle"></div>
+                            <div class="not-found-particle"></div>
+                        </div>
+                        <svg class="not-found-compass" viewBox="0 0 24 24" fill="none" stroke="#1e3a8a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" fill="#1e3a8a" opacity="0.3"/>
+                        </svg>
+                        <div class="not-found-number">404</div>
+                    </div>
+                    <!-- Title -->
+                    <h1 id="nf_title" class="not-found-title">Page Not Found</h1>
+                    <!-- Message -->
+                    <p id="nf_message" class="not-found-message">The page you're looking for doesn't exist or has been moved. Try searching for what you need or use the links below.</p>
+                    <!-- Search -->
+                    <div class="not-found-search-wrapper">
+                        <i class="fa fa-search not-found-search-icon" aria-hidden="true"></i>
+                        <input type="text" id="nf_search" class="not-found-search-input" placeholder="Search for what you need..." aria-label="Search for what you need" autocomplete="off"/>
+                        <button id="nf_search_btn" class="not-found-search-btn" aria-label="Search">
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <!-- Home Button -->
+                    <div class="not-found-cta">
+                        <button id="nf_home_btn" class="not-found-home-btn" onclick="load_page('index')" aria-label="Go to Homepage">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                            Go to Homepage
+                        </button>
+                    </div>
+                    <!-- Helpful Links -->
+                    <div class="not-found-links-section">
+                        <div class="not-found-links-label">Or explore these sections</div>
+                        <div class="not-found-links-grid">
+                            <a id="nf_merchant_link" class="not-found-link-card" href="#" onclick="load_page('merchant_docs_home'); return false;" role="link" aria-label="Merchant Documentation"> <div class="not-found-link-card-icon">
+                                    <i class="fa fa-store" aria-hidden="true"></i>
+                                </div> <div>
+                                    <div class="not-found-link-card-title">Merchant Docs</div>
+                                    <div class="not-found-link-card-desc">Payment setup & guides</div>
+                                </div> </a>
+                            <a id="nf_consumer_link" class="not-found-link-card" href="#" onclick="load_page('consumer_docs_home'); return false;" role="link" aria-label="Consumer Documentation"> <div class="not-found-link-card-icon">
+                                    <i class="fa fa-wallet" aria-hidden="true"></i>
+                                </div> <div>
+                                    <div class="not-found-link-card-title">Consumer Docs</div>
+                                    <div class="not-found-link-card-desc">Wallet & transfers</div>
+                                </div> </a>
+                            <a class="not-found-link-card" href="#" onclick="load_page('blog_listing'); return false;" role="link" aria-label="Blog Posts"> <div class="not-found-link-card-icon">
+                                    <i class="fa fa-newspaper" aria-hidden="true"></i>
+                                </div> <div>
+                                    <div class="not-found-link-card-title">Blog</div>
+                                    <div class="not-found-link-card-desc">News & updates</div>
+                                </div> </a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- Footer -->
+            <footer class="not-found-footer" role="contentinfo">
+                <div class="not-found-footer-inner">
+                    <span class="not-found-footer-text">&copy; 2025 MPay Network. All rights reserved.</span>
+                    <div class="not-found-footer-links">
+                        <a href="#" onclick="load_page('privacy_policy'); return false;">Privacy Policy</a>
+                        <a href="#" onclick="load_page('terms_of_service'); return false;">Terms of Service</a>
+                        <a href="#" onclick="load_page('feedback_form'); return false;">Feedback</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/navigation.js"></script>
+        <script src="assets/js/not_found_404.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    </body>
+</html>

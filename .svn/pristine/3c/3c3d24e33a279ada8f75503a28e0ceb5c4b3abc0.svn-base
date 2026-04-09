@@ -1,0 +1,79 @@
+<aside class="cgs-sidebar" id="cgsSidebar" role="navigation"
+    aria-label="Merchant documentation navigation">
+    <div class="cgs-sidebar-header">
+        <h5> <i class="fa-solid fa-store" aria-hidden="true"></i>
+            <span data-i18n="merchant_sidebar.title">Merchant Wallet</span> </h5>
+        <button class="cgs-sidebar-close" id="cgsSidebarClose" aria-label="Close sidebar">
+            <i class="fa fa-times"></i>
+        </button>
+    </div>
+    <div class="cgs-nav-section">
+        <p class="cgs-nav-section-label" aria-expanded="true" data-i18n="merchant_sidebar.section_getting_started">Getting Started</p>
+        <ul class="cgs-nav-list">
+            <li>
+                <a href="#" class="cgs-nav-link" onclick="load_page('merchant_docs_home')" aria-current="page"> <i
+                        class="fa-solid fa-house" aria-hidden="true"></i>
+                    <span data-i18n="merchant_sidebar.overview">Overview</span> </a>
+            </li>
+            <li>
+                <a href="#" class="cgs-nav-link" onclick="load_page('merchant_getting_started')"> <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+                    <span data-i18n="merchant_sidebar.getting_started">Getting Started</span> </a>
+            </li>
+            <li>
+                <a href="#" class="cgs-nav-link" onclick="load_page('merchant_account_setup')"> <i class="fa-solid fa-user-check"
+                        aria-hidden="true"></i>
+                    <span data-i18n="merchant_sidebar.account_setup">Account Setup &amp; Verification</span> </a>
+            </li>
+        </ul>
+    </div>
+    <div class="cgs-nav-section">
+        <p class="cgs-nav-section-label" aria-expanded="true" data-i18n="merchant_sidebar.section_payments">Payments</p>
+        <ul class="cgs-nav-list">
+            <li>
+                <a href="#" class="cgs-nav-link" onclick="load_page('merchant_qr_payments')"> <i class="fa-solid fa-qrcode" aria-hidden="true"></i>
+                    <span data-i18n="merchant_sidebar.qr_payments">QR Code Payments</span> </a>
+            </li>
+            <li>
+                <a href="#" class="cgs-nav-link" onclick="load_page('merchant_nfc_payments')"> <i class="fa-solid fa-wifi" aria-hidden="true"></i>
+                    <span data-i18n="merchant_sidebar.nfc_payments">NFC Payments</span> </a>
+            </li>
+        </ul>
+    </div>
+    <div class="cgs-nav-section">
+        <p class="cgs-nav-section-label" aria-expanded="true" data-i18n="merchant_sidebar.section_management">Management</p>
+        <ul class="cgs-nav-list">
+            <li>
+                <a href="#" class="cgs-nav-link" onclick="load_page('merchant_transactions')"> <i class="fa-solid fa-receipt" aria-hidden="true"></i>
+                    <span data-i18n="merchant_sidebar.transaction_management">Transaction Management</span> </a>
+            </li>
+            <li>
+                <a href="#" class="cgs-nav-link" onclick="load_page('merchant_settings')"> <i class="fa-solid fa-gear" aria-hidden="true"></i>
+                    <span data-i18n="merchant_sidebar.settings_config">Managing Store</span> </a>
+            </li>
+        </ul>
+    </div>
+    <div class="cgs-nav-section">
+        <p class="cgs-nav-section-label" aria-expanded="true" data-i18n="merchant_sidebar.section_support">Support</p>
+        <ul class="cgs-nav-list">
+            <li>
+                <a href="#" class="cgs-nav-link" onclick="load_page('merchant_troubleshooting')"> <i class="fa-solid fa-life-ring"
+                        aria-hidden="true"></i>
+                    <span data-i18n="merchant_sidebar.troubleshooting">Troubleshooting</span> </a>
+            </li>
+        </ul>
+    </div>
+     <div class="cgs-nav-section"
+        style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--color-border, #bfdbfe);">
+        <p class="cgs-nav-section-label" data-i18n="sidebar.section_other_docs">Other Docs</p>
+        <ul class="cgs-nav-list">
+            <li>
+                <a class="cgs-nav-link" onclick="load_page('consumer_docs_home')"><i class="fa fa-store"></i>
+                    <span data-i18n="sidebar.link_consumer_docs">Consumer Wallet Docs</span></a>
+            </li>
+            <li>
+                <a class="cgs-nav-link" onclick="load_page('changelog_page')"><i class="fa fa-history"></i>
+                    <span data-i18n="sidebar.link_changelog">Changelog</span></a>
+            </li>
+        </ul>
+    </div>
+</aside>

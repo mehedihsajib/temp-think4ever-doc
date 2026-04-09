@@ -1,0 +1,67 @@
+<aside class="cgs-sidebar" id="cgsSidebar" role="navigation" aria-label="Consumer documentation navigation">
+    <div class="cgs-sidebar-header">
+        <h3 onclick="load_page('consumer_docs_home')"> <i class="fa fa-book"></i>
+            Consumer Wallet Docs </h3>
+    </div>
+    <nav class="cgs-nav-section">
+        <p class="cgs-nav-section-label">Getting Started</p>
+        <ul class="cgs-nav-list">
+            <li>
+                <a class="cgs-nav-link" onclick="load_page('consumer_docs_home')"><i class="fa fa-home"></i>
+                    Overview</a>
+            </li>
+            <li>
+                <a class="cgs-nav-link" onclick="load_page('consumer_getting_started')"><i
+                        class="fa fa-rocket"></i> Getting Started</a>
+            </li>
+            <li>
+                <a class="cgs-nav-link" onclick="load_page('consumer_account_setup')"><i class="fa fa-user-plus"></i>
+                    Account Setup</a>
+            </li>
+        </ul>
+    </nav>
+    <nav class="cgs-nav-section">
+        <p class="cgs-nav-section-label">Using Your Wallet</p>
+        <ul class="cgs-nav-list">
+            <li>
+                <a class="cgs-nav-link" onclick="load_page('consumer_making_payments')"><i
+                        class="fa fa-credit-card"></i> Making Payments</a>
+            </li>
+            <li>
+                <a class="cgs-nav-link" onclick="load_page('consumer_wallet_management')"><i class="fa fa-wallet"></i>
+                    Wallet Management</a>
+            </li>
+            <li>
+                <a class="cgs-nav-link" onclick="load_page('consumer_p2p_transfers')"><i class="fa fa-exchange-alt"></i>
+                    P2P Transfers</a>
+            </li>
+        </ul>
+    </nav>
+    <nav class="cgs-nav-section">
+        <p class="cgs-nav-section-label">Settings & Support</p>
+        <ul class="cgs-nav-list">
+            <li>
+                <a class="cgs-nav-link" onclick="load_page('consumer_settings')"><i class="fa fa-cog"></i>
+                    Settings & Security</a>
+            </li>
+            <li>
+                <a class="cgs-nav-link" onclick="load_page('consumer_troubleshooting')"><i class="fa fa-life-ring"></i>
+                    Troubleshooting</a>
+            </li>
+        </ul>
+    </nav>
+    <nav class="cgs-nav-section"
+        style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--color-border, #bfdbfe);">
+        <p class="cgs-nav-section-label">Other Docs</p>
+        <ul class="cgs-nav-list">
+            <li>
+                <a class="cgs-nav-link" onclick="load_page('merchant_docs_home')"><i class="fa fa-store"></i>
+                    Merchant Wallet Docs</a>
+            </li>
+            <li>
+                <a class="cgs-nav-link" onclick="load_page('changelog_page')"><i class="fa fa-history"></i>
+                    Changelog</a>
+            </li>
+        </ul>
+    </nav>
+</aside>

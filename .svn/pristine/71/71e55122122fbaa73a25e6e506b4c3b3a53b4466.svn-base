@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Terms of Service</title>
+        <link href="css/theme.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/global.css">
+        <link rel="stylesheet" href="assets/css/terms_of_service.css">
+        <style>/* Basic reset for preview consistency */body { margin: 0; padding: 0; font-family: sans-serif; }</style>
+    </head>
+    <body>
+        <div class="tos-page">
+            <!-- Skip to content -->
+            <a href="#tos-main-content" class="sr-only" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to main content</a>
+            <!-- Reading Progress -->
+            <div class="tos-progress" role="progressbar" aria-label="Reading progress">
+                <div class="tos-progress-bar"></div>
+            </div>
+            <!-- Header -->
+            <header class="tos-header">
+                <div class="tos-header-inner">
+                    <a class="tos-header-logo" onclick="load_page('landing_page')" role="link" tabindex="0" aria-label="MPay Network Home"> <img src="https://dev.think4ever.com/uifiles/20260311/ed3d2c21991e3bef5e069713af9fa6ca/only_m_with_white_bg_logo.png" alt="MPay Network Logo"/> <span>MPay Network</span> </a>
+                    <nav class="tos-header-nav" aria-label="Main navigation">
+                        <button class="tos-header-nav-link" onclick="load_page('landing_page')">Home</button>
+                        <button class="tos-header-nav-link" onclick="load_page('merchant_docs_home')">Merchant Docs</button>
+                        <button class="tos-header-nav-link" onclick="load_page('consumer_docs_home')">Consumer Docs</button>
+                        <button class="tos-header-nav-link" onclick="load_page('blog_listing')">Blog</button>
+                        <button class="tos-header-nav-link" onclick="load_page('changelog_page')">Changelog</button>
+                    </nav>
+                </div>
+            </header>
+            <!-- Main Content -->
+            <main class="tos-main" id="tos-main-content">
+                <div class="tos-container">
+                    <!-- Breadcrumb -->
+                    <nav class="tos-breadcrumb" aria-label="Breadcrumb">
+                        <button onclick="load_page('landing_page')" aria-label="Home">
+                            <i class="fa fa-home"></i>
+                        </button>
+                        <span class="tos-breadcrumb-separator">/</span>
+                        <span class="tos-breadcrumb-current">Terms of Service</span>
+                    </nav>
+                    <!-- Page Title -->
+                    <h1 class="tos-page-title" id="tos_title">Terms of Service</h1>
+                    <!-- Last Updated -->
+                    <div class="tos-last-updated" id="tos_last_updated">
+                        <i class="fa fa-calendar-alt"></i>
+                        <span>Last Updated: January 15, 2025</span>
+                    </div>
+                    <!-- Table of Contents -->
+                    <nav class="tos-toc" aria-label="Table of contents">
+                        <h2 class="tos-toc-title"><i class="fa fa-list"></i> Table of Contents</h2>
+                        <ol class="tos-toc-list">
+                            <li>
+                                <a href="#tos-acceptance"><span class="toc-number">1.</span> Acceptance of Terms</a>
+                            </li>
+                            <li>
+                                <a href="#tos-definitions"><span class="toc-number">2.</span> Definitions</a>
+                            </li>
+                            <li>
+                                <a href="#tos-eligibility"><span class="toc-number">3.</span> Eligibility</a>
+                            </li>
+                            <li>
+                                <a href="#tos-account"><span class="toc-number">4.</span> Account Registration &amp; Security</a>
+                            </li>
+                            <li>
+                                <a href="#tos-services"><span class="toc-number">5.</span> Services Description</a>
+                            </li>
+                            <li>
+                                <a href="#tos-payments"><span class="toc-number">6.</span> Payment Terms</a>
+                            </li>
+                            <li>
+                                <a href="#tos-prohibited"><span class="toc-number">7.</span> Prohibited Activities</a>
+                            </li>
+                            <li>
+                                <a href="#tos-ip"><span class="toc-number">8.</span> Intellectual Property</a>
+                            </li>
+                            <li>
+                                <a href="#tos-privacy"><span class="toc-number">9.</span> Privacy &amp; Data Protection</a>
+                            </li>
+                            <li>
+                                <a href="#tos-liability"><span class="toc-number">10.</span> Limitation of Liability</a>
+                            </li>
+                            <li>
+                                <a href="#tos-indemnification"><span class="toc-number">11.</span> Indemnification</a>
+                            </li>
+                            <li>
+                                <a href="#tos-termination"><span class="toc-number">12.</span> Termination</a>
+                            </li>
+                            <li>
+                                <a href="#tos-disputes"><span class="toc-number">13.</span> Dispute Resolution</a>
+                            </li>
+                            <li>
+                                <a href="#tos-changes"><span class="toc-number">14.</span> Changes to Terms</a>
+                            </li>
+                            <li>
+                                <a href="#tos-contact"><span class="toc-number">15.</span> Contact Information</a>
+                            </li>
+                        </ol>
+                    </nav>
+                    <!-- Terms of Service Content -->
+                    <div class="tos-content" id="tos_content">
+                        <!-- Section 1: Acceptance of Terms -->
+                        <section class="tos-section" id="tos-acceptance">
+                            <h2>1. Acceptance of Terms <a href="#tos-acceptance" class="anchor-link" aria-label="Link to section"><i class="fa fa-link"></i></a></h2>
+                            <p>Welcome to MPay Network. By accessing or using the MPay Network mobile payment platform, including the Merchant Wallet and Consumer Wallet applications (collectively, the "Services"), you agree to be bound by these Terms of Service ("Terms").</p>
+                            <p>If you do not agree to these Terms, you may not access or use our Services. These Terms constitute a legally binding agreement between you and MPay Network Ltd. ("MPay," "we," "us," or "our").</p>
+                            <div class="tos-callout tos-callout-info">
+                                <i class="fa fa-info-circle"></i>
+                                <div class="tos-callout-content">
+                                    <strong>Important:</strong> By downloading, installing, or using any MPay Network application, you acknowledge that you have read, understood, and agree to be bound by these Terms.
+                                </div>
+                            </div>
+                        </section>
+                        <!-- Section 2: Definitions -->
+                        <section class="tos-section" id="tos-definitions">
+                            <h2>2. Definitions <a href="#tos-definitions" class="anchor-link" aria-label="Link to section"><i class="fa fa-link"></i></a></h2>
+                            <p>For the purposes of these Terms, the following definitions apply:</p>
+                            <ul>
+                                <li>
+                                    <strong>"Merchant Wallet"</strong> refers to the MPay Network application designed for businesses and merchants to accept payments.
+                                </li>
+                                <li>
+                                    <strong>"Consumer Wallet"</strong> refers to the MPay Network application designed for individual users to make payments, transfers, and manage funds.
+                                </li>
+                                <li>
+                                    <strong>"Account"</strong> refers to the user account created to access and use our Services.
+                                </li>
+                                <li>
+                                    <strong>"Transaction"</strong> refers to any payment, transfer, or financial operation conducted through our Services.
+                                </li>
+                                <li>
+                                    <strong>"QR Code Payment"</strong> refers to payments initiated by scanning a Quick Response code through the application.
+                                </li>
+                                <li>
+                                    <strong>"NFC Payment"</strong> refers to payments initiated via Near Field Communication (tap-to-pay) technology.
+                                </li>
+                                <li>
+                                    <strong>"P2P Transfer"</strong> refers to person-to-person money transfers between Consumer Wallet users.
+                                </li>
+                                <li>
+                                    <strong>"KYC"</strong> refers to Know Your Customer verification procedures required for certain account levels.
+                                </li>
+                            </ul>
+                        </section>
+                        <!-- Section 3: Eligibility -->
+                        <section class="tos-section" id="tos-eligibility">
+                            <h2>3. Eligibility <a href="#tos-eligibility" class="anchor-link" aria-label="Link to section"><i class="fa fa-link"></i></a></h2>
+                            <p>To use our Services, you must meet the following eligibility requirements:</p>
+                            <ol>
+                                <li>You must be at least 18 years of age, or the legal age of majority in your jurisdiction, whichever is greater.</li>
+                                <li>You must have the legal capacity to enter into a binding contract.</li>
+                                <li>You must not be prohibited from using payment services under applicable laws and regulations.</li>
+                                <li>For Merchant Wallet users: You must be a registered business entity or sole proprietor with valid business documentation.</li>
+                                <li>You must provide accurate and complete information during the registration process.</li>
+                            </ol>
+                            <p>We reserve the right to refuse service, terminate accounts, or cancel transactions at our sole discretion if we determine that any eligibility requirement is not met.</p>
+                        </section>
+                        <!-- Section 4: Account Registration & Security -->
+                        <section class="tos-section" id="tos-account">
+                            <h2>4. Account Registration &amp; Security <a href="#tos-account" class="anchor-link" aria-label="Link to section"><i class="fa fa-link"></i></a></h2>
+                            <h3>4.1 Account Creation</h3>
+                            <p>To access our Services, you must create an Account by providing accurate, current, and complete information as prompted during the registration process. You agree to maintain and promptly update your Account information to keep it accurate and complete.</p>
+                            <h3>4.2 Account Security</h3>
+                            <p>You are responsible for maintaining the confidentiality of your Account credentials, including your password, PIN, and any biometric authentication methods. You agree to:</p>
+                            <ul>
+                                <li>Create a strong, unique password for your Account</li>
+                                <li>Enable two-factor authentication (2FA) when available</li>
+                                <li>Not share your Account credentials with any third party</li>
+                                <li>Immediately notify us of any unauthorized access to your Account</li>
+                                <li>Log out of your Account when using shared or public devices</li>
+                            </ul>
+                            <h3>4.3 KYC Verification</h3>
+                            <p>Depending on your account type and transaction volume, you may be required to complete Know Your Customer (KYC) verification. This process may include providing government-issued identification, proof of address, and for merchants, business registration documents.</p>
+                            <div class="tos-callout tos-callout-warning">
+                                <i class="fa fa-exclamation-triangle"></i>
+                                <div class="tos-callout-content">
+                                    <strong>Security Notice:</strong> MPay Network will never ask for your password, PIN, or full payment credentials via email, phone, or text message. If you receive such a request, please report it immediately.
+                                </div>
+                            </div>
+                        </section>
+                        <!-- Section 5: Services Description -->
+                        <section class="tos-section" id="tos-services">
+                            <h2>5. Services Description <a href="#tos-services" class="anchor-link" aria-label="Link to section"><i class="fa fa-link"></i></a></h2>
+                            <p>MPay Network provides the following core services through our platform:</p>
+                            <h3>5.1 Consumer Wallet Services</h3>
+                            <ul>
+                                <li>Digital wallet management, including balance top-up and withdrawals</li>
+                                <li>QR code-based payments at participating merchants</li>
+                                <li>NFC (tap-to-pay) payments at compatible terminals</li>
+                                <li>Person-to-person (P2P) money transfers</li>
+                                <li>Transaction history and management</li>
+                            </ul>
+                            <h3>5.2 Merchant Wallet Services</h3>
+                            <ul>
+                                <li>QR code generation for payment acceptance</li>
+                                <li>NFC payment terminal functionality</li>
+                                <li>Transaction management, reporting, and export</li>
+                                <li>Business profile management</li>
+                                <li>Settlement and payout services</li>
+                            </ul>
+                            <h3>5.3 Service Availability</h3>
+                            <p>We strive to maintain continuous availability of our Services; however, we do not guarantee uninterrupted access. Scheduled maintenance, system updates, and unforeseen technical issues may result in temporary service interruptions.</p>
+                        </section>
+                        <!-- Section 6: Payment Terms -->
+                        <section class="tos-section" id="tos-payments">
+                            <h2>6. Payment Terms <a href="#tos-payments" class="anchor-link" aria-label="Link to section"><i class="fa fa-link"></i></a></h2>
+                            <h3>6.1 Transaction Processing</h3>
+                            <p>All transactions are processed in real-time, subject to network availability and verification requirements. Once a transaction is confirmed, it is generally irreversible unless a dispute is filed and resolved in your favor.</p>
+                            <h3>6.2 Fees</h3>
+                            <p>MPay Network may charge fees for certain services, including but not limited to:</p>
+                            <ul>
+                                <li>Transaction processing fees for merchants</li>
+                                <li>Currency conversion fees for cross-border transactions</li>
+                                <li>Withdrawal fees for transferring funds to external bank accounts</li>
+                                <li>Premium service or feature subscription fees</li>
+                            </ul>
+                            <p>All applicable fees will be clearly disclosed before you confirm a transaction or subscribe to a service. We reserve the right to modify our fee structure with prior notice.</p>
+                            <h3>6.3 Refunds and Disputes</h3>
+                            <p>Refund eligibility and processing times depend on the transaction type and the merchant's refund policy. For disputed transactions, you may initiate a dispute within 60 days of the transaction date through our in-app support system.</p>
+                            <h3>6.4 Transaction Limits</h3>
+                            <p>We may impose limits on transaction amounts, frequency, and cumulative values. These limits may vary based on your account verification level and are subject to change. Current limits are displayed within your Account settings.</p>
+                        </section>
+                        <!-- Section 7: Prohibited Activities -->
+                        <section class="tos-section" id="tos-prohibited">
+                            <h2>7. Prohibited Activities <a href="#tos-prohibited" class="anchor-link" aria-label="Link to section"><i class="fa fa-link"></i></a></h2>
+                            <p>You agree not to use the Services for any of the following prohibited activities:</p>
+                            <ul>
+                                <li>Illegal activities, including money laundering, terrorist financing, or fraud</li>
+                                <li>Transactions involving prohibited goods or services (e.g., illegal drugs, weapons, counterfeit goods)</li>
+                                <li>Circumventing transaction limits or verification requirements</li>
+                                <li>Creating multiple accounts for fraudulent purposes</li>
+                                <li>Interfering with or disrupting the integrity of our Services or servers</li>
+                                <li>Attempting to gain unauthorized access to other users' accounts</li>
+                                <li>Using automated systems, bots, or scrapers to access our Services</li>
+                                <li>Reverse engineering, decompiling, or disassembling any part of our applications</li>
+                                <li>Transmitting viruses, malware, or other harmful code</li>
+                                <li>Impersonating another person or entity</li>
+                                <li>Using the Services in any manner that violates applicable laws or regulations</li>
+                            </ul>
+                            <p>Violation of these prohibitions may result in immediate account suspension or termination, and may be reported to relevant law enforcement authorities.</p>
+                        </section>
+                        <!-- Section 8: Intellectual Property -->
+                        <section class="tos-section" id="tos-ip">
+                            <h2>8. Intellectual Property <a href="#tos-ip" class="anchor-link" aria-label="Link to section"><i class="fa fa-link"></i></a></h2>
+                            <p>All content, features, and functionality of the Services—including but not limited to the design, logo, trademarks, text, graphics, software, and source code—are owned by MPay Network or its licensors and are protected by international copyright, trademark, and other intellectual property laws.</p>
+                            <p>You are granted a limited, non-exclusive, non-transferable, revocable license to use our applications solely for their intended purpose. You may not:</p>
+                            <ul>
+                                <li>Copy, modify, or distribute any part of our Services without written permission</li>
+                                <li>Use our trademarks, logos, or branding without prior authorization</li>
+                                <li>Create derivative works based on our Services</li>
+                                <li>Remove or alter any proprietary notices from our applications</li>
+                            </ul>
+                        </section>
+                        <!-- Section 9: Privacy & Data Protection -->
+                        <section class="tos-section" id="tos-privacy">
+                            <h2>9. Privacy &amp; Data Protection <a href="#tos-privacy" class="anchor-link" aria-label="Link to section"><i class="fa fa-link"></i></a></h2>
+                            <p>Your privacy is important to us. Our collection, use, and protection of your personal data is governed by our <a href="#" onclick="event.preventDefault(); load_page('privacy_policy');">Privacy Policy</a>, which is incorporated into these Terms by reference.</p>
+                            <p>By using our Services, you consent to the collection and use of your information as described in our Privacy Policy. Key data practices include:</p>
+                            <ul>
+                                <li>Collection of personal identification and financial information for account creation and KYC compliance</li>
+                                <li>Processing of transaction data to provide our Services</li>
+                                <li>Use of device and location data for security and fraud prevention</li>
+                                <li>Storage and protection of data using industry-standard encryption and security measures</li>
+                            </ul>
+                            <div class="tos-callout tos-callout-info">
+                                <i class="fa fa-shield-alt"></i>
+                                <div class="tos-callout-content">
+                                    For complete details on how we handle your data, please review our <a href="#" onclick="event.preventDefault(); load_page('privacy_policy');">Privacy Policy</a>.
+                                </div>
+                            </div>
+                        </section>
+                        <!-- Section 10: Limitation of Liability -->
+                        <section class="tos-section" id="tos-liability">
+                            <h2>10. Limitation of Liability <a href="#tos-liability" class="anchor-link" aria-label="Link to section"><i class="fa fa-link"></i></a></h2>
+                            <p>To the maximum extent permitted by applicable law:</p>
+                            <ul>
+                                <li>
+                                    <strong>No Warranty:</strong> Our Services are provided "as is" and "as available" without warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, and non-infringement.
+                                </li>
+                                <li>
+                                    <strong>Limitation:</strong> MPay Network shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, goodwill, or other intangible losses.
+                                </li>
+                                <li>
+                                    <strong>Cap:</strong> Our total cumulative liability to you for any and all claims arising from or related to the Services shall not exceed the total amount of fees you paid to us in the twelve (12) months preceding the event giving rise to the claim.
+                                </li>
+                            </ul>
+                            <p>Some jurisdictions do not allow the exclusion or limitation of certain warranties or liabilities. In such cases, our liability will be limited to the fullest extent permitted by applicable law.</p>
+                        </section>
+                        <!-- Section 11: Indemnification -->
+                        <section class="tos-section" id="tos-indemnification">
+                            <h2>11. Indemnification <a href="#tos-indemnification" class="anchor-link" aria-label="Link to section"><i class="fa fa-link"></i></a></h2>
+                            <p>You agree to indemnify, defend, and hold harmless MPay Network, its affiliates, officers, directors, employees, and agents from and against any and all claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising from:</p>
+                            <ul>
+                                <li>Your use or misuse of the Services</li>
+                                <li>Your violation of these Terms</li>
+                                <li>Your violation of any applicable law or regulation</li>
+                                <li>Your violation of any third-party rights, including intellectual property rights</li>
+                                <li>Any content you submit or transmit through the Services</li>
+                            </ul>
+                        </section>
+                        <!-- Section 12: Termination -->
+                        <section class="tos-section" id="tos-termination">
+                            <h2>12. Termination <a href="#tos-termination" class="anchor-link" aria-label="Link to section"><i class="fa fa-link"></i></a></h2>
+                            <h3>12.1 Termination by You</h3>
+                            <p>You may close your Account at any time by contacting our support team or through the in-app account settings. Before closure, you must withdraw any remaining balance in your wallet. Account closure requests are subject to a processing period of up to 30 days.</p>
+                            <h3>12.2 Termination by Us</h3>
+                            <p>We may suspend or terminate your Account and access to the Services at any time, with or without notice, for reasons including but not limited to:</p>
+                            <ul>
+                                <li>Violation of these Terms or any applicable policy</li>
+                                <li>Suspected fraudulent, abusive, or illegal activity</li>
+                                <li>Failure to complete required KYC verification</li>
+                                <li>Extended period of account inactivity (12+ months)</li>
+                                <li>Requests from law enforcement or regulatory authorities</li>
+                            </ul>
+                            <h3>12.3 Effects of Termination</h3>
+                            <p>Upon termination, your right to use the Services will immediately cease. Any remaining wallet balance, subject to applicable fees and legal holds, will be returned according to our standard withdrawal procedures. Sections of these Terms that by their nature should survive termination shall continue in full force and effect.</p>
+                        </section>
+                        <!-- Section 13: Dispute Resolution -->
+                        <section class="tos-section" id="tos-disputes">
+                            <h2>13. Dispute Resolution <a href="#tos-disputes" class="anchor-link" aria-label="Link to section"><i class="fa fa-link"></i></a></h2>
+                            <h3>13.1 Informal Resolution</h3>
+                            <p>Before filing any formal claim, you agree to attempt to resolve any dispute with us informally by contacting our support team. Most concerns can be resolved quickly through our customer support channels.</p>
+                            <h3>13.2 Binding Arbitration</h3>
+                            <p>If a dispute cannot be resolved informally within 30 days, any controversy or claim arising out of or relating to these Terms or the Services shall be settled by binding arbitration in accordance with the rules of the applicable arbitration authority in the jurisdiction where MPay Network is registered.</p>
+                            <h3>13.3 Class Action Waiver</h3>
+                            <p>You agree that any dispute resolution proceedings will be conducted only on an individual basis and not in a class, consolidated, or representative action. You waive any right to participate in a class action lawsuit or class-wide arbitration.</p>
+                            <h3>13.4 Governing Law</h3>
+                            <p>These Terms shall be governed by and construed in accordance with the laws of the jurisdiction where MPay Network Ltd. is incorporated, without regard to its conflict of law provisions.</p>
+                        </section>
+                        <!-- Section 14: Changes to Terms -->
+                        <section class="tos-section" id="tos-changes">
+                            <h2>14. Changes to Terms <a href="#tos-changes" class="anchor-link" aria-label="Link to section"><i class="fa fa-link"></i></a></h2>
+                            <p>We reserve the right to modify these Terms at any time. When we make changes, we will:</p>
+                            <ul>
+                                <li>Update the "Last Updated" date at the top of this page</li>
+                                <li>Notify you of material changes through in-app notifications, email, or other appropriate channels</li>
+                                <li>Provide at least 30 days' notice before material changes take effect</li>
+                            </ul>
+                            <p>Your continued use of the Services after the effective date of any changes constitutes your acceptance of the revised Terms. If you do not agree to the changes, you should discontinue use of the Services and close your Account.</p>
+                        </section>
+                        <!-- Section 15: Contact Information -->
+                        <section class="tos-section" id="tos-contact">
+                            <h2>15. Contact Information <a href="#tos-contact" class="anchor-link" aria-label="Link to section"><i class="fa fa-link"></i></a></h2>
+                            <p>If you have any questions, concerns, or feedback regarding these Terms of Service, please contact us through the following channels:</p>
+                            <ul>
+                                <li>
+                                    <strong>Email:</strong> <a href="mailto:legal@mpaynetwork.com">legal@mpaynetwork.com</a>
+                                </li>
+                                <li>
+                                    <strong>Support:</strong> <a href="mailto:support@mpaynetwork.com">support@mpaynetwork.com</a>
+                                </li>
+                                <li>
+                                    <strong>Feedback Form:</strong> <a href="#" onclick="event.preventDefault(); load_page('feedback_form');">Submit Feedback</a>
+                                </li>
+                                <li>
+                                    <strong>Mailing Address:</strong> MPay Network Ltd., Suite 400, Technology Park, Business District
+                                </li>
+                            </ul>
+                            <p>For urgent security concerns, including suspected unauthorized access to your account, please contact our security team immediately at <a href="mailto:security@mpaynetwork.com">security@mpaynetwork.com</a>.</p>
+                        </section>
+                    </div>
+                    <!-- Actions -->
+                    <div class="tos-actions">
+                        <button class="tos-btn-home" id="tos_back_home" onclick="load_page('landing_page')" aria-label="Back to Home">
+                            <i class="fa fa-arrow-left"></i>
+                            Back to Home
+                        </button>
+                        <button class="tos-btn-privacy" onclick="load_page('privacy_policy')" aria-label="View Privacy Policy">
+                            <i class="fa fa-shield-alt"></i>
+                            Privacy Policy
+                        </button>
+                    </div>
+                </div>
+            </main>
+            <!-- Scroll to Top -->
+            <button class="tos-scroll-top" aria-label="Scroll to top">
+                <i class="fa fa-chevron-up"></i>
+            </button>
+            <!-- Print Button -->
+            <button class="tos-print-btn" aria-label="Print this page" title="Print Terms of Service">
+                <i class="fa fa-print"></i>
+            </button>
+            <!-- Footer -->
+            <footer class="tos-footer">
+                <div class="tos-footer-inner">
+                    <div class="tos-footer-brand">
+                        <div class="tos-footer-brand-logo">
+                            <img src="https://dev.think4ever.com/uifiles/20260311/ed3d2c21991e3bef5e069713af9fa6ca/only_m_with_white_bg_logo.png" alt="MPay Network"/>
+                            <span>MPay Network</span>
+                        </div>
+                        <p>Secure, fast, and reliable mobile payment solutions for merchants and consumers.</p>
+                    </div>
+                    <div class="tos-footer-col">
+                        <h4>Documentation</h4>
+                        <ul>
+                            <li>
+                                <a onclick="load_page('merchant_docs_home')">Merchant Wallet</a>
+                            </li>
+                            <li>
+                                <a onclick="load_page('consumer_docs_home')">Consumer Wallet</a>
+                            </li>
+                            <li>
+                                <a onclick="load_page('changelog_page')">Changelog</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tos-footer-col">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>
+                                <a onclick="load_page('blog_listing')">Blog</a>
+                            </li>
+                            <li>
+                                <a onclick="load_page('feedback_form')">Feedback</a>
+                            </li>
+                            <li>
+                                <a onclick="load_page('search_results')">Search</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tos-footer-col">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li>
+                                <a onclick="load_page('privacy_policy')">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a onclick="load_page('terms_of_service')" style="color:#fff;font-weight:600;">Terms of Service</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tos-footer-bottom">
+                    <span>&copy; 2025 MPay Network Ltd. All rights reserved.</span>
+                    <span>Built with care for security and trust.</span>
+                </div>
+            </footer>
+        </div>
+        <script src="assets/js/navigation.js"></script>
+        <script src="assets/js/terms_of_service.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    </body>
+</html>

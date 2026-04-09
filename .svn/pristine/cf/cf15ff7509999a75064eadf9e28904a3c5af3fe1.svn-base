@@ -1,0 +1,73 @@
+<div class="modern-header-inner">
+  <!-- Mobile Menu Toggle -->
+  <button class="modern-mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">
+    <i class="fa fa-bars"></i>
+  </button>
+
+  <!-- Logo matching sidebar -->
+  <div class="modern-header-logo-plate">
+    <div class="modern-logo" onclick="load_page('index')">
+      <img
+        src="https://dev.think4ever.com/uifiles/20260311/ed3d2c21991e3bef5e069713af9fa6ca/only_m_with_white_bg_logo.png"
+        alt="MPay Network Logo" />
+      <span>MPay Network</span>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="modern-mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+  <!-- Right header content -->
+  <div class="modern-header-content">
+    <nav class="modern-nav" aria-label="Main navigation">
+      <a onclick="load_page('index')" data-i18n="nav.overview">Overview</a>
+      <a onclick="load_page('merchant_docs_home')" data-i18n="nav.merchant">Merchant</a>
+      <a onclick="load_page('consumer_docs_home')" data-i18n="nav.consumer">Consumer</a>
+      <a onclick="load_page('blog_listing')" data-i18n="nav.blog">Blog</a>
+      <a onclick="load_page('changelog_page')" data-i18n="nav.changelog">Changelog</a>
+    </nav>
+
+    <button class="modern-search-btn" onclick="load_page('search_results')" aria-label="Search documentation">
+          <div class="search-content">
+            <i class="fa fa-search search-icon" aria-hidden="true"></i>
+            <span data-i18n="nav.search_placeholder">Search docs...</span>
+          </div>
+          <div class="modern-search-shortcuts">
+            <kbd>Ctrl</kbd>
+            <kbd>K</kbd>
+          </div>
+        </button>
+
+    <div class="modern-header-actions">
+      <!-- Modern Language Dropdown -->
+      <div class="modern-lang-wrapper" id="langWrapper">
+        <button class="modern-lang-btn" id="modernLangBtn" aria-expanded="false" aria-haspopup="true">
+          <i class="fa fa-globe" style="font-size: 14px"></i>
+          <span id="current-lang-code" style="text-transform: uppercase" data-i18n="meta.lang_code">EN</span>
+          <i class="fa fa-chevron-down" style="font-size: 10px; margin-left: 2px"></i>
+        </button>
+        
+        <div class="modern-lang-menu" id="modernLangMenu" role="menu">
+          <button onclick="changeLanguage('en')" data-lang-btn="en" class="lang-opt-en" role="menuitem">
+            <span>English</span><span class="lang-code">EN</span>
+          </button>
+          <button onclick="changeLanguage('es')" data-lang-btn="es" class="lang-opt-es" role="menuitem">
+            <span>Español</span><span class="lang-code">ES</span>
+          </button>
+          <button onclick="changeLanguage('fr')" data-lang-btn="fr" class="lang-opt-fr" role="menuitem">
+            <span>Français</span><span class="lang-code">FR</span>
+          </button>
+          <button onclick="changeLanguage('it')" data-lang-btn="it" class="lang-opt-it" role="menuitem">
+            <span>Italiano</span><span class="lang-code">IT</span>
+          </button>
+          <button onclick="changeLanguage('nl')" data-lang-btn="nl" class="lang-opt-nl" role="menuitem">
+            <span>Nederlands</span><span class="lang-code">NL</span>
+          </button>
+        </div>
+      </div>
+      <!-- <button class="modern-cta-btn" data-i18n="nav.dashboard">
+        Dashboard
+      </button> -->
+    </div>
+  </div>
+</div>

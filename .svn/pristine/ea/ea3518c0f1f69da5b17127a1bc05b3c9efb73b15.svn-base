@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin Login</title>
+        <link href="css/theme.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/global.css">
+        <link rel="stylesheet" href="assets/css/admin_login.css">
+        <style>/* Basic reset for preview consistency */body { margin: 0; padding: 0; font-family: sans-serif; }</style>
+    </head>
+    <body>
+        <div class="admin-login-page">
+            <div class="admin-login-card" role="main">
+                <!-- Logo -->
+                <div class="admin-login-logo">
+                    <div class="admin-login-logo-icon">
+                        <img src="https://dev.think4ever.com/uifiles/20260311/ed3d2c21991e3bef5e069713af9fa6ca/only_m_with_white_bg_logo.png" alt="MPay Network Logo" width="56" height="56">
+                    </div>
+                    <span class="admin-login-logo-text">MPay Network</span>
+                    <span class="admin-login-badge"><i class="fa fa-shield" aria-hidden="true"></i> Admin Panel</span>
+                </div>
+                <!-- Title -->
+                <h1 id="al_title" class="admin-login-title">Admin Panel Login</h1>
+                <p class="admin-login-subtitle">Enter your credentials to access the moderation panel</p>
+                <!-- Error Message -->
+                <div id="al_error_msg" class="admin-login-error" role="alert" aria-live="assertive">
+                    <i class="fa fa-exclamation-circle" aria-hidden="true"></i>
+                    <span class="error-text">Invalid credentials</span>
+                </div>
+                <!-- Login Form -->
+                <form id="adminLoginForm" class="admin-login-form" novalidate autocomplete="off">
+                    <!-- Username Field -->
+                    <div class="admin-login-field">
+                        <label for="al_username">Username <span class="required-star" aria-hidden="true">*</span>
+                        </label>
+                        <div id="usernameWrapper" class="admin-login-input-wrapper">
+                            <i class="fa fa-user input-icon" aria-hidden="true"></i>
+                            <input type="text" id="al_username" name="username" placeholder="Enter your username" required autocomplete="username" aria-required="true" aria-describedby="usernameErrorText">
+                        </div>
+                        <span id="usernameErrorText" class="field-error-text" role="alert"></span>
+                    </div>
+                    <!-- Password Field -->
+                    <div class="admin-login-field">
+                        <label for="al_password">Password <span class="required-star" aria-hidden="true">*</span>
+                        </label>
+                        <div id="passwordWrapper" class="admin-login-input-wrapper">
+                            <i class="fa fa-lock input-icon" aria-hidden="true"></i>
+                            <input type="password" id="al_password" name="password" placeholder="Enter your password" required autocomplete="current-password" aria-required="true" aria-describedby="passwordErrorText">
+                            <button type="button" id="passwordToggle" class="password-toggle-btn" aria-label="Show password" tabindex="0">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <span id="passwordErrorText" class="field-error-text" role="alert"></span>
+                    </div>
+                    <!-- Login Button -->
+                    <button type="submit" id="al_login_btn" class="admin-login-btn" aria-busy="false">
+                        <span class="btn-spinner" aria-hidden="true"></span>
+                        <span class="btn-text">Login</span>
+                        <i class="fa fa-arrow-right btn-icon" aria-hidden="true"></i>
+                    </button>
+                    <!-- Divider -->
+                    <div class="admin-login-divider">
+                        <span>or</span>
+                    </div>
+                    <!-- Back to Site -->
+                    <button type="button" id="al_back_home" class="admin-login-back" onclick="load_page('landing_page')">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                        Back to Site
+                    </button>
+                </form>
+                <!-- Security Note -->
+                <div class="admin-login-security-note">
+                    <i class="fa fa-lock" aria-hidden="true"></i>
+                    <span>Secured connection</span>
+                </div>
+                <!-- Footer -->
+                <div class="admin-login-footer">
+                    &copy; 2025 MPay Network. All rights reserved.<br>
+                    <a href="#" onclick="load_page('privacy_policy'); return false;">Privacy Policy</a> &middot; <a href="#" onclick="load_page('terms_of_service'); return false;">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+        <script src="assets/js/navigation.js"></script>
+        <script src="assets/js/admin_login.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    </body>
+</html>

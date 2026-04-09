@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title data-i18n="blog.hero.title">MPay Network Blog</title>
+        <link href="css/theme.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/global.css">
+        <link rel="stylesheet" href="assets/css/blog_listing.css">
+        <style>/* Basic reset for preview consistency */body { margin: 0; padding: 0; font-family: sans-serif; }</style>
+    </head>
+    <body>
+        <div class="blog-listing-page consumer-getting-started">
+            <a href="#blogMainContent" class="skip-to-content">Skip to content</a>
+            <!-- Header -->
+              <header class="modern-header" id="consumerHeader"></header>
+            <!-- Sidebar Overlay -->
+            <div class="sidebar-overlay" id="sidebarOverlay"></div>
+            <!-- Layout -->
+            <div class="blog-layout">
+                <!-- Sidebar -->
+                <aside class="blog-sidebar" id="blogSidebar" role="navigation" aria-label="Blog navigation">
+                    <div class="sidebar-section">
+                        <div class="sidebar-section-title" data-i18n="blog.sidebar.nav_title">Navigation</div>
+                        <ul class="sidebar-nav-list">
+                            <li class="sidebar-nav-item">
+                                <a class="sidebar-nav-link active" onclick="load_page('blog_listing')"> <i class="fa-solid fa-newspaper"></i>
+              <span data-i18n="blog.sidebar.all_posts">All Posts</span> <span class="sidebar-nav-count">9</span> </a>
+                            </li>
+                            <li class="sidebar-nav-item">
+                                <a class="sidebar-nav-link" onclick="load_page('index')"> <i class="fa-solid fa-house"></i>
+              <span data-i18n="nav.overview">Overview</span> </a>
+                            </li>
+                            <li class="sidebar-nav-item">
+                                <a class="sidebar-nav-link" onclick="load_page('merchant_docs_home')"> <i class="fa-solid fa-store"></i>
+              <span data-i18n="nav.merchant">Merchant Docs</span> </a>
+                            </li>
+                            <li class="sidebar-nav-item">
+                                <a class="sidebar-nav-link" onclick="load_page('consumer_docs_home')"> <i class="fa-solid fa-wallet"></i>
+              <span data-i18n="nav.consumer">Consumer Docs</span> </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-section">
+                        <div class="sidebar-section-title" data-i18n="blog.sidebar.filter_tags">Filter by Tag</div>
+                        <div class="sidebar-tag-list">
+                            <span class="sidebar-tag" data-tag="News" data-i18n="blog.filters.news">News</span>
+                            <span class="sidebar-tag" data-tag="Updates" data-i18n="blog.filters.updates">Updates</span>
+                            <span class="sidebar-tag" data-tag="Tutorials" data-i18n="blog.filters.tutorials">Tutorials</span>
+                            <span class="sidebar-tag" data-tag="Tips" data-i18n="blog.filters.tips">Tips</span>
+                            <span class="sidebar-tag" data-tag="Merchant" data-i18n="blog.filters.merchant">Merchant</span>
+                            <span class="sidebar-tag" data-tag="Consumer" data-i18n="blog.filters.consumer">Consumer</span>
+                        </div>
+                    </div>
+                    <div class="sidebar-section">
+                        <div class="sidebar-section-title" data-i18n="blog.sidebar.recent_posts">Recent Posts</div>
+                        <div class="sidebar-recent-item" tabindex="0" role="link">
+                            <div class="sidebar-recent-title" data-i18n="blog.data.p1.title">Introducing MPay Network 2.0</div>
+                            <div class="sidebar-recent-meta">Mar 10, 2025 · 8 min read</div>
+                        </div>
+                        <div class="sidebar-recent-item" tabindex="0" role="link">
+                            <div class="sidebar-recent-title" data-i18n="blog.data.p2.title">How to Set Up QR Code Payments</div>
+                            <div class="sidebar-recent-meta">Mar 7, 2025 · 12 min read</div>
+                        </div>
+                        <div class="sidebar-recent-item" tabindex="0" role="link">
+                            <div class="sidebar-recent-title" data-i18n="blog.data.p3.title">5 Tips for Secure Mobile Payments</div>
+                            <div class="sidebar-recent-meta">Mar 4, 2025 · 5 min read</div>
+                        </div>
+                        <div class="sidebar-recent-item" tabindex="0" role="link">
+                            <div class="sidebar-recent-title" data-i18n="blog.data.p4.title">NFC Payments: The Future of Commerce</div>
+                            <div class="sidebar-recent-meta">Feb 28, 2025 · 10 min read</div>
+                        </div>
+                    </div>
+                    <div class="sidebar-section">
+                        <a class="sidebar-rss-link" href="#" aria-label="Subscribe to RSS Feed"> <i class="fa-solid fa-rss"></i>
+          <span data-i18n="blog.sidebar.rss">RSS Feed</span> </a>
+                    </div>
+                </aside>
+                <!-- Main Content -->
+                <main class="blog-main" id="blogMainContent">
+                    <div class="blog-main-inner">
+                        <!-- Hero -->
+                        <div class="blog-hero">
+                            <h1 class="blog-hero-title" id="bl_title" data-i18n="blog.hero.title">MPay Network Blog</h1>
+                            <p class="blog-hero-description" id="bl_description" data-i18n="blog.hero.description">Latest news, updates, and tips for MPay Network Wallet</p>
+                        </div>
+                        <!-- Tag Filter Bar -->
+                        <div class="tag-filter-bar" id="bl_tag_filter" role="group" aria-label="Filter posts by tag">
+                            <span class="tag-filter-label"><i class="fa-solid fa-filter"></i></span>
+                            <button class="tag-filter-btn active" data-tag="all" data-i18n="blog.filters.all">All</button>
+                            <button class="tag-filter-btn" data-tag="News">
+                                <i class="fa-solid fa-bullhorn"></i> <span data-i18n="blog.filters.news">News</span>
+                            </button>
+                            <button class="tag-filter-btn" data-tag="Updates">
+                                <i class="fa-solid fa-arrows-rotate"></i> <span data-i18n="blog.filters.updates">Updates</span>
+                            </button>
+                            <button class="tag-filter-btn" data-tag="Tutorials">
+                                <i class="fa-solid fa-graduation-cap"></i> <span data-i18n="blog.filters.tutorials">Tutorials</span>
+                            </button>
+                            <button class="tag-filter-btn" data-tag="Tips">
+                                <i class="fa-solid fa-lightbulb"></i> <span data-i18n="blog.filters.tips">Tips</span>
+                            </button>
+                            <button class="tag-filter-btn" data-tag="Merchant">
+                                <i class="fa-solid fa-store"></i> <span data-i18n="blog.filters.merchant">Merchant</span>
+                            </button>
+                            <button class="tag-filter-btn" data-tag="Consumer">
+                                <i class="fa-solid fa-user"></i> <span data-i18n="blog.filters.consumer">Consumer</span>
+                            </button>
+                        </div>
+                        <!-- Active Filters -->
+                        <div class="active-filters" id="activeFilters" style="display: none;"></div>
+                        <!-- Results Info & Sort -->
+                        <div class="blog-results-info">
+                            <span id="blogResultsInfo" class="blog-results-count">Showing <strong>9</strong> of <strong>9</strong> posts</span>
+                            <div class="blog-sort-select">
+                                <label for="blogSortSelect" data-i18n="blog.filters.sort_by">Sort by:</label>
+                                <select id="blogSortSelect">
+                                    <option value="newest" data-i18n="blog.filters.sort_newest">Newest first</option>
+                                    <option value="oldest" data-i18n="blog.filters.sort_oldest">Oldest first</option>
+                                    <option value="rating" data-i18n="blog.filters.sort_rating">Highest rated</option>
+                                    <option value="reading_time" data-i18n="blog.filters.sort_reading">Quick reads</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Post Grid -->
+                        <div class="blog-post-grid" id="blogPostGrid" aria-label="Blog posts">
+                            <!-- Posts are rendered by JavaScript -->
+                        </div>
+                        <!-- Pagination -->
+                        <nav class="blog-pagination" id="blogPagination" aria-label="Blog pagination">
+                            <!-- Pagination rendered by JavaScript -->
+                        </nav>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div id="docFooter"></div>
+        <script src="assets/js/i18n.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                if (window.I18n) {
+                    window.I18n.init();
+                }
+            });
+        </script>
+        <script src="assets/js/navigation.js"></script>
+        <script src="assets/js/blog_listing.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    </body>
+</html>

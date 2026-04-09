@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchant - Getting Started</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/merchant_getting_started.css">
+    <style>
+        /* Basic reset for preview consistency */
+        body { margin: 0; padding: 0; font-family: sans-serif; }
+    </style>
+</head>
+<body>
+    <div class="mgs-page">
+  <!-- Skip to content -->
+  <a href="#mgs-main-content" class="sr-only" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;"  onfocus="this.style.position='fixed';this.style.left='16px';this.style.top='16px';this.style.width='auto';this.style.height='auto';this.style.overflow='visible';this.style.zIndex='9999';this.style.background='#2563eb';this.style.color='#fff';this.style.padding='12px 24px';this.style.borderRadius='8px';this.style.fontSize='14px';this.style.fontWeight='600';" onblur="this.style.position='absolute';this.style.left='-9999px';this.style.width='1px';this.style.height='1px';this.style.overflow='hidden';">Skip to content</a>
+
+  <!-- Sidebar Overlay (mobile) -->
+  <div class="mgs-sidebar-overlay" id="mgsSidebarOverlay" aria-hidden="true"></div>
+
+  <!-- Sidebar -->
+  <aside class="mgs-sidebar" id="mgsSidebar" role="navigation" aria-label="Merchant documentation navigation">
+    <div class="mgs-sidebar-section">
+      <div class="mgs-sidebar-section-label">Getting Started</div>
+      <ul class="mgs-sidebar-nav">
+        <li><a href="#" onclick="load_page('merchant_docs_home'); return false;"><i class="fa fa-home nav-icon"></i>Overview</a></li>
+        <li><a href="#" class="active" onclick="return false;"><i class="fa fa-rocket nav-icon"></i>Getting Started</a></li>
+        <li><a href="#" onclick="load_page('merchant_account_setup'); return false;"><i class="fa fa-user-check nav-icon"></i>Account Setup</a></li>
+      </ul>
+    </div>
+    <div class="mgs-sidebar-section">
+      <div class="mgs-sidebar-section-label">Payments</div>
+      <ul class="mgs-sidebar-nav">
+        <li><a href="#" onclick="load_page('merchant_qr_payments'); return false;"><i class="fa fa-qrcode nav-icon"></i>QR Code Payments</a></li>
+        <li><a href="#" onclick="load_page('merchant_nfc_payments'); return false;"><i class="fa fa-wifi nav-icon"></i>NFC Payments</a></li>
+        <li><a href="#" onclick="load_page('merchant_transactions'); return false;"><i class="fa fa-list-alt nav-icon"></i>Transactions</a></li>
+      </ul>
+    </div>
+    <div class="mgs-sidebar-section">
+      <div class="mgs-sidebar-section-label">Configuration</div>
+      <ul class="mgs-sidebar-nav">
+        <li><a href="#" onclick="load_page('merchant_settings'); return false;"><i class="fa fa-cog nav-icon"></i>Settings</a></li>
+        <li><a href="#" onclick="load_page('merchant_troubleshooting'); return false;"><i class="fa fa-wrench nav-icon"></i>Troubleshooting</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Sidebar Toggle (mobile) -->
+  <button class="mgs-sidebar-toggle" id="mgsSidebarToggle" aria-label="Toggle sidebar navigation" aria-expanded="false">
+    <i class="fa fa-bars"></i>
+  </button>
+
+  <!-- Main Content -->
+  <main class="mgs-main" id="mgs-main-content">
+    <div class="mgs-content-wrapper">
+
+      <!-- Breadcrumb -->
+      <nav class="mgs-breadcrumb" aria-label="Breadcrumb">
+        <a href="#" onclick="load_page('landing_page'); return false;">Docs</a>
+        <span class="breadcrumb-sep"><i class="fa fa-chevron-right"></i></span>
+        <a href="#" onclick="load_page('merchant_docs_home'); return false;">Merchant Wallet</a>
+        <span class="breadcrumb-sep"><i class="fa fa-chevron-right"></i></span>
+        <span class="breadcrumb-current">Getting Started</span>
+      </nav>
+
+      <!-- Page Title -->
+      <h1 class="mgs-page-title" id="mgs-top">Getting Started with Merchant Wallet</h1>
+
+      <div class="mgs-time-badge">
+        <i class="fa fa-clock"></i>
+        <span>Estimated setup time: 10 minutes</span>
+      </div>
+
+      <p class="mgs-page-subtitle">
+        Welcome to the MPay Network Merchant Wallet! This guide will walk you through downloading, installing, and setting up your merchant wallet so you can start accepting QR code and NFC payments from customers.
+      </p>
+
+      <!-- ===== Section: Download & Install ===== -->
+      <section class="mgs-section" id="section-download">
+        <h2 class="mgs-section-title">Download &amp; Install</h2>
+        <p>The MPay Merchant Wallet is available for both iOS and Android devices. Download the app from your device's official app store.</p>
+
+        <div class="mgs-download-btns">
+          <a href="#" class="mgs-download-btn" aria-label="Download on Apple App Store">
+            <i class="fa fa-apple"></i>
+            <div class="mgs-download-btn-text">
+              <small>Download on the</small>
+              <span>App Store</span>
+            </div>
+          </a>
+          <a href="#" class="mgs-download-btn" aria-label="Download on Google Play">
+            <i class="fa fa-google-play"></i>
+            <div class="mgs-download-btn-text">
+              <small>Get it on</small>
+              <span>Google Play</span>
+            </div>
+          </a>
+        </div>
+
+        <h3 class="mgs-section-subtitle">System Requirements</h3>
+
+        <div class="mgs-requirements">
+          <div class="mgs-requirement-card">
+            <h4><i class="fa fa-apple"></i> iOS</h4>
+            <ul>
+              <li><i class="fa fa-check-circle"></i> iOS 15.0 or later</li>
+              <li><i class="fa fa-check-circle"></i> iPhone 8 or newer</li>
+              <li><i class="fa fa-check-circle"></i> 120 MB free storage</li>
+              <li><i class="fa fa-check-circle"></i> Camera for QR codes</li>
+              <li><i class="fa fa-check-circle"></i> NFC capable device</li>
+            </ul>
+          </div>
+          <div class="mgs-requirement-card">
+            <h4><i class="fa fa-android"></i> Android</h4>
+            <ul>
+              <li><i class="fa fa-check-circle"></i> Android 10.0 (API 29)+</li>
+              <li><i class="fa fa-check-circle"></i> 100 MB free storage</li>
+              <li><i class="fa fa-check-circle"></i> Camera for QR codes</li>
+              <li><i class="fa fa-check-circle"></i> NFC hardware</li>
+              <li><i class="fa fa-check-circle"></i> Google Play Services</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="mgs-section-subtitle">Installation Steps</h3>
+
+        <div class="mgs-steps">
+          <div class="mgs-step">
+            <div class="mgs-step-number">1</div>
+            <h4 class="mgs-step-title">Open your App Store or Google Play</h4>
+            <div class="mgs-step-content">
+              Launch the App Store (iOS) or Google Play Store (Android) on your device.
+            </div>
+          </div>
+          <div class="mgs-step">
+            <div class="mgs-step-number">2</div>
+            <h4 class="mgs-step-title">Search for "MPay Merchant"</h4>
+            <div class="mgs-step-content">
+              Type <code>MPay Merchant Wallet</code> in the search bar. Look for the official app with the MPay Network logo and verified publisher badge.
+            </div>
+          </div>
+          <div class="mgs-step">
+            <div class="mgs-step-number">3</div>
+            <h4 class="mgs-step-title">Download and install</h4>
+            <div class="mgs-step-content">
+              Tap <strong>Install</strong> (Android) or <strong>Get</strong> (iOS). Authenticate if prompted. Wait for the download and installation to complete.
+            </div>
+          </div>
+          <div class="mgs-step">
+            <div class="mgs-step-number">4</div>
+            <h4 class="mgs-step-title">Grant permissions</h4>
+            <div class="mgs-step-content">
+              On first launch, the app will request permissions for the camera (QR scanning) and NFC. These are required for payment functionality.
+            </div>
+          </div>
+        </div>
+
+        <div class="mgs-callout mgs-callout-warning">
+          <div class="mgs-callout-icon"><i class="fa fa-exclamation-triangle"></i></div>
+          <div class="mgs-callout-body">
+            <strong>Important:</strong> Only download the MPay Merchant Wallet from official app stores. Do not install APK files from third-party sources, as these may be compromised.
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Section: First Login ===== -->
+      <section class="mgs-section" id="section-first-login">
+        <h2 class="mgs-section-title">First Login</h2>
+        <p>After installation, launch the MPay Merchant Wallet and follow these steps to log in for the first time.</p>
+
+        <div class="mgs-steps">
+          <div class="mgs-step">
+            <div class="mgs-step-number">1</div>
+            <h4 class="mgs-step-title">Open the App</h4>
+            <div class="mgs-step-content">
+              Tap the MPay Merchant Wallet icon on your home screen. The welcome screen will appear with options to <strong>Sign In</strong> or <strong>Create Account</strong>.
+            </div>
+          </div>
+          <div class="mgs-step">
+            <div class="mgs-step-number">2</div>
+            <h4 class="mgs-step-title">Create a New Account</h4>
+            <div class="mgs-step-content">
+              If you're new, tap <strong>Create Account</strong>. You'll need to provide:
+              <ul style="margin-top:8px;padding-left:18px;">
+                <li>Your business email address</li>
+                <li>A strong password (min. 8 characters, with uppercase, lowercase, and a number)</li>
+                <li>Your phone number for SMS verification</li>
+              </ul>
+            </div>
+          </div>
+          <div class="mgs-step">
+            <div class="mgs-step-number">3</div>
+            <h4 class="mgs-step-title">Verify Your Email</h4>
+            <div class="mgs-step-content">
+              Check your inbox for a verification email from <code>noreply@mpaynetwork.com</code>. Click the verification link within 24 hours to activate your account.
+            </div>
+          </div>
+          <div class="mgs-step">
+            <div class="mgs-step-number">4</div>
+            <h4 class="mgs-step-title">SMS Verification</h4>
+            <div class="mgs-step-content">
+              Enter the 6-digit code sent to your registered phone number. This two-factor authentication secures your account.
+            </div>
+          </div>
+          <div class="mgs-step">
+            <div class="mgs-step-number">5</div>
+            <h4 class="mgs-step-title">Sign In</h4>
+            <div class="mgs-step-content">
+              Return to the app and sign in with your email and password. You'll be directed to the initial setup walkthrough.
+            </div>
+          </div>
+        </div>
+
+        <div class="mgs-callout mgs-callout-info">
+          <div class="mgs-callout-icon"><i class="fa fa-info-circle"></i></div>
+          <div class="mgs-callout-body">
+            <strong>Tip:</strong> Enable biometric login (Face ID / fingerprint) during setup for faster access. You can always change this later in <a href="#" onclick="load_page('merchant_settings'); return false;">Settings &amp; Configuration</a>.
+          </div>
+        </div>
+
+        <div class="mgs-callout mgs-callout-danger">
+          <div class="mgs-callout-icon"><i class="fa fa-shield"></i></div>
+          <div class="mgs-callout-body">
+            <strong>Security Note:</strong> Never share your password, verification codes, or recovery phrases with anyone. MPay Network staff will never ask for your password.
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Section: Initial Setup Walkthrough ===== -->
+      <section class="mgs-section" id="section-initial-setup">
+        <h2 class="mgs-section-title">Initial Setup Walkthrough</h2>
+        <p>After your first login, the app will guide you through the initial configuration process. Here's what to expect at each step.</p>
+
+        <h3 class="mgs-section-subtitle">Step 1: Business Profile</h3>
+        <p>Enter your business information to personalize your merchant account:</p>
+        <ul style="padding-left:20px;margin-bottom:16px;color:#334155;line-height:1.75;">
+          <li><strong>Business Name</strong> — Your official or trading name</li>
+          <li><strong>Business Type</strong> — Sole proprietor, partnership, LLC, corporation</li>
+          <li><strong>Industry Category</strong> — Select from the dropdown (e.g., Retail, Food &amp; Beverage, Services)</li>
+          <li><strong>Business Address</strong> — Your primary operating address</li>
+        </ul>
+
+        <h3 class="mgs-section-subtitle">Step 2: Payment Preferences</h3>
+        <p>Configure how you'll accept payments:</p>
+        <ul style="padding-left:20px;margin-bottom:16px;color:#334155;line-height:1.75;">
+          <li><strong>Primary Currency</strong> — Select your default transaction currency</li>
+          <li><strong>QR Code Payments</strong> — Enable/disable QR code payment acceptance</li>
+          <li><strong>NFC Payments</strong> — Enable/disable NFC tap-to-pay</li>
+          <li><strong>Payment Notifications</strong> — Choose sound alerts, push notifications, or both</li>
+        </ul>
+
+        <div class="mgs-code-block">
+          <div class="mgs-code-header">
+            <span class="mgs-code-lang">Example Configuration</span>
+            <button class="mgs-code-copy" aria-label="Copy code">Copy</button>
+          </div>
+          <div class="mgs-code-body">
+<code><span class="code-comment">// Your merchant wallet configuration</span>
+{
+  <span class="code-keyword">"business_name"</span>: <span class="code-string">"ABC Coffee Shop"</span>,
+  <span class="code-keyword">"currency"</span>: <span class="code-string">"USD"</span>,
+  <span class="code-keyword">"qr_payments"</span>: <span class="code-keyword">true</span>,
+  <span class="code-keyword">"nfc_payments"</span>: <span class="code-keyword">true</span>,
+  <span class="code-keyword">"notifications"</span>: {
+    <span class="code-keyword">"push"</span>: <span class="code-keyword">true</span>,
+    <span class="code-keyword">"sound"</span>: <span class="code-keyword">true</span>,
+    <span class="code-keyword">"email_receipts"</span>: <span class="code-keyword">true</span>
+  }
+}</code>
+          </div>
+        </div>
+
+        <h3 class="mgs-section-subtitle">Step 3: KYC Verification</h3>
+        <p>To comply with financial regulations and unlock full features, you'll need to complete identity verification (KYC):</p>
+        <div class="mgs-steps">
+          <div class="mgs-step">
+            <div class="mgs-step-number"><i class="fa fa-id-card" style="font-size:0.7rem;"></i></div>
+            <h4 class="mgs-step-title">Upload Business Documents</h4>
+            <div class="mgs-step-content">
+              Provide a clear photo or scan of your business registration certificate, tax ID, or equivalent document.
+            </div>
+          </div>
+          <div class="mgs-step">
+            <div class="mgs-step-number"><i class="fa fa-user" style="font-size:0.7rem;"></i></div>
+            <h4 class="mgs-step-title">Owner Identity Verification</h4>
+            <div class="mgs-step-content">
+              Upload a government-issued photo ID (passport, driver's license, or national ID) for the primary account owner.
+            </div>
+          </div>
+          <div class="mgs-step">
+            <div class="mgs-step-number"><i class="fa fa-check" style="font-size:0.7rem;"></i></div>
+            <h4 class="mgs-step-title">Verification Review</h4>
+            <div class="mgs-step-content">
+              Our team will review your documents within 1–2 business days. You'll receive an email and push notification once your account is verified.
+            </div>
+          </div>
+        </div>
+
+        <div class="mgs-callout mgs-callout-success">
+          <div class="mgs-callout-icon"><i class="fa fa-check-circle"></i></div>
+          <div class="mgs-callout-body">
+            <strong>Good news!</strong> You can start accepting test payments immediately while your KYC verification is pending. Live payments will be enabled once verification is complete.
+          </div>
+        </div>
+
+        <h3 class="mgs-section-subtitle">Step 4: Generate Your First QR Code</h3>
+        <p>Once setup is complete, you can generate your merchant QR code to start accepting payments. Navigate to the QR Code section in the app dashboard and tap <strong>Generate QR</strong>.</p>
+
+        <div class="mgs-callout mgs-callout-info">
+          <div class="mgs-callout-icon"><i class="fa fa-lightbulb"></i></div>
+          <div class="mgs-callout-body">
+            <strong>Next step:</strong> For detailed instructions on KYC and business verification, see the <a href="#" onclick="load_page('merchant_account_setup'); return false;">Account Setup &amp; Verification</a> guide.
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Screenshot Gallery ===== -->
+      <section class="mgs-section" id="section-screenshots">
+        <h3 class="mgs-screenshot-gallery-title"><i class="fa fa-images" style="color:#2563eb;margin-right:8px;"></i>Setup Process Screenshots</h3>
+
+        <div class="mgs-screenshots">
+          <div class="mgs-screenshot" tabindex="0" role="button" aria-label="View screenshot: Welcome Screen">
+            <div class="mgs-screenshot-img">
+              <span class="screenshot-step-badge">1</span>
+              <i class="fa fa-mobile-alt"></i>
+            </div>
+            <div class="mgs-screenshot-caption">Welcome Screen</div>
+          </div>
+          <div class="mgs-screenshot" tabindex="0" role="button" aria-label="View screenshot: Create Account">
+            <div class="mgs-screenshot-img">
+              <span class="screenshot-step-badge">2</span>
+              <i class="fa fa-user-plus"></i>
+            </div>
+            <div class="mgs-screenshot-caption">Create Account</div>
+          </div>
+          <div class="mgs-screenshot" tabindex="0" role="button" aria-label="View screenshot: Email Verification">
+            <div class="mgs-screenshot-img">
+              <span class="screenshot-step-badge">3</span>
+              <i class="fa fa-envelope-open"></i>
+            </div>
+            <div class="mgs-screenshot-caption">Email Verification</div>
+          </div>
+          <div class="mgs-screenshot" tabindex="0" role="button" aria-label="View screenshot: Business Profile">
+            <div class="mgs-screenshot-img">
+              <span class="screenshot-step-badge">4</span>
+              <i class="fa fa-building"></i>
+            </div>
+            <div class="mgs-screenshot-caption">Business Profile Setup</div>
+          </div>
+          <div class="mgs-screenshot" tabindex="0" role="button" aria-label="View screenshot: Payment Preferences">
+            <div class="mgs-screenshot-img">
+              <span class="screenshot-step-badge">5</span>
+              <i class="fa fa-sliders-h"></i>
+            </div>
+            <div class="mgs-screenshot-caption">Payment Preferences</div>
+          </div>
+          <div class="mgs-screenshot" tabindex="0" role="button" aria-label="View screenshot: Dashboard Ready">
+            <div class="mgs-screenshot-img">
+              <span class="screenshot-step-badge">6</span>
+              <i class="fa fa-tachometer-alt"></i>
+            </div>
+            <div class="mgs-screenshot-caption">Dashboard Ready</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Screenshot Modal -->
+      <div class="mgs-modal-overlay" id="mgsScreenshotModal" role="dialog" aria-modal="true" aria-label="Screenshot preview">
+        <div class="mgs-modal-content">
+          <button class="mgs-modal-close" id="mgsModalClose" aria-label="Close preview">
+            <i class="fa fa-times"></i>
+          </button>
+          <div class="mgs-modal-image">
+            <i class="fa fa-mobile-alt"></i>
+          </div>
+          <div class="mgs-modal-caption" id="mgsModalCaption">Screenshot</div>
+        </div>
+      </div>
+
+      <!-- ===== FAQ Section ===== -->
+      <section class="mgs-faq" id="section-faq">
+        <h2 class="mgs-faq-title">Frequently Asked Questions</h2>
+
+        <div class="mgs-faq-list">
+          <div class="mgs-faq-item">
+            <button class="mgs-faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+              <span>What devices are supported?</span>
+              <i class="fa fa-chevron-down"></i>
+            </button>
+            <div class="mgs-faq-answer" id="faq-answer-1">
+              <div class="mgs-faq-answer-inner">
+                The MPay Merchant Wallet supports iPhones running iOS 15+ (iPhone 8 and later) and Android devices running Android 10+ with NFC capability. For the best experience, we recommend using a device released within the last 3 years.
+              </div>
+            </div>
+          </div>
+
+          <div class="mgs-faq-item">
+            <button class="mgs-faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+              <span>How long does KYC verification take?</span>
+              <i class="fa fa-chevron-down"></i>
+            </button>
+            <div class="mgs-faq-answer" id="faq-answer-2">
+              <div class="mgs-faq-answer-inner">
+                KYC verification typically takes 1–2 business days. In some cases, additional documentation may be requested, which can extend the process to 3–5 business days. You can check your verification status in the app under <strong>Settings → Account Status</strong>.
+              </div>
+            </div>
+          </div>
+
+          <div class="mgs-faq-item">
+            <button class="mgs-faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+              <span>Can I use the app on multiple devices?</span>
+              <i class="fa fa-chevron-down"></i>
+            </button>
+            <div class="mgs-faq-answer" id="faq-answer-3">
+              <div class="mgs-faq-answer-inner">
+                Yes, you can sign in on up to 3 devices simultaneously. Each new device login will trigger a security notification. For security, we recommend logging out of devices you're no longer using.
+              </div>
+            </div>
+          </div>
+
+          <div class="mgs-faq-item">
+            <button class="mgs-faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+              <span>I didn't receive the verification email. What should I do?</span>
+              <i class="fa fa-chevron-down"></i>
+            </button>
+            <div class="mgs-faq-answer" id="faq-answer-4">
+              <div class="mgs-faq-answer-inner">
+                First, check your spam/junk folder. The email comes from <code>noreply@mpaynetwork.com</code>. If you still don't see it after 10 minutes, tap <strong>Resend Verification Email</strong> on the login screen. If issues persist, visit our <a href="#" onclick="load_page('merchant_troubleshooting'); return false;">Troubleshooting guide</a>.
+              </div>
+            </div>
+          </div>
+
+          <div class="mgs-faq-item">
+            <button class="mgs-faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+              <span>Is there a cost to use the Merchant Wallet?</span>
+              <i class="fa fa-chevron-down"></i>
+            </button>
+            <div class="mgs-faq-answer" id="faq-answer-5">
+              <div class="mgs-faq-answer-inner">
+                The MPay Merchant Wallet app is free to download and use. Transaction fees apply to payments received — please refer to the MPay Network fee schedule on our website or contact our sales team for volume-based pricing.
+              </div>
+            </div>
+          </div>
+
+          <div class="mgs-faq-item">
+            <button class="mgs-faq-question" aria-expanded="false" aria-controls="faq-answer-6">
+              <span>Can I accept payments before KYC is complete?</span>
+              <i class="fa fa-chevron-down"></i>
+            </button>
+            <div class="mgs-faq-answer" id="faq-answer-6">
+              <div class="mgs-faq-answer-inner">
+                You can use the test/sandbox mode to familiarize yourself with the payment flow while your verification is pending. However, live payments from real customers will only be enabled after your KYC verification is approved.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== Prev/Next Navigation ===== -->
+      <nav class="mgs-prev-next" aria-label="Documentation pagination">
+        <a class="mgs-prev-next-btn prev" href="#" onclick="load_page('merchant_docs_home'); return false;" aria-label="Previous page: Merchant Docs Home">
+          <span class="mgs-prev-next-label"><i class="fa fa-arrow-left"></i> Previous</span>
+          <span class="mgs-prev-next-title">Merchant Docs Home</span>
+        </a>
+        <a class="mgs-prev-next-btn next" href="#" onclick="load_page('merchant_account_setup'); return false;" aria-label="Next page: Account Setup & Verification">
+          <span class="mgs-prev-next-label">Next <i class="fa fa-arrow-right"></i></span>
+          <span class="mgs-prev-next-title">Account Setup &amp; Verification</span>
+        </a>
+      </nav>
+
+    </div>
+  </main>
+
+  <!-- Table of Contents (right side, large screens) -->
+  <nav class="mgs-toc" aria-label="Table of contents">
+    <div class="mgs-toc-title">On This Page</div>
+    <ul class="mgs-toc-list">
+      <li><a href="#section-download">Download &amp; Install</a></li>
+      <li><a href="#section-first-login">First Login</a></li>
+      <li><a href="#section-initial-setup">Initial Setup Walkthrough</a></li>
+      <li><a href="#section-screenshots">Screenshots</a></li>
+      <li><a href="#section-faq">FAQ</a></li>
+    </ul>
+  </nav>
+</div>
+    
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/merchant_getting_started.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+</html>

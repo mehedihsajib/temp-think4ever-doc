@@ -1,0 +1,330 @@
+// ===============================
+// Page Navigation
+// ===============================
+function load_page(pageId) {
+  localStorage.setItem("currentPage", pageId);
+
+  window.location.href = pageId + ".html";
+}
+
+// ===============================
+// Get Current Page
+// ===============================
+function getCurrentPage() {
+  const stored = localStorage.getItem("currentPage");
+
+  if (stored) return stored;
+
+  const path = window.location.pathname.split("/").pop();
+  return path.replace(".html", "") || "index";
+}
+
+// ===============================
+// Component Loader
+// ===============================
+function loadComponent({ id, url, onLoaded }) {
+  const el = document.getElementById(id);
+
+  if (!el) {
+    console.warn(`Element #${id} not found`);
+    return;
+  }
+
+  fetch(url)
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error(`Failed to load ${url}`);
+      }
+      return res.text();
+    })
+    .then((html) => {
+      el.innerHTML = html;
+
+      if (typeof onLoaded === "function") {
+        onLoaded(el);
+      }
+
+      console.log(`${id} loaded`);
+    })
+    .catch((err) => {
+      console.error(`Error loading ${url}:`, err);
+    });
+}
+
+// ===============================
+// Active Link - Header
+// ===============================
+function setHeaderActive(container, activePage) {
+  const links = container.querySelectorAll(".modern-nav a");
+
+  links.forEach((link) => {
+    link.classList.remove("active");
+
+    const page = link.getAttribute("onclick")?.match(/'(.*?)'/)?.[1];
+
+    if (page === activePage) {
+      link.classList.add("active");
+    }
+  });
+}
+
+// ===============================
+// Active Link - Sidebar
+// ===============================
+function setSidebarActive(container, activePage) {
+  const links = container.querySelectorAll(".cgs-nav-link");
+
+  links.forEach((link) => {
+    link.classList.remove("active");
+
+    const page = link.getAttribute("onclick")?.match(/'(.*?)'/)?.[1];
+
+    if (page === activePage) {
+      link.classList.add("active");
+    }
+  });
+}
+
+// ===============================
+// Instant Active Update on Click
+// ===============================
+function attachSidebarClickHandler(container) {
+  container.querySelectorAll(".cgs-nav-link").forEach((link) => {
+    link.addEventListener("click", function () {
+      const page = this.getAttribute("onclick")?.match(/'(.*?)'/)?.[1];
+
+      if (page) {
+        localStorage.setItem("currentPage", page);
+        setSidebarActive(container, page);
+      }
+    });
+  });
+}
+
+// ===============================
+// MOBILE NAV
+// ===============================
+function initSidebarToggle() {
+  console.log("sidebar toglled...");
+  const sidebarToggle = document.getElementById("cgsSidebarToggle");
+  const overlay = document.getElementById("cgsSidebarOverlay");
+  const sidebar = document.getElementById("cgsSidebar");
+
+  if (!sidebarToggle || !overlay || !sidebar) {
+    console.warn("Sidebar toggle init failed:", {
+      sidebarToggle,
+      overlay,
+      sidebar,
+    });
+    return;
+  }
+
+  // prevent duplicate binding
+  if (sidebarToggle.dataset.bound === "true") return;
+  sidebarToggle.dataset.bound = "true";
+
+  sidebarToggle.addEventListener("click", function () {
+    console.log("burger clicked...");
+    sidebar.classList.toggle("open");
+    overlay.classList.toggle("show");
+
+    const isOpen = sidebar.classList.contains("open");
+
+    sidebarToggle.setAttribute("aria-expanded", isOpen);
+    sidebarToggle.innerHTML = isOpen
+      ? '<i class="fa fa-times"></i>'
+      : '<i class="fa fa-bars"></i>';
+  });
+
+  const sidebarClose = document.getElementById("cgsSidebarClose");
+  if (sidebarClose) {
+    sidebarClose.addEventListener("click", function () {
+      sidebar.classList.remove("open");
+      overlay.classList.remove("show");
+      sidebarToggle.setAttribute("aria-expanded", "false");
+      sidebarToggle.innerHTML = '<i class="fa fa-bars"></i>';
+    });
+  }
+
+  overlay.addEventListener("click", function () {
+    sidebar.classList.remove("open");
+    overlay.classList.remove("show");
+
+    sidebarToggle.setAttribute("aria-expanded", "false");
+    sidebarToggle.innerHTML = '<i class="fa fa-bars"></i>';
+  });
+}
+
+// ===============================
+// MOBILE HEADER MENU
+// ===============================
+function initMobileMenu() {
+  const toggle = document.getElementById("mobileMenuToggle");
+  const overlay = document.getElementById("mobileMenuOverlay");
+  const nav = document.querySelector(".modern-nav");
+
+  if (!toggle || !overlay || !nav) return;
+
+  // Prevent duplicate binding
+  if (toggle.dataset.bound === "true") return;
+  toggle.dataset.bound = "true";
+
+  toggle.addEventListener("click", function () {
+    const isOpen = nav.classList.toggle("open");
+    overlay.classList.toggle("open");
+
+    toggle.innerHTML = isOpen
+      ? '<i class="fa fa-times"></i>'
+      : '<i class="fa fa-bars"></i>';
+    toggle.setAttribute("aria-expanded", isOpen);
+  });
+
+  overlay.addEventListener("click", function () {
+    nav.classList.remove("open");
+    overlay.classList.remove("open");
+    toggle.innerHTML = '<i class="fa fa-bars"></i>';
+    toggle.setAttribute("aria-expanded", "false");
+  });
+
+  // Close menu on link click
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("open");
+      overlay.classList.remove("open");
+      toggle.innerHTML = '<i class="fa fa-bars"></i>';
+      toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}
+
+// ===============================
+// LOAD IFRAME
+// ===============================
+function initYouTubeVideos() {
+  document.querySelectorAll(".yt-video").forEach((el) => {
+    const videoId = el.dataset.videoId;
+
+    el.innerHTML = `
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1&playsinline=1"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    `;
+  });
+}
+
+document.addEventListener("DOMContentLoaded", initYouTubeVideos);
+
+// ===============================
+// INIT
+// ===============================
+document.addEventListener("DOMContentLoaded", function () {
+  const currentPage = getCurrentPage();
+
+  // -------- Header --------
+  loadComponent({
+    id: "consumerHeader",
+    url: "./components/doc-header.html",
+    onLoaded: (el) => {
+      setHeaderActive(el, currentPage);
+      if (window.I18n) window.I18n.applyToDOM(el);
+      initMobileMenu();
+    },
+  });
+
+  // -------- Footer --------
+
+  loadComponent({
+    id: "docFooter",
+    url: "./components/doc-footer.html",
+    onLoaded: (el) => {
+      if (window.I18n) window.I18n.applyToDOM(el);
+    },
+  });
+
+  // -------- Sidebar --------
+  loadComponent({
+    id: "consumerSidebar",
+    url: "./components/user-manual-sidebar.html",
+    onLoaded: (el) => {
+      setSidebarActive(el, currentPage);
+      attachSidebarClickHandler(el);
+      if (window.I18n) window.I18n.applyToDOM(el);
+      setTimeout(() => {
+        initSidebarToggle();
+      }, 0);
+    },
+  });
+
+  loadComponent({
+    id: "merchantSidebar",
+    url: "./components/merchant-sidebar.html",
+    onLoaded: (el) => {
+      setSidebarActive(el, currentPage);
+      attachSidebarClickHandler(el);
+      if (window.I18n) window.I18n.applyToDOM(el);
+      setTimeout(() => {
+        initSidebarToggle();
+      }, 0);
+    },
+  });
+});
+
+// ===============================
+// i18n (Internationalization)
+// ===============================
+// ল্যাঙ্গুয়েজ পরিবর্তন এবং লোকাল স্টোরেজে সেভ করার ফাংশন
+function changeLanguage(langCode) {
+  if (window.I18n) {
+    window.I18n.setLocale(langCode);
+
+    // Close dropdown
+    const menu = document.getElementById("modernLangMenu");
+    const btn = document.getElementById("modernLangBtn");
+    if (menu) menu.classList.remove("show");
+    if (btn) btn.classList.remove("open");
+  } else {
+    localStorage.setItem("selectedLanguage", langCode);
+    location.reload();
+  }
+}
+
+// Event Delegation for modern language dropdown
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest("#modernLangBtn");
+  const menu = document.getElementById("modernLangMenu");
+
+  if (btn && menu) {
+    menu.classList.toggle("show");
+    btn.classList.toggle("open");
+    e.stopPropagation();
+  } else if (
+    menu &&
+    menu.classList.contains("show") &&
+    !e.target.closest("#modernLangMenu")
+  ) {
+    menu.classList.remove("show");
+    const b = document.getElementById("modernLangBtn");
+    if (b) b.classList.remove("open");
+  }
+});
+
+// Listen for global i18n applied events to update active state
+document.addEventListener("i18n:applied", (e) => {
+  const locale = e.detail.locale;
+  const menu = document.getElementById("modernLangMenu");
+  if (!menu) return;
+
+  // Update active class on dropdown items
+  menu.querySelectorAll("button").forEach((btn) => {
+    if (btn.classList.contains(`lang-opt-${locale}`)) {
+      btn.classList.add("active");
+    } else {
+      btn.classList.remove("active");
+    }
+  });
+});

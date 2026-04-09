@@ -1,0 +1,50 @@
+{
+  "nav": {
+    "overview": "Overview",
+    "merchant": "Merchant",
+    "consumer": "Consumer",
+    "blog": "Blog",
+    "changelog": "Changelog",
+    "search_placeholder": "Search...",
+    "dashboard": "Dashboard"
+  },
+  "meta": {
+    "lang_name": "English"
+  },
+  "header": {
+    "english": "English",
+    "spanish": "Español"
+  },
+  "consumer_sidebar": {
+    "title": "Consumer Wallet Docs",
+    "section_getting_started": "Getting Started",
+    "overview": "Overview",
+    "getting_started": "Getting Started",
+    "account_setup": "Account Setup",
+    "section_using_wallet": "Using Your Wallet",
+    "making_payments": "Making Payments",
+    "wallet_management": "Wallet Management",
+    "p2p_transfers": "P2P Transfers",
+    "section_settings_support": "Settings & Support",
+    "settings_security": "Settings & Security",
+    "troubleshooting": "Troubleshooting",
+    "section_other_docs": "Other Docs",
+    "merchant_wallet_docs": "Merchant Wallet Docs",
+    "changelog": "Changelog"
+  },
+  "merchant_sidebar": {
+    "title": "Merchant Wallet",
+    "section_getting_started": "Getting Started",
+    "overview": "Overview",
+    "getting_started": "Getting Started",
+    "account_setup": "Account Setup & Verification",
+    "section_payments": "Payments",
+    "qr_payments": "QR Code Payments",
+    "nfc_payments": "NFC Payments",
+    "section_management": "Management",
+    "transaction_management": "Transaction Management",
+    "settings_config": "Settings & Configuration",
+    "section_support": "Support",
+    "troubleshooting": "Troubleshooting"
+  }
+}

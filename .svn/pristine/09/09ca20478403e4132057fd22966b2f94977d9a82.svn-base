@@ -1,0 +1,1014 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consumer - Getting Started</title>
+    <link href="css/theme.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/consumer_getting_started.css" />
+    <script src="assets/js/i18n.js"></script>
+  </head>
+
+  <body>
+    <!-- Site Header -->
+    <header class="modern-header" id="consumerHeader"></header>
+    <div class="consumer-getting-started">
+      <!-- Skip to content -->
+      <a
+        href="#cgs-main-content"
+        class="sr-only"
+        style="
+          position: absolute;
+          left: -9999px;
+          top: 0;
+          z-index: 999;
+          background: #fff;
+          padding: 8px 16px;
+        "
+        >Skip to main content</a
+      >
+      <!-- Mobile sidebar toggle -->
+      <button
+        class="cgs-sidebar-toggle"
+        id="cgsSidebarToggle"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+      >
+        <i class="fa fa-bars"></i>
+      </button>
+      <!-- Sidebar overlay -->
+      <div class="cgs-sidebar-overlay" id="cgsSidebarOverlay"></div>
+      <!-- Sidebar -->
+      <div id="consumerSidebar"></div>
+      <!-- Main content -->
+      <div class="cgs-main">
+        <main class="cgs-content-area" id="cgs-main-content">
+          <!-- Breadcrumb -->
+          <nav class="cgs-breadcrumb" aria-label="Breadcrumb">
+            <a onclick="load_page('index')" data-i18n="breadcrumb.docs">Docs</a>
+            <span class="separator"><i class="fa fa-chevron-right"></i></span>
+            <a
+              onclick="load_page('consumer_docs_home')"
+              data-i18n="breadcrumb.consumer_wallet"
+              >Consumer Wallet</a
+            >
+            <span class="separator"><i class="fa fa-chevron-right"></i></span>
+            <span class="current" data-i18n="breadcrumb.getting_started"
+              >Getting Started</span
+            >
+          </nav>
+          <!-- Page title -->
+          <h1 class="cgs-page-title" data-i18n="page.title">
+            Getting Started with Consumer Wallet
+          </h1>
+          <p class="cgs-page-subtitle" data-i18n="page.subtitle">
+            Everything you need to download, install, and set up your mPay
+            Consumer Wallet. Follow this step-by-step guide to start making
+            fast, secure payments in minutes.
+          </p>
+          <span class="cgs-time-badge" data-i18n-html="page.time_badge">
+            <i class="fa fa-clock"></i> Estimated setup time: 5 minutes
+          </span>
+          <!-- ===== Explanation Video ===== -->
+          <div class="yt-video" data-video-id="kpbwyv3beEc"></div>
+          <!-- System Requirements -->
+          <section class="cgs-section" id="sec-requirements">
+            <h2 class="cgs-section-title" data-i18n="requirements.heading">
+              System Requirements
+            </h2>
+            <p data-i18n="requirements.intro">
+              Before downloading, make sure your device meets the minimum
+              requirements:
+            </p>
+            <div class="cgs-requirements">
+              <div class="cgs-requirement-card">
+                <div class="req-icon">
+                  <i class="fa fa-apple-alt"></i>
+                </div>
+                <div class="req-info">
+                  <h4 data-i18n="requirements.ios.name">iOS</h4>
+                  <p data-i18n="requirements.ios.desc">
+                    iOS 15.0 or later. Compatible with iPhone 8 and newer.
+                    Approximately 85 MB of storage required.
+                  </p>
+                </div>
+              </div>
+              <div class="cgs-requirement-card">
+                <div class="req-icon">
+                  <i class="fab fa-android"></i>
+                </div>
+                <div class="req-info">
+                  <h4 data-i18n="requirements.android.name">Android</h4>
+                  <p data-i18n="requirements.android.desc">
+                    Android 10.0 (API level 29) or later. Approximately 60 MB of
+                    storage required.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="cgs-callout info">
+              <div class="cgs-callout-icon">
+                <i class="fa fa-info-circle"></i>
+              </div>
+              <div class="cgs-callout-content">
+                <strong data-i18n="requirements.nfc_callout_title"
+                  >NFC Requirement</strong
+                >
+                <p data-i18n="requirements.nfc_callout_body">
+                  For tap-to-pay functionality, your device must have NFC
+                  hardware. Most modern smartphones (iPhone 7+ and Android with
+                  NFC) support this feature.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- Download & Install -->
+          <section class="cgs-section" id="sec-download">
+            <h2 class="cgs-section-title" data-i18n="download.heading">
+              Download & Install
+            </h2>
+            <p data-i18n="download.intro">
+              mPay Consumer Wallet is available for free on both major app
+              stores. Choose your platform below:
+            </p>
+            <div class="cgs-download-buttons">
+              <a
+                class="cgs-download-btn ios"
+                href="#"
+                aria-label="Download on the App Store"
+              >
+                <i class="fab fa-apple"></i>
+                <div class="btn-text">
+                  <small data-i18n="download.ios_btn_pre"
+                    >Download on the</small
+                  >
+                  <span data-i18n="download.ios_btn">App Store</span>
+                </div>
+              </a>
+              <a
+                class="cgs-download-btn android"
+                href="#"
+                aria-label="Get it on Google Play"
+              >
+                <i class="fab fa-google-play"></i>
+                <div class="btn-text">
+                  <small data-i18n="download.android_btn_pre">Get it on</small>
+                  <span data-i18n="download.android_btn">Google Play</span>
+                </div>
+              </a>
+            </div>
+            <h3
+              class="cgs-section-subtitle"
+              id="sec-install-steps"
+              data-i18n="download.install_steps_heading"
+            >
+              Installation Steps
+            </h3>
+            <div class="cgs-steps">
+              <div class="cgs-step" data-step="1">
+                <h4 class="cgs-step-title" data-i18n="download.steps.1.title">
+                  Open your app store
+                </h4>
+                <div
+                  class="cgs-step-content"
+                  data-i18n-html="download.steps.1.content"
+                >
+                  Open the <strong>App Store</strong> (iOS) or
+                  <strong>Google Play Store</strong>
+                  (Android) on your device.
+                </div>
+              </div>
+              <div class="cgs-step" data-step="2">
+                <h4 class="cgs-step-title" data-i18n="download.steps.2.title">
+                  Search for mPay Wallet
+                </h4>
+                <div
+                  class="cgs-step-content"
+                  data-i18n-html="download.steps.2.content"
+                >
+                  Type <code>mPay Consumer Wallet</code> in the search bar. Look
+                  for the official app with the mPay logo and "mPay Network" as
+                  the developer.
+                </div>
+              </div>
+              <div class="cgs-step" data-step="3">
+                <h4 class="cgs-step-title" data-i18n="download.steps.3.title">
+                  Download and install
+                </h4>
+                <div
+                  class="cgs-step-content"
+                  data-i18n-html="download.steps.3.content"
+                >
+                  Tap <strong>Get</strong> (iOS) or
+                  <strong>Install</strong> (Android). The app will download and
+                  install automatically. You may be asked to authenticate with
+                  your device password, Face ID, or fingerprint.
+                </div>
+              </div>
+              <div class="cgs-step" data-step="4">
+                <h4 class="cgs-step-title" data-i18n="download.steps.4.title">
+                  Open the app
+                </h4>
+                <div
+                  class="cgs-step-content"
+                  data-i18n-html="download.steps.4.content"
+                >
+                  Once installed, tap <strong>Open</strong> or find the mPay
+                  icon on your home screen. The app will launch with the welcome
+                  screen.
+                </div>
+              </div>
+            </div>
+            <div class="cgs-callout warning">
+              <div class="cgs-callout-icon">
+                <i class="fa fa-exclamation-triangle"></i>
+              </div>
+              <div class="cgs-callout-content">
+                <strong data-i18n="download.verify_callout_title"
+                  >Verify the Developer</strong
+                >
+                <p data-i18n="download.verify_callout_body">
+                  Always verify that the developer is listed as "mPay Network"
+                  before downloading. Do not install apps from unofficial
+                  sources.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- Sign Up -->
+          <section class="cgs-section" id="sec-signup">
+            <h2 class="cgs-section-title" data-i18n="signup.heading">
+              Sign Up
+            </h2>
+            <p data-i18n="signup.intro">
+              Creating your mPay account is quick and straightforward. You'll
+              need a valid phone number and email address.
+            </p>
+            <div class="cgs-steps">
+              <div class="cgs-step" data-step="1">
+                <h4 class="cgs-step-title" data-i18n="signup.steps.1.title">
+                  Are you an existing mPay Customer?
+                </h4>
+                <div
+                  class="cgs-step-content"
+                  data-i18n-html="signup.steps.1.content"
+                >
+                  <p class="cgs-step-text">
+                    On the welcome screen, you will be prompted to select
+                    whether you <strong>"Are an existing customer?"</strong>.
+                    For new customers, tap the <strong>NO</strong> button. If
+                    you already have an account, select
+                    <strong>YES</strong> button instead.
+                  </p>
+                </div>
+              </div>
+              <div class="cgs-step" data-step="2">
+                <h4 class="cgs-step-title" data-i18n="signup.steps.2.title">
+                  Enroll New Consumer Form
+                </h4>
+                <div
+                  class="cgs-step-content"
+                  data-i18n-html="signup.steps.2.content"
+                >
+                  <p class="cgs-step-text">
+                    User is taken to
+                    <strong> Enroll New Consumer </strong> form.
+                  </p>
+                </div>
+              </div>
+              <div class="cgs-step" data-step="3">
+                <h4 class="cgs-step-title" data-i18n="signup.steps.3.title">
+                  Required Customer Information
+                </h4>
+                <p
+                  class="cgs-step-text"
+                  data-i18n-html="signup.steps.3.content"
+                >
+                  The <strong> User ID </strong>,
+                  <strong> E-mail Address </strong>, and
+                  <strong>Mobile Number</strong> should be unique for each
+                  customers.
+                </p>
+                <div class="cgs-callout cgs-callout-info">
+                  <div class="cgs-callout-icon">
+                    <i class="fa fa-info-circle"></i>
+                  </div>
+                  <div
+                    class="cgs-callout-text"
+                    data-i18n-html="signup.steps.3.info_callout"
+                  >
+                    During enrollment submission, the system verifies whether
+                    the <strong>User ID</strong>,
+                    <strong>E-mail Address</strong> and
+                    <strong>Mobile Number</strong> is already in use by existing
+                    mPay customers.
+                  </div>
+                </div>
+              </div>
+              <div class="cgs-step" data-step="4">
+                <h4 class="cgs-step-title" data-i18n="signup.steps.4.title">
+                  Fill in all required fields
+                </h4>
+                <div class="cgs-step-content">
+                  <span data-i18n="signup.steps.4.intro"
+                    >Enter your basic information:</span
+                  >
+                  <ul>
+                    <li data-i18n-html="signup.steps.4.field_name">
+                      <strong>First and Last Name</strong> — As it appears on
+                      your ID
+                    </li>
+                    <li data-i18n-html="signup.steps.4.field_email">
+                      <strong>Email Address</strong> — A valid email for
+                      notifications and recovery
+                    </li>
+                    <li data-i18n-html="signup.steps.4.field_mobile">
+                      <strong>Mobiler Number</strong> — Should be a valid mobile
+                      number that will receive SMS for verification
+                    </li>
+                    <li data-i18n-html="signup.steps.4.field_referral">
+                      <strong>Referral Code</strong> — Optional field for the
+                      referral code of the referring mPay customer.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="cgs-step" data-step="5">
+                <h4 class="cgs-step-title" data-i18n="signup.steps.5.title">
+                  Agree to terms
+                </h4>
+                <div class="cgs-step-content">
+                  <p class="cgs-step-text" data-i18n="signup.steps.5.intro">
+                    There are two required checkboxes to accept prior proceeding
+                    with enrollment:
+                  </p>
+                  <ul
+                    style="
+                      margin: 8px 0 0 20px;
+                      list-style: disc;
+                      line-height: 1.8;
+                      color: #1e3a8a;
+                      font-size: 0.9375rem;
+                    "
+                  >
+                    <li data-i18n-html="signup.steps.5.check_terms">
+                      Accept <strong>Terms and Conditions</strong>
+                    </li>
+                    <li data-i18n-html="signup.steps.5.check_security">
+                      Security Policy that only one user is allowed per device
+                      which states "<i
+                        >I agree that enrolling a new customer will remove the
+                        existing account linked on this device.</i
+                      >"
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="cgs-step" data-step="6">
+                <h4 class="cgs-step-title" data-i18n="signup.steps.6.title">
+                  Option to Use Email and Mobile in Merchant App
+                </h4>
+                <div class="cgs-step-content">
+                  <p class="cgs-step-text" data-i18n="signup.steps.6.intro">
+                    Option to Use Email and Mobile in Merchant App
+                  </p>
+                  <ul
+                    style="
+                      margin: 8px 0 0 20px;
+                      list-style: disc;
+                      line-height: 1.8;
+                      color: #1e3a8a;
+                      font-size: 0.9375rem;
+                    "
+                  >
+                    <li data-i18n-html="signup.steps.6.check_terms">
+                      Accept <strong>Terms and Conditions</strong>
+                    </li>
+                    <li data-i18n-html="signup.steps.6.check_security">
+                      Security Policy that only one user is allowed per device
+                      which states "<i
+                        >I agree that enrolling a new customer will remove the
+                        existing account linked on this device.</i
+                      >"
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="cgs-callout success">
+            <div class="cgs-callout-icon">
+              <i class="fa fa-check-circle"></i>
+            </div>
+            <div class="cgs-callout-content">
+              <strong data-i18n="signup.success_callout_title"
+                >Account Created!</strong
+              >
+              <p data-i18n="signup.success_callout_body">
+                Once you see the confirmation screen, your account is ready. You
+                can now proceed to set up your profile and configure your
+                wallet.
+              </p>
+            </div>
+          </div>
+          <!-- ===== Explanation Video ===== -->
+          <div class="yt-video" data-video-id="KyGl50H8EHY"></div>
+          <!-- First Login & Setup -->
+          <section class="cgs-section" id="sec-first-login">
+            <h2 class="cgs-section-title" data-i18n="first_login.heading">
+              First Login & Setup
+            </h2>
+            <p data-i18n="first_login.intro">
+              After creating your account, you'll be guided through the initial
+              setup wizard. Here's what to expect:
+            </p>
+            <h3
+              class="cgs-section-subtitle"
+              id="sec-profile-setup"
+              data-i18n="first_login.profile_heading"
+            >
+              Profile Setup
+            </h3>
+            <div class="cgs-steps">
+              <div class="cgs-step" data-step="1">
+                <h4
+                  class="cgs-step-title"
+                  data-i18n="first_login.profile_steps.1.title"
+                >
+                  Add your personal details
+                </h4>
+                <div
+                  class="cgs-step-content"
+                  data-i18n="first_login.profile_steps.1.content"
+                >
+                  Enter your full name as it appears on your government-issued
+                  ID. Optionally, add a profile photo for easy identification
+                  during P2P transfers.
+                </div>
+              </div>
+              <div class="cgs-step" data-step="2">
+                <h4
+                  class="cgs-step-title"
+                  data-i18n="first_login.profile_steps.2.title"
+                >
+                  Set up security
+                </h4>
+                <div class="cgs-step-content">
+                  <span data-i18n="first_login.profile_steps.2.content"
+                    >Configure your preferred authentication method:</span
+                  >
+                  <ul>
+                    <li data-i18n-html="first_login.profile_steps.2.pin">
+                      <strong>PIN Code</strong> — Set a 6-digit PIN for quick
+                      access
+                    </li>
+                    <li data-i18n-html="first_login.profile_steps.2.biometric">
+                      <strong>Biometric</strong> — Enable Face ID or fingerprint
+                      authentication
+                    </li>
+                    <li data-i18n="first_login.profile_steps.2.recommend">
+                      We recommend enabling both for maximum security
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="cgs-step" data-step="3">
+                <h4
+                  class="cgs-step-title"
+                  data-i18n="first_login.profile_steps.3.title"
+                >
+                  Enable notifications
+                </h4>
+                <div class="cgs-step-content">
+                  <span data-i18n="first_login.profile_steps.3.content_pre"
+                    >Allow push notifications to receive instant payment
+                    confirmations, security alerts, and promotional offers. You
+                    can customize notification preferences later in </span
+                  ><a
+                    onclick="load_page('consumer_settings')"
+                    style="
+                      color: var(--color-primary, #2563eb);
+                      cursor: pointer;
+                    "
+                    data-i18n="first_login.profile_steps.3.settings_link"
+                    >Settings</a
+                  ><span data-i18n="first_login.profile_steps.3.content_post"
+                    >.</span
+                  >
+                </div>
+              </div>
+            </div>
+            <h3
+              class="cgs-section-subtitle"
+              id="sec-wallet-setup"
+              data-i18n="first_login.wallet_heading"
+            >
+              Wallet Configuration
+            </h3>
+            <div class="cgs-steps">
+              <div class="cgs-step" data-step="1">
+                <h4
+                  class="cgs-step-title"
+                  data-i18n="first_login.wallet_steps.1.title"
+                >
+                  Personalized your profile
+                </h4>
+                <div
+                  class="cgs-step-content"
+                  data-i18n="first_login.wallet_steps.1.content"
+                >
+                  Set a profile picture for your wallet account
+                </div>
+              </div>
+              <div class="cgs-step" data-step="2">
+                <h4
+                  class="cgs-step-title"
+                  data-i18n="first_login.wallet_steps.2.title"
+                >
+                  Managing Notification Preferences
+                </h4>
+                <div
+                  class="cgs-step-content"
+                  data-i18n="first_login.wallet_steps.2.content"
+                >
+                  You can turn on/off a notification option, based on your own
+                  preferences.
+                </div>
+              </div>
+              <div class="cgs-step" data-step="3">
+                <h4
+                  class="cgs-step-title"
+                  data-i18n="first_login.wallet_steps.3.title"
+                >
+                  Complete the setup
+                </h4>
+                <div
+                  class="cgs-step-content"
+                  data-i18n-html="first_login.wallet_steps.3.content"
+                >
+                  Tap <strong>Finish Setup</strong> to land on your wallet
+                  dashboard. You're ready to start making payments!
+                </div>
+              </div>
+            </div>
+            <div class="cgs-callout info">
+              <div class="cgs-callout-icon">
+                <i class="fa fa-lightbulb"></i>
+              </div>
+              <div class="cgs-callout-content">
+                <strong data-i18n="first_login.tip_callout_title"
+                  >Tip: Complete Verification Early</strong
+                >
+                <p data-i18n="first_login.tip_callout_body">
+                  Verification process may take 24 to 48 hours, it is advisable
+                  to complete the profile asap in order to gain full access to
+                  mPay Wallet features.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- Screenshots -->
+          <section class="cgs-screenshots" id="sec-screenshots">
+            <h2 class="cgs-section-title" data-i18n="screenshots.heading">
+              Setup Walkthrough
+            </h2>
+            <p data-i18n="screenshots.intro">
+              Here's a visual overview of the key screens you'll encounter
+              during setup:
+            </p>
+            <div class="cgs-screenshot-grid">
+              <div class="cgs-screenshot-item">
+                <div class="cgs-screenshot-mockup">
+                  <div class="mockup-header"></div>
+                  <div class="mockup-icon">
+                    <i class="fa fa-hand-peace"></i>
+                  </div>
+                  <div class="mockup-label" data-i18n="screenshots.step1_label">
+                    Welcome Screen
+                  </div>
+                  <div
+                    class="mockup-sublabel"
+                    data-i18n="screenshots.step1_sublabel"
+                  >
+                    Create Account or Sign In
+                  </div>
+                </div>
+                <p
+                  class="cgs-screenshot-caption"
+                  data-i18n="screenshots.step1_caption"
+                >
+                  Step 1: Welcome Screen
+                </p>
+              </div>
+              <div class="cgs-screenshot-item">
+                <div class="cgs-screenshot-mockup">
+                  <div class="mockup-header"></div>
+                  <div class="mockup-icon">
+                    <i class="fa fa-mobile-alt"></i>
+                  </div>
+                  <div class="mockup-label" data-i18n="screenshots.step2_label">
+                    Phone Verification
+                  </div>
+                  <div
+                    class="mockup-sublabel"
+                    data-i18n="screenshots.step2_sublabel"
+                  >
+                    Enter OTP Code
+                  </div>
+                </div>
+                <p
+                  class="cgs-screenshot-caption"
+                  data-i18n="screenshots.step2_caption"
+                >
+                  Step 2: Verify Phone
+                </p>
+              </div>
+              <div class="cgs-screenshot-item">
+                <div class="cgs-screenshot-mockup">
+                  <div class="mockup-header"></div>
+                  <div class="mockup-icon">
+                    <i class="fa fa-fingerprint"></i>
+                  </div>
+                  <div class="mockup-label" data-i18n="screenshots.step3_label">
+                    Security Setup
+                  </div>
+                  <div
+                    class="mockup-sublabel"
+                    data-i18n="screenshots.step3_sublabel"
+                  >
+                    PIN & Biometric
+                  </div>
+                </div>
+                <p
+                  class="cgs-screenshot-caption"
+                  data-i18n="screenshots.step3_caption"
+                >
+                  Step 3: Set Up Security
+                </p>
+              </div>
+              <div class="cgs-screenshot-item">
+                <div class="cgs-screenshot-mockup">
+                  <div class="mockup-header"></div>
+                  <div class="mockup-icon">
+                    <i class="fa fa-user-circle"></i>
+                  </div>
+                  <div class="mockup-label" data-i18n="screenshots.step4_label">
+                    Profile Info
+                  </div>
+                  <div
+                    class="mockup-sublabel"
+                    data-i18n="screenshots.step4_sublabel"
+                  >
+                    Name & Photo
+                  </div>
+                </div>
+                <p
+                  class="cgs-screenshot-caption"
+                  data-i18n="screenshots.step4_caption"
+                >
+                  Step 4: Your Profile
+                </p>
+              </div>
+              <div class="cgs-screenshot-item">
+                <div class="cgs-screenshot-mockup">
+                  <div class="mockup-header"></div>
+                  <div class="mockup-icon">
+                    <i class="fa fa-wallet"></i>
+                  </div>
+                  <div class="mockup-label" data-i18n="screenshots.step5_label">
+                    Wallet Setup
+                  </div>
+                  <div
+                    class="mockup-sublabel"
+                    data-i18n="screenshots.step5_sublabel"
+                  >
+                    Currency & Funding
+                  </div>
+                </div>
+                <p
+                  class="cgs-screenshot-caption"
+                  data-i18n="screenshots.step5_caption"
+                >
+                  Step 5: Configure Wallet
+                </p>
+              </div>
+              <div class="cgs-screenshot-item">
+                <div class="cgs-screenshot-mockup">
+                  <div class="mockup-header"></div>
+                  <div class="mockup-icon">
+                    <i class="fa fa-check-circle"></i>
+                  </div>
+                  <div class="mockup-label" data-i18n="screenshots.step6_label">
+                    All Set!
+                  </div>
+                  <div
+                    class="mockup-sublabel"
+                    data-i18n="screenshots.step6_sublabel"
+                  >
+                    Dashboard Ready
+                  </div>
+                </div>
+                <p
+                  class="cgs-screenshot-caption"
+                  data-i18n="screenshots.step6_caption"
+                >
+                  Step 6: Ready to Go!
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- FAQ Accordion -->
+          <section class="cgs-faq" id="sec-faq">
+            <h2 class="cgs-faq-title" data-i18n="faq.heading">
+              Frequently Asked Questions
+            </h2>
+            <div class="cgs-accordion">
+              <div class="cgs-accordion-item">
+                <button
+                  class="cgs-accordion-trigger"
+                  aria-expanded="false"
+                  aria-controls="faq-panel-1"
+                >
+                  <span data-i18n="faq.q1"
+                    >Can I use mPay Wallet on multiple devices?</span
+                  >
+                  <i class="fa fa-chevron-down"></i>
+                </button>
+                <div class="cgs-accordion-panel" id="faq-panel-1" role="region">
+                  <div
+                    class="cgs-accordion-panel-inner"
+                    data-i18n-html="faq.a1"
+                  >
+                    Yes, you can sign in to your mPay account on multiple
+                    devices. However, for security reasons,
+                    <b>only one device can be active at a time</b>. Signing in
+                    on a new device will automatically sign you out of the
+                    previous one.&nbsp;
+                  </div>
+                </div>
+              </div>
+              <div class="cgs-accordion-item">
+                <button
+                  class="cgs-accordion-trigger"
+                  aria-expanded="false"
+                  aria-controls="faq-panel-2"
+                >
+                  <span data-i18n="faq.q2"
+                    >What if I don't receive the OTP code?</span
+                  >
+                  <i class="fa fa-chevron-down"></i>
+                </button>
+                <div class="cgs-accordion-panel" id="faq-panel-2" role="region">
+                  <div
+                    class="cgs-accordion-panel-inner"
+                    data-i18n-html="faq.a2"
+                  >
+                    If you don't receive the OTP within 60 seconds, tap the
+                    "Resend Code" button. Make sure your phone has signal
+                    reception and SMS is not blocked. If the issue persists, try
+                    the "Call Me" option for voice verification. Check our
+                    <a onclick="load_page('consumer_troubleshooting')"
+                      >Troubleshooting guide</a
+                    >
+                    for more solutions.
+                  </div>
+                </div>
+              </div>
+              <div class="cgs-accordion-item">
+                <button
+                  class="cgs-accordion-trigger"
+                  aria-expanded="false"
+                  aria-controls="faq-panel-3"
+                >
+                  <span data-i18n="faq.q3"
+                    >Is there a minimum deposit to start using the wallet?</span
+                  >
+                  <i class="fa fa-chevron-down"></i>
+                </button>
+                <div class="cgs-accordion-panel" id="faq-panel-3" role="region">
+                  <div
+                    class="cgs-accordion-panel-inner"
+                    data-i18n-html="faq.a3"
+                  >
+                    No, there is no minimum deposit required. You can create
+                    your account and explore the app without adding any funds.
+                    When you're ready to make a payment, you can fund your
+                    wallet with any amount. Check
+                    <a onclick="load_page('consumer_wallet_management')"
+                      >Wallet Management</a
+                    >
+                    for funding options and limits.
+                  </div>
+                </div>
+              </div>
+              <div class="cgs-accordion-item">
+                <button
+                  class="cgs-accordion-trigger"
+                  aria-expanded="false"
+                  aria-controls="faq-panel-4"
+                >
+                  <span data-i18n="faq.q4"
+                    >Can I change my phone number after registration?</span
+                  >
+                  <i class="fa fa-chevron-down"></i>
+                </button>
+                <div class="cgs-accordion-panel" id="faq-panel-4" role="region">
+                  <div
+                    class="cgs-accordion-panel-inner"
+                    data-i18n-html="faq.a4"
+                  >
+                    Yes, you can update your phone number from the Settings
+                    page. You'll need to verify your identity and the new phone
+                    number via OTP. The old number will be unlinked after
+                    successful verification. For security, there's a 24-hour
+                    cooling period before certain features are re-enabled after
+                    a number change.
+                  </div>
+                </div>
+              </div>
+              <div class="cgs-accordion-item">
+                <button
+                  class="cgs-accordion-trigger"
+                  aria-expanded="false"
+                  aria-controls="faq-panel-5"
+                >
+                  <span data-i18n="faq.q5"
+                    >What should I do if the app crashes during setup?</span
+                  >
+                  <i class="fa fa-chevron-down"></i>
+                </button>
+                <div class="cgs-accordion-panel" id="faq-panel-5" role="region">
+                  <div
+                    class="cgs-accordion-panel-inner"
+                    data-i18n-html="faq.a5"
+                  >
+                    If the app crashes during setup, simply reopen it. Your
+                    progress is saved automatically at each step. If the problem
+                    persists, try clearing the app cache (Android) or
+                    reinstalling the app (iOS). Make sure you have the latest
+                    version installed. Visit our
+                    <a onclick="load_page('consumer_troubleshooting')"
+                      >Troubleshooting</a
+                    >
+                    page for more help.
+                  </div>
+                </div>
+              </div>
+              <div class="cgs-accordion-item">
+                <button
+                  class="cgs-accordion-trigger"
+                  aria-expanded="false"
+                  aria-controls="faq-panel-6"
+                >
+                  <span data-i18n="faq.q6"
+                    >Is my personal data secure during registration?</span
+                  >
+                  <i class="fa fa-chevron-down"></i>
+                </button>
+                <div class="cgs-accordion-panel" id="faq-panel-6" role="region">
+                  <div
+                    class="cgs-accordion-panel-inner"
+                    data-i18n-html="faq.a6"
+                  >
+                    Absolutely. All data transmitted during registration is
+                    encrypted using industry-standard TLS 1.3. Your personal
+                    information is stored securely and never shared with third
+                    parties without your consent. Read our
+                    <a onclick="load_page('privacy_policy')">Privacy Policy</a>
+                    for complete details on how we handle your data.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Prev/Next pagination -->
+          <div class="cgs-pagination" id="cgs_prev_next">
+            <a
+              class="cgs-pagination-btn prev"
+              onclick="load_page('consumer_docs_home')"
+            >
+              <span class="pag-label"
+                ><i class="fa fa-arrow-left"></i>
+                <span data-i18n="pagination.previous">Previous</span></span
+              >
+              <span class="pag-title" data-i18n="pagination.prev_title"
+                >Consumer Docs Home</span
+              >
+            </a>
+            <a
+              class="cgs-pagination-btn next"
+              onclick="load_page('consumer_account_setup')"
+            >
+              <span class="pag-label"
+                ><span data-i18n="pagination.next">Next</span>
+                <i class="fa fa-arrow-right"></i
+              ></span>
+              <span class="pag-title" data-i18n="pagination.next_title"
+                >Account Setup & Verification</span
+              >
+            </a>
+          </div>
+        </main>
+        <!-- Table of Contents -->
+        <aside class="cgs-toc" aria-label="Table of contents">
+          <p class="cgs-toc-title" data-i18n="toc.on_this_page">On This Page</p>
+          <ul class="cgs-toc-list">
+            <li>
+              <a
+                class="cgs-toc-link"
+                data-target="sec-requirements"
+                data-i18n="toc.requirements"
+                >System Requirements</a
+              >
+            </li>
+            <li>
+              <a
+                class="cgs-toc-link"
+                data-target="sec-download"
+                data-i18n="toc.download"
+                >Download & Install</a
+              >
+            </li>
+            <li>
+              <a
+                class="cgs-toc-link"
+                data-target="sec-install-steps"
+                data-i18n="toc.install_steps"
+                >Installation Steps</a
+              >
+            </li>
+            <li>
+              <a
+                class="cgs-toc-link"
+                data-target="sec-signup"
+                data-i18n="toc.signup"
+                >Sign Up</a
+              >
+            </li>
+            <li>
+              <a
+                class="cgs-toc-link"
+                data-target="sec-first-login"
+                data-i18n="toc.first_login"
+                >First Login & Setup</a
+              >
+            </li>
+            <li>
+              <a
+                class="cgs-toc-link"
+                data-target="sec-profile-setup"
+                data-i18n="toc.profile_setup"
+                >Profile Setup</a
+              >
+            </li>
+            <li>
+              <a
+                class="cgs-toc-link"
+                data-target="sec-wallet-setup"
+                data-i18n="toc.wallet_setup"
+                >Wallet Configuration</a
+              >
+            </li>
+            <li>
+              <a
+                class="cgs-toc-link"
+                data-target="sec-screenshots"
+                data-i18n="toc.screenshots"
+                >Setup Walkthrough</a
+              >
+            </li>
+            <li>
+              <a class="cgs-toc-link" data-target="sec-faq" data-i18n="toc.faq"
+                >FAQ</a
+              >
+            </li>
+          </ul>
+        </aside>
+      </div>
+      <!-- Scroll to top -->
+      <button
+        class="cgs-scroll-top"
+        id="cgsScrollTop"
+        aria-label="Scroll to top"
+      >
+        <i class="fa fa-arrow-up"></i>
+      </button>
+    </div>
+    <div id="docFooter"></div>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/consumer_getting_started.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (window.I18n) {
+          window.I18n.init();
+        }
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,266 @@
+// Landing Page JavaScript
+(function() {
+  'use strict';
+
+  // ============ NAVBAR SCROLL ============
+  const navbar = document.querySelector('.lp-navbar');
+  const scrollTopBtn = document.querySelector('.lp-scroll-top');
+  
+  function handleScroll() {
+    const scrollY = window.scrollY || window.pageYOffset;
+    if (navbar) {
+      navbar.classList.toggle('scrolled', scrollY > 10);
+    }
+    if (scrollTopBtn) {
+      scrollTopBtn.classList.toggle('visible', scrollY > 300);
+    }
+  }
+  
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
+
+  // Scroll to top
+  if (scrollTopBtn) {
+    scrollTopBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // ============ DROPDOWNS ============
+  const dropdowns = document.querySelectorAll('.lp-dropdown');
+  
+  dropdowns.forEach(function(dropdown) {
+    const trigger = dropdown.querySelector('.lp-dropdown-trigger');
+    if (!trigger) return;
+    
+    trigger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const wasOpen = dropdown.classList.contains('open');
+      closeAllDropdowns();
+      if (!wasOpen) {
+        dropdown.classList.add('open');
+      }
+    });
+    
+    const items = dropdown.querySelectorAll('.lp-dropdown-item');
+    items.forEach(function(item) {
+      item.addEventListener('click', function() {
+        const lang = item.dataset.lang;
+        if (lang && typeof I18n !== 'undefined') {
+          I18n.setLocale(lang);
+        } else {
+          // Fallback if i18n not loaded or not a lang item
+          const label = trigger.querySelector('.lp-dropdown-label');
+          if (label) {
+            label.textContent = item.textContent.trim();
+          }
+        }
+        items.forEach(function(i) { i.classList.remove('active'); });
+        item.classList.add('active');
+        dropdown.classList.remove('open');
+      });
+    });
+  });
+
+  // Listen for i18n changes to update labels
+  document.addEventListener('i18n:applied', function(e) {
+    const locale = e.detail.locale;
+    const labels = document.querySelectorAll('.lp-dropdown-label');
+    labels.forEach(label => {
+      // Find the active item for this locale in the parents menu
+      const dropdown = label.closest('.lp-dropdown');
+      if (dropdown) {
+        const activeItem = dropdown.querySelector(`.lp-dropdown-item[data-lang="${locale}"]`);
+        if (activeItem) {
+          label.textContent = activeItem.textContent.trim();
+          // Update active class
+          dropdown.querySelectorAll('.lp-dropdown-item').forEach(i => i.classList.remove('active'));
+          activeItem.classList.add('active');
+        }
+      }
+    });
+  });
+  
+  function closeAllDropdowns() {
+    dropdowns.forEach(function(d) { d.classList.remove('open'); });
+  }
+  
+  document.addEventListener('click', closeAllDropdowns);
+
+  // ============ SEARCH MODAL ============
+  const searchTrigger = document.querySelector('.lp-search-trigger');
+  const searchModal = document.querySelector('.lp-search-modal');
+  const searchInput = document.querySelector('.lp-search-modal input');
+  const searchEsc = document.querySelector('.lp-search-esc');
+  const searchResultsContainer = document.querySelector('.lp-search-results');
+  
+  // Search index
+  const searchIndex = [
+    { title: 'Merchant Wallet - Getting Started', desc: 'Download, install, and set up your merchant wallet', page: 'merchant_getting_started' },
+    { title: 'Consumer Wallet - Getting Started', desc: 'Download, install, and set up your consumer wallet', page: 'consumer_getting_started' },
+    { title: 'QR Code Payments', desc: 'Generate and scan QR codes for instant payments', page: 'merchant_qr_payments' },
+    { title: 'NFC Tap-to-Pay', desc: 'Set up and use NFC contactless payments', page: 'merchant_nfc_payments' },
+    { title: 'Transaction Management', desc: 'View, manage, and export your transactions', page: 'merchant_transactions' },
+    { title: 'Account Setup & Verification', desc: 'Complete your KYC and business profile', page: 'merchant_account_setup' },
+    { title: 'Making Payments', desc: 'Pay with QR codes and NFC as a consumer', page: 'consumer_making_payments' },
+    { title: 'Wallet Management', desc: 'Top up, withdraw, and manage your balance', page: 'consumer_wallet_management' },
+    { title: 'P2P Transfers', desc: 'Send money to friends and family', page: 'consumer_p2p_transfers' },
+    { title: 'Troubleshooting - Merchant', desc: 'Common issues and solutions for merchants', page: 'merchant_troubleshooting' },
+    { title: 'Troubleshooting - Consumer', desc: 'Common issues and solutions for consumers', page: 'consumer_troubleshooting' },
+    { title: 'Blog & Updates', desc: 'Latest news, tips, and announcements', page: 'blog_listing' },
+    { title: 'Changelog & Release Notes', desc: 'Version history and release notes', page: 'changelog_page' },
+    { title: 'Send Feedback', desc: 'Report bugs, request features, or share feedback', page: 'feedback_form' },
+    { title: 'Settings & Security', desc: 'Configure app settings and security preferences', page: 'consumer_settings' },
+    { title: 'Merchant Settings', desc: 'Configure merchant app settings and notifications', page: 'merchant_settings' }
+  ];
+
+  function openSearch() {
+    if (searchModal) {
+      searchModal.classList.add('open');
+      searchModal.setAttribute('aria-modal', 'true');
+      if (searchInput) {
+        setTimeout(function() { searchInput.focus(); }, 100);
+        searchInput.value = '';
+        renderSearchResults('');
+      }
+    }
+  }
+  
+  function closeSearch() {
+    if (searchModal) {
+      searchModal.classList.remove('open');
+      searchModal.removeAttribute('aria-modal');
+    }
+  }
+  
+  function renderSearchResults(query) {
+    if (!searchResultsContainer) return;
+    
+    if (!query.trim()) {
+      const emptyMsg = (typeof I18n !== 'undefined') ? I18n.t('landing.search.modal_empty') : 'Start typing to search documentation...';
+      searchResultsContainer.innerHTML = '<div class="lp-search-empty">' + emptyMsg + '</div>';
+      return;
+    }
+    
+    const q = query.toLowerCase();
+    const results = searchIndex.filter(function(item) {
+      return item.title.toLowerCase().includes(q) || item.desc.toLowerCase().includes(q);
+    });
+    
+    if (results.length === 0) {
+      const noResultsMsg = (typeof I18n !== 'undefined') ? I18n.t('landing.search.modal_no_results', { query: query }) : 'No results found for "' + query + '"';
+      searchResultsContainer.innerHTML = '<div class="lp-search-empty">' + noResultsMsg + '</div>';
+      return;
+    }
+    
+    var html = '';
+    results.forEach(function(r) {
+      html += '<div class="lp-search-result-item" tabindex="0" onclick="closeSearchAndNavigate(\'' + r.page + '\')" role="button">';
+      html += '<div class="result-title">' + r.title + '</div>';
+      html += '<div class="result-desc">' + r.desc + '</div>';
+      html += '</div>';
+    });
+    searchResultsContainer.innerHTML = html;
+  }
+  
+  // Expose for onclick
+  window.closeSearchAndNavigate = function(page) {
+    closeSearch();
+    if (typeof load_page === 'function') {
+      load_page(page);
+    }
+  };
+
+  if (searchTrigger) {
+    searchTrigger.addEventListener('click', openSearch);
+  }
+  
+  if (searchEsc) {
+    searchEsc.addEventListener('click', closeSearch);
+  }
+  
+  if (searchModal) {
+    searchModal.addEventListener('click', function(e) {
+      if (e.target === searchModal) {
+        closeSearch();
+      }
+    });
+  }
+  
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      renderSearchResults(this.value);
+    });
+  }
+  
+  // Keyboard shortcut Ctrl+K
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+      e.preventDefault();
+      if (searchModal && searchModal.classList.contains('open')) {
+        closeSearch();
+      } else {
+        openSearch();
+      }
+    }
+    if (e.key === 'Escape' && searchModal && searchModal.classList.contains('open')) {
+      closeSearch();
+    }
+  });
+
+  // ============ DARK MODE TOGGLE ============
+  const darkToggle = document.querySelector('.lp-dark-toggle');
+  if (darkToggle) {
+    darkToggle.addEventListener('click', function() {
+      // Placeholder: toggle class on body
+      document.body.classList.toggle('dark-mode');
+      var icon = darkToggle.querySelector('i');
+      if (icon) {
+        if (document.body.classList.contains('dark-mode')) {
+          icon.className = 'fa-solid fa-sun';
+          darkToggle.setAttribute('aria-label', 'Switch to light mode');
+        } else {
+          icon.className = 'fa-solid fa-moon';
+          darkToggle.setAttribute('aria-label', 'Switch to dark mode');
+        }
+      }
+    });
+  }
+
+  // ============ MOBILE NAV ============
+  const hamburger = document.querySelector('.lp-hamburger');
+  const mobileNav = document.querySelector('.lp-mobile-nav');
+  
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener('click', function() {
+      const isOpen = mobileNav.classList.contains('open');
+      mobileNav.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', !isOpen);
+      var icon = hamburger.querySelector('i');
+      if (icon) {
+        icon.className = isOpen ? 'fa-solid fa-bars' : 'fa-solid fa-xmark';
+      }
+    });
+    
+    // Close mobile nav on link click
+    mobileNav.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        mobileNav.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        var icon = hamburger.querySelector('i');
+        if (icon) icon.className = 'fa-solid fa-bars';
+      });
+    });
+  }
+
+  // ============ SMOOTH SCROLL ============
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+})();

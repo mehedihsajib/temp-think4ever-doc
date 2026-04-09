@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Search Results</title>
+        <link href="css/theme.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/global.css">
+        <link rel="stylesheet" href="assets/css/search_results.css">
+        <style>/* Basic reset for preview consistency */body { margin: 0; padding: 0; font-family: sans-serif; }</style>
+    </head>
+    <body>
+        <div class="search-results-page">
+            <!-- Skip to content -->
+            <a href="#sr-main-content" class="sr-only" style="position:absolute;top:-40px;left:0;background:#2563eb;color:#fff;padding:8px 16px;z-index:1000;">Skip to main content</a>
+            <!-- Header -->
+            <header class="sr-header" role="banner">
+                <div class="sr-header-inner">
+                    <a class="sr-header-logo" onclick="load_page('index')" role="link" tabindex="0" aria-label="MPay Network Home"> <img src="https://dev.think4ever.com/uifiles/20260311/ed3d2c21991e3bef5e069713af9fa6ca/only_m_with_white_bg_logo.png" alt="MPay Network Logo"/> <span>MPay Network</span> </a>
+                    <nav class="sr-header-nav" role="navigation" aria-label="Main navigation">
+                        <a onclick="load_page('merchant_docs_home')" tabindex="0">Merchant Docs</a>
+                        <a onclick="load_page('consumer_docs_home')" tabindex="0">Consumer Docs</a>
+                        <a onclick="load_page('blog_listing')" tabindex="0">Blog</a>
+                        <a onclick="load_page('changelog_page')" tabindex="0">Changelog</a>
+                    </nav>
+                </div>
+            </header>
+            <!-- Main Content -->
+            <main class="sr-main" id="sr-main-content" role="main">
+                <!-- Search Hero -->
+                <section class="sr-search-hero">
+                    <h1>Search Documentation</h1>
+                    <div class="sr-search-wrapper">
+                        <i class="fa-solid fa-magnifying-glass sr-search-icon" aria-hidden="true"></i>
+                        <input type="search" id="sr_search_input" placeholder="Search docs, blog posts, changelog..." autocomplete="off" aria-label="Search documentation" spellcheck="false"/>
+                        <button class="sr-clear-btn" aria-label="Clear search" type="button">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <button class="sr-search-btn" type="button" aria-label="Search">
+                            <i class="fa-solid fa-magnifying-glass"></i> Search
+                        </button>
+                    </div>
+                </section>
+                <!-- Recent Searches (shown when no query) -->
+                <div id="sr_recent_searches" class="sr-recent-searches" aria-label="Recent searches"></div>
+                <!-- Meta Bar: Result Count + Filters -->
+                <div class="sr-meta-bar" style="display: none;">
+                    <div id="sr_result_count" class="sr-result-count" aria-live="polite" role="status">
+                        <strong>0</strong> results found
+                    </div>
+                    <div id="sr_filter_type" class="sr-filter-group" role="group" aria-label="Filter results by content type">
+                        <button class="sr-filter-btn active" data-filter="all" type="button">All <span class="sr-filter-count">12</span>
+                        </button>
+                        <button class="sr-filter-btn" data-filter="merchant-docs" type="button">Merchant Docs <span class="sr-filter-count">5</span>
+                        </button>
+                        <button class="sr-filter-btn" data-filter="consumer-docs" type="button">Consumer Docs <span class="sr-filter-count">4</span>
+                        </button>
+                        <button class="sr-filter-btn" data-filter="blog" type="button">Blog <span class="sr-filter-count">2</span>
+                        </button>
+                        <button class="sr-filter-btn" data-filter="changelog" type="button">Changelog <span class="sr-filter-count">1</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Results List -->
+                <div id="sr_results_list" class="sr-results-list" role="feed" aria-label="Search results"></div>
+                <!-- No Results State -->
+                <div id="sr_no_results" class="sr-no-results" style="display: none;" role="status">
+                    <div class="sr-no-results-icon">
+                        <i class="fa-regular fa-face-frown"></i>
+                    </div>
+                    <h2>No results found</h2>
+                    <p>We couldn't find any matches for your search. Try adjusting your keywords or browse our documentation directly.</p>
+                    <div class="sr-no-results-suggestions">
+                        <h3>Search tips:</h3>
+                        <ul>
+                            <li>Try using broader or alternative keywords</li>
+                            <li>Check your spelling and try again</li>
+                            <li>Use fewer words to broaden the search</li>
+                            <li>Try searching for a related topic</li>
+                        </ul>
+                    </div>
+                    <button id="sr_back_home" class="sr-back-home-btn" onclick="load_page('index')" type="button">
+                        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Home
+                    </button>
+                    <div class="sr-quick-links">
+                        <a class="sr-quick-link" onclick="load_page('merchant_docs_home')" tabindex="0"><i class="fa-solid fa-store" aria-hidden="true"></i> Merchant Docs</a>
+                        <a class="sr-quick-link" onclick="load_page('consumer_docs_home')" tabindex="0"><i class="fa-solid fa-wallet" aria-hidden="true"></i> Consumer Docs</a>
+                        <a class="sr-quick-link" onclick="load_page('blog_listing')" tabindex="0"><i class="fa-solid fa-newspaper" aria-hidden="true"></i> Blog</a>
+                        <a class="sr-quick-link" onclick="load_page('feedback_form')" tabindex="0"><i class="fa-solid fa-message" aria-hidden="true"></i> Send Feedback</a>
+                    </div>
+                </div>
+                <!-- Pagination -->
+                <nav id="sr_pagination" class="sr-pagination" style="display: none;" role="navigation" aria-label="Search results pagination"></nav>
+            </main>
+            <!-- Footer -->
+           <div id="docFooter"></div>
+        </div>
+        <script src="assets/js/navigation.js"></script>
+        <script src="assets/js/search_results.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    </body>
+</html>

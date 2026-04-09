@@ -1,0 +1,205 @@
+<style>
+    /* ============ FOOTER ============ */
+    .lp-footer {
+        background: #0f172a;
+        padding: 64px 24px 32px;
+    }
+
+    .lp-footer-inner {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .lp-footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 48px;
+        margin-bottom: 48px;
+    }
+
+    .lp-footer-brand {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .lp-footer-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .lp-footer-logo img {
+        height: 32px;
+    }
+
+    .lp-footer-logo span {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    .lp-footer-brand p {
+        font-size: 0.875rem;
+        color: #94a3b8;
+        line-height: 1.625;
+        max-width: 280px;
+    }
+
+    .lp-footer-social {
+        display: flex;
+        gap: 8px;
+        margin-top: 8px;
+    }
+
+    .lp-footer-social a {
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #94a3b8;
+        border: 1px solid #334155;
+        border-radius: 8px;
+        font-size: 14px;
+        text-decoration: none;
+        transition: all 0.15s ease;
+    }
+
+    .lp-footer-social a:hover {
+        color: #fff;
+        border-color: #2563eb;
+        background: rgba(37, 99, 235, 0.15);
+    }
+
+    .lp-footer-col h4 {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 0.8125rem;
+        font-weight: 700;
+        color: #e2e8f0;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin-bottom: 16px;
+    }
+
+    .lp-footer-col a {
+        display: block;
+        font-size: 0.875rem;
+        color: #94a3b8;
+        text-decoration: none;
+        padding: 5px 0;
+        transition: color 0.15s ease;
+    }
+
+    .lp-footer-col a:hover {
+        color: #60a5fa;
+    }
+
+    .lp-footer-bottom {
+        border-top: 1px solid #1e293b;
+        padding-top: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .lp-footer-bottom p {
+        font-size: 0.8125rem;
+        color: #64748b;
+    }
+
+    .lp-footer-bottom-links {
+        display: flex;
+        gap: 20px;
+    }
+
+    .lp-footer-bottom-links a {
+        font-size: 0.8125rem;
+        color: #64748b;
+        text-decoration: none;
+        transition: color 0.15s ease;
+    }
+
+    .lp-footer-bottom-links a:hover {
+        color: #60a5fa;
+    }
+
+    @media (max-width: 1024px) {
+        .lp-footer-grid {
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 32px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .lp-footer-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .lp-footer-grid {
+            grid-template-columns: 1fr;
+            gap: 28px;
+        }
+
+        .lp-footer-bottom {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+</style>
+
+<footer class="lp-footer">
+    <div class="lp-footer-inner">
+        <div class="lp-footer-grid">
+            <!-- Brand -->
+            <div class="lp-footer-brand">
+                <div class="lp-footer-logo">
+                    <img src="https://dev.think4ever.com/uifiles/20260311/ed3d2c21991e3bef5e069713af9fa6ca/only_m_with_white_bg_logo.png"
+                        alt="MPay Network" width="32" height="32">
+                    <span>MPay Network</span>
+                </div>
+                <p data-i18n="landing.footer.desc">The complete QR & NFC digital wallet solution for merchants and consumers. Fast, secure, and accessible.</p>
+            </div>
+
+            <!-- Documentation -->
+            <div class="lp-footer-col">
+                <h4 data-i18n="landing.footer.col_docs">Documentation</h4>
+                <a href="#" id="lp_footer_merchant_link" onclick="load_page('merchant_docs_home'); return false;" data-i18n="landing.nav.merchant">Merchant Docs</a>
+                <a href="#" id="lp_footer_consumer_link" onclick="load_page('consumer_docs_home'); return false;" data-i18n="landing.nav.consumer">Consumer Docs</a>
+                <a href="#" onclick="load_page('merchant_getting_started'); return false;" data-i18n="landing.quicknav.merchant_card_link">Getting Started</a>
+                <a href="#" onclick="load_page('search_results'); return false;" data-i18n="landing.nav.search">Search</a>
+            </div>
+
+            <!-- Community -->
+            <div class="lp-footer-col">
+                <h4 data-i18n="landing.footer.col_community">Community</h4>
+                <a href="#" id="lp_footer_blog_link" onclick="load_page('blog_listing'); return false;" data-i18n="landing.nav.blog">Blog</a>
+                <a href="#" id="lp_footer_feedback_link" onclick="load_page('feedback_form'); return false;" data-i18n="landing.nav.feedback">Feedback</a>
+                <a href="#" id="lp_footer_changelog_link" onclick="load_page('changelog_page'); return false;" data-i18n="landing.nav.changelog">Changelog</a>
+            </div>
+
+            <!-- Legal -->
+            <div class="lp-footer-col">
+                <h4 data-i18n="landing.footer.col_legal">Legal</h4>
+                <a href="#" id="lp_footer_privacy_link" onclick="load_page('privacy_policy'); return false;" data-i18n="landing.footer.link_privacy">Privacy Policy</a>
+                <a href="#" id="lp_footer_terms_link" onclick="load_page('terms_of_service'); return false;" data-i18n="landing.footer.link_terms">Terms of Service</a>
+            </div>
+        </div>
+
+        <div class="lp-footer-bottom">
+            <p data-i18n="landing.footer.copyright">© 2026 MPay Network. All rights reserved.</p>
+            <div class="lp-footer-bottom-links">
+                <a href="#" onclick="load_page('privacy_policy'); return false;" data-i18n="landing.footer.link_privacy">Privacy</a>
+                <a href="#" onclick="load_page('terms_of_service'); return false;" data-i18n="landing.footer.link_terms">Terms</a>
+                <a href="#" onclick="load_page('feedback_form'); return false;" data-i18n="landing.footer.link_contact">Contact</a>
+            </div>
+        </div>
+    </div>
+</footer>
+

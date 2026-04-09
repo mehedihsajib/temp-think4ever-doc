@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchant - Troubleshooting</title>
+    <link href="css/theme.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/merchant_troubleshooting.css">
+    <style>
+        /* Basic reset for preview consistency */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Site Header -->
+    <header class="modern-header" id="consumerHeader">
+    </header>
+    <div class="merchant-troubleshooting-page">
+        <!-- Skip to content -->
+        <a href="#main-content" class="sr-only"
+            style="position:absolute;left:-9999px;top:0;z-index:999;padding:8px 16px;background:#2563eb;color:#fff;text-decoration:none;font-size:14px;border-radius:0 0 8px 0;"
+            onfocus="this.style.left='0'" onblur="this.style.left='-9999px'">Skip to main content</a>
+        <div class="docs-layout">
+            <!-- Mobile sidebar toggle -->
+            <button class="cgs-sidebar-toggle" id="cgsSidebarToggle" aria-label="Toggle navigation menu"
+                aria-expanded="false">
+                <i class="fa fa-bars"></i>
+            </button>
+            <!-- Sidebar overlay -->
+            <div class="cgs-sidebar-overlay" id="cgsSidebarOverlay"></div>
+            <!-- Sidebar -->
+            <div id="merchantSidebar">
+
+            </div>
+            <!-- Main Content -->
+            <main class="mtr-main" id="main-content">
+                <!-- Breadcrumb -->
+                <nav class="mtr-breadcrumb" id="mtr_breadcrumb" aria-label="Breadcrumb">
+                    <a onclick="load_page('index')" tabindex="0">Docs</a>
+                    <span class="separator"><i class="fa-solid fa-chevron-right"></i></span>
+                    <a onclick="load_page('merchant_docs_home')" tabindex="0">Merchant</a>
+                    <span class="separator"><i class="fa-solid fa-chevron-right"></i></span>
+                    <span class="current">Troubleshooting</span>
+                </nav>
+                <!-- Page Title -->
+                <h1 class="mtr-page-title" id="mtr_title"> <i class="fa-solid fa-life-ring"
+                        style="color:#2563eb;margin-right:8px;font-size:0.85em;"></i>
+                    Troubleshooting </h1>
+                <p class="mtr-page-intro">Experiencing issues with your mPay Merchant Wallet? This guide covers common
+                    problems, error codes, and step-by-step solutions to get you back on track quickly.</p>
+                <!-- System Status -->
+                <div class="callout callout-tip">
+                    <i class="fa-solid fa-shield-check callout-icon"></i>
+                    <div class="callout-content">
+                        <strong>System Status</strong>
+                        <p>All MPay Network services are currently operational. <span
+                                class="status-badge operational">All Systems Operational</span></p>
+                    </div>
+                </div>
+                <!-- Quick Diagnostic Tool -->
+                <div class="diagnostic-tool">
+                    <h4><i class="fa-solid fa-stethoscope" style="color:#2563eb;margin-right:6px;"></i> Quick Diagnostic
+                        Tool</h4>
+                    <p>Select your issue to get instant troubleshooting steps:</p>
+                    <select class="diagnostic-select" id="diagnosticSelect" aria-label="Select your issue">
+                        <option value="">Choose an issue...</option>
+                        <option value="payment_failed">Payment Failed</option>
+                        <option value="qr_not_scanning">QR Code Not Scanning</option>
+                        <option value="nfc_not_working">NFC Not Working</option>
+                        <option value="login_issues">Can't Log In</option>
+                        <option value="slow_performance">App Is Slow</option>
+                        <option value="transaction_missing">Transaction Not Showing</option>
+                    </select>
+                    <div class="diagnostic-result" id="diagnosticResult" role="region" aria-live="polite"></div>
+                </div>
+                <!-- Section: Common Issues -->
+                <section class="doc-section" id="section-common-issues">
+                    <h2 class="doc-section-title"><i class="fa-solid fa-triangle-exclamation"></i> Common Issues</h2>
+                    <p class="doc-section-desc">Below are the most frequently reported issues and their solutions. Click
+                        on an issue to expand the details.</p>
+                    <!-- Issue 1 -->
+                    <div class="issue-card" id="mtr_content_common_issues">
+                        <button class="issue-header" aria-expanded="false" aria-controls="issue-body-1">
+                            <span class="issue-severity critical"><i class="fa-solid fa-bolt"></i></span>
+                            <span class="issue-title">Payment transaction fails with timeout error</span>
+                            <i class="fa-solid fa-chevron-down issue-chevron" aria-hidden="true"></i>
+                        </button>
+                        <div class="issue-body" id="issue-body-1" aria-hidden="true">
+                            <div class="issue-body-inner">
+                                <h4>Symptoms</h4>
+                                <p>Payment appears to process but then shows "Transaction Timeout" or error code
+                                    <code>ERR_TIMEOUT_001</code>. The customer's wallet is not charged.</p>
+                                <h4>Possible Causes</h4>
+                                <ul>
+                                    <li>Unstable internet connection on merchant or customer device</li>
+                                    <li>Server processing delay during peak hours</li>
+                                    <li>QR code expired before scan completed</li>
+                                </ul>
+                                <div class="solution-box">
+                                    <h4><i class="fa-solid fa-check-circle"></i> Solution</h4>
+                                    <p>Ensure a stable internet connection. Regenerate the QR code and retry. If the
+                                        issue persists during peak hours (12PM–2PM, 6PM–8PM), wait a few minutes and try
+                                        again. Check the transaction history to confirm no duplicate charges occurred.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Issue 2 -->
+                    <div class="issue-card">
+                        <button class="issue-header" aria-expanded="false" aria-controls="issue-body-2">
+                            <span class="issue-severity warning"><i class="fa-solid fa-qrcode"></i></span>
+                            <span class="issue-title">QR code is not being recognized by customer's app</span>
+                            <i class="fa-solid fa-chevron-down issue-chevron" aria-hidden="true"></i>
+                        </button>
+                        <div class="issue-body" id="issue-body-2" aria-hidden="true">
+                            <div class="issue-body-inner">
+                                <h4>Symptoms</h4>
+                                <p>The customer's MPay Consumer app cannot read or recognize the QR code displayed on
+                                    the merchant device.</p>
+                                <h4>Possible Causes</h4>
+                                <ul>
+                                    <li>Screen brightness is too low</li>
+                                    <li>QR code has expired (5 minute validity)</li>
+                                    <li>Customer is using an outdated app version</li>
+                                    <li>Dirty or scratched camera lens on customer device</li>
+                                </ul>
+                                <div class="solution-box">
+                                    <h4><i class="fa-solid fa-check-circle"></i> Solution</h4>
+                                    <p>Increase your screen brightness to maximum. Generate a new QR code. Ask the
+                                        customer to ensure they have the latest MPay Consumer app version. The QR code
+                                        should be scanned from 15–30cm distance with adequate lighting.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Issue 3 -->
+                    <div class="issue-card">
+                        <button class="issue-header" aria-expanded="false" aria-controls="issue-body-3">
+                            <span class="issue-severity warning"><i class="fa-solid fa-wifi"></i></span>
+                            <span class="issue-title">NFC tap-to-pay not connecting</span>
+                            <i class="fa-solid fa-chevron-down issue-chevron" aria-hidden="true"></i>
+                        </button>
+                        <div class="issue-body" id="issue-body-3" aria-hidden="true">
+                            <div class="issue-body-inner">
+                                <h4>Symptoms</h4>
+                                <p>When attempting NFC payment, devices do not connect or the app shows "NFC device not
+                                    found" (<code>ERR_NFC_002</code>).</p>
+                                <h4>Diagnostic Steps</h4>
+                                <div class="diagnostic-steps">
+                                    <div class="diagnostic-step">
+                                        <span class="step-number">1</span>
+                                        <div class="step-content">
+                                            <strong>Check NFC is enabled</strong>
+                                            <p>Go to your device Settings > Connections > NFC and ensure it's turned on.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="diagnostic-step">
+                                        <span class="step-number">2</span>
+                                        <div class="step-content">
+                                            <strong>Remove phone case</strong>
+                                            <p>Thick or metal phone cases can block NFC signals. Remove the case and try
+                                                again.</p>
+                                        </div>
+                                    </div>
+                                    <div class="diagnostic-step">
+                                        <span class="step-number">3</span>
+                                        <div class="step-content">
+                                            <strong>Align devices properly</strong>
+                                            <p>Hold the devices back-to-back, within 4cm distance. Keep steady for at
+                                                least 2 seconds.</p>
+                                        </div>
+                                    </div>
+                                    <div class="diagnostic-step">
+                                        <span class="step-number">4</span>
+                                        <div class="step-content">
+                                            <strong>Restart NFC</strong>
+                                            <p>Toggle NFC off and on in device settings, then reopen the MPay app.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Issue 4 -->
+                    <div class="issue-card">
+                        <button class="issue-header" aria-expanded="false" aria-controls="issue-body-4">
+                            <span class="issue-severity info"><i class="fa-solid fa-lock"></i></span>
+                            <span class="issue-title">Account locked after multiple failed login attempts</span>
+                            <i class="fa-solid fa-chevron-down issue-chevron" aria-hidden="true"></i>
+                        </button>
+                        <div class="issue-body" id="issue-body-4" aria-hidden="true">
+                            <div class="issue-body-inner">
+                                <h4>Symptoms</h4>
+                                <p>After 5 failed login attempts, the account is temporarily locked with message
+                                    "Account temporarily suspended" (<code>ERR_AUTH_005</code>).</p>
+                                <h4>Possible Causes</h4>
+                                <ul>
+                                    <li>Incorrect password entered multiple times</li>
+                                    <li>Someone else attempting to access your account</li>
+                                    <li>Auto-fill entering old credentials</li>
+                                </ul>
+                                <div class="solution-box">
+                                    <h4><i class="fa-solid fa-check-circle"></i> Solution</h4>
+                                    <p>Wait 30 minutes for the automatic unlock, then use "Forgot Password" to reset
+                                        your credentials. If you suspect unauthorized access, contact support
+                                        immediately to secure your account.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Issue 5 -->
+                    <div class="issue-card">
+                        <button class="issue-header" aria-expanded="false" aria-controls="issue-body-5">
+                            <span class="issue-severity info"><i class="fa-solid fa-arrow-rotate-right"></i></span>
+                            <span class="issue-title">App crashes on startup or during payment</span>
+                            <i class="fa-solid fa-chevron-down issue-chevron" aria-hidden="true"></i>
+                        </button>
+                        <div class="issue-body" id="issue-body-5" aria-hidden="true">
+                            <div class="issue-body-inner">
+                                <h4>Symptoms</h4>
+                                <p>The MPay Merchant app closes unexpectedly when opening or mid-transaction.</p>
+                                <h4>Possible Causes</h4>
+                                <ul>
+                                    <li>Outdated app version with known bugs</li>
+                                    <li>Insufficient device storage or memory</li>
+                                    <li>Corrupt app cache</li>
+                                    <li>OS incompatibility</li>
+                                </ul>
+                                <div class="solution-box">
+                                    <h4><i class="fa-solid fa-check-circle"></i> Solution</h4>
+                                    <p>Update to the latest version from the App Store or Google Play. Clear the app
+                                        cache via Settings > Apps > MPay Merchant > Storage > Clear Cache. Ensure at
+                                        least 100MB of free storage. If issues persist, uninstall and reinstall the app.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Issue 6 -->
+                    <div class="issue-card">
+                        <button class="issue-header" aria-expanded="false" aria-controls="issue-body-6">
+                            <span class="issue-severity warning"><i class="fa-solid fa-clock-rotate-left"></i></span>
+                            <span class="issue-title">Transactions not appearing in history</span>
+                            <i class="fa-solid fa-chevron-down issue-chevron" aria-hidden="true"></i>
+                        </button>
+                        <div class="issue-body" id="issue-body-6" aria-hidden="true">
+                            <div class="issue-body-inner">
+                                <h4>Symptoms</h4>
+                                <p>A completed payment does not appear in the transaction history list.</p>
+                                <h4>Possible Causes</h4>
+                                <ul>
+                                    <li>Transaction is still being processed (can take up to 30 seconds)</li>
+                                    <li>Date filter is hiding the transaction</li>
+                                    <li>Sync issue between device and server</li>
+                                </ul>
+                                <div class="solution-box">
+                                    <h4><i class="fa-solid fa-check-circle"></i> Solution</h4>
+                                    <p>Pull down to refresh the transaction list. Check the "Pending" tab. Reset any
+                                        active date filters to "All Time". If the transaction doesn't appear after 5
+                                        minutes, contact support with the approximate amount and time.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Section: Error Codes -->
+                <section class="doc-section" id="section-error-codes">
+                    <h2 class="doc-section-title" id="mtr_content_error_codes"><i class="fa-solid fa-code"></i> Error
+                        Codes Reference</h2>
+                    <p class="doc-section-desc">Below is a comprehensive reference of error codes you may encounter. Use
+                        the search to quickly find a specific code.</p>
+                    <div class="error-table-container">
+                        <div class="error-table-search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="errorTableSearch" placeholder="Search error codes or descriptions..."
+                                aria-label="Search error codes">
+                        </div>
+                        <table class="error-table" role="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="width:140px;">Error Code</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col" class="hide-mobile" style="width:140px;">Category</th>
+                                    <th scope="col" class="hide-mobile">Quick Fix</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="error-row">
+                                    <td><span class="error-code-badge">ERR_AUTH_001</span></td>
+                                    <td>Invalid credentials — email or password is incorrect</td>
+                                    <td class="hide-mobile">Authentication</td>
+                                    <td class="hide-mobile"><span class="solution-hint"><i
+                                                class="fa-solid fa-lightbulb"></i> Reset password via Forgot
+                                            Password</span></td>
+                                </tr>
+                                <tr class="error-row">
+                                    <td><span class="error-code-badge">ERR_AUTH_003</span></td>
+                                    <td>Session expired — login token is no longer valid</td>
+                                    <td class="hide-mobile">Authentication</td>
+                                    <td class="hide-mobile"><span class="solution-hint"><i
+                                                class="fa-solid fa-lightbulb"></i> Log out and log back in</span></td>
+                                </tr>
+                                <tr class="error-row">
+                                    <td><span class="error-code-badge">ERR_AUTH_005</span></td>
+                                    <td>Account temporarily locked after 5 failed login attempts</td>
+                                    <td class="hide-mobile">Authentication</td>
+                                    <td class="hide-mobile"><span class="solution-hint"><i
+                                                class="fa-solid fa-lightbulb"></i> Wait 30 min, then reset
+                                            password</span></td>
+                                </tr>
+                                <tr class="error-row">
+                                    <td><span class="error-code-badge warn">ERR_PAY_001</span></td>
+                                    <td>Insufficient funds in customer's wallet</td>
+                                    <td class="hide-mobile">Payment</td>
+                                    <td class="hide-mobile"><span class="solution-hint"><i
+                                                class="fa-solid fa-lightbulb"></i> Customer needs to top up
+                                            wallet</span></td>
+                                </tr>
+                                <tr class="error-row">
+                                    <td><span class="error-code-badge warn">ERR_PAY_002</span></td>
+                                    <td>Transaction amount exceeds daily limit</td>
+                                    <td class="hide-mobile">Payment</td>
+                                    <td class="hide-mobile"><span class="solution-hint"><i
+                                                class="fa-solid fa-lightbulb"></i> Split into smaller transactions or
+                                            raise limit</span></td>
+                                </tr>
+                                <tr class="error-row">
+                                    <td><span class="error-code-badge">ERR_PAY_004</span></td>
+                                    <td>Payment rejected by fraud detection system</td>
+                                    <td class="hide-mobile">Payment</td>
+                                    <td class="hide-mobile"><span class="solution-hint"><i
+                                                class="fa-solid fa-lightbulb"></i> Contact support for review</span>
+                                    </td>
+                                </tr>
+                                <tr class="error-row">
+                                    <td><span class="error-code-badge warn">ERR_QR_001</span></td>
+                                    <td>QR code has expired (exceeded 5-minute validity)</td>
+                                    <td class="hide-mobile">QR Payment</td>
+                                    <td class="hide-mobile"><span class="solution-hint"><i
+                                                class="fa-solid fa-lightbulb"></i> Generate a new QR code</span></td>
+                                </tr>
+                                <tr class="error-row">
+                                    <td><span class="error-code-badge warn">ERR_QR_002</span></td>
+                                    <td>Invalid or malformed QR code data</td>
+                                    <td class="hide-mobile">QR Payment</td>
+                                    <td class="hide-mobile"><span class="solution-hint"><i
+                                                class="fa-solid fa-lightbulb"></i> Regenerate QR, update app</span></td>
+                                </tr>
+                                <tr class="error-row">
+                                    <td><span class="error-code-badge info">ERR_NFC_001</span></td>
+                                    <td>NFC hardware not detected on device</td>
+                                    <td class="hide-mobile">NFC Payment</td>
+                                    <td class="hide-mobile"><span class="solution-hint"><i
+                                                class="fa-solid fa-lightbulb"></i> Use QR payment as alternative</span>
+                                    </td>
+                                </tr>
+                                <tr class="error-row">
+                                    <td><span class="error-code-badge info">ERR_NFC_002</span></td>
+                                    <td>NFC connection failed — device not found</td>
+                                    <td class="hide-mobile">NFC Payment</td>
+                                    <td class="hide-mobile"><span class="solution-hint"><i
+                                                class="fa-solid fa-lightbulb"></i> Toggle NFC, remove case, retry</span>
+                                    </td>
+                                </tr>
+                                <tr class="error-row">
+                                    <td><span class="error-code-badge">ERR_TIMEOUT_001</span></td>
+                                    <td>Transaction timed out — server did not respond in time</td>
+                                    <td class="hide-mobile">Network</td>
+                                    <td class="hide-mobile"><span class="solution-hint"><i
+                                                class="fa-solid fa-lightbulb"></i> Check connection, retry</span></td>
+                                </tr>
+                                <tr class="error-row">
+                                    <td><span class="error-code-badge">ERR_NET_001</span></td>
+                                    <td>No internet connection detected</td>
+                                    <td class="hide-mobile">Network</td>
+                                    <td class="hide-mobile"><span class="solution-hint"><i
+                                                class="fa-solid fa-lightbulb"></i> Connect to Wi-Fi or mobile
+                                            data</span></td>
+                                </tr>
+                                <tr class="error-row">
+                                    <td><span class="error-code-badge info">ERR_KYC_001</span></td>
+                                    <td>KYC verification pending — some features restricted</td>
+                                    <td class="hide-mobile">Account</td>
+                                    <td class="hide-mobile"><span class="solution-hint"><i
+                                                class="fa-solid fa-lightbulb"></i> Complete verification in
+                                            Settings</span></td>
+                                </tr>
+                                <tr class="error-row">
+                                    <td><span class="error-code-badge">ERR_KYC_003</span></td>
+                                    <td>KYC document rejected — unclear or invalid document</td>
+                                    <td class="hide-mobile">Account</td>
+                                    <td class="hide-mobile"><span class="solution-hint"><i
+                                                class="fa-solid fa-lightbulb"></i> Resubmit clear, valid document</span>
+                                    </td>
+                                </tr>
+                                <tr class="error-row">
+                                    <td><span class="error-code-badge warn">ERR_SYS_500</span></td>
+                                    <td>Internal server error — unexpected system failure</td>
+                                    <td class="hide-mobile">System</td>
+                                    <td class="hide-mobile"><span class="solution-hint"><i
+                                                class="fa-solid fa-lightbulb"></i> Wait and retry; contact support if
+                                            persistent</span></td>
+                                </tr>
+                                <tr class="no-results-row" style="display:none;">
+                                    <td colspan="4"> <i class="fa-solid fa-circle-info" style="margin-right:6px;"></i>
+                                        No error codes match your search. Try a different term. </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="callout callout-info" style="margin-top:20px;">
+                        <i class="fa-solid fa-circle-info callout-icon"></i>
+                        <div class="callout-content">
+                            <strong>Can't find your error code?</strong>
+                            <p>If you encounter an error code not listed above, please take a screenshot and <a
+                                    onclick="load_page('feedback_form')" tabindex="0"
+                                    style="color:#2563eb;cursor:pointer;text-decoration:underline;">submit a bug
+                                    report</a> or contact our support team.</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Section: FAQ -->
+                <section class="doc-section" id="section-faq">
+                    <h2 class="doc-section-title" id="mtr_faq_accordion"><i class="fa-solid fa-circle-question"></i>
+                        Frequently Asked Questions</h2>
+                    <p class="doc-section-desc">Quick answers to common troubleshooting questions.</p>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-a-1">
+                            <span class="faq-q-icon">Q</span>
+                            <span class="faq-q-text">How do I update my MPay Merchant app?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-answer" id="faq-a-1" aria-hidden="true">
+                            <p>On <strong>Android</strong>, open Google Play Store, search for "MPay Merchant", and tap
+                                "Update". On <strong>iOS</strong>, open the App Store, go to your profile, and find MPay
+                                Merchant in the pending updates list. We recommend enabling automatic updates to always
+                                have the latest version.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-a-2">
+                            <span class="faq-q-icon">Q</span>
+                            <span class="faq-q-text">Why is my withdrawal taking longer than usual?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-answer" id="faq-a-2" aria-hidden="true">
+                            <p>Withdrawals typically process within 1–3 business days. Delays can occur due to bank
+                                processing times, public holidays, or if your withdrawal triggers a security review. If
+                                your withdrawal has been pending for more than 5 business days, contact support with
+                                your withdrawal reference number.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-a-3">
+                            <span class="faq-q-icon">Q</span>
+                            <span class="faq-q-text">Can I use MPay Merchant on multiple devices?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-answer" id="faq-a-3" aria-hidden="true">
+                            <p>Yes, you can log in to your merchant account on up to 3 devices simultaneously. Each
+                                device will receive real-time transaction notifications. To manage your active sessions,
+                                go to <strong>Settings > Security > Active Sessions</strong>.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-a-4">
+                            <span class="faq-q-icon">Q</span>
+                            <span class="faq-q-text">What should I do if a customer was charged but I didn't receive the
+                                payment?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-answer" id="faq-a-4" aria-hidden="true">
+                            <p>First, ask the customer for their transaction reference number. Check your "Pending"
+                                transactions tab. In rare cases, there may be a network delay of up to 5 minutes. If the
+                                payment doesn't appear, contact support with both the merchant and customer transaction
+                                references for reconciliation.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-a-5">
+                            <span class="faq-q-icon">Q</span>
+                            <span class="faq-q-text">How do I process a refund for a customer?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-answer" id="faq-a-5" aria-hidden="true">
+                            <p>Go to <strong>Transactions > Find the transaction > Tap the three-dot menu > Request
+                                    Refund</strong>. Enter the refund amount (full or partial) and confirm. Refunds are
+                                processed within 24 hours. Note: Refunds can only be initiated within 30 days of the
+                                original transaction.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-a-6">
+                            <span class="faq-q-icon">Q</span>
+                            <span class="faq-q-text">How do I clear the app cache without losing data?</span>
+                            <i class="fa-solid fa-chevron-down faq-chevron" aria-hidden="true"></i>
+                        </button>
+                        <div class="faq-answer" id="faq-a-6" aria-hidden="true">
+                            <p>Clearing the cache will not delete your account data, transaction history, or settings —
+                                those are stored securely on our servers. Go to your device <strong>Settings > Apps >
+                                    MPay Merchant > Storage > Clear Cache</strong>. You may need to log in again after
+                                clearing the cache.</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Section: Contact Support -->
+                <section class="doc-section" id="section-contact-support">
+                    <h2 class="doc-section-title" id="mtr_content_contact_support"><i class="fa-solid fa-headset"></i>
+                        Contact Support</h2>
+                    <p class="doc-section-desc">If you can't resolve your issue using the guides above, our support team
+                        is here to help.</p>
+                    <div class="support-grid">
+                        <a class="support-card" href="mailto:support@mpaynetwork.com">
+                            <div class="support-card-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <h4>Email Support</h4>
+                            <p>Send a detailed description of your issue and we'll respond within 24 hours.</p> <span
+                                class="support-link">support@mpaynetwork.com <i
+                                    class="fa-solid fa-arrow-right"></i></span>
+                        </a>
+                        <a class="support-card" href="tel:+18001234567">
+                            <div class="support-card-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <h4>Phone Support</h4>
+                            <p>Speak directly with our team, available Monday–Friday, 8AM–8PM EST.</p> <span
+                                class="support-link">1-800-123-4567 <i class="fa-solid fa-arrow-right"></i></span>
+                        </a>
+                        <div class="support-card" onclick="load_page('feedback_form')" tabindex="0" role="link">
+                            <div class="support-card-icon">
+                                <i class="fa-solid fa-bug"></i>
+                            </div>
+                            <h4>Bug Report</h4>
+                            <p>Found a bug? Submit a detailed report so our team can investigate and fix it.</p>
+                            <span class="support-link">Submit Report <i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                    <div class="callout callout-warning" style="margin-top:24px;">
+                        <i class="fa-solid fa-triangle-exclamation callout-icon"></i>
+                        <div class="callout-content">
+                            <strong>Before contacting support</strong>
+                            <p>Please have the following information ready: your merchant ID, device model and OS
+                                version, app version number, any error codes, and screenshots of the issue. This helps
+                                us resolve your case faster.</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Prev/Next Navigation -->
+                <div class="prev-next-nav" id="mtr_prev_next">
+                    <button class="prev-next-card" onclick="load_page('merchant_settings')"
+                        aria-label="Previous: Settings & Configuration">
+                        <span class="prev-next-label"><i class="fa-solid fa-arrow-left"></i> Previous</span>
+                        <span class="prev-next-title">Settings & Configuration</span>
+                    </button>
+                    <button class="prev-next-card next" onclick="load_page('consumer_docs_home')"
+                        aria-label="Next: Consumer Wallet Docs">
+                        <span class="prev-next-label">Next <i class="fa-solid fa-arrow-right"></i></span>
+                        <span class="prev-next-title">Consumer Wallet Docs</span>
+                    </button>
+                </div>
+            </main>
+            <!-- Table of Contents (right sidebar) -->
+            <aside class="mtr-toc" role="navigation" aria-label="Table of contents">
+                <p class="toc-title">On This Page</p>
+                <ul class="toc-list">
+                    <li>
+                        <a href="#section-common-issues" class="active">Common Issues</a>
+                    </li>
+                    <li>
+                        <a href="#section-error-codes">Error Codes Reference</a>
+                    </li>
+                    <li>
+                        <a href="#section-faq">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="#section-contact-support">Contact Support</a>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+        <!-- Mobile sidebar toggle -->
+        <button class="sidebar-toggle-btn" id="sidebarToggle" aria-label="Toggle navigation menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+    <div id="docFooter"></div>
+    <script src="assets/js/i18n.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.I18n) {
+                window.I18n.init();
+            }
+        });
+    </script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/merchant_troubleshooting.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+
+</html>

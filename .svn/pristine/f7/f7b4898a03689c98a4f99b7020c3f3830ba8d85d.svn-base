@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Feedback Form</title>
+        <link href="css/theme.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/global.css">
+        <link rel="stylesheet" href="assets/css/feedback_form.css">
+        <style>/* Basic reset for preview consistency */body { margin: 0; padding: 0; font-family: sans-serif; }</style>
+    </head>
+    <body>
+        <div class="feedback-page">
+            <!-- Skip to content -->
+            <a href="#feedback-content" class="skip-link">Skip to content</a>
+            <!-- Header -->
+            <header class="feedback-header" role="banner">
+                <div class="header-inner">
+                    <a class="header-logo" onclick="load_page('index')" tabindex="0" aria-label="MPay Network Home"> 
+                        <img src="https://dev.think4ever.com/uifiles/20260311/ed3d2c21991e3bef5e069713af9fa6ca/only_m_with_white_bg_logo.png" alt="MPay Network Logo"/> 
+                        <span>MPay Network</span> 
+                    </a>
+                    <nav class="header-nav" role="navigation" aria-label="Main navigation">
+                        <button class="header-nav-link" onclick="load_page('merchant_docs_home')" data-i18n="nav.merchant">Merchant Docs</button>
+                        <button class="header-nav-link" onclick="load_page('consumer_docs_home')" data-i18n="nav.consumer">Consumer Docs</button>
+                        <button class="header-nav-link" onclick="load_page('blog_listing')" data-i18n="nav.blog">Blog</button>
+                        <button class="header-nav-link" onclick="load_page('changelog_page')" data-i18n="nav.changelog">Changelog</button>
+                    </nav>
+                    <div class="header-actions">
+                        <!-- Language Switcher -->
+                        <div class="modern-lang-wrapper" id="langWrapper">
+                            <button class="modern-lang-btn" id="modernLangBtn" aria-expanded="false" aria-haspopup="true">
+                                <i class="fa fa-globe"></i>
+                                <span id="current-lang-code" style="text-transform: uppercase" data-i18n="meta.lang_code">EN</span>
+                                <i class="fa fa-chevron-down" style="font-size: 10px; margin-left: 2px"></i>
+                            </button>
+                            <div class="modern-lang-menu" id="modernLangMenu" role="menu">
+                                <button onclick="changeLanguage('en')" data-lang-btn="en" class="lang-opt-en" role="menuitem">
+                                    <span>English</span><span class="lang-code">EN</span>
+                                </button>
+                                <button onclick="changeLanguage('es')" data-lang-btn="es" class="lang-opt-es" role="menuitem">
+                                    <span>Español</span><span class="lang-code">ES</span>
+                                </button>
+                                <button onclick="changeLanguage('fr')" data-lang-btn="fr" class="lang-opt-fr" role="menuitem">
+                                    <span>Français</span><span class="lang-code">FR</span>
+                                </button>
+                                <button onclick="changeLanguage('it')" data-lang-btn="it" class="lang-opt-it" role="menuitem">
+                                    <span>Italiano</span><span class="lang-code">IT</span>
+                                </button>
+                                <button onclick="changeLanguage('nl')" data-lang-btn="nl" class="lang-opt-nl" role="menuitem">
+                                    <span>Nederlands</span><span class="lang-code">NL</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- Main Content -->
+            <main class="feedback-main" id="feedback-content" role="main">
+                <div class="feedback-container">
+                    <!-- Breadcrumb -->
+                    <nav class="feedback-breadcrumb" aria-label="Breadcrumb">
+                        <a onclick="load_page('index')" tabindex="0" data-i18n="nav.overview">Home</a>
+                        <span class="separator"><i class="fa fa-chevron-right"></i></span>
+                        <span class="current" data-i18n="feedback.breadcrumb">Feedback</span>
+                    </nav>
+                    <!-- Page Header -->
+                    <div class="feedback-page-header">
+                        <div class="page-icon" aria-hidden="true">
+                            <i class="fa fa-comment-dots"></i>
+                        </div>
+                        <h1 id="ff_title" data-i18n="feedback.title">Send Us Feedback</h1>
+                        <p id="ff_description" data-i18n="feedback.description">We value your feedback. Let us know how we can improve mPay Network Wallet.</p>
+                    </div>
+                    <!-- Quick Category Type Selector -->
+                    <div class="feedback-type-selector" role="radiogroup" aria-label="Quick feedback category selection">
+                        <div class="type-card" data-category="bug_report" role="radio" aria-checked="false" tabindex="0">
+                            <div class="type-icon" aria-hidden="true">
+                                <i class="fa fa-bug"></i>
+                            </div>
+                            <div class="type-label" data-i18n="feedback.type.bug">Bug Report</div>
+                        </div>
+                        <div class="type-card" data-category="feature_request" role="radio" aria-checked="false" tabindex="0">
+                            <div class="type-icon" aria-hidden="true">
+                                <i class="fa fa-lightbulb"></i>
+                            </div>
+                            <div class="type-label" data-i18n="feedback.type.feature">Feature Request</div>
+                        </div>
+                        <div class="type-card" data-category="general" role="radio" aria-checked="false" tabindex="0">
+                            <div class="type-icon" aria-hidden="true">
+                                <i class="fa fa-message"></i>
+                            </div>
+                            <div class="type-label" data-i18n="feedback.type.general">General Feedback</div>
+                        </div>
+                    </div>
+                    <!-- Form Card -->
+                    <div class="feedback-form-card">
+                        <form id="feedbackForm" novalidate>
+                            <!-- Category Dropdown -->
+                            <div class="form-group">
+                                <label for="ff_category" class="form-label"><span data-i18n="feedback.form.category_label">Category</span> <span class="required" aria-hidden="true">*</span>
+                                </label>
+                                <select id="ff_category" class="form-select" required aria-required="true">
+                                    <option value="" disabled selected data-i18n="feedback.form.category_placeholder">Select a category...</option>
+                                    <option value="bug_report" data-i18n="feedback.form.category_bug">Bug Report</option>
+                                    <option value="feature_request" data-i18n="feedback.form.category_feature">Feature Request</option>
+                                    <option value="general" data-i18n="feedback.form.category_general">General Feedback</option>
+                                    <option value="merchant_wallet" data-i18n="feedback.form.category_merchant">Merchant Wallet</option>
+                                    <option value="consumer_wallet" data-i18n="feedback.form.category_consumer">Consumer Wallet</option>
+                                </select>
+                                <div id="ff_category_error" class="form-error" role="alert" aria-live="polite"></div>
+                            </div>
+                            <!-- Name and Email Row -->
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="ff_name" class="form-label"><span data-i18n="feedback.form.name_label">Name</span> <span class="optional" data-i18n="feedback.form.name_optional">(optional)</span>
+                                    </label>
+                                    <input type="text" id="ff_name" class="form-input" data-i18n-attr="placeholder:feedback.form.name_placeholder" placeholder="Your name" autocomplete="name"/>
+                                    <div id="ff_name_error" class="form-error" role="alert" aria-live="polite"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ff_email" class="form-label"><span data-i18n="feedback.form.email_label">Email</span> <span class="optional" data-i18n="feedback.form.email_optional">(optional)</span>
+                                    </label>
+                                    <input type="email" id="ff_email" class="form-input" data-i18n-attr="placeholder:feedback.form.email_placeholder" placeholder="your@email.com" autocomplete="email"/>
+                                    <div id="ff_email_error" class="form-error" role="alert" aria-live="polite"></div>
+                                    <div class="form-hint" data-i18n="feedback.form.email_hint">We'll only use this to follow up on your feedback.</div>
+                                </div>
+                            </div>
+                            <!-- Subject -->
+                            <div class="form-group">
+                                <label for="ff_subject" class="form-label"><span data-i18n="feedback.form.subject_label">Subject</span> <span class="required" aria-hidden="true">*</span>
+                                </label>
+                                <input type="text" id="ff_subject" class="form-input" data-i18n-attr="placeholder:feedback.form.subject_placeholder" placeholder="Brief description of your feedback" required aria-required="true"/>
+                                <div id="ff_subject_error" class="form-error" role="alert" aria-live="polite"></div>
+                            </div>
+                            <!-- Message -->
+                            <div class="form-group">
+                                <label for="ff_message" class="form-label"><span data-i18n="feedback.form.message_label">Message</span> <span class="required" aria-hidden="true">*</span>
+                                </label>
+                                <div class="textarea-wrapper">
+                                    <textarea id="ff_message" class="form-textarea" data-i18n-attr="placeholder:feedback.form.message_placeholder" placeholder="Tell us more about your experience, suggestion, or the issue you encountered..." required aria-required="true" maxlength="2000"></textarea>
+                                    <div class="char-counter" aria-live="polite">0 / 2000</div>
+                                </div>
+                                <div id="ff_message_error" class="form-error" role="alert" aria-live="polite"></div>
+                            </div>
+                            <!-- Star Rating -->
+                            <div class="form-group star-rating-group">
+                                <label class="form-label" id="ratingLabel">Overall Rating <span class="optional">(optional)</span>
+                                </label>
+                                <div class="star-rating" role="radiogroup" aria-labelledby="ratingLabel">
+                                    <button type="button" class="star-btn" data-value="1" aria-label="1 star - Poor" role="radio" aria-checked="false">
+                                        <i class="fa-regular fa-star"></i>
+                                    </button>
+                                    <button type="button" class="star-btn" data-value="2" aria-label="2 stars - Fair" role="radio" aria-checked="false">
+                                        <i class="fa-regular fa-star"></i>
+                                    </button>
+                                    <button type="button" class="star-btn" data-value="3" aria-label="3 stars - Good" role="radio" aria-checked="false">
+                                        <i class="fa-regular fa-star"></i>
+                                    </button>
+                                    <button type="button" class="star-btn" data-value="4" aria-label="4 stars - Very Good" role="radio" aria-checked="false">
+                                        <i class="fa-regular fa-star"></i>
+                                    </button>
+                                    <button type="button" class="star-btn" data-value="5" aria-label="5 stars - Excellent" role="radio" aria-checked="false">
+                                        <i class="fa-regular fa-star"></i>
+                                    </button>
+                                    <span class="star-rating-text">Not rated</span>
+                                </div>
+                            </div>
+                             <!-- Submit -->
+                             <div class="form-actions">
+                                 <button type="submit" id="ff_submit" class="btn-submit">
+                                     <span class="spinner" aria-hidden="true"></span>
+                                     <span class="btn-text"><i class="fa fa-paper-plane"></i> <span data-i18n="feedback.form.submit_btn">Submit Feedback</span></span>
+                                     <span class="loading-text" data-i18n="feedback.form.submitting_text">Submitting...</span>
+                                 </button>
+                             </div>
+                         </form>
+                         <!-- Info Callout -->
+                         <div class="feedback-info-callout">
+                             <i class="fa fa-circle-info" aria-hidden="true"></i>
+                             <p data-i18n="feedback.info_callout">Your feedback helps us improve MPay Network Wallet for everyone. All submissions are reviewed by our team. For urgent issues, please contact <strong>support@mpaynetwork.com</strong>.</p>
+                         </div>
+                    </div>
+                     <!-- Success State -->
+                     <div class="feedback-success" id="ff_success_message" role="status" aria-live="polite">
+                         <div class="success-icon" aria-hidden="true">
+                             <i class="fa fa-check"></i>
+                         </div>
+                         <h2 data-i18n="feedback.success.title">Thank you for your feedback!</h2>
+                         <p data-i18n="feedback.success.description">Your message has been received. Our team will review it shortly. If you provided an email, we may follow up with you.</p>
+                         <div class="success-actions">
+                             <button type="button" class="btn-submit" onclick="load_page('index')" id="ff_back_home">
+                                 <i class="fa fa-home"></i> <span data-i18n="feedback.success.back_home">Back to Home</span>
+                             </button>
+                             <button type="button" class="btn-secondary" id="ff_new_feedback">
+                                 <i class="fa fa-plus"></i> <span data-i18n="feedback.success.submit_another">Submit Another</span>
+                             </button>
+                         </div>
+                     </div>
+                </div>
+            </main>
+        </div>
+        <div id="docFooter"></div>
+        <script src="assets/js/i18n.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                if (window.I18n) {
+                    window.I18n.init();
+                    // Sync initial language code
+                    const currentLang = window.I18n.getCurrentLocale();
+                    const langCodeEl = document.getElementById('current-lang-code');
+                    if (langCodeEl) langCodeEl.textContent = currentLang.toUpperCase();
+                }
+            });
+        </script>
+        <script src="assets/js/navigation.js"></script>
+        <script src="assets/js/feedback_form.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    </body>
+</html>
