@@ -3,7 +3,6 @@
     "lang_name": "Español",
     "lang_code": "es"
   },
-
   "nav": {
     "overview": "Descripción general",
     "merchant": "Comerciante",
@@ -18,14 +17,12 @@
   "header": {
     "brand": "MPay Network"
   },
-
   "sidebar": {
     "book_title": "Docs de Billetera del Consumidor",
     "section_getting_started": "Primeros Pasos",
     "section_using_wallet": "Usando tu Billetera",
     "section_settings": "Configuración y Soporte",
     "section_other_docs": "Otras Documentaciones",
-
     "link_overview": "Descripción General",
     "link_getting_started": "Primeros Pasos",
     "link_account_setup": "Configuración de Cuenta",
@@ -38,7 +35,6 @@
     "link_consumer_docs": "Consumer Wallet Docs",
     "link_changelog": "Historial de Cambios"
   },
-
   "breadcrumb": {
     "docs": "Docs",
     "consumer_wallet": "Billetera del Consumidor",
@@ -57,13 +53,11 @@
     "security": "Seguridad",
     "settings_security": "Ajustes y Seguridad"
   },
-
   "page": {
     "title": "Primeros Pasos con la Billetera del Consumidor",
     "subtitle": "Todo lo que necesitas para descargar, instalar y configurar tu Billetera de Consumidor mPay. Sigue esta guía paso a paso para comenzar a realizar pagos rápidos y seguros en minutos.",
     "time_badge": "Tiempo estimado de configuración: 5 minutos"
   },
-
   "toc": {
     "on_this_page": "En Esta Página",
     "requirements": "Requisitos del Sistema",
@@ -76,7 +70,6 @@
     "screenshots": "Guía Visual de Configuración",
     "faq": "Preguntas Frecuentes"
   },
-
   "requirements": {
     "heading": "Requisitos del Sistema",
     "intro": "Antes de descargar, asegúrate de que tu dispositivo cumple los requisitos mínimos:",
@@ -91,7 +84,6 @@
     "nfc_callout_title": "Requisito NFC",
     "nfc_callout_body": "Para la funcionalidad de pago por contacto, tu dispositivo debe tener hardware NFC. La mayoría de los smartphones modernos (iPhone 7+ y Android con NFC) soportan esta función."
   },
-
   "download": {
     "heading": "Descargar e Instalar",
     "intro": "La Billetera de Consumidor mPay está disponible de forma gratuita en las dos tiendas de aplicaciones principales. Elige tu plataforma a continuación:",
@@ -121,7 +113,6 @@
     "verify_callout_title": "Verifica el Desarrollador",
     "verify_callout_body": "Siempre verifica que el desarrollador aparezca como \"mPay Network\" antes de descargar. No instales aplicaciones de fuentes no oficiales."
   },
-
   "signup": {
     "heading": "Registrarse",
     "intro": "Crear tu cuenta mPay es rápido y sencillo. Necesitarás un número de teléfono y una dirección de correo electrónico válidos.",
@@ -163,7 +154,6 @@
     "success_callout_title": "¡Cuenta Creada!",
     "success_callout_body": "Una vez que veas la pantalla de confirmación, tu cuenta está lista. Ahora puedes proceder a configurar tu perfil y configurar tu billetera."
   },
-
   "first_login": {
     "heading": "Primer Inicio y Configuración",
     "intro": "Después de crear tu cuenta, serás guiado a través del asistente de configuración inicial. Esto es lo que puedes esperar:",
@@ -205,7 +195,6 @@
     "tip_callout_title": "Consejo: Completa la Verificación Pronto",
     "tip_callout_body": "El proceso de verificación puede tomar entre 24 y 48 horas. Es aconsejable completar el perfil lo antes posible para obtener acceso completo a las funciones de mPay Wallet."
   },
-
   "screenshots": {
     "heading": "Guía Visual de Configuración",
     "intro": "Aquí tienes una descripción visual de las pantallas clave que encontrarás durante la configuración:",
@@ -228,7 +217,6 @@
     "step6_sublabel": "Panel Listo",
     "step6_caption": "Paso 6: ¡Listo para Empezar!"
   },
-
   "faq": {
     "heading": "Preguntas Frecuentes",
     "q1": "¿Puedo usar mPay Wallet en varios dispositivos?",
@@ -244,14 +232,12 @@
     "q6": "¿Están seguros mis datos personales durante el registro?",
     "a6": "Absolutamente. Todos los datos transmitidos durante el registro están cifrados con el estándar TLS 1.3. Tu información personal se almacena de forma segura y nunca se comparte con terceros sin tu consentimiento. Lee nuestra Política de Privacidad para conocer todos los detalles sobre cómo manejamos tus datos."
   },
-
   "pagination": {
     "previous": "Anterior",
     "next": "Siguiente",
     "prev_title": "Inicio de Docs del Consumidor",
     "next_title": "Configuración y Verificación de Cuenta"
   },
-
   "lang_switcher": {
     "label": "Idioma"
   },
@@ -2049,6 +2035,304 @@
         "excerpt": "Un desglose completo de la estructura de tarifas de MPay Network, los límites de transacciones y cómo optimizar sus costos como comerciante o consumidor."
       }
     }
+  },
+  "dev_intro": {
+    "title": "Introducción",
+    "description": "Construya aplicaciones completas desde el concepto hasta el despliegue con una plataforma inteligente basada en agentes. Diseñe, desarrolle, pruebe, asegure y lance todo en un solo lugar, manteniendo una supervisión humana total en cada etapa."
+  },
+  "dev_features": {
+    "title": "Características Principales",
+    "f1": {
+      "title": "Diseño Antes Que Código",
+      "desc": "Planifique su aplicación a fondo antes de escribir una sola línea de código. Defina la interfaz de usuario, la arquitectura del sistema y las especificaciones funcionales por adelantado para asegurar una hoja de ruta de desarrollo clara y reducir iteraciones costosas más adelante."
+    },
+    "f2": {
+      "title": "Impulsado por Voz y Chat",
+      "desc": "Interactúe con agentes de IA inteligentes utilizando comandos de voz o texto naturales. Construya, modifique y refine su aplicación en tiempo real, haciendo que el desarrollo sea intuitivo, rápido y accesible incluso sin profunda experiencia en programación."
+    },
+    "f3": {
+      "title": "Agentes Post-Despliegue",
+      "desc": "Sus asistentes de IA no dejan de funcionar cuando su aplicación se pone en marcha. Monitoree, optimice y mejore continuamente su aplicación después del despliegue, asegurando que evolucione junto con las necesidades del usuario y las tendencias del mercado."
+    },
+    "f4": {
+      "title": "Supervisión Humana",
+      "desc": "Mantenga un control total durante todo el ciclo de vida de desarrollo. Revise cada decisión, apruebe actualizaciones y guíe a la IA, combinando la automatización con el juicio humano para obtener resultados confiables y de alta calidad."
+    }
+  },
+  "dev_dashboard": {
+    "title": "Panel de Control",
+    "intro": "Este panel proporciona una vista clara y organizada de todos sus proyectos en un solo lugar. Las características clave incluyen:",
+    "f1_title": "Descripción General del Proyecto:",
+    "f1_desc": "Cada proyecto se muestra como una tarjeta que contiene el nombre del proyecto y una breve descripción. Esto permite un reconocimiento rápido y un acceso fácil.",
+    "f2_title": "Funcionalidad de Búsqueda:",
+    "f2_desc": "Una barra de búsqueda en la parte superior le permite encontrar proyectos rápidamente por su nombre.",
+    "f3_title": "Crear y Gestionar Proyectos:",
+    "f3_desc": "Inicie fácilmente un nuevo proyecto con el botón \"Crear Nuevo Proyecto\" o cierre sesión con un solo clic.",
+    "f4_title": "Navegación de Proyectos:",
+    "f4_desc": "Al hacer clic en la tarjeta del proyecto, será redirigido directamente al espacio de trabajo de ese proyecto para mayor gestión y desarrollo.",
+    "f5_title": "Diseño Limpio y Minimalista:",
+    "f5_desc": "La interfaz es sencilla e intuitiva, enfocándose en la productividad sin distracciones.",
+    "f6_title": "Indicador de Recuento de Proyectos:",
+    "f6_desc": "Muestra el número total de proyectos en la esquina inferior derecha, ayudando a los usuarios a realizar un seguimiento de su carga de trabajo.",
+    "outro": "Este panel actúa como un centro principal para gestionar, acceder y ejecutar todos sus proyectos en curso de manera eficiente."
+  },
+  "dev_create_project": {
+    "title": "Crear un Nuevo Proyecto",
+    "how_to_title": "Cómo Crear un Nuevo Proyecto",
+    "step1": "En el Panel de Control, haga clic en el botón Crear un Nuevo Proyecto.",
+    "step2": "Ingrese el Nombre del Proyecto. La descripción es opcional.",
+    "step3": "Haga clic en el botón Crear Proyecto.",
+    "interface_intro": "Esta interfaz aparece cuando un usuario elige crear un nuevo proyecto desde el panel de control. Los elementos clave incluyen:",
+    "f1_title": "Campo de Nombre del Proyecto:",
+    "f1_desc": "Una entrada de texto donde el usuario ingresa el nombre de su nuevo proyecto, por ejemplo, \"Mi Aplicación Increíble\". Este es un campo obligatorio.",
+    "f2_title": "Campo de Descripción:",
+    "f2_desc": "Un área de texto opcional para una breve descripción del proyecto, que ayuda a aclarar su propósito o alcance.",
+    "f3_title": "Botones de Acción:",
+    "f3_1": "<strong>Crear Proyecto</strong> – Confirma la creación del proyecto y lo agrega al panel de control.",
+    "f3_2": "<strong>Cancelar</strong> – Cierra la ventana emergente sin crear un proyecto.",
+    "f4_title": "Diseño Limpio del Modal:",
+    "f4_desc": "La ventana emergente está centrada con un diseño minimalista y libre de distracciones que la separa claramente del fondo borroso del panel de control.",
+    "f5_title": "Guía para el Usuario:",
+    "f5_desc": "El texto de marcador de posición en los campos guía al usuario sobre qué información proporcionar.",
+    "outro": "Esta ventana emergente simplifica el proceso de iniciar un nuevo proyecto, asegurando que los usuarios puedan agregar y documentar rápidamente sus proyectos dentro del entorno del panel de control."
+  },
+  "dev_project_settings": {
+    "title": "Empezando",
+    "intro": "Este módulo es la fase de configuración esencial donde se define la identidad y el ADN técnico de su aplicación.",
+    "core_obj_title": "Objetivos principales:",
+    "obj1_title": "Alineación Arquitectónica:",
+    "obj1_desc": "Al seleccionar su pila tecnológica, calibra los agentes de IA para el ecosistema preferido.",
+    "obj2_title": "Preparación del Entorno:",
+    "obj2_desc": "Configure claves de API y control de versiones para asegurar la conexión de su proyecto.",
+    "obj3_title": "Integración Heredada:",
+    "obj3_desc": "Utilice la herramienta de Ingeniería Inversa para ingerir datos y aprovechar su base técnica.",
+    "submenus_title": "Empezando tiene estos submenús:",
+    "sm1_title": "Configuración del Proyecto",
+    "sm1_desc": "Centro de comando para la identidad de su aplicación y configuración de la pila tecnológica.",
+    "sm2_title": "Claves API",
+    "sm2_desc": "Administre sus conexiones seguras e integraciones de terceros.",
+    "sm3_title": "Control de Versiones",
+    "sm3_desc": "Conecte su proyecto a su proveedor de Git preferido para sincronizar el entorno local con repositorios remotos.",
+    "sm4_title": "Ingeniería Inversa",
+    "sm4_desc": "Acelere su desarrollo importando activos existentes para que la plataforma pueda mapear su código actual.",
+    "ps_title": "Configuración del Proyecto",
+    "ps_intro": "Aquí establece la identidad de alto nivel y calibra el motor de IA.",
+    "ps_1_title": "1. Información General",
+    "ps_1_desc": "Esta subsección define los metadatos de su proyecto.",
+    "ps_1_f1_title": "Nombre del Proyecto:",
+    "ps_1_f1_desc": "Ingrese un identificador único para su aplicación.",
+    "ps_1_f2_title": "Descripción:",
+    "ps_1_f2_desc": "Proporcione un breve resumen del propósito del proyecto.",
+    "ps_2_title": "2. Configuración de Pila Tecnológica",
+    "ps_2_desc": "Guía a los agentes de IA en patrones de arquitectura y sintaxis del marco de trabajo.",
+    "ps_2_1_title": "2.1 Servidor / Backend",
+    "ps_2_1_desc": "Seleccione el lenguaje y marco principal:",
+    "ps_2_1_l1": "<strong>JavaScript/TypeScript:</strong> Node.js, Express, etc.",
+    "ps_2_1_l2": "<strong>Python:</strong> Django, Flask, FastAPI.",
+    "ps_2_1_l3": "<strong>PHP:</strong> Laravel, Symfony, etc.",
+    "ps_2_1_l4": "<strong>C#:</strong> ASP.NET Core, Blazor.",
+    "ps_2_2_title": "2.2 Base de Datos",
+    "ps_2_2_desc": "Identifique la capa de persistencia de datos (SQL vs NoSQL).",
+    "ps_2_3_title": "2.3 Configuración de UI/Frontend",
+    "ps_2_3_desc": "Dedicado a definir el \"Lado del Cliente\" de su aplicación.",
+    "bp_title": "Mejores Prácticas",
+    "bp_desc": "Siga estas pautas para la máxima precisión:",
+    "bp_1_title": "La Precisión Importa:",
+    "bp_1_desc": "Elija un marco de trabajo específico en lugar de un entorno de ejecución genérico.",
+    "bp_2_title": "Guardar Cambios:",
+    "bp_2_desc": "Haga clic siempre en Guardar Cambios para evitar perder configuración.",
+    "bp_3_title": "Actualizaciones Iterativas:",
+    "bp_3_desc": "Puede volver a esta sección en cualquier momento."
+  },
+  "dev_api_keys": {
+    "title": "Claves API",
+    "intro": "Centro principal para administrar el acceso seguro a modelos de IA integrados.",
+    "area1_title": "Gestión de Claves:",
+    "area1_desc": "Donde puede crear, ver y asegurar sus claves de API personales.",
+    "area2_title": "Dashboard de Uso:",
+    "area2_desc": "Para rastrear solicitudes, consumo de tokens y costos asociados.",
+    "access_note": "Acceda a esta sección desde el menú lateral debajo de <strong>Empezando</strong>.",
+    "managing_title": "Administrar sus Claves API Personales",
+    "managing_intro": "Encuentre aquí todas las configuraciones de claves en su cuenta.",
+    "viewing_keys_title": "1. Ver Claves",
+    "viewing_keys_desc": "Si no hay claves configuradas, verá el mensaje \"No config personal API keys\".",
+    "creating_keys_title": "2. Crear una Nueva Clave",
+    "creating_keys_step1": "Haga clic en el botón <strong>\"+ Add New Key\"</strong>.",
+    "creating_keys_step2": "Siga las instrucciones para nombrar la clave.",
+    "creating_keys_step3": "<strong>Advertencia:</strong> Guarde de forma segura su clave, no se mostrará de nuevo.",
+    "dashboard_title": "3. Dashboard de Uso",
+    "dashboard_intro": "Proporciona análisis granulares y en tiempo real.",
+    "dashboard_3_1_title": "3.1. Filtros y Control",
+    "dashboard_3_1_intro": "Esquina superior derecha del panel.",
+    "dashboard_3_1_f1_title": "Filtro de Tiempo:",
+    "dashboard_3_1_f1_desc": "Use el menú desplegable para cambiar el periodo a mostrar.",
+    "dashboard_3_1_f2_title": "Botón Refrescar:",
+    "dashboard_3_1_f2_desc": "Actualice los datos al instante.",
+    "dashboard_3_2_title": "3.2. Visión General de Métricas",
+    "dashboard_3_2_intro": "Cuatro tarjetas principales resumen la actividad.",
+    "dashboard_3_2_f1_title": "Peticiones Totales:",
+    "dashboard_3_2_f1_desc": "Número total de llamadas a modelos de API.",
+    "dashboard_3_2_f2_title": "Tokens Totales:",
+    "dashboard_3_2_f2_desc": "Tokens de completado más tokens de petición.",
+    "dashboard_3_2_f3_title": "Aprox. Costo:",
+    "dashboard_3_2_f3_desc": "Estimación en dólares de su facturación.",
+    "dashboard_3_2_f4_title": "Caché:",
+    "dashboard_3_2_f4_desc": "Número de lecturas del caché.",
+    "analyzing_title": "4. Análisis de Uso",
+    "analyzing_intro": "Visualizaciones y tablas detalladas.",
+    "analyzing_4_1_title": "4.1. Gráfico de Uso Diario",
+    "analyzing_4_1_intro": "Ilustra sus tokens diarios a lo largo del tiempo.",
+    "analyzing_4_1_f1_title": "Pasar el ratón (Hover):",
+    "analyzing_4_1_f1_desc": "Vea el desglose de un día específico por modelo.",
+    "analyzing_4_1_f2_title": "Leyenda:",
+    "analyzing_4_1_f2_desc": "Modelos que aportan a ese día.",
+    "analyzing_4_2_title": "4.2. Uso por Modelo",
+    "analyzing_4_2_intro": "Desglose por IA:",
+    "model_cols": [
+      "<strong>MODELO:</strong> Nombre y proveedor.",
+      "<strong>PETICIONES:</strong> Llamadas realizadas al modelo.",
+      "<strong>TOKENS ENTRADA:</strong> Tokens enviados.",
+      "<strong>TOKENS SALIDA:</strong> Tokens generados.",
+      "<strong>TOKENS TOTAL:</strong> Suma de entrada y salida.",
+      "<strong>CACHÉ:</strong> Tokens recuperados de la caché.",
+      "<strong>TIEMPO MEDIA:</strong> Latencia promedio.",
+      "<strong>COSTO:</strong> Costo del modelo."
+    ],
+    "transaction_title": "4.3. Historial de Transacciones",
+    "transaction_intro": "Registro para cada solicitud al final de la página.",
+    "filtering_title": "Filtros y Organización",
+    "filtering_f1_title": "Todas las IAS:",
+    "filtering_f1_desc": "Especifique el modelo.",
+    "filtering_f2_title": "Estado:",
+    "filtering_f2_desc": "Filtre por éxito o error.",
+    "log_title": "Columnas de Registro",
+    "log_cols": [
+      "<strong>TIEMPO:</strong> Marca de tiempo exacta.",
+      "<strong>TOKENS:</strong> Total utilizado.",
+      "<strong>CACHÉ:</strong> Rendimiento del caché.",
+      "<strong>MS:</strong> Tiempo en milisegundos.",
+      "<strong>COSTO:</strong> Costo en dólares."
+    ]
+  },
+  "dev_vc": {
+    "title": "Control de Versiones",
+    "intro": "La página de Control de Versiones es donde administra la integración de su proyecto con plataformas basadas en Git. Al conectar un repositorio, permite a la plataforma enviar actualizaciones y rastrear cambios.",
+    "table_title": "Tabla de Integraciones de Control de Versiones",
+    "table_intro": "El panel principal muestra todas las conexiones activas al repositorio:",
+    "table_f1_title": "Integration:",
+    "table_f1_desc": "The name of the connection (e.g., <em>Main Repository</em>). A folder icon indicates the specific directory mapping within the repository.",
+    "table_f2_title": "Repository:",
+    "table_f2_desc": "The full URL path to your remote Git repository (e.g., https://gitlab.com/.../studytool.git).",
+    "table_f3_title": "Branch:",
+    "table_f3_desc": "The specific branch currently targeted for synchronization (e.g., main).",
+    "table_f4_title": "Status:",
+    "table_f4_desc": "Indicates the current health of the connection. A <strong>CONNECTED</strong> badge signifies that the platform has successful read/write access.",
+    "table_f5_title": "Last Sync:",
+    "table_f5_desc": "Displays the timestamp of the most recent data exchange between the platform and your repository.",
+    "actions_title": "Management Actions",
+    "actions_intro": "On the right side of each integration row, you will find several quick-action icons to manage your repository:",
+    "actions_f1_title": "Sync History (Clock Icon):",
+    "actions_f1_desc": "View a log of previous synchronization events, including commits and updates.",
+    "actions_f2_title": "Push/Pull (Upload/Download Icons):",
+    "actions_f2_desc": "Manually trigger a data transfer. Use <strong>Push</strong> to send platform changes to your Git provider, or <strong>Pull</strong> to update the platform with external changes.",
+    "actions_f3_title": "Edit Integration (Pencil Icon):",
+    "actions_f3_desc": "Modify the connection settings, such as changing the target branch or updating credentials.",
+    "actions_f4_title": "Delete (Trash Icon):",
+    "actions_f4_desc": "Remove the integration from the project. <em>Note: This will stop synchronization but will not delete the code from your Git provider.</em>",
+    "bp_title": "Mejores Prácticas",
+    "bp_1_title": "Target Specific Branches:",
+    "bp_1_desc": "It is highly recommended to use a dedicated development or \"staging\" branch rather than your primary production branch to safely review generated code before merging.",
+    "bp_2_title": "Check Sync Status:",
+    "bp_2_desc": "Always verify the <strong>Last Sync</strong> time before starting a new design or ideation session to ensure you are working with the most recent version of your project.",
+    "bp_3_title": "Manual Refresh:",
+    "bp_3_desc": "Use the <strong>Refresh</strong> icon in the top-right corner of the panel to update the connection status if you have recently made changes on your Git provider's website."
+  },
+  "dev_re": {
+    "title": "Ingeniería Inversa",
+    "overview_title": "Visión General",
+    "overview_desc": "Desconstruye el código existente transformando datos crudos en Conceptos Estructurados.",
+    "tasks_title": "Tareas de Visión",
+    "tasks_intro": "Administra sus flujos de ingeniería inversa.",
+    "tasks_f1_title": "Task Status:",
+    "tasks_f1_desc": "If no analysis has been performed, the screen displays \"No reverse engineering tasks yet.\" * <strong>Process Flow:</strong> Once a task is initiated, this area will track the progress of the AI's analysis, displaying task names, timestamps, and completion statuses.",
+    "features_title": "Key Features & Functionality",
+    "features_f1_title": "Codebase Analysis:",
+    "features_f1_desc": "Upload or link existing source code to identify data structures, API endpoints, and business logic.",
+    "features_f2_title": "Schema Mapping:",
+    "features_f2_desc": "Ingest database SQL files to automatically generate <strong>Data Objects</strong> within the platform.",
+    "features_f3_title": "Structured Concept Generation:",
+    "features_f3_desc": "The AI converts its findings into high-level concepts that populate the Concept, Business Flows, and Data Objects sections in the sidebar.",
+    "start_title": "How to Start Reverse Engineering",
+    "start_intro": "To begin an analysis task:",
+    "start_step1": "Click the blue \"Start Reverse Engineer\" button (found both in the center of the screen and the top-right corner).",
+    "start_step2": "Select your <strong>Source Type</strong> (e.g., File Upload, Git Repository Link, or Database Connection).",
+    "start_step3": "Configure the <strong>Scope</strong> of the analysis by selecting specific folders or tables to include.",
+    "start_step4": "Launch the task and monitor the <strong>Diffusion Vision Tasks</strong> list for real-time updates.",
+    "why_title": "Why Use Reverse Engineering?",
+    "why_f1_title": "Accelerated Onboarding:",
+    "why_f1_desc": "Quickly bring an existing project or legacy system into the platform for modernization.",
+    "why_f2_title": "Consistency:",
+    "why_f2_desc": "Ensure that new features developed in the <strong>Development</strong> section are 100% compatible with your existing data structures.",
+    "why_f3_title": "Documentation Recovery:",
+    "why_f3_desc": "Generate fresh <strong>Requirements Docs</strong> and <strong>Technical Diagrams</strong> for projects that currently lack them."
+  },
+  "dev_struc": {
+    "title": "Estructura e Ideación",
+    "intro_1": "El corazón arquitectónico de la plataforma.",
+    "intro_2": "Sirve como puente entre 'qué' hacer y 'cómo' funcionará."
+  },
+  "dev_req": {
+    "submenu_title": "Estructura e Ideación tiene los siguientes submenús:",
+    "title": "1. Requisitos",
+    "intro": "Como punto de entrada para esta categoría, esta página almacena la visión central de su proyecto. Actúa como la \"Fuente de la Verdad\".",
+    "f1_title": "Uso:",
+    "f1_desc": "Defina las características de su MVP y los roles de usuario.",
+    "action_desc": "En esta sección, puede modificar o agregar nuevos requisitos. Una vez que esté todo bien, haga clic en el botón <strong>Guardar Requisitos</strong>."
+  },
+  "dev_concept": {
+    "title": "2. Concepto",
+    "intro": "Este módulo desglosa sus requisitos en <strong>Bloques de Concepto</strong> individuales. Para un proyecto como \"Herramienta de Estudio\", los conceptos pueden incluir <em>Autenticación de Usuario</em> o <em>Algoritmo Adaptativo</em>.",
+    "f1_title": "Uso:",
+    "f1_desc": "Mapee las \"grandes ideas\" de su software para asegurar que se tome en cuenta toda la funcionalidad."
+  },
+  "dev_bf": {
+    "title": "3. Flujos de Negocio",
+    "intro": "Los Flujos de Negocio visualizan el viaje paso a paso que toma un usuario para completar una tarea.",
+    "f1_title": "Ejemplo:",
+    "f1_desc": "La secuencia de eventos desde que un estudiante sube un PDF hasta que la IA genera un resumen y un cuestionario.",
+    "f2_title": "Uso:",
+    "f2_desc": "Identifique cuellos de botella en la experiencia del usuario antes de que se escriba una sola línea de código."
+  },
+  "dev_do": {
+    "title": "4. Objetos de Datos",
+    "intro": "Esta sección define los \"sustantivos\" de su sistema, es decir, las estructuras de datos que se almacenarán en su base de datos.",
+    "f1_title": "Ejemplos:",
+    "f1_desc": "Usuario, MaterialEstudio, ResultadoCuestionario, PlanSuscripcion.",
+    "f2_title": "Uso:",
+    "f2_desc": "Defina propiedades (por ejemplo, correo electrónico, marca de tiempo, puntaje) y cómo estos objetos se relacionan entre sí."
+  },
+  "dev_roles": {
+    "title": "5. Roles y Permisos",
+    "intro": "La seguridad comienza aquí. Defina lo que diferentes tipos de usuarios pueden ver y hacer.",
+    "f1_title": "Ejemplo:",
+    "f1_desc": "Un Admin puede eliminar usuarios, mientras que un Estudiante solo puede ver sus materiales.",
+    "f2_title": "Uso:",
+    "f2_desc": "Establezca la Lista de Control de Acceso (ACL) para su API y Frontend."
+  },
+  "dev_br": {
+    "title": "6. Reglas de Negocio",
+    "intro": "Las Reglas de Negocio son la lógica \"si/entonces\" que rige el comportamiento de su aplicación, independientemente del código.",
+    "f1_title": "Ejemplo:",
+    "f1_desc": "\"Si un usuario tiene una cuenta de nivel Gratuito, solo puede subir 1 documento por mes.\"",
+    "f2_title": "Uso:",
+    "f2_desc": "Centralice la lógica que determina cómo opera el negocio."
+  },
+  "dev_int": {
+    "title": "7. Mapas de Integración",
+    "intro": "Esta herramienta describe cómo se comunica su aplicación con sistemas externos.",
+    "f1_title": "Ejemplo:",
+    "f1_desc": "Cómo se comunica su aplicación con una Pasarela de Pago (Stripe) o un Modelo de IA (OpenAI/Claude).",
+    "f2_title": "Uso:",
+    "f2_desc": "Visualice los puntos de intercambio de datos entre su sistema y el mundo exterior."
   }
 }
-

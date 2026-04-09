@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Think4Ever Dev - Version Control</title>
+    <link href="css/theme.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/consumer_docs_home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="assets/js/i18n.js"></script>
+    <style>
+      /* Basic reset for preview consistency */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: #f8fafc;
+      }
+
+      /* Premium Modern Header Styles */
+      .modern-header {
+        font-family: 'Inter', sans-serif;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 64px;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: saturate(180%) blur(20px);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        z-index: 300;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease;
+      }
+
+      .modern-header-inner {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+
+      .modern-header-logo-plate {
+        display: flex;
+        align-items: center;
+        padding-left: 36px;
+        height: 100%;
+        box-sizing: border-box;
+      }
+
+      .modern-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      . आधुनिक-logo span {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #0f172a;
+        letter-spacing: -0.04em;
+      }
+
+      .modern-header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
+        padding: 0 40px;
+        height: 100%;
+      }
+
+      .modern-header-actions {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      @media (max-width: 1024px) {
+        .modern-header-logo-plate {
+          width: 240px;
+          min-width: 240px;
+          padding-left: 24px;
+        }
+      }
+
+      .consumer-docs-layout {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        display: flex !important;
+        background: #ffffff;
+      }
+
+      .cd-sidebar {
+        box-sizing: content-box !important;
+        width: 240px !important;
+        min-width: 240px !important;
+        background: #fcfcfd !important;
+        border-right: 1px solid #e2e8f0 !important;
+        padding-left: 36px !important;
+        padding-right: 24px !important;
+        padding-top: 36px !important;
+      }
+
+      .cd-main-content {
+        max-width: 1000px !important;
+        background: #ffffff !important;
+        padding-top: 56px !important;
+        padding-left: 64px !important;
+        padding-right: 64px !important;
+        padding-bottom: 100px !important;
+      }
+
+      h1.cd-page-title {
+        color: #ea580c;
+        border-bottom: none;
+        margin-bottom: 16px;
+      }
+
+      .doc-section {
+        margin-top: 48px;
+        margin-bottom: 32px;
+      }
+
+      .doc-heading {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #0f172a;
+        margin-bottom: 16px;
+        border-bottom: 2px solid #e2e8f0;
+        padding-bottom: 8px;
+      }
+
+      .doc-subheading {
+        font-family: 'Inter', sans-serif;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #1e293b;
+        margin-top: 32px;
+        margin-bottom: 12px;
+      }
+
+      .cd-overview-ul {
+        margin-top: 16px;
+        margin-bottom: 24px;
+        padding-left: 24px;
+        list-style-type: disc;
+      }
+
+      .cd-overview-ul li {
+        margin-bottom: 16px;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.95rem;
+        color: #475569;
+        line-height: 1.6;
+      }
+
+      .cd-overview-ul li strong {
+        color: #0f172a;
+        font-weight: 600;
+      }
+
+      .cd-overview-p {
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        color: #475569;
+        line-height: 1.7;
+        margin-bottom: 16px;
+      }
+
+      .demo-img {
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e2e8f0;
+        margin-top: 24px;
+        margin-bottom: 40px;
+        display: block;
+      }
+
+      .bp-box {
+        background: #fffbeb;
+        border-left: 4px solid #fbbf24;
+        padding: 20px;
+        border-radius: 0 8px 8px 0;
+        margin-top: 32px;
+      }
+
+      .bp-box h3 {
+        color: #b45309;
+        margin-top: 0;
+        margin-bottom: 12px;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.15rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="consumer-docs-home consumer-getting-started">
+      <!-- Site Header -->
+      <header class="modern-header" id="consumerHeader"></header>
+
+      <div class="consumer-docs-layout">
+        <!-- Sidebar -->
+        <div id="consumerSidebar"></div>
+
+        <!-- Main Content -->
+        <main class="cd-main-content" id="cd-main">
+          <h1 class="cd-page-title" data-i18n="dev_vc.title">
+            Version Control
+          </h1>
+
+          <p class="cd-overview-p" data-i18n="dev_vc.intro">
+            The Version Control page is where you manage your project's
+            integration with Git-based platforms (e.g., GitHub, GitLab,
+            Bitbucket). By connecting a repository, you enable the platform to
+            push updates, track changes, and maintain a "Source of Truth" for
+            your application's codebase.
+          </p>
+
+          <img
+            src="assets/images/version-1.jpg"
+            alt="Version Control Dashboard"
+            class="demo-img"
+          />
+
+          <div class="doc-section" style="margin-top: 32px">
+            <h2
+              class="doc-heading"
+              data-i18n="dev_vc.table_title"
+              style="
+                border: none;
+                font-size: 1.25rem;
+                font-weight: 700;
+                margin-bottom: 12px;
+              "
+            >
+              Version Control Integrations Table
+            </h2>
+            <p class="cd-overview-p" data-i18n="dev_vc.table_intro">
+              The main dashboard displays all active repository connections. The
+              table includes the following key information:
+            </p>
+
+            <ul class="cd-overview-ul">
+              <li>
+                <strong data-i18n="dev_vc.table_f1_title">Integration:</strong>
+                <span data-i18n-html="dev_vc.table_f1_desc"
+                  >The name of the connection (e.g., <em>Main Repository</em>).
+                  A folder icon indicates the specific directory mapping within
+                  the repository.</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="dev_vc.table_f2_title">Repository:</strong>
+                <span data-i18n="dev_vc.table_f2_desc"
+                  >The full URL path to your remote Git repository (e.g.,
+                  https://gitlab.com/.../studytool.git).</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="dev_vc.table_f3_title">Branch:</strong>
+                <span data-i18n="dev_vc.table_f3_desc"
+                  >The specific branch currently targeted for synchronization
+                  (e.g., main).</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="dev_vc.table_f4_title">Status:</strong>
+                <span data-i18n-html="dev_vc.table_f4_desc"
+                  >Indicates the current health of the connection. A
+                  <strong>CONNECTED</strong> badge signifies that the platform
+                  has successful read/write access.</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="dev_vc.table_f5_title">Last Sync:</strong>
+                <span data-i18n="dev_vc.table_f5_desc"
+                  >Displays the timestamp of the most recent data exchange
+                  between the platform and your repository.</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="doc-section">
+            <h2
+              class="doc-heading"
+              data-i18n="dev_vc.actions_title"
+              style="
+                border: none;
+                font-size: 1.25rem;
+                font-weight: 700;
+                margin-bottom: 12px;
+              "
+            >
+              Management Actions
+            </h2>
+            <p class="cd-overview-p" data-i18n="dev_vc.actions_intro">
+              On the right side of each integration row, you will find several
+              quick-action icons to manage your repository:
+            </p>
+
+            <ul class="cd-overview-ul">
+              <li>
+                <strong data-i18n="dev_vc.actions_f1_title"
+                  >Sync History (Clock Icon):</strong
+                >
+                <span data-i18n="dev_vc.actions_f1_desc"
+                  >View a log of previous synchronization events, including
+                  commits and updates.</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="dev_vc.actions_f2_title"
+                  >Push/Pull (Upload/Download Icons):</strong
+                >
+                <span data-i18n-html="dev_vc.actions_f2_desc"
+                  >Manually trigger a data transfer. Use
+                  <strong>Push</strong> to send platform changes to your Git
+                  provider, or <strong>Pull</strong> to update the platform with
+                  external changes.</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="dev_vc.actions_f3_title"
+                  >Edit Integration (Pencil Icon):</strong
+                >
+                <span data-i18n="dev_vc.actions_f3_desc"
+                  >Modify the connection settings, such as changing the target
+                  branch or updating credentials.</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="dev_vc.actions_f4_title"
+                  >Delete (Trash Icon):</strong
+                >
+                <span data-i18n-html="dev_vc.actions_f4_desc"
+                  >Remove the integration from the project.
+                  <em
+                    >Note: This will stop synchronization but will not delete
+                    the code from your Git provider.</em
+                  ></span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="bp-box">
+            <h3 data-i18n="dev_vc.bp_title" style="font-weight: 700">
+              Best Practices
+            </h3>
+
+            <ul class="cd-overview-ul" style="margin-bottom: 0">
+              <li>
+                <strong data-i18n="dev_vc.bp_1_title"
+                  >Target Specific Branches:</strong
+                >
+                <span data-i18n="dev_vc.bp_1_desc"
+                  >It is highly recommended to use a dedicated development or
+                  "staging" branch rather than your primary production branch to
+                  safely review generated code before merging.</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="dev_vc.bp_2_title"
+                  >Check Sync Status:</strong
+                >
+                <span data-i18n-html="dev_vc.bp_2_desc"
+                  >Always verify the <strong>Last Sync</strong> time before
+                  starting a new design or ideation session to ensure you are
+                  working with the most recent version of your project.</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="dev_vc.bp_3_title">Manual Refresh:</strong>
+                <span data-i18n-html="dev_vc.bp_3_desc"
+                  >Use the <strong>Refresh</strong> icon in the top-right corner
+                  of the panel to update the connection status if you have
+                  recently made changes on your Git provider's website.</span
+                >
+              </li>
+            </ul>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div id="docFooter"></div>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/consumer_docs_home.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (window.I18n) {
+          window.I18n.init();
+        }
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  </body>
+</html>
