@@ -220,6 +220,124 @@ function initYouTubeVideos() {
 document.addEventListener("DOMContentLoaded", initYouTubeVideos);
 
 // ===============================
+// GLOBAL IMAGE LIGHTBOX
+// ===============================
+let docImageLightbox = null;
+
+function isLightboxEligibleImage(img) {
+  if (!img || img.tagName !== "IMG") return false;
+  if (img.dataset.lightbox === "off" || img.closest("[data-lightbox='off']")) {
+    return false;
+  }
+
+  if (
+    img.closest(
+      "header, nav, footer, aside, .cgs-sidebar, .modern-header, .modern-nav, .lp-navbar, .sr-header, .bpd-header, .pp-header, .tos-header, .not-found-header, .admin-sidebar, .admin-topbar, .modern-search-btn, .modern-lang-wrapper, .lp-navbar-logo, .sr-header-logo, .cgs-sidebar-header, .lp-footer, #docFooter"
+    )
+  ) {
+    return false;
+  }
+
+  const inContent = img.closest(
+    "main, article, .docs-content, .docs-main, .cd-main-content, .md-main-content, .bpd-main, .pp-main, .tos-main, .ctr-content, .cwm-content-wrapper"
+  );
+
+  if (!inContent) return false;
+  if (img.closest("a, button, [role='button']")) return false;
+
+  const rect = img.getBoundingClientRect();
+  const renderedWidth = Math.max(rect.width, img.clientWidth || 0);
+  const renderedHeight = Math.max(rect.height, img.clientHeight || 0);
+  const naturalWidth = img.naturalWidth || 0;
+  const naturalHeight = img.naturalHeight || 0;
+
+  if (renderedWidth < 80 || renderedHeight < 80) return false;
+  if (naturalWidth && naturalHeight && naturalWidth < 120 && naturalHeight < 120) {
+    return false;
+  }
+
+  return true;
+}
+
+function ensureImageLightbox() {
+  if (docImageLightbox) return docImageLightbox;
+
+  const overlay = document.createElement("div");
+  overlay.className = "doc-image-lightbox";
+  overlay.setAttribute("aria-hidden", "true");
+  overlay.innerHTML = `
+    <div class="doc-image-lightbox__backdrop" data-lightbox-close="true"></div>
+    <div class="doc-image-lightbox__dialog" role="dialog" aria-modal="true" aria-label="Image preview">
+      <button class="doc-image-lightbox__close" type="button" aria-label="Close image preview" data-lightbox-close="true">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <figure class="doc-image-lightbox__figure">
+        <img class="doc-image-lightbox__image" alt="" />
+        <figcaption class="doc-image-lightbox__caption"></figcaption>
+      </figure>
+    </div>
+  `;
+
+  document.body.appendChild(overlay);
+  docImageLightbox = overlay;
+
+  overlay.addEventListener("click", function (event) {
+    if (event.target.closest("[data-lightbox-close='true']")) {
+      closeImageLightbox();
+    }
+  });
+
+  return overlay;
+}
+
+function openImageLightbox(img) {
+  const overlay = ensureImageLightbox();
+  const previewImage = overlay.querySelector(".doc-image-lightbox__image");
+  const caption = overlay.querySelector(".doc-image-lightbox__caption");
+  const source = img.currentSrc || img.src;
+  const captionText =
+    img.getAttribute("data-caption") ||
+    img.getAttribute("alt") ||
+    img.getAttribute("title") ||
+    "";
+
+  previewImage.src = source;
+  previewImage.alt = img.getAttribute("alt") || "Expanded documentation image";
+  caption.textContent = captionText;
+  caption.hidden = !captionText;
+
+  overlay.classList.add("is-open");
+  overlay.setAttribute("aria-hidden", "false");
+  document.body.classList.add("doc-image-lightbox-open");
+}
+
+function closeImageLightbox() {
+  if (!docImageLightbox) return;
+
+  docImageLightbox.classList.remove("is-open");
+  docImageLightbox.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("doc-image-lightbox-open");
+}
+
+function initGlobalImageLightbox() {
+  document.addEventListener("click", function (event) {
+    const img = event.target.closest("img");
+    if (!isLightboxEligibleImage(img)) return;
+
+    event.preventDefault();
+    openImageLightbox(img);
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closeImageLightbox();
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", initGlobalImageLightbox);
+
+// ===============================
 // INIT
 // ===============================
 document.addEventListener("DOMContentLoaded", function () {
