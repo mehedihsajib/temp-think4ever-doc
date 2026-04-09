@@ -3358,7 +3358,8 @@ footer {
 }
 
 .video-wrapper {
-  max-width: 720px;
+  /* max-width: 720px; */
+  max-width: 100%;
   margin: 20px auto;
   padding: 12px;
   background: #f9fafb;
