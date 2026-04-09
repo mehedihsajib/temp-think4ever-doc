@@ -14,34 +14,166 @@
 
   const searchIndex = [
     {
-      title: "Documentation",
-      desc: "Start with the think4ever user manual and platform introduction.",
+      title: "Introduction",
+      desc: "Get started with the think4ever platform vision and core documentation.",
       page: "manual_introduction",
+      keywords: ["overview", "user manual", "docs", "platform", "start"],
     },
     {
-      title: "Blog",
-      desc: "Read the latest updates, articles, and platform stories.",
-      page: "blog_listing",
+      title: "Key Features",
+      desc: "Explore the main think4ever features for orchestration and collaboration.",
+      page: "manual_key_features",
+      keywords: ["features", "capabilities", "platform", "highlights"],
     },
     {
-      title: "Feedback",
-      desc: "Send feedback, ideas, and improvement requests to the team.",
-      page: "feedback_form",
+      title: "Dashboard",
+      desc: "Understand the main dashboard and how to monitor projects and delivery.",
+      page: "manual_dashboard",
+      keywords: ["dashboard", "overview", "monitoring", "home"],
+    },
+    {
+      title: "Create a New Project",
+      desc: "Set up a new think4ever project and define the initial workspace.",
+      page: "manual_create_project",
+      keywords: ["create", "project", "setup", "new project", "workspace"],
+    },
+    {
+      title: "Project Settings",
+      desc: "Configure project settings, preferences, and workspace controls.",
+      page: "manual_project_settings",
+      keywords: ["settings", "configuration", "project", "preferences"],
+    },
+    {
+      title: "API Keys",
+      desc: "Manage existing API keys used across your think4ever environment.",
+      page: "manual_api_keys",
+      keywords: ["api", "keys", "credentials", "tokens", "access"],
+    },
+    {
+      title: "Add new API Key",
+      desc: "Create and connect a new API key for your project integrations.",
+      page: "manual_add_api_keys",
+      keywords: ["api", "new key", "add key", "credentials", "integration"],
+    },
+    {
+      title: "Version Control",
+      desc: "Learn how version control fits into the think4ever workflow.",
+      page: "manual_version_control",
+      keywords: ["git", "repository", "source control", "versioning"],
+    },
+    {
+      title: "Reverse Engineering",
+      desc: "Use reverse engineering workflows to understand and rebuild systems.",
+      page: "manual_reverse_engineering",
+      keywords: ["reverse engineering", "analysis", "existing systems"],
+    },
+    {
+      title: "Requirements",
+      desc: "Document product requirements and define solution expectations clearly.",
+      page: "manual_requirements",
+      keywords: ["requirements", "spec", "planning", "scope"],
+    },
+    {
+      title: "Concept",
+      desc: "Shape product concepts and align ideas before execution begins.",
+      page: "manual_concept",
+      keywords: ["concept", "idea", "ideation", "product concept"],
+    },
+    {
+      title: "Business Flow",
+      desc: "Map business flow and understand how work moves through the platform.",
+      page: "manual_business_flow",
+      keywords: ["business flow", "workflow", "process", "operations"],
+    },
+    {
+      title: "Data Objects",
+      desc: "Review the platform's data objects and structural building blocks.",
+      page: "manual_data_objects",
+      keywords: ["data", "objects", "schema", "models", "entities"],
+    },
+    {
+      title: "Roles & Permissions",
+      desc: "Define access levels, team roles, and permission structures.",
+      page: "manual_roles_permissions",
+      keywords: ["roles", "permissions", "access", "security", "users"],
+    },
+    {
+      title: "Business Rules",
+      desc: "Capture the rules that govern workflows, decisions, and platform behavior.",
+      page: "manual_business_rules",
+      keywords: ["rules", "logic", "business", "conditions"],
+    },
+    {
+      title: "Integration Maps",
+      desc: "Plan how think4ever connects with external services and systems.",
+      page: "manual_integration_maps",
+      keywords: ["integration", "maps", "services", "connections", "systems"],
+    },
+    {
+      title: "UI Design",
+      desc: "Review interface design guidance and product experience structure.",
+      page: "manual_ui_design",
+      keywords: ["ui", "design", "interface", "ux", "screens"],
+    },
+    {
+      title: "Technical Diagrams",
+      desc: "Browse technical diagrams that explain architecture and implementation flows.",
+      page: "manual_technical_diagrams",
+      keywords: ["technical", "diagrams", "architecture", "system design"],
+    },
+    {
+      title: "Available Diagram Types",
+      desc: "See which diagram formats are supported across think4ever documentation.",
+      page: "manual_available_diagram_types",
+      keywords: ["diagram", "types", "formats", "charts"],
+    },
+    {
+      title: "Requirements Docs",
+      desc: "Access supporting requirements documents used during delivery.",
+      page: "manual_requirements_docs",
+      keywords: ["requirements docs", "documents", "specification"],
+    },
+    {
+      title: "Tasks",
+      desc: "Track implementation tasks and break work into actionable steps.",
+      page: "manual_tasks",
+      keywords: ["tasks", "todo", "implementation", "delivery"],
+    },
+    {
+      title: "Database",
+      desc: "Understand the database layer and how information is structured.",
+      page: "manual_database",
+      keywords: ["database", "storage", "schema", "data layer"],
+    },
+    {
+      title: "Source Code",
+      desc: "Explore source code structure and engineering implementation details.",
+      page: "manual_source_code",
+      keywords: ["source code", "codebase", "engineering", "development"],
+    },
+    {
+      title: "Containers",
+      desc: "Review container setup and environment packaging details.",
+      page: "manual_containers",
+      keywords: ["containers", "docker", "deployment", "infrastructure"],
     },
     {
       title: "Changelog",
-      desc: "Review recent product and documentation updates.",
+      desc: "Review recent think4ever documentation and product updates.",
       page: "changelog_page",
+      keywords: ["changes", "release notes", "updates", "history"],
     },
     {
-      title: "Merchant Docs",
-      desc: "Explore merchant wallet documentation and setup guides.",
-      page: "merchant_docs_home",
+      title: "Blog",
+      desc: "Read think4ever articles, product updates, and platform insights.",
+      page: "blog_listing",
+      keywords: ["articles", "updates", "news", "posts"],
     },
     {
-      title: "Consumer Docs",
-      desc: "Browse consumer wallet documentation and how-to content.",
-      page: "consumer_docs_home",
+      title: "Feedback",
+      desc: "Send feedback, requests, and suggestions to improve think4ever.",
+      page: "feedback_form",
+      keywords: ["feedback", "contact", "request", "suggestions"],
     },
   ];
 
@@ -87,11 +219,15 @@
       return;
     }
 
+    const needle = query.toLowerCase().trim();
     const matches = searchIndex.filter(function (item) {
-      const needle = query.toLowerCase();
+      const haystack = [item.title, item.desc]
+        .concat(item.keywords || [])
+        .join(" ")
+        .toLowerCase();
+
       return (
-        item.title.toLowerCase().includes(needle) ||
-        item.desc.toLowerCase().includes(needle)
+        haystack.includes(needle)
       );
     });
 
@@ -215,6 +351,20 @@
       closeSearch();
       if (page && typeof load_page === "function") {
         load_page(page);
+      }
+    });
+
+    searchResults.addEventListener("keydown", function (event) {
+      const item = event.target.closest(".lp-search-result-item");
+      if (!item) return;
+
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        const page = item.getAttribute("data-page");
+        closeSearch();
+        if (page && typeof load_page === "function") {
+          load_page(page);
+        }
       }
     });
   }
