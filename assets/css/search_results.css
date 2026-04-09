@@ -189,9 +189,9 @@
   transition: color 150ms ease, background 150ms ease;
 }
 
-.sr-clear-btn.visible {
+/* .sr-clear-btn.visible {
   display: flex;
-}
+} */
 
 .sr-clear-btn:hover {
   color: #64748b;

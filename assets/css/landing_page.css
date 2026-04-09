@@ -112,7 +112,6 @@ body {
 .lp-navbar-links a,
 .lp-mobile-nav a,
 .lp-footer-links a {
-  color: var(--lp-text);
   transition:
     color 0.2s ease,
     background 0.2s ease,
@@ -435,6 +434,10 @@ body {
   color: var(--lp-text-soft);
 }
 
+.lp-hero-copy {
+  min-width: 0;
+}
+
 .lp-hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -466,6 +469,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-width: 0;
 }
 
 .lp-glass-card,
@@ -747,6 +751,7 @@ body {
 .lp-footer-col a,
 .lp-footer-inner {
   color: rgba(255, 255, 255, 0.76);
+  cursor: pointer;
 }
 
 .lp-footer-brand p {
@@ -854,14 +859,43 @@ body {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .lp-hero {
+    padding: 28px 0 56px;
+  }
+
   .lp-hero-panel {
-    min-height: 420px;
+    min-height: auto;
+    justify-content: flex-start;
+  }
+
+  .lp-hero-card-main {
+    width: 100%;
+    max-width: 560px;
   }
 
   .lp-hero-card-mini {
     position: static;
     width: 100%;
     margin-top: 20px;
+  }
+
+  .lp-hero-orb-one {
+    right: 14%;
+    width: 180px;
+    height: 180px;
+  }
+
+  .lp-hero-orb-two {
+    right: 4%;
+    width: 112px;
+    height: 112px;
+  }
+
+  .lp-hero-orb-three {
+    right: -4%;
+    top: 220px;
+    width: 240px;
+    height: 240px;
   }
 }
 
@@ -889,17 +923,62 @@ body {
   }
 
   .lp-hero {
-    padding: 24px 0 48px;
+    padding: 18px 0 42px;
   }
 
   .lp-hero-grid {
     min-height: auto;
-    gap: 34px;
+    gap: 24px;
   }
 
   .lp-hero-copy h1 {
     max-width: none;
     font-size: clamp(2.5rem, 14vw, 4rem);
+    line-height: 1.02;
+  }
+
+  .lp-hero-copy p {
+    margin-top: 18px;
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+
+  .lp-hero-actions {
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .lp-btn {
+    width: 100%;
+  }
+
+  .lp-hero-points {
+    margin-top: 24px;
+  }
+
+  .lp-hero-points li {
+    align-items: flex-start;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .lp-hero-panel {
+    margin-top: 2px;
+  }
+
+  .lp-hero-card-main {
+    padding: 24px 20px;
+    border-radius: 26px;
+  }
+
+  .lp-hero-card-main h2 {
+    font-size: 1.45rem;
+    line-height: 1.2;
+  }
+
+  .lp-hero-card-mini {
+    padding: 16px 18px;
+    border-radius: 22px;
   }
 
   .lp-section {
@@ -933,10 +1012,11 @@ body {
   }
 
   .lp-hero-orb-one {
-    top: 20px;
-    right: 10%;
-    width: 180px;
-    height: 180px;
+    top: 8px;
+    right: -36px;
+    width: 120px;
+    height: 120px;
+    opacity: 0.65;
   }
 
   .lp-hero-orb-two {
@@ -944,9 +1024,43 @@ body {
   }
 
   .lp-hero-orb-three {
-    top: 240px;
-    right: -80px;
-    width: 220px;
-    height: 220px;
+    top: auto;
+    bottom: 8px;
+    right: -72px;
+    width: 150px;
+    height: 150px;
+    opacity: 0.45;
+  }
+}
+
+@media (max-width: 480px) {
+  .lp-hero-grid {
+    gap: 20px;
+  }
+
+  .lp-eyebrow {
+    font-size: 0.78rem;
+    padding: 7px 12px;
+  }
+
+  .lp-hero-copy h1 {
+    font-size: clamp(2.15rem, 12vw, 3.15rem);
+  }
+
+  .lp-hero-copy p {
+    font-size: 0.94rem;
+  }
+
+  .lp-hero-card-main {
+    padding: 22px 18px;
+  }
+
+  .lp-hero-card-main h2 {
+    font-size: 1.28rem;
+  }
+
+  .lp-hero-card-mini {
+    width: 100%;
+    padding: 14px 16px;
   }
 }
