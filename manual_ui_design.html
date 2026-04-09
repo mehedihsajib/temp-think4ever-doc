@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Think4Ever Dev - UI Designs</title>
+    <link href="css/theme.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/consumer_docs_home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="assets/js/i18n.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: #f8fafc;
+      }
+
+      .modern-header {
+        font-family: 'Inter', sans-serif;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 64px;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: saturate(180%) blur(20px);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        z-index: 300;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease;
+      }
+
+      .modern-header-inner {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+
+      .modern-header-logo-plate {
+        display: flex;
+        align-items: center;
+        padding-left: 36px;
+        height: 100%;
+        box-sizing: border-box;
+      }
+
+      .modern-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .modern-logo span {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #0f172a;
+        letter-spacing: -0.04em;
+      }
+
+      .modern-header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
+        padding: 0 40px;
+        height: 100%;
+      }
+
+      .modern-header-actions {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      @media (max-width: 1024px) {
+        .modern-header-logo-plate {
+          width: 240px;
+          min-width: 240px;
+          padding-left: 24px;
+        }
+      }
+
+      .consumer-docs-layout {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        display: flex !important;
+        background: #ffffff;
+      }
+
+      .cd-sidebar {
+        box-sizing: content-box !important;
+        width: 240px !important;
+        min-width: 240px !important;
+        background: #fcfcfd !important;
+        border-right: 1px solid #e2e8f0 !important;
+        padding-left: 36px !important;
+        padding-right: 24px !important;
+        padding-top: 36px !important;
+      }
+
+      .cd-main-content {
+        max-width: 1000px !important;
+        background: #ffffff !important;
+        padding-top: 56px !important;
+        padding-left: 64px !important;
+        padding-right: 64px !important;
+        padding-bottom: 100px !important;
+      }
+
+      h1.cd-page-title {
+        color: #ea580c;
+        border-bottom: none;
+        margin-bottom: 16px;
+      }
+
+      h3.cd-sub-heading {
+        color: #0f172a;
+        font-size: 1.15rem;
+        font-weight: 700;
+        font-family: 'Inter', sans-serif;
+        margin-top: 32px;
+        margin-bottom: 12px;
+      }
+
+      .cd-sub-heading-orange {
+        color: #ea580c;
+        font-size: 1.15rem;
+        font-weight: 700;
+        font-family: 'Inter', sans-serif;
+        margin-top: 32px;
+        margin-bottom: 12px;
+      }
+
+      .doc-section {
+        margin-top: 24px;
+        margin-bottom: 32px;
+      }
+
+      .cd-overview-ul {
+        margin-top: 16px;
+        margin-bottom: 24px;
+        padding-left: 24px;
+        list-style-type: disc;
+      }
+
+      .cd-overview-ul li {
+        margin-bottom: 16px;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.95rem;
+        color: #475569;
+        line-height: 1.6;
+      }
+
+      .cd-overview-ul li strong {
+        color: #0f172a;
+        font-weight: 600;
+      }
+
+      .cd-overview-p {
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        color: #475569;
+        line-height: 1.7;
+        margin-bottom: 16px;
+      }
+
+      .demo-img {
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e2e8f0;
+        margin-top: 24px;
+        margin-bottom: 40px;
+        display: block;
+      }
+
+      /* Fix for Table Design */
+      .config-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 16px;
+        margin-bottom: 24px;
+        font-family: Arial, sans-serif;
+        font-size: 0.95rem;
+      }
+
+      .config-table th,
+      .config-table td {
+        border: 1px solid #000;
+        padding: 8px 12px;
+        text-align: left;
+      }
+
+      .config-table th:first-child, 
+      .config-table td:first-child {
+        width: 18%;
+        white-space: nowrap;
+      }
+
+      .config-table th:last-child, 
+      .config-table td:last-child {
+        width: 82%;
+      }
+
+      .config-table th {
+        font-weight: bold;
+        color: #000;
+        background-color: transparent;
+      }
+
+      .config-table td {
+        color: #000;
+        line-height: 1.5;
+      }
+
+      .config-table strong {
+        font-weight: bold;
+      }
+
+      .config-table em {
+        font-style: italic;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="consumer-docs-home consumer-getting-started">
+      <header class="modern-header" id="consumerHeader"></header>
+
+      <div class="consumer-docs-layout">
+        <div id="consumerSidebar"></div>
+
+        <main class="cd-main-content" id="cd-main">
+          <h1 class="cd-page-title" data-i18n="dev_ui.title">UI Designs</h1>
+
+          <div class="doc-section">
+            <p class="cd-overview-p" data-i18n-html="dev_ui.intro">
+              The <strong>UI Designs</strong> submenu serves as the primary
+              repository for the project's visual interface assets. It is
+              designed to bridge the gap between conceptual design and
+              development by providing a central location for high-fidelity
+              visuals.
+            </p>
+
+            <img
+              src="assets/images/ui-design.jpg"
+              alt="UI Designs Dashboard"
+              class="demo-img"
+            />
+
+            <h3 class="cd-sub-heading" data-i18n="dev_ui.core_fn_title">
+              Core Functions
+            </h3>
+            <ul class="cd-overview-ul">
+              <li>
+                <strong data-i18n="dev_ui.cf1_title"
+                  >Visual Interface Storage:</strong
+                >
+                <span data-i18n="dev_ui.cf1_desc"
+                  >Access all screen designs, from initial wireframes to
+                  polished, high-fidelity mockups.</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="dev_ui.cf2_title">Prototyping:</strong>
+                <span data-i18n="dev_ui.cf2_desc"
+                  >Locate interactive prototypes to review user journeys and
+                  interface animations.</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="dev_ui.cf3_title">Asset Management:</strong>
+                <span data-i18n-html="dev_ui.cf3_desc"
+                  >View the total count of design files (currently
+                  <strong>30</strong>) at a glance via the numerical indicator
+                  on the right.</span
+                >
+              </li>
+            </ul>
+
+            <h3 class="cd-sub-heading" data-i18n="dev_ui.uguide_title">
+              User Guidance
+            </h3>
+            <ul class="cd-overview-ul">
+              <li>
+                <strong data-i18n="dev_ui.ug1_title">Active State:</strong>
+                <span data-i18n="dev_ui.ug1_desc"
+                  >When selected, this submenu is highlighted with a soft purple
+                  background and blue text, indicating that the files currently
+                  displayed in the main content area belong to this
+                  category.</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="dev_ui.ug2_title">Navigation:</strong>
+                <span data-i18n-html="dev_ui.ug2_desc"
+                  >Use the <strong>Monitor icon</strong> to quickly identify
+                  this section in the sidebar.</span
+                >
+              </li>
+            </ul>
+
+            <p class="cd-overview-p" data-i18n-html="dev_ui.bp">
+              <strong>Best Practice:</strong> Keep this section updated with the
+              latest design iterations to ensure the development team is working
+              from the most recent "Source of Truth" for the user interface.
+            </p>
+
+            <!-- Fixed sequence of images with proper structure -->
+            <div style="margin-top: 48px">
+              <p class="cd-overview-p" data-i18n="dev_ui.view_look_prompt">
+                Click on each folder to view how it looks:
+              </p>
+              <img
+                src="assets/images/ui-design-2.jpg"
+                alt="Folder View Overlay"
+                class="demo-img"
+              />
+            </div>
+
+            <div style="margin-top: 48px">
+              <p
+                class="cd-overview-p"
+                style="
+                  font-weight: 500;
+                  font-style: italic;
+                  text-align: center;
+                  color: #000;
+                "
+                data-i18n="dev_ui.overlay_prompt"
+              >
+                An overlay window will be displayed
+              </p>
+              <img
+                src="assets/images/ui-design-3.jpg"
+                alt="Current Properties Context Menu"
+                class="demo-img"
+              />
+              <img
+                src="assets/images/ui-design-4.jpg"
+                alt="Current Properties Context Menu"
+                class="demo-img"
+              />
+              <img
+                src="assets/images/ui-design-5.jpg"
+                alt="Current Properties Context Menu"
+                class="demo-img"
+              />
+            </div>
+
+            <div style="margin-top: 64px">
+              <h3 class="cd-sub-heading-orange" data-i18n="dev_ui.typo_title">
+                Typography Style Editor
+              </h3>
+              <p class="cd-overview-p" data-i18n-html="dev_ui.typo_intro">
+                The <strong>Typography Editor</strong> is a specialized
+                configuration panel that allows for precise control over the
+                visual appearance of text elements within the
+                interface&mdash;specifically targeting the
+                <code>span.sidebar-nav-text</code> element in this view.
+              </p>
+
+              <h3
+                class="cd-sub-heading-orange"
+                data-i18n="dev_ui.config_opt_title"
+                style="font-size: 1.05rem; margin-top: 24px"
+              >
+                Configuration Options
+              </h3>
+              <table class="config-table">
+                <thead>
+                  <tr>
+                    <th data-i18n="dev_ui.table_h1">Feature</th>
+                    <th data-i18n="dev_ui.table_h2">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-i18n-html="dev_ui.t_c1_1">
+                      <strong>Text Color</strong>
+                    </td>
+                    <td data-i18n-html="dev_ui.t_c1_2">
+                      Adjust the font color using an RGB value (currently
+                      rgb(191, 219, 254)) or by selecting a shade from the
+                      integrated color picker.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-i18n-html="dev_ui.t_c2_1">
+                      <strong>Font Size</strong>
+                    </td>
+                    <td data-i18n-html="dev_ui.t_c2_2">
+                      Set the text dimensions using the numerical input or the
+                      slider, ranging from <strong>6px</strong> to
+                      <strong>120px</strong>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-i18n-html="dev_ui.t_c3_1">
+                      <strong>Font Weight</strong>
+                    </td>
+                    <td data-i18n-html="dev_ui.t_c3_2">
+                      Define the thickness of the characters (currently set to
+                      <strong>500 Medium</strong>).
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-i18n-html="dev_ui.t_c4_1">
+                      <strong>Font Family</strong>
+                    </td>
+                    <td data-i18n-html="dev_ui.t_c4_2">
+                      Choose the typeface from a prioritized stack (e.g.,
+                      <strong>Inter</strong>, <strong>-apple-system</strong>).
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-i18n-html="dev_ui.t_c5_1">
+                      <strong>Style &amp; Decoration</strong>
+                    </td>
+                    <td data-i18n-html="dev_ui.t_c5_2">
+                      Toggle font styles like <em>Italic</em> or decorations
+                      such as <strong>Underline</strong> or
+                      <strong>None</strong>.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-i18n-html="dev_ui.t_c6_1">
+                      <strong>Text Align</strong>
+                    </td>
+                    <td data-i18n-html="dev_ui.t_c6_2">
+                      Control the horizontal placement of the text (e.g.,
+                      <strong>start</strong>, <strong>center</strong>, or
+                      <strong>end</strong>).
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h3
+                class="cd-sub-heading-orange"
+                data-i18n="dev_ui.key_ele_title"
+                style="font-size: 1.05rem; margin-top: 32px"
+              >
+                Key Interface Elements
+              </h3>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong data-i18n="dev_ui.ke1_title">CSS Path:</strong>
+                  <span data-i18n-html="dev_ui.ke1_desc"
+                    >The blue header area displays the exact CSS selector path
+                    (<code>div.sidebar-nav > ...</code>), ensuring you know
+                    exactly which element is being modified.</span
+                  >
+                </li>
+                <li>
+                  <strong data-i18n="dev_ui.ke2_title"
+                    >Save &amp; Close:</strong
+                  >
+                  <span data-i18n-html="dev_ui.ke2_desc"
+                    >Use the <strong>Save</strong> button to commit your styling
+                    changes to the live project, or click the
+                    "<strong>X</strong>" to discard changes and exit the
+                    editor.</span
+                  >
+                </li>
+                <li>
+                  <strong data-i18n="dev_ui.ke3_title">Unit Selector:</strong>
+                  <span data-i18n-html="dev_ui.ke3_desc"
+                    >Easily switch between pixel (<strong>px</strong>) and other
+                    relative units for font sizing to ensure responsive design
+                    compliance.</span
+                  >
+                </li>
+              </ul>
+
+              <p class="cd-overview-p" data-i18n-html="dev_ui.typo_note">
+                <strong>Note:</strong> Changes made in this panel are often
+                applied globally to all elements sharing the same class,
+                maintaining visual consistency across the sidebar navigation.
+              </p>
+            </div>
+
+            <div style="margin-top: 64px">
+              <!-- Adding the missing section as shown in the last image -->
+              <img
+                src="assets/images/ui-design-6.jpg"
+                alt="Modify Element Options"
+                class="demo-img"
+              />
+              <img
+                src="assets/images/ui-design-7.jpg"
+                alt="Modify Element Options"
+                class="demo-img"
+              />
+            </div>
+
+            <!-- New Content: Responsiveness -->
+            <div style="margin-top: 64px">
+              <h3 class="cd-sub-heading-orange" data-i18n="dev_ui.resp_title" style="color: #1d4ed8;">
+                Responsiveness
+              </h3>
+              <p class="cd-overview-p" data-i18n-html="dev_ui.resp_intro">
+                In the top-center of the interface, you can find the <strong>device toggle icons (Desktop, Tablet, and Mobile)</strong> used to preview how the layout adapts to various screen sizes.
+              </p>
+
+              <ul class="cd-overview-ul" style="list-style: none; padding-left: 0;">
+                <li>
+                  <strong data-i18n="dev_ui.resp_desk_title" style="display: block; font-size: 1.05rem; margin-bottom: 4px;">Desktop View</strong>
+                  <span data-i18n-html="dev_ui.resp_desk_desc">The default current view – this is optimized for large screens, offering a spacious and organized layout.</span>
+                </li>
+                <li style="margin-top: 24px;">
+                  <strong data-i18n="dev_ui.resp_tab_title" style="display: block; font-size: 1.05rem; margin-bottom: 4px;">Tablet View</strong>
+                  <span data-i18n-html="dev_ui.resp_tab_desc">In this mode, the interface shifts to accommodate mid-sized touchscreens.</span>
+                </li>
+                <li style="margin-top: 24px;">
+                  <strong data-i18n="dev_ui.resp_mob_title" style="display: block; font-size: 1.05rem; margin-bottom: 4px;">Mobile View</strong>
+                  <span data-i18n-html="dev_ui.resp_mob_desc">The mobile view prioritizes vertical stacking to ensure readability on small screens.</span>
+                </li>
+              </ul>
+
+              <img
+                src="assets/images/ui-design-8.jpg"
+                alt="Responsiveness Toggle"
+                class="demo-img"
+              />
+            </div>
+
+            <!-- New Content: Modify Page Assistant -->
+            <div style="margin-top: 64px">
+              <h3 class="cd-sub-heading-orange" data-i18n="dev_ui.mpa_title">
+                Modify Page Assistant
+              </h3>
+              <p class="cd-overview-p" data-i18n-html="dev_ui.mpa_intro">
+                The <strong>Modify Page overlay</strong> is an AI-powered conversational interface designed to help you make rapid design and structural changes to your project. By selecting specific elements and describing your desired outcome, the assistant automates the CSS or HTML adjustments for you.
+              </p>
+
+              <h3 class="cd-sub-heading-orange" data-i18n="dev_ui.mpa_core_comp" style="font-size: 1.05rem; margin-top: 24px;">Core Components</h3>
+              <table class="config-table">
+                <thead>
+                  <tr>
+                    <th data-i18n="dev_ui.table2_h1">Element</th>
+                    <th data-i18n="dev_ui.table2_h2">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-i18n-html="dev_ui.t2_c1_1"><strong>Conversational Agent</strong></td>
+                    <td data-i18n-html="dev_ui.t2_c1_2">The message bubble at the top provides status updates and prompts you for specific design instructions.</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n-html="dev_ui.t2_c2_1"><strong>Element Selector</strong></td>
+                    <td data-i18n-html="dev_ui.t2_c2_2">The blue tag (e.g., <code>span.sidebar-nav-text</code>) indicates exactly which part of the page is currently being targeted for modification.</td>
+                  </tr>
+                  <tr>
+                    <td data-i18n-html="dev_ui.t2_c3_1"><strong>Instruction Input</strong></td>
+                    <td data-i18n-html="dev_ui.t2_c3_2">The primary text area where you can type natural language commands like <em>"Make this text bold"</em> or <em>"Change the font color to dark red."</em></td>
+                  </tr>
+                  <tr>
+                    <td data-i18n-html="dev_ui.t2_c4_1"><strong>Action Buttons</strong></td>
+                    <td data-i18n-html="dev_ui.t2_c4_2"><strong>Send</strong> initiates the request, while <strong>Undo</strong> allows you to revert the last change immediately.</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h3 class="cd-sub-heading-orange" data-i18n="dev_ui.mpa_kf" style="font-size: 1.05rem; margin-top: 32px;">Key Features</h3>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong data-i18n="dev_ui.kf1_title">Contextual Awareness:</strong>
+                  <span data-i18n-html="dev_ui.kf1_desc">The assistant knows which element you have selected, allowing you to give short commands without re-specifying the target.</span>
+                </li>
+                <li>
+                  <strong data-i18n="dev_ui.kf2_title">Real-time Feedback:</strong>
+                  <span data-i18n-html="dev_ui.kf2_desc">As you type, the interface provides a placeholder hint reminding you of the active selection.</span>
+                </li>
+                <li>
+                  <strong data-i18n="dev_ui.kf3_title">Non-Destructive Editing:</strong>
+                  <span data-i18n-html="dev_ui.kf3_desc">The presence of the <strong>Undo</strong> button ensures you can experiment with different styles safely.</span>
+                </li>
+              </ul>
+
+              <h3 class="cd-sub-heading-orange" data-i18n="dev_ui.mpa_htu" style="font-size: 1.05rem; margin-top: 32px;">How to Use</h3>
+              <ol class="cd-overview-ul" style="list-style-type: decimal;">
+                <li>
+                  <strong data-i18n="dev_ui.htu1_title">Select:</strong>
+                  <span data-i18n-html="dev_ui.htu1_desc">Click an element on the underlying page to focus the assistant's attention.</span>
+                </li>
+                <li>
+                  <strong data-i18n="dev_ui.htu2_title">Describe:</strong>
+                  <span data-i18n-html="dev_ui.htu2_desc">Type your desired change into the input box (e.g., <em>"Increase the padding and add a border"</em>).</span>
+                </li>
+                <li>
+                  <strong data-i18n="dev_ui.htu3_title">Execute:</strong>
+                  <span data-i18n-html="dev_ui.htu3_desc">Click <strong>Send</strong> to see the changes applied in real-time.</span>
+                </li>
+              </ol>
+            </div>
+
+            <!-- New Content: Other Options -->
+            <div style="margin-top: 64px;">
+              <h3 class="cd-sub-heading-orange" data-i18n="dev_ui.mpa_other_opts" style="font-size: 1.05rem;">Other Options:</h3>
+              <img
+                src="assets/images/ui-design-9.jpg"
+                alt="Other context menu options mapping"
+                class="demo-img"
+              />
+            </div>
+            
+          </div>
+        </main>
+      </div>
+    </div>
+    <div id="docFooter"></div>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/consumer_docs_home.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (window.I18n) {
+          window.I18n.init();
+        }
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  </body>
+</html>

@@ -1,5 +1,0 @@
-
-      function load_page(pageId) {
-        window.location.href = pageId + '.html';
-      }
-    

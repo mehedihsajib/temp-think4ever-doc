@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Think4Ever Dev - Source Code</title>
+    <link href="css/theme.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/consumer_docs_home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="assets/js/i18n.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: #f8fafc;
+      }
+
+      .modern-header {
+        font-family: 'Inter', sans-serif;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 64px;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: saturate(180%) blur(20px);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        z-index: 300;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease;
+      }
+
+      .consumer-docs-layout {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        display: flex !important;
+        background: #ffffff;
+      }
+
+      .cd-sidebar {
+        box-sizing: content-box !important;
+        width: 240px !important;
+        min-width: 240px !important;
+        background: #fcfcfd !important;
+        border-right: 1px solid #e2e8f0 !important;
+        padding-left: 36px !important;
+        padding-right: 24px !important;
+        padding-top: 36px !important;
+      }
+
+      .cd-main-content {
+        max-width: 1000px !important;
+        background: #ffffff !important;
+        padding-top: 56px !important;
+        padding-left: 64px !important;
+        padding-right: 64px !important;
+        padding-bottom: 100px !important;
+      }
+
+      h1.cd-page-title {
+        color: #ea580c;
+        border-bottom: none;
+        margin-bottom: 16px;
+      }
+
+      .cd-sub-heading {
+        color: #000;
+        font-size: 1.15rem;
+        font-weight: bold;
+        font-family: 'Inter', sans-serif;
+        margin-top: 32px;
+        margin-bottom: 12px;
+      }
+
+      .doc-section {
+        margin-top: 24px;
+        margin-bottom: 32px;
+      }
+
+      .cd-overview-ul {
+        margin-top: 16px;
+        margin-bottom: 24px;
+        padding-left: 24px;
+        list-style-type: disc;
+      }
+
+      .cd-overview-ul li {
+        margin-bottom: 16px;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.95rem;
+        color: #475569;
+        line-height: 1.6;
+      }
+
+      .cd-overview-ul li strong {
+        color: #0f172a;
+        font-weight: 600;
+      }
+
+      .cd-overview-p {
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        color: #475569;
+        line-height: 1.7;
+        margin-bottom: 16px;
+      }
+
+      .demo-img {
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e2e8f0;
+        margin-top: 24px;
+        margin-bottom: 40px;
+        display: block;
+      }
+
+      .config-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 16px;
+        margin-bottom: 24px;
+        font-family: Arial, sans-serif;
+        font-size: 0.95rem;
+      }
+
+      .config-table th,
+      .config-table td {
+        border: 1px solid #000;
+        padding: 8px 12px;
+        text-align: left;
+      }
+
+      .config-table th {
+        font-weight: bold;
+        color: #000;
+        background-color: transparent;
+      }
+
+      .config-table td {
+        color: #000;
+        line-height: 1.5;
+      }
+
+      .config-table strong {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="consumer-docs-home consumer-getting-started">
+      <header class="modern-header" id="consumerHeader"></header>
+
+      <div class="consumer-docs-layout">
+        <div id="consumerSidebar"></div>
+
+        <main class="cd-main-content" id="cd-main">
+          <h1 class="cd-page-title" data-i18n="source_code.title">
+            Source Code
+          </h1>
+
+          <div class="doc-section">
+            <p class="cd-overview-p" data-i18n-html="source_code.intro">
+              The Source Code dashboard is where your project transitions from
+              high-level "Concept" to actual digital infrastructure. This is a
+              live file system where Think4ever manages every script, style, and
+              configuration file of any project.
+            </p>
+
+            <img
+              src="assets/images/source-code-1.jpg"
+              alt="Source Code Browser"
+              class="demo-img"
+            />
+
+            <h3 class="cd-sub-heading" data-i18n="source_code.ns_title">
+              Navigation & Structure
+            </h3>
+            <p class="cd-overview-p" data-i18n-html="source_code.ns_intro">
+              The Files Browser provides a standard, intuitive directory
+              structure. In your current view (the insurance folder), the AI has
+              organized the project into logical sections:
+            </p>
+            <ul class="cd-overview-ul">
+              <li>
+                <strong data-i18n="source_code.ns_b1_title">config/:</strong>
+                <span data-i18n-html="source_code.ns_b1_desc"
+                  >Contains environment settings and database connection
+                  strings.</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="source_code.ns_b2_title">public/:</strong>
+                <span data-i18n-html="source_code.ns_b2_desc"
+                  >The "Front Door" of your app—houses the HTML, CSS, and images
+                  the user actually sees.</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="source_code.ns_b3_title">routes/:</strong>
+                <span data-i18n-html="source_code.ns_b3_desc"
+                  >The "Traffic Controller"—defines the paths (URLs) for your
+                  application (e.g., /dashboard or /expenditures).</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="source_code.ns_b4_title">utils/:</strong>
+                <span data-i18n-html="source_code.ns_b4_desc"
+                  >Helper functions and small scripts that handle repetitive
+                  tasks.</span
+                >
+              </li>
+            </ul>
+
+            <h3
+              class="cd-sub-heading"
+              data-i18n="source_code.apf_title"
+              style="margin-top: 48px"
+            >
+              Anatomy of Your Project Files
+            </h3>
+            <p class="cd-overview-p" data-i18n-html="source_code.apf_intro">
+              Every file listed includes its Type, Size, and the Last Modified
+              date, giving you a clear audit trail of development.
+            </p>
+
+            <table class="config-table">
+              <thead>
+                <tr>
+                  <th data-i18n="source_code.apf_t1">Notable File</th>
+                  <th data-i18n="source_code.apf_t2">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-i18n-html="source_code.apf_r1_1">
+                    <strong>db.sql</strong>
+                  </td>
+                  <td data-i18n-html="source_code.apf_r1_2">
+                    A snapshot of your database structure, often created by the
+                    "Export to Source" function.
+                  </td>
+                </tr>
+                <tr>
+                  <td data-i18n-html="source_code.apf_r2_1">
+                    <strong>insuranceserver.js</strong>
+                  </td>
+                  <td data-i18n-html="source_code.apf_r2_2">
+                    The main entry point for your backend server—this is the
+                    "brain" that connects your UI to your data.
+                  </td>
+                </tr>
+                <tr>
+                  <td data-i18n-html="source_code.apf_r3_1">
+                    <strong>package.json</strong>
+                  </td>
+                  <td data-i18n-html="source_code.apf_r3_2">
+                    A manifest file that lists all the technical dependencies
+                    your project needs to run.
+                  </td>
+                </tr>
+                <tr>
+                  <td data-i18n-html="source_code.apf_r4_1">
+                    <strong>README.md</strong>
+                  </td>
+                  <td data-i18n-html="source_code.apf_r4_2">
+                    The project's documentation, detailing how to install and
+                    use the application.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p
+              class="cd-overview-p"
+              data-i18n-html="source_code.apf_outro"
+              style="margin-top: 16px"
+            >
+              In the Source Code section, navigating and managing your technical
+              assets is designed to be as intuitive as a standard desktop
+              environment, but with high-end developer tools built right in.
+            </p>
+
+            <img
+              src="assets/images/source-code-2.jpg"
+              alt="Anatomy and Navigation"
+              class="demo-img"
+            />
+
+            <h3 class="cd-sub-heading" data-i18n="source_code.nt_title">
+              Navigation & Tracking
+            </h3>
+            <ul class="cd-overview-ul">
+              <li>
+                <strong data-i18n="source_code.nt_b1_title"
+                  >Breadcrumb Navigation:</strong
+                >
+                <span data-i18n-html="source_code.nt_b1_desc"
+                  >Use the dynamic path links (e.g., Root / public / assets) at
+                  the top of the browser to move instantly between parent and
+                  child directories.</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="source_code.nt_b2_title"
+                  >File Metadata:</strong
+                >
+                <span data-i18n-html="source_code.nt_b2_desc"
+                  >Every asset is listed with its Name, Type (JS, HTML, CSS,
+                  etc.), Size, and the exact Timestamp of the last modification.
+                  This provides a clear audit trail for every change the AI
+                  agents make.</span
+                >
+              </li>
+            </ul>
+
+            <h3
+              class="cd-sub-heading"
+              data-i18n="source_code.ifa_title"
+              style="margin-top: 48px; color: #2e6b7d"
+            >
+              Individual File Action
+            </h3>
+            <p class="cd-overview-p" data-i18n-html="source_code.ifa_intro">
+              For surgical control over your application's files, each row in
+              the browser offers four primary actions:
+            </p>
+
+            <ul class="cd-overview-ul">
+              <li>
+                <strong
+                  data-i18n="source_code.ifa_b1_title"
+                  style="font-size: 1.05rem"
+                  >View — Read-Only Mode</strong
+                >
+                <ul style="margin-top: 8px; margin-bottom: 24px">
+                  <li>
+                    <strong data-i18n="source_code.ifa_b1_d1_title"
+                      >The Function:</strong
+                    >
+                    <span data-i18n-html="source_code.ifa_b1_d1_desc"
+                      >Opens a quick-look preview of the file's content.</span
+                    >
+                  </li>
+                  <li>
+                    <strong data-i18n="source_code.ifa_b1_d2_title"
+                      >The Utility:</strong
+                    >
+                    <span data-i18n-html="source_code.ifa_b1_d2_desc"
+                      >Perfect for a "spot check" to verify that a logic fix or
+                      a UI update was applied correctly without accidentally
+                      changing anything.</span
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong
+                  data-i18n="source_code.ifa_b2_title"
+                  style="font-size: 1.05rem"
+                  >Edit — Full-Screen Code Editor</strong
+                >
+                <ul style="margin-top: 8px; margin-bottom: 24px">
+                  <li>
+                    <strong data-i18n="source_code.ifa_b2_d1_title"
+                      >The Function:</strong
+                    >
+                    <span data-i18n-html="source_code.ifa_b2_d1_desc"
+                      >Launches a professional-grade development environment
+                      featuring the high-contrast Catppuccin theme.</span
+                    >
+                  </li>
+                  <li>
+                    <strong data-i18n="source_code.ifa_b2_d2_title"
+                      >The Utility:</strong
+                    >
+                    <span data-i18n-html="source_code.ifa_b2_d2_desc"
+                      >Features full syntax highlighting, making it easy to
+                      manually tweak code or add custom comments. It's the
+                      ultimate tool for "Final Form" personalization.</span
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong
+                  data-i18n="source_code.ifa_b3_title"
+                  style="font-size: 1.05rem"
+                  >Download — Local Export</strong
+                >
+                <ul style="margin-top: 8px; margin-bottom: 24px">
+                  <li>
+                    <strong data-i18n="source_code.ifa_b3_d1_title"
+                      >The Function:</strong
+                    >
+                    <span data-i18n-html="source_code.ifa_b3_d1_desc"
+                      >Instantly saves the specific file to your computer.</span
+                    >
+                  </li>
+                  <li>
+                    <strong data-i18n="source_code.ifa_b3_d2_title"
+                      >The Utility:</strong
+                    >
+                    <span data-i18n-html="source_code.ifa_b3_d2_desc"
+                      >Use this if you need to share a specific script with a
+                      collaborator or want to keep a local backup of a critical
+                      configuration file like db.sql.</span
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong
+                  data-i18n="source_code.ifa_b4_title"
+                  style="font-size: 1.05rem"
+                  >Delete — Secure Removal</strong
+                >
+                <ul style="margin-top: 8px; margin-bottom: 24px">
+                  <li>
+                    <strong data-i18n="source_code.ifa_b4_d1_title"
+                      >The Function:</strong
+                    >
+                    <span data-i18n-html="source_code.ifa_b4_d1_desc"
+                      >Removes the file from the project directory.</span
+                    >
+                  </li>
+                  <li>
+                    <strong data-i18n="source_code.ifa_b4_d2_title"
+                      >The Utility:</strong
+                    >
+                    <span data-i18n-html="source_code.ifa_b4_d2_desc"
+                      >Includes a confirmation step to prevent accidental loss
+                      of data. Use this to prune legacy files or experimental
+                      scripts that are no longer needed.</span
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <img
+              src="assets/images/source-code-3.jpg"
+              alt="Individual File Actions"
+              class="demo-img"
+            />
+          </div>
+        </main>
+      </div>
+    </div>
+    <div id="docFooter"></div>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/consumer_docs_home.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (window.I18n) {
+          window.I18n.init();
+        }
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  </body>
+</html>
