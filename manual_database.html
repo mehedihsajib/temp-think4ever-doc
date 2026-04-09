@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Think4Ever Dev - Database</title>
+    <link href="css/theme.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/consumer_docs_home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="assets/js/i18n.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: #f8fafc;
+      }
+
+      .modern-header {
+        font-family: 'Inter', sans-serif;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 64px;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: saturate(180%) blur(20px);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        z-index: 300;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease;
+      }
+
+      .consumer-docs-layout {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        display: flex !important;
+        background: #ffffff;
+      }
+
+      .cd-sidebar {
+        box-sizing: content-box !important;
+        width: 240px !important;
+        min-width: 240px !important;
+        background: #fcfcfd !important;
+        border-right: 1px solid #e2e8f0 !important;
+        padding-left: 36px !important;
+        padding-right: 24px !important;
+        padding-top: 36px !important;
+      }
+
+      .cd-main-content {
+        max-width: 1000px !important;
+        background: #ffffff !important;
+        padding-top: 56px !important;
+        padding-left: 64px !important;
+        padding-right: 64px !important;
+        padding-bottom: 100px !important;
+      }
+
+      h1.cd-page-title {
+        color: #ea580c;
+        border-bottom: none;
+        margin-bottom: 16px;
+      }
+
+      h1.cd-page-title-blue {
+        color: #2563eb;
+        border-bottom: none;
+        margin-bottom: 16px;
+        font-size: 1.8rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+      }
+
+      .cd-sub-heading {
+        color: #000;
+        font-size: 1.15rem;
+        font-weight: bold;
+        font-family: 'Inter', sans-serif;
+        margin-top: 32px;
+        margin-bottom: 12px;
+      }
+
+      .doc-section {
+        margin-top: 24px;
+        margin-bottom: 32px;
+      }
+
+      .cd-overview-ul {
+        margin-top: 16px;
+        margin-bottom: 24px;
+        padding-left: 24px;
+        list-style-type: disc;
+      }
+
+      .cd-overview-ul li {
+        margin-bottom: 16px;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.95rem;
+        color: #475569;
+        line-height: 1.6;
+      }
+
+      .cd-overview-ul li strong {
+        color: #0f172a;
+        font-weight: 600;
+      }
+
+      .cd-overview-p {
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        color: #475569;
+        line-height: 1.7;
+        margin-bottom: 16px;
+      }
+
+      .demo-img {
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e2e8f0;
+        margin-top: 24px;
+        margin-bottom: 40px;
+        display: block;
+      }
+
+      .config-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 16px;
+        margin-bottom: 24px;
+        font-family: Arial, sans-serif;
+        font-size: 0.95rem;
+      }
+
+      .config-table th,
+      .config-table td {
+        border: 1px solid #000;
+        padding: 8px 12px;
+        text-align: left;
+      }
+
+      .config-table th {
+        font-weight: bold;
+        color: #000;
+        background-color: transparent;
+      }
+
+      .config-table td {
+        color: #000;
+        line-height: 1.5;
+      }
+
+      .config-table strong {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="consumer-docs-home consumer-getting-started">
+      <header class="modern-header" id="consumerHeader"></header>
+
+      <div class="consumer-docs-layout">
+        <div id="consumerSidebar"></div>
+
+        <main class="cd-main-content" id="cd-main">
+          <h1 class="cd-page-title" data-i18n="database.title">Database</h1>
+
+          <div class="doc-section">
+            <p class="cd-overview-p" data-i18n-html="database.intro">
+              The <strong>Database Connections</strong> module is the technical
+              foundation of your application. In a high-integrity project like
+              <strong>TransparencySeal</strong>, this is where the "Source of
+              Truth" is defined and managed. It transforms a raw database into a
+              visual, browsable asset that the AI can use to write code and
+              generate reports.
+            </p>
+
+            <img
+              src="assets/images/dashboard.jpg"
+              alt="Database Connections"
+              class="demo-img"
+            />
+
+            <h3 class="cd-sub-heading" data-i18n="database.actions_title">
+              Actions
+            </h3>
+            <ul class="cd-overview-ul">
+              <li>
+                <strong data-i18n="database.act_b1_title"
+                  >Export & Download (Blue Icon)</strong
+                >
+                <p
+                  style="margin-top: 4px"
+                  data-i18n-html="database.act_b1_desc"
+                >
+                  It packages your entire database (tables, constraints, and
+                  rows) into a single <code>.sql</code> file and downloads it to
+                  your computer.
+                </p>
+              </li>
+              <li>
+                <strong data-i18n="database.act_b2_title"
+                  >Export to Source (Orange Icon)</strong
+                >
+                <p
+                  style="margin-top: 4px"
+                  data-i18n-html="database.act_b2_desc"
+                >
+                  Saves the database schema directly into the project's internal
+                  file system.
+                </p>
+              </li>
+              <li>
+                <strong data-i18n="database.act_b3_title"
+                  >Connect & Browse (Green Icon)</strong
+                >
+                <p
+                  style="margin-top: 4px"
+                  data-i18n-html="database.act_b3_desc"
+                >
+                  Activates the Schema Explorer for the selected connection.
+                </p>
+              </li>
+            </ul>
+
+            <div style="margin-top: 64px">
+              <h3
+                class="cd-sub-heading"
+                data-i18n="database.td_title"
+                style="color: #2563eb; font-size: 1.5rem"
+              >
+                Table Details
+              </h3>
+              <p class="cd-overview-p" data-i18n-html="database.td_intro">
+                When you click a database block (or "tile") from the main
+                inventory, the <strong>Table Details</strong> overlay acts as a
+                deep-dive X-ray into that specific entity. This view is critical
+                for auditing the structural integrity of your application,
+                ensuring that the AI has mapped your business logic correctly.
+              </p>
+              <img
+                src="assets/images/db-2.jpg"
+                alt="Table Details"
+                class="demo-img"
+              />
+
+              <h3
+                class="cd-sub-heading"
+                data-i18n="database.ts_title"
+                style="margin-top: 40px"
+              >
+                The Structure Table (Schema View)
+              </h3>
+
+              <table class="config-table">
+                <thead>
+                  <tr>
+                    <th data-i18n="database.ts_h1">Column</th>
+                    <th data-i18n="database.ts_h2">Purpose</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-i18n-html="database.ts_r1_1">
+                      <strong>Column</strong>
+                    </td>
+                    <td data-i18n-html="database.ts_r1_2">
+                      The unique name for each data field (e.g.,
+                      <code>claim_number</code>, <code>loss_type</code>).
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-i18n-html="database.ts_r2_1">
+                      <strong>Type</strong>
+                    </td>
+                    <td data-i18n-html="database.ts_r2_2">
+                      The technical format of the data. Notice
+                      <code>int</code> for numbers, <code>varchar</code> for
+                      text, <code>date</code> for time, and
+                      <code>decimal(15,2)</code> for precise currency values.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-i18n-html="database.ts_r3_1">
+                      <strong>Nullable</strong>
+                    </td>
+                    <td data-i18n-html="database.ts_r3_2">
+                      Indicates if the field can be left empty
+                      (<strong>Yes</strong>) or if it is mandatory
+                      (<strong>No</strong>). Fields like
+                      <code>claim_id</code> and <code>policy_id</code> are
+                      mandatory to ensure data integrity.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-i18n-html="database.ts_r4_1">
+                      <strong>Default</strong>
+                    </td>
+                    <td data-i18n-html="database.ts_r4_2">
+                      The value assigned if no data is provided (e.g., status
+                      defaults to <code>'OPEN'</code>).
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-i18n-html="database.ts_r5_1">
+                      <strong>Key</strong>
+                    </td>
+                    <td data-i18n-html="database.ts_r5_2">
+                      Represents the Primary Key (the gold key icon 🔑). This is
+                      the unique identifier (like a social security number) for
+                      that specific record.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div id="docFooter"></div>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/consumer_docs_home.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (window.I18n) {
+          window.I18n.init();
+        }
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  </body>
+</html>
