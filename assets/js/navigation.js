@@ -375,6 +375,7 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(() => {
         initSidebarToggle();
         generateBreadcrumb();
+        generateGlobalTOC();
       }, 0);
     },
   });
@@ -389,6 +390,7 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(() => {
         initSidebarToggle();
         generateBreadcrumb();
+        generateGlobalTOC();
       }, 0);
     },
   });
@@ -461,6 +463,71 @@ function generateBreadcrumb() {
   } else {
     mainContent.insertBefore(breadcrumbNav, mainContent.firstChild);
   }
+}
+
+// ===============================
+// GLOBAL TOC GENERATOR
+// ===============================
+function generateGlobalTOC() {
+  const mainContent = document.querySelector('.cd-main-content') || document.querySelector('.md-main-content') || document.querySelector('main');
+  if (!mainContent) return;
+
+  const headings = Array.from(mainContent.querySelectorAll('h2, h3'));
+  if (headings.length === 0) return;
+
+  const layoutContainer = mainContent.parentElement;
+  if (!layoutContainer) return;
+
+  if (document.getElementById('global-toc')) return;
+
+  const tocAside = document.createElement('aside');
+  tocAside.id = 'global-toc';
+  tocAside.className = 'cgs-toc';
+
+  let html = `
+    <h4 class="cgs-toc-title" data-i18n="toc.title">On this page</h4>
+    <ul class="cgs-toc-list">
+  `;
+
+  headings.forEach((heading, index) => {
+    if (!heading.id) {
+      const text = heading.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+      heading.id = text || `section-${index}`;
+    }
+
+    const isH3 = heading.tagName.toLowerCase() === 'h3';
+    html += `
+      <li>
+        <a href="#${heading.id}" class="cgs-toc-link" style="${isH3 ? 'padding-left: 24px;' : ''}">${heading.textContent}</a>
+      </li>
+    `;
+  });
+
+  html += `</ul>`;
+  tocAside.innerHTML = html;
+
+  layoutContainer.appendChild(tocAside);
+
+  // Active state highlighting on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        tocAside.querySelectorAll('.cgs-toc-link').forEach(link => link.classList.remove('active'));
+        const activeLink = tocAside.querySelector(`.cgs-toc-link[href="#${entry.target.id}"]`);
+        if (activeLink) activeLink.classList.add('active');
+      }
+    });
+  }, { rootMargin: '0px 0px -80% 0px', threshold: 0 });
+
+  headings.forEach(heading => observer.observe(heading));
+
+  // Handle click events for smooth scroll and active state updates
+  tocAside.querySelectorAll('.cgs-toc-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+      tocAside.querySelectorAll('.cgs-toc-link').forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
 }
 
 // ===============================
