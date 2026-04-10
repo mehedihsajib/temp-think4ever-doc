@@ -374,6 +374,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (window.I18n) window.I18n.applyToDOM(el);
       setTimeout(() => {
         initSidebarToggle();
+        generateBreadcrumb();
       }, 0);
     },
   });
@@ -387,15 +388,84 @@ document.addEventListener("DOMContentLoaded", function () {
       if (window.I18n) window.I18n.applyToDOM(el);
       setTimeout(() => {
         initSidebarToggle();
+        generateBreadcrumb();
       }, 0);
     },
   });
 });
 
 // ===============================
+// BREADCRUMB GENERATOR
+// ===============================
+function generateBreadcrumb() {
+  const currentPage = getCurrentPage();
+  if (currentPage === 'index' || currentPage === 'consumer_docs_home' || currentPage === 'merchant_docs_home') return;
+
+  const activeLink = document.querySelector('.cgs-nav-link.active') || document.querySelector('.admin-nav-link.active');
+  if (!activeLink) return;
+
+  const mainContent = document.querySelector('.cd-main-content') || document.querySelector('.md-main-content') || document.querySelector('main');
+  if (!mainContent) return;
+
+  if (document.getElementById('dynamic-breadcrumb')) return;
+
+  const sidebar = activeLink.closest('.cgs-sidebar, .admin-sidebar');
+  let topTitle = "Documentation";
+  if (sidebar) {
+    const headerTitle = sidebar.querySelector('.cgs-sidebar-header span, .admin-sidebar-header span, h5 span');
+    if (headerTitle) topTitle = headerTitle.textContent.trim();
+  }
+
+  let sectionTitle = "";
+  const navSection = activeLink.closest('.cgs-nav-section');
+  if (navSection) {
+    const sectionLabel = navSection.querySelector('.cgs-nav-section-label');
+    if (sectionLabel) sectionTitle = sectionLabel.textContent.trim();
+  }
+
+  const pageTitleSpan = activeLink.querySelector('span');
+  const pageTitle = pageTitleSpan ? pageTitleSpan.textContent.trim() : activeLink.textContent.trim();
+
+  const breadcrumbNav = document.createElement('nav');
+  breadcrumbNav.id = 'dynamic-breadcrumb';
+  breadcrumbNav.className = 'modern-breadcrumb';
+  breadcrumbNav.setAttribute('aria-label', 'Breadcrumb');
+
+  let html = `<ol>
+    <li>
+      <a href="javascript:void(0)" onclick="load_page('index')" class="breadcrumb-icon"><i class="fa-solid fa-house"></i></a>
+    </li>`;
+
+  if (topTitle) {
+    html += `
+    <li class="separator"><i class="fa-solid fa-chevron-right"></i></li>
+    <li><span class="breadcrumb-item">${topTitle}</span></li>`;
+  }
+
+  if (sectionTitle) {
+    html += `
+    <li class="separator"><i class="fa-solid fa-chevron-right"></i></li>
+    <li><span class="breadcrumb-item">${sectionTitle}</span></li>`;
+  }
+
+  html += `
+    <li class="separator"><i class="fa-solid fa-chevron-right"></i></li>
+    <li class="current" aria-current="page">${pageTitle}</li>
+  </ol>`;
+
+  breadcrumbNav.innerHTML = html;
+  
+  const pageTitleEl = mainContent.querySelector('.cd-page-title, .md-page-title, h1');
+  if (pageTitleEl) {
+    mainContent.insertBefore(breadcrumbNav, pageTitleEl);
+  } else {
+    mainContent.insertBefore(breadcrumbNav, mainContent.firstChild);
+  }
+}
+
+// ===============================
 // i18n (Internationalization)
 // ===============================
-// ল্যাঙ্গুয়েজ পরিবর্তন এবং লোকাল স্টোরেজে সেভ করার ফাংশন
 function changeLanguage(langCode) {
   if (window.I18n) {
     window.I18n.setLocale(langCode);
