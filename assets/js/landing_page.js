@@ -323,9 +323,21 @@
     });
 
     mobileNav.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", closeMobileNav);
+      link.addEventListener("click", function (event) {
+        if (link.getAttribute("data-disabled") === "true") {
+          event.preventDefault();
+          return;
+        }
+        closeMobileNav();
+      });
     });
   }
+
+  document.querySelectorAll("a[data-disabled='true']").forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+    });
+  });
 
   dropdowns.forEach(function (dropdown) {
     const trigger = dropdown.querySelector(".lp-dropdown-trigger");

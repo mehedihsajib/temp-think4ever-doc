@@ -37,14 +37,31 @@
           </a>
 
           <nav class="lp-navbar-links" aria-label="Main navigation">
-            <a
-              href="#"
-              onclick="
-                load_page('manual_introduction');
-                return false;
-              "
-              >Documentation</a
-            >
+            <div class="lp-nav-dropdown">
+              <button
+                class="lp-nav-dropdown-trigger"
+                type="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Documentation
+                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+              </button>
+              <div class="lp-nav-dropdown-menu" role="menu">
+                <a href="./manual_introduction.html">User Manual</a>
+                <a href="#" data-disabled="true" class="lp-nav-coming-item"
+                  >Main <span class="lp-nav-coming-badge">comming soon</span></a
+                >
+                <a href="#" data-disabled="true" class="lp-nav-coming-item"
+                  >Reports
+                  <span class="lp-nav-coming-badge">comming soon</span></a
+                >
+                <a href="#" data-disabled="true" class="lp-nav-coming-item"
+                  >Together
+                  <span class="lp-nav-coming-badge">comming soon</span></a
+                >
+              </div>
+            </div>
             <div class="lp-nav-dropdown">
               <button
                 class="lp-nav-dropdown-trigger"
@@ -60,17 +77,16 @@
                   href="./tutorials/user_manual.html"
                   >User Manual</a
                 >
-                <a
-                  href="./tutorials/main.html"
-                  >Main</a
+                <a href="#" data-disabled="true" class="lp-nav-coming-item"
+                  >Main <span class="lp-nav-coming-badge">comming soon</span></a
                 >
-                <a
-                  href="./tutorials/reports.html"
-                  >Reports</a
+                <a href="#" data-disabled="true" class="lp-nav-coming-item"
+                  >Reports
+                  <span class="lp-nav-coming-badge">comming soon</span></a
                 >
-                <a
-                  href="./tutorials/together.html"
-                  >Together</a
+                <a href="#" data-disabled="true" class="lp-nav-coming-item"
+                  >Together
+                  <span class="lp-nav-coming-badge">comming soon</span></a
                 >
               </div>
             </div>
@@ -151,21 +167,35 @@
           id="lpMobileNav"
           aria-label="Mobile navigation"
         >
-          <a
-            href="#"
-            onclick="
-              load_page('manual_introduction');
-              return false;
-            "
-            >Documentation</a
+          <a href="./manual_introduction.html">Documentation: User Manual</a>
+          <a href="#" data-disabled="true" class="lp-mobile-coming-item"
+            >Documentation: Main
+            <span class="lp-nav-coming-badge">comming soon</span></a
+          >
+          <a href="#" data-disabled="true" class="lp-mobile-coming-item"
+            >Documentation: Reports
+            <span class="lp-nav-coming-badge">comming soon</span></a
+          >
+          <a href="#" data-disabled="true" class="lp-mobile-coming-item"
+            >Documentation: Together
+            <span class="lp-nav-coming-badge">comming soon</span></a
           >
           <a
             href="./tutorials/user_manual.html"
             >Tutorials: User Manual</a
           >
-          <a href="./tutorials/main.html">Tutorials: Main</a>
-          <a href="./tutorials/reports.html">Tutorials: Reports</a>
-          <a href="./tutorials/together.html">Tutorials: Together</a>
+          <a href="#" data-disabled="true" class="lp-mobile-coming-item"
+            >Tutorials: Main
+            <span class="lp-nav-coming-badge">comming soon</span></a
+          >
+          <a href="#" data-disabled="true" class="lp-mobile-coming-item"
+            >Tutorials: Reports
+            <span class="lp-nav-coming-badge">comming soon</span></a
+          >
+          <a href="#" data-disabled="true" class="lp-mobile-coming-item"
+            >Tutorials: Together
+            <span class="lp-nav-coming-badge">comming soon</span></a
+          >
           <a
             href="#"
             onclick="

@@ -92,7 +92,7 @@ body {
 }
 
 .lp-navbar-logo img {
-  width: 142px;
+  width: 170px;
   height: auto;
 }
 
@@ -177,6 +177,31 @@ body {
   border-radius: 10px;
   padding: 10px 12px;
   font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.lp-nav-coming-item,
+.lp-mobile-coming-item {
+  cursor: not-allowed;
+  opacity: 0.92;
+}
+
+.lp-nav-coming-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: lowercase;
+  color: #92400e;
+  background: #fef3c7;
+  border: 1px solid #fde68a;
+  white-space: nowrap;
 }
 
 .lp-navbar-actions {
@@ -967,7 +992,7 @@ body {
   }
 
   .lp-navbar-logo img {
-    width: 124px;
+    width: 170x;
   }
 
   .lp-hero {
