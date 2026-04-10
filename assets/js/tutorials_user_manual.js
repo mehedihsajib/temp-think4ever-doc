@@ -8,6 +8,22 @@
     "manual_business_flow",
   ];
 
+  // Curated titles per source page/video position to avoid generic labels.
+  const curatedVideoTitles = {
+    manual_introduction: [
+      "Think4ever User Manual Overview",
+    ],
+    manual_key_features: [
+      "Key Features Walkthrough",
+    ],
+    manual_create_project: [
+      "How to Create a New Project",
+    ],
+    manual_business_flow: [
+      "Business Flow Mapping Tutorial",
+    ],
+  };
+
   const fallbackVideos = [
     {
       id: "CQpIODqNFek",
@@ -56,8 +72,16 @@
     const sourceHref = "../" + item.pageId + ".html";
 
     return (
-      '<article class="tut-card">' +
-      '<div class="tut-card-cover">' +
+      '<article class="tut-card" data-video-id="' +
+      item.id +
+      '" data-video-title="' +
+      escapeHtml(item.videoTitle) +
+      '" data-page-id="' +
+      item.pageId +
+      '">' +
+      '<div class="tut-card-cover" role="button" tabindex="0" aria-label="Play ' +
+      escapeHtml(item.videoTitle) +
+      '">' +
       '<img src="' +
       thumb +
       '" alt="' +
@@ -151,12 +175,35 @@
 
     if (tutorialGrid) {
       tutorialGrid.addEventListener("click", function (event) {
-        const btn = event.target.closest(".tut-card-btn");
-        if (!btn) return;
+        const trigger = event.target.closest(
+          ".tut-card-btn, .tut-card-cover, .tut-play-pill, .tut-card-cover img"
+        );
+        if (!trigger) return;
 
-        const videoId = btn.getAttribute("data-video-id");
-        const videoTitle = btn.getAttribute("data-video-title");
-        const pageId = btn.getAttribute("data-page-id");
+        const card = event.target.closest(".tut-card");
+        if (!card) return;
+
+        const videoId = card.getAttribute("data-video-id");
+        const videoTitle = card.getAttribute("data-video-title");
+        const pageId = card.getAttribute("data-page-id");
+        if (!videoId || !pageId) return;
+
+        openVideoModal(videoId, videoTitle || "Tutorial Video", pageId);
+      });
+
+      tutorialGrid.addEventListener("keydown", function (event) {
+        const cover = event.target.closest(".tut-card-cover");
+        if (!cover) return;
+
+        if (event.key !== "Enter" && event.key !== " ") return;
+        event.preventDefault();
+
+        const card = cover.closest(".tut-card");
+        if (!card) return;
+
+        const videoId = card.getAttribute("data-video-id");
+        const videoTitle = card.getAttribute("data-video-title");
+        const pageId = card.getAttribute("data-page-id");
         if (!videoId || !pageId) return;
 
         openVideoModal(videoId, videoTitle || "Tutorial Video", pageId);
@@ -178,11 +225,13 @@
 
   function normalizeTutorials(items) {
     return items.map(function (item, index) {
+      const byPage = curatedVideoTitles[item.pageId] || [];
+      const curated = byPage[index];
       return {
         id: item.id,
         pageId: item.pageId,
         pageTitle: item.pageTitle,
-        videoTitle: item.pageTitle + " Tutorial " + (index + 1),
+        videoTitle: curated || item.pageTitle + " Walkthrough",
       };
     });
   }
@@ -205,11 +254,14 @@
           const id = videoEl.getAttribute("data-video-id");
           if (!id) return;
 
+          const byPage = curatedVideoTitles[pageId] || [];
+          const curated = byPage[idx];
+
           loaded.push({
             id: id,
             pageId: pageId,
             pageTitle: pageTitle,
-            videoTitle: pageTitle + " Tutorial " + (idx + 1),
+            videoTitle: curated || pageTitle + " Walkthrough",
           });
         });
       } catch (err) {

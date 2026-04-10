@@ -76,6 +76,7 @@ body {
 }
 
 .tut-main {
+  padding-top: 84px;
   padding-bottom: 52px;
 }
 
@@ -368,6 +369,10 @@ body {
 
   .tut-grid {
     grid-template-columns: 1fr;
+  }
+
+  .tut-main {
+    padding-top: 96px;
   }
 
   .tut-modal {

@@ -3,8 +3,14 @@
 // ===============================
 function load_page(pageId) {
   localStorage.setItem("currentPage", pageId);
+  const prefix = getPathPrefix();
+  window.location.href = prefix + pageId + ".html";
+}
 
-  window.location.href = pageId + ".html";
+function getPathPrefix() {
+  const segments = window.location.pathname.split("/").filter(Boolean);
+  if (segments.length <= 1) return "./";
+  return "../".repeat(segments.length - 1);
 }
 
 // ===============================
@@ -56,14 +62,28 @@ function loadComponent({ id, url, onLoaded }) {
 // ===============================
 function setHeaderActive(container, activePage) {
   const links = container.querySelectorAll(".modern-nav a");
+  const pathname = window.location.pathname;
+  const groups = container.querySelectorAll(".modern-nav-group");
+
+  groups.forEach((group) => group.classList.remove("active"));
 
   links.forEach((link) => {
     link.classList.remove("active");
 
-    const page = link.getAttribute("onclick")?.match(/'(.*?)'/)?.[1];
+    const onclickPage = link.getAttribute("onclick")?.match(/'(.*?)'/)?.[1];
+    const dataTarget = link.getAttribute("data-target");
+    const dataPath = link.getAttribute("data-path");
 
-    if (page === activePage) {
+    const isActiveOnclick = onclickPage && onclickPage === activePage;
+    const isActiveTarget = dataTarget && pathname.endsWith("/" + dataTarget);
+    const isActivePath = dataPath && pathname.endsWith(dataPath);
+
+    if (isActiveOnclick || isActiveTarget || isActivePath) {
       link.classList.add("active");
+      const parentGroup = link.closest(".modern-nav-group");
+      if (parentGroup) {
+        parentGroup.classList.add("active");
+      }
     }
   });
 }
@@ -193,6 +213,98 @@ function initMobileMenu() {
       overlay.classList.remove("open");
       toggle.innerHTML = '<i class="fa fa-bars"></i>';
       toggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}
+
+function initHeaderNavDropdowns() {
+  const nav = document.querySelector(".modern-nav");
+  const prefix = getPathPrefix();
+
+  document.querySelectorAll("[data-asset-src]").forEach((el) => {
+    const assetSrc = el.getAttribute("data-asset-src");
+    if (!assetSrc) return;
+    el.setAttribute("src", prefix + assetSrc);
+  });
+
+  if (!nav) return;
+
+  const groups = nav.querySelectorAll("[data-nav-group]");
+  if (!groups.length) return;
+
+  // Resolve shared header links for both root and nested pages.
+  nav.querySelectorAll("[data-target]").forEach((link) => {
+    const target = link.getAttribute("data-target");
+    if (!target) return;
+    link.setAttribute("href", prefix + target);
+  });
+
+  nav.querySelectorAll("[data-disabled='true']").forEach((link) => {
+    if (link.dataset.boundDisabled === "true") return;
+    link.dataset.boundDisabled = "true";
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+    });
+  });
+
+  function closeAllGroups() {
+    groups.forEach((group) => {
+      group.classList.remove("open");
+      const trigger = group.querySelector(".modern-nav-group-trigger");
+      if (trigger) {
+        trigger.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  groups.forEach((group) => {
+    const trigger = group.querySelector(".modern-nav-group-trigger");
+    if (!trigger || trigger.dataset.bound === "true") return;
+
+    trigger.dataset.bound = "true";
+    trigger.addEventListener("click", function (event) {
+      event.stopPropagation();
+      const willOpen = !group.classList.contains("open");
+      closeAllGroups();
+      group.classList.toggle("open", willOpen);
+      trigger.setAttribute("aria-expanded", String(willOpen));
+    });
+  });
+
+  document.addEventListener("click", function (event) {
+    if (!event.target.closest(".modern-nav-group")) {
+      closeAllGroups();
+    }
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closeAllGroups();
+    }
+  });
+
+  // Mobile nav: close drawer when a real navigation link is clicked.
+  nav.querySelectorAll("a").forEach((link) => {
+    if (link.dataset.boundNavLink === "true") return;
+    link.dataset.boundNavLink = "true";
+
+    link.addEventListener("click", function (event) {
+      if (this.getAttribute("data-disabled") === "true") {
+        event.preventDefault();
+        return;
+      }
+
+      const mobileNavOpen = nav.classList.contains("open");
+      if (!mobileNavOpen) return;
+
+      const toggle = document.getElementById("mobileMenuToggle");
+      const overlay = document.getElementById("mobileMenuOverlay");
+      nav.classList.remove("open");
+      if (overlay) overlay.classList.remove("open");
+      if (toggle) {
+        toggle.innerHTML = '<i class="fa fa-bars"></i>';
+        toggle.setAttribute("aria-expanded", "false");
+      }
     });
   });
 }
@@ -342,15 +454,17 @@ document.addEventListener("DOMContentLoaded", initGlobalImageLightbox);
 // ===============================
 document.addEventListener("DOMContentLoaded", function () {
   const currentPage = getCurrentPage();
+  const pathPrefix = getPathPrefix();
 
   // -------- Header --------
   loadComponent({
     id: "consumerHeader",
-    url: "./components/doc-header.html",
+    url: pathPrefix + "components/doc-header.html",
     onLoaded: (el) => {
       setHeaderActive(el, currentPage);
       if (window.I18n) window.I18n.applyToDOM(el);
       initMobileMenu();
+      initHeaderNavDropdowns();
     },
   });
 
@@ -358,7 +472,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   loadComponent({
     id: "docFooter",
-    url: "./components/doc-footer.html",
+    url: pathPrefix + "components/doc-footer.html",
     onLoaded: (el) => {
       if (window.I18n) window.I18n.applyToDOM(el);
     },
@@ -367,7 +481,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // -------- Sidebar --------
   loadComponent({
     id: "consumerSidebar",
-    url: "./components/user-manual-sidebar.html",
+    url: pathPrefix + "components/user-manual-sidebar.html",
     onLoaded: (el) => {
       setSidebarActive(el, currentPage);
       attachSidebarClickHandler(el);
@@ -382,7 +496,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   loadComponent({
     id: "merchantSidebar",
-    url: "./components/merchant-sidebar.html",
+    url: pathPrefix + "components/merchant-sidebar.html",
     onLoaded: (el) => {
       setSidebarActive(el, currentPage);
       attachSidebarClickHandler(el);
