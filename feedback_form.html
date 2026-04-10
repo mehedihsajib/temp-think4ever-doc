@@ -48,10 +48,10 @@
             <div class="page-icon" aria-hidden="true">
               <i class="fa fa-comment-dots"></i>
             </div>
-            <h1 id="ff_title" data-i18n="feedback.title">Send Us Feedback</h1>
-            <p id="ff_description" data-i18n="feedback.description">
-              We value your feedback. Let us know how we can improve mPay
-              Network Wallet.
+            <h1 id="ff_title">Send Us Feedback</h1>
+            <p id="ff_description">
+              We value your feedback. Let us know how we can improve
+              Think4Ever AI Platform.
             </p>
           </div>
           <!-- Quick Category Type Selector -->
@@ -124,40 +124,13 @@
                     value=""
                     disabled
                     selected
-                    data-i18n="feedback.form.category_placeholder"
                   >
                     Select a category...
                   </option>
-                  <option
-                    value="bug_report"
-                    data-i18n="feedback.form.category_bug"
-                  >
-                    Bug Report
-                  </option>
-                  <option
-                    value="feature_request"
-                    data-i18n="feedback.form.category_feature"
-                  >
-                    Feature Request
-                  </option>
-                  <option
-                    value="general"
-                    data-i18n="feedback.form.category_general"
-                  >
-                    General Feedback
-                  </option>
-                  <option
-                    value="merchant_wallet"
-                    data-i18n="feedback.form.category_merchant"
-                  >
-                    Merchant Wallet
-                  </option>
-                  <option
-                    value="consumer_wallet"
-                    data-i18n="feedback.form.category_consumer"
-                  >
-                    Consumer Wallet
-                  </option>
+                  <option value="user_manual">User Manual</option>
+                  <option value="main">Main</option>
+                  <option value="reports">Reports</option>
+                  <option value="together">Together</option>
                 </select>
                 <div
                   id="ff_category_error"
@@ -170,20 +143,17 @@
               <div class="form-row">
                 <div class="form-group">
                   <label for="ff_name" class="form-label"
-                    ><span data-i18n="feedback.form.name_label">Name</span>
-                    <span
-                      class="optional"
-                      data-i18n="feedback.form.name_optional"
-                      >(optional)</span
-                    >
+                    ><span>Name</span>
+                    <span class="required" aria-hidden="true">*</span>
                   </label>
                   <input
                     type="text"
                     id="ff_name"
                     class="form-input"
-                    data-i18n-attr="placeholder:feedback.form.name_placeholder"
                     placeholder="Your name"
                     autocomplete="name"
+                    required
+                    aria-required="true"
                   />
                   <div
                     id="ff_name_error"
@@ -194,20 +164,17 @@
                 </div>
                 <div class="form-group">
                   <label for="ff_email" class="form-label"
-                    ><span data-i18n="feedback.form.email_label">Email</span>
-                    <span
-                      class="optional"
-                      data-i18n="feedback.form.email_optional"
-                      >(optional)</span
-                    >
+                    ><span>Email</span>
+                    <span class="required" aria-hidden="true">*</span>
                   </label>
                   <input
                     type="email"
                     id="ff_email"
                     class="form-input"
-                    data-i18n-attr="placeholder:feedback.form.email_placeholder"
                     placeholder="your@email.com"
                     autocomplete="email"
+                    required
+                    aria-required="true"
                   />
                   <div
                     id="ff_email_error"
@@ -351,10 +318,9 @@
             <!-- Info Callout -->
             <div class="feedback-info-callout">
               <i class="fa fa-circle-info" aria-hidden="true"></i>
-              <p data-i18n="feedback.info_callout">
-                Your feedback helps us improve MPay Network Wallet for everyone.
-                All submissions are reviewed by our team. For urgent issues,
-                please contact <strong>support@mpaynetwork.com</strong>.
+              <p>
+                Your feedback helps us improve Think4Ever AI Platform for every
+                documentation user. All submissions are reviewed by our team.
               </p>
             </div>
           </div>

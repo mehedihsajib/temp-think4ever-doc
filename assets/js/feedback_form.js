@@ -27,11 +27,9 @@
 
   // Category map from type cards
   const categoryMap = {
-    'bug_report': 'Bug Report',
-    'feature_request': 'Feature Request',
-    'general': 'General',
-    'merchant_wallet': 'Merchant Wallet',
-    'consumer_wallet': 'Consumer Wallet'
+    'bug_report': 'user_manual',
+    'feature_request': 'main',
+    'general': 'reports'
   };
 
   // Header scroll shadow
@@ -54,7 +52,7 @@
       card.setAttribute('aria-checked', 'true');
       selectedCategory = card.dataset.category;
       if (categorySelect) {
-        categorySelect.value = selectedCategory;
+        categorySelect.value = categoryMap[selectedCategory] || selectedCategory;
         clearError('ff_category');
       }
     });
@@ -72,7 +70,8 @@
     categorySelect.addEventListener('change', function() {
       selectedCategory = this.value;
       typeCards.forEach(function(card) {
-        if (card.dataset.category === selectedCategory) {
+        const mappedCategory = categoryMap[card.dataset.category] || card.dataset.category;
+        if (mappedCategory === selectedCategory) {
           card.classList.add('active');
           card.setAttribute('aria-checked', 'true');
         } else {
@@ -189,6 +188,12 @@
     });
   }
 
+  if (nameInput) {
+    nameInput.addEventListener('input', function() {
+      if (nameInput.value.trim()) clearError('ff_name');
+    });
+  }
+
   // Validation helpers
   function showError(fieldId, message) {
     var input = document.getElementById(fieldId);
@@ -212,7 +217,6 @@
   }
 
   function validateEmail(email) {
-    if (!email) return true; // optional
     var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
   }
@@ -247,8 +251,19 @@
       clearError('ff_message');
     }
 
-    // Email (optional but if provided must be valid)
-    if (emailInput.value.trim() && !validateEmail(emailInput.value.trim())) {
+    // Name (required)
+    if (!nameInput.value.trim()) {
+      showError('ff_name', 'Name is required.');
+      isValid = false;
+    } else {
+      clearError('ff_name');
+    }
+
+    // Email (required and must be valid)
+    if (!emailInput.value.trim()) {
+      showError('ff_email', 'Email is required.');
+      isValid = false;
+    } else if (!validateEmail(emailInput.value.trim())) {
       showError('ff_email', 'Please enter a valid email address.');
       isValid = false;
     } else {

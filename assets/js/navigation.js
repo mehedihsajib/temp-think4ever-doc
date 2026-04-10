@@ -3,14 +3,43 @@
 // ===============================
 function load_page(pageId) {
   localStorage.setItem("currentPage", pageId);
-  const prefix = getPathPrefix();
-  window.location.href = prefix + pageId + ".html";
+  window.location.href = toBasePath(pageId + ".html");
 }
 
-function getPathPrefix() {
-  const segments = window.location.pathname.split("/").filter(Boolean);
-  if (segments.length <= 1) return "./";
-  return "../".repeat(segments.length - 1);
+function getSiteBasePath() {
+  const navScript = document.querySelector("script[src*='assets/js/navigation.js']");
+
+  if (navScript) {
+    const rawSrc = navScript.getAttribute("src") || "";
+    try {
+      const resolved = new URL(rawSrc, window.location.href);
+      const marker = "/assets/js/navigation.js";
+      const idx = resolved.pathname.lastIndexOf(marker);
+
+      if (idx !== -1) {
+        const base = resolved.pathname.slice(0, idx + 1);
+        if (base) return base;
+      }
+    } catch (error) {
+      console.warn("Unable to resolve base path from navigation script:", error);
+    }
+  }
+
+  const pathname = window.location.pathname || "/";
+  if (pathname.includes("/docs/")) {
+    return pathname.slice(0, pathname.indexOf("/docs/") + "/docs/".length);
+  }
+
+  if (pathname === "/") return "/";
+
+  const lastSlash = pathname.lastIndexOf("/");
+  return pathname.slice(0, lastSlash + 1) || "/";
+}
+
+function toBasePath(path) {
+  const base = getSiteBasePath();
+  const cleanPath = String(path || "").replace(/^\.?\//, "");
+  return base + cleanPath;
 }
 
 // ===============================
@@ -126,9 +155,28 @@ function attachSidebarClickHandler(container) {
 // ===============================
 function initSidebarToggle() {
   console.log("sidebar toglled...");
-  const sidebarToggle = document.getElementById("cgsSidebarToggle");
-  const overlay = document.getElementById("cgsSidebarOverlay");
   const sidebar = document.getElementById("cgsSidebar");
+  let sidebarToggle = document.getElementById("cgsSidebarToggle");
+  let overlay = document.getElementById("cgsSidebarOverlay");
+
+  // Some documentation pages do not include toggle/overlay markup.
+  // Create the shared controls dynamically so mobile sidebar works everywhere.
+  if (sidebar && !sidebarToggle) {
+    sidebarToggle = document.createElement("button");
+    sidebarToggle.className = "cgs-sidebar-toggle";
+    sidebarToggle.id = "cgsSidebarToggle";
+    sidebarToggle.setAttribute("aria-label", "Toggle navigation menu");
+    sidebarToggle.setAttribute("aria-expanded", "false");
+    sidebarToggle.innerHTML = '<i class="fa fa-bars"></i>';
+    document.body.appendChild(sidebarToggle);
+  }
+
+  if (sidebar && !overlay) {
+    overlay = document.createElement("div");
+    overlay.className = "cgs-sidebar-overlay";
+    overlay.id = "cgsSidebarOverlay";
+    document.body.appendChild(overlay);
+  }
 
   if (!sidebarToggle || !overlay || !sidebar) {
     console.warn("Sidebar toggle init failed:", {
@@ -219,12 +267,11 @@ function initMobileMenu() {
 
 function initHeaderNavDropdowns() {
   const nav = document.querySelector(".modern-nav");
-  const prefix = getPathPrefix();
 
   document.querySelectorAll("[data-asset-src]").forEach((el) => {
     const assetSrc = el.getAttribute("data-asset-src");
     if (!assetSrc) return;
-    el.setAttribute("src", prefix + assetSrc);
+    el.setAttribute("src", toBasePath(assetSrc));
   });
 
   if (!nav) return;
@@ -236,7 +283,7 @@ function initHeaderNavDropdowns() {
   nav.querySelectorAll("[data-target]").forEach((link) => {
     const target = link.getAttribute("data-target");
     if (!target) return;
-    link.setAttribute("href", prefix + target);
+    link.setAttribute("href", toBasePath(target));
   });
 
   nav.querySelectorAll("[data-disabled='true']").forEach((link) => {
@@ -454,12 +501,11 @@ document.addEventListener("DOMContentLoaded", initGlobalImageLightbox);
 // ===============================
 document.addEventListener("DOMContentLoaded", function () {
   const currentPage = getCurrentPage();
-  const pathPrefix = getPathPrefix();
 
   // -------- Header --------
   loadComponent({
     id: "consumerHeader",
-    url: pathPrefix + "components/doc-header.html",
+    url: toBasePath("components/doc-header.html"),
     onLoaded: (el) => {
       setHeaderActive(el, currentPage);
       if (window.I18n) window.I18n.applyToDOM(el);
@@ -472,7 +518,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   loadComponent({
     id: "docFooter",
-    url: pathPrefix + "components/doc-footer.html",
+    url: toBasePath("components/doc-footer.html"),
     onLoaded: (el) => {
       if (window.I18n) window.I18n.applyToDOM(el);
     },
@@ -481,7 +527,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // -------- Sidebar --------
   loadComponent({
     id: "consumerSidebar",
-    url: pathPrefix + "components/user-manual-sidebar.html",
+    url: toBasePath("components/user-manual-sidebar.html"),
     onLoaded: (el) => {
       setSidebarActive(el, currentPage);
       attachSidebarClickHandler(el);
@@ -496,7 +542,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   loadComponent({
     id: "merchantSidebar",
-    url: pathPrefix + "components/merchant-sidebar.html",
+    url: toBasePath("components/merchant-sidebar.html"),
     onLoaded: (el) => {
       setSidebarActive(el, currentPage);
       attachSidebarClickHandler(el);
