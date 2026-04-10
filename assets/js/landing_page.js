@@ -11,6 +11,7 @@
   const searchEsc = document.querySelector(".lp-search-esc");
   const searchResults = document.querySelector(".lp-search-results");
   const dropdowns = document.querySelectorAll(".lp-dropdown");
+  const navDropdowns = document.querySelectorAll(".lp-nav-dropdown");
 
   const searchIndex = [
     {
@@ -175,6 +176,30 @@
       page: "feedback_form",
       keywords: ["feedback", "contact", "request", "suggestions"],
     },
+    {
+      title: "Tutorials - User Manual",
+      desc: "Watch all available user manual walkthrough videos in one place.",
+      page: "tutorials/user_manual",
+      keywords: ["tutorials", "videos", "user manual", "walkthroughs"],
+    },
+    {
+      title: "Tutorials - Main",
+      desc: "Tutorial landing page for Main tutorials.",
+      page: "tutorials/main",
+      keywords: ["tutorials", "main"],
+    },
+    {
+      title: "Tutorials - Reports",
+      desc: "Tutorial landing page for Reports tutorials.",
+      page: "tutorials/reports",
+      keywords: ["tutorials", "reports"],
+    },
+    {
+      title: "Tutorials - Together",
+      desc: "Tutorial landing page for Together tutorials.",
+      page: "tutorials/together",
+      keywords: ["tutorials", "together"],
+    },
   ];
 
   function syncScrollState() {
@@ -204,6 +229,16 @@
     dropdowns.forEach(function (dropdown) {
       dropdown.classList.remove("open");
       const trigger = dropdown.querySelector(".lp-dropdown-trigger");
+      if (trigger) {
+        trigger.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  function closeNavDropdowns() {
+    navDropdowns.forEach(function (dropdown) {
+      dropdown.classList.remove("open");
+      const trigger = dropdown.querySelector(".lp-nav-dropdown-trigger");
       if (trigger) {
         trigger.setAttribute("aria-expanded", "false");
       }
@@ -321,6 +356,19 @@
     });
   });
 
+  navDropdowns.forEach(function (dropdown) {
+    const trigger = dropdown.querySelector(".lp-nav-dropdown-trigger");
+    if (!trigger) return;
+
+    trigger.addEventListener("click", function (event) {
+      event.stopPropagation();
+      const willOpen = !dropdown.classList.contains("open");
+      closeNavDropdowns();
+      dropdown.classList.toggle("open", willOpen);
+      trigger.setAttribute("aria-expanded", String(willOpen));
+    });
+  });
+
   if (searchTrigger) {
     searchTrigger.addEventListener("click", openSearch);
   }
@@ -349,7 +397,9 @@
       if (!item) return;
       const page = item.getAttribute("data-page");
       closeSearch();
-      if (page && typeof load_page === "function") {
+      if (page && page.startsWith("tutorials/")) {
+        window.location.href = page + ".html";
+      } else if (page && typeof load_page === "function") {
         load_page(page);
       }
     });
@@ -362,7 +412,9 @@
         event.preventDefault();
         const page = item.getAttribute("data-page");
         closeSearch();
-        if (page && typeof load_page === "function") {
+        if (page && page.startsWith("tutorials/")) {
+          window.location.href = page + ".html";
+        } else if (page && typeof load_page === "function") {
           load_page(page);
         }
       }
@@ -401,6 +453,10 @@
     if (!event.target.closest(".lp-dropdown")) {
       closeDropdowns();
     }
+
+    if (!event.target.closest(".lp-nav-dropdown")) {
+      closeNavDropdowns();
+    }
   });
 
   document.addEventListener("keydown", function (event) {
@@ -416,6 +472,7 @@
     if (event.key === "Escape") {
       closeSearch();
       closeDropdowns();
+      closeNavDropdowns();
       closeMobileNav();
     }
   });
