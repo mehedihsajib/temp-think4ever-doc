@@ -3581,10 +3581,10 @@ body {
 .modern-header-content {
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr auto 1fr;
+  /* grid-template-columns: 1fr auto 1fr; */
   flex: 1;
   gap: 40px;
-  padding: 0 24px 0 40px;
+  /* padding: 0 24px 0 40px; */
   height: 100%;
   min-width: 0;
 }
