@@ -6,7 +6,10 @@
   let selectedCategory = '';
   let selectedRating = 0;
   let hoveredRating = 0;
+  let selectedFiles = [];
   const MAX_MESSAGE_LENGTH = 2000;
+  const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
+  const MAX_FILES = 5;
 
   // DOM references
   const header = document.querySelector('.feedback-header');
@@ -24,6 +27,10 @@
   const ratingText = document.querySelector('.star-rating-text');
   const charCounter = document.querySelector('.char-counter');
   const typeSelectorSection = document.querySelector('.feedback-type-selector');
+
+  const fileInput = document.getElementById('ff_files');
+  const dropZone = document.getElementById('ff_drop_zone');
+  const fileList = document.getElementById('ff_file_list');
 
   // Category map from type cards
   const categoryMap = {
@@ -175,6 +182,151 @@
     });
   }
 
+  // File Upload Logic
+  if (dropZone && fileInput) {
+    // Click to browse
+    dropZone.addEventListener('click', function() {
+      fileInput.click();
+    });
+
+    // Accessibility: Enter/Space to browse
+    dropZone.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        fileInput.click();
+      }
+    });
+
+    // Drag and Drop events
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+      dropZone.addEventListener(eventName, preventDefaults, false);
+    });
+
+    function preventDefaults(e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
+    ['dragenter', 'dragover'].forEach(eventName => {
+      dropZone.addEventListener(eventName, () => {
+        dropZone.classList.add('dragging');
+      }, false);
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+      dropZone.addEventListener(eventName, () => {
+        dropZone.classList.remove('dragging');
+      }, false);
+    });
+
+    dropZone.addEventListener('drop', handleDrop, false);
+
+    function handleDrop(e) {
+      const dt = e.dataTransfer;
+      const files = dt.files;
+      handleFiles(files);
+    }
+
+    fileInput.addEventListener('change', function() {
+      handleFiles(this.files);
+    });
+
+    function handleFiles(files) {
+      const newFiles = [...files];
+      
+      // Limit number of files
+      if (selectedFiles.length + newFiles.length > MAX_FILES) {
+        alert('You can only upload up to ' + MAX_FILES + ' files.');
+        return;
+      }
+
+      newFiles.forEach(file => {
+        // Check size
+        if (file.size > MAX_FILE_SIZE) {
+          alert('File "' + file.name + '" is too large. Max size is 5MB.');
+          return;
+        }
+        
+        // Avoid duplicates (by name and size for simplicity)
+        const isDuplicate = selectedFiles.some(f => f.name === file.name && f.size === file.size);
+        if (!isDuplicate) {
+          selectedFiles.push(file);
+        }
+      });
+
+      renderFileList();
+    }
+
+    function renderFileList() {
+      if (!fileList) return;
+      
+      if (selectedFiles.length === 0) {
+        fileList.innerHTML = '';
+        return;
+      }
+
+      fileList.innerHTML = selectedFiles.map((file, index) => {
+        const size = formatBytes(file.size);
+        const icon = getFileIcon(file.name);
+        return `
+          <div class="file-item">
+            <div class="file-icon"><i class="${icon}"></i></div>
+            <div class="file-info">
+              <span class="file-name" title="${escapeHtml(file.name)}">${escapeHtml(file.name)}</span>
+              <span class="file-size">${size}</span>
+            </div>
+            <button type="button" class="file-remove" data-index="${index}" aria-label="Remove ${escapeHtml(file.name)}">
+              <i class="fa fa-times"></i>
+            </button>
+          </div>
+        `;
+      }).join('');
+
+      // Bind remove buttons
+      fileList.querySelectorAll('.file-remove').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const index = parseInt(this.dataset.index);
+          selectedFiles.splice(index, 1);
+          renderFileList();
+        });
+      });
+    }
+
+    function formatBytes(bytes, decimals = 1) {
+      if (bytes === 0) return '0 Bytes';
+      const k = 1024;
+      const dm = decimals < 0 ? 0 : decimals;
+      const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+      const i = Math.floor(Math.log(bytes) / Math.log(k));
+      return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+    }
+
+    function getFileIcon(filename) {
+      const ext = filename.split('.').pop().toLowerCase();
+      const iconMap = {
+        'pdf': 'fa-regular fa-file-pdf',
+        'doc': 'fa-regular fa-file-word',
+        'docx': 'fa-regular fa-file-word',
+        'xls': 'fa-regular fa-file-excel',
+        'xlsx': 'fa-regular fa-file-excel',
+        'png': 'fa-regular fa-file-image',
+        'jpg': 'fa-regular fa-file-image',
+        'jpeg': 'fa-regular fa-file-image',
+        'gif': 'fa-regular fa-file-image',
+        'zip': 'fa-regular fa-file-archive',
+        'rar': 'fa-regular fa-file-archive'
+      };
+      return iconMap[ext] || 'fa-regular fa-file';
+    }
+  }
+
+  function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
   // Clear error on input
   if (subjectInput) {
     subjectInput.addEventListener('input', function() {
@@ -296,6 +448,7 @@
         subject: subjectInput.value.trim(),
         message: messageTextarea.value.trim(),
         rating: selectedRating || null,
+        attachments: selectedFiles.map(f => ({ name: f.name, size: f.size, type: f.type })),
         submitted_at: new Date().toISOString()
       };
 
@@ -338,6 +491,11 @@
         charCounter.textContent = '0 / ' + MAX_MESSAGE_LENGTH;
         charCounter.classList.remove('warning', 'danger');
       }
+
+      // Reset files
+      selectedFiles = [];
+      if (fileList) fileList.innerHTML = '';
+      if (fileInput) fileInput.value = '';
 
       // Show form, hide success
       if (formCard) formCard.style.display = '';

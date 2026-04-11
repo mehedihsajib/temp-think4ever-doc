@@ -50,8 +50,8 @@
             </div>
             <h1 id="ff_title">Send Us Feedback</h1>
             <p id="ff_description">
-              We value your feedback. Let us know how we can improve
-              Think4Ever AI Platform.
+              We value your feedback. Let us know how we can improve Think4Ever
+              AI Platform.
             </p>
           </div>
           <!-- Quick Category Type Selector -->
@@ -120,17 +120,13 @@
                   required
                   aria-required="true"
                 >
-                  <option
-                    value=""
-                    disabled
-                    selected
-                  >
+                  <option value="" disabled selected>
                     Select a category...
                   </option>
-                  <option value="user_manual">User Manual</option>
-                  <option value="main">Main</option>
-                  <option value="reports">Reports</option>
-                  <option value="together">Together</option>
+                  <option value="user_manual">Think4ever Dev</option>
+                  <!-- <option value="main">Main</option>
+                  <option value="reports">Reports</option> -->
+                  <option value="together">Think Together</option>
                 </select>
                 <div
                   id="ff_category_error"
@@ -233,6 +229,39 @@
                   role="alert"
                   aria-live="polite"
                 ></div>
+              </div>
+              <!-- File Upload -->
+              <div class="form-group">
+                <label class="form-label" id="uploadLabel">
+                  <span>Attachments</span>
+                  <span class="optional">(optional)</span>
+                </label>
+                <div class="upload-container">
+                  <div
+                    class="upload-drop-zone"
+                    id="ff_drop_zone"
+                    role="button"
+                    tabindex="0"
+                    aria-labelledby="uploadLabel"
+                  >
+                    <input
+                      type="file"
+                      id="ff_files"
+                      multiple
+                      hidden
+                      aria-hidden="true"
+                    />
+                    <div class="upload-icon">
+                      <i class="fa fa-cloud-upload-alt"></i>
+                    </div>
+                    <div class="upload-text">
+                      <span class="upload-link">Click to upload</span> or drag
+                      and drop
+                    </div>
+                    <div class="upload-hint">Up to 5 files (Max 5MB each)</div>
+                  </div>
+                  <div id="ff_file_list" class="file-list"></div>
+                </div>
               </div>
               <!-- Star Rating -->
               <div class="form-group star-rating-group">

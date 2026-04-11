@@ -10,18 +10,10 @@
 
   // Curated titles per source page/video position to avoid generic labels.
   const curatedVideoTitles = {
-    manual_introduction: [
-      "Think4ever User Manual Overview",
-    ],
-    manual_key_features: [
-      "Key Features Walkthrough",
-    ],
-    manual_create_project: [
-      "How to Create a New Project",
-    ],
-    manual_business_flow: [
-      "Business Flow Mapping Tutorial",
-    ],
+    manual_introduction: ["Think4ever User Manual Overview"],
+    manual_key_features: ["Key Features Walkthrough"],
+    manual_create_project: ["How to Create a New Project"],
+    manual_business_flow: ["Business Flow Mapping Tutorial"],
   };
 
   const fallbackVideos = [
@@ -87,7 +79,7 @@
       '" alt="' +
       escapeHtml(item.pageTitle) +
       ' tutorial thumbnail" loading="lazy" />' +
-      '<span class="tut-play-pill"><i class="fa-solid fa-circle-play"></i> Play</span>' +
+      '<span class="tut-play-pill"><i class="fa-solid fa-play"></i></span>' +
       "</div>" +
       '<div class="tut-card-body">' +
       '<p class="tut-card-page">' +
@@ -96,16 +88,9 @@
       '<h3 class="tut-card-title">' +
       escapeHtml(item.videoTitle) +
       "</h3>" +
-      '<button type="button" class="tut-card-btn" data-video-id="' +
-      item.id +
-      '" data-video-title="' +
-      escapeHtml(item.videoTitle) +
-      '" data-page-id="' +
-      item.pageId +
-      '">Watch Tutorial</button>' +
       '<a class="tut-source-link" href="' +
       sourceHref +
-      '">Open source page</a>' +
+      '"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>' +
       "</div>" +
       "</article>"
     );
@@ -130,7 +115,12 @@
   }
 
   function openVideoModal(videoId, title, pageId) {
-    if (!videoModal || !videoPlayerFrame || !videoModalTitle || !videoSourceLink) {
+    if (
+      !videoModal ||
+      !videoPlayerFrame ||
+      !videoModalTitle ||
+      !videoSourceLink
+    ) {
       return;
     }
 
@@ -176,7 +166,7 @@
     if (tutorialGrid) {
       tutorialGrid.addEventListener("click", function (event) {
         const trigger = event.target.closest(
-          ".tut-card-btn, .tut-card-cover, .tut-play-pill, .tut-card-cover img"
+          ".tut-card-cover, .tut-play-pill, .tut-card-cover img",
         );
         if (!trigger) return;
 
@@ -282,7 +272,9 @@
     bindEvents();
 
     const dynamicTutorials = await loadTutorialsFromManualPages();
-    tutorials = dynamicTutorials.length ? dynamicTutorials : normalizeTutorials(fallbackVideos);
+    tutorials = dynamicTutorials.length
+      ? dynamicTutorials
+      : normalizeTutorials(fallbackVideos);
 
     updateCount(tutorials.length);
     renderCards(tutorials);

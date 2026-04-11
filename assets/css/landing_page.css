@@ -175,7 +175,7 @@ body {
 
 .lp-nav-dropdown-menu a {
   border-radius: 10px;
-  padding: 10px 12px;
+  padding: 10px 8px;
   font-size: 0.88rem;
   display: flex;
   align-items: center;
@@ -190,10 +190,11 @@ body {
 }
 
 .lp-nav-coming-badge {
+  font-size: 8px !important;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 2px 8px;
+  padding: 2px 4px;
   border-radius: 999px;
   font-size: 0.68rem;
   font-weight: 700;
