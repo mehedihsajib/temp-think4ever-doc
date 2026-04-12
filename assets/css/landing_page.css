@@ -6,8 +6,8 @@
   --lp-surface-solid: #ffffff;
   --lp-text: #1c2554;
   --lp-text-soft: #5f688d;
-  --lp-primary: #667cf6;
-  --lp-primary-strong: #556cf2;
+  --lp-primary: #2563eb;
+  --lp-primary-strong: #2563eb;
   --lp-primary-soft: rgba(102, 124, 246, 0.14);
   --lp-border: rgba(128, 147, 255, 0.18);
   --lp-shadow:
@@ -490,7 +490,7 @@ body {
   margin: 0;
   font-family: "Space Grotesk", sans-serif;
   letter-spacing: -0.04em;
-  color: #5d73f0;
+  color: #2563eb;
 }
 
 .lp-hero-copy h1 {
@@ -752,7 +752,7 @@ body {
 
 .lp-metrics {
   padding: 54px 0;
-  background: linear-gradient(135deg, #687ef2 0%, #7890ff 100%);
+  background: #2563eb;
 }
 
 .lp-metrics-grid {
