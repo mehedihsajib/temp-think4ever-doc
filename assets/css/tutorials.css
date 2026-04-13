@@ -180,9 +180,42 @@ body {
 }
 
 .tut-grid {
+  display: block;
+}
+
+.tut-grid-group {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
+}
+
+.tut-group + .tut-group {
+  margin-top: 34px;
+}
+
+.tut-group-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.tut-group-head h2 {
+  margin: 0;
+  font-size: 1.22rem;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.tut-group-count {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #5f6f9e;
+  border: 1px solid var(--tut-border);
+  border-radius: 999px;
+  padding: 4px 10px;
+  background: rgba(255, 255, 255, 0.82);
 }
 
 .tut-card {
@@ -253,6 +286,7 @@ body {
 }
 
 .tut-card-title {
+  color: var(--color-text-dark);
   max-width: 85%;
   margin: 6px 0 0;
   font-size: 0.98rem;
@@ -334,7 +368,6 @@ body {
 .tut-source-link {
   width: 40px;
   height: 40px;
-  margin-top: 8px;
   display: inline-flex;
   align-items: center;
   color: #3854be;
@@ -342,8 +375,8 @@ body {
   font-size: 0.84rem;
   text-decoration: none;
   position: absolute;
-  right: 15px;
-  top: 15px;
+  right: 10px;
+  top: 10px;
   background-color: #f1f5f9;
   border-radius: 50%;
   display: flex;
@@ -369,7 +402,7 @@ body {
 }
 
 @media (max-width: 1024px) {
-  .tut-grid {
+  .tut-grid-group {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -401,7 +434,7 @@ body {
     max-width: none;
   }
 
-  .tut-grid {
+  .tut-grid-group {
     grid-template-columns: 1fr;
   }
 

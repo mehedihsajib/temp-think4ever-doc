@@ -1,41 +1,116 @@
 (function () {
   "use strict";
 
-  const sourcePages = [
-    "manual_introduction",
-    "manual_key_features",
-    "manual_create_project",
-    "manual_business_flow",
-  ];
-
-  // Curated titles per source page/video position to avoid generic labels.
-  const curatedVideoTitles = {
-    manual_introduction: ["Think4ever User Manual Overview"],
-    manual_key_features: ["Key Features Walkthrough"],
-    manual_create_project: ["How to Create a New Project"],
-    manual_business_flow: ["Business Flow Mapping Tutorial"],
-  };
-
-  const fallbackVideos = [
+  const tutorialCatalog = [
     {
-      id: "CQpIODqNFek",
-      pageId: "manual_introduction",
-      pageTitle: "Introduction",
+      sectionTitle: "Introduction",
+      items: [
+        {
+          pageId: "manual_introduction",
+          pageTitle: "Introduction",
+          videoTitle: "Vision to Innovation",
+          id: "CQpIODqNFek",
+        },
+        {
+          pageId: "manual_key_features",
+          pageTitle: "Key Features",
+          videoTitle:
+            "How to Create a Project? Turning ideas to Conceptualization.",
+          id: "6wmwLtcdV6k",
+        },
+      ],
     },
     {
-      id: "6wmwLtcdV6k",
-      pageId: "manual_key_features",
-      pageTitle: "Key Features",
+      sectionTitle: "Getting Started",
+      items: [
+        {
+          pageId: "manual_project_settings",
+          pageTitle: "Project Settings",
+          videoTitle: "How to Define Project Requirements",
+          id: "kqRaUoV8K-E",
+        },
+        {
+          pageId: "manual_project_settings",
+          pageTitle: "Project Settings",
+          videoTitle: "Technology Stack & Project Details Setup",
+          id: "GY_y-n18gm4",
+        },
+        {
+          pageId: "manual_api_keys",
+          pageTitle: "API Keys",
+          videoTitle: "API Keys Setup",
+          id: "pXEXoWqDPys",
+        },
+      ],
     },
     {
-      id: "6wmwLtcdV6k",
-      pageId: "manual_create_project",
-      pageTitle: "Create a New Project",
+      sectionTitle: "Structure and Ideation",
+      items: [
+        {
+          pageId: "manual_requirements",
+          pageTitle: "Requirements",
+          videoTitle: "How to Define Project Requirements",
+          id: "kqRaUoV8K-E",
+        },
+        {
+          pageId: "manual_business_flow",
+          pageTitle: "Business Flow",
+          videoTitle: "Business Flow - the heart of your project",
+          id: "oS5Ot6ek_Yo",
+        },
+        {
+          pageId: "manual_data_objects",
+          pageTitle: "Data Objects",
+          videoTitle: "Managing Data Objects | Databases",
+          id: "GwxF7YvuG9M",
+        },
+        {
+          pageId: "manual_business_rules",
+          pageTitle: "Business Rules",
+          videoTitle: "How Business Rules Drive Your System",
+          id: "kWxnCu0vh_I",
+        },
+        {
+          pageId: "manual_integration_maps",
+          pageTitle: "Integration Maps",
+          videoTitle: "Integration Maps & External Services",
+          id: "BZK9Prej4Jc",
+        },
+      ],
     },
     {
-      id: "oS5Ot6ek_Yo",
-      pageId: "manual_business_flow",
-      pageTitle: "Business Flow",
+      sectionTitle: "Design and Docs",
+      items: [
+        {
+          pageId: "manual_ui_design",
+          pageTitle: "UI Design",
+          videoTitle: "From Technical Specs to UI Design",
+          id: "UMSbY-GJDjY",
+        },
+        {
+          pageId: "manual_technical_diagrams",
+          pageTitle: "Technical Diagrams",
+          videoTitle: "Technical Diagrams & Architecture Mapping",
+          id: "Ey6qAKUC9FI",
+        },
+        {
+          pageId: "manual_requirements_docs",
+          pageTitle: "Requirements Docs",
+          videoTitle: "Mastering the Requirements Docs Dashboard",
+          id: "M7NvDD-1tDM",
+        },
+      ],
+    },
+    {
+      sectionTitle: "Development",
+      items: [
+        {
+          pageId: "manual_tasks",
+          pageTitle: "Tasks",
+          videoTitle: "Streamlining Tasks Development",
+          id: "ekkKNTi6Nmk",
+        },
+      ],
     },
   ];
 
@@ -49,19 +124,50 @@
   const videoSourceLink = document.getElementById("videoSourceLink");
 
   let tutorials = [];
+  let sectionOrder = [];
 
-  function extractTitleFromDocument(doc, pageId) {
-    const h1 =
-      doc.querySelector(".cd-page-title") ||
-      doc.querySelector("main h1") ||
-      doc.querySelector("h1");
-    const title = h1 ? h1.textContent.trim() : pageId.replace("manual_", "");
-    return title.replace(/^\d+\.?\s*/, "");
+  function toDocPath(path) {
+    if (typeof window.toBasePath === "function") {
+      return window.toBasePath(path);
+    }
+    return "../" + path;
+  }
+
+  function escapeHtml(str) {
+    const div = document.createElement("div");
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function groupTutorials(items) {
+    const map = new Map();
+
+    items.forEach(function (item) {
+      const sectionTitle = item.sectionTitle || "Other";
+      if (!map.has(sectionTitle)) {
+        map.set(sectionTitle, []);
+      }
+      map.get(sectionTitle).push(item);
+    });
+
+    const dynamicOrder = Array.from(map.keys()).filter(function (title) {
+      return !sectionOrder.includes(title);
+    });
+
+    const orderedTitles = sectionOrder
+      .concat(dynamicOrder)
+      .filter(function (title) {
+        return map.has(title);
+      });
+
+    return orderedTitles.map(function (title) {
+      return { title: title, items: map.get(title) };
+    });
   }
 
   function cardTemplate(item) {
     const thumb = "https://i.ytimg.com/vi/" + item.id + "/hqdefault.jpg";
-    const sourceHref = "../" + item.pageId + ".html";
+    const sourceHref = toDocPath(item.pageId + ".html");
 
     return (
       '<article class="tut-card" data-video-id="' +
@@ -90,9 +196,29 @@
       "</h3>" +
       '<a class="tut-source-link" href="' +
       sourceHref +
-      '"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>' +
+      '" aria-label="Open source page">' +
+      '<i class="fa-solid fa-arrow-up-right-from-square"></i>' +
+      "</a>" +
       "</div>" +
       "</article>"
+    );
+  }
+
+  function groupTemplate(group) {
+    return (
+      '<section class="tut-group">' +
+      '<div class="tut-group-head">' +
+      "<h2>" +
+      escapeHtml(group.title) +
+      "</h2>" +
+      '<span class="tut-group-count">' +
+      group.items.length +
+      " videos</span>" +
+      "</div>" +
+      '<div class="tut-grid tut-grid-group">' +
+      group.items.map(cardTemplate).join("") +
+      "</div>" +
+      "</section>"
     );
   }
 
@@ -105,7 +231,8 @@
       return;
     }
 
-    tutorialGrid.innerHTML = items.map(cardTemplate).join("");
+    const grouped = groupTutorials(items);
+    tutorialGrid.innerHTML = grouped.map(groupTemplate).join("");
   }
 
   function updateCount(total) {
@@ -125,7 +252,7 @@
     }
 
     videoModalTitle.textContent = title;
-    videoSourceLink.href = "../" + pageId + ".html";
+    videoSourceLink.href = toDocPath(pageId + ".html");
     videoPlayerFrame.src =
       "https://www.youtube.com/embed/" +
       videoId +
@@ -155,7 +282,8 @@
         const filtered = tutorials.filter(function (item) {
           return (
             item.videoTitle.toLowerCase().includes(q) ||
-            item.pageTitle.toLowerCase().includes(q)
+            item.pageTitle.toLowerCase().includes(q) ||
+            item.sectionTitle.toLowerCase().includes(q)
           );
         });
 
@@ -213,69 +341,34 @@
     });
   }
 
-  function normalizeTutorials(items) {
-    return items.map(function (item, index) {
-      const byPage = curatedVideoTitles[item.pageId] || [];
-      const curated = byPage[index];
-      return {
-        id: item.id,
-        pageId: item.pageId,
-        pageTitle: item.pageTitle,
-        videoTitle: curated || item.pageTitle + " Walkthrough",
-      };
+  function normalizeCatalog() {
+    const normalized = [];
+    sectionOrder = tutorialCatalog.map(function (section) {
+      return section.sectionTitle;
     });
-  }
 
-  async function loadTutorialsFromManualPages() {
-    const loaded = [];
+    tutorialCatalog.forEach(function (section) {
+      const sectionTitle = section.sectionTitle || "Other";
+      const items = Array.isArray(section.items) ? section.items : [];
 
-    for (const pageId of sourcePages) {
-      try {
-        const response = await fetch("../" + pageId + ".html");
-        if (!response.ok) continue;
-        const html = await response.text();
-
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, "text/html");
-        const pageTitle = extractTitleFromDocument(doc, pageId);
-
-        const videos = doc.querySelectorAll(".yt-video[data-video-id]");
-        videos.forEach(function (videoEl, idx) {
-          const id = videoEl.getAttribute("data-video-id");
-          if (!id) return;
-
-          const byPage = curatedVideoTitles[pageId] || [];
-          const curated = byPage[idx];
-
-          loaded.push({
-            id: id,
-            pageId: pageId,
-            pageTitle: pageTitle,
-            videoTitle: curated || pageTitle + " Walkthrough",
-          });
+      items.forEach(function (item) {
+        if (!item || !item.id || !item.pageId) return;
+        normalized.push({
+          sectionTitle: sectionTitle,
+          pageId: item.pageId,
+          pageTitle: item.pageTitle || item.pageId.replace("manual_", ""),
+          videoTitle: item.videoTitle || "Tutorial Video",
+          id: item.id,
         });
-      } catch (err) {
-        console.warn("Could not load tutorial source page:", pageId, err);
-      }
-    }
+      });
+    });
 
-    return loaded;
+    return normalized;
   }
 
-  function escapeHtml(str) {
-    const div = document.createElement("div");
-    div.textContent = str;
-    return div.innerHTML;
-  }
-
-  async function init() {
+  function init() {
     bindEvents();
-
-    const dynamicTutorials = await loadTutorialsFromManualPages();
-    tutorials = dynamicTutorials.length
-      ? dynamicTutorials
-      : normalizeTutorials(fallbackVideos);
-
+    tutorials = normalizeCatalog();
     updateCount(tutorials.length);
     renderCards(tutorials);
   }
