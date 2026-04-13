@@ -202,7 +202,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   color: #334155;
   text-decoration: none;
   padding: 8px 12px;
@@ -336,7 +336,7 @@
 }
 
 .pp-callout-text {
-  font-size: 0.9375rem;
+  font-size: 1rem;
   color: #334155;
   line-height: 1.6;
 }
@@ -352,7 +352,7 @@
 .pp-data-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.9375rem;
+  font-size: 1rem;
 }
 
 .pp-data-table thead {
@@ -407,7 +407,7 @@
   align-items: center;
   gap: 12px;
   margin-bottom: 12px;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   color: #334155;
 }
 

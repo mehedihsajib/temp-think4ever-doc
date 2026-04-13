@@ -281,7 +281,7 @@
 .form-textarea {
   width: 100%;
   font-family: 'Inter', sans-serif;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   color: #334155;
   background: #fff;
   border: 1px solid var(--color-border, #bfdbfe);
@@ -471,7 +471,7 @@
 }
 
 .upload-text {
-  font-size: 0.9375rem;
+  font-size: 1rem;
   color: #475569;
   font-weight: 500;
 }
@@ -568,7 +568,7 @@
   background: var(--color-primary, #2563eb);
   color: #fff;
   font-family: 'Inter', sans-serif;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: 600;
   padding: 12px 28px;
   border-radius: 8px;

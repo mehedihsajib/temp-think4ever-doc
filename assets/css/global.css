@@ -155,7 +155,7 @@ body {
   font-size: var(--text-base);
   font-weight: var(--font-normal);
   line-height: var(--leading-normal);
-  color: var(--color-text);
+  color: #475569;
   background-color: var(--color-background);
   min-height: 100vh;
   overflow-x: hidden;
@@ -4713,7 +4713,7 @@ main img:not([data-lightbox="off"]):not(.doc-image-lightbox__image):hover {
   max-width: min(100%, 860px);
   text-align: center;
   color: #e2e8f0;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   line-height: 1.6;
 }
 

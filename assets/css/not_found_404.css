@@ -258,7 +258,7 @@
   width: 100%;
   padding: 14px 48px 14px 44px;
   font-family: 'Inter', sans-serif;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   color: #334155;
   background: #ffffff;
   border: 1.5px solid #bfdbfe;
@@ -326,7 +326,7 @@
   gap: 8px;
   padding: 12px 28px;
   font-family: 'Inter', sans-serif;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #ffffff;
   background: #2563eb;

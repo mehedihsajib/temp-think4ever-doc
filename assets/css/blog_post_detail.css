@@ -368,7 +368,7 @@
   padding: 16px 20px;
   border-radius: 8px;
   margin: 1.5rem 0;
-  font-size: 0.9375rem;
+  font-size: 1rem;
 }
 
 .bpd-callout-info {
@@ -607,7 +607,7 @@
 .bpd-comment-author {
   font-weight: 600;
   color: #1e3a8a;
-  font-size: 0.9375rem;
+  font-size: 1rem;
 }
 
 .bpd-comment-date {
@@ -630,7 +630,7 @@
 }
 
 .bpd-comment-text {
-  font-size: 0.9375rem;
+  font-size: 1rem;
   line-height: 1.625;
   color: #334155;
   margin-left: 52px;
@@ -685,7 +685,7 @@
   padding: 10px 14px;
   border: 1px solid #bfdbfe;
   border-radius: 8px;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-family: 'Inter', sans-serif;
   color: #334155;
   background: white;
@@ -770,7 +770,7 @@
   color: white;
   border: none;
   border-radius: 8px;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: 600;
   font-family: 'Inter', sans-serif;
   cursor: pointer;
@@ -844,7 +844,7 @@
   border-radius: 8px;
   padding: 16px 20px;
   margin-top: 16px;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   color: #166534;
 }
 
@@ -916,7 +916,7 @@
 
 .bpd-related-card-title {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #1e3a8a;
   line-height: 1.35;

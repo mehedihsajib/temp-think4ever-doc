@@ -2284,14 +2284,14 @@
   },
   "dev_req": {
     "submenu_title": "Structure & Ideation has the following submenus:",
-    "title": "1. Requirements",
+    "title": "Requirements",
     "intro": "As the entry point for this category, this page stores the core vision of your project. It acts as the \"Source of Truth.\" Every other item in this menu is derived from the text provided here.",
     "f1_title": "Usage:",
     "f1_desc": "Define your MVP (Minimum Viable Product) features and user roles.",
     "action_desc": "In this section, you can modify or add new requirements. Once all good, click on <strong>Save Requirements</strong> button."
   },
   "dev_concept": {
-    "title": "2. Concept",
+    "title": "Concept",
     "intro": "This module breaks your requirements down into individual <strong>Concept Blocks</strong>. For a project like \"Study Tool,\" concepts might include <em>User Authentication</em>, <em>Document Parsing</em>, or <em>Adaptive Algorithm</em>.",
     "f1_title": "Usage:",
     "f1_desc": "Map out the \"big ideas\" of your software to ensure all required functionality is accounted for."
@@ -2305,7 +2305,7 @@
     "f2_desc": "Identify bottlenecks in the user experience before a single line of code is written."
   },
   "dev_do": {
-    "title": "4. Data Objects",
+    "title": "Data Objects",
     "intro": "This section defines the \"nouns\" of your system&mdash;the data structures that will be stored in your database.",
     "f1_title": "Examples:",
     "f1_desc": "User, StudyMaterial, QuizResult, SubscriptionPlan.",
@@ -2321,7 +2321,7 @@
     "f2_desc": "Establish the Access Control List (ACL) for your API and Frontend."
   },
   "dev_br": {
-    "title": "6. Business Rules",
+    "title": "Business Rules",
     "intro": "Business Rules are the \"if/then\" logic that governs your app's behavior, independent of the code.",
     "f1_title": "Example:",
     "f1_desc": "\"If a user has a Free tier account, they can only upload 1 document per month.\"",
@@ -2329,7 +2329,7 @@
     "f2_desc": "Centralize the logic that determines how the business operates."
   },
   "dev_int": {
-    "title": "7. Integration Maps",
+    "title": "Integration Maps",
     "intro": "This tool outlines how your application communicates with external systems.",
     "f1_title": "Example:",
     "f1_desc": "How your app talks to a Payment Gateway (Stripe) or an AI Model (OpenAI/Claude).",
