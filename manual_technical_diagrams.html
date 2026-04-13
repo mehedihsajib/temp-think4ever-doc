@@ -27,7 +27,7 @@
       }
 
       .modern-header {
-        font-family: "Inter", sans-serif;
+        font-family: 'Inter', sans-serif;
         position: fixed;
         top: 0;
         left: 0;
@@ -85,7 +85,7 @@
 
       .cd-overview-ul li {
         margin-bottom: 16px;
-        font-family: "Inter", sans-serif;
+        font-family: 'Inter', sans-serif;
         font-size: 0.95rem;
         color: #475569;
         line-height: 1.6;
@@ -97,7 +97,7 @@
       }
 
       .cd-overview-p {
-        font-family: "Inter", sans-serif;
+        font-family: 'Inter', sans-serif;
         font-size: 1rem;
         color: #475569;
         line-height: 1.7;
@@ -112,6 +112,126 @@
         margin-top: 24px;
         margin-bottom: 40px;
         display: block;
+      }
+      .consumer-docs-layout {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        display: flex !important;
+        background: #ffffff;
+      }
+
+      .cd-sidebar {
+        box-sizing: content-box !important;
+        width: 240px !important;
+        min-width: 240px !important;
+        background: #fcfcfd !important;
+        border-right: 1px solid #e2e8f0 !important;
+        padding-left: 36px !important;
+        padding-right: 24px !important;
+        padding-top: 36px !important;
+      }
+
+      .cd-main-content {
+        max-width: 1000px !important;
+        background: #ffffff !important;
+        padding-top: 56px !important;
+        padding-left: 64px !important;
+        padding-right: 64px !important;
+        padding-bottom: 100px !important;
+      }
+
+      .cd-sub-heading {
+        color: #000;
+        font-size: 1.15rem;
+        font-weight: bold;
+        font-family: 'Inter', sans-serif;
+        margin-top: 32px;
+        margin-bottom: 12px;
+      }
+
+      .doc-section {
+        margin-top: 24px;
+        margin-bottom: 32px;
+      }
+
+      .cd-overview-ul {
+        margin-top: 16px;
+        margin-bottom: 24px;
+        padding-left: 24px;
+        list-style-type: disc;
+      }
+
+      .cd-overview-ul li {
+        margin-bottom: 16px;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.95rem;
+        color: #475569;
+        line-height: 1.6;
+      }
+
+      .cd-overview-ul li strong {
+        color: #0f172a;
+        font-weight: 600;
+      }
+
+      .cd-overview-p {
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        color: #475569;
+        line-height: 1.7;
+        margin-bottom: 16px;
+      }
+
+      .demo-img {
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e2e8f0;
+        margin-top: 24px;
+        margin-bottom: 40px;
+        display: block;
+      }
+
+      .config-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 16px;
+        margin-bottom: 24px;
+        font-family: Arial, sans-serif;
+        font-size: 0.95rem;
+      }
+
+      .config-table th,
+      .config-table td {
+        border: 1px solid #000;
+        padding: 8px 12px;
+        text-align: left;
+      }
+
+      .config-table th:first-child,
+      .config-table td:first-child {
+        width: 25%;
+      }
+
+      .config-table th:last-child,
+      .config-table td:last-child {
+        width: 75%;
+      }
+
+      .config-table th {
+        font-weight: bold;
+        color: #000;
+        background-color: transparent;
+      }
+
+      .config-table td {
+        color: #000;
+        line-height: 1.5;
+      }
+
+      .config-table strong {
+        font-weight: bold;
       }
     </style>
   </head>
@@ -179,6 +299,564 @@
               class="demo-img"
             />
           </div>
+          <h1 class="cd-page-title" data-i18n="avail_diag.title">
+            Available Diagram Types
+          </h1>
+
+          <div class="doc-section">
+            <p class="cd-overview-p" data-i18n-html="avail_diag.intro">
+              The dashboard is divided into several specialized categories to
+              cover the full development lifecycle:
+            </p>
+
+            <table class="config-table">
+              <thead>
+                <tr>
+                  <th data-i18n="avail_diag.table_h1">Category</th>
+                  <th data-i18n="avail_diag.table_h2">
+                    Specific Diagrams Included
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-i18n-html="avail_diag.t_c1_1">
+                    <strong>System Architecture</strong>
+                  </td>
+                  <td data-i18n-html="avail_diag.t_c1_2">
+                    Technology Stack, Security Architecture, Infrastructure,
+                    Deployment, High-Level System Architecture.
+                  </td>
+                </tr>
+                <tr>
+                  <td data-i18n-html="avail_diag.t_c2_1">
+                    <strong>Data & Logic</strong>
+                  </td>
+                  <td data-i18n-html="avail_diag.t_c2_2">
+                    Entity Relationship Diagram (ERD), Database Schema, Data
+                    Flow Diagram (DFD).
+                  </td>
+                </tr>
+                <tr>
+                  <td data-i18n-html="avail_diag.t_c3_1">
+                    <strong>Process & Flow</strong>
+                  </td>
+                  <td data-i18n-html="avail_diag.t_c3_2">
+                    Sequence Diagram, Process Flow / Business Flow, Use Case
+                    Diagram, User Flow Diagram.
+                  </td>
+                </tr>
+                <tr>
+                  <td data-i18n-html="avail_diag.t_c4_1">
+                    <strong>Structural Design</strong>
+                  </td>
+                  <td data-i18n-html="avail_diag.t_c4_2">
+                    API Architecture, Component Diagram.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3 class="cd-sub-heading" data-i18n="avail_diag.kac_title">
+              Key Action Commands
+            </h3>
+            <p class="cd-overview-p" data-i18n-html="avail_diag.kac_intro">
+              Located at the top-right of the dashboard, these controls allow
+              for active project management:
+            </p>
+
+            <ul class="cd-overview-ul">
+              <li>
+                <strong data-i18n="avail_diag.k1_title"
+                  >Build Architecture Diagrams:</strong
+                >
+                <span data-i18n-html="avail_diag.k1_desc"
+                  >Launches the automated builder tool to generate diagrams
+                  based on existing system data or code structures.</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="avail_diag.k2_title">Add Diagram:</strong>
+                <span data-i18n-html="avail_diag.k2_desc"
+                  >Opens a manual upload or creation interface to introduce a
+                  new visualization to the project.</span
+                >
+              </li>
+            </ul>
+
+            <img
+              src="assets/images/diagram-1.jpg"
+              alt="Key Action Commands"
+              class="demo-img"
+            />
+
+            <!-- New Section: Add Diagram -->
+            <div style="margin-top: 64px">
+              <h3 class="cd-sub-heading-orange" data-i18n="avail_diag.ad_title">
+                Add Diagram
+              </h3>
+              <p class="cd-overview-p" data-i18n-html="avail_diag.ad_intro">
+                This button is for
+                <strong>manual entry and custom creation</strong>.
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong data-i18n="avail_diag.ad_hw_title"
+                    >How it works:</strong
+                  >
+                  <span data-i18n-html="avail_diag.ad_hw_desc"
+                    >It opens a template gallery or a blank canvas where you can
+                    choose a specific diagram type (e.g., Sequence Diagram, ERD,
+                    or Flowchart).</span
+                  >
+                </li>
+                <li>
+                  <strong data-i18n="avail_diag.ad_res_title">Result:</strong>
+                  <span data-i18n-html="avail_diag.ad_res_desc"
+                    >You manually define the logic, shapes, and connections. It
+                    can also be used to upload an existing image file (like a
+                    PNG or PDF) from your local drive.</span
+                  >
+                </li>
+                <li>
+                  <strong data-i18n="avail_diag.ad_best_title"
+                    >Best for:</strong
+                  >
+                  <span data-i18n-html="avail_diag.ad_best_desc"
+                    >Conceptualizing new ideas, documenting specific business
+                    rules, or adding external reference diagrams that aren't
+                    derived from the project's code.</span
+                  >
+                </li>
+              </ul>
+              <img
+                src="assets/images/diagram-2.jpg"
+                alt="Add Diagram Details"
+                class="demo-img"
+              />
+              <img
+                src="assets/images/diagram-3.jpg"
+                alt="Build Architecture Diagrams Details"
+                class="demo-img"
+              />
+            </div>
+
+            <!-- New Section: Build Architecture Diagrams -->
+            <div style="margin-top: 64px">
+              <h3
+                class="cd-sub-heading-orange"
+                data-i18n="avail_diag.bad_title"
+              >
+                Build Architecture Diagrams
+              </h3>
+              <p class="cd-overview-p" data-i18n-html="avail_diag.bad_intro">
+                This button triggers an
+                <strong>automated generation process</strong>.
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong data-i18n="avail_diag.bad_hw_title"
+                    >How it works:</strong
+                  >
+                  <span data-i18n-html="avail_diag.bad_hw_desc"
+                    >It uses the platform's AI or system analysis tools to scan
+                    your existing project data, codebases, or infrastructure
+                    configurations.</span
+                  >
+                </li>
+                <li>
+                  <strong data-i18n="avail_diag.bad_res_title">Result:</strong>
+                  <span data-i18n-html="avail_diag.bad_res_desc"
+                    >It automatically creates a "High-Level System Architecture"
+                    or "Technology Stack" diagram based on actual project
+                    facts.</span
+                  >
+                </li>
+                <li>
+                  <strong data-i18n="avail_diag.bad_best_title"
+                    >Best for:</strong
+                  >
+                  <span data-i18n-html="avail_diag.bad_best_desc"
+                    >Rapidly documenting complex systems without drawing every
+                    line manually, or keeping diagrams in sync with real-time
+                    code changes.</span
+                  >
+                </li>
+              </ul>
+              <img
+                src="assets/images/diagram-4.jpg"
+                alt="Interactive Diagram Viewer"
+                class="demo-img"
+              />
+              <img
+                src="assets/images/diagram-5.jpg"
+                alt="Toolbar Features"
+                class="demo-img"
+              />
+            </div>
+
+            <!-- New Section: Interactive Diagram Viewer -->
+            <div style="margin-top: 64px">
+              <h3
+                class="cd-sub-heading-orange"
+                data-i18n="avail_diag.idv_title"
+              >
+                Interactive Diagram Viewer
+              </h3>
+              <p class="cd-overview-p" data-i18n-html="avail_diag.idv_intro">
+                The <strong>Interactive Viewer</strong> allows you to transition
+                from a high-level overview of your project's architecture to a
+                detailed, editable workspace for any specific technical diagram.
+              </p>
+
+              <h3
+                class="cd-sub-heading"
+                data-i18n="avail_diag.nw_title"
+                style="font-size: 1.05rem; margin-top: 24px"
+              >
+                Navigation Workflow
+              </h3>
+              <ol class="cd-overview-ul" style="list-style-type: decimal">
+                <li>
+                  <strong data-i18n="avail_diag.nw_s1_title">Select:</strong>
+                  <span data-i18n-html="avail_diag.nw_s1_desc"
+                    >From the <strong>Technical Diagrams</strong> dashboard,
+                    click on any of the active diagram cards (e.g.,
+                    <strong>Data Flow Diagram [DFD]</strong>).</span
+                  >
+                </li>
+                <li>
+                  <strong data-i18n="avail_diag.nw_s2_title">Open:</strong>
+                  <span data-i18n-html="avail_diag.nw_s2_desc"
+                    >The system launches a dedicated canvas overlay, centered on
+                    that specific data model or workflow.</span
+                  >
+                </li>
+                <li>
+                  <strong data-i18n="avail_diag.nw_s3_title">Explore:</strong>
+                  <span data-i18n-html="avail_diag.nw_s3_desc"
+                    >Use the sidebar on the left to quickly jump between
+                    different diagram types within the same session without
+                    returning to the main dashboard.</span
+                  >
+                </li>
+              </ol>
+
+              <h3
+                class="cd-sub-heading"
+                data-i18n="avail_diag.wc_title"
+                style="font-size: 1.05rem; margin-top: 48px"
+              >
+                Workspace Components
+              </h3>
+              <table class="config-table">
+                <thead>
+                  <tr>
+                    <th data-i18n="avail_diag.wc_t1">Area</th>
+                    <th data-i18n="avail_diag.wc_t2">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-i18n-html="avail_diag.wc_r1_1">
+                      <strong>Element Toolbar</strong>
+                    </td>
+                    <td data-i18n-html="avail_diag.wc_r1_2">
+                      Located at the top, this bar provides drag-and-drop
+                      components specific to the diagram type, such as
+                      <strong>Start, Process, Decision, Database</strong>, and
+                      <strong>API</strong> nodes.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-i18n-html="avail_diag.wc_r2_1">
+                      <strong>Logic Canvas</strong>
+                    </td>
+                    <td data-i18n-html="avail_diag.wc_r2_2">
+                      The primary area where the workflow is visualized. It
+                      supports complex branching, layered layouts, and
+                      multi-node connections.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-i18n-html="avail_diag.wc_r3_1">
+                      <strong>Editor Sidebar</strong>
+                    </td>
+                    <td data-i18n-html="avail_diag.wc_r3_2">
+                      Lists all available diagram categories for the current
+                      project. Numerical indicators show how many iterations or
+                      sub-diagrams exist for each type (e.g.,
+                      <strong>High-Level System Architecture: 42</strong>).
+                    </td>
+                  </tr>
+                  <tr>
+                    <td data-i18n-html="avail_diag.wc_r4_1">
+                      <strong>Action Suite</strong>
+                    </td>
+                    <td data-i18n-html="avail_diag.wc_r4_2">
+                      A specialized set of buttons for canvas management,
+                      including
+                      <strong>Auto Layout, Voice Assistant, Clear All</strong>,
+                      and zoom controls (<strong>100%, Fit</strong>).
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <img
+                src="assets/images/diagram-6.jpg"
+                alt="Toolbar Features"
+                class="demo-img"
+              />
+              <img
+                src="assets/images/diagram-7.jpg"
+                alt="Toolbar Features"
+                class="demo-img"
+              />
+
+              <h3
+                class="cd-sub-heading"
+                data-i18n="avail_diag.kf_title"
+                style="font-size: 1.05rem; margin-top: 40px"
+              >
+                Key Features
+              </h3>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong data-i18n="avail_diag.kf_ce_title"
+                    >Contextual Elements:</strong
+                  >
+                  <span data-i18n-html="avail_diag.kf_ce_desc"
+                    >The toolbar automatically updates based on the diagram type
+                    selected, ensuring you use the correct notation (e.g.,
+                    diamonds for Decisions in a DFD).</span
+                  >
+                </li>
+                <li>
+                  <strong data-i18n="avail_diag.kf_lm_title"
+                    >Layout Management:</strong
+                  >
+                  <span data-i18n-html="avail_diag.kf_lm_desc"
+                    >Use the <strong>Layered Layout</strong> and
+                    <strong>Direction</strong> (Top to Bottom) dropdowns to
+                    instantly reorganize complex "spaghetti" diagrams into
+                    clean, readable structures.</span
+                  >
+                </li>
+                <li>
+                  <strong data-i18n="avail_diag.kf_ce2_title"
+                    >Collaboration & Export:</strong
+                  >
+                  <span data-i18n-html="avail_diag.kf_ce2_desc"
+                    >Once your diagram is finalized, use the
+                    <strong>Export</strong> button to download the visualization
+                    for external documentation or presentations.</span
+                  >
+                </li>
+              </ul>
+
+              <p
+                class="cd-overview-p"
+                data-i18n-html="avail_diag.idv_tip"
+                style="margin-top: 24px; font-weight: 500; font-style: italic"
+              >
+                <strong>Tip:</strong> Enable the
+                <strong>AI Assistant</strong> to make rapid changes to your
+                diagrams using natural language commands, similar to the Modify
+                Page tool.
+              </p>
+
+              <!-- New Section: Toolbar -->
+              <h3
+                class="cd-sub-heading-orange"
+                data-i18n="avail_diag.tb_title"
+                style="font-size: 1.05rem; margin-top: 48px"
+              >
+                Toolbar
+              </h3>
+
+              <img
+                src="assets/images/diagram-8.jpg"
+                alt="Toolbar Features"
+                class="demo-img"
+              />
+
+              <p class="cd-overview-p" data-i18n-html="avail_diag.tb_intro">
+                The top toolbar in the Diagram Editor is divided into three
+                functional zones:
+                <strong
+                  >Node Creation, Layout Management, and Canvas
+                  Utilities.</strong
+                >
+                These tools allow you to build and organize complex data flows
+                with precision.
+              </p>
+
+              <h3
+                class="cd-sub-heading"
+                data-i18n="avail_diag.nct_title"
+                style="font-size: 1.05rem; margin-top: 24px"
+              >
+                Node Creation Tools
+              </h3>
+              <p class="cd-overview-p" data-i18n-html="avail_diag.nct_intro">
+                These buttons add specific logic elements to your canvas. Each
+                follows standard technical diagramming notation:
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong data-i18n="avail_diag.nct1_title">+ Start:</strong>
+                  <span data-i18n-html="avail_diag.nct1_desc"
+                    >Inserts a terminal node representing the beginning of a
+                    process or entry point.</span
+                  >
+                </li>
+                <li>
+                  <strong data-i18n="avail_diag.nct2_title">+ Process:</strong>
+                  <span data-i18n-html="avail_diag.nct2_desc"
+                    >Adds a rectangular node to represent a specific action,
+                    computation, or system task.</span
+                  >
+                </li>
+                <li>
+                  <strong data-i18n="avail_diag.nct3_title">+ Decision:</strong>
+                  <span data-i18n-html="avail_diag.nct3_desc"
+                    >Inserts a diamond-shaped node used for branching logic and
+                    "If/Then" scenarios.</span
+                  >
+                </li>
+                <li>
+                  <strong data-i18n="avail_diag.nct4_title">+ Database:</strong>
+                  <span data-i18n-html="avail_diag.nct4_desc"
+                    >Adds a cylinder-shaped node representing data storage,
+                    tables, or repositories.</span
+                  >
+                </li>
+                <li>
+                  <strong data-i18n="avail_diag.nct5_title">+ API:</strong>
+                  <span data-i18n-html="avail_diag.nct5_desc"
+                    >Inserts a node specifically for external service
+                    integrations or interface endpoints.</span
+                  >
+                </li>
+                <li>
+                  <strong data-i18n="avail_diag.nct6_title">+ End:</strong>
+                  <span data-i18n-html="avail_diag.nct6_desc"
+                    >Represents the exit point or completion of a specific
+                    workflow.</span
+                  >
+                </li>
+              </ul>
+
+              <h3
+                class="cd-sub-heading"
+                data-i18n="avail_diag.ldc_title"
+                style="font-size: 1.05rem; margin-top: 24px"
+              >
+                Layout & Direction Controls
+              </h3>
+              <p class="cd-overview-p" data-i18n-html="avail_diag.ldc_intro">
+                Use these dropdowns to define the global visual structure of
+                your diagram:
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong data-i18n="avail_diag.ldc1_title"
+                    >Layered Layout (Dropdown):</strong
+                  >
+                  <span data-i18n-html="avail_diag.ldc1_desc"
+                    >Choose between different algorithmic styles, such as
+                    "Layered," "Tree," or "Organic," to best fit your data's
+                    structure.</span
+                  >
+                </li>
+                <li>
+                  <strong data-i18n="avail_diag.ldc2_title"
+                    >Direction (Dropdown):</strong
+                  >
+                  <span data-i18n-html="avail_diag.ldc2_desc"
+                    >Sets the flow orientation (e.g., Top to Bottom, Left to
+                    Right) to ensure logical readability.</span
+                  >
+                </li>
+              </ul>
+
+              <h3
+                class="cd-sub-heading"
+                data-i18n="avail_diag.cus_title"
+                style="font-size: 1.05rem; margin-top: 24px"
+              >
+                Canvas Utility Suite
+              </h3>
+              <p class="cd-overview-p" data-i18n-html="avail_diag.cus_intro">
+                These buttons provide advanced management and accessibility
+                features:
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong data-i18n="avail_diag.cus1_title"
+                    >Auto Layout:</strong
+                  >
+                  <span data-i18n-html="avail_diag.cus1_desc"
+                    >Instantly snaps all nodes and connectors into an organized
+                    grid based on your selected direction and layout
+                    style.</span
+                  >
+                </li>
+                <li>
+                  <strong data-i18n="avail_diag.cus2_title">Show Grid:</strong>
+                  <span data-i18n-html="avail_diag.cus2_desc"
+                    >Toggles a background grid to assist with manual alignment
+                    and spacing.</span
+                  >
+                </li>
+                <li>
+                  <strong data-i18n="avail_diag.cus3_title"
+                    >Sidekick / Voice Assistant:</strong
+                  >
+                  <span data-i18n-html="avail_diag.cus3_desc"
+                    >Activates AI-driven support, allowing you to modify the
+                    diagram or add elements using natural language
+                    commands.</span
+                  >
+                </li>
+                <li>
+                  <strong data-i18n="avail_diag.cus4_title">Clear All:</strong>
+                  <span data-i18n-html="avail_diag.cus4_desc"
+                    >Wipes the entire canvas to start a new design from
+                    scratch.</span
+                  >
+                </li>
+              </ul>
+
+              <h3
+                class="cd-sub-heading"
+                data-i18n="avail_diag.ne_title"
+                style="font-size: 1.05rem; margin-top: 24px"
+              >
+                Navigation & Export
+              </h3>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong data-i18n="avail_diag.ne1_title"
+                    >Zoom Controls (+ / 100% / - / Fit):</strong
+                  >
+                  <span data-i18n-html="avail_diag.ne1_desc"
+                    >Adjust your view of the canvas.
+                    <strong>Fit</strong> automatically scales the diagram to
+                    fill the visible screen area.</span
+                  >
+                </li>
+                <li>
+                  <strong data-i18n="avail_diag.ne2_title">Export:</strong>
+                  <span data-i18n-html="avail_diag.ne2_desc"
+                    >Saves the current visualization as a high-resolution image
+                    (PNG/SVG) or a document (PDF) for external use.</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
         </main>
       </div>
     </div>
@@ -186,7 +864,7 @@
     <script src="assets/js/navigation.js"></script>
     <script src="assets/js/consumer_docs_home.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
+      document.addEventListener('DOMContentLoaded', () => {
         if (window.I18n) {
           window.I18n.init();
         }
