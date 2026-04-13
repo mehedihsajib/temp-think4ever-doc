@@ -354,7 +354,7 @@ body {
 }
 
 .result-title {
-  color: var(--lp-text);
+  color: var(--color-primary);
   font-weight: 700;
 }
 

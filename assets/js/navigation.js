@@ -43,6 +43,83 @@ function toBasePath(path) {
 }
 
 // ===============================
+// Theme (Light / Dark)
+// ===============================
+const THEME_STORAGE_KEY = "think4ever_theme";
+
+function getSavedTheme() {
+  try {
+    return localStorage.getItem(THEME_STORAGE_KEY);
+  } catch (error) {
+    return null;
+  }
+}
+
+function saveTheme(theme) {
+  try {
+    localStorage.setItem(THEME_STORAGE_KEY, theme);
+  } catch (error) {
+    // Ignore storage errors in private mode.
+  }
+}
+
+function applyTheme(theme) {
+  const body = document.body;
+  if (!body) return;
+
+  const isDark = theme === "dark";
+  body.classList.toggle("dark", isDark);
+  body.setAttribute("data-theme", isDark ? "dark" : "light");
+
+  const toggle = document.getElementById("themeToggle");
+  if (toggle) {
+    toggle.setAttribute("aria-pressed", String(isDark));
+    toggle.setAttribute(
+      "aria-label",
+      isDark ? "Switch to light mode" : "Switch to dark mode"
+    );
+  }
+}
+
+function initSavedTheme() {
+  const savedTheme = getSavedTheme();
+  applyTheme(savedTheme === "dark" ? "dark" : "light");
+}
+
+function toggleTheme() {
+  const isDark = document.body.classList.contains("dark");
+  const nextTheme = isDark ? "light" : "dark";
+  applyTheme(nextTheme);
+  saveTheme(nextTheme);
+}
+
+function initThemeToggle() {
+  if (!document.body) return;
+  if (document.getElementById("themeToggle")) return;
+
+  const button = document.createElement("button");
+  button.id = "themeToggle";
+  button.className = "theme-toggle";
+  button.type = "button";
+  button.setAttribute("aria-live", "polite");
+  button.innerHTML = `
+    <span class="theme-toggle-track" aria-hidden="true">
+      <span class="theme-toggle-icon theme-toggle-icon-sun">
+        <i class="fa-solid fa-sun"></i>
+      </span>
+      <span class="theme-toggle-icon theme-toggle-icon-moon">
+        <i class="fa-solid fa-moon"></i>
+      </span>
+      <span class="theme-toggle-thumb"></span>
+    </span>
+  `;
+
+  button.addEventListener("click", toggleTheme);
+  document.body.appendChild(button);
+  initSavedTheme();
+}
+
+// ===============================
 // Get Current Page
 // ===============================
 function getCurrentPage() {
@@ -500,6 +577,7 @@ document.addEventListener("DOMContentLoaded", initGlobalImageLightbox);
 // INIT
 // ===============================
 document.addEventListener("DOMContentLoaded", function () {
+  initThemeToggle();
   const currentPage = getCurrentPage();
 
   // -------- Header --------

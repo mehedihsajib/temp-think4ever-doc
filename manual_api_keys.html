@@ -185,8 +185,11 @@
 
       .cd-overview-ul li strong,
       .cd-overview-ol li strong {
-        color: #0f172a;
         font-weight: 600;
+      }
+
+      .cd-overview-ul li.warning strong {
+        color: red !important;
       }
 
       .cd-overview-p {
@@ -320,12 +323,13 @@
                 Follow the prompt to name and configure your new API key.
               </li>
               <li
+                class="warning"
                 data-i18n-html="dev_api_keys.creating_keys_step3"
-                style="color: #b91c1c"
+                style="color: #b91c1c !important"
               >
-                <strong>Warning:</strong> Ensure you copy and securely store the
-                key upon creation. For security reasons, the full key may not be
-                displayed again.
+                <strong class="warning">Warning:</strong>
+                Ensure you copy and securely store the key upon creation. For
+                security reasons, the full key may not be displayed again.
               </li>
             </ol>
             <img

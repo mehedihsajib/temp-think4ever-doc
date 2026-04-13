@@ -21,7 +21,7 @@
     </style>
   </head>
   <body>
-    <div class="search-results-page">
+    <div class="search-results-page main-content">
       <!-- Skip to content -->
       <a
         href="#sr-main-content"
@@ -37,105 +37,8 @@
         "
         >Skip to main content</a
       >
-      <!-- Header -->
-      <header class="sr-header" role="banner">
-        <div class="sr-header-inner">
-          <a
-            class="sr-header-logo"
-            onclick="load_page('index')"
-            role="link"
-            tabindex="0"
-            aria-label="think4ever Home"
-          >
-            <img
-              src="./assets/images/think4ever-logo.png"
-              alt="think4ever Logo"
-          /></a>
-          <nav
-            class="sr-header-nav"
-            role="navigation"
-            aria-label="Main navigation"
-          >
-            <a onclick="load_page('manual_introduction')" tabindex="0"
-              >Documentation</a
-            >
-            <a onclick="load_page('blog_listing')" tabindex="0">Blog</a>
-            <a onclick="load_page('feedback_form')" tabindex="0">Feedback</a>
-            <a onclick="load_page('changelog_page')" tabindex="0">Changelog</a>
-          </nav>
-
-          <div
-            class="sr-header-actions"
-            style="
-              margin-left: auto;
-              display: flex;
-              align-items: center;
-              gap: 1rem;
-            "
-          >
-            <!-- Modern Language Dropdown -->
-            <div class="modern-lang-wrapper" id="langWrapper">
-              <button
-                class="modern-lang-btn"
-                id="modernLangBtn"
-                aria-expanded="false"
-                aria-haspopup="true"
-              >
-                <i class="fa fa-globe" style="font-size: 14px"></i>
-                <span id="current-lang-code" style="text-transform: uppercase"
-                  >EN</span
-                >
-                <i
-                  class="fa fa-chevron-down"
-                  style="font-size: 10px; margin-left: 2px"
-                ></i>
-              </button>
-              <div class="modern-lang-menu" id="modernLangMenu" role="menu">
-                <button
-                  onclick="changeLanguage('en')"
-                  data-lang-btn="en"
-                  class="lang-opt-en"
-                  role="menuitem"
-                >
-                  <span>English</span><span class="lang-code">EN</span>
-                </button>
-                <button
-                  onclick="changeLanguage('es')"
-                  data-lang-btn="es"
-                  class="lang-opt-es"
-                  role="menuitem"
-                >
-                  <span>Español</span><span class="lang-code">ES</span>
-                </button>
-                <button
-                  onclick="changeLanguage('fr')"
-                  data-lang-btn="fr"
-                  class="lang-opt-fr"
-                  role="menuitem"
-                >
-                  <span>Français</span><span class="lang-code">FR</span>
-                </button>
-                <button
-                  onclick="changeLanguage('it')"
-                  data-lang-btn="it"
-                  class="lang-opt-it"
-                  role="menuitem"
-                >
-                  <span>Italiano</span><span class="lang-code">IT</span>
-                </button>
-                <button
-                  onclick="changeLanguage('nl')"
-                  data-lang-btn="nl"
-                  class="lang-opt-nl"
-                  role="menuitem"
-                >
-                  <span>Nederlands</span><span class="lang-code">NL</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
+      <!-- Site Header -->
+      <header class="modern-header" id="consumerHeader"></header>
       <!-- Main Content -->
       <main class="sr-main" id="sr-main-content" role="main">
         <!-- Search Hero -->
@@ -201,12 +104,12 @@
             <button class="sr-filter-btn" data-filter="guides" type="button">
               <span>Guides</span> <span class="sr-filter-count">4</span>
             </button>
-            <button class="sr-filter-btn" data-filter="blog" type="button">
+            <!-- <button class="sr-filter-btn" data-filter="blog" type="button">
               <span>Blog</span> <span class="sr-filter-count">2</span>
             </button>
             <button class="sr-filter-btn" data-filter="changelog" type="button">
               <span>Changelog</span> <span class="sr-filter-count">1</span>
-            </button>
+            </button> -->
           </div>
         </div>
         <!-- Results List -->
@@ -257,7 +160,7 @@
               ><i class="fa-solid fa-book-open" aria-hidden="true"></i>
               <span>Documentation</span></a
             >
-            <a
+            <!-- <a
               class="sr-quick-link"
               onclick="load_page('blog_listing')"
               tabindex="0"
@@ -270,7 +173,7 @@
               tabindex="0"
               ><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i>
               <span>Changelog</span></a
-            >
+            > -->
             <a
               class="sr-quick-link"
               onclick="load_page('feedback_form')"
