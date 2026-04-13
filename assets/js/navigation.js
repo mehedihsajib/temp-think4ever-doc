@@ -665,20 +665,29 @@ function generateBreadcrumb() {
 
   const sidebar = activeLink.closest('.cgs-sidebar, .admin-sidebar');
   let topTitle = "Documentation";
+  let topI18n = "";
   if (sidebar) {
     const headerTitle = sidebar.querySelector('.cgs-sidebar-header span, .admin-sidebar-header span, h5 span');
-    if (headerTitle) topTitle = headerTitle.textContent.trim();
+    if (headerTitle) {
+      topTitle = headerTitle.textContent.trim();
+      topI18n = headerTitle.getAttribute("data-i18n") || "";
+    }
   }
 
   let sectionTitle = "";
+  let sectionI18n = "";
   const navSection = activeLink.closest('.cgs-nav-section');
   if (navSection) {
     const sectionLabel = navSection.querySelector('.cgs-nav-section-label');
-    if (sectionLabel) sectionTitle = sectionLabel.textContent.trim();
+    if (sectionLabel) {
+      sectionTitle = sectionLabel.textContent.trim();
+      sectionI18n = sectionLabel.getAttribute("data-i18n") || "";
+    }
   }
 
   const pageTitleSpan = activeLink.querySelector('span');
   const pageTitle = pageTitleSpan ? pageTitleSpan.textContent.trim() : activeLink.textContent.trim();
+  const pageI18n = pageTitleSpan ? (pageTitleSpan.getAttribute("data-i18n") || "") : (activeLink.getAttribute("data-i18n") || "");
 
   const breadcrumbNav = document.createElement('nav');
   breadcrumbNav.id = 'dynamic-breadcrumb';
@@ -691,24 +700,29 @@ function generateBreadcrumb() {
     </li>`;
 
   if (topTitle) {
+    const i18nAttr = topI18n ? ` data-i18n="${topI18n}"` : "";
     html += `
     <li class="separator"><i class="fa-solid fa-chevron-right"></i></li>
-    <li><span class="breadcrumb-item">${topTitle}</span></li>`;
+    <li><span class="breadcrumb-item"${i18nAttr}>${topTitle}</span></li>`;
   }
 
   if (sectionTitle) {
+    const i18nAttr = sectionI18n ? ` data-i18n="${sectionI18n}"` : "";
     html += `
     <li class="separator"><i class="fa-solid fa-chevron-right"></i></li>
-    <li><span class="breadcrumb-item">${sectionTitle}</span></li>`;
+    <li><span class="breadcrumb-item"${i18nAttr}>${sectionTitle}</span></li>`;
   }
 
+  const pageI18nAttr = pageI18n ? ` data-i18n="${pageI18n}"` : "";
   html += `
     <li class="separator"><i class="fa-solid fa-chevron-right"></i></li>
-    <li class="current" aria-current="page">${pageTitle}</li>
+    <li class="current" aria-current="page"><span${pageI18nAttr}>${pageTitle}</span></li>
   </ol>`;
 
   breadcrumbNav.innerHTML = html;
   
+  if (window.I18n) window.I18n.applyToDOM(breadcrumbNav);
+
   const pageTitleEl = mainContent.querySelector('.cd-page-title, .md-page-title, h1');
   if (pageTitleEl) {
     mainContent.insertBefore(breadcrumbNav, pageTitleEl);
