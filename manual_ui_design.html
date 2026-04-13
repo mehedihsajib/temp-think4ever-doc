@@ -27,7 +27,7 @@
       }
 
       .modern-header {
-        font-family: "Inter", sans-serif;
+        font-family: 'Inter', sans-serif;
         position: fixed;
         top: 0;
         left: 0;
@@ -128,7 +128,7 @@
         color: #0f172a;
         font-size: 1.15rem;
         font-weight: 700;
-        font-family: "Inter", sans-serif;
+        font-family: 'Inter', sans-serif;
         margin-top: 32px;
         margin-bottom: 12px;
       }
@@ -136,7 +136,7 @@
       .cd-sub-heading-orange {
         font-size: 1.15rem;
         font-weight: 700;
-        font-family: "Inter", sans-serif;
+        font-family: 'Inter', sans-serif;
         margin-top: 32px;
         margin-bottom: 12px;
       }
@@ -155,7 +155,7 @@
 
       .cd-overview-ul li {
         margin-bottom: 16px;
-        font-family: "Inter", sans-serif;
+        font-family: 'Inter', sans-serif;
         font-size: 0.95rem;
         color: #475569;
         line-height: 1.6;
@@ -167,7 +167,7 @@
       }
 
       .cd-overview-p {
-        font-family: "Inter", sans-serif;
+        font-family: 'Inter', sans-serif;
         font-size: 1rem;
         color: #475569;
         line-height: 1.7;
@@ -241,6 +241,106 @@
         <div id="consumerSidebar"></div>
 
         <main class="cd-main-content" id="cd-main">
+          <!-- merge content -->
+          <h1 class="cd-page-title" data-i18n="dev_dd.title">
+            Design and Docs
+          </h1>
+
+          <div class="doc-section">
+            <img
+              src="assets/images/design-and-docs.jpg"
+              alt="Design and Docs Sidebar Menu"
+              class="demo-img"
+            />
+
+            <p class="cd-overview-p" data-i18n-html="dev_dd.intro_1">
+              <strong>Design & Docs</strong>, serves as a centralized hub for
+              managing project-related visual and technical documentation. It
+              provides a quick overview of the assets currently associated with
+              your project.
+            </p>
+
+            <p
+              class="cd-overview-p"
+              style="font-weight: 700; color: #0f172a"
+              data-i18n="dev_dd.intro_2"
+            >
+              It has 3 submenus:
+            </p>
+
+            <h3 class="cd-sub-heading" data-i18n="dev_dd.sub1_title">
+              UI Designs
+            </h3>
+            <p class="cd-overview-p" data-i18n="dev_dd.sub1_desc">
+              This submenu is your primary workspace for all
+              <strong>visual assets</strong> related to the user interface. It
+              is currently highlighted, indicating it is the active view.
+            </p>
+            <ul class="cd-overview-ul">
+              <li>
+                <strong data-i18n="dev_dd.purpose">Purpose:</strong>
+                <span data-i18n="dev_dd.sub1_p"
+                  >Stores high-fidelity mockups, wireframes, and interactive
+                  prototypes.</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="dev_dd.count">Current Count:</strong>
+                <span data-i18n-html="dev_dd.sub1_c"
+                  ><strong>30</strong> items.</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="dev_dd.best_for">Best For:</strong>
+                <span data-i18n="dev_dd.sub1_b"
+                  >Reviewing screen layouts, branding elements, and user flow
+                  animations.</span
+                >
+              </li>
+            </ul>
+
+            <h3 class="cd-sub-heading" data-i18n="dev_dd.sub2_title">
+              Technical Diagrams
+            </h3>
+            <p class="cd-overview-p" data-i18n-html="dev_dd.sub2_desc">
+              This submenu organizes the
+              <strong>structural and logic-based</strong> visualizations of the
+              project.
+            </p>
+            <ul class="cd-overview-ul">
+              <li>
+                <strong data-i18n="dev_dd.purpose">Purpose:</strong>
+                <span data-i18n="dev_dd.sub2_p"
+                  >Houses system architecture maps, flowcharts,
+                  entity-relationship diagrams (ERDs), and sequence
+                  diagrams.</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="dev_dd.count">Current Count:</strong>
+                <span data-i18n-html="dev_dd.sub2_c"
+                  ><strong>14</strong> items.</span
+                >
+              </li>
+              <li>
+                <strong data-i18n="dev_dd.best_for">Best For:</strong>
+                <span data-i18n="dev_dd.sub2_b"
+                  >Understanding the underlying technical framework and how data
+                  moves through the system.</span
+                >
+              </li>
+            </ul>
+
+            <h3 class="cd-sub-heading" data-i18n="dev_dd.sub3_title">
+              Requirements Docs
+            </h3>
+            <p class="cd-overview-p" data-i18n-html="dev_dd.sub3_desc">
+              This submenu acts as the repository for
+              <strong>formal project documentation</strong> and written
+              specifications.
+            </p>
+          </div>
+          <!-- merge content -->
           <h1 class="cd-page-title" data-i18n="dev_ui.title">UI Designs</h1>
 
           <div class="doc-section">
@@ -505,79 +605,6 @@
             </div>
 
             <!-- New Content: Responsiveness -->
-            <div style="margin-top: 64px">
-              <h3
-                class="cd-sub-heading-orange"
-                data-i18n="dev_ui.resp_title"
-                style="color: #1d4ed8"
-              >
-                Responsiveness
-              </h3>
-              <p class="cd-overview-p" data-i18n-html="dev_ui.resp_intro">
-                In the top-center of the interface, you can find the
-                <strong
-                  >device toggle icons (Desktop, Tablet, and Mobile)</strong
-                >
-                used to preview how the layout adapts to various screen sizes.
-              </p>
-
-              <ul
-                class="cd-overview-ul"
-                style="list-style: none; padding-left: 0"
-              >
-                <li>
-                  <strong
-                    data-i18n="dev_ui.resp_desk_title"
-                    style="
-                      display: block;
-                      font-size: 1.05rem;
-                      margin-bottom: 4px;
-                    "
-                    >Desktop View</strong
-                  >
-                  <span data-i18n-html="dev_ui.resp_desk_desc"
-                    >The default current view – this is optimized for large
-                    screens, offering a spacious and organized layout.</span
-                  >
-                </li>
-                <li style="margin-top: 24px">
-                  <strong
-                    data-i18n="dev_ui.resp_tab_title"
-                    style="
-                      display: block;
-                      font-size: 1.05rem;
-                      margin-bottom: 4px;
-                    "
-                    >Tablet View</strong
-                  >
-                  <span data-i18n-html="dev_ui.resp_tab_desc"
-                    >In this mode, the interface shifts to accommodate mid-sized
-                    touchscreens.</span
-                  >
-                </li>
-                <li style="margin-top: 24px">
-                  <strong
-                    data-i18n="dev_ui.resp_mob_title"
-                    style="
-                      display: block;
-                      font-size: 1.05rem;
-                      margin-bottom: 4px;
-                    "
-                    >Mobile View</strong
-                  >
-                  <span data-i18n-html="dev_ui.resp_mob_desc"
-                    >The mobile view prioritizes vertical stacking to ensure
-                    readability on small screens.</span
-                  >
-                </li>
-              </ul>
-
-              <img
-                src="assets/images/ui-design-8.jpg"
-                alt="Responsiveness Toggle"
-                class="demo-img"
-              />
-            </div>
 
             <!-- New Content: Modify Page Assistant -->
             <div style="margin-top: 64px">
@@ -729,8 +756,81 @@
                 Other Options:
               </h3>
               <img
-                src="assets/images/ui-design-9.jpg"
+                src="assets/images/ui-design-8.jpg"
                 alt="Other context menu options mapping"
+                class="demo-img"
+              />
+            </div>
+            <div style="margin-top: 64px">
+              <h3
+                class="cd-sub-heading-orange"
+                data-i18n="dev_ui.resp_title"
+                style="color: #1d4ed8"
+              >
+                Responsiveness
+              </h3>
+              <p class="cd-overview-p" data-i18n-html="dev_ui.resp_intro">
+                In the top-center of the interface, you can find the
+                <strong
+                  >device toggle icons (Desktop, Tablet, and Mobile)</strong
+                >
+                used to preview how the layout adapts to various screen sizes.
+              </p>
+
+              <ul
+                class="cd-overview-ul"
+                style="list-style: none; padding-left: 0"
+              >
+                <li>
+                  <strong
+                    data-i18n="dev_ui.resp_desk_title"
+                    style="
+                      display: block;
+                      font-size: 1.05rem;
+                      margin-bottom: 4px;
+                    "
+                    >Desktop View</strong
+                  >
+                  <span data-i18n-html="dev_ui.resp_desk_desc"
+                    >The default current view – this is optimized for large
+                    screens, offering a spacious and organized layout.</span
+                  >
+                </li>
+                <li style="margin-top: 24px">
+                  <strong
+                    data-i18n="dev_ui.resp_tab_title"
+                    style="
+                      display: block;
+                      font-size: 1.05rem;
+                      margin-bottom: 4px;
+                    "
+                    >Tablet View</strong
+                  >
+                  <span data-i18n-html="dev_ui.resp_tab_desc"
+                    >In this mode, the interface shifts to accommodate mid-sized
+                    touchscreens.</span
+                  >
+                </li>
+                <li style="margin-top: 24px">
+                  <strong
+                    data-i18n="dev_ui.resp_mob_title"
+                    style="
+                      display: block;
+                      font-size: 1.05rem;
+                      margin-bottom: 4px;
+                    "
+                    >Mobile View</strong
+                  >
+                  <span data-i18n-html="dev_ui.resp_mob_desc"
+                    >The mobile view prioritizes vertical stacking to ensure
+                    readability on small screens.</span
+                  >
+                </li>
+              </ul>
+
+              <img
+                src="assets/images/ui-design-10.jpg"
+                alt="Responsiveness Toggle"
                 class="demo-img"
               />
             </div>
@@ -742,7 +842,7 @@
     <script src="assets/js/navigation.js"></script>
     <script src="assets/js/consumer_docs_home.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
+      document.addEventListener('DOMContentLoaded', () => {
         if (window.I18n) {
           window.I18n.init();
         }
