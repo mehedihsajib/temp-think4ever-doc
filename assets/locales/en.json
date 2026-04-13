@@ -2297,7 +2297,7 @@
     "f1_desc": "Map out the \"big ideas\" of your software to ensure all required functionality is accounted for."
   },
   "dev_bf": {
-    "title": "3. Business Flows",
+    "title": "Business Flows",
     "intro": "Business Flows visualize the step-by-step journey a user takes to complete a task.",
     "f1_title": "Example:",
     "f1_desc": "The sequence of events from a student uploading a PDF to the AI generating a summary and quiz.",
@@ -2313,7 +2313,7 @@
     "f2_desc": "Define properties (e.g., email, timestamp, score) and how these objects relate to one another."
   },
   "dev_roles": {
-    "title": "5. Roles & Permissions",
+    "title": "Roles & Permissions",
     "intro": "Security starts here. Define what different user types can see and do within the application.",
     "f1_title": "Example:",
     "f1_desc": "An Admin can delete users, while a Student can only view their own study materials.",

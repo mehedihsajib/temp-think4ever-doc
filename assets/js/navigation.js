@@ -95,14 +95,22 @@ function toggleTheme() {
 
 function initThemeToggle() {
   if (!document.body) return;
-  if (document.getElementById("themeToggle")) return;
 
-  const button = document.createElement("button");
-  button.id = "themeToggle";
-  button.className = "theme-toggle";
-  button.type = "button";
-  button.setAttribute("aria-live", "polite");
-  button.innerHTML = `
+  const mountTarget =
+    document.getElementById("docThemeToggleMount") ||
+    document.getElementById("lpThemeToggleMount");
+
+  if (!mountTarget) return;
+
+  let button = document.getElementById("themeToggle");
+
+  if (!button) {
+    button = document.createElement("button");
+    button.id = "themeToggle";
+    button.className = "theme-toggle";
+    button.type = "button";
+    button.setAttribute("aria-live", "polite");
+    button.innerHTML = `
     <span class="theme-toggle-track" aria-hidden="true">
       <span class="theme-toggle-icon theme-toggle-icon-sun">
         <i class="fa-solid fa-sun"></i>
@@ -114,8 +122,13 @@ function initThemeToggle() {
     </span>
   `;
 
-  button.addEventListener("click", toggleTheme);
-  document.body.appendChild(button);
+    button.addEventListener("click", toggleTheme);
+  }
+
+  if (button.parentElement !== mountTarget) {
+    mountTarget.appendChild(button);
+  }
+
   initSavedTheme();
 }
 
@@ -589,6 +602,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (window.I18n) window.I18n.applyToDOM(el);
       initMobileMenu();
       initHeaderNavDropdowns();
+      initThemeToggle();
     },
   });
 
