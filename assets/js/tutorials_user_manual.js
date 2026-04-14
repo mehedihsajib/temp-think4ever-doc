@@ -53,6 +53,12 @@
           id: "kqRaUoV8K-E",
         },
         {
+          pageId: "manual_concept",
+          pageTitle: "Concept",
+          videoTitle: "Raw ideas to Clear Concepts",
+          id: "o0vO3k-Z3cg",
+        },
+        {
           pageId: "manual_business_flow",
           pageTitle: "Business Flow",
           videoTitle: "Business Flow - the heart of your project",

@@ -42,6 +42,17 @@ function toBasePath(path) {
   return base + cleanPath;
 }
 
+function ensureGlobalFavicon() {
+  const existing = document.querySelector("link[rel='icon'], link[rel='shortcut icon']");
+  if (existing) return;
+
+  const link = document.createElement("link");
+  link.rel = "icon";
+  link.type = "image/png";
+  link.href = toBasePath("assets/images/favicon.png");
+  document.head.appendChild(link);
+}
+
 // ===============================
 // Theme (Light / Dark)
 // ===============================
@@ -590,6 +601,7 @@ document.addEventListener("DOMContentLoaded", initGlobalImageLightbox);
 // INIT
 // ===============================
 document.addEventListener("DOMContentLoaded", function () {
+  ensureGlobalFavicon();
   initThemeToggle();
   const currentPage = getCurrentPage();
 

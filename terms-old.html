@@ -1,0 +1,1773 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms of Service</title>
+    <link href="css/theme.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://www.think4ever.com/docs/assets/css/global.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://www.think4ever.com/docs/assets/css/terms_of_service.css"
+    />
+    <style>
+      /* Basic reset for preview consistency */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+
+      .tos-list {
+        list-style-type: disc;
+        padding-left: 20px;
+      }
+
+      .tos-list.number {
+        list-style-type: decimal;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary: #6366f1;
+        --primary-dark: #4f46e5;
+        --secondary: #8b5cf6;
+        --accent: #ec4899;
+        --dark: #0f172a;
+        --light: #f8fafc;
+        --gradient: #667eea;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        line-height: 1.6;
+        color: var(--dark);
+        overflow-x: hidden;
+        background: var(--light);
+      }
+
+      /* Navigation */
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 1rem 5%;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      nav.scrolled {
+        padding: 0.5rem 5%;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        font-size: 1.8rem;
+        font-weight: 800;
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        letter-spacing: -1px;
+      }
+
+      .logo img {
+        height: 50px;
+        width: auto;
+        margin-right: 10px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--dark);
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary);
+      }
+
+      /* Mobile Menu */
+      .mobile-menu-btn {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 5px;
+      }
+
+      .mobile-menu-btn span {
+        width: 25px;
+        height: 3px;
+        background: var(--dark);
+        margin: 3px 0;
+        transition: 0.3s;
+      }
+
+      .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background: white;
+        z-index: 1001;
+        transition: right 0.3s ease;
+        padding: 80px 20px 20px;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .mobile-menu.active {
+        right: 0;
+      }
+
+      .mobile-menu a {
+        display: block;
+        padding: 15px 0;
+        color: var(--dark);
+        text-decoration: none;
+        font-weight: 500;
+        border-bottom: 1px solid #f1f5f9;
+      }
+
+      .mobile-menu a:hover {
+        color: var(--primary);
+      }
+
+      .mobile-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        display: none;
+      }
+
+      .mobile-overlay.active {
+        display: block;
+      }
+
+      /* Contact Popup */
+      .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 2000;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .popup-overlay.active {
+        display: flex;
+      }
+
+      .contact-popup {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        max-width: 500px;
+        width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: relative;
+        animation: popupFadeIn 0.3s ease;
+      }
+
+      .close-popup {
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        font-size: 30px;
+        cursor: pointer;
+        color: #64748b;
+        transition: color 0.3s ease;
+      }
+
+      .close-popup:hover {
+        color: var(--primary);
+      }
+
+      .contact-popup h2 {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .contact-popup p {
+        color: #64748b;
+        margin-bottom: 2rem;
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: var(--dark);
+        font-weight: 500;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 12px 16px;
+        border: 2px solid #e2e8f0;
+        border-radius: 10px;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+        background: #fafbfc;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: var(--primary);
+        background: white;
+      }
+
+      .form-group textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+
+      .submit-btn {
+        width: 100%;
+        background: var(--gradient);
+        color: white;
+        padding: 15px;
+        border: none;
+        border-radius: 50px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+      }
+
+      .submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+      }
+
+      .submit-btn:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .success-message {
+        background: #10b981;
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .error-message {
+        background: #ef4444;
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      /* Hero Section */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 0 5%;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        z-index: 2;
+      }
+
+      .hero-text h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: fadeInUp 0.8s ease;
+      }
+
+      .hero-text p {
+        font-size: 1.25rem;
+        color: #64748b;
+        margin-bottom: 2rem;
+        animation: fadeInUp 0.8s ease 0.2s both;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 1.5rem;
+        animation: fadeInUp 0.8s ease 0.4s both;
+      }
+
+      .primary-button {
+        background: var(--gradient);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        display: inline-block;
+        border: none;
+        cursor: pointer;
+      }
+
+      .primary-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+      }
+
+      .secondary-button {
+        background: white;
+        color: var(--primary);
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: 2px solid var(--primary);
+        display: inline-block;
+      }
+
+      .secondary-button:hover {
+        background: var(--primary);
+        color: white;
+        transform: translateY(-2px);
+      }
+
+      .hero-visual {
+        position: relative;
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .floating-elements {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      .floating-circle {
+        position: absolute;
+        border-radius: 50%;
+        background: linear-gradient(
+          135deg,
+          rgba(99, 102, 241, 0.1) 0%,
+          rgba(139, 92, 246, 0.1) 100%
+        );
+        animation: float 8s ease-in-out infinite;
+      }
+
+      .circle-1 {
+        width: 400px;
+        height: 400px;
+        top: -50px;
+        right: -50px;
+        animation-delay: 0s;
+      }
+
+      .circle-2 {
+        width: 300px;
+        height: 300px;
+        bottom: -50px;
+        left: -50px;
+        animation-delay: 2s;
+      }
+
+      .circle-3 {
+        width: 200px;
+        height: 200px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation-delay: 4s;
+      }
+
+      /* Why AI Agents Section */
+      .why-agents {
+        padding: 100px 5%;
+        background: #fafbfc;
+      }
+
+      .why-agents-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .why-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        margin-bottom: 4rem;
+      }
+
+      .why-text h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .why-text p {
+        font-size: 1.1rem;
+        color: #64748b;
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+      }
+
+      .why-visual {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+
+      .why-card {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+      }
+
+      .why-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .why-card h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        color: var(--dark);
+      }
+
+      .why-card p {
+        font-size: 0.9rem;
+        color: #64748b;
+      }
+
+      /* Features Section */
+      .features {
+        padding: 100px 5%;
+        background: white;
+      }
+
+      .features-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      .section-header h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .section-header p {
+        font-size: 1.25rem;
+        color: #64748b;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .feature-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        border: 1px solid #f1f5f9;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .feature-icon {
+        width: 60px;
+        height: 60px;
+        background: var(--gradient);
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        color: white;
+      }
+
+      .icon-rocket::before {
+        content: "▲";
+      }
+      .icon-brain::before {
+        content: "◆";
+      }
+      .icon-link::before {
+        content: "◈";
+      }
+      .icon-shield::before {
+        content: "■";
+      }
+      .icon-chart::before {
+        content: "▪";
+      }
+      .icon-globe::before {
+        content: "●";
+      }
+
+      .feature-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: var(--dark);
+      }
+
+      .feature-card p {
+        color: #64748b;
+        line-height: 1.8;
+      }
+
+      /* How It Works Section */
+      .how-it-works {
+        padding: 100px 5%;
+        background: #fafbfc;
+      }
+
+      .how-it-works-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .process-steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 3rem;
+        margin-top: 4rem;
+      }
+
+      .process-step {
+        text-align: center;
+        position: relative;
+      }
+
+      .step-number {
+        width: 60px;
+        height: 60px;
+        background: var(--gradient);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+      }
+
+      .process-step h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        color: var(--dark);
+      }
+
+      .process-step p {
+        color: #64748b;
+        line-height: 1.6;
+      }
+
+      /* Vision Section */
+      .vision {
+        padding: 100px 5%;
+        background: white;
+      }
+
+      .vision-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .vision-content {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .vision-content h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 2rem;
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .vision-content p {
+        font-size: 1.2rem;
+        color: #64748b;
+        margin-bottom: 2rem;
+        line-height: 1.8;
+      }
+
+      .vision-points {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 4rem;
+        text-align: left;
+      }
+
+      .vision-point {
+        background: #fafbfc;
+        padding: 2rem;
+        border-radius: 15px;
+        border-left: 4px solid var(--primary);
+      }
+
+      .vision-point h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        color: var(--dark);
+      }
+
+      .vision-point p {
+        color: #64748b;
+        line-height: 1.6;
+      }
+
+      /* Stats Section */
+      .stats {
+        padding: 100px 5%;
+        background: #667eea;
+        color: white;
+      }
+
+      .stats-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 3rem;
+        text-align: center;
+      }
+
+      .stat-item {
+        animation: fadeInUp 0.8s ease;
+      }
+
+      .stat-number {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+      }
+
+      .stat-label {
+        font-size: 1.25rem;
+        opacity: 0.9;
+      }
+
+      /* CTA Section */
+      .cta-section {
+        padding: 100px 5%;
+        background: white;
+        text-align: center;
+      }
+
+      .cta-content {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .cta-content h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .cta-content p {
+        font-size: 1.25rem;
+        color: #64748b;
+        margin-bottom: 2rem;
+      }
+
+      /* Footer */
+      footer {
+        padding: 50px 5%;
+        background: var(--dark);
+        color: white;
+        text-align: center;
+      }
+
+      .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .footer-bottom {
+        color: #94a3b8;
+      }
+
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .footer-bottom ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+
+      .footer-bottom ul a {
+        text-decoration: none;
+        color: #94a3b8;
+        transition: all 0.3s ease;
+      }
+
+      .footer-bottom ul a:hover {
+        transition: all 0.3s ease;
+        color: white;
+      }
+
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      @keyframes popupFadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+
+        .mobile-menu-btn {
+          display: flex;
+        }
+
+        .hero-content {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .hero-text h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .hero-visual {
+          display: none;
+        }
+
+        .why-content {
+          grid-template-columns: 1fr;
+        }
+
+        .section-header h2 {
+          font-size: 2rem;
+        }
+
+        .stat-number {
+          font-size: 2.5rem;
+        }
+
+        .contact-popup {
+          padding: 30px 20px;
+          margin: 10px;
+        }
+
+        .contact-popup h2 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tos-page">
+      <!-- Skip to content -->
+      <a
+        href="#tos-main-content"
+        class="sr-only"
+        style="
+          position: absolute;
+          left: -9999px;
+          top: auto;
+          width: 1px;
+          height: 1px;
+          overflow: hidden;
+        "
+        >Skip to main content</a
+      >
+
+      <!-- Site Header -->
+      <!-- <header class="modern-header" id="consumerHeader"></header> -->
+      <!-- Navigation -->
+      <nav id="navbar">
+        <div class="nav-container">
+          <div class="logo">
+            <a href="index.html">
+              <img src="images/thihnkforeverlogo.png" alt="think4ever logo" />
+            </a>
+          </div>
+        </div>
+      </nav>
+      <!-- Main Content -->
+      <main class="tos-main" id="tos-main-content">
+        <div class="tos-container">
+          <!-- Page Title -->
+          <h1 class="tos-page-title" id="tos_title">Terms of Service</h1>
+          <!-- Last Updated -->
+          <!-- <div class="tos-last-updated" id="tos_last_updated">
+            <i class="fa fa-calendar-alt"></i>
+            <span>Last Updated: April 13, 2026</span>
+          </div> -->
+
+          <!-- Terms of Service Content -->
+          <div class="tos-content" id="tos_content">
+            <section class="tos-section">
+              <h3>USER AGREEMENT (INDIVIDUAL)</h3>
+              <h3>Article 1. PURPOSE OF THE AGREEMENT:</h3>
+              <p>
+                The Think4Ever Global Inc (hereinafter, "Think4Ever Global
+                Inc"), as part of its attributions, makes available to its
+                individual customers, holders of individual accounts or joint
+                accounts opened in their books, (hereinafter, "the USER"),
+                internet access, (hereinafter, the Think4Ever Global Inc
+                service) allowing them to carry out various digital wallet
+                transactions, in particular:
+              </p>
+              <ul class="tos-list">
+                <li>Think4Ever Global Inc registration</li>
+                <li>Scan QR of Merchant Stores</li>
+                <li>
+                  Wallet fund transfer to another Think4Ever Global Inc Users
+                </li>
+                <li>Payment and Mobile Top-Up</li>
+                <li>Send money to Email or Phone Number</li>
+              </ul>
+              <p>
+                This agreement defines the terms and conditions of access and
+                operation of the online service.
+              </p>
+              <p>
+                For greater certainty, all of the Bank's agreements previously
+                signed by the user will continue to apply.
+              </p>
+            </section>
+            <section class="tos-section">
+              <h3>Article 2.- REGISTRATION FOR THE SERVICE</h3>
+              <p>
+                Any natural or legal person, legally capable, holder of an
+                individual account or joint account opened in the books of
+                Think4Ever Global Inc, of a credit, debit or prepaid card,
+                denominated in HTG or USD will be able to benefit from all the
+                online services offered by Think4Ever Global Inc as they become
+                available.
+              </p>
+              <p>
+                During the registration process and before final acceptance, the
+                customer will have access to all accounts.
+              </p>
+            </section>
+            <section class="tos-section">
+              <h3>Article 3.- METHODS OF IDENTIFICATION</h3>
+              <ul class="tos-list number">
+                <li>
+                  Access to the service is dependent on an access code
+                  consisting of a username and password chosen by the
+                  cardholder.
+                </li>
+                <li>
+                  As the password is confidential, the user will take all
+                  measures to ensure its conservation and security, by not
+                  communicating it to third parties. Therefore, any operation
+                  initiated from the username is presumed to be from the user
+                  himself.
+                </li>
+                <li>
+                  In the case of a joint or collective account, access to the
+                  service is granted to all co-holders, agents or co-signatories
+                  of the account. However, the latter are jointly and severally
+                  obliged to strictly comply with the online banking agreement
+                  as established by the bank and to comply with its terms.
+                </li>
+              </ul>
+              <p>
+                "Users" means any natural person to whom Think4Ever Global Inc
+                gives access to accounts domiciled at his or her premises from
+                online banking services.
+              </p>
+              <p>
+                ''Security PIN or OTP'' means a one-time security code sent to
+                the customer to authorize certain types of electronic
+                transactions.
+              </p>
+              <p>
+                "Confirmation Number" means the number provided to the Customer
+                by Think4Ever Global Inc to confirm the execution of an
+                electronic transaction. This number may be used by the customer
+                for follow-up or complaint purposes.
+              </p>
+            </section>
+            <section class="tos-section">
+              <h3>Article 4.- ADDITION OF ACCOUNTS</h3>
+              <p>
+                If the customer is already a member, any new account will be
+                automatically included in his or her assets. If the latter does
+                not wish to do so, he will contact the department concerned,
+                which will take it into account.
+              </p>
+            </section>
+            <section class="tos-section">
+              <h3>
+                Article 5.- RIGHTS AND OBLIGATIONS OF Think4Ever Global Inc
+                Online
+              </h3>
+              <p>
+                Think4Ever Global Inc ensures the proper execution of the orders
+                received and the confidentiality of the personal information
+                collected as part of the service. It undertakes not to disclose
+                or transmit it except in the event of management of this
+                information or within the framework of legal and regulatory
+                obligations. In this respect, it reminds the user that, except
+                in cases where the law provides for it, professional secrecy
+                cannot be invoked against Think4Ever Global Inc or the judicial
+                authority acting in the context of criminal proceedings.
+              </p>
+              <ul class="tos-list number">
+                <li>
+                  In order to ensure optimal security for its subscribers,
+                  Think4Ever Global Inc undertakes to never communicate, even if
+                  the request seems to come from the online service, the
+                  password by telephone.
+                </li>
+                <li>
+                  Think4Ever Global Inc Online undertakes to implement and make
+                  all possible efforts on a technical level to ensure the proper
+                  functioning of the online services, as well as the
+                  confidentiality of the information communicated. It may also,
+                  without prior notice, block the connection in the event of a
+                  fraudulent maneuver or interrupt the service without having to
+                  justify itself or be held responsible for the consequences
+                  that would result.
+                </li>
+              </ul>
+            </section>
+            <section class="tos-section">
+              <h3>Article 6.- Rights of the USER</h3>
+              <p>
+                The User, within the framework of this Agreement, undertakes to:
+              </p>
+              <ul class="tos-list">
+                <li>
+                  Provide Think4Ever Global Inc with any personal information
+                  required for the purposes of its identification and the
+                  creation of its file;
+                </li>
+                <li>Do not communicate your password to third parties;</li>
+                <li>
+                  Change your password yourself in the event that it is
+                  accessible by third parties;
+                </li>
+                <li>
+                  Assume any loss and/or pecuniary consequences resulting from
+                  the use of his/her access code as a result of his/her
+                  negligence;
+                </li>
+                <li>
+                  Verify the transactions made on his/her account(s) and notify
+                  the bank of any related errors;
+                </li>
+                <li>
+                  Not to use the infrastructure and system made available to
+                  them by Think4Ever Global Inc in a manner contrary to this
+                  agreement, in a fraudulent or illegal manner and/or in a
+                  manner detrimental to the security and efficiency of the
+                  Service;
+                </li>
+                <li>
+                  Not to carry out any illicit transactions using this service;
+                </li>
+              </ul>
+              <p>
+                The company and its designated users jointly and severally
+                undertake not to use the services in violation of the
+                instructions issued by Think4Ever Global Inc, in a fraudulent or
+                illegal manner and/or in a manner detrimental to the security
+                and efficiency of said service. It also undertakes not to carry
+                out, from this site, any illicit transaction that could harm the
+                Think4Ever Global Inc site and/or third parties.
+              </p>
+            </section>
+            <section class="tos-section">
+              <h3>Article 7.- LIMITATION OF LIABILITY</h3>
+              <ul class="tos-list">
+                <li>
+                  Think4Ever Global Inc Online uses high-performance security
+                  tools, but it cannot guarantee the total security of the data
+                  transmitted on the online services;
+                </li>
+                <li>
+                  It cannot be held liable when the non-performance of its
+                  obligations results from elements beyond its control;
+                </li>
+                <li>
+                  Nor can it be held liable in the event of fraudulent access to
+                  the customer's information by means of messages from third
+                  parties usurping the identity of the bank;
+                </li>
+                <li>
+                  Think4Ever Global Inc Online does not guarantee the
+                  operational security of telecom networks. It cannot,
+                  therefore, be held liable with regard to the transport of
+                  information or the consequences resulting from a lack of
+                  security or reliability of the connection terminal used by the
+                  customer;
+                </li>
+                <li>
+                  Nor can Think4Ever Global Inc Online assume the consequences
+                  that would result from a transmission or handling error on the
+                  part of the customer.
+                </li>
+              </ul>
+              <p>
+                In the event of any discrepancy between the information
+                appearing on the site and that recorded on the bank statement,
+                the parties expressly agree that the latter shall prevail.
+              </p>
+              <p>
+                Transactions made by Think4Ever Global Inc Online will
+                automatically obtain an internal reference number. Each
+                transaction carried out will be kept by the Bank in electronic
+                format. If necessary, the recording will serve as proof.
+              </p>
+              <p>
+                Transactions will be executed subject to the available balance
+                of the account and the User's other commitments to Think4Ever
+                Global Inc. All transactions made via Think4Ever Global Inc
+                Online or MaThink4Ever Global Inc will be recorded according to
+                the banking and financial standards of imputation.
+              </p>
+              <p>
+                Any transaction initiated online requiring follow-up in branch
+                such as: bank certificates, delivery of executive checks,
+                checkbook delivery, etc. will be available at the location of
+                the customer's choice within one (1) business day (weekdays).
+              </p>
+            </section>
+            <section class="tos-section">
+              <h3>Article 8.- USE OF THE SERVICE</h3>
+              <p>
+                Membership of Think4Ever Global Inc online services allows the
+                user to consult all the accounts attached to his assets.
+              </p>
+              <p>
+                Think4Ever Global Inc Online offers the user who accepts it, a
+                service allowing him to access his assets remotely and to carry
+                out the various banking transactions listed in Article 1 through
+                the Internet.
+              </p>
+              <p>
+                The user who subscribes to the Think4Ever Global Inc Online
+                service expressly acknowledges that he or she has read all the
+                information on the content of the service, its characteristics,
+                its availability and its operating methods.
+              </p>
+            </section>
+            <section class="tos-section">
+              <h3>Article 9 - DURATION AND TERMINATION OF THE CONTRACT</h3>
+              <p>
+                Membership of the Online Service is concluded for a full period
+                of one (1) year, renewable by tacit agreement, unless otherwise
+                specified by one of the two parties. It will come into force
+                from the date of confirmation of the acceptance by the
+                Administration of Think4Ever Global Inc Online of the Company's
+                membership.
+              </p>
+              <p>
+                The user who does not wish to renew this agreement shall notify
+                the Think4Ever Global Inc Online Administration by letter with
+                acknowledgement of receipt at least one (1) month before its
+                expiry date.
+              </p>
+              <p>
+                Termination of the membership contract will result in the
+                automatic interruption of the Think4Ever Global Inc Online
+                service. In this case, the customer will no longer be able to
+                consult his assets or carry out transactions online.
+              </p>
+            </section>
+            <section class="tos-section">
+              <h3>Article 10 - MODIFICATION OF THE SERVICE</h3>
+              <p>
+                In view of technological developments and possible improvements
+                to the service, Think4Ever Global Inc Online reserves the right
+                to change the scope of the services offered online at any time
+                and to make appropriate changes to the conditions of this
+                agreement. The customer will be notified prior to the effective
+                date.
+              </p>
+            </section>
+            <section class="tos-section">
+              <h3>Article 11: COMPLAINT</h3>
+              <p>
+                The fact that Think4Ever Global Inc refrains from claiming or
+                belatedly claiming the application of any of the clauses
+                contained in this agreement does not imply any waiver of its
+                rights or acquiescence.
+              </p>
+              <p>
+                Any complaint must then be made within the deadline, by
+                registered letter with acknowledgement of receipt addressed to
+                the Think4Ever Global Inc Online Administration.
+              </p>
+            </section>
+            <section class="tos-section">
+              <h3>Article 12: TERMINATION</h3>
+              <p>
+                Think4Ever Global Inc may terminate this agreement in the
+                following cases:
+              </p>
+              <ol class="tos-list number">
+                <li>Death of the USER;</li>
+                <li>Fraudulent use of the Service by the USER;</li>
+                <li>
+                  Failure by the USER to comply with its obligations, as defined
+                  by this agreement;
+                </li>
+                <li>Upon formal request of the customer;</li>
+                <li>In any other case deemed necessary by the Bank.</li>
+              </ol>
+            </section>
+            <section class="tos-section">
+              <h3>Article 13: DISPUTES AND GENERAL PROVISIONS</h3>
+              <p>
+                The parties undertake to perform the clauses of this contract in
+                good faith. In the event of a dispute relating to a banking
+                transaction carried out from the Service, the USER agrees to
+                contact a representative of Think4Ever Global Inc in order to
+                resolve the dispute amicably. To this end, the USER undertakes
+                to cooperate with Think4Ever Global Inc by providing it with any
+                information, document, data that may advance the investigation
+                that will be carried out by the ad hoc services of Think4Ever
+                Global Inc. In the event of failure by amicable means, the
+                dispute will be submitted to the competent jurisdiction of the
+                Haitian courts.
+              </p>
+              <p>
+                For anything that has not been the subject of a special clause,
+                the parties agree to refer to the legal provisions in force of
+                the Republic of Haiti governing the matter.
+              </p>
+              <p>
+                It is understood that the terms and conditions of other
+                agreements and/or contracts concluded between the USER and
+                Think4Ever Global Inc remain enforceable.
+              </p>
+            </section>
+            <section class="tos-section">
+              <h3>PRICING</h3>
+              <p>
+                The services offered and their terms of performance remain
+                subject to the rates and conditions in force on the date of
+                their implementation, subject to revision at any time by
+                Think4Ever Global Inc. In the event of a review by the Bank, a
+                new service pricing brochure will be posted. The client will be
+                notified of any change in rates by consulting the Bank's
+                website, which is available for this purpose. Thus, he
+                undertakes to keep himself informed of these revisions.
+              </p>
+              <p>
+                In the absence of a protest from the customer, by letter with
+                acknowledgement of receipt to request the deactivation of his
+                profile from online banking, the expiry of the period of one (1)
+                month from the date of publication is equivalent to his approval
+                of the new pricing.
+              </p>
+              <p>
+                Transfers to a third party made via Think4Ever Global Inc Online
+                are limited to a maximum amount set by Think4Ever Global Inc
+                according to its internal regulations. However, this amount
+                varies depending on the type of user and the currency used.
+              </p>
+            </section>
+            <section class="tos-section">
+              <h3>SECURITY</h3>
+              <p>
+                Personal codes (username, password, OTP or security PIN) are
+                strictly confidential. It is therefore the responsibility of the
+                user to keep them secret and not to communicate them to anyone.
+                If the password is forgotten or lost, the user can reset it
+                online from the site.
+              </p>
+              <p>
+                Therefore, in the event of hacking or fraudulent use of the
+                credentials, the user undertakes to inform Think4Ever Global Inc
+                without delay. The Bank is not responsible for any transactions
+                made prior to the date of receipt of this notification by
+                Think4Ever Global Inc.
+              </p>
+            </section>
+            <section class="tos-section">
+              <h3>CONVENTION D’UTILISATION (PARTICULIER)</h3>
+              <h3>Article 1.- OBJET DE LA CONVENTION</h3>
+              <p>
+                La Think4Ever Global Inc (ci-après, «Think4Ever Global Inc»),
+                dans le cadre de ses attributions, met à la disposition de sa
+                clientèle de particulier, titulaire de compte individuel ou de
+                compte joint ouvert dans ses livres, (ci-après,
+                «l’UTILISATEUR»), un accès par internet, (ci-après, le service
+                Think4Ever Global Inc Online) lui permettant d’effectuer
+                diverses transactions bancaires en ligne, notamment :
+              </p>
+              <ul class="tos-list">
+                <li>Enregistrement du portefeuille Think4Ever Global Inc</li>
+                <li>Scanner le QR des magasins marchands</li>
+                <li>
+                  Transfert de fonds du portefeuille vers un autre utilisateur
+                  Think4Ever Global Inc
+                </li>
+                <li>Paiement et recharge mobile</li>
+                <li>
+                  Envoyer de l’argent à un courriel ou à un numéro de téléphone
+                </li>
+              </ul>
+              <p>
+                La présente convention définit les modalités d’accès et de
+                fonctionnement du service en ligne. Il demeure entendu que
+                toutes les conventions de la Banque préalablement signées par
+                l’utilisateur continueront à s’appliquer.
+              </p>
+            </section>
+            <section class="tos-section">
+              <h3>Article 2.- INSCRIPTION AU SERVICE</h3>
+              <p>
+                Toute personne physique ou morale, juridiquement capable,
+                titulaire de compte individuel ou de compte joint ouvert dans
+                les livres de la Think4Ever Global Inc, d’une carte de crédit,
+                de débit ou prépayée, libellé en HTG ou en USD pourra bénéficier
+                de tous les services en ligne proposés par la Think4Ever Global
+                Inc au fur et à mesure de leur mise à disposition.
+              </p>
+              <p>
+                Au cours du processus d’inscription et avant acceptation
+                définitive, le client aura accès à tous les comptes.
+              </p>
+            </section>
+            <section class="tos-section">
+              <h3>Article 3.- MODALITES D’IDENTIFICATION</h3>
+              <p>
+                L’accès au service est tributaire d’un code d’accès composé d’un
+                nom d’utilisateur et d’un mot de passe choisis par le titulaire.
+              </p>
+              <p>
+                Le mot de passe ayant un caractère confidentiel, l’utilisateur
+                prendra toutes les dispositions pour assurer sa conservation et
+                sa sécurité, en ne la communiquant pas à des tiers. Par
+                conséquent, toute opération initiée à partir du nom
+                d’utilisateur est présumée émaner de l’utilisateur lui-même.
+              </p>
+              <p>
+                En cas de compte joint ou collectif, l’accès au service est
+                permis à tous les co-titulaires, mandataires ou cosignataires du
+                compte. Ces derniers étant toutefois solidairement obligés au
+                strict respect de la convention d’utilisation de services
+                bancaires en ligne telle qu’établie par la banque et à en
+                respecter les termes.
+              </p>
+              <p>
+                ‘’Utilisateurs’’ désigne toute personne physique à qui la
+                Think4Ever Global Inc donne accès aux comptes domiciliés chez
+                elle à partir des services bancaires en ligne.
+              </p>
+              <p>
+                ‘’PIN de sécurité ou OTP’’ désigne un code de sécurité à
+                utilisation unique envoyé au client pour autoriser certains
+                types de transactions électroniques.
+              </p>
+              <p>
+                ‘’Numéro de confirmation’’ désigne le numéro fourni au client
+                par la Think4Ever Global Inc pour lui confirmer l’exécution
+                d’une transaction électronique. Ce numéro pourra être utilisé
+                par le client à des fins de suivi ou de réclamation.
+              </p>
+            </section>
+            <section class="tos-section">
+              <h3>Article 4.- AJOUT DE COMPTES</h3>
+              <p>
+                Si le client est déjà adhérent, tout nouveau compte sera inclus
+                automatiquement dans son patrimoine. Dans le cas où celui-ci ne
+                le souhaite pas, il s’adressera au service concerné qui en
+                tiendra compte.
+              </p>
+            </section>
+            <section class="tos-section">
+              <h3>
+                Article 5.- DROITS ET OBLIGATIONS DE Think4Ever Global Inc
+                Online
+              </h3>
+              <p>
+                La Think4Ever Global Inc veille à la bonne exécution des ordres
+                reçus et à la confidentialité des informations nominatives
+                recueillies dans le cadre du service. Elle s’engage à ne pas les
+                divulguer, ni à les transmettre sauf en cas de gestion de ces
+                informations ou dans le cadre d’obligations légales et
+                réglementaires. A ce titre, elle rappelle à l’utilisateur, que
+                sauf dans les cas où la loi le prévoit, le secret professionnel
+                ne peut être opposé ni à la Think4Ever Global Inc, ni à
+                l’autorité judiciaire agissant dans le cadre d’une procédure
+                pénale.
+              </p>
+              <p>
+                Afin d’assurer une sécurité optimale à ses abonnés la Think4Ever
+                Global Inc s’engage à ne jamais communiquer, y compris si la
+                demande semble émaner du service en ligne le mot de passe par
+                téléphone.
+              </p>
+              <p>
+                La Think4Ever Global Inc Online s’engage à mettre en œuvre et à
+                fournir tous les efforts possibles sur le plan technique afin
+                d’assurer le bon fonctionnement des services en ligne, ainsi que
+                la confidentialité des informations communiquées. Elle peut
+                également et sans préavis, bloquer la connexion en cas de
+                manœuvre frauduleuse ou interrompre le service sans avoir à se
+                justifier, ni être tenue pour responsable des conséquences qui
+                en découleraient.
+              </p>
+            </section>
+            <section class="tos-section">
+              <h3>Article 6.- Droits de L’UTILISATEUR</h3>
+              <p>
+                L’utilisateur, dans le cadre de la présente convention, s’oblige
+                à :
+              </p>
+              <ul class="tos-list">
+                <li>
+                  Fournir à la Think4Ever Global Inc tout renseignement
+                  personnel requis aux fins de son identification et de la
+                  constitution de son dossier;
+                </li>
+                <li>Ne pas communiquer son mot de passe à des tiers;</li>
+                <li>
+                  Changer lui-même son mot de passe en cas d’accessibilité par
+                  des tiers de celui-ci;
+                </li>
+                <li>
+                  Assumer toute perte et/ou conséquence pécuniaire résultant de
+                  l’utilisation de son code d’accès par suite de sa négligence;
+                </li>
+                <li>
+                  Vérifier les transactions effectuées sur son (ses) compte (s)
+                  et aviser la banque de toute erreur y relative;
+                </li>
+                <li>
+                  Ne pas utiliser l’infrastructure et le système mis à sa
+                  disposition par la Think4Ever Global Inc de manière contraire
+                  à la présente convention, de manière frauduleuse ou illégale
+                  et/ou de façon préjudiciable à la sécurité et à l’efficacité
+                  du Service;
+                </li>
+                <li>
+                  N’effectuer aucune transaction illicite en utilisant ce
+                  service;
+                </li>
+              </ul>
+              <p>
+                L’entreprise et ses utilisateurs désignés s’obligent
+                conjointement et solidairement à ne pas utiliser les services en
+                violation des instructions passées par la Think4Ever Global Inc,
+                de manière frauduleuse ou illégales et/ou d’une façon
+                préjudiciable à la sécurité et à l’efficacité dudit service.
+                Elle s’oblige en outre, à n’effectuer, à partir de ce site,
+                aucune transaction illicite pouvant nuire au site de la
+                Think4Ever Global Inc et/ou aux tiers.
+              </p>
+            </section>
+            <section class="tos-section">
+              <h3>Article 7.- LIMITATIONS DE RESPONSABILITES</h3>
+              <ul class="tos-list">
+                <li>
+                  La Think4Ever Global Inc Online utilise des outils de sécurité
+                  très performants, elle ne peut garantir toutefois la sécurité
+                  totale des données transmises sur les services en ligne;
+                </li>
+                <li>
+                  Elle ne saurait être tenue pour responsable lorsque
+                  l’inexécution de ses obligations résulte d’éléments qui
+                  échappent à son contrôle;
+                </li>
+                <li>
+                  Sa responsabilité ne pourra non plus être engagée en cas
+                  d’accès frauduleux des informations du client au moyen de
+                  messages de tiers usurpant l’identité de la banque;
+                </li>
+                <li>
+                  La Think4Ever Global Inc Online ne garantit pas la sécurité de
+                  fonctionnement des réseaux de télécom. Elle ne saurait, de ce
+                  fait, être tenue pour responsable en ce qui concerne le
+                  transport des informations ou des conséquences résultant d’un
+                  défaut de sécurité ou de fiabilité du terminal de connexion
+                  utilisé par le client;
+                </li>
+                <li>
+                  La Think4Ever Global Inc Online ne saurait non plus assumer
+                  les conséquences qui résulteraient d’une erreur de
+                  transmission ou de manipulation de la part du client.
+                </li>
+              </ul>
+              <p>
+                En cas de différence entre les informations figurant sur le site
+                et celles enregistrées sur le relevé bancaire, les parties
+                conviennent expressément que les dernières feront foi.
+              </p>
+              <p>
+                Les transactions effectuées par la Think4Ever Global Inc Online
+                obtiendront automatiquement un numéro de référence interne.
+                Chaque transaction effectuée sera conservée par la Banque sur
+                support électronique. En cas de besoin, l’enregistrement servira
+                de preuve.
+              </p>
+              <p>
+                Les transactions seront exécutées sous réserves de solde
+                disponible du compte et des autres engagements de l’Utilisateur
+                envers la Think4Ever Global Inc. Toutes transactions effectuées
+                via Think4Ever Global Inc Online ou MaThink4Ever Global Inc
+                seront enregistrées suivant les normes d’usages bancaires et
+                financiers d’imputation.
+              </p>
+              <p>
+                Toute transaction initiée en ligne nécessitant un suivi en
+                succursale telles que: attestations bancaires, remise de chèque
+                de direction, livraison de chéquier etc… sera disponible à la
+                succursale du choix du client dans un délai d’un (1) jour
+                ouvrable (en semaine).
+              </p>
+            </section>
+            <section class="tos-section">
+              <h3>Article 8.- UTILISATION DU SERVICE</h3>
+              <p>
+                L’adhésion aux services en ligne de la Think4Ever Global Inc
+                permet à l’utilisateur de consulter l’ensemble des comptes
+                rattachés à son patrimoine.
+              </p>
+              <p>
+                La Think4Ever Global Inc Online offre à l’utilisateur qui
+                l’accepte, un service lui permettant d’accéder à son patrimoine
+                à distance et d’y effectuer à travers internet les diverses
+                transactions bancaires énumérées à l’article 1.
+              </p>
+              <p>
+                L’utilisateur adhérant au service Think4Ever Global Inc Online
+                reconnaît expressément qu’il a pris connaissance de toutes les
+                informations sur le contenu du service, ses caractéristiques, sa
+                disponibilité et ses modalités de fonctionnement.
+              </p>
+            </section>
+            <section class="tos-section">
+              <h3>Article 9- DUREE ET RESILIATION DU CONTRAT</h3>
+              <p>
+                L’adhésion au Service en ligne est conclu pour une période
+                entière d’une (1) année renouvelable par tacite reconduction,
+                sauf autrement spécifié par l’une des deux parties prenantes.
+                Elle entrera en vigueur à compter de la date de la confirmation
+                de l’acceptation par l’Administration de la Think4Ever Global
+                Inc Online de l’adhésion de l’Entreprise.
+              </p>
+              <p>
+                L’utilisateur ne désirant pas renouveler la présente convention
+                en informera l’Administration de la Think4Ever Global Inc Online
+                par lettre avec accusé de réception au moins un (1) mois avant
+                sa date d’expiration.
+              </p>
+              <p>
+                La dénonciation ou résiliation du contrat d’adhésion entraine
+                l’interruption automatique du service Think4Ever Global Inc
+                Online. Dans ce cas, le client ne disposera alors plus de la
+                possibilité de consulter son patrimoine ou d’effectuer des
+                transactions en ligne.
+              </p>
+            </section>
+            <section class="tos-section">
+              <h3>Article 10- MODIFICATION DU SERVICE</h3>
+              <p>
+                Compte tenu notamment des évolutions technologiques et
+                améliorations possibles du service, la Think4Ever Global Inc
+                Online se réserve la possibilité de changer à tout moment le
+                champ des services offerts en ligne et d’apporter des
+                modifications adéquates aux conditions de la présente
+                convention. Le client en sera avisé avant la date d’entrée en
+                vigueur.
+              </p>
+            </section>
+            <section class="tos-section">
+              <h3>Article 11: RECLAMATION</h3>
+              <p>
+                Le fait pour la Think4Ever Global Inc de s’abstenir de réclamer
+                ou de réclamer tardivement l’application de l’une des clauses
+                contenues dans la présente convention, n’implique ni
+                renonciation à ses droits ni acquiescement.
+              </p>
+              <p>
+                Toute réclamation devra être alors effectuée dans les délais,
+                par lettre recommandée avec accusé de réception adressée à
+                l’Administration de Think4Ever Global Inc Online.
+              </p>
+            </section>
+            <section class="tos-section">
+              <h3>Article 12 : DE LA RESILIATION</h3>
+              <p>
+                La Think4Ever Global Inc pourra résilier la présente convention,
+                dans les cas suivants :
+              </p>
+              <ul class="tos-list">
+                <li>Décès de l’UTILISATEUR;</li>
+                <li>Utilisation frauduleuse du Service par l’UTILISATEUR;</li>
+                <li>
+                  Manquement à ses obligations par l’UTILISATEUR, définies par
+                  la présente convention;
+                </li>
+                <li>Sur demande formelle du client;</li>
+                <li>Dans tout autre cas jugé nécessaire par la Banque.</li>
+              </ul>
+            </section>
+            <section class="tos-section">
+              <h3>Article 13: DES LITIGES ET DISPOSITIONS GENERALES</h3>
+              <p>
+                Les parties s’engagent à exécuter de bonne foi les clauses du
+                présent contrat. En cas de contestation relative à une
+                transaction bancaire réalisée à partir du Service, l’UTILISATEUR
+                accepte, d’ores et déjà, de contacter un représentant de la
+                Think4Ever Global Inc afin de résoudre à l’amiable la
+                contestation. A cette fin, l’UTILISATEUR s’oblige à coopérer
+                avec la Think4Ever Global Inc en lui fournissant toute
+                information, document, donnée pouvant faire avancer
+                l’investigation qui sera faite par les services ad hoc de la
+                Think4Ever Global Inc. En cas d’échec par voie amiable, la
+                contestation sera soumise à la juridiction compétente des
+                tribunaux haïtiens.
+              </p>
+              <p>
+                Pour tout ce qui n’aura pas fait l’objet d’une clause spéciale,
+                les parties conviennent de se référer aux dispositions légales,
+                en vigueur, de la République d'Haïti régissant la matière.
+              </p>
+              <p>
+                Il demeure entendu que les clauses et conditions des autres
+                conventions et/ou contrats conclus entre l’UTILISATEUR et la
+                Think4Ever Global Inc demeurent opposables.
+              </p>
+            </section>
+            <section class="tos-section">
+              <h3>TARIFICATIONS</h3>
+              <p>
+                Les services offerts et leurs modalités d’exécution restent
+                soumis aux tarifs et conditions en vigueur à leur date de
+                réalisation, sujets à révision à n’importe quel moment par la
+                Think4Ever Global Inc. En cas de révision par la Banque, une
+                nouvelle plaquette de tarification de service sera affichée. Le
+                client sera avisé de toute modification de tarifs en consultant
+                le site de la Banque, proposé à cet effet. Ainsi, il s’engage à
+                se tenir informer de ces révisions.
+              </p>
+              <p>
+                À défaut de protestation du client, par lettre avec accusé de
+                réception pour demander la désactivation de son profil aux
+                services bancaires en ligne, l’expiration du délai d’un (1) mois
+                de la date de parution vaut, de sa part, approbation de la
+                nouvelle tarification.
+              </p>
+              <p>
+                Les virements au bénéfice d’un tiers effectués via Think4Ever
+                Global Inc Online sont limités à un montant maximal fixé par la
+                Think4Ever Global Inc en fonction de ses règlements internes.
+                Toutefois, ce dit montant varie selon le type d’utilisateur et
+                la monnaie utilisée.
+              </p>
+            </section>
+            <section class="tos-section">
+              <h3>SÉCURITÉ</h3>
+              <p>
+                Les codes personnels (nom d’utilisateur, mot de passe, OTP ou
+                PIN de sécurité) sont strictement confidentiels. Il est donc de
+                la responsabilité de l’utilisateur de les tenir secrets et de ne
+                les communiquer à quiconque. En cas d’oubli ou de perte du mot
+                de passe, l’utilisateur peut le réinitialiser en ligne à partir
+                du site.
+              </p>
+              <p>
+                Par conséquent, en cas de piratage ou d’utilisation frauduleuse
+                des identifiants, l’utilisateur s’engage à informer la
+                Think4Ever Global Inc sans délai. La Banque n’est nullement
+                responsable d’aucune transaction effectuée avant la date de
+                réception de cette notification par la Think4Ever Global Inc.
+              </p>
+            </section>
+          </div>
+          <!-- Actions -->
+          <!-- <div class="tos-actions">
+            <button
+              class="tos-btn-home"
+              id="tos_back_home"
+              onclick="load_page('index')"
+              aria-label="Back to Home"
+            >
+              <i class="fa fa-arrow-left"></i>
+              Back to Home
+            </button>
+            <button
+              class="tos-btn-privacy"
+              onclick="load_page('privacy')"
+              aria-label="View Privacy Policy"
+            >
+              <i class="fa fa-shield-alt"></i>
+              Privacy Policy
+            </button>
+          </div> -->
+        </div>
+      </main>
+      <!-- Scroll to Top -->
+      <!-- <button class="tos-scroll-top" aria-label="Scroll to top">
+        <i class="fa fa-chevron-up"></i>
+      </button> -->
+      <!-- Print Button -->
+      <!-- <button
+        class="tos-print-btn"
+        aria-label="Print this page"
+        title="Print Terms of Service"
+      >
+        <i class="fa fa-print"></i>
+      </button> -->
+      <!-- Footer -->
+    </div>
+    <div id="docFooter"></div>
+    <script src="https://www.think4ever.com/docs/assets/css/js/i18n.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        if (window.I18n) {
+          window.I18n.init();
+        }
+      });
+    </script>
+    <script src="https://www.think4ever.com/docs/assets/js/terms_of_service.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  </body>
+</html>

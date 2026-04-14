@@ -1,0 +1,1273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://www.think4ever.com/docs/assets/css/global.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://www.think4ever.com/docs/assets/css/privacy_policy.css"
+    />
+    <style>
+      /* Basic reset for preview consistency */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+
+      .pp-list {
+        list-style-type: disc;
+        padding-left: 20px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary: #6366f1;
+        --primary-dark: #4f46e5;
+        --secondary: #8b5cf6;
+        --accent: #ec4899;
+        --dark: #0f172a;
+        --light: #f8fafc;
+        --gradient: #667eea;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        line-height: 1.6;
+        color: var(--dark);
+        overflow-x: hidden;
+        background: var(--light);
+      }
+
+      /* Navigation */
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 1rem 5%;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      nav.scrolled {
+        padding: 0.5rem 5%;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        font-size: 1.8rem;
+        font-weight: 800;
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        letter-spacing: -1px;
+      }
+
+      .logo img {
+        height: 50px;
+        width: auto;
+        margin-right: 10px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--dark);
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary);
+      }
+
+      /* Mobile Menu */
+      .mobile-menu-btn {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 5px;
+      }
+
+      .mobile-menu-btn span {
+        width: 25px;
+        height: 3px;
+        background: var(--dark);
+        margin: 3px 0;
+        transition: 0.3s;
+      }
+
+      .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background: white;
+        z-index: 1001;
+        transition: right 0.3s ease;
+        padding: 80px 20px 20px;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .mobile-menu.active {
+        right: 0;
+      }
+
+      .mobile-menu a {
+        display: block;
+        padding: 15px 0;
+        color: var(--dark);
+        text-decoration: none;
+        font-weight: 500;
+        border-bottom: 1px solid #f1f5f9;
+      }
+
+      .mobile-menu a:hover {
+        color: var(--primary);
+      }
+
+      .mobile-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        display: none;
+      }
+
+      .mobile-overlay.active {
+        display: block;
+      }
+
+      /* Contact Popup */
+      .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 2000;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .popup-overlay.active {
+        display: flex;
+      }
+
+      .contact-popup {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        max-width: 500px;
+        width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: relative;
+        animation: popupFadeIn 0.3s ease;
+      }
+
+      .close-popup {
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        font-size: 30px;
+        cursor: pointer;
+        color: #64748b;
+        transition: color 0.3s ease;
+      }
+
+      .close-popup:hover {
+        color: var(--primary);
+      }
+
+      .contact-popup h2 {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .contact-popup p {
+        color: #64748b;
+        margin-bottom: 2rem;
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: var(--dark);
+        font-weight: 500;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 12px 16px;
+        border: 2px solid #e2e8f0;
+        border-radius: 10px;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+        background: #fafbfc;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: var(--primary);
+        background: white;
+      }
+
+      .form-group textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+
+      .submit-btn {
+        width: 100%;
+        background: var(--gradient);
+        color: white;
+        padding: 15px;
+        border: none;
+        border-radius: 50px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+      }
+
+      .submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+      }
+
+      .submit-btn:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .success-message {
+        background: #10b981;
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .error-message {
+        background: #ef4444;
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      /* Hero Section */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 0 5%;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        z-index: 2;
+      }
+
+      .hero-text h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: fadeInUp 0.8s ease;
+      }
+
+      .hero-text p {
+        font-size: 1.25rem;
+        color: #64748b;
+        margin-bottom: 2rem;
+        animation: fadeInUp 0.8s ease 0.2s both;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 1.5rem;
+        animation: fadeInUp 0.8s ease 0.4s both;
+      }
+
+      .primary-button {
+        background: var(--gradient);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        display: inline-block;
+        border: none;
+        cursor: pointer;
+      }
+
+      .primary-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+      }
+
+      .secondary-button {
+        background: white;
+        color: var(--primary);
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: 2px solid var(--primary);
+        display: inline-block;
+      }
+
+      .secondary-button:hover {
+        background: var(--primary);
+        color: white;
+        transform: translateY(-2px);
+      }
+
+      .hero-visual {
+        position: relative;
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .floating-elements {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      .floating-circle {
+        position: absolute;
+        border-radius: 50%;
+        background: linear-gradient(
+          135deg,
+          rgba(99, 102, 241, 0.1) 0%,
+          rgba(139, 92, 246, 0.1) 100%
+        );
+        animation: float 8s ease-in-out infinite;
+      }
+
+      .circle-1 {
+        width: 400px;
+        height: 400px;
+        top: -50px;
+        right: -50px;
+        animation-delay: 0s;
+      }
+
+      .circle-2 {
+        width: 300px;
+        height: 300px;
+        bottom: -50px;
+        left: -50px;
+        animation-delay: 2s;
+      }
+
+      .circle-3 {
+        width: 200px;
+        height: 200px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation-delay: 4s;
+      }
+
+      /* Why AI Agents Section */
+      .why-agents {
+        padding: 100px 5%;
+        background: #fafbfc;
+      }
+
+      .why-agents-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .why-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        margin-bottom: 4rem;
+      }
+
+      .why-text h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .why-text p {
+        font-size: 1.1rem;
+        color: #64748b;
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+      }
+
+      .why-visual {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+
+      .why-card {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+      }
+
+      .why-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .why-card h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        color: var(--dark);
+      }
+
+      .why-card p {
+        font-size: 0.9rem;
+        color: #64748b;
+      }
+
+      /* Features Section */
+      .features {
+        padding: 100px 5%;
+        background: white;
+      }
+
+      .features-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      .section-header h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .section-header p {
+        font-size: 1.25rem;
+        color: #64748b;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .feature-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        border: 1px solid #f1f5f9;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .feature-icon {
+        width: 60px;
+        height: 60px;
+        background: var(--gradient);
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        color: white;
+      }
+
+      .icon-rocket::before {
+        content: "▲";
+      }
+      .icon-brain::before {
+        content: "◆";
+      }
+      .icon-link::before {
+        content: "◈";
+      }
+      .icon-shield::before {
+        content: "■";
+      }
+      .icon-chart::before {
+        content: "▪";
+      }
+      .icon-globe::before {
+        content: "●";
+      }
+
+      .feature-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: var(--dark);
+      }
+
+      .feature-card p {
+        color: #64748b;
+        line-height: 1.8;
+      }
+
+      /* How It Works Section */
+      .how-it-works {
+        padding: 100px 5%;
+        background: #fafbfc;
+      }
+
+      .how-it-works-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .process-steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 3rem;
+        margin-top: 4rem;
+      }
+
+      .process-step {
+        text-align: center;
+        position: relative;
+      }
+
+      .step-number {
+        width: 60px;
+        height: 60px;
+        background: var(--gradient);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+      }
+
+      .process-step h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        color: var(--dark);
+      }
+
+      .process-step p {
+        color: #64748b;
+        line-height: 1.6;
+      }
+
+      /* Vision Section */
+      .vision {
+        padding: 100px 5%;
+        background: white;
+      }
+
+      .vision-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .vision-content {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .vision-content h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 2rem;
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .vision-content p {
+        font-size: 1.2rem;
+        color: #64748b;
+        margin-bottom: 2rem;
+        line-height: 1.8;
+      }
+
+      .vision-points {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 4rem;
+        text-align: left;
+      }
+
+      .vision-point {
+        background: #fafbfc;
+        padding: 2rem;
+        border-radius: 15px;
+        border-left: 4px solid var(--primary);
+      }
+
+      .vision-point h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        color: var(--dark);
+      }
+
+      .vision-point p {
+        color: #64748b;
+        line-height: 1.6;
+      }
+
+      /* Stats Section */
+      .stats {
+        padding: 100px 5%;
+        background: #667eea;
+        color: white;
+      }
+
+      .stats-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 3rem;
+        text-align: center;
+      }
+
+      .stat-item {
+        animation: fadeInUp 0.8s ease;
+      }
+
+      .stat-number {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 0.5rem;
+      }
+
+      .stat-label {
+        font-size: 1.25rem;
+        opacity: 0.9;
+      }
+
+      /* CTA Section */
+      .cta-section {
+        padding: 100px 5%;
+        background: white;
+        text-align: center;
+      }
+
+      .cta-content {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .cta-content h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+        background: var(--gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .cta-content p {
+        font-size: 1.25rem;
+        color: #64748b;
+        margin-bottom: 2rem;
+      }
+
+      /* Footer */
+      footer {
+        padding: 50px 5%;
+        background: var(--dark);
+        color: white;
+        text-align: center;
+      }
+
+      .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .footer-bottom {
+        color: #94a3b8;
+      }
+
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .footer-bottom ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+      }
+
+      .footer-bottom ul a {
+        text-decoration: none;
+        color: #94a3b8;
+        transition: all 0.3s ease;
+      }
+
+      .footer-bottom ul a:hover {
+        transition: all 0.3s ease;
+        color: white;
+      }
+
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      @keyframes popupFadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+
+        .mobile-menu-btn {
+          display: flex;
+        }
+
+        .hero-content {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .hero-text h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .hero-visual {
+          display: none;
+        }
+
+        .why-content {
+          grid-template-columns: 1fr;
+        }
+
+        .section-header h2 {
+          font-size: 2rem;
+        }
+
+        .stat-number {
+          font-size: 2.5rem;
+        }
+
+        .contact-popup {
+          padding: 30px 20px;
+          margin: 10px;
+        }
+
+        .contact-popup h2 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="privacy-policy-page">
+      <!-- Skip to content -->
+      <a
+        href="#pp-main-content"
+        class="pp-skip-link sr-only"
+        style="
+          position: absolute;
+          top: -40px;
+          left: 0;
+          background: #2563eb;
+          color: #fff;
+          padding: 8px 16px;
+          z-index: 10000;
+          font-size: 0.875rem;
+          transition: top 200ms;
+        "
+        onfocus="this.style.top = '0'"
+        onblur="this.style.top = '-40px'"
+        >Skip to content</a
+      >
+
+      <!-- Site Header -->
+      <!-- <header class="modern-header" id="consumerHeader"></header> -->
+      <nav id="navbar">
+        <div class="nav-container">
+          <div class="logo">
+            <a href="index.html">
+              <img src="images/thihnkforeverlogo.png" alt="think4ever logo" />
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="pp-main" id="pp-main-content" role="main">
+        <div class="pp-container">
+          <!-- Breadcrumb -->
+          <!-- <nav class="pp-breadcrumb" aria-label="Breadcrumb">
+            <a onclick="load_page('index')" tabindex="0">Home</a>
+            <span class="pp-breadcrumb-sep" aria-hidden="true">/</span>
+            <span class="pp-breadcrumb-current" aria-current="page"
+              >Privacy Policy</span
+            >
+          </nav> -->
+
+          <!-- Last Updated -->
+          <!-- <div class="pp-last-updated" id="pp_last_updated">
+            <i class="fa fa-calendar-alt" aria-hidden="true"></i>
+            Last Updated: April 13, 2026
+          </div> -->
+
+          <!-- Page Title -->
+          <h1 class="pp-title" id="pp_title">Privacy Policy</h1>
+
+          <!-- Privacy Policy Content -->
+          <div class="pp-content" id="pp_content">
+            <section class="pp-section">
+              Your privacy is very important to Think4Ever Global Inc. As a
+              member, you share all kinds of personal data with Think4Ever
+              Global Inc. For example, when using your Think4Ever Global Incito
+              card, when in contact with our customer service or when you make
+              use of the E-Branch or Mobile application. Of course, there are
+              many more instances where you share personal information with
+              Think4Ever Global Inc. Think4Ever Global Inc does recognize that
+              it is critical for you to be confident that your privacy is
+              protected. Therefore we commit ourselves to maintain confidential
+              the information entrusted to us except in cases where either you
+              specifically have given permission to Think4Ever Global Inc to
+              share your personal information to third parties and/or when the
+              law allows or obligates Think4Ever Global Inc to do so.
+              <br />
+              <br />
+              This Think4Ever Global Inc Privacy Policy provides information on
+              how Think4Ever Global Inc approaches processing of your personal
+              data. <br />
+              <br />
+              Personal data means any information relating to an identified or
+              identifiable natural person; an identifiable natural person is one
+              who can be identified, directly or indirectly. Information
+              relating to a legal entity is not personal data, but information
+              relating to a legal entity’s director, ultimate beneficial owner,
+              contact person or representative does count as personal data.
+              <br />
+              <br />
+              Processing means any operation or set of operations which is
+              performed on personal data or on sets of personal data, such as
+              collection, recording, organizing, storing, adapting or altering,
+              retrieving, consulting, using, disclosing by transmission,
+              dissemination or otherwise making available, as well as combining,
+              comparing, restricting, erasing or destruction of data, as
+              indicated by law.
+            </section>
+            <section class="pp-section">
+              <h3>
+                Personal information that Think4Ever Global Inc collects and
+                processes therefore may include
+              </h3>
+              <ul class="pp-list">
+                <li>
+                  Your name, address, telephone number, occupation or nature of
+                  your business and date of birth;
+                </li>
+                <li>
+                  Identification, such as a valid driver’s license, ID-card or
+                  passport. Think4Ever Global Inc may also ask for documents
+                  such as a recent utility bill to verify your name and address;
+                </li>
+                <li>
+                  Information about beneficial owners, intermediaries and other
+                  parties;
+                </li>
+                <li>
+                  Your annual income, assets and liabilities and credit history;
+                </li>
+                <li>
+                  Information about your transactions, including payment
+                  history, account activity and how you intend to use the
+                  account or service and the source of any incoming funds or
+                  assets;
+                </li>
+                <li>
+                  Information about third parties such as your spouse if you are
+                  applying for certain services.
+                </li>
+              </ul>
+              <p>
+                In addition, Think4Ever Global Inc offers mobile applications or
+                services that use information about your location. If you choose
+                to use such applications or services, Think4Ever Global Inc may,
+                if the settings on your mobile device allow this, collect
+                information about your location (for example, GPS signals) to
+                provide you with the services you request.
+              </p>
+            </section>
+
+            <section class="pp-section">
+              <h3>Purpose of Data Collection</h3>
+              <p>
+                Think4Ever Global Inc may collect your personal information for
+                the following purposes:
+              </p>
+              <ul class="pp-list">
+                <li>
+                  To confirm your identity and other personal information;
+                </li>
+                <li>
+                  To set up, manage and offer services that you requested;
+                </li>
+                <li>To satisfy legal and regulatory requirements;</li>
+                <li>
+                  To help Think4Ever Global Inc collect a debt or enforce an
+                  obligation owed to us by you;
+                </li>
+                <li>
+                  To respond to a local or foreign court order, search warrant
+                  or other demand or request by legal authorities, or to comply
+                  with the rules of production of a local or foreign court;
+                </li>
+                <li>To investigate and adjudicate claims or complaints;</li>
+                <li>
+                  To prevent or detect fraud or criminal activity or to manage
+                  and settle any actual or potential loss in connection with
+                  fraud or criminal activity.
+                </li>
+              </ul>
+            </section>
+            <section class="pp-section">
+              <h3>Marketing</h3>
+              <p>
+                Think4Ever Global Inc may tailor its website and/or marketing
+                material to you on the basis of your personal information.
+              </p>
+            </section>
+            <section class="pp-section">
+              <h3>Third Parties</h3>
+              <p>
+                For the purposes described in this Policy Think4Ever Global Inc
+                may share your personal data within all Think4Ever Global Inc
+                cooperatives in the USA
+              </p>
+              <p>
+                Think4Ever Global Inc may also share your personal data with
+                third parties. This may include, but is not limited to:
+              </p>
+              <ul class="pp-list">
+                <li>
+                  Third parties relevant to the services that Think4Ever Global
+                  Inc provides;
+                </li>
+                <li>
+                  Third parties that Think4Ever Global Inc engages with in order
+                  to comply with legal and regulatory obligations;
+                </li>
+                <li>
+                  Third party suppliers in connection with the processing of
+                  your personal data for the purposes described in this Policy,
+                  such as IT providers, communication service providers or other
+                  suppliers to whom Think4Ever Global Inc outsources certain
+                  support services.
+                </li>
+                <li>
+                  Third parties insofar the processing of your personal data is
+                  necessary to ensure normal operations of Think4Ever Global
+                  Inc.
+                </li>
+              </ul>
+              <p>
+                Third parties to whom we transfer your personal data are
+                themselves responsible for compliance with privacy legislation.
+                Think4Ever Global Inc is neither responsible nor liable for the
+                processing of your personal data by these third parties.
+              </p>
+            </section>
+            <section class="pp-section">
+              <h3>Retention of your Personal Data</h3>
+              <p>
+                Think4Ever Global Inc may keep and use information about you in
+                its records for such period of time needed to achieve the goals
+                described in this Policy or to comply with applicable
+                legislation and regulations.
+              </p>
+            </section>
+            <section class="pp-section">
+              <h3>Data Security</h3>
+              <p>
+                Think4Ever Global Inc will collect and process data using
+                suitable technical or organizational measures, in a manner that
+                ensures appropriate security of personal information, including
+                protection against unauthorized or unlawful processing (e.g.
+                such as against malicious hackers) and against accidental loss,
+                destruction and/or damage. <br />
+                <br />
+                You are at all times responsible for ensuring the security of
+                your account access information. By providing third parties
+                access to your account information, you assume all liability for
+                any transactions initiated on your account and/or your
+                associated personal data. <br />
+                <br />
+                In the unlikely event of a data breach causing high risk to
+                personal information of customers, Think4Ever Global Inc will
+                where required notify the affected customers without undue
+                delay.
+              </p>
+            </section>
+            <section class="pp-section">
+              <h3>Your rights as a member of Think4Ever Global Inc</h3>
+              <p>
+                When your personal data is collected and processed, you have the
+                all the rights as indicated by law. As an example some of these
+                rights are as follows:
+              </p>
+
+              <ul class="pp-list">
+                <li>
+                  You have the right to be informed at your request about the
+                  collection and use of your personal data;
+                </li>
+                <li>
+                  You have the right to access and obtain copies of your
+                  personal information kept in our files;
+                </li>
+                <li>
+                  You may at any time challenge the accuracy and completeness of
+                  your personal information and request
+                </li>
+                <li>that it be amended as appropriate;</li>
+                <li>
+                  You have the right to request removal of your personal data if
+                  this data is incorrect, serves no reasonable purpose or is no
+                  longer relevant;
+                </li>
+                <li>
+                  You have the right to withdraw your given consent for the
+                  collection of specific personal data. You can do by sending an
+                  email to our Member Service Center at info@think4ever.com;
+                </li>
+                <li>
+                  You have the right to request the reason(s) why your personal
+                  data is processed in a certain manner by Think4Ever Global
+                  Inc;
+                </li>
+                <li>
+                  You may ask us to refrain from sending you tailored marketing
+                  communications.
+                </li>
+              </ul>
+              <p>
+                Please note that the above rights are not under all
+                circumstances absolute. There may be instances in which
+                Think4Ever Global Inc may be entitled to refuse requests in
+                order to meet its legal and/or regulatory obligations.
+              </p>
+            </section>
+            <section class="pp-section">
+              <h3>Cookies</h3>
+              <p>
+                This site uses different types of cookies including cookies for
+                the operation of this site. Cookies are small text files that
+                can be used by websites to make a user's experience more
+                efficient. For certain types of cookies we need your permission.
+                Some cookies are placed by third party services that appear on
+                our pages. You can at any time change or withdraw your consent
+                from the Cookie Declaration on our website. Please refer to the
+                Think4Ever Global Inc Cookie Policy published on the website of
+                Think4Ever Global Inc.
+              </p>
+            </section>
+            <section class="pp-section">
+              <h3>Further information</h3>
+              <p>
+                Think4Ever Global Inc may amend this Policy from time to time to
+                take into consideration changes in legislation, technology or
+                other issues that may arise. We will post the revised Policy on
+                our website, make it available at our branches or we may also
+                send it to you by mail. Should the changes to the Policy be
+                significant, we will provide you with a prominent notice in
+                writing. <br />
+                <br />
+                If you have a question or complaint about our Privacy Policy or
+                about the processing of your personal information or if you wish
+                to receive an overview thereof, please feel free to contact us
+                at info@think43ever.com or by calling our Member Service Center
+                at 599 (9) 4347100.
+              </p>
+            </section>
+          </div>
+
+          <!-- Bottom Actions -->
+          <!-- <div class="pp-bottom-actions">
+            <div style="display: flex; gap: 12px; flex-wrap: wrap">
+              <button
+                class="pp-back-btn"
+                id="pp_back_home"
+                onclick="load_page('index')"
+                aria-label="Back to Home"
+              >
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                Back to Home
+              </button>
+              <button class="pp-print-btn" aria-label="Print this page">
+                <i class="fa fa-print" aria-hidden="true"></i>
+                Print
+              </button>
+            </div>
+            <a
+              class="pp-terms-link"
+              onclick="load_page('terms')"
+              tabindex="0"
+              aria-label="View Terms of Service"
+            >
+              Terms of Service
+              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div> -->
+        </div>
+      </main>
+
+      <!-- Scroll to Top -->
+      <button
+        class="pp-scroll-top"
+        aria-label="Scroll to top"
+        title="Back to top"
+      >
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div id="docFooter"></div>
+
+    <script src="https://www.think4ever.com/docs/assets/js/i18n.js"></script>
+    <!-- <script src="https://www.think4ever.com/docs/assets/js/navigation.js"></script> -->
+    <script src="https://www.think4ever.com/docs/assets/js/privacy_policy.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  </body>
+</html>

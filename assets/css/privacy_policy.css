@@ -81,7 +81,7 @@
 /* Main Content */
 .pp-main {
   flex: 1;
-  padding-top: 64px;
+  padding-top: 70px;
 }
 
 .pp-container {
@@ -229,7 +229,11 @@
 }
 
 .pp-section {
-  margin-bottom: 48px;
+  margin-bottom: 30px;
+}
+
+.pp-section h3 {
+  color: var(--color-text-dark);
 }
 
 .pp-section-title {
@@ -271,7 +275,7 @@
 }
 
 .pp-section li::marker {
-  color: var(--color-primary, #2563eb);
+  color: var(--color-text-dark);
 }
 
 .pp-section strong {
