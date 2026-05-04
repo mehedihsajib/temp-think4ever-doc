@@ -1,0 +1,309 @@
+<!doctype html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Think4ever - Customer Onboarding</title>
+    <!-- Icons & Fonts -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Link to Custom Vanilla CSS -->
+    <link rel="stylesheet" href="assets/css/onboarding.css" />
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- SideNavBar Component -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    <div class="logo-box">
+                        <img src="assets/images/think4ever-logo.png" alt="Think4Ever Logo" class="logo-image" />
+                    </div>
+                </div>
+                <p class="sidebar-subtitle">Customer Onboarding</p>
+            </div>
+
+            <nav class="sidebar-nav" id="sidebar-nav">
+                <div data-step-index="0" class="onboarding-nav-item">
+                    <span class="material-symbols-outlined">waving_hand</span>
+                    <div class="nav-item-content">
+                        <span class="nav-item-title">Welcome</span>
+                        <span class="nav-item-subtitle">Introduction</span>
+                    </div>
+                </div>
+                <div data-step-index="1" class="onboarding-nav-item">
+                    <span class="material-symbols-outlined">person_add</span>
+                    <div class="nav-item-content">
+                        <span class="nav-item-title">Create Account</span>
+                        <span class="nav-item-subtitle">Setup identity</span>
+                    </div>
+                </div>
+                <div data-step-index="2" class="onboarding-nav-item">
+                    <span class="material-symbols-outlined">key</span>
+                    <div class="nav-item-content">
+                        <span class="nav-item-title">Add API Key</span>
+                        <span class="nav-item-subtitle">Secure access</span>
+                    </div>
+                </div>
+                <div data-step-index="3" class="onboarding-nav-item">
+                    <span class="material-symbols-outlined">create_new_folder</span>
+                    <div class="nav-item-content">
+                        <span class="nav-item-title">Create Project</span>
+                        <span class="nav-item-subtitle">Initialize workspace</span>
+                    </div>
+                </div>
+                <div data-step-index="4" class="onboarding-nav-item">
+                    <span class="material-symbols-outlined">construction</span>
+                    <div class="nav-item-content">
+                        <span class="nav-item-title">Build Project</span>
+                        <span class="nav-item-subtitle">Finalize & Deploy</span>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+        <!-- Site Header -->
+        <!-- <header class="modern-header" id="consumerHeader"></header> -->
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div id="content-area">
+                <div class="content-header">
+                    <h2 id="onboarding-main-title" class="main-title">
+                        Create your workspace
+                    </h2>
+                    <p id="onboarding-main-description" class="main-description">
+                        Set up your professional identity and start building.
+                    </p>
+                </div>
+
+                <div class="bento-grid">
+                    <!-- Step A Card -->
+
+                    <!-- Step B Card -->
+                    <section class="bento-card">
+                        <div class="card-body">
+                            <div class="card-badge">Focus Point 2</div>
+                            <h3 id="step-b-title" class="card-title">Secondary Step</h3>
+                            <p id="step-b-desc" class="card-text">
+                                Verification and finalizing details.
+                            </p>
+                        </div>
+                        <div class="card-preview">
+                            <div class="preview-mockup" style="display: flex; gap: 10px; justify-content: center">
+                                <span class="material-symbols-outlined"
+                                    style="color: var(--primary); opacity: 0.3">shield</span>
+                                <span class="material-symbols-outlined"
+                                    style="color: var(--primary); opacity: 0.3">verified</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer Progress Navigation -->
+    <footer class="footer-nav">
+        <div class="footer-content">
+            <div class="progress-section">
+                <div id="onboarding-progress-bars" class="progress-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <span id="onboarding-progress-label" class="progress-label">Step 1 of 5</span>
+            </div>
+            <div class="button-group">
+                <button id="btn-back" class="btn btn-back">Back</button>
+                <button id="btn-continue" class="btn btn-continue">
+                    <span id="btn-continue-text">Continue</span>
+                    <span class="material-symbols-outlined" style="font-size: 16px">arrow_forward</span>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const steps = [
+                {
+                    title: "Welcome to Think4Ever",
+                    description:
+                        "Your journey to a more productive workspace starts here. Let's get you set up.",
+                    stepATitle: "Explore Dashboard",
+                    stepADesc:
+                        "Familiarize yourself with the main layout and high-level project analytics.",
+                    stepBTitle: "Welcome",
+                    stepBDesc:
+                        "This is the page where will land and start your journey. Here is some text to show that this is a card and it has some description.",
+                    overlay: "The beginning of your productivity journey.",
+                    image: "onboarding_welcome_1777906910904.png",
+                    progress: 1,
+                },
+                {
+                    title: "Create your account",
+                    description:
+                        "Use your work email to keep everything organized, secure, and synchronized.",
+                    stepATitle: "Email & Password",
+                    stepADesc:
+                        "Setup your primary credentials. Use a strong, unique password for security.",
+                    stepBTitle: "Verify Identity",
+                    stepBDesc:
+                        "Check your inbox for a 6-digit confirmation code to activate your account.",
+                    overlay: "Security and identity management.",
+                    image: "/assets/images/onboarding/01-welcome.png",
+                    progress: 2,
+                },
+                {
+                    title: "Add your API key",
+                    description:
+                        "Secure your integration and connect your first app with a managed API key.",
+                    stepATitle: "Generate Key",
+                    stepADesc:
+                        "Create a new secret key in your developer settings to authorize API calls.",
+                    stepBTitle: "Permissions",
+                    stepBDesc:
+                        "Define granular access scopes to ensure your data stays safe and private.",
+                    overlay: "Developer and integration settings.",
+                    image: "onboarding_welcome_1777906910904.png",
+                    progress: 3,
+                },
+                {
+                    title: "Create your first project",
+                    description:
+                        "Add a project to organize your work, tasks, and team resources efficiently.",
+                    stepATitle: "Project Details",
+                    stepADesc:
+                        "Name your project, add a description, and select a starter template.",
+                    stepBTitle: "Team Members",
+                    stepBDesc:
+                        "Invite collaborators by email to start working together in real-time.",
+                    overlay: "Collaborative project management.",
+                    image: "onboarding_signup_1777907501258.png",
+                    progress: 4,
+                },
+                {
+                    title: "Build and Launch",
+                    description:
+                        "Build out your workspace with automation, custom workflows, and integrations.",
+                    stepATitle: "Automation",
+                    stepADesc:
+                        "Setup triggers and actions to handle repetitive tasks automatically.",
+                    stepBTitle: "Go Live",
+                    stepBDesc:
+                        "Deploy your workspace to your team and start reaching your goals.",
+                    overlay: "Your workspace is ready to build.",
+                    image: "onboarding_welcome_1777906910904.png",
+                    progress: 5,
+                },
+            ];
+
+            let currentStepIndex = 0;
+            const navItems = document.querySelectorAll(".onboarding-nav-item");
+            const btnBack = document.getElementById("btn-back");
+            const btnContinue = document.getElementById("btn-continue");
+            const btnContinueText = document.getElementById("btn-continue-text");
+            const progressBars = document.querySelectorAll(
+                "#onboarding-progress-bars > .dot",
+            );
+            const contentArea = document.getElementById("content-area");
+
+            function updateStep(index) {
+                contentArea.classList.add("step-fade-hidden");
+
+                setTimeout(() => {
+                    currentStepIndex = index;
+                    const step = steps[index];
+
+                    // Update Sidebar
+                    navItems.forEach((item, idx) => {
+                        item.classList.remove("active", "completed");
+                        if (idx === index) {
+                            item.classList.add("active");
+                        } else if (idx < index) {
+                            item.classList.add("completed");
+                        }
+                    });
+
+                    // Update Content
+                    const titleEl = document.getElementById("onboarding-main-title");
+                    if (titleEl) titleEl.textContent = step.title;
+
+                    const descEl = document.getElementById("onboarding-main-description");
+                    if (descEl) descEl.textContent = step.description;
+
+                    const stepATitle = document.getElementById("step-a-title");
+                    if (stepATitle) stepATitle.textContent = step.stepATitle;
+
+                    const stepADesc = document.getElementById("step-a-desc");
+                    if (stepADesc) stepADesc.textContent = step.stepADesc;
+
+                    const stepBTitle = document.getElementById("step-b-title");
+                    if (stepBTitle) stepBTitle.textContent = step.stepBTitle;
+
+                    const stepBDesc = document.getElementById("step-b-desc");
+                    if (stepBDesc) stepBDesc.textContent = step.stepBDesc;
+
+                    const overlayText = document.getElementById("image-overlay-text");
+                    if (overlayText) overlayText.textContent = step.overlay;
+
+                    const mainImg = document.getElementById("onboarding-image");
+                    if (mainImg) mainImg.src = step.image;
+
+                    const progressLabel = document.getElementById("onboarding-progress-label");
+                    if (progressLabel) progressLabel.textContent = `Step ${step.progress} of 5`;
+
+                    // Update Progress Bar
+                    progressBars.forEach((bar, idx) => {
+                        bar.classList.toggle("filled", idx < step.progress);
+                    });
+
+                    // Update Buttons
+                    btnBack.disabled = index === 0;
+                    btnContinueText.textContent =
+                        index === steps.length - 1 ? "Finish" : "Continue";
+
+                    contentArea.classList.remove("step-fade-hidden");
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                }, 300);
+            }
+
+            navItems.forEach((item) => {
+                item.addEventListener("click", () => {
+                    const index = parseInt(item.dataset.stepIndex);
+                    if (index !== currentStepIndex) {
+                        updateStep(index);
+                    }
+                });
+            });
+
+            btnContinue.addEventListener("click", () => {
+                if (currentStepIndex < steps.length - 1) {
+                    updateStep(currentStepIndex + 1);
+                } else {
+                    alert("Onboarding Complete! Welcome to Think4Ever.");
+                }
+            });
+
+            btnBack.addEventListener("click", () => {
+                if (currentStepIndex > 0) {
+                    updateStep(currentStepIndex - 1);
+                }
+            });
+
+            updateStep(0);
+        });
+    </script>
+</body>
+
+</html>
