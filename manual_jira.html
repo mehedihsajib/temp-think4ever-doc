@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Think4ever - Dev</title>
+    <link href="css/theme.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/consumer_docs_home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="assets/js/i18n.js"></script>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: #f8fafc;
+      }
+
+      .modern-header {
+        font-family: "Inter", sans-serif;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 64px;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: saturate(180%) blur(20px);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        z-index: 300;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease;
+      }
+
+      .consumer-docs-layout {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        display: flex !important;
+        background: #ffffff;
+      }
+
+      .cd-sidebar {
+        box-sizing: content-box !important;
+        width: 240px !important;
+        min-width: 240px !important;
+        background: #fcfcfd !important;
+        border-right: 1px solid #e2e8f0 !important;
+        padding-left: 36px !important;
+        padding-right: 24px !important;
+        padding-top: 36px !important;
+      }
+
+      .cd-main-content {
+        max-width: 1000px !important;
+        background: #ffffff !important;
+        padding-top: 56px !important;
+        padding-left: 64px !important;
+        padding-right: 64px !important;
+        padding-bottom: 100px !important;
+      }
+
+      .cd-sub-heading {
+        color: #000;
+        font-size: 1.15rem;
+        font-weight: bold;
+        font-family: "Inter", sans-serif;
+        margin-top: 32px;
+        margin-bottom: 12px;
+      }
+
+      .doc-section {
+        margin-top: 24px;
+        margin-bottom: 32px;
+      }
+
+      .cd-overview-ul {
+        margin-top: 16px;
+        margin-bottom: 24px;
+        padding-left: 24px;
+        list-style-type: disc;
+      }
+
+      .cd-overview-ul li {
+        margin-bottom: 16px;
+        font-family: "Inter", sans-serif;
+        font-size: 0.95rem;
+        color: #475569;
+        line-height: 1.6;
+      }
+
+      .cd-overview-ul li strong {
+        color: #0f172a;
+        font-weight: 600;
+      }
+
+      .cd-overview-ul.number {
+        list-style: decimal;
+      }
+
+      .cd-overview-p {
+        font-family: "Inter", sans-serif;
+        font-size: 1rem;
+        color: #475569;
+        line-height: 1.7;
+        margin-bottom: 16px;
+      }
+
+      .demo-img {
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e2e8f0;
+        margin-top: 24px;
+        margin-bottom: 40px;
+        display: block;
+      }
+
+      .config-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 16px;
+        margin-bottom: 24px;
+        font-family: Arial, sans-serif;
+        font-size: 0.95rem;
+      }
+
+      .config-table th,
+      .config-table td {
+        border: 1px solid #000;
+        padding: 8px 12px;
+        text-align: left;
+      }
+
+      .config-table th {
+        font-weight: bold;
+        color: #000;
+        background-color: transparent;
+      }
+
+      .config-table td {
+        color: #000;
+        line-height: 1.5;
+      }
+
+      .config-table strong {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="consumer-docs-home consumer-getting-started">
+      <header class="modern-header" id="consumerHeader"></header>
+
+      <div class="consumer-docs-layout">
+        <div id="consumerSidebar"></div>
+
+        <main class="cd-main-content" id="cd-main">
+          <h1 class="cd-page-title">Jira</h1>
+          <!-- ===== Explanation Video ===== -->
+          <div class="yt-video" data-video-id="MwUo08iZM_0"></div>
+
+          <div class="doc-section">
+            <p class="cd-overview-p">
+              The Jira Integration module enables a powerful bi-directional sync
+              between your project environment and Jira Cloud. This ensures that
+              technical issues, task progress, and status updates remain
+              consistent across both platforms, eliminating the need for manual
+              duplicate entry.
+            </p>
+
+            <h3 class="cd-sub-heading">Integration Overview</h3>
+            <p>
+              The dashboard is organized into four key areas to manage and
+              monitor your connection:
+            </p>
+            <ul class="cd-overview-ul">
+              <li>
+                <strong>Connection:</strong>
+                <span
+                  >The primary setup tab used to link your project to a Jira
+                  Cloud instance.
+                </span>
+              </li>
+              <li>
+                <strong>Field Mapping:</strong>
+                <span
+                  >Define how data points in this platform (e.g., Priority,
+                  Tracker) correspond to specific Jira fields.
+                </span>
+              </li>
+              <li>
+                <strong>Sync Status:</strong>
+                <span
+                  >A real-time monitor showing the health of the connection and
+                  the timing of the last successful synchronization.
+                </span>
+              </li>
+              <li>
+                <strong>Synced Issues:</strong>
+                <span
+                  >A dedicated list of all entries currently being tracked in
+                  both systems.
+                </span>
+              </li>
+            </ul>
+
+            <img
+              src="assets/images/jira-int.png"
+              alt="Jira Integration"
+              class="demo-img"
+            />
+
+            <h3
+              class="cd-sub-heading"
+              style="margin-top: 32px; font-size: 1.05rem"
+            >
+              Connecting to Jira Cloud
+            </h3>
+            <p class="cd-overview-p">
+              To establish the link for the first time:
+            </p>
+            <ol class="cd-overview-ul number">
+              <li>
+                Navigate to the Integrations section in the left sidebar and
+                select Jira.
+              </li>
+              <li>
+                Click the purple Connect Jira button in the center of the
+                screen.
+              </li>
+              <li>
+                Follow the authentication prompts to authorize the connection
+                with your Jira Cloud credentials.
+              </li>
+              <li>
+                Once connected, you will be able to select the specific Jira
+                project you wish to sync with this workspace.
+              </li>
+            </ol>
+
+            <img
+              src="assets/images/jira-connect.png"
+              alt="Jira Conection"
+              class="demo-img"
+            />
+
+            <h3 class="cd-sub-heading">Managing Bi-Directional Sync</h3>
+            <p>The integration is designed to work both ways:</p>
+            <ul class="cd-overview-ul">
+              <li>
+                <strong>Platform → Jira:</strong>
+                <span
+                  >TWhen you create a new Issue or Task here, it can
+                  automatically generate a corresponding ticket in Jira.
+                </span>
+              </li>
+              <li>
+                <strong>Jira → Platform:</strong>
+                <span
+                  >Updates made by external developers in Jira (such as changing
+                  a status from "In Progress" to "Done") will reflect back in
+                  your dashboard automatically.
+                </span>
+              </li>
+            </ul>
+            <h3 class="cd-sub-heading">Field & Status Mapping</h3>
+            <p>
+              To ensure data integrity, use the Field Mapping tab to align
+              workflows:
+            </p>
+            <ul class="cd-overview-ul">
+              <li>
+                <strong>Status Transitions:</strong>
+                <span
+                  >Map your internal statuses (e.g., Resolved) to Jira's
+                  workflow steps (e.g., Fixed).
+                </span>
+              </li>
+              <li>
+                <strong>Priority Levels:</strong>
+                <span
+                  >Ensure that an Immediate priority here triggers the highest
+                  urgency level in Jira.
+                </span>
+              </li>
+              <li>
+                <strong>Assignees</strong>
+                <span
+                  >Link user profiles so that task ownership is preserved across
+                  both environments.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div id="docFooter"></div>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/consumer_docs_home.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        if (window.I18n) {
+          window.I18n.init();
+        }
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  </body>
+</html>

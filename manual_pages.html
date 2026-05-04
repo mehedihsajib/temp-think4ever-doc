@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Think4ever - Dev</title>
+    <link href="css/theme.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/consumer_docs_home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="assets/js/i18n.js"></script>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: #f8fafc;
+      }
+
+      .modern-header {
+        font-family: "Inter", sans-serif;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 64px;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: saturate(180%) blur(20px);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        z-index: 300;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease;
+      }
+
+      .consumer-docs-layout {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        display: flex !important;
+        background: #ffffff;
+      }
+
+      .cd-sidebar {
+        box-sizing: content-box !important;
+        width: 240px !important;
+        min-width: 240px !important;
+        background: #fcfcfd !important;
+        border-right: 1px solid #e2e8f0 !important;
+        padding-left: 36px !important;
+        padding-right: 24px !important;
+        padding-top: 36px !important;
+      }
+
+      .cd-main-content {
+        max-width: 1000px !important;
+        background: #ffffff !important;
+        padding-top: 56px !important;
+        padding-left: 64px !important;
+        padding-right: 64px !important;
+        padding-bottom: 100px !important;
+      }
+
+      .cd-sub-heading {
+        color: #000;
+        font-size: 1.15rem;
+        font-weight: bold;
+        font-family: "Inter", sans-serif;
+        margin-top: 32px;
+        margin-bottom: 12px;
+      }
+
+      .doc-section {
+        margin-top: 24px;
+        margin-bottom: 32px;
+      }
+
+      .cd-overview-ul {
+        margin-top: 16px;
+        margin-bottom: 24px;
+        padding-left: 24px;
+        list-style-type: disc;
+      }
+
+      .cd-overview-ul li {
+        margin-bottom: 16px;
+        font-family: "Inter", sans-serif;
+        font-size: 0.95rem;
+        color: #475569;
+        line-height: 1.6;
+      }
+
+      .cd-overview-ul li strong {
+        color: #0f172a;
+        font-weight: 600;
+      }
+
+      .cd-overview-ul.number {
+        list-style: decimal;
+      }
+
+      .cd-overview-p {
+        font-family: "Inter", sans-serif;
+        font-size: 1rem;
+        color: #475569;
+        line-height: 1.7;
+        margin-bottom: 16px;
+      }
+
+      .demo-img {
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e2e8f0;
+        margin-top: 24px;
+        margin-bottom: 40px;
+        display: block;
+      }
+
+      .config-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 16px;
+        margin-bottom: 24px;
+        font-family: Arial, sans-serif;
+        font-size: 0.95rem;
+      }
+
+      .config-table th,
+      .config-table td {
+        border: 1px solid #000;
+        padding: 8px 12px;
+        text-align: left;
+      }
+
+      .config-table th {
+        font-weight: bold;
+        color: #000;
+        background-color: transparent;
+      }
+
+      .config-table td {
+        color: #000;
+        line-height: 1.5;
+      }
+
+      .config-table strong {
+        font-weight: bold;
+      }
+
+      ol li::marker {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="consumer-docs-home consumer-getting-started">
+      <header class="modern-header" id="consumerHeader"></header>
+
+      <div class="consumer-docs-layout">
+        <div id="consumerSidebar"></div>
+
+        <main class="cd-main-content" id="cd-main">
+          <h1 class="cd-page-title">Pages</h1>
+          <!-- ===== Explanation Video ===== -->
+          <div class="yt-video" data-video-id="0yDS125TjQ0"></div>
+
+          <div class="doc-section">
+            <p class="cd-overview-p">
+              The Pages module serves as the central internal knowledge base for
+              your project. Utilizing a block-based editor, it allows teams to
+              document processes, store meeting notes, and create structured
+              project wikis organized by dedicated workspaces.
+            </p>
+            <p class="cd-overview-p">
+              The dashboard is designed to help you organize and retrieve
+              information quickly. Upon entering the module, you have several
+              primary navigation options:
+            </p>
+            <ul class="cd-overview-ul">
+              <li>
+                <strong>Standard Operating Procedures (SOPs):</strong>
+                <span
+                  >Guidelines for how the team should handle specific technical
+                  tasks.</span
+                >
+              </li>
+              <li>
+                <strong>Project Wikis:</strong>
+                <span
+                  >Centralized technical specs, brand guidelines, and onboarding
+                  materials.</span
+                >
+              </li>
+              <li>
+                <strong>Shared Assets:</strong>
+                <span
+                  >A repository for images, files, and templates used across the
+                  project.</span
+                >
+              </li>
+              <li>
+                <strong>All Pages:</strong>
+                <span
+                  >The default view showing every document you have access
+                  to.</span
+                >
+              </li>
+              <li>
+                <strong>Tree View:</strong>
+                <span
+                  >A hierarchical folder-style structure to visualize how pages
+                  and sub-pages are nested.</span
+                >
+              </li>
+              <li>
+                <strong>Recent:</strong>
+                <span
+                  >Quickly jump back into the documents you've edited or viewed
+                  most recently.</span
+                >
+              </li>
+              <li>
+                <strong>Templates:</strong>
+                <span
+                  >Access pre-defined layouts to standardize documentation
+                  (e.g., API docs, meeting minutes).</span
+                >
+              </li>
+            </ul>
+            <img
+              src="assets/images/page-tabs.png"
+              alt="Page Tabs"
+              class="demo-img"
+            />
+
+            <h4 class="cd-sub-heading">Organizing Information</h4>
+            <p class="cd-overview-p">
+              To keep the knowledge base clean and searchable, information is
+              grouped into two main levels:
+            </p>
+            <ul class="cd-overview-ul">
+              <li>
+                <strong>Workspaces:</strong>
+                <span
+                  >Click + New Workspace to create high-level containers (e.g.,
+                  "Engineering," "Marketing," or "Legal"). Each workspace acts
+                  as a separate environment for related documents.</span
+                >
+              </li>
+              <li>
+                <strong>Pages:</strong>
+                <span
+                  >Within a workspace, click + New Page to start a new document.
+                  You can tag pages, attach files, and bookmark important ones
+                  for instant access.</span
+                >
+              </li>
+            </ul>
+
+            <h4 class="cd-sub-heading">Using the Block-Based Editor</h4>
+            <p class="cd-overview-p">
+              The editor allows for flexible content creation by treating every
+              element (text, images, code snippets) as a "block."
+            </p>
+            <ul class="cd-overview-ul">
+              <li>
+                <strong>Dynamic Layouts:</strong>
+                <span
+                  >Easily rearrange content by dragging and dropping
+                  blocks.</span
+                >
+              </li>
+              <li>
+                <strong>Rich Media Support:</strong>
+                <span
+                  >Embed images, videos, and technical diagrams directly into
+                  your documentation.</span
+                >
+              </li>
+              <li>
+                <strong>Collaborative Features:</strong>
+                <span
+                  >Use the Collaboration sub-menu to see who is currently
+                  working on a document and track version history.</span
+                >
+              </li>
+            </ul>
+
+            <h4 class="cd-sub-heading">Search and Discovery</h4>
+            <p class="cd-overview-p">
+              As your knowledge base grows, use the secondary navigation bar to
+              find specific assets:
+            </p>
+            <ul class="cd-overview-ul">
+              <li>
+                <strong>Tags:</strong>
+                <span
+                  >Filter pages based on custom keywords (e.g.,
+                  #SprintPlanning).</span
+                >
+              </li>
+              <li>
+                <strong>Files:</strong>
+                <span
+                  >A centralized view of all documents and images uploaded
+                  across various pages.</span
+                >
+              </li>
+              <li>
+                <strong>Bookmarks:</strong>
+                <span
+                  >Access your "pinned" pages that require frequent
+                  reference.</span
+                >
+              </li>
+              <li>
+                <strong>Search Bar:</strong>
+                <span
+                  >Use the global search in the top-right corner to find
+                  specific text strings across all workspaces.</span
+                >
+              </li>
+            </ul>
+
+            <h4 class="cd-sub-heading">Management Actions</h4>
+            <p class="cd-overview-p">
+              If your knowledge base is empty, as shown in the initial setup,
+              you can use the + Create First Page button in the center of the
+              screen to begin building your project's repository.
+            </p>
+
+            <h3 class="cd-sub-heading">Create a Page</h3>
+            <img
+              src="assets/images/page-create.png"
+              alt="Create Page"
+              class="demo-img"
+            />
+            <p class="cd-overview-p">
+              To create a page within the Think4ever AI ecosystem, follow these
+              steps to organize your documentation and knowledge base
+              effectively.
+            </p>
+            <ol class="cd-overview-ul number">
+              <li>
+                <strong>Navigate to the Pages Module</strong>
+                <br />
+                On the left-hand sidebar, scroll down to the KNOWLEDGE &
+                FEEDBACK section and click on Pages. This will open your
+                knowledge base dashboard.
+              </li>
+              <li>
+                <strong>Choose Your Starting Point</strong>
+                <br />
+                Depending on the current state of your project, you have two
+                ways to begin:
+                <ul class="cd-overview-ul">
+                  <li>
+                    If the workspace is empty: Click the large purple + Create
+                    First Page button in the center of the screen.
+                  </li>
+                  <li>
+                    If you already have documentation: Click the + New Page
+                    button located in the top-left corner of the header.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Select a Workspace</strong>
+                <br />
+                Before the editor opens, you may be prompted to select which
+                Workspace (e.g., Engineering, Marketing, or General) the page
+                should belong to.
+                <br />
+                <em
+                  >Note: If you haven't created a workspace yet, click + New
+                  Workspace first to create a container for your new pages.</em
+                >
+              </li>
+              <li>
+                <strong>Configure Page Details</strong>
+                <br />
+                Once the editor loads, you will typically define the following:
+                <ul class="cd-overview-ul">
+                  <li>
+                    Title: Give your page a clear, searchable name (e.g., "API
+                    Integration Guide").
+                  </li>
+                  <li>
+                    Icon/Cover: (Optional) Add a visual identifier to make the
+                    page stand out in the Tree View.
+                  </li>
+                  <li>
+                    Tags: Add keywords like #documentation or #sprint1 to help
+                    with filtering later.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Add Content using Blocks</strong>
+                <br />
+                The editor is block-based, meaning you can insert different
+                types of content by typing / or clicking the add icon:
+                <ul class="cd-overview-ul">
+                  <li>Text Blocks: Standard headings and paragraphs.</li>
+                  <li>
+                    Media Blocks: Drag and drop images or videos directly onto
+                    the page.
+                  </li>
+                  <li>
+                    Technical Blocks: Insert code snippets or link to existing
+                    Technical Diagrams from your project sidebar.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <strong>Save and Organize</strong>
+                <br />
+                <ul class="cd-overview-ul">
+                  <li>Auto-Save: Most changes are saved in real-time.</li>
+                  <li>
+                    Tree View: Use the "Tree View" tab in the dashboard to drag
+                    and drop your new page into a specific hierarchy or nest it
+                    under a parent page.
+                  </li>
+                  <li>
+                    Bookmarks: If this is a page you will refer to often, click
+                    the Bookmark icon to pin it to your favorites list.
+                  </li>
+                </ul>
+                <br />
+                <em
+                  >Quick Tip: If you're unsure where to start, click the
+                  Templates tab before creating a new page to see pre-formatted
+                  layouts for meeting notes or project requirements.</em
+                >
+              </li>
+            </ol>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div id="docFooter"></div>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/consumer_docs_home.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        if (window.I18n) {
+          window.I18n.init();
+        }
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  </body>
+</html>
