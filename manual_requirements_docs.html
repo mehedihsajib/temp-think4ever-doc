@@ -1,452 +1,389 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Think4Ever Dev - Requirements Docs</title>
-    <link href="css/theme.css" rel="stylesheet" type="text/css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="assets/css/global.css" />
-    <link rel="stylesheet" href="assets/css/consumer_docs_home.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="assets/js/i18n.js"></script>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-        background: #f8fafc;
-      }
 
-      .modern-header {
-        font-family: "Inter", sans-serif;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 64px;
-        background: rgba(255, 255, 255, 0.85);
-        backdrop-filter: saturate(180%) blur(20px);
-        -webkit-backdrop-filter: saturate(180%) blur(20px);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-        z-index: 300;
-        display: flex;
-        align-items: center;
-        transition: all 0.3s ease;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Think4Ever Platform - Requirements Docs</title>
+  <link href="css/theme.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/consumer_docs_home.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="assets/js/i18n.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: #f8fafc;
+    }
 
-      .consumer-docs-layout {
-        max-width: 100% !important;
-        width: 100% !important;
-        margin: 0 !important;
-        display: flex !important;
-        background: #ffffff;
-      }
+    .modern-header {
+      font-family: "Inter", sans-serif;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 64px;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      z-index: 300;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
 
-      .cd-sidebar {
-        box-sizing: content-box !important;
-        width: 240px !important;
-        min-width: 240px !important;
-        background: #fcfcfd !important;
-        border-right: 1px solid #e2e8f0 !important;
-        padding-left: 36px !important;
-        padding-right: 24px !important;
-        padding-top: 36px !important;
-      }
+    .consumer-docs-layout {
+      max-width: 100% !important;
+      width: 100% !important;
+      margin: 0 !important;
+      display: flex !important;
+      background: #ffffff;
+    }
 
-      .cd-main-content {
-        max-width: 1000px !important;
-        background: #ffffff !important;
-        padding-top: 56px !important;
-        padding-left: 64px !important;
-        padding-right: 64px !important;
-        padding-bottom: 100px !important;
-      }
+    .cd-sidebar {
+      box-sizing: content-box !important;
+      width: 240px !important;
+      min-width: 240px !important;
+      background: #fcfcfd !important;
+      border-right: 1px solid #e2e8f0 !important;
+      padding-left: 36px !important;
+      padding-right: 24px !important;
+      padding-top: 36px !important;
+    }
 
-      h1.cd-page-title-blue {
-        color: #2563eb;
-        border-bottom: none;
-        margin-bottom: 16px;
-        font-size: 1.8rem;
-        font-family: "Inter", sans-serif;
-        font-weight: 700;
-      }
+    .cd-main-content {
+      max-width: 1000px !important;
+      background: #ffffff !important;
+      padding-top: 56px !important;
+      padding-left: 64px !important;
+      padding-right: 64px !important;
+      padding-bottom: 100px !important;
+    }
 
-      .cd-sub-heading {
-        color: #000;
-        font-size: 1.15rem;
-        font-weight: bold;
-        font-family: "Inter", sans-serif;
-        margin-top: 32px;
-        margin-bottom: 12px;
-      }
+    h1.cd-page-title-blue {
+      color: #2563eb;
+      border-bottom: none;
+      margin-bottom: 16px;
+      font-size: 1.8rem;
+      font-family: "Inter", sans-serif;
+      font-weight: 700;
+    }
 
-      .doc-section {
-        margin-top: 24px;
-        margin-bottom: 32px;
-      }
+    .cd-sub-heading {
+      color: #000;
+      font-size: 1.15rem;
+      font-weight: bold;
+      font-family: "Inter", sans-serif;
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
 
-      .cd-overview-ul {
-        margin-top: 16px;
-        margin-bottom: 24px;
-        padding-left: 24px;
-        list-style-type: disc;
-      }
+    .doc-section {
+      margin-top: 24px;
+      margin-bottom: 32px;
+    }
 
-      .cd-overview-ul li {
-        margin-bottom: 16px;
-        font-family: "Inter", sans-serif;
-        font-size: 0.95rem;
-        color: #475569;
-        line-height: 1.6;
-      }
+    .cd-overview-ul {
+      margin-top: 16px;
+      margin-bottom: 24px;
+      padding-left: 24px;
+      list-style-type: disc;
+    }
 
-      .cd-overview-ul li strong {
-        color: #0f172a;
-        font-weight: 600;
-      }
+    .cd-overview-ul li {
+      margin-bottom: 16px;
+      font-family: "Inter", sans-serif;
+      font-size: 0.95rem;
+      color: #475569;
+      line-height: 1.6;
+    }
 
-      .cd-overview-p {
-        font-family: "Inter", sans-serif;
-        font-size: 1rem;
-        color: #475569;
-        line-height: 1.7;
-        margin-bottom: 16px;
-      }
+    .cd-overview-ul li strong {
+      color: #0f172a;
+      font-weight: 600;
+    }
 
-      .demo-img {
-        max-width: 100%;
-        border-radius: 8px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        border: 1px solid #e2e8f0;
-        margin-top: 24px;
-        margin-bottom: 40px;
-        display: block;
-      }
+    .cd-overview-p {
+      font-family: "Inter", sans-serif;
+      font-size: 1rem;
+      color: #475569;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
 
-      .config-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 16px;
-        margin-bottom: 24px;
-        font-family: Arial, sans-serif;
-        font-size: 0.95rem;
-      }
+    .demo-img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid #e2e8f0;
+      margin-top: 24px;
+      margin-bottom: 40px;
+      display: block;
+    }
 
-      .config-table th,
-      .config-table td {
-        border: 1px solid #000;
-        padding: 8px 12px;
-        text-align: left;
-      }
+    .config-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      margin-bottom: 24px;
+      font-family: Arial, sans-serif;
+      font-size: 0.95rem;
+    }
 
-      .config-table th {
-        font-weight: bold;
-        color: #000;
-        background-color: transparent;
-      }
+    .config-table th,
+    .config-table td {
+      border: 1px solid #000;
+      padding: 8px 12px;
+      text-align: left;
+    }
 
-      .config-table td {
-        color: #000;
-        line-height: 1.5;
-      }
+    .config-table th {
+      font-weight: bold;
+      color: #000;
+      background-color: transparent;
+    }
 
-      .config-table strong {
-        font-weight: bold;
-      }
-    </style>
-  </head>
+    .config-table td {
+      color: #000;
+      line-height: 1.5;
+    }
 
-  <body>
-    <div class="consumer-docs-home consumer-getting-started">
-      <header class="modern-header" id="consumerHeader"></header>
+    .config-table strong {
+      font-weight: bold;
+    }
+  </style>
+</head>
 
-      <div class="consumer-docs-layout">
-        <div id="consumerSidebar"></div>
+<body>
+  <div class="consumer-docs-home consumer-getting-started">
+    <header class="modern-header" id="consumerHeader"></header>
 
-        <main class="cd-main-content" id="cd-main">
-          <!-- Requirements Docs Section -->
-          <h1 class="cd-page-title" data-i18n="req_docs.title">
-            Requirements Docs
-          </h1>
+    <div class="consumer-docs-layout">
+      <div id="consumerSidebar"></div>
 
-          <!-- ===== Explanation Video ===== -->
-          <div class="yt-video" data-video-id="M7NvDD-1tDM"></div>
-          <div class="doc-section">
-            <p class="cd-overview-p" data-i18n-html="req_docs.intro">
-              The <strong>Requirements Documents</strong> dashboard is the
-              central repository for your project's formal specifications and
-              documentation. This page allows you to manage, review, and
-              regenerate key documents that define the project's scope,
-              functionality, and technical framework.
-            </p>
+      <main class="cd-main-content" id="cd-main">
+        <!-- Requirements Docs Section -->
+        <h1 class="cd-page-title" data-i18n="req_docs.title">
+          Requirements Docs
+        </h1>
 
-            <img
-              src="assets/images/req-doc-1.jpg"
-              alt="Requirements Documents"
-              class="demo-img"
-            />
+        <!-- ===== Explanation Video ===== -->
+        <div class="yt-video" data-video-id="M7NvDD-1tDM"></div>
+        <div class="doc-section">
+          <p class="cd-overview-p" data-i18n-html="req_docs.intro">
+            The <strong>Requirements Documents</strong> dashboard is the
+            central repository for your project's formal specifications and
+            documentation. This page allows you to manage, review, and
+            regenerate key documents that define the project's scope,
+            functionality, and technical framework.
+          </p>
 
-            <h3 class="cd-sub-heading" data-i18n="req_docs.adt_title">
-              Available Document Types
-            </h3>
-            <p class="cd-overview-p" data-i18n-html="req_docs.adt_intro">
-              The dashboard organizes documentation into four primary
-              categories, each serving a specific role in the project lifecycle:
-            </p>
+          <img src="assets/images/req-doc-1.jpg" alt="Requirements Documents" class="demo-img" />
 
-            <table class="config-table">
-              <thead>
-                <tr>
-                  <th data-i18n="req_docs.t_h1">Document</th>
-                  <th data-i18n="req_docs.t_h2">Purpose</th>
-                  <th data-i18n="req_docs.t_h3">Key Content</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td data-i18n-html="req_docs.t_r1_1">
-                    <strong>Concept Summary</strong>
-                  </td>
-                  <td data-i18n-html="req_docs.t_r1_2">
-                    High-level project vision.
-                  </td>
-                  <td data-i18n-html="req_docs.t_r1_3">
-                    Visual overviews and core value propositions.
-                  </td>
-                </tr>
-                <tr>
-                  <td data-i18n-html="req_docs.t_r2_1">
-                    <strong>Functional Specification</strong>
-                  </td>
-                  <td data-i18n-html="req_docs.t_r2_2">
-                    User-facing behavior.
-                  </td>
-                  <td data-i18n-html="req_docs.t_r2_3">
-                    Detailed requirements, user stories, and feature logic.
-                  </td>
-                </tr>
-                <tr>
-                  <td data-i18n-html="req_docs.t_r3_1">
-                    <strong>Technical Specification</strong>
-                  </td>
-                  <td data-i18n-html="req_docs.t_r3_2">
-                    Developer-focused roadmap.
-                  </td>
-                  <td data-i18n-html="req_docs.t_r3_3">
-                    System architecture, API documentation, and implementation
-                    details.
-                  </td>
-                </tr>
-                <tr>
-                  <td data-i18n-html="req_docs.t_r4_1">
-                    <strong>Database Design</strong>
-                  </td>
-                  <td data-i18n-html="req_docs.t_r4_2">
-                    Data structure mapping.
-                  </td>
-                  <td data-i18n-html="req_docs.t_r4_3">
-                    Database schemas, entity relationships (ERD), and tables.
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+          <h3 class="cd-sub-heading" data-i18n="req_docs.adt_title">
+            Available Document Types
+          </h3>
+          <p class="cd-overview-p" data-i18n-html="req_docs.adt_intro">
+            The dashboard organizes documentation into four primary
+            categories, each serving a specific role in the project lifecycle:
+          </p>
 
-            <h3
-              class="cd-sub-heading"
-              data-i18n="req_docs.dsm_title"
-              style="margin-top: 48px"
-            >
-              Document Status & Management
-            </h3>
-            <p class="cd-overview-p" data-i18n-html="req_docs.dsm_intro">
-              Each document card features real-time status indicators and
-              management tools:
-            </p>
+          <table class="config-table">
+            <thead>
+              <tr>
+                <th data-i18n="req_docs.t_h1">Document</th>
+                <th data-i18n="req_docs.t_h2">Purpose</th>
+                <th data-i18n="req_docs.t_h3">Key Content</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n-html="req_docs.t_r1_1">
+                  <strong>Concept Summary</strong>
+                </td>
+                <td data-i18n-html="req_docs.t_r1_2">
+                  High-level project vision.
+                </td>
+                <td data-i18n-html="req_docs.t_r1_3">
+                  Visual overviews and core value propositions.
+                </td>
+              </tr>
+              <tr>
+                <td data-i18n-html="req_docs.t_r2_1">
+                  <strong>Functional Specification</strong>
+                </td>
+                <td data-i18n-html="req_docs.t_r2_2">
+                  User-facing behavior.
+                </td>
+                <td data-i18n-html="req_docs.t_r2_3">
+                  Detailed requirements, user stories, and feature logic.
+                </td>
+              </tr>
+              <tr>
+                <td data-i18n-html="req_docs.t_r3_1">
+                  <strong>Technical Specification</strong>
+                </td>
+                <td data-i18n-html="req_docs.t_r3_2">
+                  Developer-focused roadmap.
+                </td>
+                <td data-i18n-html="req_docs.t_r3_3">
+                  System architecture, API documentation, and implementation
+                  details.
+                </td>
+              </tr>
+              <tr>
+                <td data-i18n-html="req_docs.t_r4_1">
+                  <strong>Database Design</strong>
+                </td>
+                <td data-i18n-html="req_docs.t_r4_2">
+                  Data structure mapping.
+                </td>
+                <td data-i18n-html="req_docs.t_r4_3">
+                  Database schemas, entity relationships (ERD), and tables.
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-            <ul class="cd-overview-ul">
-              <li>
-                <strong data-i18n="req_docs.dsm_b1_title">Ready Badge:</strong>
-                <span data-i18n-html="req_docs.dsm_b1_desc"
-                  >A green "Ready" indicator confirms that the document has been
-                  successfully generated and is up to date with the latest
-                  project changes.</span
-                >
-              </li>
-              <li>
-                <strong data-i18n="req_docs.dsm_b2_title">Open:</strong>
-                <span data-i18n-html="req_docs.dsm_b2_desc"
-                  >Click this button to view the full document in the built-in
-                  reader or to download a local copy.</span
-                >
-              </li>
-              <li>
-                <strong data-i18n="req_docs.dsm_b3_title">Rebuild:</strong>
-                <span data-i18n-html="req_docs.dsm_b3_desc"
-                  >This action triggers the AI engine to scan your current
-                  project data—including diagrams, tasks, and code—to regenerate
-                  the document, ensuring it remains synchronized with your
-                  latest work.</span
-                >
-              </li>
-              <li>
-                <strong data-i18n="req_docs.dsm_b4_title"
-                  >Refresh (Global):</strong
-                >
-                <span data-i18n-html="req_docs.dsm_b4_desc"
-                  >Use the refresh button at the top-right of the page to check
-                  for global status updates across all document types.</span
-                >
-              </li>
-            </ul>
+          <h3 class="cd-sub-heading" data-i18n="req_docs.dsm_title" style="margin-top: 48px">
+            Document Status & Management
+          </h3>
+          <p class="cd-overview-p" data-i18n-html="req_docs.dsm_intro">
+            Each document card features real-time status indicators and
+            management tools:
+          </p>
 
-            <h3
-              class="cd-sub-heading"
-              data-i18n="req_docs.kw_title"
-              style="margin-top: 32px"
-            >
-              Key Workflow
-            </h3>
-            <ol class="cd-overview-ul" style="list-style-type: decimal">
-              <li>
-                <strong data-i18n="req_docs.kw_1_title">Generation:</strong>
-                <span data-i18n-html="req_docs.kw_1_desc"
-                  >When you first start a project, use
-                  <strong>Rebuild</strong> to create your initial specifications
-                  from your concept sketches or technical diagrams.</span
-                >
-              </li>
-              <li>
-                <strong data-i18n="req_docs.kw_2_title">Verification:</strong>
-                <span data-i18n-html="req_docs.kw_2_desc"
-                  >Check the <strong>Ready</strong> status before sharing
-                  documents with stakeholders to ensure they are
-                  finalized.</span
-                >
-              </li>
-              <li>
-                <strong data-i18n="req_docs.kw_3_title">Iteration:</strong>
-                <span data-i18n-html="req_docs.kw_3_desc"
-                  >If you modify your <strong>Technical Diagrams</strong> or
-                  <strong>UI Designs</strong>, return here and click
-                  <strong>Rebuild</strong> on the corresponding document to keep
-                  your documentation in sync with your designs.</span
-                >
-              </li>
-            </ol>
+          <ul class="cd-overview-ul">
+            <li>
+              <strong data-i18n="req_docs.dsm_b1_title">Ready Badge:</strong>
+              <span data-i18n-html="req_docs.dsm_b1_desc">A green "Ready" indicator confirms that the document has been
+                successfully generated and is up to date with the latest
+                project changes.</span>
+            </li>
+            <li>
+              <strong data-i18n="req_docs.dsm_b2_title">Open:</strong>
+              <span data-i18n-html="req_docs.dsm_b2_desc">Click this button to view the full document in the built-in
+                reader or to download a local copy.</span>
+            </li>
+            <li>
+              <strong data-i18n="req_docs.dsm_b3_title">Rebuild:</strong>
+              <span data-i18n-html="req_docs.dsm_b3_desc">This action triggers the AI engine to scan your current
+                project data—including diagrams, tasks, and code—to regenerate
+                the document, ensuring it remains synchronized with your
+                latest work.</span>
+            </li>
+            <li>
+              <strong data-i18n="req_docs.dsm_b4_title">Refresh (Global):</strong>
+              <span data-i18n-html="req_docs.dsm_b4_desc">Use the refresh button at the top-right of the page to check
+                for global status updates across all document types.</span>
+            </li>
+          </ul>
 
-            <img
-              src="assets/images/req-doc-2.jpg"
-              alt="Document Status and Workflow"
-              class="demo-img"
-            />
-          </div>
+          <h3 class="cd-sub-heading" data-i18n="req_docs.kw_title" style="margin-top: 32px">
+            Key Workflow
+          </h3>
+          <ol class="cd-overview-ul" style="list-style-type: decimal">
+            <li>
+              <strong data-i18n="req_docs.kw_1_title">Generation:</strong>
+              <span data-i18n-html="req_docs.kw_1_desc">When you first start a project, use
+                <strong>Rebuild</strong> to create your initial specifications
+                from your concept sketches or technical diagrams.</span>
+            </li>
+            <li>
+              <strong data-i18n="req_docs.kw_2_title">Verification:</strong>
+              <span data-i18n-html="req_docs.kw_2_desc">Check the <strong>Ready</strong> status before sharing
+                documents with stakeholders to ensure they are
+                finalized.</span>
+            </li>
+            <li>
+              <strong data-i18n="req_docs.kw_3_title">Iteration:</strong>
+              <span data-i18n-html="req_docs.kw_3_desc">If you modify your <strong>Technical Diagrams</strong> or
+                <strong>UI Designs</strong>, return here and click
+                <strong>Rebuild</strong> on the corresponding document to keep
+                your documentation in sync with your designs.</span>
+            </li>
+          </ol>
 
-          <!-- Development Section Intro -->
-          <div
-            class="doc-section"
-            style="
+          <img src="assets/images/req-doc-2.jpg" alt="Document Status and Workflow" class="demo-img" />
+        </div>
+
+        <!-- Development Section Intro -->
+        <div class="doc-section" style="
               margin-top: 80px;
               padding-top: 20px;
               border-top: 1px solid #e2e8f0;
-            "
-          >
-            <h1 class="cd-page-title-blue" data-i18n="req_docs.dev_title">
-              Development
-            </h1>
+            ">
+          <h1 class="cd-page-title-blue" data-i18n="req_docs.dev_title">
+            Development
+          </h1>
 
-            <img
-              src="assets/images/req-doc-3.jpg"
-              alt="Development Sidebar Menu"
-              class="demo-img"
-              style="max-width: 300px"
-            />
+          <img src="assets/images/req-doc-3.jpg" alt="Development Sidebar Menu" class="demo-img"
+            style="max-width: 300px" />
 
-            <p class="cd-overview-p" data-i18n-html="req_docs.dev_intro">
-              The <strong>Development</strong> section is the technical engine
-              of your project, providing direct access to the backend
-              infrastructure, project management tasks, and the actual codebase.
-              This section is designed for developers and engineers to manage
-              the build and deployment phases of the project lifecycle.
-            </p>
+          <p class="cd-overview-p" data-i18n-html="req_docs.dev_intro">
+            The <strong>Development</strong> section is the technical engine
+            of your project, providing direct access to the backend
+            infrastructure, project management tasks, and the actual codebase.
+            This section is designed for developers and engineers to manage
+            the build and deployment phases of the project lifecycle.
+          </p>
 
-            <p
-              class="cd-overview-p"
-              style="margin-top: 24px"
-              data-i18n-html="req_docs.dev_sub_intro"
-            >
-              There are 4 sub-menus:
-            </p>
+          <p class="cd-overview-p" style="margin-top: 24px" data-i18n-html="req_docs.dev_sub_intro">
+            There are 4 sub-menus:
+          </p>
 
-            <h3
-              class="cd-sub-heading"
-              data-i18n-html="req_docs.dev_sub1_title"
-              style="margin-top: 24px"
-            >
-              1. Tasks
-            </h3>
-            <p class="cd-overview-p" data-i18n-html="req_docs.dev_sub1_desc">
-              The project's central action log, containing all developmental
-              "To-Dos," bug reports, and feature requests.
-            </p>
+          <h3 class="cd-sub-heading" data-i18n-html="req_docs.dev_sub1_title" style="margin-top: 24px">
+            1. Tasks
+          </h3>
+          <p class="cd-overview-p" data-i18n-html="req_docs.dev_sub1_desc">
+            The project's central action log, containing all developmental
+            "To-Dos," bug reports, and feature requests.
+          </p>
 
-            <h3
-              class="cd-sub-heading"
-              data-i18n-html="req_docs.dev_sub2_title"
-              style="margin-top: 24px"
-            >
-              2. Database
-            </h3>
-            <p class="cd-overview-p" data-i18n-html="req_docs.dev_sub2_desc">
-              Access to the data layer, including table structures, stored
-              procedures, and data migration scripts.
-            </p>
+          <h3 class="cd-sub-heading" data-i18n-html="req_docs.dev_sub2_title" style="margin-top: 24px">
+            2. Database
+          </h3>
+          <p class="cd-overview-p" data-i18n-html="req_docs.dev_sub2_desc">
+            Access to the data layer, including table structures, stored
+            procedures, and data migration scripts.
+          </p>
 
-            <h3
-              class="cd-sub-heading"
-              data-i18n-html="req_docs.dev_sub3_title"
-              style="margin-top: 24px"
-            >
-              3. Source Code
-            </h3>
-            <p class="cd-overview-p" data-i18n-html="req_docs.dev_sub3_desc">
-              A repository for the application's logic, scripts, and
-              front-end/back-end programming files.
-            </p>
+          <h3 class="cd-sub-heading" data-i18n-html="req_docs.dev_sub3_title" style="margin-top: 24px">
+            3. Source Code
+          </h3>
+          <p class="cd-overview-p" data-i18n-html="req_docs.dev_sub3_desc">
+            A repository for the application's logic, scripts, and
+            front-end/back-end programming files.
+          </p>
 
-            <h3
-              class="cd-sub-heading"
-              data-i18n-html="req_docs.dev_sub4_title"
-              style="margin-top: 24px"
-            >
-              4. Containers
-            </h3>
-            <p class="cd-overview-p" data-i18n-html="req_docs.dev_sub4_desc">
-              Infrastructure management for deployment environments (e.g.,
-              Docker or Kubernetes configurations).
-            </p>
-          </div>
-        </main>
-      </div>
+          <h3 class="cd-sub-heading" data-i18n-html="req_docs.dev_sub4_title" style="margin-top: 24px">
+            4. Containers
+          </h3>
+          <p class="cd-overview-p" data-i18n-html="req_docs.dev_sub4_desc">
+            Infrastructure management for deployment environments (e.g.,
+            Docker or Kubernetes configurations).
+          </p>
+        </div>
+      </main>
     </div>
-    <div id="docFooter"></div>
-    <script src="assets/js/navigation.js"></script>
-    <script src="assets/js/consumer_docs_home.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        if (window.I18n) {
-          window.I18n.init();
-        }
-      });
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-  </body>
+  </div>
+  <div id="docFooter"></div>
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/consumer_docs_home.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.I18n) {
+        window.I18n.init();
+      }
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+
 </html>

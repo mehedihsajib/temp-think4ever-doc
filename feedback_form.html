@@ -1,411 +1,254 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Feedback Form</title>
-    <link href="css/theme.css" rel="stylesheet" type="text/css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="assets/css/global.css" />
-    <link rel="stylesheet" href="assets/css/feedback_form.css" />
-    <style>
-      /* Basic reset for preview consistency */
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="feedback-page">
-      <!-- Skip to content -->
-      <a href="#feedback-content" class="skip-link">Skip to content</a>
-      <!-- Header -->
-      <!-- Site Header -->
-      <header class="modern-header" id="consumerHeader"></header>
-      <!-- Main Content -->
-      <main class="feedback-main" id="feedback-content" role="main">
-        <div class="feedback-container">
-          <!-- Breadcrumb -->
-          <nav class="feedback-breadcrumb" aria-label="Breadcrumb">
-            <a
-              onclick="load_page('index')"
-              tabindex="0"
-              data-i18n="nav.overview"
-              >Home</a
-            >
-            <span class="separator"><i class="fa fa-chevron-right"></i></span>
-            <span class="current" data-i18n="feedback.breadcrumb"
-              >Feedback</span
-            >
-          </nav>
-          <!-- Page Header -->
-          <div class="feedback-page-header">
-            <div class="page-icon" aria-hidden="true">
-              <i class="fa fa-comment-dots"></i>
-            </div>
-            <h1 id="ff_title">Send Us Feedback</h1>
-            <p id="ff_description">
-              We value your feedback. Let us know how we can improve Think4Ever
-              AI Platform.
-            </p>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback Form</title>
+  <link href="css/theme.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/feedback_form.css" />
+  <style>
+    /* Basic reset for preview consistency */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="feedback-page">
+    <!-- Skip to content -->
+    <a href="#feedback-content" class="skip-link">Skip to content</a>
+    <!-- Header -->
+    <!-- Site Header -->
+    <header class="modern-header" id="consumerHeader"></header>
+    <!-- Main Content -->
+    <main class="feedback-main" id="feedback-content" role="main">
+      <div class="feedback-container">
+        <!-- Breadcrumb -->
+        <nav class="feedback-breadcrumb" aria-label="Breadcrumb">
+          <a onclick="load_page('index')" tabindex="0" data-i18n="nav.overview">Home</a>
+          <span class="separator"><i class="fa fa-chevron-right"></i></span>
+          <span class="current" data-i18n="feedback.breadcrumb">Feedback</span>
+        </nav>
+        <!-- Page Header -->
+        <div class="feedback-page-header">
+          <div class="page-icon" aria-hidden="true">
+            <i class="fa fa-comment-dots"></i>
           </div>
-          <!-- Quick Category Type Selector -->
-          <div
-            class="feedback-type-selector"
-            role="radiogroup"
-            aria-label="Quick feedback category selection"
-          >
-            <div
-              class="type-card"
-              data-category="bug_report"
-              role="radio"
-              aria-checked="false"
-              tabindex="0"
-            >
-              <div class="type-icon" aria-hidden="true">
-                <i class="fa fa-bug"></i>
-              </div>
-              <div class="type-label" data-i18n="feedback.type.bug">
-                Bug Report
-              </div>
+          <h1 id="ff_title">Send Us Feedback</h1>
+          <p id="ff_description">
+            We value your feedback. Let us know how we can improve Think4Ever
+            AI Platform.
+          </p>
+        </div>
+        <!-- Quick Category Type Selector -->
+        <div class="feedback-type-selector" role="radiogroup" aria-label="Quick feedback category selection">
+          <div class="type-card" data-category="bug_report" role="radio" aria-checked="false" tabindex="0">
+            <div class="type-icon" aria-hidden="true">
+              <i class="fa fa-bug"></i>
             </div>
-            <div
-              class="type-card"
-              data-category="feature_request"
-              role="radio"
-              aria-checked="false"
-              tabindex="0"
-            >
-              <div class="type-icon" aria-hidden="true">
-                <i class="fa fa-lightbulb"></i>
-              </div>
-              <div class="type-label" data-i18n="feedback.type.feature">
-                Feature Request
-              </div>
-            </div>
-            <div
-              class="type-card"
-              data-category="general"
-              role="radio"
-              aria-checked="false"
-              tabindex="0"
-            >
-              <div class="type-icon" aria-hidden="true">
-                <i class="fa fa-message"></i>
-              </div>
-              <div class="type-label" data-i18n="feedback.type.general">
-                General Feedback
-              </div>
+            <div class="type-label" data-i18n="feedback.type.bug">
+              Bug Report
             </div>
           </div>
-          <!-- Form Card -->
-          <div class="feedback-form-card">
-            <form id="feedbackForm" novalidate>
-              <!-- Category Dropdown -->
-              <div class="form-group">
-                <label for="ff_category" class="form-label"
-                  ><span data-i18n="feedback.form.category_label"
-                    >Category</span
-                  >
-                  <span class="required" aria-hidden="true">*</span>
-                </label>
-                <select
-                  id="ff_category"
-                  class="form-select"
-                  required
-                  aria-required="true"
-                >
-                  <option value="" disabled selected>
-                    Select a category...
-                  </option>
-                  <option value="user_manual">Think4ever Dev</option>
-                  <!-- <option value="main">Main</option>
-                  <option value="reports">Reports</option> -->
-                  <!-- <option value="together">Think Together</option> -->
-                </select>
-                <div
-                  id="ff_category_error"
-                  class="form-error"
-                  role="alert"
-                  aria-live="polite"
-                ></div>
-              </div>
-              <!-- Name and Email Row -->
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="ff_name" class="form-label"
-                    ><span>Name</span>
-                    <span class="required" aria-hidden="true">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="ff_name"
-                    class="form-input"
-                    placeholder="Your name"
-                    autocomplete="name"
-                    required
-                    aria-required="true"
-                  />
-                  <div
-                    id="ff_name_error"
-                    class="form-error"
-                    role="alert"
-                    aria-live="polite"
-                  ></div>
-                </div>
-                <div class="form-group">
-                  <label for="ff_email" class="form-label"
-                    ><span>Email</span>
-                    <span class="required" aria-hidden="true">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    id="ff_email"
-                    class="form-input"
-                    placeholder="your@email.com"
-                    autocomplete="email"
-                    required
-                    aria-required="true"
-                  />
-                  <div
-                    id="ff_email_error"
-                    class="form-error"
-                    role="alert"
-                    aria-live="polite"
-                  ></div>
-                  <div class="form-hint" data-i18n="feedback.form.email_hint">
-                    We'll only use this to follow up on your feedback.
-                  </div>
-                </div>
-              </div>
-              <!-- Subject -->
-              <div class="form-group">
-                <label for="ff_subject" class="form-label"
-                  ><span data-i18n="feedback.form.subject_label">Subject</span>
-                  <span class="required" aria-hidden="true">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="ff_subject"
-                  class="form-input"
-                  data-i18n-attr="placeholder:feedback.form.subject_placeholder"
-                  placeholder="Brief description of your feedback"
-                  required
-                  aria-required="true"
-                />
-                <div
-                  id="ff_subject_error"
-                  class="form-error"
-                  role="alert"
-                  aria-live="polite"
-                ></div>
-              </div>
-              <!-- Message -->
-              <div class="form-group">
-                <label for="ff_message" class="form-label"
-                  ><span data-i18n="feedback.form.message_label">Message</span>
-                  <span class="required" aria-hidden="true">*</span>
-                </label>
-                <div class="textarea-wrapper">
-                  <textarea
-                    id="ff_message"
-                    class="form-textarea"
-                    data-i18n-attr="placeholder:feedback.form.message_placeholder"
-                    placeholder="Tell us more about your experience, suggestion, or the issue you encountered..."
-                    required
-                    aria-required="true"
-                    maxlength="2000"
-                  ></textarea>
-                  <div class="char-counter" aria-live="polite">0 / 2000</div>
-                </div>
-                <div
-                  id="ff_message_error"
-                  class="form-error"
-                  role="alert"
-                  aria-live="polite"
-                ></div>
-              </div>
-              <!-- File Upload -->
-              <div class="form-group">
-                <label class="form-label" id="uploadLabel">
-                  <span>Attachments</span>
-                  <span class="optional">(optional)</span>
-                </label>
-                <div class="upload-container">
-                  <div
-                    class="upload-drop-zone"
-                    id="ff_drop_zone"
-                    role="button"
-                    tabindex="0"
-                    aria-labelledby="uploadLabel"
-                  >
-                    <input
-                      type="file"
-                      id="ff_files"
-                      multiple
-                      hidden
-                      aria-hidden="true"
-                    />
-                    <div class="upload-icon">
-                      <i class="fa fa-cloud-upload-alt"></i>
-                    </div>
-                    <div class="upload-text">
-                      <span class="upload-link">Click to upload</span> or drag
-                      and drop
-                    </div>
-                    <div class="upload-hint">Up to 5 files (Max 5MB each)</div>
-                  </div>
-                  <div id="ff_file_list" class="file-list"></div>
-                </div>
-              </div>
-              <!-- Star Rating -->
-              <div class="form-group star-rating-group">
-                <label class="form-label" id="ratingLabel"
-                  >Overall Rating <span class="optional">(optional)</span>
-                </label>
-                <div
-                  class="star-rating"
-                  role="radiogroup"
-                  aria-labelledby="ratingLabel"
-                >
-                  <button
-                    type="button"
-                    class="star-btn"
-                    data-value="1"
-                    aria-label="1 star - Poor"
-                    role="radio"
-                    aria-checked="false"
-                  >
-                    <i class="fa-regular fa-star"></i>
-                  </button>
-                  <button
-                    type="button"
-                    class="star-btn"
-                    data-value="2"
-                    aria-label="2 stars - Fair"
-                    role="radio"
-                    aria-checked="false"
-                  >
-                    <i class="fa-regular fa-star"></i>
-                  </button>
-                  <button
-                    type="button"
-                    class="star-btn"
-                    data-value="3"
-                    aria-label="3 stars - Good"
-                    role="radio"
-                    aria-checked="false"
-                  >
-                    <i class="fa-regular fa-star"></i>
-                  </button>
-                  <button
-                    type="button"
-                    class="star-btn"
-                    data-value="4"
-                    aria-label="4 stars - Very Good"
-                    role="radio"
-                    aria-checked="false"
-                  >
-                    <i class="fa-regular fa-star"></i>
-                  </button>
-                  <button
-                    type="button"
-                    class="star-btn"
-                    data-value="5"
-                    aria-label="5 stars - Excellent"
-                    role="radio"
-                    aria-checked="false"
-                  >
-                    <i class="fa-regular fa-star"></i>
-                  </button>
-                  <span class="star-rating-text">Not rated</span>
-                </div>
-              </div>
-              <!-- Submit -->
-              <div class="form-actions">
-                <button type="submit" id="ff_submit" class="btn-submit">
-                  <span class="spinner" aria-hidden="true"></span>
-                  <span class="btn-text"
-                    ><i class="fa fa-paper-plane"></i>
-                    <span data-i18n="feedback.form.submit_btn"
-                      >Submit Feedback</span
-                    ></span
-                  >
-                  <span
-                    class="loading-text"
-                    data-i18n="feedback.form.submitting_text"
-                    >Submitting...</span
-                  >
-                </button>
-              </div>
-            </form>
-            <!-- Info Callout -->
-            <div class="feedback-info-callout">
-              <i class="fa fa-circle-info" aria-hidden="true"></i>
-              <p>
-                Your feedback helps us improve Think4Ever AI Platform for every
-                documentation user. All submissions are reviewed by our team.
-              </p>
+          <div class="type-card" data-category="feature_request" role="radio" aria-checked="false" tabindex="0">
+            <div class="type-icon" aria-hidden="true">
+              <i class="fa fa-lightbulb"></i>
+            </div>
+            <div class="type-label" data-i18n="feedback.type.feature">
+              Feature Request
             </div>
           </div>
-          <!-- Success State -->
-          <div
-            class="feedback-success"
-            id="ff_success_message"
-            role="status"
-            aria-live="polite"
-          >
-            <div class="success-icon" aria-hidden="true">
-              <i class="fa fa-check"></i>
+          <div class="type-card" data-category="general" role="radio" aria-checked="false" tabindex="0">
+            <div class="type-icon" aria-hidden="true">
+              <i class="fa fa-message"></i>
             </div>
-            <h2 data-i18n="feedback.success.title">
-              Thank you for your feedback!
-            </h2>
-            <p data-i18n="feedback.success.description">
-              Your message has been received. Our team will review it shortly.
-              If you provided an email, we may follow up with you.
-            </p>
-            <div class="success-actions">
-              <button
-                type="button"
-                class="btn-submit"
-                onclick="load_page('index')"
-                id="ff_back_home"
-              >
-                <i class="fa fa-home"></i>
-                <span data-i18n="feedback.success.back_home">Back to Home</span>
-              </button>
-              <button type="button" class="btn-secondary" id="ff_new_feedback">
-                <i class="fa fa-plus"></i>
-                <span data-i18n="feedback.success.submit_another"
-                  >Submit Another</span
-                >
-              </button>
+            <div class="type-label" data-i18n="feedback.type.general">
+              General Feedback
             </div>
           </div>
         </div>
-      </main>
-    </div>
-    <div id="docFooter"></div>
-    <script src="assets/js/i18n.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        if (window.I18n) {
-          window.I18n.init();
-          // Sync initial language code
-          const currentLang = window.I18n.getCurrentLocale();
-          const langCodeEl = document.getElementById("current-lang-code");
-          if (langCodeEl) langCodeEl.textContent = currentLang.toUpperCase();
-        }
-      });
-    </script>
-    <script src="assets/js/navigation.js"></script>
-    <script src="assets/js/feedback_form.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-  </body>
+        <!-- Form Card -->
+        <div class="feedback-form-card">
+          <form id="feedbackForm" novalidate>
+            <!-- Category Dropdown -->
+            <div class="form-group">
+              <label for="ff_category" class="form-label"><span data-i18n="feedback.form.category_label">Category</span>
+                <span class="required" aria-hidden="true">*</span>
+              </label>
+              <select id="ff_category" class="form-select" required aria-required="true">
+                <option value="" disabled selected>
+                  Select a category...
+                </option>
+                <option value="user_manual">Think4ever Platform</option>
+                <!-- <option value="main">Main</option>
+                  <option value="reports">Reports</option> -->
+                <!-- <option value="together">Think Together</option> -->
+              </select>
+              <div id="ff_category_error" class="form-error" role="alert" aria-live="polite"></div>
+            </div>
+            <!-- Name and Email Row -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="ff_name" class="form-label"><span>Name</span>
+                  <span class="required" aria-hidden="true">*</span>
+                </label>
+                <input type="text" id="ff_name" class="form-input" placeholder="Your name" autocomplete="name" required
+                  aria-required="true" />
+                <div id="ff_name_error" class="form-error" role="alert" aria-live="polite"></div>
+              </div>
+              <div class="form-group">
+                <label for="ff_email" class="form-label"><span>Email</span>
+                  <span class="required" aria-hidden="true">*</span>
+                </label>
+                <input type="email" id="ff_email" class="form-input" placeholder="your@email.com" autocomplete="email"
+                  required aria-required="true" />
+                <div id="ff_email_error" class="form-error" role="alert" aria-live="polite"></div>
+                <div class="form-hint" data-i18n="feedback.form.email_hint">
+                  We'll only use this to follow up on your feedback.
+                </div>
+              </div>
+            </div>
+            <!-- Subject -->
+            <div class="form-group">
+              <label for="ff_subject" class="form-label"><span data-i18n="feedback.form.subject_label">Subject</span>
+                <span class="required" aria-hidden="true">*</span>
+              </label>
+              <input type="text" id="ff_subject" class="form-input"
+                data-i18n-attr="placeholder:feedback.form.subject_placeholder"
+                placeholder="Brief description of your feedback" required aria-required="true" />
+              <div id="ff_subject_error" class="form-error" role="alert" aria-live="polite"></div>
+            </div>
+            <!-- Message -->
+            <div class="form-group">
+              <label for="ff_message" class="form-label"><span data-i18n="feedback.form.message_label">Message</span>
+                <span class="required" aria-hidden="true">*</span>
+              </label>
+              <div class="textarea-wrapper">
+                <textarea id="ff_message" class="form-textarea"
+                  data-i18n-attr="placeholder:feedback.form.message_placeholder"
+                  placeholder="Tell us more about your experience, suggestion, or the issue you encountered..." required
+                  aria-required="true" maxlength="2000"></textarea>
+                <div class="char-counter" aria-live="polite">0 / 2000</div>
+              </div>
+              <div id="ff_message_error" class="form-error" role="alert" aria-live="polite"></div>
+            </div>
+            <!-- File Upload -->
+            <div class="form-group">
+              <label class="form-label" id="uploadLabel">
+                <span>Attachments</span>
+                <span class="optional">(optional)</span>
+              </label>
+              <div class="upload-container">
+                <div class="upload-drop-zone" id="ff_drop_zone" role="button" tabindex="0"
+                  aria-labelledby="uploadLabel">
+                  <input type="file" id="ff_files" multiple hidden aria-hidden="true" />
+                  <div class="upload-icon">
+                    <i class="fa fa-cloud-upload-alt"></i>
+                  </div>
+                  <div class="upload-text">
+                    <span class="upload-link">Click to upload</span> or drag
+                    and drop
+                  </div>
+                  <div class="upload-hint">Up to 5 files (Max 5MB each)</div>
+                </div>
+                <div id="ff_file_list" class="file-list"></div>
+              </div>
+            </div>
+            <!-- Star Rating -->
+            <div class="form-group star-rating-group">
+              <label class="form-label" id="ratingLabel">Overall Rating <span class="optional">(optional)</span>
+              </label>
+              <div class="star-rating" role="radiogroup" aria-labelledby="ratingLabel">
+                <button type="button" class="star-btn" data-value="1" aria-label="1 star - Poor" role="radio"
+                  aria-checked="false">
+                  <i class="fa-regular fa-star"></i>
+                </button>
+                <button type="button" class="star-btn" data-value="2" aria-label="2 stars - Fair" role="radio"
+                  aria-checked="false">
+                  <i class="fa-regular fa-star"></i>
+                </button>
+                <button type="button" class="star-btn" data-value="3" aria-label="3 stars - Good" role="radio"
+                  aria-checked="false">
+                  <i class="fa-regular fa-star"></i>
+                </button>
+                <button type="button" class="star-btn" data-value="4" aria-label="4 stars - Very Good" role="radio"
+                  aria-checked="false">
+                  <i class="fa-regular fa-star"></i>
+                </button>
+                <button type="button" class="star-btn" data-value="5" aria-label="5 stars - Excellent" role="radio"
+                  aria-checked="false">
+                  <i class="fa-regular fa-star"></i>
+                </button>
+                <span class="star-rating-text">Not rated</span>
+              </div>
+            </div>
+            <!-- Submit -->
+            <div class="form-actions">
+              <button type="submit" id="ff_submit" class="btn-submit">
+                <span class="spinner" aria-hidden="true"></span>
+                <span class="btn-text"><i class="fa fa-paper-plane"></i>
+                  <span data-i18n="feedback.form.submit_btn">Submit Feedback</span></span>
+                <span class="loading-text" data-i18n="feedback.form.submitting_text">Submitting...</span>
+              </button>
+            </div>
+          </form>
+          <!-- Info Callout -->
+          <div class="feedback-info-callout">
+            <i class="fa fa-circle-info" aria-hidden="true"></i>
+            <p>
+              Your feedback helps us improve Think4Ever AI Platform for every
+              documentation user. All submissions are reviewed by our team.
+            </p>
+          </div>
+        </div>
+        <!-- Success State -->
+        <div class="feedback-success" id="ff_success_message" role="status" aria-live="polite">
+          <div class="success-icon" aria-hidden="true">
+            <i class="fa fa-check"></i>
+          </div>
+          <h2 data-i18n="feedback.success.title">
+            Thank you for your feedback!
+          </h2>
+          <p data-i18n="feedback.success.description">
+            Your message has been received. Our team will review it shortly.
+            If you provided an email, we may follow up with you.
+          </p>
+          <div class="success-actions">
+            <button type="button" class="btn-submit" onclick="load_page('index')" id="ff_back_home">
+              <i class="fa fa-home"></i>
+              <span data-i18n="feedback.success.back_home">Back to Home</span>
+            </button>
+            <button type="button" class="btn-secondary" id="ff_new_feedback">
+              <i class="fa fa-plus"></i>
+              <span data-i18n="feedback.success.submit_another">Submit Another</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div id="docFooter"></div>
+  <script src="assets/js/i18n.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.I18n) {
+        window.I18n.init();
+        // Sync initial language code
+        const currentLang = window.I18n.getCurrentLocale();
+        const langCodeEl = document.getElementById("current-lang-code");
+        if (langCodeEl) langCodeEl.textContent = currentLang.toUpperCase();
+      }
+    });
+  </script>
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/feedback_form.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+
 </html>

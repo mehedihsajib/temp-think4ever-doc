@@ -59,7 +59,8 @@ body {
 }
 
 .sidebar-header {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
+    margin-top: 5rem;
 }
 
 .logo-container {
@@ -90,7 +91,7 @@ body {
 
 .sidebar-subtitle {
     font-size: 18px;
-    color: var(--text-muted);
+    color: var(--primary);
     font-weight: 500;
 }
 
@@ -185,7 +186,7 @@ body {
 /* Main Content Area */
 .main-content {
     margin-left: var(--sidebar-width);
-    padding-top: 4rem;
+    padding-top: 7rem;
     padding-bottom: 8rem;
     width: 100%;
 }
@@ -205,7 +206,7 @@ body {
 
 .content-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 .main-title {
@@ -245,13 +246,13 @@ body {
 }
 
 .card-body {
-    padding: 2rem;
-    flex: 1;
+    padding: 1rem;
+    /* flex: 1; */
 }
 
 .card-badge {
     display: inline-flex;
-    padding: 0.25rem 0.75rem;
+    padding: 5px 0.75rem;
     background-color: rgba(37, 99, 235, 0.1);
     color: var(--primary);
     font-size: 10px;
@@ -259,10 +260,11 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     border-radius: 9999px;
-    margin-bottom: 1rem;
+    margin-bottom: 8px;
 }
 
 .card-title {
+    color: #333;
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
@@ -291,6 +293,11 @@ body {
     border: 1px solid var(--border);
     border-radius: 0.75rem;
     box-shadow: var(--shadow-sm);
+}
+
+
+.image-wrapper img {
+    max-width: 100%;
 }
 
 .mock-line {
@@ -363,7 +370,7 @@ body {
     bottom: 0;
     right: 0;
     left: var(--sidebar-width);
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8) !important;
     backdrop-filter: blur(12px);
     border-top: 1px solid var(--border);
     padding: 1.5rem 2.5rem;

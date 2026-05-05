@@ -11,10 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet" />
 
     <!-- Link to Custom Vanilla CSS -->
+    <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="assets/css/onboarding.css" />
 </head>
 
@@ -23,11 +22,6 @@
         <!-- SideNavBar Component -->
         <aside class="sidebar">
             <div class="sidebar-header">
-                <div class="logo-container">
-                    <div class="logo-box">
-                        <img src="assets/images/think4ever-logo.png" alt="Think4Ever Logo" class="logo-image" />
-                    </div>
-                </div>
                 <p class="sidebar-subtitle">Customer Onboarding</p>
             </div>
 
@@ -47,19 +41,20 @@
                     </div>
                 </div>
                 <div data-step-index="2" class="onboarding-nav-item">
-                    <span class="material-symbols-outlined">key</span>
-                    <div class="nav-item-content">
-                        <span class="nav-item-title">Add API Key</span>
-                        <span class="nav-item-subtitle">Secure access</span>
-                    </div>
-                </div>
-                <div data-step-index="3" class="onboarding-nav-item">
                     <span class="material-symbols-outlined">create_new_folder</span>
                     <div class="nav-item-content">
                         <span class="nav-item-title">Create Project</span>
                         <span class="nav-item-subtitle">Initialize workspace</span>
                     </div>
                 </div>
+                <div data-step-index="3" class="onboarding-nav-item">
+                    <span class="material-symbols-outlined">key</span>
+                    <div class="nav-item-content">
+                        <span class="nav-item-title">Add API Key</span>
+                        <span class="nav-item-subtitle">Secure access</span>
+                    </div>
+                </div>
+
                 <div data-step-index="4" class="onboarding-nav-item">
                     <span class="material-symbols-outlined">construction</span>
                     <div class="nav-item-content">
@@ -70,41 +65,259 @@
             </nav>
         </aside>
         <!-- Site Header -->
-        <!-- <header class="modern-header" id="consumerHeader"></header> -->
+        <header class="modern-header" id="consumerHeader"></header>
 
         <!-- Main Content Area -->
         <main class="main-content">
             <div id="content-area">
-                <div class="content-header">
-                    <h2 id="onboarding-main-title" class="main-title">
-                        Create your workspace
-                    </h2>
-                    <p id="onboarding-main-description" class="main-description">
-                        Set up your professional identity and start building.
-                    </p>
+                <!-- Step 0: Welcome -->
+                <div id="step-0" class="step-content">
+                    <!-- <div class="content-header">
+                        <h2 class="main-title">Welcome to Think4Ever</h2>
+                        <p class="main-description">Your journey to a more productive workspace starts here. Let's get
+                            you set up.</p>
+                    </div> -->
+
+                    <div class="bento-grid">
+                        <section class="bento-card">
+                            <div class="card-body">
+                                <!-- <div class="card-badge">Step 1</div> -->
+                                <h3 class="card-title">Welcome Screen</h3>
+                                <p class="card-text">Familiarize yourself with the main layout and high-level project
+                                    analytics.</p>
+                            </div>
+
+                            <div class="image-wrapper">
+                                <img src="/assets/images/customer-onboard/01-landing-page.png" alt="">
+                            </div>
+                        </section>
+                    </div>
                 </div>
 
-                <div class="bento-grid">
-                    <!-- Step A Card -->
+                <!-- Step 1: Create Account -->
+                <div id="step-1" class="step-content" style="display: none;">
+                    <div class="content-header">
+                        <h2 class="main-title">Create your account</h2>
+                        <!-- <p class="main-description">Use your work email to keep everything organized, secure, and
+                            synchronized.</p> -->
+                    </div>
 
-                    <!-- Step B Card -->
-                    <section class="bento-card">
-                        <div class="card-body">
-                            <div class="card-badge">Focus Point 2</div>
-                            <h3 id="step-b-title" class="card-title">Secondary Step</h3>
-                            <p id="step-b-desc" class="card-text">
-                                Verification and finalizing details.
-                            </p>
-                        </div>
-                        <div class="card-preview">
-                            <div class="preview-mockup" style="display: flex; gap: 10px; justify-content: center">
-                                <span class="material-symbols-outlined"
-                                    style="color: var(--primary); opacity: 0.3">shield</span>
-                                <span class="material-symbols-outlined"
-                                    style="color: var(--primary); opacity: 0.3">verified</span>
+                    <div class="bento-grid">
+                        <section class="bento-card">
+                            <div class="card-body">
+                                <div class="card-badge">Step 01</div>
+                                <h3 class="card-title">Fill up the form</h3>
+                                <p class="card-text">Setup your primary credentials. Use a strong, unique password for
+                                    security.</p>
+
                             </div>
-                        </div>
-                    </section>
+                            <div class="image-wrapper">
+                                <img src="/assets/images/customer-onboard/02-create-account.png" alt="">
+                            </div>
+                        </section>
+                        <section class="bento-card">
+                            <div class="card-body">
+                                <div class="card-badge">Step 02</div>
+                                <h3 class="card-title">Select a plan</h3>
+                                <p class="card-text">Check your inbox for a 6-digit confirmation code to activate your
+                                    account.</p>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="/assets/images/customer-onboard/03-select-plan.png" alt="">
+                            </div>
+                        </section>
+                    </div>
+                    <div class="bento-grid">
+                        <section class="bento-card">
+                            <div class="card-body">
+                                <div class="card-badge">Step 03</div>
+                                <h3 class="card-title">Add card details</h3>
+                                <p class="card-text">Setup your primary credentials. Use a strong, unique password for
+                                    security.</p>
+
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="/assets/images/customer-onboard/04-add-card-details.png" alt="">
+                            </div>
+                        </section>
+                        <section class="bento-card">
+                            <div class="card-body">
+                                <div class="card-badge">Step 04</div>
+                                <h3 class="card-title">All set</h3>
+                                <p class="card-text">Account created and all set. You can go to your dashboard.</p>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="/assets/images/customer-onboard/05-all-set.png" alt="">
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <!-- Step 2: Create Project -->
+                <div id="step-2" class="step-content" style="display: none;">
+                    <div class="content-header">
+                        <h2 class="main-title">Create your first project</h2>
+                        <p class="main-description">Add a project to organize your work, tasks, and team resources
+                            efficiently.</p>
+                    </div>
+                    <div class="bento-grid">
+                        <section class="bento-card">
+                            <div class="card-body">
+                                <div class="card-badge">Step 01</div>
+                                <h3 class="card-title">Go to workspace</h3>
+                                <p class="card-text">From your dashboard click on 'Enter Workspace'</p>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="/assets/images/customer-onboard/07-enter-workspace.png" alt="">
+                            </div>
+                        </section>
+                        <section class="bento-card">
+                            <div class="card-body">
+                                <div class="card-badge">Step 02</div>
+                                <h3 class="card-title">Create new project</h3>
+                                <p class="card-text">From top right corner click on 'Create a new project'</p>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="/assets/images/customer-onboard/9.1-create-project.png" alt="">
+                            </div>
+                        </section>
+                        <section class="bento-card">
+                            <div class="card-body">
+                                <div class="card-badge">Step 03</div>
+                                <h3 class="card-title">Project details</h3>
+                                <p class="card-text">Fill up the required information to create a new project.</p>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="/assets/images/customer-onboard/10-create-new-project.png" alt="">
+                            </div>
+                        </section>
+                        <section class="bento-card">
+                            <div class="card-body">
+                                <div class="card-badge">Step 04</div>
+                                <h3 class="card-title">Add API Key</h3>
+                                <p class="card-text">You need to add API key to move forward. Copy your API key from the
+                                    developer settings and paste it here.</p>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="/assets/images/customer-onboard/11-setup-api-key.png" alt="">
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+                <!-- Step 3: API Key -->
+                <div id="step-3" class="step-content" style="display: none;">
+                    <div class="content-header">
+                        <h2 class="main-title">Add your API key</h2>
+                        <p class="main-description">Secure your integration and connect your first app with a managed
+                            API key.</p>
+                    </div>
+                    <div class="bento-grid">
+                        <section class="bento-card">
+                            <div class="card-body">
+                                <div class="card-badge">Step 01</div>
+                                <h3 class="card-title">Add API Key</h3>
+                                <p class="card-text">You need to add API key to move forward. Copy your API key from the
+                                    developer settings and paste it here.</p>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="/assets/images/customer-onboard/11-setup-api-key.png" alt="">
+                            </div>
+                        </section>
+                        <section class="bento-card">
+                            <div class="card-body">
+                                <div class="card-badge">Step 02</div>
+                                <h3 class="card-title">Add Multiple API Key</h3>
+                                <p class="card-text">You can add multiple API key to your project if you want. Copy your
+                                    API key from the
+                                    developer settings and paste it here.</p>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="/assets/images/customer-onboard/12-mutiple-api-key.png" alt="">
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+
+
+                <!-- Step 4: Build Project -->
+                <div id="step-4" class="step-content" style="display: none;">
+                    <div class="content-header">
+                        <h2 class="main-title">Build and Launch</h2>
+                        <p class="main-description">Build out your workspace with automation, custom workflows, and
+                            integrations.</p>
+                    </div>
+
+                    <div class="bento-grid">
+                        <section class="bento-card">
+                            <div class="card-body">
+                                <div class="card-badge">Step 01</div>
+                                <h3 class="card-title">Project type</h3>
+                                <p class="card-text">You can define your project type or how actually you would to to
+                                    start building</p>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="/assets/images/customer-onboard/13-project-type.png" alt="">
+                            </div>
+                        </section>
+                        <section class="bento-card">
+                            <div class="card-body">
+                                <div class="card-badge">Step 02</div>
+                                <h3 class="card-title">Choose stack</h3>
+                                <p class="card-text">Based on your project type, you can choose the stack or let the
+                                    platform handle.</p>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="/assets/images/customer-onboard/14-project-architecture.png" alt="">
+                            </div>
+                        </section>
+                        <section class="bento-card">
+                            <div class="card-body">
+                                <div class="card-badge">Step 03</div>
+                                <h3 class="card-title">Choose mode</h3>
+                                <p class="card-text">You can define the project mode based on your need. Whether you
+                                    want
+                                    to build the project manually or you want to let the platform handle it.</p>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="/assets/images/customer-onboard/15-project-mode.png" alt="">
+                            </div>
+                        </section>
+                        <section class="bento-card">
+                            <div class="card-body">
+                                <div class="card-badge">Step 04</div>
+                                <h3 class="card-title">Write prompt</h3>
+                                <p class="card-text">Based on your project type and mode, you can write the prompt to
+                                    build the project.</p>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="/assets/images/customer-onboard/16-prompt-dashboard.png" alt="">
+                            </div>
+                        </section>
+                        <section class="bento-card">
+                            <div class="card-body">
+                                <div class="card-badge">Step 05</div>
+                                <h3 class="card-title">Answer Question</h3>
+                                <p class="card-text">Platform will ask you quesiton based on your prompt. Answer them
+                                    properly to procced</p>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="/assets/images/customer-onboard/17-agent-question.png" alt="">
+                            </div>
+                        </section>
+                        <section class="bento-card">
+                            <div class="card-body">
+                                <div class="card-badge">Step 06</div>
+                                <h3 class="card-title">Project Tree</h3>
+                                <p class="card-text">You can see the project tree to observe the project file and folder
+                                    structure.</p>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="/assets/images/customer-onboard/18-project-tree.png" alt="">
+                            </div>
+                        </section>
+                    </div>
                 </div>
             </div>
         </main>
@@ -133,97 +346,25 @@
         </div>
     </footer>
 
+    <script src="/assets/js/navigation.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const steps = [
-                {
-                    title: "Welcome to Think4Ever",
-                    description:
-                        "Your journey to a more productive workspace starts here. Let's get you set up.",
-                    stepATitle: "Explore Dashboard",
-                    stepADesc:
-                        "Familiarize yourself with the main layout and high-level project analytics.",
-                    stepBTitle: "Welcome",
-                    stepBDesc:
-                        "This is the page where will land and start your journey. Here is some text to show that this is a card and it has some description.",
-                    overlay: "The beginning of your productivity journey.",
-                    image: "onboarding_welcome_1777906910904.png",
-                    progress: 1,
-                },
-                {
-                    title: "Create your account",
-                    description:
-                        "Use your work email to keep everything organized, secure, and synchronized.",
-                    stepATitle: "Email & Password",
-                    stepADesc:
-                        "Setup your primary credentials. Use a strong, unique password for security.",
-                    stepBTitle: "Verify Identity",
-                    stepBDesc:
-                        "Check your inbox for a 6-digit confirmation code to activate your account.",
-                    overlay: "Security and identity management.",
-                    image: "/assets/images/onboarding/01-welcome.png",
-                    progress: 2,
-                },
-                {
-                    title: "Add your API key",
-                    description:
-                        "Secure your integration and connect your first app with a managed API key.",
-                    stepATitle: "Generate Key",
-                    stepADesc:
-                        "Create a new secret key in your developer settings to authorize API calls.",
-                    stepBTitle: "Permissions",
-                    stepBDesc:
-                        "Define granular access scopes to ensure your data stays safe and private.",
-                    overlay: "Developer and integration settings.",
-                    image: "onboarding_welcome_1777906910904.png",
-                    progress: 3,
-                },
-                {
-                    title: "Create your first project",
-                    description:
-                        "Add a project to organize your work, tasks, and team resources efficiently.",
-                    stepATitle: "Project Details",
-                    stepADesc:
-                        "Name your project, add a description, and select a starter template.",
-                    stepBTitle: "Team Members",
-                    stepBDesc:
-                        "Invite collaborators by email to start working together in real-time.",
-                    overlay: "Collaborative project management.",
-                    image: "onboarding_signup_1777907501258.png",
-                    progress: 4,
-                },
-                {
-                    title: "Build and Launch",
-                    description:
-                        "Build out your workspace with automation, custom workflows, and integrations.",
-                    stepATitle: "Automation",
-                    stepADesc:
-                        "Setup triggers and actions to handle repetitive tasks automatically.",
-                    stepBTitle: "Go Live",
-                    stepBDesc:
-                        "Deploy your workspace to your team and start reaching your goals.",
-                    overlay: "Your workspace is ready to build.",
-                    image: "onboarding_welcome_1777906910904.png",
-                    progress: 5,
-                },
-            ];
-
             let currentStepIndex = 0;
             const navItems = document.querySelectorAll(".onboarding-nav-item");
+            const stepContents = document.querySelectorAll(".step-content");
             const btnBack = document.getElementById("btn-back");
             const btnContinue = document.getElementById("btn-continue");
             const btnContinueText = document.getElementById("btn-continue-text");
-            const progressBars = document.querySelectorAll(
-                "#onboarding-progress-bars > .dot",
-            );
+            const progressBars = document.querySelectorAll("#onboarding-progress-bars > .dot");
+            const progressLabel = document.getElementById("onboarding-progress-label");
             const contentArea = document.getElementById("content-area");
 
             function updateStep(index) {
-                contentArea.classList.add("step-fade-hidden");
+                contentArea.style.opacity = "0";
+                contentArea.style.transform = "translateY(10px)";
 
                 setTimeout(() => {
                     currentStepIndex = index;
-                    const step = steps[index];
 
                     // Update Sidebar
                     navItems.forEach((item, idx) => {
@@ -235,45 +376,27 @@
                         }
                     });
 
-                    // Update Content
-                    const titleEl = document.getElementById("onboarding-main-title");
-                    if (titleEl) titleEl.textContent = step.title;
+                    // Toggle Static Content Visibility
+                    stepContents.forEach((step, idx) => {
+                        step.style.display = (idx === index) ? "block" : "none";
+                    });
 
-                    const descEl = document.getElementById("onboarding-main-description");
-                    if (descEl) descEl.textContent = step.description;
+                    // Update Progress Bar & Label
+                    if (progressLabel) {
+                        progressLabel.textContent = `Step ${index + 1} of ${stepContents.length}`;
+                    }
 
-                    const stepATitle = document.getElementById("step-a-title");
-                    if (stepATitle) stepATitle.textContent = step.stepATitle;
-
-                    const stepADesc = document.getElementById("step-a-desc");
-                    if (stepADesc) stepADesc.textContent = step.stepADesc;
-
-                    const stepBTitle = document.getElementById("step-b-title");
-                    if (stepBTitle) stepBTitle.textContent = step.stepBTitle;
-
-                    const stepBDesc = document.getElementById("step-b-desc");
-                    if (stepBDesc) stepBDesc.textContent = step.stepBDesc;
-
-                    const overlayText = document.getElementById("image-overlay-text");
-                    if (overlayText) overlayText.textContent = step.overlay;
-
-                    const mainImg = document.getElementById("onboarding-image");
-                    if (mainImg) mainImg.src = step.image;
-
-                    const progressLabel = document.getElementById("onboarding-progress-label");
-                    if (progressLabel) progressLabel.textContent = `Step ${step.progress} of 5`;
-
-                    // Update Progress Bar
                     progressBars.forEach((bar, idx) => {
-                        bar.classList.toggle("filled", idx < step.progress);
+                        bar.classList.toggle("filled", idx <= index);
                     });
 
                     // Update Buttons
                     btnBack.disabled = index === 0;
-                    btnContinueText.textContent =
-                        index === steps.length - 1 ? "Finish" : "Continue";
+                    btnContinueText.textContent = index === stepContents.length - 1 ? "Finish" : "Continue";
 
-                    contentArea.classList.remove("step-fade-hidden");
+                    // Fade back in
+                    contentArea.style.opacity = "1";
+                    contentArea.style.transform = "translateY(0)";
                     window.scrollTo({ top: 0, behavior: "smooth" });
                 }, 300);
             }
@@ -281,14 +404,14 @@
             navItems.forEach((item) => {
                 item.addEventListener("click", () => {
                     const index = parseInt(item.dataset.stepIndex);
-                    if (index !== currentStepIndex) {
+                    if (!isNaN(index) && index !== currentStepIndex) {
                         updateStep(index);
                     }
                 });
             });
 
             btnContinue.addEventListener("click", () => {
-                if (currentStepIndex < steps.length - 1) {
+                if (currentStepIndex < stepContents.length - 1) {
                     updateStep(currentStepIndex + 1);
                 } else {
                     alert("Onboarding Complete! Welcome to Think4Ever.");
@@ -301,6 +424,7 @@
                 }
             });
 
+            // Start at first step
             updateStep(0);
         });
     </script>
