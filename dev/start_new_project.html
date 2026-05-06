@@ -1,0 +1,201 @@
+x
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Think4ever - Developer</title>
+  <link href="../css/theme.css" rel="stylesheet" type="text/css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/onboarding.css" />
+  <link rel="stylesheet" href="../assets/css/dev_doc.css" />
+
+  <link rel="stylesheet" href="../assets/css/consumer_docs_home.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="../assets/js/i18n.js"></script>
+
+</head>
+
+<body>
+  <div class="consumer-docs-home consumer-getting-started">
+    <!-- Skip to content -->
+    <a href="#cd-main" class="sr-only" style="
+          position: absolute;
+          left: -9999px;
+          top: auto;
+          width: 1px;
+          height: 1px;
+          overflow: hidden;
+        " onfocus="
+          this.style.position = 'static';
+          this.style.width = 'auto';
+          this.style.height = 'auto';
+        " onblur="
+          this.style.position = 'absolute';
+          this.style.left = '-9999px';
+          this.style.width = '1px';
+          this.style.height = '1px';
+          this.style.overflow = 'hidden';
+        ">Skip to main content</a>
+    <!-- Site Header -->
+    <header class="modern-header" id="consumerHeader"></header>
+
+    <div class="consumer-docs-layout">
+      <!-- Mobile sidebar toggle -->
+      <button class="cgs-sidebar-toggle" id="cgsSidebarToggle" aria-label="Toggle navigation menu"
+        aria-expanded="false">
+        <i class="fa fa-bars"></i>
+      </button>
+      <!-- Sidebar overlay -->
+      <div class="cgs-sidebar-overlay" id="cgsSidebarOverlay"></div>
+      <!-- Sidebar -->
+      <div id="devSidebar"></div>
+      <!-- Main Content -->
+      <main class="cd-main-content" id="cd-main">
+        <!-- Page Title -->
+        <h1 class="cd-page-title" id="cdHomeTitle">
+          Start a new project
+        </h1>
+
+        <!-- Overview Section -->
+        <section class="cd-overview" id="cdHomeOverview">
+          <p class="cd-overview-text">
+            You can select a existing project to continue or create a new one.
+          </p>
+
+          <div class="image-wrapper">
+            <img src="../assets/images/dev-doc/01-dashboard.png" alt="Dashboard" class="demo-img">
+          </div>
+
+          <div class="section-details">
+            <h3 class="h3">Choose how you would like to start.</h3>
+            <p class="cd-overview-text">
+              Either you can start start building from scratch or you can import a existing project to continue.
+            </p>
+            <div class="image-wrapper">
+              <img src="../assets/images/dev-doc/02-chose-how-to-build.png" alt="" class="demo-img">
+            </div>
+            <h4 class="h4">Import existing project</h4>
+            <p>You have multipe option to import an existing project. You can import a project from your local
+              machine or you can import a project from a remote git repository.</p>
+            <div class="bento-grid has-margin-top">
+              <div class="bento-card">
+                <div class="card-body">
+                  <h4 class="h4">Connect a git repository</h4>
+                </div>
+                <div class="image-wrapper">
+                  <img src="../assets/images/dev-doc/03-connect-git.png" alt="Connect Github">
+                </div>
+              </div>
+              <div class="bento-card">
+                <div class="card-body">
+                  <h4 class="h4">Load from a public Github URL</h4>
+                </div>
+                <div class="image-wrapper">
+                  <img src="../assets/images/dev-doc/04-load-public-profile.png" alt="Connect Github">
+                </div>
+              </div>
+            </div>
+            <div class="bento-grid">
+              <div class="bento-card">
+                <div class="card-body">
+                  <h4 class="h4">Upload as a zip file</h4>
+                </div>
+                <div class="image-wrapper">
+                  <img src="../assets/images/dev-doc/05-upload-zip.png" alt="Connect Github">
+                </div>
+              </div>
+            </div>
+            <h3 class="h3">Start from scratch</h3>
+            <p class="cd-overview-text">If you choose start from scratch you will get options if you would like to
+              choose stacks by your own or let platform choose for you.</p>
+
+            <div class="image-wrapper">
+              <img src="../assets/images/dev-doc/06-chose-stacks.png" alt="Choose Stacks" class="demo-img">
+            </div>
+            <p class="cd-overview-text">If you decide to choose stacks by your own you will get a list from where you
+              can choose your preferred
+              stacks. If you let Platform decide for you it will redirect you to dashboard and will use stacks
+              which best fits for your project.</p>
+            <div class="bento-grid has-margin-top">
+              <div class="bento-card">
+                <div class="card-body">
+                  <h4 class="h4">Manually choose stacks</h4>
+                </div>
+                <div class="image-wrapper">
+                  <img src="../assets/images/dev-doc/07-stack-list.png" alt="Connect Github">
+                </div>
+              </div>
+              <div class="bento-card">
+                <div class="card-body">
+                  <h4 class="h4">Platform reccomendation</h4>
+                </div>
+                <div class="image-wrapper">
+                  <img src="../assets/images/dev-doc/06-initial-dashboard.png" alt="Connect Github">
+                </div>
+              </div>
+            </div>
+
+            <h3 class="h3">Write Prompt</h3>
+            <p class="cd-overview-text">
+              Once you are landed to dashboard you can start writing your Prompt.
+            </p>
+
+            <div class="image-wrapper">
+              <img src="../assets/images/dev-doc/07-prompt-dashboard.png" alt="Write Prompt" class="demo-img">
+            </div>
+
+            <h3 class="h3">Answer Questions</h3>
+            <p class="cd-overview-text">
+              Based on your prompt Think4ever will ask some questions to understand your project requirement better.
+              Answer them and Think4ever will start generating your project.
+            </p>
+
+            <div class="image-wrapper">
+              <img src="../assets/images/dev-doc/09-answer-questions.png" alt="Answer Questions" class="demo-img">
+            </div>
+
+            <h3 class="h3">Suggestions</h3>
+            <p class="cd-overview-text">
+              While you writting Prompt Think4Ever will suggest you few best prompt templates based on your project
+              type. So you can use them directly on chat.
+            </p>
+
+            <div class="image-wrapper">
+              <img src="../assets/images/dev-doc/11-ai-suggestion.png" alt="Answer Questions" class="demo-img">
+            </div>
+
+
+            <h3 class="h3">Generating Code</h3>
+            <p class="cd-overview-text">
+              Once you answer all the questions Think4Ever will generate your code based on your answers. It will take
+              some time to generate your code.
+            </p>
+
+            <div class="image-wrapper">
+              <img src="../assets/images/dev-doc/10-code-generation.png" alt="Generating Code" class="demo-img">
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <div id="docFooter"></div>
+  <script src="../assets/js/navigation.js"></script>
+  <script src="../assets/js/consumer_docs_home.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.I18n) {
+        window.I18n.init();
+      }
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+x
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Think4ever - Developer</title>
+    <link href="../css/theme.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/onboarding.css" />
+    <link rel="stylesheet" href="../assets/css/dev_doc.css" />
+
+    <link rel="stylesheet" href="../assets/css/consumer_docs_home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="../assets/js/i18n.js"></script>
+
+</head>
+
+<body>
+    <div class="consumer-docs-home consumer-getting-started">
+        <!-- Skip to content -->
+        <a href="#cd-main" class="sr-only" style="
+          position: absolute;
+          left: -9999px;
+          top: auto;
+          width: 1px;
+          height: 1px;
+          overflow: hidden;
+        " onfocus="
+          this.style.position = 'static';
+          this.style.width = 'auto';
+          this.style.height = 'auto';
+        " onblur="
+          this.style.position = 'absolute';
+          this.style.left = '-9999px';
+          this.style.width = '1px';
+          this.style.height = '1px';
+          this.style.overflow = 'hidden';
+        ">Skip to main content</a>
+        <!-- Site Header -->
+        <header class="modern-header" id="consumerHeader"></header>
+
+        <div class="consumer-docs-layout">
+            <!-- Mobile sidebar toggle -->
+            <button class="cgs-sidebar-toggle" id="cgsSidebarToggle" aria-label="Toggle navigation menu"
+                aria-expanded="false">
+                <i class="fa fa-bars"></i>
+            </button>
+            <!-- Sidebar overlay -->
+            <div class="cgs-sidebar-overlay" id="cgsSidebarOverlay"></div>
+            <!-- Sidebar -->
+            <div id="devSidebar"></div>
+            <!-- Main Content -->
+            <main class="cd-main-content" id="cd-main">
+                <!-- Page Title -->
+                <h1 class="cd-page-title" id="cdHomeTitle">
+                    Public Access
+                </h1>
+
+                <!-- Overview Section -->
+                <section class="cd-overview" id="cdHomeOverview">
+                    <p class="cd-overview-text">
+                        Public access is the place where you will make your project publicly accessible using a public
+                        URL.
+                    </p>
+
+                    <div class="image-wrapper">
+                        <img src="../assets/images/dev-doc/18-goto-public-access.png" alt="Public Access"
+                            class="demo-img">
+                    </div>
+
+                    <p class="cd-overview-text">
+                        When you will check the "Enable" button, you will be able to access your project
+                        publicly with that provided URL.
+                    </p>
+
+                    <div class="image-wrapper">
+                        <img src="../assets/images/dev-doc/19-enable-public-access.png" alt="Public Access"
+                            class="demo-img">
+                    </div>
+
+                    <div class="image-wrapper">
+                        <img src="../assets/images/dev-doc/20-demo-site.png" alt="Public Access" class="demo-img">
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <div id="docFooter"></div>
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/consumer_docs_home.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (window.I18n) {
+                window.I18n.init();
+            }
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+
+</html>

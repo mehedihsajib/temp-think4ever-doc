@@ -1,0 +1,342 @@
+/* Basic reset for preview consistency */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* Premium Modern Header Styles */
+.modern-header {
+    font-family: "Inter", sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    /* Matches sidebar right-border */
+    z-index: 300;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.modern-header-inner {
+    width: 100%;
+    display: flex;
+    /* 100% width, no max-width */
+    align-items: center;
+    height: 100%;
+}
+
+.modern-header-logo-plate {
+    display: flex;
+    align-items: center;
+    padding-left: 36px;
+    /* Matches sidebar exact width (36px + 240px + 24px) */
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.modern-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.modern-logo span {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.04em;
+}
+
+.modern-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    padding: 0 40px;
+    /* Space inside the right part of the header */
+    height: 100%;
+}
+
+.modern-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.modern-search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 220px;
+    padding: 8px 12px;
+    background-color: #f4f4f5;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-family: "Inter", sans-serif;
+    font-size: 0.875rem;
+    color: #71717a;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.modern-search-btn:hover {
+    background-color: #fff;
+    border-color: #e4e4e7;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    color: #3f3f46;
+}
+
+.modern-search-btn .search-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.modern-search-btn .search-icon {
+    color: #a1a1aa;
+    font-size: 0.85rem;
+}
+
+.modern-search-shortcuts {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.modern-search-shortcuts kbd {
+    font-family:
+        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 2px 5px;
+    background-color: #fff;
+    border: 1px solid #e4e4e7;
+    border-radius: 4px;
+    color: #a1a1aa;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.02);
+}
+
+.modern-cta-btn {
+    padding: 8px 16px;
+    background: linear-gradient(180deg, #18181b 0%, #09090b 100%);
+    color: #ffffff;
+    border: 1px solid #000;
+    border-radius: 8px;
+    font-family: "Inter", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.1),
+        inset 0 1px 1px rgba(255, 255, 255, 0.15);
+}
+
+.modern-cta-btn:hover {
+    background: linear-gradient(180deg, #27272a 0%, #18181b 100%);
+    box-shadow:
+        0 3px 6px rgba(0, 0, 0, 0.15),
+        inset 0 1px 1px rgba(255, 255, 255, 0.15);
+}
+
+/* Responsive Utilities */
+@media (max-width: 1024px) {
+    .modern-header-logo-plate {
+        width: 240px;
+        min-width: 240px;
+        padding-left: 24px;
+    }
+}
+
+/* Modern Layout Overrides */
+.consumer-docs-layout {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    /* Header height */
+    display: flex !important;
+    background: #ffffff;
+}
+
+.cd-sidebar {
+    box-sizing: content-box !important;
+    width: 240px !important;
+    min-width: 240px !important;
+    background: #f8fafc !important;
+    /* Elegant subtle slate-50 */
+    border-right: 1px solid #e2e8f0 !important;
+    /* Soft premium border */
+
+    /* Hardcode to match user fix */
+    padding-left: 36px !important;
+    padding-right: 24px !important;
+    padding-top: 36px !important;
+}
+
+/* Modernizing Sidebar Internal Elements */
+.cd-sidebar-header {
+    padding: 0 !important;
+    border-bottom: none !important;
+    margin-bottom: 32px !important;
+}
+
+.cd-sidebar-header h3 {
+    color: #0f172a !important;
+    /* Slate 900 */
+    font-family: "Inter", sans-serif !important;
+    font-size: 0.9375rem !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.01em !important;
+    text-transform: none !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.cd-sidebar-header h3 i {
+    color: #3b82f6 !important;
+    /* Bright blue pop for the wallet icon */
+    margin-right: 10px !important;
+    font-size: 1.1rem !important;
+}
+
+.cd-sidebar-section {
+    margin-bottom: 24px !important;
+}
+
+.cd-sidebar-section-label {
+    font-family: "Inter", sans-serif !important;
+    font-size: 0.725rem !important;
+    font-weight: 600 !important;
+    color: #64748b !important;
+    /* Slate 500 */
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    padding: 0 12px 10px 0 !important;
+    display: block !important;
+}
+
+.cd-sidebar-nav li {
+    padding: 0 !important;
+    margin-bottom: 2px !important;
+}
+
+.cd-sidebar-nav li a {
+    padding: 8px 12px !important;
+    font-family: "Inter", sans-serif !important;
+    font-size: 0.875rem !important;
+    color: #475569 !important;
+    /* Slate 600 */
+    border-radius: 6px !important;
+    background: transparent !important;
+    transition: all 0.2s ease !important;
+    font-weight: 500 !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    line-height: 1.5 !important;
+}
+
+.cd-sidebar-nav li a i {
+    font-size: 0.825rem !important;
+    width: 24px !important;
+    text-align: left !important;
+    color: #94a3b8 !important;
+    /* Slate 400 */
+    transition: color 0.2s ease !important;
+    margin-top: 3px !important;
+}
+
+.cd-sidebar-nav li a:hover {
+    background: #f1f5f9 !important;
+    /* Slate 100 */
+    color: #0f172a !important;
+}
+
+.cd-sidebar-nav li a:hover i {
+    color: #475569 !important;
+}
+
+.cd-sidebar-nav li a.active {
+    background: #eff6ff !important;
+    /* Blue 50 */
+    color: #1d4ed8 !important;
+    /* Blue 700 */
+    font-weight: 600 !important;
+    box-shadow: inset 3px 0 0 #3b82f6 !important;
+    /* Beautiful crisp active line on left */
+}
+
+.cd-sidebar-nav li a.active i {
+    color: #2563eb !important;
+    /* Blue 600 */
+}
+
+.cd-main-content {
+    max-width: 960px !important;
+    background: #ffffff !important;
+    padding-top: 56px !important;
+    padding-left: 48px !important;
+    padding-right: 48px !important;
+}
+
+.consumer-getting-started {
+    padding-top: 30px !important;
+}
+
+.cgs-sidebar-header span {
+    font-size: 16px;
+}
+
+.cgs-nav-list li a.active {
+    font-weight: 400 !important;
+}
+
+.image-wrapper {
+    padding: 30px 0;
+}
+
+.image-wrapper .demo-img {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--border);
+}
+
+.h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.h4 {
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: 700;
+    color: var(--color-text-dark) !important;
+}
+
+.bento-grid.has-margin-top {
+    margin-top: 30px;
+}
+
+.bento-grid {
+    margin-bottom: 30px;
+}
+
+.bento-card h4.h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.bento-card .image-wrapper {
+    padding-top: 0;
+}
