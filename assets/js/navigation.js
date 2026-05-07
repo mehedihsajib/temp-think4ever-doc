@@ -13,7 +13,9 @@ function load_dev_page(pageId) {
 }
 
 function getSiteBasePath() {
-  const navScript = document.querySelector("script[src*='assets/js/navigation.js']");
+  const navScript = document.querySelector(
+    "script[src*='assets/js/navigation.js']",
+  );
 
   if (navScript) {
     const rawSrc = navScript.getAttribute("src") || "";
@@ -27,7 +29,10 @@ function getSiteBasePath() {
         if (base) return base;
       }
     } catch (error) {
-      console.warn("Unable to resolve base path from navigation script:", error);
+      console.warn(
+        "Unable to resolve base path from navigation script:",
+        error,
+      );
     }
   }
 
@@ -49,7 +54,9 @@ function toBasePath(path) {
 }
 
 function ensureGlobalFavicon() {
-  const existing = document.querySelector("link[rel='icon'], link[rel='shortcut icon']");
+  const existing = document.querySelector(
+    "link[rel='icon'], link[rel='shortcut icon']",
+  );
   if (existing) return;
 
   const link = document.createElement("link");
@@ -93,7 +100,7 @@ function applyTheme(theme) {
     toggle.setAttribute("aria-pressed", String(isDark));
     toggle.setAttribute(
       "aria-label",
-      isDark ? "Switch to light mode" : "Switch to dark mode"
+      isDark ? "Switch to light mode" : "Switch to dark mode",
     );
   }
 }
@@ -498,14 +505,14 @@ function isLightboxEligibleImage(img) {
 
   if (
     img.closest(
-      "header, nav, footer, aside, .cgs-sidebar, .modern-header, .modern-nav, .lp-navbar, .sr-header, .bpd-header, .pp-header, .tos-header, .not-found-header, .admin-sidebar, .admin-topbar, .modern-search-btn, .modern-lang-wrapper, .lp-navbar-logo, .sr-header-logo, .cgs-sidebar-header, .lp-footer, #docFooter"
+      "header, nav, footer, aside, .cgs-sidebar, .modern-header, .modern-nav, .lp-navbar, .sr-header, .bpd-header, .pp-header, .tos-header, .not-found-header, .admin-sidebar, .admin-topbar, .modern-search-btn, .modern-lang-wrapper, .lp-navbar-logo, .sr-header-logo, .cgs-sidebar-header, .lp-footer, #docFooter",
     )
   ) {
     return false;
   }
 
   const inContent = img.closest(
-    "main, article, .docs-content, .docs-main, .cd-main-content, .md-main-content, .bpd-main, .pp-main, .tos-main, .ctr-content, .cwm-content-wrapper"
+    "main, article, .docs-content, .docs-main, .cd-main-content, .md-main-content, .bpd-main, .pp-main, .tos-main, .ctr-content, .cwm-content-wrapper",
   );
 
   if (!inContent) return false;
@@ -518,7 +525,12 @@ function isLightboxEligibleImage(img) {
   const naturalHeight = img.naturalHeight || 0;
 
   if (renderedWidth < 80 || renderedHeight < 80) return false;
-  if (naturalWidth && naturalHeight && naturalWidth < 120 && naturalHeight < 120) {
+  if (
+    naturalWidth &&
+    naturalHeight &&
+    naturalWidth < 120 &&
+    naturalHeight < 120
+  ) {
     return false;
   }
 
@@ -631,6 +643,16 @@ document.addEventListener("DOMContentLoaded", function () {
     url: toBasePath("components/doc-footer.html"),
     onLoaded: (el) => {
       if (window.I18n) window.I18n.applyToDOM(el);
+
+      const logo = el.querySelector("#footer-logo");
+
+      if (logo) {
+        const isDevPage = window.location.pathname.includes("/dev/");
+
+        logo.src = isDevPage
+          ? "../assets/images/think4ever-logo.png"
+          : "assets/images/think4ever-logo.png";
+      }
     },
   });
 
@@ -687,21 +709,33 @@ document.addEventListener("DOMContentLoaded", function () {
 // ===============================
 function generateBreadcrumb() {
   const currentPage = getCurrentPage();
-  if (currentPage === 'index' || currentPage === 'consumer_docs_home' || currentPage === 'merchant_docs_home') return;
+  if (
+    currentPage === "index" ||
+    currentPage === "consumer_docs_home" ||
+    currentPage === "merchant_docs_home"
+  )
+    return;
 
-  const activeLink = document.querySelector('.cgs-nav-link.active') || document.querySelector('.admin-nav-link.active');
+  const activeLink =
+    document.querySelector(".cgs-nav-link.active") ||
+    document.querySelector(".admin-nav-link.active");
   if (!activeLink) return;
 
-  const mainContent = document.querySelector('.cd-main-content') || document.querySelector('.md-main-content') || document.querySelector('main');
+  const mainContent =
+    document.querySelector(".cd-main-content") ||
+    document.querySelector(".md-main-content") ||
+    document.querySelector("main");
   if (!mainContent) return;
 
-  if (document.getElementById('dynamic-breadcrumb')) return;
+  if (document.getElementById("dynamic-breadcrumb")) return;
 
-  const sidebar = activeLink.closest('.cgs-sidebar, .admin-sidebar');
+  const sidebar = activeLink.closest(".cgs-sidebar, .admin-sidebar");
   let topTitle = "Documentation";
   let topI18n = "";
   if (sidebar) {
-    const headerTitle = sidebar.querySelector('.cgs-sidebar-header span, .admin-sidebar-header span, h5 span');
+    const headerTitle = sidebar.querySelector(
+      ".cgs-sidebar-header span, .admin-sidebar-header span, h5 span",
+    );
     if (headerTitle) {
       topTitle = headerTitle.textContent.trim();
       topI18n = headerTitle.getAttribute("data-i18n") || "";
@@ -710,23 +744,27 @@ function generateBreadcrumb() {
 
   let sectionTitle = "";
   let sectionI18n = "";
-  const navSection = activeLink.closest('.cgs-nav-section');
+  const navSection = activeLink.closest(".cgs-nav-section");
   if (navSection) {
-    const sectionLabel = navSection.querySelector('.cgs-nav-section-label');
+    const sectionLabel = navSection.querySelector(".cgs-nav-section-label");
     if (sectionLabel) {
       sectionTitle = sectionLabel.textContent.trim();
       sectionI18n = sectionLabel.getAttribute("data-i18n") || "";
     }
   }
 
-  const pageTitleSpan = activeLink.querySelector('span');
-  const pageTitle = pageTitleSpan ? pageTitleSpan.textContent.trim() : activeLink.textContent.trim();
-  const pageI18n = pageTitleSpan ? (pageTitleSpan.getAttribute("data-i18n") || "") : (activeLink.getAttribute("data-i18n") || "");
+  const pageTitleSpan = activeLink.querySelector("span");
+  const pageTitle = pageTitleSpan
+    ? pageTitleSpan.textContent.trim()
+    : activeLink.textContent.trim();
+  const pageI18n = pageTitleSpan
+    ? pageTitleSpan.getAttribute("data-i18n") || ""
+    : activeLink.getAttribute("data-i18n") || "";
 
-  const breadcrumbNav = document.createElement('nav');
-  breadcrumbNav.id = 'dynamic-breadcrumb';
-  breadcrumbNav.className = 'modern-breadcrumb';
-  breadcrumbNav.setAttribute('aria-label', 'Breadcrumb');
+  const breadcrumbNav = document.createElement("nav");
+  breadcrumbNav.id = "dynamic-breadcrumb";
+  breadcrumbNav.className = "modern-breadcrumb";
+  breadcrumbNav.setAttribute("aria-label", "Breadcrumb");
 
   let html = `<ol>
     <li>
@@ -754,10 +792,12 @@ function generateBreadcrumb() {
   </ol>`;
 
   breadcrumbNav.innerHTML = html;
-  
+
   if (window.I18n) window.I18n.applyToDOM(breadcrumbNav);
 
-  const pageTitleEl = mainContent.querySelector('.cd-page-title, .md-page-title, h1');
+  const pageTitleEl = mainContent.querySelector(
+    ".cd-page-title, .md-page-title, h1",
+  );
   if (pageTitleEl) {
     mainContent.insertBefore(breadcrumbNav, pageTitleEl);
   } else {
@@ -769,20 +809,23 @@ function generateBreadcrumb() {
 // GLOBAL TOC GENERATOR
 // ===============================
 function generateGlobalTOC() {
-  const mainContent = document.querySelector('.cd-main-content') || document.querySelector('.md-main-content') || document.querySelector('main');
+  const mainContent =
+    document.querySelector(".cd-main-content") ||
+    document.querySelector(".md-main-content") ||
+    document.querySelector("main");
   if (!mainContent) return;
 
-  const headings = Array.from(mainContent.querySelectorAll('h2, h3'));
+  const headings = Array.from(mainContent.querySelectorAll("h2, h3"));
   if (headings.length === 0) return;
 
   const layoutContainer = mainContent.parentElement;
   if (!layoutContainer) return;
 
-  if (document.getElementById('global-toc')) return;
+  if (document.getElementById("global-toc")) return;
 
-  const tocAside = document.createElement('aside');
-  tocAside.id = 'global-toc';
-  tocAside.className = 'cgs-toc';
+  const tocAside = document.createElement("aside");
+  tocAside.id = "global-toc";
+  tocAside.className = "cgs-toc";
 
   let html = `
     <h4 class="cgs-toc-title">On this page</h4>
@@ -791,14 +834,18 @@ function generateGlobalTOC() {
 
   headings.forEach((heading, index) => {
     if (!heading.id) {
-      const text = heading.textContent.trim().toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+      const text = heading.textContent
+        .trim()
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)/g, "");
       heading.id = text || `section-${index}`;
     }
 
-    const isH3 = heading.tagName.toLowerCase() === 'h3';
+    const isH3 = heading.tagName.toLowerCase() === "h3";
     html += `
       <li>
-        <a href="#${heading.id}" class="cgs-toc-link" style="${isH3 ? 'padding-left: 24px;' : ''}">${heading.textContent}</a>
+        <a href="#${heading.id}" class="cgs-toc-link" style="${isH3 ? "padding-left: 24px;" : ""}">${heading.textContent}</a>
       </li>
     `;
   });
@@ -809,23 +856,32 @@ function generateGlobalTOC() {
   layoutContainer.appendChild(tocAside);
 
   // Active state highlighting on scroll
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        tocAside.querySelectorAll('.cgs-toc-link').forEach(link => link.classList.remove('active'));
-        const activeLink = tocAside.querySelector(`.cgs-toc-link[href="#${entry.target.id}"]`);
-        if (activeLink) activeLink.classList.add('active');
-      }
-    });
-  }, { rootMargin: '0px 0px -80% 0px', threshold: 0 });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          tocAside
+            .querySelectorAll(".cgs-toc-link")
+            .forEach((link) => link.classList.remove("active"));
+          const activeLink = tocAside.querySelector(
+            `.cgs-toc-link[href="#${entry.target.id}"]`,
+          );
+          if (activeLink) activeLink.classList.add("active");
+        }
+      });
+    },
+    { rootMargin: "0px 0px -80% 0px", threshold: 0 },
+  );
 
-  headings.forEach(heading => observer.observe(heading));
+  headings.forEach((heading) => observer.observe(heading));
 
   // Handle click events for smooth scroll and active state updates
-  tocAside.querySelectorAll('.cgs-toc-link').forEach(link => {
-    link.addEventListener('click', (e) => {
-      tocAside.querySelectorAll('.cgs-toc-link').forEach(l => l.classList.remove('active'));
-      link.classList.add('active');
+  tocAside.querySelectorAll(".cgs-toc-link").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      tocAside
+        .querySelectorAll(".cgs-toc-link")
+        .forEach((l) => l.classList.remove("active"));
+      link.classList.add("active");
     });
   });
 }

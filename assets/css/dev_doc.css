@@ -302,7 +302,8 @@ body {
 }
 
 .image-wrapper {
-    padding: 30px 0;
+   padding-top: 20px;
+   padding-bottom: 30px;
 }
 
 .image-wrapper .demo-img {
@@ -319,13 +320,24 @@ body {
 
 .h4 {
     font-size: 18px;
-    margin-top: 20px;
     font-weight: 700;
     color: var(--color-text-dark) !important;
 }
 
 .bento-grid.has-margin-top {
     margin-top: 30px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.pt-0 {
+    padding-top: 0;
 }
 
 .bento-grid {
@@ -339,4 +351,8 @@ body {
 
 .bento-card .image-wrapper {
     padding-top: 0;
+}
+
+main.cd-main-content {
+    padding-bottom: 50px;
 }
