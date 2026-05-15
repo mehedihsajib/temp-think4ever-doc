@@ -51,8 +51,8 @@ body {
     top: 0;
     bottom: 0;
     width: var(--sidebar-width);
-    background-color: var(--surface);
-    border-right: 1px solid var(--border);
+    background-color: #fff;
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
     padding: 1.25rem;
     z-index: 50;
     overflow-y: auto;
@@ -91,7 +91,7 @@ body {
 
 .sidebar-subtitle {
     font-size: 18px;
-    color: var(--primary);
+    color: var(--lp-text);
     font-weight: 500;
 }
 
@@ -210,6 +210,7 @@ body {
 }
 
 .main-title {
+    color: var(--lp-text);
     font-size: 2.25rem;
     font-weight: 800;
     letter-spacing: -0.025em;
@@ -373,7 +374,7 @@ body {
     left: var(--sidebar-width);
     background-color: rgba(255, 255, 255, 0.8) !important;
     backdrop-filter: blur(12px);
-    border-top: 1px solid var(--border);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
     padding: 1.5rem 2.5rem;
     z-index: 40;
 }
@@ -452,7 +453,7 @@ body {
 }
 
 .btn-continue {
-    background-color: var(--primary);
+    background-color: var(--color-orange);
     color: white;
     box-shadow: var(--shadow-lg);
 }

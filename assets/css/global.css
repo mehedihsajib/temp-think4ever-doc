@@ -10,6 +10,8 @@
   --color-primary: #2563eb;
   --color-secondary: #3b82f6;
   --color-accent: #60a5fa;
+  --color-orange: #e25d24;
+  --lp-text: #1f2937;
   --color-text-dark: #0f172a;
   --color-background: #ffffff;
   --color-surface: #eff6ff;
@@ -224,7 +226,7 @@ h6 {
   font-family: var(--font-heading);
   font-weight: var(--font-bold);
   line-height: var(--leading-tight);
-  color: var(--color-text);
+  color: var(--lp-text);
 }
 
 p {
@@ -3500,6 +3502,7 @@ footer {
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--color-border) var(--color-surface);
+  /* scrollbar-color: #888 var(--color-surface); */
 }
 
 /* === SELECTION === */

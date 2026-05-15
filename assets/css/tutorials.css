@@ -3,6 +3,7 @@
   --tut-card: #ffffff;
   --tut-text: #1e2a56;
   --tut-soft: #64719a;
+  --lp-text: #1f2937;
   --tut-primary: #5f79f6;
   --tut-border: rgba(95, 121, 246, 0.18);
   --tut-shadow: 0 16px 38px rgba(34, 63, 170, 0.12);
@@ -11,7 +12,8 @@
 body {
   margin: 0;
   font-family: "Manrope", sans-serif;
-  background: radial-gradient(circle at top right, rgba(163, 177, 255, 0.34), transparent 34%), var(--tut-bg);
+  /* background: radial-gradient(circle at top right, rgba(163, 177, 255, 0.34), transparent 34%), var(--tut-bg); */
+  background: #fff;
   color: var(--tut-text);
 }
 
@@ -95,10 +97,11 @@ body {
 
 .tut-hero h1 {
   margin: 0;
-  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  font-family: var(--font-primary);
   font-size: clamp(2rem, 4vw, 3.4rem);
   line-height: 1.02;
-  color: #4f67e8;
+  color: var(--lp-text);
 }
 
 .tut-hero p {
@@ -205,7 +208,7 @@ body {
   margin: 0;
   font-size: 1.22rem;
   font-weight: 800;
-  color: var(--color-primary);
+  color: var(--lp-text);
 }
 
 .tut-group-count {
