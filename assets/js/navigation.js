@@ -381,6 +381,8 @@ function initMobileMenu() {
 
 function initHeaderNavDropdowns() {
   const nav = document.querySelector(".modern-nav");
+  const isDesktop = () =>
+    window.matchMedia && window.matchMedia("(min-width: 1025px)").matches;
 
   document.querySelectorAll("[data-asset-src]").forEach((el) => {
     const assetSrc = el.getAttribute("data-asset-src");
@@ -423,12 +425,59 @@ function initHeaderNavDropdowns() {
     if (!trigger || trigger.dataset.bound === "true") return;
 
     trigger.dataset.bound = "true";
+
+    let hoverCloseTimer = null;
+
+    const setOpen = (open) => {
+      if (open) closeAllGroups();
+      group.classList.toggle("open", open);
+      trigger.setAttribute("aria-expanded", String(open));
+    };
+
+    const cancelHoverClose = () => {
+      if (hoverCloseTimer) {
+        clearTimeout(hoverCloseTimer);
+        hoverCloseTimer = null;
+      }
+    };
+
+    const scheduleHoverClose = () => {
+      cancelHoverClose();
+      hoverCloseTimer = setTimeout(() => setOpen(false), 140);
+    };
+
+    // Desktop: open on hover (and keep click as a fallback for accessibility)
+    group.addEventListener("mouseenter", function () {
+      if (!isDesktop()) return;
+      cancelHoverClose();
+      setOpen(true);
+    });
+    group.addEventListener("mouseleave", function () {
+      if (!isDesktop()) return;
+      scheduleHoverClose();
+    });
+
     trigger.addEventListener("click", function (event) {
       event.stopPropagation();
+      // Desktop uses hover; clicks should not "stick" open.
+      if (isDesktop()) {
+        cancelHoverClose();
+        setOpen(true);
+        return;
+      }
+
       const willOpen = !group.classList.contains("open");
-      closeAllGroups();
-      group.classList.toggle("open", willOpen);
-      trigger.setAttribute("aria-expanded", String(willOpen));
+      setOpen(willOpen);
+    });
+
+    // Keyboard focus: open on focus within (desktop & mobile)
+    trigger.addEventListener("focus", function () {
+      if (isDesktop()) setOpen(true);
+    });
+    group.addEventListener("focusout", function (event) {
+      if (!isDesktop()) return;
+      if (group.contains(event.relatedTarget)) return;
+      scheduleHoverClose();
     });
   });
 

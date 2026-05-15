@@ -1,108 +1,365 @@
-<div class="modern-header-inner">
-  <!-- Mobile Menu Toggle -->
-  <button class="modern-mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">
-    <i class="fa fa-bars"></i>
-  </button>
-
-  <!-- Logo matching sidebar -->
-  <div class="modern-header-logo-plate">
-    <div class="modern-logo" onclick="load_page('index')">
-      <img data-asset-src="assets/images/think4ever-logo.png" alt="Think4Ever" />
-    </div>
-  </div>
+<div class="modern-header-inner t4e-header">
+  <a class="t4e-logo-link" href="https://think4ever.com/" aria-label="Think4ever home">
+    <img class="t4e-logo-img" data-asset-src="assets/images/think4ever-logo.png" alt="Think4Ever" />
+    <span class="t4e-trademark" aria-hidden="true">™</span>
+  </a>
 
   <!-- Mobile Menu Overlay -->
   <div class="modern-mobile-menu-overlay" id="mobileMenuOverlay"></div>
 
-  <!-- Right header content -->
-  <div class="modern-header-content">
-    <nav class="modern-nav" aria-label="Main navigation">
-      <div class="modern-nav-group" data-nav-group>
-        <button class="modern-nav-group-trigger" type="button" aria-expanded="false">
-          Documentation
-          <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-        </button>
-        <div class="modern-nav-group-menu" role="menu">
-          <a href="#" data-target="onboarding.html" role="menuitem">Customer Onboarding</a>
-          <a href="#" data-target="manual_introduction.html" role="menuitem">Think4ever Designer</a>
-          <a href="#" data-target="dev/start_new_project.html" role="menuitem">Think4ever Developer</a>
-          <!-- <a
-            href="#"
-            data-disabled="true"
-            role="menuitem"
-            class="modern-nav-coming-item"
-            >Main <span class="modern-nav-coming-badge">Coming soon</span></a
-          >
-          <a
-            href="#"
-            data-disabled="true"
-            role="menuitem"
-            class="modern-nav-coming-item"
-            >Reports <span class="modern-nav-coming-badge">Coming soon</span></a
-          > -->
-          <!-- <a
-            href="#"
-            data-disabled="true"
-            role="menuitem"
-            class="modern-nav-coming-item"
-            >Think Together
-            <span class="modern-nav-coming-badge">Coming soon</span></a
-          > -->
-        </div>
-      </div>
+  <!-- Desktop + Mobile Navigation -->
+  <nav class="modern-nav t4e-nav" aria-label="Main navigation">
+    <a class="t4e-toplink" href="https://think4ever.com/">Home</a>
+    <a class="t4e-toplink" href="https://think4ever.com/product">How it Works</a>
+    <a class="t4e-toplink" href="https://think4ever.com/pricing">Pricing</a>
 
-      <div class="modern-nav-group" data-nav-group>
-        <button class="modern-nav-group-trigger" type="button" aria-expanded="false">
-          Tutorial
-          <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
-        </button>
-        <div class="modern-nav-group-menu" role="menu">
-          <a href="#" data-target="tutorials/user_manual.html" role="menuitem">Think4ever Designer</a>
-        </div>
-      </div>
-    </nav>
-
-    <div class="modern-header-tools">
-      <button class="modern-search-btn" onclick="load_page('search_results')" aria-label="Search documentation">
-        <div class="search-content">
-          <i class="fa fa-search search-icon" aria-hidden="true"></i>
-          <span data-i18n="nav.search_placeholder">Search docs...</span>
-        </div>
-        <div class="modern-search-shortcuts">
-          <kbd>Ctrl</kbd>
-          <kbd>K</kbd>
-        </div>
+    <div class="modern-nav-group t4e-nav-group" data-nav-group>
+      <button class="modern-nav-group-trigger t4e-nav-trigger" type="button" aria-expanded="false">
+        Docs
+        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
       </button>
-      <div class="theme-toggle-slot" id="docThemeToggleMount" style="display: none"></div>
-
-      <div class="modern-header-actions" style="display: none">
-        <!-- Modern Language Dropdown -->
-        <div class="modern-lang-wrapper" id="langWrapper">
-          <button class="modern-lang-btn" id="modernLangBtn" aria-expanded="false" aria-haspopup="true">
-            <i class="fa fa-globe" style="font-size: 14px"></i>
-            <span id="current-lang-code" style="text-transform: uppercase" data-i18n="meta.lang_code">EN</span>
-            <i class="fa fa-chevron-down" style="font-size: 10px; margin-left: 2px"></i>
-          </button>
-
-          <div class="modern-lang-menu" id="modernLangMenu" role="menu">
-            <button onclick="changeLanguage('en')" data-lang-btn="en" class="lang-opt-en" role="menuitem">
-              <span>English</span><span class="lang-code">EN</span>
-            </button>
-            <button onclick="changeLanguage('es')" data-lang-btn="es" class="lang-opt-es" role="menuitem">
-              <span>Español</span><span class="lang-code">ES</span>
-            </button>
-            <button onclick="changeLanguage('fr')" data-lang-btn="fr" class="lang-opt-fr" role="menuitem">
-              <span>Français</span><span class="lang-code">FR</span>
-            </button>
-            <button onclick="changeLanguage('it')" data-lang-btn="it" class="lang-opt-it" role="menuitem">
-              <span>Italiano</span><span class="lang-code">IT</span>
-            </button>
-            <button onclick="changeLanguage('nl')" data-lang-btn="nl" class="lang-opt-nl" role="menuitem">
-              <span>Nederlands</span><span class="lang-code">NL</span>
-            </button>
-          </div>
-        </div>
+      <div class="modern-nav-group-menu t4e-dropdown-menu" role="menu" aria-label="Docs menu">
+        <a class="t4e-dropdown-item" href="https://think4ever.com/docs/onboarding.html" target="_blank"
+          rel="noopener noreferrer" role="menuitem">
+          <span class="t4e-item-icon" aria-hidden="true"><i class="fa-regular fa-file-lines"></i></span>
+          <span class="t4e-item-text">
+            <span class="t4e-item-title">Customer Onboarding</span>
+            <span class="t4e-item-desc">Get started with Think4Ever and set up your environment.</span>
+          </span>
+        </a>
+        <a class="t4e-dropdown-item" href="https://think4ever.com/docs/manual_introduction.html" target="_blank"
+          rel="noopener noreferrer" role="menuitem">
+          <span class="t4e-item-icon" aria-hidden="true"><i class="fa-regular fa-file-lines"></i></span>
+          <span class="t4e-item-text">
+            <span class="t4e-item-title">Think4ever Designer</span>
+            <span class="t4e-item-desc">Learn how to use the Designer to map your systems.</span>
+          </span>
+        </a>
+        <a class="t4e-dropdown-item" href="https://think4ever.com/docs/dev/start_new_project.html" target="_blank"
+          rel="noopener noreferrer" role="menuitem">
+          <span class="t4e-item-icon" aria-hidden="true"><i class="fa-regular fa-file-lines"></i></span>
+          <span class="t4e-item-text">
+            <span class="t4e-item-title">Think4ever Developer</span>
+            <span class="t4e-item-desc">Technical guide for developers building with Think4Ever.</span>
+          </span>
+        </a>
       </div>
     </div>
+
+    <div class="modern-nav-group t4e-nav-group" data-nav-group>
+      <button class="modern-nav-group-trigger t4e-nav-trigger" type="button" aria-expanded="false">
+        Resources
+        <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+      </button>
+      <div class="modern-nav-group-menu t4e-dropdown-menu t4e-dropdown-menu-right" role="menu"
+        aria-label="Resources menu">
+        <a class="t4e-dropdown-item" href="https://think4ever.com/blog" target="_blank" rel="noopener noreferrer"
+          role="menuitem">
+          <span class="t4e-item-icon" aria-hidden="true"><i class="fa-regular fa-file-lines"></i></span>
+          <span class="t4e-item-text">
+            <span class="t4e-item-title">Blog</span>
+            <span class="t4e-item-desc">Insights, updates, and deep dives into agentic development.</span>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <a class="t4e-toplink" href="https://think4ever.com/contact-us">Contact Us</a>
+
+    <!-- Mobile-only CTA inside drawer -->
+    <a class="t4e-mobile-cta" href="https://portal.think4ever.com" target="_blank" rel="noopener noreferrer">
+      Get Early Access
+    </a>
+  </nav>
+
+  <div class="t4e-actions">
+    <a class="t4e-cta" href="https://portal.think4ever.com" target="_blank" rel="noopener noreferrer">
+      Get Early Access
+    </a>
+    <button class="modern-mobile-menu-toggle t4e-mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation"
+      aria-expanded="false" type="button">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
+    <div class="theme-toggle-slot" id="docThemeToggleMount" style="display: none"></div>
   </div>
+
+  <style>
+    .t4e-header {
+      justify-content: space-between;
+      gap: 16px;
+      padding: 0 50px;
+      max-width: 100%;
+    }
+
+    .t4e-logo-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+      text-decoration: none;
+      cursor: pointer;
+      flex: 0 0 auto;
+      min-width: 240px;
+    }
+
+    .t4e-logo-img {
+      height: 44px;
+      width: auto;
+      border-radius: 0;
+      display: block;
+    }
+
+    .t4e-trademark {
+      font-size: 20px;
+      font-weight: 700;
+      color: #6b7280;
+      margin-left: -2px;
+      margin-top: 2px;
+      align-self: flex-start;
+      line-height: 1;
+    }
+
+    .t4e-nav {
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .t4e-toplink {
+      height: 38px;
+      padding: 0 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      color: #6b7280;
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+    .t4e-toplink:hover {
+      color: #111827;
+      background: rgba(241, 245, 249, 0.75);
+    }
+
+    .t4e-nav-trigger {
+      height: 40px;
+      padding: 0 10px;
+      border-radius: 10px;
+      font-weight: 500;
+      color: #6b7280;
+      transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .t4e-nav-group.open .t4e-nav-trigger,
+    .t4e-nav-trigger:hover {
+      color: #111827;
+      background: rgba(241, 245, 249, 0.75);
+    }
+
+    .t4e-dropdown-menu {
+      width: 420px;
+      padding: 16px;
+      gap: 8px;
+      border-radius: 14px;
+      /* animate open/close (desktop) */
+      display: grid;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transform: translateY(8px);
+      transition:
+        opacity 160ms ease,
+        transform 160ms ease,
+        visibility 0ms linear 160ms;
+    }
+
+    .t4e-dropdown-menu-right {
+      left: auto;
+      right: 0;
+    }
+
+    .t4e-nav-group.open .t4e-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: translateY(0);
+      transition:
+        opacity 160ms ease,
+        transform 160ms ease,
+        visibility 0ms linear 0ms;
+    }
+
+    .t4e-dropdown-item {
+      height: auto;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 12px;
+      padding: 12px;
+      border-radius: 10px;
+      color: inherit;
+    }
+
+    /* Override global mobile nav link sizing for rich dropdown items */
+    .modern-nav a.t4e-dropdown-item {
+      height: auto;
+      padding: 12px;
+      border-bottom: none;
+      align-items: flex-start;
+    }
+
+    .t4e-dropdown-item:hover {
+      background: #f3f4f6;
+    }
+
+    .t4e-item-icon {
+      width: 36px;
+      height: 36px;
+      flex: 0 0 36px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #f9fafb;
+      border: 1px solid #f3f4f6;
+      color: #9ca3af;
+      transition: all 0.15s ease;
+      margin-top: 2px;
+    }
+
+    .t4e-dropdown-item:hover .t4e-item-icon {
+      background: #ffffff;
+      border-color: #e5e7eb;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+      color: #3b82f6;
+    }
+
+    .t4e-item-text {
+      display: block;
+      min-width: 0;
+      flex: 1 1 auto;
+    }
+
+    .t4e-item-title {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 4px;
+      transition: color 0.15s ease;
+      line-height: 1.15;
+    }
+
+    .t4e-dropdown-item:hover .t4e-item-title {
+      color: #3b82f6;
+    }
+
+    .t4e-item-desc {
+      display: block;
+      font-size: 11.5px;
+      font-weight: 500;
+      color: #9ca3af;
+      line-height: 1.5;
+    }
+
+    .t4e-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 0 0 auto;
+    }
+
+    .t4e-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 38px;
+      padding: 0 18px;
+      border-radius: 10px;
+      background: #ea580c;
+      color: #ffffff;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 6px 16px rgba(234, 88, 12, 0.18);
+      transition: filter 0.15s ease, transform 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .t4e-cta:hover {
+      filter: brightness(0.95);
+      transform: translateY(-0.5px);
+    }
+
+    .modern-nav a.t4e-mobile-cta {
+      display: none !important;
+      margin-top: 18px;
+      width: 100%;
+      height: 52px;
+      border-radius: 14px;
+      background: #ea580c;
+      color: #ffffff;
+      font-weight: 800;
+      text-decoration: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 24px rgba(234, 88, 12, 0.22);
+    }
+
+    /* Mobile drawer: match React sheet (right side) */
+    @media (max-width: 1024px) {
+      .t4e-header {
+        padding: 0 16px;
+      }
+
+      .t4e-nav {
+        top: 72px;
+        left: auto;
+        right: 0;
+        width: min(380px, 100vw);
+        box-shadow: -1px 0 0 #e2e8f0;
+        transform: translateX(100%);
+      }
+
+      .t4e-nav.open {
+        transform: translateX(0);
+      }
+
+      .t4e-dropdown-menu,
+      .t4e-dropdown-menu-right {
+        width: 100%;
+        padding: 10px 0 14px 12px;
+        gap: 12px;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: none;
+        transition: none;
+      }
+
+      .t4e-dropdown-item {
+        padding: 12px 10px;
+        border-radius: 12px;
+      }
+
+      .t4e-item-icon {
+        width: 34px;
+        height: 34px;
+        flex-basis: 34px;
+      }
+
+      .t4e-actions .t4e-cta {
+        display: none;
+      }
+
+      .modern-nav a.t4e-mobile-cta {
+        display: flex !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .t4e-trademark {
+        font-size: 16px;
+        margin-top: 1px;
+      }
+
+      .t4e-logo-img {
+        height: 36px;
+      }
+    }
+  </style>
 </div>

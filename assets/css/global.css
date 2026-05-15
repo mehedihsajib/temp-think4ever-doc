@@ -3624,6 +3624,8 @@ body {
 .modern-nav-group {
   position: relative;
   height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .modern-nav-group-trigger {
@@ -3675,10 +3677,10 @@ body {
   text-decoration: none;
   transition: color 0.2s ease;
   position: relative;
-  padding: 0;
+  padding: 0 10px;
   display: flex;
   align-items: center;
-  height: 100%;
+  height: 40px;
 }
 
 .modern-nav a:hover {
@@ -3921,6 +3923,8 @@ body {
   .modern-nav-group {
     width: 100%;
     height: auto;
+    flex-direction: column;
+    
   }
 
   .modern-nav-group-trigger {
@@ -3959,6 +3963,10 @@ body {
     color: #334155;
     border-bottom: none;
     padding: 0 8px 0 10px;
+  }
+
+  .modern-nav-group.open .modern-nav-group-menu {
+    margin-top: 20px;
   }
 
   .modern-nav a.active::after {

@@ -1,242 +1,89 @@
 <style>
-  /* ============ FOOTER ============ */
-  .lp-footer {
+  .t4e-doc-footer {
     background: #0f172a;
-    padding: 64px 24px 32px;
+    color: #94a3b8;
+    border-top: 1px solid #1e293b;
+    padding: 40px 24px;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica,
+      Arial, "Apple Color Emoji", "Segoe UI Emoji";
   }
 
-  .lp-footer-inner {
+  .t4e-doc-footer-inner {
     max-width: 1280px;
     margin: 0 auto;
-  }
-
-  .lp-footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 48px;
-    margin-bottom: 48px;
-  }
-
-  .lp-footer-brand {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-  }
-
-  .lp-footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .lp-footer-logo img {
-    height: 50px;
-  }
-
-  .lp-footer-logo span {
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    color: #fff;
-  }
-
-  .lp-footer-brand p {
-    font-size: 0.875rem;
-    color: #94a3b8;
-    line-height: 1.625;
-    max-width: 280px;
-  }
-
-  .lp-footer-social {
-    display: flex;
-    gap: 8px;
-    margin-top: 8px;
-  }
-
-  .lp-footer-social a {
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #94a3b8;
-    border: 1px solid #334155;
-    border-radius: 8px;
-    font-size: 14px;
-    text-decoration: none;
-    transition: all 0.15s ease;
-  }
-
-  .lp-footer-social a:hover {
-    color: #fff;
-    border-color: #2563eb;
-    background: rgba(37, 99, 235, 0.15);
-  }
-
-  .lp-footer-col h4 {
-    font-family: "Plus Jakarta Sans", sans-serif;
-    font-size: 0.8125rem;
-    font-weight: 700;
-    color: #e2e8f0;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    margin-bottom: 16px;
-  }
-
-  .lp-footer-col a {
-    display: block;
-    font-size: 0.875rem;
-    color: #94a3b8;
-    text-decoration: none;
-    padding: 5px 0;
-    transition: color 0.15s ease;
-    cursor: pointer;
-  }
-
-  .lp-footer-col a:hover {
-    color: #60a5fa;
-  }
-
-  .lp-footer-bottom {
-    border-top: 1px solid #1e293b;
-    padding-top: 24px;
-    display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
+    gap: 18px;
   }
 
-  .lp-footer-bottom p {
-    font-size: 0.8125rem;
-    color: #64748b;
-  }
-
-  .lp-footer-bottom-links {
+  .t4e-doc-footer-nav {
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 14px 32px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    transform: translateY(1px);
   }
 
-  .lp-footer-bottom-links a {
-    font-size: 0.8125rem;
-    color: #64748b;
+  .t4e-doc-footer-nav a {
+    color: #94a3b8;
     text-decoration: none;
-    transition: color 0.15s ease;
+    transition: color 160ms ease;
   }
 
-  .lp-footer-bottom-links a:hover {
-    color: #60a5fa;
+  .t4e-doc-footer-nav a:hover {
+    color: #ffffff;
   }
 
-  @media (max-width: 1024px) {
-    .lp-footer-grid {
-      grid-template-columns: 2fr 1fr 1fr;
+  .t4e-doc-footer-nav a.t4e-footer-muted {
+    color: #9ca3af;
+  }
+
+  .t4e-doc-footer-copy {
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    opacity: 0.6;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .t4e-doc-footer {
+      padding: 40px 48px;
+    }
+
+    .t4e-doc-footer-inner {
+      flex-direction: row;
+      align-items: center;
       gap: 32px;
     }
-  }
 
-  @media (max-width: 768px) {
-    .lp-footer-grid {
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .lp-footer-grid {
-      grid-template-columns: 1fr;
-      gap: 28px;
+    .t4e-doc-footer-nav {
+      justify-content: flex-start;
     }
 
-    .lp-footer-bottom {
-      flex-direction: column;
-      text-align: center;
+    .t4e-doc-footer-copy {
+      text-align: right;
     }
   }
 </style>
 
-<footer class="lp-footer">
-  <div class="lp-footer-inner">
-    <div class="lp-footer-grid">
-      <!-- Brand -->
-      <div class="lp-footer-brand">
-        <div class="lp-footer-logo">
-          <img id="footer-logo" alt="Think4ever" />
-        </div>
-        <p>
-          think4ever helps teams design, deploy, and scale multi-agent AI
-          systems with clarity, confidence, and measurable business impact.
-        </p>
-      </div>
+<footer class="t4e-doc-footer">
+  <div class="t4e-doc-footer-inner">
+    <nav class="t4e-doc-footer-nav" aria-label="Footer navigation">
+      <a href="https://think4ever.com/">Home</a>
+      <a href="https://think4ever.com/product">How it Works</a>
+      <a href="https://think4ever.com/#build-new">Solutions</a>
+      <a href="https://think4ever.com/pricing">Pricing</a>
+      <a href="https://think4ever.com/faq">FAQ</a>
+      <a href="https://think4ever.com/contact-us">Contact Us</a>
+      <a class="t4e-footer-muted" href="https://think4ever.com/privacy-policy">Privacy Policy</a>
+    </nav>
 
-      <!-- Documentation -->
-      <div class="lp-footer-col">
-        <h4 data-i18n="landing.footer.col_docs">Documentation</h4>
-        <a href="#" onclick="
-                          load_page('onboarding');
-                          return false;
-                        ">Customer Onboarding</a>
-        <a href="./manual_introduction.html">Think4ever Designer</a>
-        <a href="./dev/start_new_project.html">Think4ever Developer</a>
-        <!-- <a onclick="load_page('#')">Main</a>
-        <a onclick="load_page('#')">Reports</a> -->
-        <!-- <a onclick="load_page('#')">Think Together</a> -->
-      </div>
-
-      <!-- Community -->
-      <div class="lp-footer-col">
-        <h4 data-i18n="landing.footer.col_community">Community</h4>
-        <!-- <a
-          href="#"
-          id="lp_footer_blog_link"
-          onclick="
-            load_page('blog_listing');
-            return false;
-          "
-          data-i18n="landing.nav.blog"
-          >Blog</a
-        > -->
-        <a href="#" id="lp_footer_feedback_link" onclick="
-            load_page('feedback_form');
-            return false;
-          " data-i18n="landing.nav.feedback">Feedback</a>
-        <!-- <a
-          href="#"
-          id="lp_footer_changelog_link"
-          onclick="
-            load_page('changelog_page');
-            return false;
-          "
-          data-i18n="landing.nav.changelog"
-          >Changelog</a
-        > -->
-      </div>
-
-      <!-- Legal -->
-      <div class="lp-footer-col">
-        <h4 data-i18n="landing.footer.col_legal">Legal</h4>
-        <a href="#" id="lp_footer_privacy_link" onclick="
-            load_page('privacy');
-            return false;
-          " data-i18n="landing.footer.link_privacy">Privacy Policy</a>
-        <a href="#" id="lp_footer_terms_link" onclick="
-            load_page('terms');
-            return false;
-          " data-i18n="landing.footer.link_terms">Terms of Service</a>
-      </div>
-    </div>
-
-    <div class="lp-footer-bottom">
-      <p>© 2026 think4ever. All rights reserved.</p>
-      <div class="lp-footer-bottom-links">
-        <a href="https://www.think4ever.com/privacy.html" target="_blank"
-          data-i18n="landing.footer.link_privacy">Privacy</a>
-        <a href="https://www.think4ever.com/terms.html" target="_blank" data-i18n="landing.footer.link_terms">Terms</a>
-        <a href="#" onclick="
-            load_page('feedback_form');
-            return false;
-          " data-i18n="landing.footer.link_contact">Contact</a>
-      </div>
-    </div>
+    <div class="t4e-doc-footer-copy">© 2026 Think4ever™. All rights reserved.</div>
   </div>
 </footer>
