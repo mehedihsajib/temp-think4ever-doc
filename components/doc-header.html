@@ -19,28 +19,36 @@
         <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
       </button>
       <div class="modern-nav-group-menu t4e-dropdown-menu" role="menu" aria-label="Docs menu">
-        <a class="t4e-dropdown-item" href="https://think4ever.com/docs/onboarding.html" target="_blank"
-          rel="noopener noreferrer" role="menuitem">
-          <span class="t4e-item-icon" aria-hidden="true"><i class="fa-regular fa-file-lines"></i></span>
+        <a class="t4e-dropdown-item" href="https://think4ever.com/docs/onboarding.html" rel="noopener noreferrer"
+          role="menuitem">
+          <span class="t4e-item-icon" aria-hidden="true"><i class="fa-solid fa-rocket"></i></span>
           <span class="t4e-item-text">
             <span class="t4e-item-title">Customer Onboarding</span>
             <span class="t4e-item-desc">Get started with Think4Ever and set up your environment.</span>
           </span>
         </a>
-        <a class="t4e-dropdown-item" href="https://think4ever.com/docs/manual_introduction.html" target="_blank"
+        <a class="t4e-dropdown-item" href="https://think4ever.com/docs/manual_introduction.html"
           rel="noopener noreferrer" role="menuitem">
-          <span class="t4e-item-icon" aria-hidden="true"><i class="fa-regular fa-file-lines"></i></span>
+          <span class="t4e-item-icon" aria-hidden="true"><i class="fa-solid fa-palette"></i></span>
           <span class="t4e-item-text">
             <span class="t4e-item-title">Think4ever Designer</span>
             <span class="t4e-item-desc">Learn how to use the Designer to map your systems.</span>
           </span>
         </a>
-        <a class="t4e-dropdown-item" href="https://think4ever.com/docs/dev/start_new_project.html" target="_blank"
+        <a class="t4e-dropdown-item" href="https://think4ever.com/docs/dev/start_new_project.html"
           rel="noopener noreferrer" role="menuitem">
-          <span class="t4e-item-icon" aria-hidden="true"><i class="fa-regular fa-file-lines"></i></span>
+          <span class="t4e-item-icon" aria-hidden="true"><i class="fa-solid fa-code"></i></span>
           <span class="t4e-item-text">
             <span class="t4e-item-title">Think4ever Developer</span>
             <span class="t4e-item-desc">Technical guide for developers building with Think4Ever.</span>
+          </span>
+        </a>
+        <a class="t4e-dropdown-item" href="https://think4ever.com/docs/tutorials/user_manual.html"
+          rel="noopener noreferrer" role="menuitem">
+          <span class="t4e-item-icon" aria-hidden="true"><i class="fa-regular fa-circle-play"></i></span>
+          <span class="t4e-item-text">
+            <span class="t4e-item-title">Video Tutorials</span>
+            <span class="t4e-item-desc">Watch step-by-step guides on how to use Think4Ever.</span>
           </span>
         </a>
       </div>
@@ -53,8 +61,7 @@
       </button>
       <div class="modern-nav-group-menu t4e-dropdown-menu t4e-dropdown-menu-right" role="menu"
         aria-label="Resources menu">
-        <a class="t4e-dropdown-item" href="https://think4ever.com/blog" target="_blank" rel="noopener noreferrer"
-          role="menuitem">
+        <a class="t4e-dropdown-item" href="https://think4ever.com/blog" rel="noopener noreferrer" role="menuitem">
           <span class="t4e-item-icon" aria-hidden="true"><i class="fa-regular fa-file-lines"></i></span>
           <span class="t4e-item-text">
             <span class="t4e-item-title">Blog</span>
@@ -67,13 +74,13 @@
     <a class="t4e-toplink" href="https://think4ever.com/contact-us">Contact Us</a>
 
     <!-- Mobile-only CTA inside drawer -->
-    <a class="t4e-mobile-cta" href="https://portal.think4ever.com" target="_blank" rel="noopener noreferrer">
+    <a class="t4e-mobile-cta" href="https://portal.think4ever.com" rel="noopener noreferrer">
       Get Early Access
     </a>
   </nav>
 
   <div class="t4e-actions">
-    <a class="t4e-cta" href="https://portal.think4ever.com" target="_blank" rel="noopener noreferrer">
+    <a class="t4e-cta" href="https://portal.think4ever.com" rel="noopener noreferrer">
       Get Early Access
     </a>
     <button class="modern-mobile-menu-toggle t4e-mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation"
@@ -186,6 +193,7 @@
     }
 
     .t4e-dropdown-item {
+      display: flex;
       height: auto;
       align-items: flex-start;
       justify-content: flex-start;
@@ -265,15 +273,16 @@
     }
 
     .t4e-cta {
+      font-size: 14px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      height: 38px;
-      padding: 0 18px;
-      border-radius: 10px;
+      height: 35px;
+      padding: 0 15px;
+      border-radius: 8px;
       background: #ea580c;
       color: #ffffff;
-      font-weight: 700;
+      font-weight: 600;
       text-decoration: none;
       box-shadow: 0 6px 16px rgba(234, 88, 12, 0.18);
       transition: filter 0.15s ease, transform 0.15s ease;

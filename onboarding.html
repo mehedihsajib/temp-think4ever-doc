@@ -18,6 +18,9 @@
 </head>
 
 <body>
+  <!-- Site Header -->
+  <header class="modern-header" id="consumerHeader"></header>
+
   <div class="app-container">
     <!-- SideNavBar Component -->
     <aside class="sidebar">
@@ -33,21 +36,21 @@
             <span class="nav-item-subtitle">Introduction</span>
           </div>
         </div> -->
-        <div data-step-index="1" class="onboarding-nav-item">
+        <div data-step-index="0" class="onboarding-nav-item">
           <span class="material-symbols-outlined">person_add</span>
           <div class="nav-item-content">
             <span class="nav-item-title">Create Account</span>
             <span class="nav-item-subtitle">Setup identity</span>
           </div>
         </div>
-        <div data-step-index="2" class="onboarding-nav-item">
+        <div data-step-index="1" class="onboarding-nav-item">
           <span class="material-symbols-outlined">create_new_folder</span>
           <div class="nav-item-content">
             <span class="nav-item-title">Create Project</span>
             <span class="nav-item-subtitle">Initialize workspace</span>
           </div>
         </div>
-        <div data-step-index="3" class="onboarding-nav-item">
+        <div data-step-index="2" class="onboarding-nav-item">
           <span class="material-symbols-outlined">key</span>
           <div class="nav-item-content">
             <span class="nav-item-title">Add API Key</span>
@@ -55,7 +58,7 @@
           </div>
         </div>
 
-        <div data-step-index="4" class="onboarding-nav-item">
+        <div data-step-index="3" class="onboarding-nav-item">
           <span class="material-symbols-outlined">construction</span>
           <div class="nav-item-content">
             <span class="nav-item-title">Build Project</span>
@@ -64,9 +67,6 @@
         </div>
       </nav>
     </aside>
-    <!-- Site Header -->
-    <header class="modern-header" id="consumerHeader"></header>
-
     <!-- Main Content Area -->
     <main class="main-content">
       <div id="content-area">
@@ -479,9 +479,8 @@
           <div class="dot"></div>
           <div class="dot"></div>
           <div class="dot"></div>
-          <div class="dot"></div>
         </div>
-        <span id="onboarding-progress-label" class="progress-label">Step 1 of 5</span>
+        <span id="onboarding-progress-label" class="progress-label">Step 1</span>
       </div>
       <div class="button-group">
         <button id="btn-back" class="btn btn-back">Back</button>
@@ -516,13 +515,29 @@
       const btnBack = document.getElementById("btn-back");
       const btnContinue = document.getElementById("btn-continue");
       const btnContinueText = document.getElementById("btn-continue-text");
-      const progressBars = document.querySelectorAll(
-        "#onboarding-progress-bars > .dot",
+      const progressBarHost = document.getElementById(
+        "onboarding-progress-bars",
       );
       const progressLabel = document.getElementById(
         "onboarding-progress-label",
       );
       const contentArea = document.getElementById("content-area");
+
+      const totalSteps = stepContents.length;
+
+      // Normalize progress bar count to match step count (avoids mismatch when steps change).
+      if (progressBarHost) {
+        progressBarHost.innerHTML = "";
+        for (let i = 0; i < totalSteps; i++) {
+          const dot = document.createElement("div");
+          dot.className = "dot";
+          progressBarHost.appendChild(dot);
+        }
+      }
+
+      const progressBars = document.querySelectorAll(
+        "#onboarding-progress-bars > .dot",
+      );
 
       function updateStep(index) {
         contentArea.style.opacity = "0";
@@ -548,7 +563,7 @@
 
           // Update Progress Bar & Label
           if (progressLabel) {
-            progressLabel.textContent = `Step ${index + 1} of ${stepContents.length}`;
+            progressLabel.textContent = `Step ${index + 1} of ${totalSteps}`;
           }
 
           progressBars.forEach((bar, idx) => {
@@ -558,7 +573,7 @@
           // Update Buttons
           btnBack.disabled = index === 0;
           btnContinueText.textContent =
-            index === stepContents.length - 1 ? "Finish" : "Continue";
+            index === totalSteps - 1 ? "Finish" : "Continue";
 
           // Fade back in
           contentArea.style.opacity = "1";
@@ -581,7 +596,7 @@
 
       btnContinue.addEventListener("click", () => {
         console.log("finish clieked...");
-        if (currentStepIndex < stepContents.length - 1) {
+        if (currentStepIndex < totalSteps - 1) {
           updateStep(currentStepIndex + 1);
         } else {
           // Show Modal

@@ -14,8 +14,8 @@
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(37, 99, 235, 0.2);
     --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-    --sidebar-width: 288px;
-    /* w-72 */
+    --sidebar-width: 280px;
+    /* Match docs sidebar */
 }
 
 * {
@@ -42,25 +42,28 @@ body {
 .app-container {
     display: flex;
     min-height: 100vh;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 64px;
 }
 
 /* Sidebar */
 .sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
+    position: sticky;
+    top: 64px;
     width: var(--sidebar-width);
     background-color: #fff;
     border-right: 1px solid rgba(0, 0, 0, 0.08);
-    padding: 1.25rem;
+    padding: 40px 24px 24px 32px;
     z-index: 50;
     overflow-y: auto;
+    height: calc(100vh - 64px);
 }
 
 .sidebar-header {
     margin-bottom: 1rem;
-    margin-top: 5rem;
+    margin-top: 0;
 }
 
 .logo-container {
@@ -92,7 +95,8 @@ body {
 .sidebar-subtitle {
     font-size: 18px;
     color: var(--lp-text);
-    font-weight: 500;
+    font-weight: 600;
+    white-space: nowrap;
 }
 
 /* Sidebar Nav */
@@ -185,8 +189,10 @@ body {
 
 /* Main Content Area */
 .main-content {
-    margin-left: var(--sidebar-width);
-    padding-top: 7rem;
+    flex: 1 1 auto;
+    min-width: 0;
+    margin-left: 0;
+    padding-top: 56px;
     padding-bottom: 8rem;
     width: 100%;
 }
@@ -229,6 +235,7 @@ body {
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: 1fr;
     gap: 2rem;
     margin-bottom: 3rem;
 }
@@ -370,13 +377,22 @@ body {
 .footer-nav {
     position: fixed;
     bottom: 0;
-    right: 0;
-    left: var(--sidebar-width);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1440px;
     background-color: rgba(255, 255, 255, 0.8) !important;
     backdrop-filter: blur(12px);
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    /* border-top: 1px solid rgba(0, 0, 0, 0.08); */
     padding: 1.5rem 2.5rem;
     z-index: 40;
+    padding-left: 150px;
+}
+
+@media(max-width: 1024) {
+    .footer-nav {
+        padding-left: 0;
+    }
 }
 
 .footer-content {
@@ -544,6 +560,16 @@ body {
 @media (max-width: 1024px) {
     :root {
         --sidebar-width: 240px;
+    }
+
+    .app-container {
+        padding-top: 72px;
+    }
+
+    .sidebar {
+        top: 72px;
+        height: calc(100vh - 72px);
+        padding-top: 32px;
     }
 }
 
