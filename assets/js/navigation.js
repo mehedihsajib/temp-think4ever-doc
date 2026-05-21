@@ -12,6 +12,12 @@ function load_dev_page(pageId) {
   window.location.href = toBasePath(`dev/${pageId}.html`);
 }
 
+function load_portal_page(pageId) {
+  localStorage.setItem("currentPage", pageId);
+
+  window.location.href = toBasePath(`portal/${pageId}.html`);
+}
+
 function getSiteBasePath() {
   const navScript = document.querySelector(
     "script[src*='assets/js/navigation.js']",
@@ -721,10 +727,26 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  // -------- Dev Sidebar --------
+  // -------- Portal Sidebar --------
   loadComponent({
     id: "devSidebar",
     url: toBasePath("components/dev-sidebar.html"),
+    onLoaded: (el) => {
+      setSidebarActive(el, currentPage);
+      attachSidebarClickHandler(el);
+      if (window.I18n) window.I18n.applyToDOM(el);
+      setTimeout(() => {
+        initSidebarToggle();
+        generateBreadcrumb();
+        generateGlobalTOC();
+      }, 0);
+    },
+  });
+
+  // -------- Portal Sidebar --------
+  loadComponent({
+    id: "portalSidebar",
+    url: toBasePath("components/portal-sidebar.html"),
     onLoaded: (el) => {
       setSidebarActive(el, currentPage);
       attachSidebarClickHandler(el);
