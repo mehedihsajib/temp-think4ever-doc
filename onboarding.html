@@ -18,7 +18,10 @@
 
     <!-- Link to Custom Vanilla CSS -->
     <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/dev_doc.css" />
+    <link rel="stylesheet" href="../assets/css/portal.css" />
     <link rel="stylesheet" href="assets/css/onboarding.css" />
+    link
   </head>
 
   <body>
@@ -40,21 +43,21 @@
               <span class="nav-item-subtitle">Welcome</span>
             </div>
           </div>
-          <div data-step-index="0" class="onboarding-nav-item">
+          <div data-step-index="1" class="onboarding-nav-item">
             <span class="material-symbols-outlined">person_add</span>
             <div class="nav-item-content">
               <span class="nav-item-title">Create Account</span>
               <span class="nav-item-subtitle">Setup identity</span>
             </div>
           </div>
-          <div data-step-index="1" class="onboarding-nav-item">
+          <div data-step-index="2" class="onboarding-nav-item">
             <span class="material-symbols-outlined">create_new_folder</span>
             <div class="nav-item-content">
               <span class="nav-item-title">Create Project</span>
               <span class="nav-item-subtitle">Initialize workspace</span>
             </div>
           </div>
-          <div data-step-index="2" class="onboarding-nav-item">
+          <div data-step-index="3" class="onboarding-nav-item">
             <span class="material-symbols-outlined">key</span>
             <div class="nav-item-content">
               <span class="nav-item-title">Add API Key</span>
@@ -62,7 +65,7 @@
             </div>
           </div>
 
-          <div data-step-index="3" class="onboarding-nav-item">
+          <div data-step-index="4" class="onboarding-nav-item">
             <span class="material-symbols-outlined">construction</span>
             <div class="nav-item-content">
               <span class="nav-item-title">Build Project</span>
@@ -97,6 +100,58 @@
                 </div>
               </section>
             </div>
+            <h3 class="h3">Navigation Bar</h3>
+            <p>
+              Located at the top of the page, the navigation bar provides quick
+              access to important sections of the platform.
+            </p>
+            <p>Available Menu Options</p>
+            <ul class="cd-overview-ul">
+              <li>Features – Displays the platform capabilities and tools.</li>
+              <li>
+                How It Works – Explains the Think4ever workflow and AI-driven
+                process.
+              </li>
+              <li>
+                How It Works – Explains the Think4ever workflow and AI-driven
+                process.
+              </li>
+              <li>
+                Packages – Shows available subscription plans or service
+                offerings.
+              </li>
+            </ul>
+            <h4 class="h4">Action Buttons</h4>
+            <ul class="cd-overview-ul">
+              <li>Sign In – Redirects users to the login page.</li>
+              <li>
+                Get Started – Begins the onboarding or registration process for
+                new users.
+              </li>
+            </ul>
+            <h4 class="h4">How to Use the Home Page</h4>
+            <p>For Existing Users</p>
+            <ol class="cd-overview-ul">
+              <li>Click Sign In.</li>
+              <li>Enter your credentials on the Login page.</li>
+              <li>Access your dashboard and projects.</li>
+            </ol>
+
+            <p>For New Users</p>
+            <ol class="cd-overview-ul">
+              <li>Click Get Started.</li>
+              <li>Complete the registration or onboarding process.</li>
+              <li>Begin creating projects using the platform tools.</li>
+            </ol>
+
+            <p>To Learn About the Platform</p>
+            <ul class="cd-overview-ul">
+              <li>Use the Features menu to explore platform capabilities.</li>
+              <li>
+                Select How It Works to understand the AI-assisted workflow.
+              </li>
+              <li>Review Packages for available plans and services.</li>
+            </ul>
           </div>
 
           <!-- Step 1: Create Account -->
@@ -112,14 +167,14 @@
               <section class="bento-card">
                 <div class="card-body">
                   <div class="card-badge">Step 01</div>
-                  <h3 class="card-title">Get Started</h3>
+                  <!-- <h3 class="card-title">Start Building (Create an Account)</h3> -->
                   <p class="card-text">
                     Click on 'Get started' button from the landing page.
                   </p>
                 </div>
                 <div class="image-wrapper">
                   <img
-                    src="assets/images/customer-onboard/01-landing-page.png"
+                    src="assets/images/customer-onboard/02-start-building.png"
                     alt=""
                   />
                 </div>
@@ -135,11 +190,118 @@
                 </div>
                 <div class="image-wrapper">
                   <img
-                    src="assets/images/customer-onboard/02-create-account.png"
+                    src="assets/images/customer-onboard/02-start-building-2.png"
                     alt=""
                   />
                 </div>
               </section>
+
+              <div class="content-box">
+                <h3 class="h3">Create Account Page</h3>
+                <p>
+                  The Create Account page allows new users to register and gain
+                  access to the Think4ever Portal. Users are required to provide
+                  personal details, company information, and account credentials
+                  before creating an account.
+                </p>
+                <ol class="cd-overview-ul">
+                  <li>First Name Field</li>
+                  <ul>
+                    <li>
+                      Enter your given or first name. <br />
+                      Example: John
+                    </li>
+                  </ul>
+                  <li>Last Name Field</li>
+                  <ul>
+                    <li>
+                      Enter your surname or family name. <br />
+                      Example: Doe
+                    </li>
+                  </ul>
+                  <li>Email Address Field</li>
+                  <ul>
+                    <li>
+                      Provide a valid and active email address. This email will
+                      be used for login access and account-related
+                      notifications. <br />
+                      Example: you@company.com
+                    </li>
+                  </ul>
+                  <li>Company Name Field</li>
+                  <ul>
+                    <li>
+                      Enter the name of your company or organization. <br />
+                      Example: Acme Corp
+                    </li>
+                  </ul>
+                  <li>Password Requirements</li>
+                  <ul>
+                    <li>Minimum of 8 characters</li>
+                    <li>
+                      Recommended to include:
+                      <ul>
+                        <li>Uppercase letters</li>
+                        <li>Lowercase letters</li>
+                        <li>Numbers</li>
+                        <li>Special characters</li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <li>Confirm Password Field</li>
+                  <ul>
+                    <li>
+                      Re-enter the password to confirm accuracy. Both password
+                      fields must match before the account can be created.
+                    </li>
+                  </ul>
+                  <li>Human Verification Slider</li>
+                  <ul>
+                    <li>
+                      Re-enter the password to confirm accuracy. Both password
+                      fields must match before the account can be created.
+                    </li>
+                  </ul>
+                  <li>Terms and Privacy Notice</li>
+                  <ul>
+                    <li>
+                      By creating an account, users agree to the platform’s:
+                      <ul>
+                        <li>Terms of Service</li>
+                        <li>Privacy Policy</li>
+                      </ul>
+                    </li>
+                    <li>
+                      Users are encouraged to review these policies before
+                      registration.
+                    </li>
+                  </ul>
+                  <li>Create Account Button</li>
+                  <ul>
+                    <li>
+                      Click the Create Account button to submit the registration
+                      form and create your portal account.
+                    </li>
+                  </ul>
+                  <li>Sign In Link</li>
+                  <ul>
+                    <li>
+                      Existing users can click Sign in to access the Login page
+                      instead of creating a new account.
+                    </li>
+                  </ul>
+                  <li>Back to Home</li>
+                  <ul>
+                    <li>Returns the user to the Think4ever homepage.</li>
+                  </ul>
+                </ol>
+
+                <ol class="cd-overview-ul"></ol>
+                <ol class="cd-overview-ul"></ol>
+                <ol class="cd-overview-ul"></ol>
+                <ol class="cd-overview-ul"></ol>
+              </div>
+
               <section class="bento-card">
                 <div class="card-body">
                   <div class="card-badge">Step 03</div>

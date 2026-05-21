@@ -45,7 +45,6 @@ body {
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
-    padding-top: 64px;
 }
 
 /* Sidebar */
@@ -237,7 +236,7 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-template-columns: 1fr;
     gap: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 30px;
 }
 
 .bento-card {
@@ -386,7 +385,7 @@ body {
     /* border-top: 1px solid rgba(0, 0, 0, 0.08); */
     padding: 1.5rem 2.5rem;
     z-index: 40;
-    padding-left: 150px;
+    padding-left: 250px;
 }
 
 @media(max-width: 1024) {
@@ -481,6 +480,10 @@ body {
 
 .btn-continue:active {
     transform: translateY(0);
+}
+
+.image-wrapper {
+    padding-bottom: 0;
 }
 
 /* Modal Styles */
