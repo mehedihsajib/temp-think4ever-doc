@@ -28,7 +28,7 @@
       }
 
       .modern-header {
-        font-family: "Inter", sans-serif;
+        font-family: 'Inter', sans-serif;
         position: fixed;
         top: 0;
         left: 0;
@@ -76,7 +76,7 @@
         color: #000;
         font-size: 1.15rem;
         font-weight: bold;
-        font-family: "Inter", sans-serif;
+        font-family: 'Inter', sans-serif;
         margin-top: 32px;
         margin-bottom: 12px;
       }
@@ -95,7 +95,7 @@
 
       .cd-overview-ul li {
         margin-bottom: 16px;
-        font-family: "Inter", sans-serif;
+        font-family: 'Inter', sans-serif;
         font-size: 0.95rem;
         color: #475569;
         line-height: 1.6;
@@ -111,7 +111,7 @@
       }
 
       .cd-overview-p {
-        font-family: "Inter", sans-serif;
+        font-family: 'Inter', sans-serif;
         font-size: 1rem;
         color: #475569;
         line-height: 1.7;
@@ -170,43 +170,37 @@
 
         <main class="cd-main-content" id="cd-main">
           <h1 class="cd-page-title">Feedback</h1>
+          <p class="cd-overview-p">
+            The <strong>Feedback</strong> module is a specialized tool for
+            gathering qualitative data from users, stakeholders, and team
+            members. It allows you to create custom forms, collect structured
+            responses, and analyze sentiment to drive project improvements.
+          </p>
           <!-- ===== Explanation Video ===== -->
           <div class="yt-video" data-video-id="Wlb99hJK6c0"></div>
 
           <div class="doc-section">
             <p class="cd-overview-p">
-              The Feedback module is a specialized tool for gathering
-              qualitative data from users, stakeholders, and team members. It
-              allows you to create custom forms, collect structured responses,
-              and analyze sentiment to drive project improvements.
-            </p>
-            <p class="cd-overview-p">
               The Feedback dashboard is organized into four main tabs to help
               you manage the entire lifecycle of a submission:
             </p>
             <ul class="cd-overview-ul">
-              <li>
-                <strong>Centralized Input:</strong>
-                <span
-                  >Instead of scattered emails or chat messages, feedback is
-                  logged here as specific entries.</span
-                >
-              </li>
-              <li>
-                <strong>Actionable Insights:</strong>
-                <span
-                  >Feedback can be triaged and converted directly into Issues
-                  (Bugs or Features) if the input requires a technical
-                  change.</span
-                >
-              </li>
-              <li>
-                <strong>Sentiment Tracking:</strong>
-                <span
-                  >Helps project managers gauge the "health" of a feature based
-                  on user and team reactions.</span
-                >
-              </li>
+              <!-- <li>
+              <strong>Centralized Input:</strong>
+              <span>Instead of scattered emails or chat messages, feedback is
+                logged here as specific entries.</span>
+            </li>
+            <li>
+              <strong>Actionable Insights:</strong>
+              <span>Feedback can be triaged and converted directly into Issues
+                (Bugs or Features) if the input requires a technical
+                change.</span>
+            </li>
+            <li>
+              <strong>Sentiment Tracking:</strong>
+              <span>Helps project managers gauge the "health" of a feature based
+                on user and team reactions.</span>
+            </li> -->
               <li>
                 <strong>All Forms:</strong>
                 <span
@@ -237,12 +231,6 @@
               </li>
             </ul>
 
-            <img
-              src="assets/images/feedback-tabs.png"
-              alt="Feedback Tabs"
-              class="demo-img"
-            />
-
             <h4 class="cd-sub-heading">Creating a Feedback Form</h4>
             <p class="cd-overview-p">
               To start collecting data, click either the + New Form button or
@@ -268,8 +256,8 @@
               </li>
             </ul>
             <img
-              src="assets/images/feedback-form.png"
-              alt="New Feedback Form"
+              src="assets/images/feedback-modal.jpg"
+              alt="Feedback modal"
               class="demo-img"
             />
 
@@ -357,7 +345,7 @@
     <script src="assets/js/navigation.js"></script>
     <script src="assets/js/consumer_docs_home.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
+      document.addEventListener('DOMContentLoaded', () => {
         if (window.I18n) {
           window.I18n.init();
         }

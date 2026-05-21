@@ -28,7 +28,7 @@
       }
 
       .modern-header {
-        font-family: "Inter", sans-serif;
+        font-family: 'Inter', sans-serif;
         position: fixed;
         top: 0;
         left: 0;
@@ -76,7 +76,7 @@
         color: #000;
         font-size: 1.15rem;
         font-weight: bold;
-        font-family: "Inter", sans-serif;
+        font-family: 'Inter', sans-serif;
         margin-top: 32px;
         margin-bottom: 12px;
       }
@@ -95,7 +95,7 @@
 
       .cd-overview-ul li {
         margin-bottom: 16px;
-        font-family: "Inter", sans-serif;
+        font-family: 'Inter', sans-serif;
         font-size: 0.95rem;
         color: #475569;
         line-height: 1.6;
@@ -111,7 +111,7 @@
       }
 
       .cd-overview-p {
-        font-family: "Inter", sans-serif;
+        font-family: 'Inter', sans-serif;
         font-size: 1rem;
         color: #475569;
         line-height: 1.7;
@@ -179,16 +179,15 @@
 
         <main class="cd-main-content" id="cd-main">
           <h1 class="cd-page-title">Issues</h1>
+          <p class="cd-overview-p">
+            The Issues module is a comprehensive tracking system designed to
+            help you identify, report, and resolve bugs, tasks, and feature
+            enhancements throughout the project lifecycle.
+          </p>
           <!-- ===== Explanation Video ===== -->
           <div class="yt-video" data-video-id="KI1HGXgxZ58"></div>
 
           <div class="doc-section">
-            <p class="cd-overview-p">
-              The Issues module is a comprehensive tracking system designed to
-              help you identify, report, and resolve bugs, tasks, and feature
-              enhancements throughout the project lifecycle.
-            </p>
-
             <h3 class="cd-sub-heading">Issues Dashboard Overview</h3>
             <p>
               The main interface allows you to toggle between three distinct
@@ -207,6 +206,13 @@
                 <span
                   >A Kanban-style layout for visual workflow management (e.g.,
                   New → In Progress → Resolved).
+                </span>
+              </li>
+              <li>
+                <strong>Summary View:</strong>
+                <span
+                  >A high-level data dashboard showing the distribution of
+                  issues by priority levels and category.
                 </span>
               </li>
             </ul>
@@ -376,7 +382,7 @@
     <script src="assets/js/navigation.js"></script>
     <script src="assets/js/consumer_docs_home.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
+      document.addEventListener('DOMContentLoaded', () => {
         if (window.I18n) {
           window.I18n.init();
         }
