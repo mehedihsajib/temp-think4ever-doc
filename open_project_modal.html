@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Project Modal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      /* Modal Overlay */
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Modal Container */
+      .modal {
+        background: white;
+        border-radius: 16px;
+        padding: 48px 40px;
+        max-width: 1000px;
+        width: 100%;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        position: relative;
+      }
+
+      /* Close Button */
+      .modal-close {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        width: 32px;
+        height: 32px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: #999;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: color 0.2s ease;
+      }
+
+      .modal-close:hover {
+        color: #333;
+      }
+
+      /* Modal Header */
+      .modal-header {
+        margin-bottom: 24px;
+      }
+
+      .modal-title {
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: #6366f1;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+      }
+
+      .modal-subtitle {
+        font-size: 36px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 12px;
+      }
+
+      .modal-description {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 32px;
+        line-height: 1.5;
+      }
+
+      /* Cards Container */
+      .cards-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin-bottom: 32px;
+      }
+
+      /* Card */
+      .card {
+        border: 2px solid #f0f0f0;
+        border-radius: 12px;
+        padding: 32px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        position: relative;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        background: #fafafa;
+      }
+
+      .card:hover {
+        border-color: #e0e0e0;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+      }
+
+      /* Badge */
+      .card-badge {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 12px;
+        font-weight: 600;
+        color: #999;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      /* Card Icon */
+      .card-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+
+      .card-icon.design {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+      }
+
+      .card-icon.developer {
+        background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+        color: white;
+      }
+
+      /* Card Title */
+      .card-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-bottom: 12px;
+      }
+
+      /* Card Text */
+      .card-text {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        flex-grow: 1;
+      }
+
+      /* Card Link */
+      .card-link {
+        font-size: 16px;
+        font-weight: 500;
+        color: #6366f1;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: gap 0.2s ease;
+      }
+
+      .card:hover .card-link {
+        gap: 12px;
+      }
+
+      .card-link::after {
+        content: "→";
+        transition: transform 0.2s ease;
+      }
+
+      .card:hover .card-link::after {
+        transform: translateX(4px);
+      }
+
+      /* Modal Footer */
+      .modal-footer {
+        font-size: 14px;
+        color: #999;
+        text-align: center;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .modal {
+          padding: 32px 24px;
+        }
+
+        .cards-container {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+
+        .modal-subtitle {
+          font-size: 28px;
+        }
+
+        .modal-description {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="modal-overlay">
+      <div class="modal">
+        <!-- Close Button -->
+        <button class="modal-close" onclick="closeModal()" aria-label="Close">
+          ×
+        </button>
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <div class="modal-title">Open Project</div>
+          <h1 class="modal-subtitle">a</h1>
+          <p class="modal-description">
+            Pick how you want to work on this project. Same data, same files —
+            different interface.
+          </p>
+        </div>
+
+        <!-- Cards Container -->
+        <div class="cards-container">
+          <!-- Design / Architect Card -->
+          <a
+            href="#design-architect"
+            class="card"
+            onclick="handleCardClick(event, 'design')"
+          >
+            <span class="card-badge">Last Used</span>
+            <div class="card-icon design">
+              <i class="icon">🎨</i>
+            </div>
+            <h2 class="card-title">Design / Architect</h2>
+            <p class="card-text">
+              Concepts, requirements, page designs, architecture. The high-level
+              view.
+            </p>
+            <span class="card-link">Open</span>
+          </a>
+
+          <!-- Developer Mode Card -->
+          <a
+            href="#developer-mode"
+            class="card"
+            onclick="handleCardClick(event, 'developer')"
+          >
+            <div class="card-icon developer">
+              <i class="icon">{'{'}</i>
+            </div>
+            <h2 class="card-title">Developer Mode</h2>
+            <p class="card-text">
+              Hands-on coding, file editing, run services, AI dev agents.
+            </p>
+            <span class="card-link">Open</span>
+          </a>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          Same project, same database — just a different workspace.
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function closeModal() {
+        alert("Modal closed");
+        // In production, you might do: document.querySelector('.modal-overlay').remove();
+      }
+
+      function handleCardClick(event, mode) {
+        // You can customize the links here
+        const links = {
+          design: "/path/to/design-architect",
+          developer: "/path/to/developer-mode",
+        };
+
+        console.log(`Navigating to ${mode} mode`);
+        // Uncomment to navigate to actual links:
+        // event.preventDefault();
+        // window.location.href = links[mode];
+      }
+    </script>
+  </body>
+</html>

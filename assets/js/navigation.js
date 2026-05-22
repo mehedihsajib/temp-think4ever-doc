@@ -759,6 +759,22 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
+  // --------  Sidebar --------
+  loadComponent({
+    id: "reSidebar",
+    url: toBasePath("components/re-sidebar.html"),
+    onLoaded: (el) => {
+      setSidebarActive(el, currentPage);
+      attachSidebarClickHandler(el);
+      if (window.I18n) window.I18n.applyToDOM(el);
+      setTimeout(() => {
+        initSidebarToggle();
+        generateBreadcrumb();
+        generateGlobalTOC();
+      }, 0);
+    },
+  });
+
   loadComponent({
     id: "merchantSidebar",
     url: toBasePath("components/merchant-sidebar.html"),
