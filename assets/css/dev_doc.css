@@ -361,3 +361,193 @@ main.cd-main-content {
 .para-box {
     margin-top: 20px;
 }
+
+/* Reverse Engineering: Open Project cards */
+.re-open-project-section {
+    margin-top: 36px;
+}
+
+.re-open-project-shell {
+    background: #f8fafc;
+    border-radius: 24px;
+    padding: 30px 30px 24px;
+    box-shadow:
+        0 28px 60px rgba(15, 23, 42, 0.2),
+        0 10px 20px rgba(15, 23, 42, 0.12);
+    border: 1px solid #dbe3ef;
+}
+
+.re-open-project-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.re-open-project-kicker {
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    color: #5b63e8;
+}
+
+.re-open-project-close {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: #64748b;
+    font-size: 40px;
+    line-height: 1;
+    padding: 0;
+    cursor: default;
+}
+
+.re-open-project-title {
+    margin: 4px 0 8px;
+    font-size: 20px;
+    line-height: 1;
+    color: #0f172a !important;
+}
+
+.re-open-project-subtitle {
+    margin: 0 0 24px;
+    font-size: 16px;
+    line-height: 1.35;
+    color: #475569;
+}
+
+.re-open-project-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.re-open-project-card {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    border-radius: 18px;
+    padding: 22px 22px 20px;
+    min-height: 270px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.re-open-project-card:hover {
+    transform: translateY(-2px);
+}
+
+.re-open-project-card-design {
+    background: #f8fafc;
+    border: 2px solid #d6deea;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+.re-open-project-card-dev {
+    background: #f8fafc;
+    border: 2px solid #d6deea;
+}
+
+.re-open-project-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 28px;
+    margin-bottom: 14px;
+}
+
+.re-open-project-icon-design {
+    background: linear-gradient(150deg, #7c6dff, #6656e8);
+}
+
+.re-open-project-icon-dev {
+    background: linear-gradient(150deg, #13b8be, #18a6ad);
+}
+
+.re-open-project-badge {
+    position: absolute;
+    right: 18px;
+    top: 16px;
+    display: inline-flex;
+    align-items: center;
+    height: 32px;
+    padding: 0 15px;
+    border-radius: 999px;
+    background: #e7edf6;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #64748b;
+}
+
+.re-open-project-card h4 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    line-height: 1.2;
+    color: #0f172a;
+}
+
+.re-open-project-card p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.45;
+    color: #64748b;
+}
+
+.re-open-project-link {
+    margin-top: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.re-open-project-link-design {
+    color: #5b63e8;
+}
+
+.re-open-project-link-dev {
+    color: #10b981;
+}
+
+.re-open-project-footnote {
+    margin: 16px 0 0;
+    padding-top: 10px;
+    border-top: 1px solid #e2e8f0;
+    text-align: center;
+    font-size: 14px;
+    color: #7c8da4;
+}
+
+@media (max-width: 1280px) {
+    .re-open-project-close {
+        font-size: 30px;
+    }
+
+    .re-open-project-badge {
+        font-size: 14px;
+        height: 30px;
+    }
+
+    .re-open-project-footnote {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .re-open-project-shell {
+        padding: 26px 22px 20px;
+    }
+
+    .re-open-project-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .re-open-project-card {
+        min-height: auto;
+    }
+}

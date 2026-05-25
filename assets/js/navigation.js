@@ -166,12 +166,20 @@ function initThemeToggle() {
 // Get Current Page
 // ===============================
 function getCurrentPage() {
+  const path = window.location.pathname.split("/").pop() || "";
+  const fromPath = path.replace(".html", "").trim();
+
+  if (fromPath) {
+    try {
+      localStorage.setItem("currentPage", fromPath);
+    } catch (error) {
+      // Ignore storage failures.
+    }
+    return fromPath;
+  }
+
   const stored = localStorage.getItem("currentPage");
-
-  if (stored) return stored;
-
-  const path = window.location.pathname.split("/").pop();
-  return path.replace(".html", "") || "index";
+  return stored || "index";
 }
 
 // ===============================
@@ -242,16 +250,92 @@ function setHeaderActive(container, activePage) {
 // ===============================
 function setSidebarActive(container, activePage) {
   const links = container.querySelectorAll(".cgs-nav-link");
+  const pathname = window.location.pathname || "";
+  const currentFile = pathname.split("/").pop() || "";
+  let hasActiveMatch = false;
 
   links.forEach((link) => {
     link.classList.remove("active");
 
-    const page = link.getAttribute("onclick")?.match(/'(.*?)'/)?.[1];
+    const onclick = link.getAttribute("onclick") || "";
+    const page =
+      onclick.match(/load_(?:dev_|portal_)?page\('([^']+)'\)/)?.[1] ||
+      onclick.match(/'([^']+)'/)?.[1];
+    const href = link.getAttribute("href") || "";
+    const dataTarget = link.getAttribute("data-target") || "";
+    const dataPath = link.getAttribute("data-path") || "";
 
-    if (page === activePage) {
+    const hrefFile = href.split("/").pop()?.split("#")[0]?.split("?")[0] || "";
+    const hrefPage = hrefFile.endsWith(".html")
+      ? hrefFile.replace(".html", "")
+      : "";
+
+    const isOnclickMatch = page && page === activePage;
+    const isHrefMatch = hrefPage && hrefPage === activePage;
+    const isDataTargetMatch =
+      dataTarget &&
+      (currentFile.endsWith(dataTarget) || pathname.endsWith("/" + dataTarget));
+    const isDataPathMatch = dataPath && pathname.endsWith(dataPath);
+
+    if (isOnclickMatch || isHrefMatch || isDataTargetMatch || isDataPathMatch) {
       link.classList.add("active");
+      hasActiveMatch = true;
     }
   });
+
+  // Fallback: if no exact activePage match, resolve from current URL file.
+  if (!hasActiveMatch && currentFile) {
+    const currentPage = currentFile.replace(".html", "");
+    links.forEach((link) => {
+      const onclick = link.getAttribute("onclick") || "";
+      const page =
+        onclick.match(/load_(?:dev_|portal_)?page\('([^']+)'\)/)?.[1] ||
+        onclick.match(/'([^']+)'/)?.[1];
+      const href = link.getAttribute("href") || "";
+      const hrefFile =
+        href.split("/").pop()?.split("#")[0]?.split("?")[0] || "";
+      const hrefPage = hrefFile.endsWith(".html")
+        ? hrefFile.replace(".html", "")
+        : "";
+
+      if (page === currentPage || hrefPage === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  }
+}
+
+function getActiveSidebarLink() {
+  const activeLink =
+    document.querySelector(".cgs-nav-link.active") ||
+    document.querySelector(".admin-nav-link.active");
+
+  if (activeLink) return activeLink;
+
+  const pathname = window.location.pathname || "";
+  const currentFile = pathname.split("/").pop() || "";
+  if (!currentFile) return null;
+
+  const candidates = document.querySelectorAll(".cgs-nav-link, .admin-nav-link");
+  for (const link of candidates) {
+    const onclick = link.getAttribute("onclick") || "";
+    const page =
+      onclick.match(/load_(?:dev_|portal_)?page\('([^']+)'\)/)?.[1] ||
+      onclick.match(/'([^']+)'/)?.[1];
+    const href = link.getAttribute("href") || "";
+    const hrefFile = href.split("/").pop()?.split("#")[0]?.split("?")[0] || "";
+    const hrefPage = hrefFile.endsWith(".html")
+      ? hrefFile.replace(".html", "")
+      : "";
+    const currentPage = currentFile.replace(".html", "");
+
+    if (page === currentPage || hrefPage === currentPage) {
+      link.classList.add("active");
+      return link;
+    }
+  }
+
+  return null;
 }
 
 // ===============================
@@ -803,9 +887,7 @@ function generateBreadcrumb() {
   )
     return;
 
-  const activeLink =
-    document.querySelector(".cgs-nav-link.active") ||
-    document.querySelector(".admin-nav-link.active");
+  const activeLink = getActiveSidebarLink();
   if (!activeLink) return;
 
   const mainContent =
