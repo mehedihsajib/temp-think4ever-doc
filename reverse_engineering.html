@@ -90,7 +90,7 @@
               The first screen allows users to define the basic project
               information.
             </p>
-            <div class="image-wrapper">
+            <div class="image-wrapper pb-0">
               <img
                 src="assets/images/re/00-create-modal.png"
                 alt="Create Project"
@@ -98,7 +98,7 @@
               />
             </div>
 
-            <h3 class="h3" style="margin-top: 20px">Components</h3>
+            <h4 class="h4" style="margin-top: 20px">Components</h4>
             <div class="para-box">
               <p><strong>Project Name Field</strong></p>
               <p>Enter the name of the project to be created.</p>
@@ -143,52 +143,249 @@
               </p>
             </div>
 
-            <h3 class="h3" style="margin-top: 20px">
-              Project Source Selection
-            </h3>
+            <h3 class="h3" style="margin-top: 20px">Create Project Options</h3>
             <p>
               After creating the project, the system prompts the user to choose
               how the project source code will be initialized.
             </p>
-            <p>Two options are available:</p>
-            <h4 class="h4" style="margin-top: 20px">
-              First Option - Start from Scratch
-            </h4>
             <p>
-              Creates a completely new project environment with an empty
-              workspace. <br />
-              Recommended For
+              Two options are available: (1) Start from Scratch and (2) Import
+              Existing Project
             </p>
-            <ul class="cd-overview-ul">
-              <li>New applications</li>
-              <li>Prototype development</li>
-              <li>Greenfield projects</li>
-              <li>AI-generated solutions </li>
-            </ul>
-
+            <h3 class="h3" style="margin-top: 20px">
+              First Option - Start from Scratch
+            </h3>
+            <p>
+              Creates a new project environment using the selected setup
+              options.
+            </p>
             <div class="para-box">
-              <p><strong>Functions</strong></p>
+              <p><strong>Procedure </strong></p>
+              <ol class="cd-overview-ul">
+                <li>Click Start from Scratch</li>
+                <li>The system prepares a new project structure</li>
+              </ol>
+            </div>
+            <div class="para-box">
+              <p><strong>Recommended For</strong></p>
               <ul class="cd-overview-ul">
-                <li>Generates a clean project workspace</li>
-                <li>Allows AI-assisted architecture and code generation</li>
-                <li>Starts development from an empty canvas</li>
+                <li>New projects</li>
+                <li>Fresh project setup</li>
+                <li>Greenfield projects</li>
+                <li>Standard project configuration</li>
               </ul>
             </div>
-
-            <div class="para-box">
-              <p><strong>Action</strong></p>
-              <p>Click Continue to initialize a blank project.</p>
-            </div>
-
-            <div class="image-wrapper">
+            <div class="image-wrapper pt-0 pb-0">
               <img
-                src="assets/images/re/01-create-project.png"
+                src="assets/images/re/01-project-options.png"
                 alt="Create Project"
                 class="demo-img"
               />
             </div>
 
-            <h4 class="h4">Second Option - Import an Existing Project</h4>
+            <h3 class="h3" style="margin-top: 20px">Technology Stack</h3>
+            <p>
+              This section allows users to define the technologies and framework
+              setup for the project.
+            </p>
+
+            <div class="para-box">
+              <p><strong>Default Stack Applied </strong></p>
+              <p>
+                Automatically applies the platform’s recommended technology
+                setup.
+              </p>
+            </div>
+
+            <div class="para-box">
+              <p><strong>Features </strong></p>
+              <ul class="cd-overview-ul">
+                <li>Pre-configured environment</li>
+                <li>Optimized project setup</li>
+                <li>Automated testing support</li>
+              </ul>
+            </div>
+            <div class="para-box">
+              <p><strong>Procedure</strong></p>
+              <ol class="cd-overview-ul">
+                <li>Keep Default Stack Applied selected</li>
+                <li>Optimized project setup</li>
+                <li>
+                  The system automatically configures the recommended
+                  technologies
+                </li>
+              </ol>
+            </div>
+            <div class="image-wrapper pb-0">
+              <img
+                src="assets/images/re/01-project-option-2.png"
+                alt="Create Project"
+                class="demo-img"
+              />
+            </div>
+
+            <div class="para-box">
+              <p><strong>Pick Custom Stack </strong></p>
+              <p>
+                Allows users to manually choose preferred technologies and
+                frameworks.
+              </p>
+            </div>
+            <div class="para-box">
+              <p><strong>Procedure </strong></p>
+              <ol class="cd-overview-ul">
+                <li>Click Pick Custom Stack</li>
+                <li>Select the desired technologies</li>
+                <li>Save the selected configuration </li>
+              </ol>
+            </div>
+            <div class="para-box">
+              <p><strong>Recommended For</strong></p>
+              <ul class="cd-overview-ul">
+                <li>Custom project requirements</li>
+                <li>Advanced configurations</li>
+                <li>Specific framework preferences User</li>
+              </ul>
+            </div>
+
+            <div class="image-wrapper pt-0">
+              <img
+                src="assets/images/re/02-pick-custom-stack.png"
+                alt="Custom Stack"
+                class="demo-img"
+              />
+            </div>
+            <p>
+              A dialog box is launched with Technology stack options to be
+              applied on the project to be created. This is divided into 3
+              sections: (1) Backend, (2) Database and (3) UI/Frontend
+            </p>
+
+            <div class="image-wrapper pb-0">
+              <img
+                src="assets/images/re/02-stack-dialog.png"
+                alt="Custom Stack"
+                class="demo-img"
+              />
+              <h4 class="h4" style="margin-top: 20px">Server/Backend</h4>
+              <img
+                src="assets/images/re/02-stack-dialog-2.png"
+                alt="Custom Stack"
+                class="demo-img"
+              />
+            </div>
+
+            <div class="para-box">
+              <p>
+                Select the primary language and framework that will power your
+                application logic. The system supports a wide array of
+                environments, including:
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong>JavaScript/TypeScript:</strong
+                  ><span
+                    >Node.js (Express, NestJS, Fastify, Koa, Hapi,
+                    AdonisJS).</span
+                  >
+                </li>
+                <li>
+                  <strong>Python:</strong
+                  ><span
+                    >Django, Flask, FastAPI, Tornado, Pyramid, Bottle,
+                    Sanic.</span
+                  >
+                </li>
+                <li>
+                  <strong>PHP</strong
+                  ><span
+                    >Laravel, Symfony, Slim, CodeIgniter, Yii, CakePHP,
+                    Lumen.</span
+                  >
+                </li>
+                <li>
+                  <strong>C#:</strong
+                  ><span
+                    >ASP.NET Core, ASP.NET MVC, Web API, Blazor, Minimal
+                    API.</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Database</h4>
+              <p>
+                Identify the data persistence layer for your project. This
+                selection informs how Data Objects and Database Schemas are
+                visualized and scripted (e.g., SQL-based relational models vs.
+                NoSQL document structures).
+              </p>
+
+              <div class="image-wrapper pb-0">
+                <img
+                  src="assets/images/re/02-stack-dialog-3.png"
+                  alt="Custom Stack"
+                  class="demo-img"
+                />
+              </div>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">UI / Frontend Configuration</h4>
+              <p>
+                The UI/Frontend section is dedicated to defining the "Client
+                Side" of your application. This configuration ensures that the
+                AI-generated user interfaces, component libraries, and frontend
+                logic are consistent with modern web or mobile standards.
+              </p>
+
+              <div class="image-wrapper pb-0">
+                <img
+                  src="assets/images/re/02-stack-dialog-4.png"
+                  alt="Custom Stack"
+                  class="demo-img"
+                />
+              </div>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Implementation Best Practices</h4>
+              <p>
+                To ensure the highest accuracy in your project outputs, follow
+                these guidelines:
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong>Precision Matters:</strong>
+                  <span
+                    >Selecting a specific framework (like Node.js - NestJS)
+                    rather than a generic runtime (like Node.js) allows the
+                    system to generate more precise boilerplate code and folder
+                    structures.
+                  </span>
+                </li>
+                <li>
+                  <strong>Save Changes:</strong>
+                  <span
+                    >Always click the Save Changes button in the top-right
+                    corner before navigating to other sections like API Keys or
+                    Business Flows to avoid losing your configuration.
+                  </span>
+                </li>
+
+                <li>
+                  <strong>Iterative Updates: </strong>
+                  <span
+                    >You can return to this section at any time to update your
+                    stack if your project requirements pivot during the ideation
+                    phase.
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <h3 class="h3">Second Option - Import an Existing Project</h3>
             <p>
               Imports an existing application or codebase into the platform.
             </p>
@@ -218,7 +415,7 @@
                 Click Choose Source to continue to the import options screen.
               </p>
             </div>
-            <div class="image-wrapper">
+            <div class="image-wrapper pb-0">
               <img
                 src="assets/images/re/02-create-project-2.png"
                 alt="Create Project"
@@ -226,103 +423,303 @@
               />
             </div>
 
-            <h3 class="h3">Import from Source Code</h3>
-            <p>
-              The Import Source page allows users to connect or upload existing
-              source code into the Think4ever platform. This feature helps users
-              continue development using previously created applications,
-              repositories, or archived project files.
-            </p>
-            <div class="image-wrapper">
-              <img
-                src="assets/images/re/03-import-source-code.png"
-                alt="Create Project"
-                class="demo-img"
-              />
-            </div>
-            <p>Users can import projects from 3 options:</p>
-            <ul class="cd-overview-ul">
-              <li>Version control repositories</li>
-              <li>Public GitHub repositories</li>
-              <li>ZIP archive files</li>
-            </ul>
-            <p>
-              This page is typically accessed when creating a new project or
-              adding source code to an existing workspace.
-            </p>
-            <p>The Import Source page enables users to:</p>
-            <ul class="cd-overview-ul">
-              <li>Integrate existing applications into the platform</li>
-              <li>Continue development from external repositories</li>
-              <li>Upload archived project files</li>
-            </ul>
+            <!-- Missing screenshot here.... -->
 
-            <h4 class="h4">Import Source Options</h4>
-            <p>The page provides three available import methods.</p>
-            <p>Connect My Version Control</p>
-            <div class="image-wrapper">
-              <img
-                src="assets/images/re/04-connect-version.png"
-                alt="Create Project"
-                class="demo-img"
-              />
+            <div class="para-box">
+              <h4 class="h4">Where is your Source Code</h4>
+              <div class="image-wrapper pt-0">
+                <img
+                  src="assets/images/re/03-import-source-1.png"
+                  alt="Create Project"
+                  class="demo-img"
+                />
+              </div>
             </div>
-            <p>
-              This option allows users to connect a private or managed version
-              control repository directly to the platform.
-            </p>
-            <p>Supported providers may include:</p>
-            <ul class="cd-overview-ul">
-              <li>GitHub</li>
-              <li>GitLab</li>
-              <li>Bitbucket</li>
-              <li>Other Git-based providers</li>
-            </ul>
+
+            <div class="para-box">
+              <p>
+                <strong>Customer can import projects from 3 options:</strong>
+              </p>
+              <ul class="cd-overview-ul">
+                <li>Public GitHub URL</li>
+                <li>ZIP File</li>
+                <li>Git Provider (advanced)</li>
+              </ul>
+              <p>
+                This page is typically accessed when creating a new project or
+                adding source code to an existing workspace.
+              </p>
+            </div>
+            <div class="para-box">
+              <p><strong>These options allow customers to: </strong></p>
+              <ul class="cd-overview-ul">
+                <li>Integrate existing applications into the platform</li>
+                <li>Continue development from external repositories</li>
+                <li>Upload archived project files</li>
+                <li>Synchronize source code with version control systems</li>
+              </ul>
+            </div>
+
+            <h3 class="h3">Option 1 - Public GitHub URL</h3>
+            <div class="para-box">
+              <p>
+                <strong>Importing Source Code via Public GitHub URL </strong>
+              </p>
+              <p>
+                When you choose to seed an empty workspace using an existing
+                project repository, the platform provides a dedicated wizard to
+                pull code seamlessly from open-source version control.
+              </p>
+              <br />
+              <p>
+                This option imports source code from a publicly accessible
+                GitHub repository.
+              </p>
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/re/03-import-source-2.png"
+                  alt="Create Project"
+                  class="demo-img"
+                />
+              </div>
+            </div>
 
             <div class="para-box">
               <p><strong>Functions</strong></p>
               <ul class="cd-overview-ul">
-                <li>Pull source code directly from repositories</li>
-                <li>Push code updates back to the repository</li>
-                <li>Synchronize project changes</li>
-                <li>Enable continuous development workflows</li>
+                <li>Download project snapshots</li>
+                <li>Clone public repositories</li>
+                <li>Import application source files into the workspace</li>
               </ul>
             </div>
 
             <div class="para-box">
-              <p>Action Button</p>
-              <p>
-                Configure – Opens repository connection and authentication
-                setup.
-              </p>
+              <p><strong>User Requirement </strong></p>
+              <p>The user must provide a valid public GitHub repository URL.</p>
             </div>
 
-            <h4 class="h4" style="margin-top: 20px">
-              Option 1 – Connect Version Control
-            </h4>
-            <ol class="cd-overview-ul">
-              <li>Select Connect my version control.</li>
-              <li>Authenticate with the repository provider.</li>
-              <li>Select the repository to import.</li>
-              <li>
-                Confirm synchronization settings by clicking on Save
-                Integrations.
-              </li>
-            </ol>
+            <div class="para-box">
+              <p><strong>Parameter Configurations & Rules </strong></p>
+              <ul class="cd-overview-ul">
+                <li>
+                  Repository URL: Paste the complete, publicly accessible HTTP
+                  link to your target repository (e.g.,
+                  https://github.com/expressjs/express). Private repositories
+                  requiring SSH key encryption or explicit developer tokens are
+                  not supported by this basic link wizard.
+                </li>
+                <li>
+                  Branch Specification: Define the explicit branch string you
+                  want to target (e.g., main or development). If you leave this
+                  field empty, or if the specified branch cannot be found in the
+                  repository index, the system automatically falls back to
+                  pulling from the default master branch.
+                </li>
+              </ul>
+            </div>
+            <div class="para-box">
+              <p><strong>Executing the Repository Sync </strong></p>
+              <ol class="cd-overview-ul">
+                <li>
+                  Enter your specific repository location and target branch into
+                  the modal text blocks.
+                </li>
+                <li>
+                  Click the white ← Back button to return to the source
+                  selection menu if you need to choose an alternative upload
+                  path (like a local ZIP archive).
+                </li>
+                <li>
+                  Click the solid purple 📥 Import repository action button to
+                  start the automated transfer.
+                </li>
+                <li>
+                  The platform will automatically connect to GitHub, download a
+                  snapshot of the codebase, extract the file structure, and
+                  initialize the project components directly within your working
+                  developer canvas.
+                </li>
+              </ol>
+            </div>
+
+            <h3 class="h3">Option 2 - ZIP File</h3>
+            <div class="para-box">
+              <p><strong>Importing Source Code via ZIP Archive </strong></p>
+              <br />
+              <p>
+                When setting up a project workspace from an existing codebase,
+                the platform provides a local file upload wizard as an
+                alternative to external version control tracking.
+              </p>
+              <p>
+                This option allows you to upload a compressed archive directly
+                from your local computer. The system will automatically unpack
+                and map the contained directories into your designated project
+                folder.
+              </p>
+            </div>
             <div class="image-wrapper">
               <img
-                src="assets/images/re/05-connect-git.png"
-                alt="Create Project"
+                src="assets/images/re/07-upload-zip.png"
+                alt="Upload Zip"
                 class="demo-img"
               />
             </div>
 
-            <h4 class="h4">Components</h4>
-            <h4 class="h4" style="margin-top: 20px">Project Folder</h4>
+            <div class="para-box">
+              <p><strong>Features: </strong></p>
+              <ul class="cd-overview-ul">
+                <li>Upload local project archives</li>
+                <li>Extract application files automatically</li>
+                <li>Import existing codebases into the workspace</li>
+              </ul>
+            </div>
+
+            <div class="para-box">
+              <p><strong>Supported Content</strong></p>
+              <p>ZIP files containing:</p>
+              <ul class="cd-overview-ul">
+                <li>Source code</li>
+                <li>Assets</li>
+                <li>Configuration files</li>
+                <li>Project folders</li>
+              </ul>
+            </div>
+
+            <div class="para-box">
+              <p><strong>Core Functions </strong></p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong>Upload Local Project Archives: </strong>
+                  <span
+                    >Browse your local directories to select and transmit
+                    bundled application code structures.</span
+                  >
+                </li>
+                <li>
+                  <strong>Extract Application Files Automatically:</strong>
+                  <span
+                    >The backend system instantly runs an unzipping routine upon
+                    completing the upload, parsing your file trees without
+                    requiring manual terminal extraction commands.
+                  </span>
+                </li>
+                <li>
+                  <strong>Import Existing Codebases into the Workspace:</strong>
+                  <span
+                    >Populates your empty developer environment with your
+                    historical logic blocks, configuration settings, and static
+                    assets in one step.
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="para-box">
+              <p><strong>Step-by-Step Upload Procedure </strong></p>
+              <ol class="cd-overview-ul">
+                <li>
+                  Click the <strong>Choose File</strong> target button within
+                  the configuration modal to trigger your operating system's
+                  native file explorer.
+                </li>
+                <li>
+                  Locate and select the targeted .zip archive containing your
+                  application files.
+                </li>
+                <li>
+                  Verify that the correct archive filename appears next to the
+                  selection button.
+                </li>
+                <li>
+                  If you need to switch to an alternative seed method (such as
+                  pulling from a public GitHub URL), click the white ← Back
+                  button.
+                </li>
+                <li>
+                  Click the solid purple 📤
+                  <strong>Upload & Extract</strong> action button to initiate
+                  the transfer process.
+                </li>
+                <li>
+                  Keep your browser window open while the file is processed;
+                  once complete, your unpacked folder architecture will populate
+                  directly into the left side of your developer canvas.
+                </li>
+              </ol>
+            </div>
+
+            <h3 class="h3">Option 3 – Git Provider (advanced)</h3>
             <p>
-              Displays the target project workspace where the repository will be
-              connected.
+              The Git Provider (Advanced) option allows users to connect the
+              project directly to a remote Version Control System (VCS)
+              repository such as GitHub, GitLab, or Bitbucket using
+              authenticated credentials.
             </p>
+            <br />
+            <p>
+              This option is recommended for projects that are actively
+              maintained in a source control repository and require secure
+              access.
+            </p>
+            <div class="image-wrapper">
+              <img
+                src="assets/images/re/06-git-provider.png"
+                alt="Git Provider"
+                class="demo-img"
+              />
+            </div>
+
+            <div class="para-box">
+              <h3 class="h3">What is a VCS?</h3>
+              <p>VCS stands for Version Control System.</p>
+            </div>
+            <div class="para-box">
+              <p>
+                <strong>A Version Control System is a tool used to: </strong>
+              </p>
+              <ul class="cd-overview-ul">
+                <li>Store and manage source code</li>
+                <li>Track file and code changes over time</li>
+                <li>Support collaboration between multiple developers</li>
+                <li>Maintain version history and backups</li>
+                <li>Restore previous versions when needed</li>
+              </ul>
+            </div>
+
+            <div class="para-box">
+              <p>
+                <strong>Common VCS platforms include: </strong>
+              </p>
+              <ul class="cd-overview-ul">
+                <li>GitHub</li>
+                <li>GitLab</li>
+                <li>Bitbucket</li>
+              </ul>
+            </div>
+            <div class="para-box">
+              <p>
+                <strong>How to Connect Project using VCS: </strong>
+              </p>
+              <ul class="cd-overview-ul">
+                <li>Select Connect my version control.</li>
+                <li>Authenticate with the repository provider.</li>
+                <li>Select the repository to import.</li>
+                <li>
+                  Confirm synchronization settings by clicking on Save
+                  Integrations.
+                </li>
+              </ul>
+            </div>
+
+            <h3 class="h3">Components</h3>
+            <div class="para-box">
+              <p><strong>Project Folder</strong></p>
+              <p>
+                Displays the target project workspace where the repository will
+                be connected.
+              </p>
+            </div>
 
             <div class="para-box">
               <p><strong>Purpose</strong></p>
@@ -452,6 +849,9 @@
                 Checkbox option that automatically synchronizes repository
                 updates.
               </p>
+            </div>
+
+            <div class="para-box">
               <p><strong>Functions </strong></p>
               <ul class="cd-overview-ul">
                 <li>Automatically pull repository changes</li>
@@ -500,7 +900,7 @@
               </ul>
             </div>
 
-            <h3 class="h3">Option 2 - Load from a Public GitHub URL</h3>
+            <!-- <h3 class="h3">Option 2 - Load from a Public GitHub URL</h3>
             <p>Importing Source Code via Public GitHub URL</p>
             <br />
             <p>
@@ -519,191 +919,7 @@
                 alt="Create Project"
                 class="demo-img"
               />
-            </div>
-            <div class="para-box">
-              <p><strong>Functions</strong></p>
-              <ul class="cd-overview-ul">
-                <li>Download project snapshots</li>
-                <li>Clone public repositories</li>
-                <li>Import application source files into the workspace</li>
-              </ul>
-            </div>
-
-            <div class="para-box">
-              <p><strong>User Requirement </strong></p>
-              <p>The user must provide a valid public GitHub repository URL.</p>
-            </div>
-            <div class="para-box">
-              <p><strong>Action Button </strong></p>
-              <p>
-                Download – Retrieves the repository and imports it into the
-                project workspace.
-              </p>
-
-              <div class="para-box">
-                <p><strong>Parameter Configurations & Rules </strong></p>
-                <ul class="cd-overview-ul">
-                  <li>
-                    Repository URL: Paste the complete, publicly accessible HTTP
-                    link to your target repository (e.g.,
-                    https://github.com/expressjs/express). Private repositories
-                    requiring SSH key encryption or explicit developer tokens
-                    are not supported by this basic link wizard.
-                  </li>
-                  <li>
-                    Branch Specification: Define the explicit branch string you
-                    want to target (e.g., main or development). If you leave
-                    this field empty, or if the specified branch cannot be found
-                    in the repository index, the system automatically falls back
-                    to pulling from the default master branch.
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="para-box">
-              <p><strong>Executing the Repository Sync </strong></p>
-              <ol class="cd-overview-ul">
-                <li>
-                  Enter your specific repository location and target branch into
-                  the modal text blocks.
-                </li>
-                <li>
-                  Click the white ← Back button to return to the source
-                  selection menu if you need to choose an alternative upload
-                  path (like a local ZIP archive).
-                </li>
-                <li>
-                  Click the solid purple 📥 Import repository action button to
-                  start the automated transfer.
-                </li>
-                <li>
-                  The platform will automatically connect to GitHub, download a
-                  snapshot of the codebase, extract the file structure, and
-                  initialize the project components directly within your working
-                  developer canvas.
-                </li>
-              </ol>
-            </div>
-
-            <h3 class="h3">Option 3 - Load from a ZIP File</h3>
-            <div class="para-box">
-              <p><strong>Importing Source Code via ZIP Archive </strong></p>
-              <br />
-              <p>
-                When setting up a project workspace from an existing codebase,
-                the platform provides a local file upload wizard as an
-                alternative to external version control tracking.
-              </p>
-              <p>
-                This option allows you to upload a compressed archive directly
-                from your local computer. The system will automatically unpack
-                and map the contained directories into your designated project
-                folder.
-              </p>
-            </div>
-            <div class="image-wrapper">
-              <img
-                src="assets/images/re/07-upload-zip.png"
-                alt="Create Project"
-                class="demo-img"
-              />
-            </div>
-
-            <div class="para-box">
-              <p><strong>Features: </strong></p>
-              <ul class="cd-overview-ul">
-                <li>Upload local project archives</li>
-                <li>Extract application files automatically</li>
-                <li>Import existing codebases into the workspace</li>
-              </ul>
-            </div>
-
-            <div class="para-box">
-              <p><strong>Supported Content</strong></p>
-              <p>ZIP files containing:</p>
-              <ul class="cd-overview-ul">
-                <li>Source code</li>
-                <li>Assets</li>
-                <li>Configuration files</li>
-                <li>Project folders</li>
-              </ul>
-            </div>
-
-            <div class="para-box">
-              <p><strong>Action Button </strong></p>
-              <p>
-                Upload – Opens the file upload dialog for selecting a ZIP
-                archive
-              </p>
-            </div>
-
-            <div class="para-box">
-              <p><strong>Core Functions </strong></p>
-              <ul class="cd-overview-ul">
-                <li>
-                  <strong>Upload Local Project Archives: </strong>
-                  <span
-                    >Browse your local directories to select and transmit
-                    bundled application code structures.</span
-                  >
-                </li>
-                <li>
-                  <strong>Extract Application Files Automatically:</strong>
-                  <span
-                    >The backend system instantly runs an unzipping routine upon
-                    completing the upload, parsing your file trees without
-                    requiring manual terminal extraction commands.
-                  </span>
-                </li>
-                <li>
-                  <strong>Import Existing Codebases into the Workspace:</strong>
-                  <span
-                    >Populates your empty developer environment with your
-                    historical logic blocks, configuration settings, and static
-                    assets in one step.
-                  </span>
-                </li>
-              </ul>
-            </div>
-
-            <div class="para-box">
-              <p><strong>Step-by-Step Upload Procedure </strong></p>
-              <ol class="cd-overview-ul">
-                <li>
-                  Click the Choose File target button within the configuration
-                  modal to trigger your operating system's native file explorer.
-                </li>
-                <li>
-                  Locate and select the targeted .zip archive containing your
-                  application files.
-                </li>
-                <li>
-                  Verify that the correct archive filename appears next to the
-                  selection button.
-                </li>
-                <li>
-                  If you need to switch to an alternative seed method (such as
-                  pulling from a public GitHub URL), click the white ← Back
-                  button.
-                </li>
-                <li>
-                  Click the solid purple 📤 Upload & extract action button to
-                  initiate the transfer process.
-                </li>
-                <li>
-                  Keep your browser window open while the file is processed;
-                  once complete, your unpacked folder architecture will populate
-                  directly into the left side of your developer canvas.
-                </li>
-              </ol>
-            </div>
-            <div class="image-wrapper">
-              <img
-                src="assets/images/re/08-upload-archive.png"
-                alt="Create Project"
-                class="demo-img"
-              />
-            </div>
+            </div> -->
           </section>
 
           <section

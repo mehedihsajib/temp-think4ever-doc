@@ -306,6 +306,14 @@ body {
    padding-bottom: 30px;
 }
 
+.image-wrapper.pb-0 {
+    padding-bottom: 0 !important;
+}
+
+.image-wrapper.pt-0 {
+    padding-top: 0 !important;
+}
+
 .image-wrapper .demo-img {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
