@@ -18,7 +18,7 @@ body {
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     /* Matches sidebar right-border */
-    z-index: 300;
+    z-index: 300 !important;
     display: flex;
     align-items: center;
     transition: all 0.3s ease;
