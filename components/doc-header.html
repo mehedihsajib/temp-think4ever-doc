@@ -159,40 +159,25 @@
         </svg>
       </a>
 
-      <div class="t4e-doc-submenu">
+      <div class="t4e-doc-submenu" style="margin-top: -30px">
         <div class="t4e-doc-submenu-inner">
-          <a
-            class="t4e-doc-submenu-link"
-            href="https://think4ever.com/docs/onboarding.html"
-          >
+          <a class="t4e-doc-submenu-link" href="/onboarding.html">
             <span class="t4e-doc-menu-line"></span>
             <span>Customer Onboarding</span>
           </a>
-          <a
-            class="t4e-doc-submenu-link"
-            href="https://think4ever.com/docs/manual_introduction.html"
-          >
+          <a class="t4e-doc-submenu-link" href="/manual_introduction.html">
             <span class="t4e-doc-menu-line"></span>
             <span>Designer</span>
           </a>
-          <a
-            class="t4e-doc-submenu-link"
-            href="https://think4ever.com/docs/dev/start_new_project.html"
-          >
+          <a class="t4e-doc-submenu-link" href="/dev/start_new_project.html">
             <span class="t4e-doc-menu-line"></span>
             <span>Developer</span>
           </a>
-          <a
-            class="t4e-doc-submenu-link"
-            href="https://think4ever.com/docs/portal/dashboard.html"
-          >
+          <a class="t4e-doc-submenu-link" href="/portal/dashboard.html">
             <span class="t4e-doc-menu-line"></span>
             <span>Portal</span>
           </a>
-          <a
-            class="t4e-doc-submenu-link"
-            href="https://think4ever.com/docs/reverse_engineering.html"
-          >
+          <a class="t4e-doc-submenu-link" href="/reverse_engineering.html">
             <span class="t4e-doc-menu-line"></span>
             <span>Reverse Engineering</span>
           </a>
@@ -270,7 +255,7 @@
     .t4e-doc-header-inner,
     .t4e-doc-menu {
       width: 100%;
-      max-width: 1280px;
+      max-width: 1430px;
       margin: 0 auto;
       padding: 0 24px;
     }
@@ -310,15 +295,14 @@
       justify-content: center;
       min-height: 40px;
       padding: 0 22px;
-      border-radius: 8px;
-      background: #e25d24;
+      border-radius: 100px;
+      background: linear-gradient(to right, #07a7e1 0%, #093cad 100%);
       color: #ffffff;
       font-size: 14px;
       font-weight: 700;
       line-height: 1;
       text-decoration: none;
       white-space: nowrap;
-      box-shadow: 0 16px 30px rgba(102, 124, 246, 0.26);
       transition:
         transform 200ms ease,
         box-shadow 200ms ease,
@@ -328,7 +312,6 @@
     .t4e-doc-cta:hover {
       filter: brightness(0.97);
       transform: translateY(-1px);
-      box-shadow: 0 20px 36px rgba(102, 124, 246, 0.32);
     }
 
     .t4e-doc-menu-toggle {
@@ -367,7 +350,7 @@
     }
 
     .t4e-doc-header-shell.is-open .t4e-doc-menu-toggle span:nth-child(1) {
-      transform: rotate(45deg) translateY(7px);
+      transform: translateY(7px) rotate(45deg);
     }
 
     .t4e-doc-header-shell.is-open .t4e-doc-menu-toggle span:nth-child(2) {
@@ -375,7 +358,7 @@
     }
 
     .t4e-doc-header-shell.is-open .t4e-doc-menu-toggle span:nth-child(3) {
-      transform: rotate(-45deg) translateY(-7px);
+      transform: translateY(-7px) rotate(-45deg);
     }
 
     .t4e-doc-menu {
@@ -547,11 +530,11 @@
     }
 
     @media (min-width: 768px) {
-      .t4e-doc-header-inner,
+      /* .t4e-doc-header-inner,
       .t4e-doc-menu {
         padding-left: 48px;
         padding-right: 48px;
-      }
+      } */
 
       .t4e-doc-logo-img {
         width: 150px;

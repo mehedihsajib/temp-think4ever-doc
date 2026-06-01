@@ -16,7 +16,7 @@ body {
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid #e2e8f0 !important;
     /* Matches sidebar right-border */
     z-index: 300 !important;
     display: flex;
@@ -363,7 +363,7 @@ body {
 
 main.cd-main-content {
     padding-bottom: 50px;
-    padding-top: 50px !important;
+    padding-top: 60px !important;
 }
 
 .para-box {
