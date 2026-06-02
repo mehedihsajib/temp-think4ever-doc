@@ -823,7 +823,8 @@ function initYouTubeVideos() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", initYouTubeVideos);
+// ============ Hide video temporarry might need to enable later ===========
+// document.addEventListener("DOMContentLoaded", initYouTubeVideos);
 
 // ===============================
 // GLOBAL IMAGE LIGHTBOX
