@@ -484,6 +484,7 @@ body {
 
 .image-wrapper {
     padding-bottom: 0;
+    position: relative;
 }
 
 /* Modal Styles */

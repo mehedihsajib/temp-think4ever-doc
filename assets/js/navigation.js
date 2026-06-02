@@ -177,8 +177,8 @@ function ensureGlobalBrandAndOrbit() {
     style.textContent = `
       .global-vertical-brand {
         position: absolute;
-        right: 100px;
-        top: 0;
+        right: 50px;
+        top: 50px;
         bottom: 0;
         writing-mode: vertical-rl;
         transform: rotate(180deg);
@@ -187,7 +187,7 @@ function ensureGlobalBrandAndOrbit() {
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: clamp(5rem, 10vw, 8rem);
+        font-size: clamp(5rem, 10vw, 7rem);
         font-weight: 900;
         text-transform: uppercase;
         color: #e2e8f0;

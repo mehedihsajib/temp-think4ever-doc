@@ -25,6 +25,7 @@ ol.cd-overview-ul {
 .image-wrapper {
     padding-top: 20px;
     padding-bottom: 30px;
+    position: relative;
 }
 
  .config-table {
