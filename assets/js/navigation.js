@@ -162,6 +162,198 @@ function initThemeToggle() {
   initSavedTheme();
 }
 
+function ensureGlobalBrandAndOrbit() {
+  if (!document.body) return;
+  if (
+    document.querySelector(".global-vertical-brand") ||
+    document.querySelector(".vertical-brand")
+  )
+    return;
+
+  const styleId = "global-brand-orbit-styles";
+  if (!document.getElementById(styleId)) {
+    const style = document.createElement("style");
+    style.id = styleId;
+    style.textContent = `
+      .global-vertical-brand {
+        position: absolute;
+        right: 100px;
+        top: 0;
+        bottom: 0;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        pointer-events: none;
+        user-select: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(5rem, 10vw, 8rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        color: #e2e8f0;
+        letter-spacing: -0.04em;
+        opacity: 0.55;
+        white-space: nowrap;
+        z-index: 0;
+      }
+
+      .global-orbital-hero {
+        position: fixed;
+        top: -220px;
+        right: 64px;
+        width: 720px;
+        height: 720px;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .global-orbital-circle {
+        position: absolute;
+        inset: 0;
+        border: 1px solid #e0e0e0;
+        border-radius: 50%;
+        animation: hero-rotation 45s linear infinite;
+        will-change: transform;
+      }
+
+      .global-orbital-ball-wrapper {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        z-index: 1;
+      }
+
+      .global-orbital-ball-wrapper.orbit-0 {
+        transform: rotate(0deg);
+      }
+
+      .global-orbital-ball-wrapper.orbit-120 {
+        transform: rotate(120deg);
+      }
+
+      .global-orbital-ball-wrapper.orbit-240 {
+        transform: rotate(240deg);
+      }
+
+      .global-orbital-ball {
+        width: 20px;
+        height: 20px;
+        border-radius: 9999px;
+        background: #2563eb;
+        border: 2px solid #ffffff;
+        box-shadow: 0 20px 30px rgba(15, 23, 42, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-50%);
+      }
+
+      .global-orbital-ball-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        transform-origin: center center;
+      }
+
+      .global-orbital-ball-inner.counter-0 {
+        transform: rotate(0deg);
+      }
+
+      .global-orbital-ball-inner.counter-120 {
+        transform: rotate(-120deg);
+      }
+
+      .global-orbital-ball-inner.counter-240 {
+        transform: rotate(-240deg);
+      }
+
+      .global-orbital-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        font-size: 10px;
+        line-height: 1;
+        animation: hero-rotation 12s linear infinite reverse;
+      }
+
+      @media (min-width: 768px) {
+        .global-orbital-ball {
+          width: 28px;
+          height: 28px;
+        }
+
+        .global-orbital-icon {
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 840px) {
+        .global-orbital-hero {
+          width: 620px;
+          height: 620px;
+          top: -180px;
+          right: 24px;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .global-orbital-hero {
+          width: 440px;
+          height: 440px;
+          top: -140px;
+          right: 12px;
+        }
+      }
+
+      @keyframes hero-rotation {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  const brand = document.createElement("div");
+  brand.className = "vertical-brand global-vertical-brand";
+  brand.textContent = "THINK4EVER";
+
+  const orbit = document.createElement("div");
+  orbit.className = "global-orbital-hero";
+  orbit.innerHTML = `
+    <div class="global-orbital-circle" aria-hidden="true">
+      <div class="global-orbital-ball-wrapper orbit-0">
+        <div class="global-orbital-ball">
+          <div class="global-orbital-ball-inner counter-0">
+            <span class="global-orbital-icon">∞</span>
+          </div>
+        </div>
+      </div>
+      <div class="global-orbital-ball-wrapper orbit-120">
+        <div class="global-orbital-ball">
+          <div class="global-orbital-ball-inner counter-120">
+            <span class="global-orbital-icon">∞</span>
+          </div>
+        </div>
+      </div>
+      <div class="global-orbital-ball-wrapper orbit-240">
+        <div class="global-orbital-ball">
+          <div class="global-orbital-ball-inner counter-240">
+            <span class="global-orbital-icon">∞</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+  document.body.insertBefore(orbit, document.body.firstChild);
+  document.body.insertBefore(brand, document.body.firstChild);
+}
+
 // ===============================
 // Get Current Page
 // ===============================
@@ -316,7 +508,9 @@ function getActiveSidebarLink() {
   const currentFile = pathname.split("/").pop() || "";
   if (!currentFile) return null;
 
-  const candidates = document.querySelectorAll(".cgs-nav-link, .admin-nav-link");
+  const candidates = document.querySelectorAll(
+    ".cgs-nav-link, .admin-nav-link",
+  );
   for (const link of candidates) {
     const onclick = link.getAttribute("onclick") || "";
     const page =
@@ -759,6 +953,7 @@ document.addEventListener("DOMContentLoaded", initGlobalImageLightbox);
 // ===============================
 document.addEventListener("DOMContentLoaded", function () {
   ensureGlobalFavicon();
+  ensureGlobalBrandAndOrbit();
   initThemeToggle();
   const currentPage = getCurrentPage();
 

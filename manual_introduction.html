@@ -129,108 +129,6 @@
         font-size: 0.85rem;
       }
 
-      .modern-search-shortcuts {
-        display: flex;
-        align-items: center;
-        gap: 4px;
-      }
-
-      .modern-search-shortcuts kbd {
-        font-family:
-          ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-        font-size: 0.7rem;
-        font-weight: 500;
-        padding: 2px 5px;
-        background-color: #fff;
-        border: 1px solid #e4e4e7;
-        border-radius: 4px;
-        color: #a1a1aa;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.02);
-      }
-
-      .modern-cta-btn {
-        padding: 8px 16px;
-        background: linear-gradient(180deg, #18181b 0%, #09090b 100%);
-        color: #ffffff;
-        border: 1px solid #000;
-        border-radius: 8px;
-        font-family: "Inter", sans-serif;
-        font-size: 0.875rem;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        box-shadow:
-          0 1px 2px rgba(0, 0, 0, 0.1),
-          inset 0 1px 1px rgba(255, 255, 255, 0.15);
-      }
-
-      .modern-cta-btn:hover {
-        background: linear-gradient(180deg, #27272a 0%, #18181b 100%);
-        box-shadow:
-          0 3px 6px rgba(0, 0, 0, 0.15),
-          inset 0 1px 1px rgba(255, 255, 255, 0.15);
-      }
-
-      /* Responsive Utilities */
-      @media (max-width: 1024px) {
-        .modern-header-logo-plate {
-          width: 240px;
-          min-width: 240px;
-          padding-left: 24px;
-        }
-      }
-
-      /* Modern Layout Overrides */
-      .consumer-docs-layout {
-        max-width: 100% !important;
-        width: 100% !important;
-        margin: 0 !important;
-        /* Header height */
-        display: flex !important;
-        background: #ffffff;
-      }
-
-      .cd-sidebar {
-        box-sizing: content-box !important;
-        width: 240px !important;
-        min-width: 240px !important;
-        background: #f8fafc !important;
-        /* Elegant subtle slate-50 */
-        border-right: 1px solid #e2e8f0 !important;
-        /* Soft premium border */
-
-        /* Hardcode to match user fix */
-        padding-left: 36px !important;
-        padding-right: 24px !important;
-        padding-top: 36px !important;
-      }
-
-      /* Modernizing Sidebar Internal Elements */
-      .cd-sidebar-header {
-        padding: 0 !important;
-        border-bottom: none !important;
-        margin-bottom: 32px !important;
-      }
-
-      .cd-sidebar-header h3 {
-        color: #0f172a !important;
-        /* Slate 900 */
-        font-family: "Inter", sans-serif !important;
-        font-size: 0.9375rem !important;
-        font-weight: 600 !important;
-        letter-spacing: -0.01em !important;
-        text-transform: none !important;
-        display: flex !important;
-        align-items: center !important;
-      }
-
-      .cd-sidebar-header h3 i {
-        color: #3b82f6 !important;
-        /* Bright blue pop for the wallet icon */
-        margin-right: 10px !important;
-        font-size: 1.1rem !important;
-      }
-
       .cd-sidebar-section {
         margin-bottom: 24px !important;
       }
@@ -309,6 +207,71 @@
         padding-left: 48px !important;
         padding-right: 48px !important;
       }
+
+      /* .orbital-hero {
+        position: relative;
+        overflow: visible;
+      }
+
+      .orbital-circle {
+        position: absolute;
+        top: -262px;
+        right: 120px;
+        width: 946px;
+        height: 946px;
+        border: 1px solid #e0e0e0;
+        border-radius: 50%;
+        pointer-events: none;
+        will-change: transform;
+        animation: hero-rotation 45s linear infinite;
+        z-index: 0;
+      }
+
+      .orbital-ball-wrapper {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        justify-content: center;
+        z-index: 10;
+      }
+
+      .orbital-ball-wrapper.orbit-0 {
+        transform: rotate(0deg);
+      }
+
+      .orbital-ball-wrapper.orbit-120 {
+        transform: rotate(120deg);
+      }
+
+      .orbital-ball-wrapper.orbit-240 {
+        transform: rotate(240deg);
+      }
+
+      .orbital-ball {
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
+        min-height: 20px;
+        border-radius: 9999px;
+        background: #2563eb;
+        border: 2px solid #ffffff;
+        box-shadow: 0 20px 30px rgba(15, 23, 42, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-50%);
+      }
+
+      .orbital-ball-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        transform-origin: center center;
+      } */
+
+      /* Orbital hero global styles are injected via assets/js/navigation.js */
     </style>
   </head>
 
