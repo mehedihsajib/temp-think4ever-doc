@@ -4,98 +4,12 @@
       class="t4e-doc-logo"
       href="#home"
       aria-label="Think4ever home"
-      onclick="window.t4eDocHeaderClose && window.t4eDocHeaderClose()"
+      data-close-menu
     >
       <img
         class="t4e-doc-logo-img"
         data-asset-src="assets/images/think4ever-logo.png"
         alt="Logo"
-        onload="
-          (function (img) {
-            var root = img.closest('.t4e-doc-header-shell');
-            if (!root || root.dataset.ready === 'true') return;
-            root.dataset.ready = 'true';
-            var header =
-              root.closest('.modern-header') ||
-              document.getElementById('consumerHeader');
-            var button = root.querySelector('.t4e-doc-menu-toggle');
-            var docs = root.querySelector('[data-submenu-trigger]');
-            var submenu = root.querySelector('.t4e-doc-submenu');
-            var links = root.querySelectorAll(
-              '.t4e-doc-menu-link[data-section]',
-            );
-            var sectionIds = ['home', 'how-it-works', 'resources', 'contact'];
-            function closeMenu() {
-              root.classList.remove('is-open');
-              if (header) header.classList.remove('is-open');
-              button.setAttribute('aria-expanded', 'false');
-              button.setAttribute('aria-label', 'Open menu');
-              root.classList.remove('submenu-open');
-              docs && docs.setAttribute('aria-expanded', 'false');
-            }
-            function openMenu() {
-              root.classList.add('is-open');
-              if (header) header.classList.add('is-open');
-              button.setAttribute('aria-expanded', 'true');
-              button.setAttribute('aria-label', 'Close menu');
-            }
-            window.t4eDocHeaderClose = closeMenu;
-            button.addEventListener('click', function () {
-              root.classList.contains('is-open') ? closeMenu() : openMenu();
-            });
-            docs &&
-              docs.addEventListener('click', function (event) {
-                event.preventDefault();
-                var open = !root.classList.contains('submenu-open');
-                root.classList.toggle('submenu-open', open);
-                docs.setAttribute('aria-expanded', String(open));
-              });
-            submenu &&
-              submenu.querySelectorAll('a').forEach(function (link) {
-                link.addEventListener('click', closeMenu);
-              });
-            root.querySelectorAll('[data-close-menu]').forEach(function (link) {
-              link.addEventListener('click', closeMenu);
-            });
-            window.addEventListener(
-              'scroll',
-              function () {
-                if (header)
-                  header.classList.toggle(
-                    'is-scrolled',
-                    (window.scrollY || window.pageYOffset) > 40,
-                  );
-              },
-              { passive: true },
-            );
-            if (header)
-              header.classList.toggle(
-                'is-scrolled',
-                (window.scrollY || window.pageYOffset) > 40,
-              );
-            function setActive(id) {
-              links.forEach(function (link) {
-                link.classList.toggle('is-active', link.dataset.section === id);
-              });
-            }
-            if ('IntersectionObserver' in window) {
-              var observer = new IntersectionObserver(
-                function (entries) {
-                  entries.forEach(function (entry) {
-                    if (entry.isIntersecting && entry.target.id)
-                      setActive(entry.target.id);
-                  });
-                },
-                { root: null, rootMargin: '-40% 0px -40% 0px', threshold: 0 },
-              );
-              sectionIds.forEach(function (id) {
-                var section = document.getElementById(id);
-                if (section) observer.observe(section);
-              });
-            }
-            // setActive('home');
-          })(this)
-        "
       />
     </a>
 

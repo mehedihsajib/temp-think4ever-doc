@@ -952,6 +952,146 @@ document.addEventListener("DOMContentLoaded", initGlobalImageLightbox);
 // ===============================
 // INIT
 // ===============================
+// ===============================
+// DOC HEADER INITIALIZATION
+// ===============================
+function initDocHeader(headerEl) {
+  if (!headerEl || headerEl.dataset.headerReady === "true") return;
+
+  const root = headerEl.querySelector(".t4e-doc-header-shell") || headerEl;
+  const header =
+    headerEl.id === "consumerHeader"
+      ? headerEl
+      : document.getElementById("consumerHeader");
+  const button = root.querySelector(".t4e-doc-menu-toggle");
+  const docs = root.querySelector("[data-submenu-trigger]");
+  const submenu = root.querySelector(".t4e-doc-submenu");
+  const links = root.querySelectorAll(".t4e-doc-menu-link[data-section]");
+  const sectionIds = ["home", "how-it-works", "resources", "contact"];
+
+  // Menu state management
+  function closeMenu() {
+    root.classList.remove("is-open");
+    if (header) header.classList.remove("is-open");
+    if (button) {
+      button.setAttribute("aria-expanded", "false");
+      button.setAttribute("aria-label", "Open menu");
+    }
+    root.classList.remove("submenu-open");
+    if (docs) docs.setAttribute("aria-expanded", "false");
+  }
+
+  function openMenu() {
+    root.classList.add("is-open");
+    if (header) header.classList.add("is-open");
+    if (button) {
+      button.setAttribute("aria-expanded", "true");
+      button.setAttribute("aria-label", "Close menu");
+    }
+  }
+
+  // Expose globally for logo click handler and external use
+  window.t4eDocHeaderClose = closeMenu;
+
+  // Menu toggle button
+  if (button) {
+    if (button.dataset.boundDocHeader !== "true") {
+      button.dataset.boundDocHeader = "true";
+      button.addEventListener("click", function () {
+        root.classList.contains("is-open") ? closeMenu() : openMenu();
+      });
+    }
+  }
+
+  // Submenu trigger
+  if (docs) {
+    if (docs.dataset.boundDocSubmenu !== "true") {
+      docs.dataset.boundDocSubmenu = "true";
+      docs.addEventListener("click", function (event) {
+        event.preventDefault();
+        const open = !root.classList.contains("submenu-open");
+        root.classList.toggle("submenu-open", open);
+        docs.setAttribute("aria-expanded", String(open));
+      });
+    }
+  }
+
+  // Submenu link close
+  if (submenu) {
+    submenu.querySelectorAll("a").forEach(function (link) {
+      if (link.dataset.boundDocClose !== "true") {
+        link.dataset.boundDocClose = "true";
+        link.addEventListener("click", closeMenu);
+      }
+    });
+  }
+
+  // Close menu on data-close-menu clicks (logo, menu links)
+  root.querySelectorAll("[data-close-menu]").forEach(function (link) {
+    if (link.dataset.boundDocClose !== "true") {
+      link.dataset.boundDocClose = "true";
+      link.addEventListener("click", closeMenu);
+    }
+  });
+
+  // Scroll behavior
+  const scrollHandler = function () {
+    if (header)
+      header.classList.toggle(
+        "is-scrolled",
+        (window.scrollY || window.pageYOffset) > 40,
+      );
+  };
+
+  if (!window.t4eDocHeaderScrollBound) {
+    window.t4eDocHeaderScrollBound = true;
+    window.addEventListener("scroll", scrollHandler, { passive: true });
+  }
+
+  // Initial scroll state
+  if (header)
+    header.classList.toggle(
+      "is-scrolled",
+      (window.scrollY || window.pageYOffset) > 40,
+    );
+
+  // Active section detection
+  function setActive(id) {
+    links.forEach(function (link) {
+      link.classList.toggle("is-active", link.dataset.section === id);
+    });
+  }
+
+  // Intersection observer for active sections
+  if ("IntersectionObserver" in window) {
+    if (!window.t4eDocHeaderObserver) {
+      window.t4eDocHeaderObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting && entry.target.id)
+              setActive(entry.target.id);
+          });
+        },
+        { root: null, rootMargin: "-40% 0px -40% 0px", threshold: 0 },
+      );
+    }
+
+    sectionIds.forEach(function (id) {
+      var section = document.getElementById(id);
+      if (section && !section.dataset.docHeaderObserved) {
+        section.dataset.docHeaderObserved = "true";
+        window.t4eDocHeaderObserver.observe(section);
+      }
+    });
+  }
+
+  // setActive("home");
+  headerEl.dataset.headerReady = "true";
+}
+
+// ===============================
+// INIT
+// ===============================
 document.addEventListener("DOMContentLoaded", function () {
   ensureGlobalFavicon();
   ensureGlobalBrandAndOrbit();
@@ -963,6 +1103,7 @@ document.addEventListener("DOMContentLoaded", function () {
     id: "consumerHeader",
     url: toBasePath("components/doc-header.html"),
     onLoaded: (el) => {
+      initDocHeader(el);
       setHeaderActive(el, currentPage);
       if (window.I18n) window.I18n.applyToDOM(el);
       initMobileMenu();
