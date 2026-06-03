@@ -212,7 +212,7 @@ function ensureGlobalBrandAndOrbit() {
         inset: 0;
         border: 1px solid #e0e0e0;
         border-radius: 50%;
-        animation: hero-rotation 45s linear infinite;
+        animation: hero-rotation 10s linear infinite;
         will-change: transform;
       }
 
@@ -258,17 +258,17 @@ function ensureGlobalBrandAndOrbit() {
         transform-origin: center center;
       }
 
-      .global-orbital-ball-inner.counter-0 {
-        transform: rotate(0deg);
-      }
+      // .global-orbital-ball-inner.counter-0 {
+      //   transform: rotate(0deg);
+      // }
 
-      .global-orbital-ball-inner.counter-120 {
-        transform: rotate(-120deg);
-      }
+      // .global-orbital-ball-inner.counter-120 {
+      //   transform: rotate(-120deg);
+      // }
 
-      .global-orbital-ball-inner.counter-240 {
-        transform: rotate(-240deg);
-      }
+      // .global-orbital-ball-inner.counter-240 {
+      //   transform: rotate(-240deg);
+      // }
 
       .global-orbital-icon {
         display: inline-flex;
