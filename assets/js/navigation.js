@@ -240,7 +240,7 @@ function ensureGlobalBrandAndOrbit() {
         width: 20px;
         height: 20px;
         border-radius: 9999px;
-        background: #2563eb;
+        background: #093cad;
         border: 2px solid #ffffff;
         box-shadow: 0 20px 30px rgba(15, 23, 42, 0.12);
         display: flex;
@@ -277,17 +277,16 @@ function ensureGlobalBrandAndOrbit() {
         color: #ffffff;
         font-size: 10px;
         line-height: 1;
-        animation: hero-rotation 12s linear infinite reverse;
       }
 
       @media (min-width: 768px) {
         .global-orbital-ball {
-          width: 28px;
-          height: 28px;
+          width: 32px;
+          height: 32px;
         }
 
         .global-orbital-icon {
-          font-size: 14px;
+          font-size: 18px;
         }
       }
 
