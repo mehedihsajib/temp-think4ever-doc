@@ -216,70 +216,35 @@
         background: #ffffff;
       }
 
-      /* .orbital-hero {
-        position: relative;
-        overflow: visible;
+      .cd-overview-ul {
+        margin-top: 16px;
+        margin-bottom: 24px;
+        padding-left: 24px;
+        list-style-type: disc;
       }
 
-      .orbital-circle {
-        position: absolute;
-        top: -262px;
-        right: 120px;
-        width: 946px;
-        height: 946px;
-        border: 1px solid #e0e0e0;
-        border-radius: 50%;
-        pointer-events: none;
-        will-change: transform;
-        animation: hero-rotation 45s linear infinite;
-        z-index: 0;
+      .cd-overview-ul li {
+        margin-bottom: 16px;
+        font-family: "Inter", sans-serif;
+        font-size: 0.95rem;
+        color: #475569;
+        line-height: 1.6;
       }
 
-      .orbital-ball-wrapper {
-        position: absolute;
-        inset: 0;
-        display: flex;
-        justify-content: center;
-        z-index: 10;
+      .cd-overview-ul li strong {
+        color: #0f172a;
+        font-weight: 600;
       }
 
-      .orbital-ball-wrapper.orbit-0 {
-        transform: rotate(0deg);
+      .demo-img {
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e2e8f0;
+        margin-top: 24px;
+        margin-bottom: 40px;
+        display: block;
       }
-
-      .orbital-ball-wrapper.orbit-120 {
-        transform: rotate(120deg);
-      }
-
-      .orbital-ball-wrapper.orbit-240 {
-        transform: rotate(240deg);
-      }
-
-      .orbital-ball {
-        width: 20px;
-        height: 20px;
-        min-width: 20px;
-        min-height: 20px;
-        border-radius: 9999px;
-        background: #2563eb;
-        border: 2px solid #ffffff;
-        box-shadow: 0 20px 30px rgba(15, 23, 42, 0.12);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform: translateY(-50%);
-      }
-
-      .orbital-ball-inner {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-        transform-origin: center center;
-      } */
-
-      /* Orbital hero global styles are injected via assets/js/navigation.js */
     </style>
   </head>
 
@@ -331,25 +296,54 @@
         <!-- Main Content -->
         <main class="cd-main-content" id="cd-main">
           <!-- Page Title -->
-          <h1
-            class="cd-page-title"
-            id="cdHomeTitle"
-            data-i18n="dev_intro.title"
-          >
-            Introduction
-          </h1>
+          <h1 class="cd-page-title" id="cdHomeTitle">Structure Templates</h1>
 
           <!-- Overview Section -->
           <section class="cd-overview" id="cdHomeOverview">
             <p class="cd-overview-text" data-i18n="dev_intro.description">
-              Build complete applications from concept to deployment with an
-              intelligent, agent-driven platform. Design, develop, test, secure,
-              and launch—all in one place—while maintaining full human oversight
-              at every stage.
+              The Structure Templates or also called Solution Designs Library is
+              a centralized repository of pre-built solution templates that
+              helps users quickly discover and evaluate software solution
+              concepts across various industries and business domains.
             </p>
 
             <!-- ===== Explanation Video ===== -->
             <div class="yt-video" data-video-id="CQpIODqNFek"></div>
+
+            <ul class="cd-overview-ul">
+              <li>Search solution designs using keywords.</li>
+              <li>Browse solutions by industry categories.</li>
+              <li>
+                Filter results using functional tags such as Marketplace, SaaS,
+                Booking, Analytics, Mobile-first, and Workflow.
+              </li>
+              <li>
+                View solution summaries, key features, and associated
+                capabilities.
+              </li>
+              <li>
+                Explore detailed solution designs to support product planning,
+                business analysis, and solution architecture.
+              </li>
+            </ul>
+            <p>
+              The library enables teams to accelerate solution discovery,
+              standardize design approaches, and reuse proven business and
+              technical patterns when planning new applications or digital
+              products.
+            </p>
+
+            <img
+              src="assets/images/templates-1.png"
+              alt="Data Objects Schema Visualizer"
+              class="demo-img"
+            />
+
+            <img
+              src="assets/images/templates-2.png"
+              alt="Data Objects Schema Visualizer"
+              class="demo-img"
+            />
           </section>
         </main>
       </div>

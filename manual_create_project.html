@@ -313,72 +313,33 @@
           <!-- Overview Section -->
           <section class="cd-overview" id="cdHomeOverview">
             <p>
-              This interface appears when a user chooses to create a new project
-              from the dashboard. Key elements include:
+              The New Project screen allows users to describe the application,
+              platform, or solution they want to build. Simply enter a business
+              idea, project requirements, or technical specifications in the
+              description field.
             </p>
 
-            <ul class="cd-overview-ol">
-              <li>
-                <strong>Project Name Field:</strong
-                ><span
-                  >A text input where the user enters the name of their new
-                  project, e.g., “My Awesome App.” This is a required field.
-                </span>
-              </li>
-              <li>
-                <strong>Description Field:</strong
-                ><span
-                  >An optional text area for a brief description of the project,
-                  helping to clarify its purpose or scope.
-                </span>
-              </li>
-              <li>
-                <strong>Action Buttons: </strong
-                ><span
-                  >An optional text area for a brief description of the project,
-                  helping to clarify its purpose or scope.
-                </span>
-                <ul class="sub-list">
-                  <li>
-                    <strong>Create Project –</strong> – Confirms the creation of
-                    the project and adds it to the dashboard.
-                  </li>
-                  <li>
-                    <strong>Cancel</strong> – Closes the popup without creating
-                    a project.
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <strong>Clean Modal Design:</strong
-                ><span
-                  >The popup is centered with a minimal, distraction-free layout
-                  that clearly separates it from the blurred background
-                  dashboard.</span
-                >
-              </li>
-              <li>
-                <strong>User Guidance:</strong
-                ><span
-                  >Placeholder text in the fields guides the user on what
-                  information to provide.
-                </span>
-              </li>
-            </ul>
             <p>
-              This popup simplifies the process of starting a new project,
-              ensuring users can quickly add and document their projects within
-              the dashboard environment.
+              The platform analyzes the provided information and automatically
+              determines the most suitable project setup, including project
+              naming, recommended development approach, and initial project
+              structure.
             </p>
+            <p style="margin-top: 20px">
+              Users may also specify existing assets such as source code, a Git
+              repository, preferred technologies, or implementation
+              requirements. Based on the provided input, the system guides users
+              through the appropriate project creation workflow.
+            </p>
+            <p style="margin-top: 20px">
+              After entering the project details, click Continue to proceed with
+              project generation and setup.
+            </p>
+
             <!-- ===== Explanation Video ===== -->
             <div class="yt-video" data-video-id="6wmwLtcdV6k"></div>
             <div
-              style="
-                margin-top: 40px;
-                margin-bottom: 40px;
-                padding: 20px;
-                text-align: center;
-              "
+              style="margin-top: 20px; margin-bottom: 20px; text-align: center"
             >
               <img
                 src="assets/images/create-project-1.png"
@@ -390,6 +351,7 @@
                 "
               />
             </div>
+
             <h3
               style="
                 font-family: &quot;Inter&quot;, sans-serif;
@@ -404,36 +366,84 @@
             </h3>
 
             <ol class="cd-overview-ol">
-              <li data-i18n="dev_create_project.step1">
-                In the Dashboard, click on Create a New Project button
+              <li>In the Dashboard, click on Create a New Project button</li>
+              <li>Describe the project you want to create.</li>
+              <li>
+                Click on Continue button.
+
+                <img
+                  src="assets/images/create-project-1.png"
+                  alt="How to Create Project"
+                  style="
+                    max-width: 100%;
+                    border-radius: 8px;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                    margin-top: 30px;
+                  "
+                />
               </li>
-              <li data-i18n="dev_create_project.step2">
-                Enter the Project Name. Description is optional.
+              <li>
+                The application will analyze the description of the app and will
+                generate suggestion, thus this screen popup will appear.
+
+                <img
+                  src="assets/images/create-project-2.2.png"
+                  alt="How to Create Project"
+                  style="
+                    max-width: 100%;
+                    border-radius: 8px;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                    margin-top: 30px;
+                  "
+                />
               </li>
-              <li data-i18n="dev_create_project.step3">
-                Click on Create Project button.
+              <li>
+                Select any option or simply choose the recommended option, then
+                tap on Open Architect button.
+              </li>
+              <li>
+                AI will generate a couple of questions for Requirements Analysis
+              </li>
+              <li>Once all set, click on Submit Answers button.</li>
+              <li>
+                Once all set, a summary of requirements will be generated for
+                your review and approval to build the app.
+
+                <img
+                  src="assets/images/create-project-2.3.png"
+                  alt="How to Create Project"
+                  style="
+                    max-width: 100%;
+                    border-radius: 8px;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                    margin-top: 30px;
+                  "
+                />
+              </li>
+              <li>
+                Think4ever will analyze the requirements for a few minutes.
+                <img
+                  src="assets/images/create-project-2.4.png"
+                  alt="How to Create Project"
+                  style="
+                    max-width: 100%;
+                    border-radius: 8px;
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                    margin-top: 30px;
+                  "
+                />
               </li>
             </ol>
 
-            <div
-              style="
-                margin-top: 40px;
-                margin-bottom: 40px;
-                padding: 20px;
-                text-align: center;
-              "
-            >
-              <img
-                src="assets/images/create-project-2.png"
-                alt="Create a New Project Modal"
-                style="
-                  max-width: 100%;
-                  border-radius: 8px;
-                  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-                "
-              />
-            </div>
-            <h3 class="h3">Project Initialization Options</h3>
+            <p>
+              Once the initial build of the project has been generated, user can
+              modify it with many options or simply chatting with sidekick = our
+              AI assistant!
+            </p>
+
+            <h3 class="h3" style="margin-top: 30px">
+              Project Initialization Options
+            </h3>
             <p>
               When opening an empty project for the first time, you must select
               the origin path for your codebase and architecture layout. The
