@@ -238,6 +238,14 @@
         line-height: 1.6;
       }
 
+      .cd-overview-ul li ul {
+        padding-left: 20px;
+      }
+
+      .cd-overview-ul li ul li {
+        list-style-type: circle;
+      }
+
       .cd-overview-ul li strong,
       .cd-overview-ol li strong {
         color: #0f172a;
@@ -313,44 +321,71 @@
           <!-- Overview Section -->
           <section class="cd-overview" id="cdHomeOverview">
             <p>
-              The New Project screen allows users to describe the application,
-              platform, or solution they want to build. Simply enter a business
-              idea, project requirements, or technical specifications in the
-              description field.
-            </p>
-
-            <p>
-              The platform analyzes the provided information and automatically
-              determines the most suitable project setup, including project
-              naming, recommended development approach, and initial project
-              structure.
-            </p>
-            <p style="margin-top: 20px">
-              Users may also specify existing assets such as source code, a Git
-              repository, preferred technologies, or implementation
-              requirements. Based on the provided input, the system guides users
-              through the appropriate project creation workflow.
-            </p>
-            <p style="margin-top: 20px">
-              After entering the project details, click Continue to proceed with
-              project generation and setup.
+              The Create a New Project interface serves as the primary input
+              layer where users define the foundational goals of their target
+              application, platform, or business solution. Users can enter a
+              business idea, project requirements, or technical descriptions
+              directly into the main description text field.
             </p>
 
             <!-- ===== Explanation Video ===== -->
             <div class="yt-video" data-video-id="6wmwLtcdV6k"></div>
 
-            <h3
-              style="
-                font-family: &quot;Inter&quot;, sans-serif;
-                font-size: 1.25rem;
-                font-weight: 600;
-                margin-bottom: 12px;
-                margin-top: 24px;
-              "
-              data-i18n="dev_create_project.how_to_title"
-            >
-              How to Create a New Project
-            </h3>
+            <div class="para-box">
+              <h3 class="h3">Key features</h3>
+
+              <p><strong>Automated System Analysis </strong></p>
+              <p>
+                Upon submission, the platform’s analysis engine evaluates the
+                provided text to automatically determine:
+              </p>
+              <ul class="cd-overview-ul">
+                <li>A suitable project name.</li>
+                <li>The most efficient project setup path.</li>
+                <li>
+                  Group 8, Grouped objectThe initial structure and workspace
+                  layout.
+
+                  <div class="image-wrapper">
+                    <img
+                      src="assets/images/create-project-0.png"
+                      alt="How to Create Project"
+                      class="demo-img"
+                    />
+                  </div>
+
+                  <p style="margin-top: 20px">
+                    <em>
+                      The platform's analysis engine can process diverse file
+                      types uploaded during initialization, extraction, or
+                      advanced setup configurations. Once your files are
+                      uploaded, the AI automatically handles the setup.
+                    </em>
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <p><strong>Integrating Existing Resources</strong></p>
+
+            <div class="image-wrapper">
+              <img
+                src="assets/images/create-project-1.2.png"
+                alt="How to Create Project"
+                class="demo-img"
+              />
+            </div>
+
+            <p style="margin: 30px 0">
+              If you have pre-existing assets, you can explicitly mention them
+              within your description. This includes specifying existing source
+              code, active Git repositories, preferred technologies, or strict
+              implementation requirements. The system processes these details to
+              customize your setup and guide you through the appropriate
+              creation workflow.
+            </p>
+
+            <h3 class="h3">How to Create a New Project</h3>
 
             <ol class="cd-overview-ol">
               <li>
@@ -361,102 +396,314 @@
               <li>
                 Click on <strong>Continue</strong> button.
 
-                <img
-                  src="assets/images/create-project-1.png"
-                  alt="How to Create Project"
-                  style="
-                    max-width: 100%;
-                    border-radius: 8px;
-                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-                    margin-top: 30px;
-                  "
-                />
-              </li>
-              <li>
-                The application will analyze the description of the app and will
-                generate suggestion, thus this screen popup will appear.
-
-                <img
-                  src="assets/images/create-project-2.1.png"
-                  alt="How to Create Project"
-                  style="
-                    max-width: 100%;
-                    border-radius: 8px;
-                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-                    margin-top: 30px;
-                  "
-                />
-              </li>
-              <li>
-                Select any option or simply choose the recommended option, then
-                tap on <strong>Open Architect</strong> button.
-              </li>
-              <li>
-                AI will generate a couple of questions for
-                <strong>Requirements Analysis</strong>
-
-                <img
-                  src="assets/images/create-project-2.2.png"
-                  alt="How to Create Project"
-                  style="
-                    max-width: 100%;
-                    border-radius: 8px;
-                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-                    margin-top: 30px;
-                  "
-                />
-              </li>
-              <li>
-                Once all set, click on <strong>Submit Answers</strong> button.
-              </li>
-              <li>
-                Once all set, a summary of requirements will be generated for
-                your review and approval to build the app.
-
-                <img
-                  src="assets/images/create-project-2.3.png"
-                  alt="How to Create Project"
-                  style="
-                    max-width: 100%;
-                    border-radius: 8px;
-                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-                    margin-top: 30px;
-                  "
-                />
-              </li>
-              <li>
-                Think4ever will analyze the requirements for a few minutes.
-                <img
-                  src="assets/images/create-project-2.4.png"
-                  alt="How to Create Project"
-                  style="
-                    max-width: 100%;
-                    border-radius: 8px;
-                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-                    margin-top: 30px;
-                  "
+                <div class="image-wrapper">
+                  <img
+                    src="assets/images/create-project-1.png"
+                    alt="How to Create Project"
+                    class="demo-img"
+                  />
+                </div>
                 />
               </li>
             </ol>
 
-            <p>
-              Once the initial build of the project has been generated, user can
-              modify it with many options or simply chatting with sidekick = our
-              AI assistant!
-            </p>
-
-            <h3 class="h3" style="margin-top: 30px">
-              Project Initialization Options
+            <h3 class="h3">
+              Project Initialization: Selecting Your Build Path
             </h3>
-            <p>
-              When opening an empty project for the first time, you must select
-              the origin path for your codebase and architecture layout. The
-              system provides two primary initialization paths:
-            </p>
+            <div class="image-wrapper">
+              <img
+                src="assets/images/create-project-2.1.png"
+                alt="How to Create Project"
+                class="demo-img"
+              />
+            </div>
             <div class="para-box">
-              <h4 class="h4">1. Start from Scratch</h4>
-              <p><strong>Icon:</strong>Magic wand / drafting pen.</p>
-              <p style="margin-top: 10px">
+              <p>
+                Once the system processes your initial description, it generates
+                an AI Suggestion window to help you choose the best workflow for
+                your project.
+              </p>
+            </div>
+
+            <div class="para-box">
+              <h3 class="h3" style="margin-top: 20px">AI Suggestion Panel</h3>
+              <p>
+                The system evaluates your project's scope and highlights a
+                recommendation at the top of the interface. If your project
+                involves multiple service types, complex user roles, or
+                extensive integrations, the system will pre-select the
+                Architect-first approach to ensure proper upfront planning. You
+                can easily proceed with this recommended path or manually choose
+                an alternative option from the list below it.
+              </p>
+            </div>
+
+            <div class="para-box">
+              <h3 class="h3" style="margin-top: 20px">
+                Available Build Methods
+              </h3>
+              <p>
+                Users can select from three distinct configuration paths
+                depending on the project's complexity and current state:
+              </p>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Incremental Build</h4>
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/increamental-build.png"
+                  alt="Project option"
+                  class="demo-img"
+                />
+              </div>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong>How it works:</strong>
+                  <span
+                    >Allows you to bypass the initial design planning phase and
+                    go straight into the main workspace to build the project
+                    step by step.
+                  </span>
+                </li>
+                <li>
+                  <strong>Best for:</strong>
+                  <span
+                    >Projects where the scope is already completely clear, or
+                    for small, medium, and standard large projects where you
+                    want to start building immediately.
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <h3 class="h3">How to Create Project via Incremental Build</h3>
+            <div class="para-box">
+              <h4 class="h4">Step 1: Select Incremental Build</h4>
+            </div>
+            <div class="para-box">
+              <h4 class="h4">Step 2: Click on Start Building button.</h4>
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/increamental-build-full.png"
+                  alt="Incremental Build"
+                  class="demo-img"
+                />
+              </div>
+            </div>
+            <div class="para-box">
+              <h4 class="h4">Step 3: Navigating Developer Mode</h4>
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/increamental-build-dev.png"
+                  alt="Incremental Build"
+                  class="demo-img"
+                />
+              </div>
+              <p>
+                Once your project is initialized, you will enter Developer Mode.
+                This interface is split into two primary sections to help you
+                collaborate with the AI assistant and manage your project assets
+                simultaneously: the Chat Panel on the left and the Explorer
+                Panel on the right.
+              </p>
+            </div>
+
+            <div class="para-box">
+              <h3 class="h3">Architect-First (System Recommended)</h3>
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/architect-first.png"
+                  alt="Architect-First"
+                  class="demo-img"
+                />
+              </div>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong>How it works:</strong>
+                  <span
+                    >Opens a dedicated design and architect workspace to run an
+                    automated requirements analyzer. The AI assistant will guide
+                    you through clarifying questions to map out full
+                    concepts—including screens, workflows, data structures, and
+                    user roles—before handing the finalized design off to the
+                    main project workspace.
+                  </span>
+                </li>
+                <li>
+                  <strong>Best for:</strong>
+                  <span
+                    >Highly complex, multi-module projects that require thorough
+                    initial structural layout and planning.
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <h3 class="h3">How to Create Project via Architect-first</h3>
+            <div class="para-box">
+              <h4 class="h4">Step 1: Select Architect-first option</h4>
+            </div>
+            <div class="para-box">
+              <h4 class="h4">Step 2: Click on Open Architect button.</h4>
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/architect-first-full.png"
+                  alt="Architect-First"
+                  class="demo-img"
+                />
+              </div>
+            </div>
+            <div class="para-box">
+              <h4 class="h4">Step 3: Navigating Design / Architect Mode</h4>
+              <p>
+                If you choose the Architect-first path or switch modes using the
+                top menu, you will enter Design / Architect Mode. This space
+                helps you plan your project's rules, structure, and design
+                before any actual files are created.
+              </p>
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/requirements-analysis.png"
+                  alt="Requirements Analysis"
+                  class="demo-img"
+                />
+              </div>
+              <p>
+                <em
+                  >NOTE: If you do not know the answer yet, you can choose Let
+                  AI decide.
+                </em>
+              </p>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Step 4</h4>
+              <p>
+                AI will generate a couple of questions for Requirements
+                Analysis. Provide the answers for Clarification questions then
+                click <strong>Submit Answers </strong> button. AI will analyze
+                the submitted answers to requirements questionnaire
+              </p>
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/ai-analyzing-requirements.png"
+                  alt="Requirements Analysis"
+                  class="demo-img"
+                />
+              </div>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Step 5</h4>
+              <p>
+                A summary of defined requirements will be generated for your
+                review and approval.
+              </p>
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/review-and-approve.png"
+                  alt="Review and Approve"
+                  class="demo-img"
+                />
+              </div>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Step 6</h4>
+              <p>
+                Once all good, click on Approve & Build button. The system will
+                analyze the consolidated requirements and start generating your
+                app concept.
+              </p>
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/builing-diagram.png"
+                  alt="Building Concept Diagram"
+                  class="demo-img"
+                />
+              </div>
+              <p>
+                <em
+                  >IMPORTANT: Analysis process may take 15 minutes or more
+                  depending on the complexity of your project.
+                </em>
+              </p>
+              <p style="margin-top: 20px">
+                Once the project has been initially created, you will be taken
+                to Designer/Architect mode of your project where you can
+                customize and modify the project created.
+              </p>
+            </div>
+            <div class="para-box">
+              <h3 class="h3">Advanced Setup</h3>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong>How it works:</strong>
+                  <span
+                    >Opens an advanced configuration window allowing you to
+                    import existing projects via a GitHub URL, Git provider, or
+                    a standard ZIP file. It also lets you select a custom
+                    technology stack and specify exactly how the project should
+                    open.
+                  </span>
+                </li>
+                <li>
+                  <strong>Best for:</strong>
+                  <span
+                    >Migrating existing systems or starting projects where you
+                    already have a definitive codebase or specific software
+                    preferences in mind.
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <h3 class="h3">How to Create Project via Advanced Setup</h3>
+            <div class="para-box">
+              <h4 class="h4">Step 1: Select Advanced Setup option</h4>
+            </div>
+            <div class="para-box">
+              <h4 class="h4">
+                Step 2: Click on Open <strong>Advanced Setup</strong> button.
+              </h4>
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/advanced-setup-full.png"
+                  alt="Advanced Setup"
+                  class="demo-img"
+                />
+              </div>
+            </div>
+            <div class="para-box">
+              <h4 class="h4">
+                Step 3: Advanced Setup: Configuring and Opening Your Project
+              </h4>
+              <p>
+                The Advanced Setup configuration window (shown in
+                image_c1e5a0.jpg) allows you to customize exactly how your
+                project is built and what technology it uses before you launch
+                your workspace.
+              </p>
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/advanced-setup-from-scratch.png"
+                  alt="Advanced Setup"
+                  class="demo-img"
+                />
+              </div>
+              <p>
+                From this window, you can choose whether to start fresh or bring
+                in old code, and decide between a pre-packaged or custom
+                technology setup.
+              </p>
+            </div>
+
+            <div class="para-box">
+              <h3 class="h3">
+                Start from Scratch vs Import an Existing Project
+              </h3>
+              <h4 class="h4">Start from Scratch</h4>
+              <p><strong>Icon: Magic wand / drafting pen. </strong></p>
+              <p>
                 <strong>Description:</strong> Select this option to initialize
                 your project with a completely blank workspace. It is ideal when
                 you want to design a brand-new architecture and allow the AI
@@ -465,135 +712,744 @@
               </p>
             </div>
             <div class="para-box">
-              <h4 class="h4">2. Import an Existing Project</h4>
-              <p><strong>Icon:</strong>Download / inbox arrow.</p>
-              <p style="margin-top: 10px">
+              <h4 class="h4">Import an Existing Project</h4>
+              <p><strong>Icon: Download / inbox arrow. </strong></p>
+              <p>
                 <strong>Description:</strong> Select this option to bring an
                 established codebase into the workspace. The system allows you
                 to import source code directly from version control, link a
                 public GitHub repository, or upload a local ZIP archive
                 containing your existing project files.
               </p>
-              <div class="image-wrapper">
-                <img
-                  src="assets/images/create-project-3.png"
-                  alt="Project option"
-                  class="demo-img"
-                />
-              </div>
             </div>
 
-            <h3 class="h3">Open an Existing Project – Design Mode</h3>
-            <p>
-              When you open a project from your dashboard, the system provides a
-              dual-entry selection modal. This allows you to choose an interface
-              style tailored to your current role and objective.
-            </p>
             <div class="para-box">
-              <h4 class="h4">Design/Architect Mode</h4>
-              <p><strong>Solutions Design Library </strong></p>
+              <h3 class="">Start from Scratch</h3>
+              <h4 class="h4"><em>Option 1 - Default Stack Applied</em></h4>
+              <h4 class="h4">Step 1: Select "Start from scratch"</h4>
               <p>
-                When launching the Visual Concept Designer for a project, the
-                system provides five tailored entry paths to begin building your
-                conceptual diagram called Solutions Design Library
+                Under the How to build section, ensure the Start from scratch
+                button is selected. This tells the system to create a brand-new
+                workspace completely free of legacy code or old configurations.
               </p>
               <div class="image-wrapper">
                 <img
-                  src="assets/images/create-project-4.png"
-                  alt="Project option"
+                  src="assets/images/start-from-scratch.png"
+                  alt="Advanced Setup"
                   class="demo-img"
                 />
               </div>
             </div>
-            <h3 class="h3">Other Components</h3>
-            <ol class="cd-overview-ol">
-              <li>
-                Chat with AI Sidekick
 
-                <ul class="sub-list">
-                  <li>
-                    <strong>Icon:</strong> <span>Purple speech bubbles.</span>
-                  </li>
-                  <li>
-                    <strong>Description:</strong>
-                    <span
-                      >Ideal for a conversational, text-based approach. Describe
-                      your project idea using natural language, and the AI agent
-                      will automatically construct the corresponding concept
-                      diagram for you.
-                    </span>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                Voice Assistant
-                <ul class="sub-list">
-                  <li><strong>Icon:</strong> <span>Pink microphone. </span></li>
-                  <li>
-                    <strong>Description:</strong>
-                    <span
-                      >Designed for hands-free, real-time ideation. Speak your
-                      product concepts out loud, and watch as the AI maps and
-                      renders your layout dynamically on the canvas as you talk.
-                    </span>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                Analyze Requirements
-                <ul class="sub-list">
-                  <li><strong>Icon:</strong> <span>Blue lightbulb. </span></li>
-                  <li>
-                    <strong>Description:</strong>
-                    <span
-                      >Best for structured project planning. Enter your
-                      preliminary product requirements, and the AI will ask
-                      clarifying questions to fill in the gaps and build out a
-                      comprehensive concept map.
-                    </span>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                Add Block Manually
-                <ul class="sub-list">
-                  <li><strong>Icon:</strong> <span>Teal plus sign. </span></li>
-                  <li>
-                    <strong>Description:</strong>
-                    <span
-                      >Built for fine-grained, manual control. Skip the AI
-                      assistance and map out your concept structure
-                      block-by-block with complete authority over every
-                      component.
-                    </span>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                Import from Files
-                <ul class="sub-list">
-                  <li>
-                    <strong>Icon:</strong>
-                    <span>Orange document upload arrow. </span>
-                  </li>
-                  <li>
-                    <strong>Description:</strong>
-                    <span
-                      >Tailored for working with existing project documentation.
-                      Attach text files—such as requirements documents,
-                      technical specifications, or engineering notes—and allow
-                      the AI to extract and generate the concept structure
-                      directly from your uploaded materials.
-                    </span>
-                  </li>
-                </ul>
-              </li>
-            </ol>
-            <p>
-              💡 Tip: If you prefer to enter the canvas directly without
-              choosing an initialization wizard, click Skip for now at the
-              bottom of the modal.
-            </p>
+            <div class="para-box">
+              <h4 class="h4">
+                Step 2: Ensure "Default stack applied" is Active
+              </h4>
+              <p>
+                Look at the Technology Stack section (highlighted in red in
+                image_c18a8e.jpg). Make sure Default stack applied ✓
+                (Recommended) is toggled.
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  By choosing the default stack, the AI automatically configures
+                  a highly stable, pre-tested combination of coding tools and
+                  database structures.
+                </li>
+                <li>
+                  This setup ensures your project runs smoothly and includes
+                  built-in automated testing features right out of the box.
+                </li>
+              </ul>
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/default-stacks.png"
+                  alt="Advanced Setup"
+                  class="demo-img"
+                />
+              </div>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Step 3: Launch the Project</h4>
+              <p>
+                Once both defaults are confirmed, finalize the setup by using
+                the action buttons at the bottom of the window:
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  Click the blue Open project button to save your choices and
+                  immediately load into your new workspace.
+                </li>
+              </ul>
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/launch-project.png"
+                  alt="Advanced Setup"
+                  class="demo-img"
+                />
+              </div>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4"><em>Option 2 - Pick Custom Stack </em></h4>
+              <p>
+                Allows users to manually choose preferred technologies and
+                frameworks. How to Create a project:
+              </p>
+              <ol class="cd-overview-ol">
+                <li>
+                  Click Pick Custom Stack
+
+                  <div class="image-wrapper">
+                    <img
+                      src="assets/images/pick-custom-stacks.png"
+                      alt="Advanced Setup"
+                      class="demo-img"
+                    />
+                  </div>
+                </li>
+                <li>
+                  Select the desired technologies 
+
+                  <div class="image-wrapper">
+                    <img
+                      src="assets/images/stack-lists.png"
+                      alt="Advanced Setup"
+                      class="demo-img"
+                    />
+                  </div>
+                </li>
+                <li>Save the selected configuration</li>
+              </ol>
+              <p>Recommended For</p>
+              <ul class="cd-overview-ul">
+                <li>Custom project requirements</li>
+                <li>Advanced configurations</li>
+                <li>Specific framework preferences</li>
+              </ul>
+            </div>
+
+            <div class="para-box">
+              <h3 class="h3">Types of Stack</h3>
+              <p>
+                A dialog box is launched with Technology stack options to be
+                applied on the project to be created. This is divided into 3
+                sections: (1) Backend, (2) Database and (3) UI/Frontend
+              </p>
+              <h4 class="h4" style="margin-top: 20px">Server/Backend</h4>
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/stack-backend.png"
+                  alt="Stacks"
+                  class="demo-img"
+                />
+              </div>
+              <p>
+                Select the primary language and framework that will power your
+                application logic. The system supports a wide array of
+                environments, including:
+              </p>
+              <ul class="cd-overview-ul">
+                <li><strong>JavaScript/TypeScript:</strong><span></span></li>
+                <li>
+                  <strong>Python: </strong
+                  ><span
+                    >Django, Flask, FastAPI, Tornado, Pyramid, Bottle,
+                    Sanic.</span
+                  >
+                </li>
+
+                <li>
+                  <strong>PHP:</strong
+                  ><span
+                    >Laravel, Symfony, Slim, CodeIgniter, Yii, CakePHP,
+                    Lumen.</span
+                  >
+                </li>
+                <li>
+                  <strong>C#:</strong
+                  ><span
+                    >ASP.NET Core, ASP.NET MVC, Web API, Blazor, Minimal
+                    API.</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Database</h4>
+              <p>
+                Identify the data persistence layer for your project. This
+                selection informs how <strong>Data Objects</strong> and
+                <strong>Database Schemas</strong> are visualized and scripted
+                (e.g., SQL-based relational models vs. NoSQL document
+                structures).
+              </p>
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/stack-database.png"
+                  alt="Stacks"
+                  class="demo-img"
+                />
+              </div>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">UI / Frontend Configuration</h4>
+              <p>
+                The UI/Frontend section is dedicated to defining the "Client
+                Side" of your application. This configuration ensures that the
+                AI-generated user interfaces, component libraries, and frontend
+                logic are consistent with modern web or mobile standards.
+              </p>
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/stack-frontend.png"
+                  alt="Stacks"
+                  class="demo-img"
+                />
+              </div>
+            </div>
+
+            <div class="para-box">
+              <h3 class="h3">Implementation Best Practices</h3>
+              <p>
+                To ensure the highest accuracy in your project outputs, follow
+                these guidelines:
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong>Precision Matters:</strong> Selecting a specific
+                  framework (like Node.js - NestJS) rather than a generic
+                  runtime (like Node.js) allows the system to generate more
+                  precise boilerplate code and folder structures.
+                </li>
+                <li>
+                  <strong>Save Changes: </strong> Always click the Save Changes
+                  button in the top-right corner before navigating to other
+                  sections like API Keys or Business Flows to avoid losing your
+                  configuration.
+                </li>
+                <li>
+                  <strong>Iterative Updates:</strong> You can return to this
+                  section at any time to update your stack if your project
+                  requirements pivot during the ideation phase.
+                </li>
+              </ul>
+            </div>
+
+            <div class="para-box">
+              <h3 class="h3">Import Existing</h3>
+              <p>
+                <strong>Advanced Setup: Importing an Existing Project </strong>
+              </p>
+              <p style="margin-top: 20px">
+                This option allows you to open a project by connecting and
+                importing an existing codebase. Instead of starting fresh, this
+                path lets you pull in external files directly into the platform
+                workspace.
+              </p>
+              <p style="margin-top: 20px">
+                <strong>Step-by-Step Import Guide </strong>
+              </p>
+              <p>
+                Follow these steps to link your existing code and open the
+                project:
+              </p>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Step 1: Select "Import existing</h4>
+              <p>
+                Under the How to build section, click the Import existing
+                button. Selecting this option closes the standard default
+                settings and opens the repository integration fields.
+              </p>
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/import-existing.png"
+                  alt="Import Existing"
+                  class="demo-img"
+                />
+              </div>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Step 2: Choose Your Source Code Location</h4>
+              <p>
+                Under the WHERE IS YOUR CODE? section, select how you want to
+                deliver your files to the system:
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong>Public GitHub URL: </strong> Select this option to
+                  connect a public GitHub repository.
+                </li>
+                <li>
+                  <strong>ZIP file:</strong> Select this option if you want to
+                  upload a local, compressed folder containing your code.
+                </li>
+                <li>
+                  <strong>Git provider (advanced):</strong> Select this option
+                  if you need to connect using alternative Git version-control
+                  providers or custom credentials.
+                </li>
+              </ul>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Step 3: Finalize and Open</h4>
+              <p>
+                Once your repository data is entered, complete the integration
+                using the buttons at the bottom right:
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong>Cancel:</strong> Closes the setup window and ignores
+                  any data entered.
+                </li>
+                <li>
+                  <strong>Open project:</strong> Click this blue button to save
+                  your setup. The system will automatically download a snapshot
+                  of the repository directly into your project workspace folder
+                  and open it for use.
+                </li>
+              </ul>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Option 1 - Public GitHub URL</h4>
+              <p>
+                <strong>Importing Source Code via Public GitHub URL </strong>
+              </p>
+              <p>
+                When you choose to seed an empty workspace using an existing
+                project repository, the platform provides a dedicated wizard to
+                pull code seamlessly from open-source version control.
+              </p>
+              <p style="margin-top: 20px">
+                This option imports source code from a publicly accessible
+                GitHub repository.
+              </p>
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/public-github-url.png"
+                  alt="Public GitHub URL"
+                  class="demo-img"
+                />
+              </div>
+              <p><strong>User Requirement </strong></p>
+              <p>The user must provide a valid public GitHub repository URL</p>
+              <p>
+                <strong>Parameter Configurations & Rules </strong>
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  Repository URL: Paste the complete, publicly accessible HTTP
+                  link to your target repository (e.g.,
+                  https://github.com/expressjs/express). Private repositories
+                  requiring SSH key encryption or explicit developer tokens are
+                  not supported by this basic link wizard.
+                </li>
+                <li>
+                  Branch Specification: Define the explicit branch string you
+                  want to target (e.g., main or development). If you leave this
+                  field empty, or if the specified branch cannot be found in the
+                  repository index, the system automatically falls back to
+                  pulling from the default master branch.
+                </li>
+              </ul>
+
+              <p style="margin-top: 20px">
+                <strong>How to Execute the Repository Sync </strong>
+              </p>
+              <ol class="cd-overview-ol">
+                <li>
+                  Enter your specific repository location and target branch into
+                  the modal text blocks.
+                </li>
+                <li>
+                  Click the white ← Back button to return to the source
+                  selection menu if you need to choose an alternative upload
+                  path (like a local ZIP archive).
+                </li>
+                <li>
+                  Click the solid purple <strong> Open Project</strong> button
+                  to Import repository action button to start the automated
+                  transfer.
+                </li>
+                <li>
+                  The platform will automatically connect to GitHub, download a
+                  snapshot of the codebase, extract the file structure, and
+                  initialize the project components directly within your working
+                  developer canvas.
+                </li>
+              </ol>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Option 2 - ZIP File</h4>
+              <p>
+                <strong>Importing Source Code via ZIP Archive </strong>
+              </p>
+              <p>
+                When setting up a project workspace from an existing codebase,
+                the platform provides a local file upload wizard as an
+                alternative to external version control tracking.
+              </p>
+              <p style="margin-top: 20px">
+                This option allows you to upload a compressed archive directly
+                from your local computer. The system will automatically unpack
+                and map the contained directories into your designated project
+                folder.
+              </p>
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/start-with-zip.png"
+                  alt="ZIP File"
+                  class="demo-img"
+                />
+              </div>
+              <p><strong>Features: </strong></p>
+
+              <ul class="cd-overview-ul">
+                <li>Upload local project archives</li>
+                <li>Extract application files automatically</li>
+                <li>Import existing codebases into the workspace</li>
+              </ul>
+
+              <p style="margin-top: 20px">
+                <strong>ZIP files containing</strong>
+              </p>
+              <ul class="cd-overview-ul">
+                <li>Source code</li>
+                <li>Assets</li>
+                <li>Configuration files</li>
+                <li>Project folders</li>
+              </ul>
+
+              <p style="margin-top: 20px">
+                <strong>Core Functions </strong>
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong>Upload Local Project Archives:</strong>Browse your
+                  local directories to select and transmit bundled application
+                  code structures.
+                </li>
+                <li>
+                  <strong>Extract Application Files Automatically:</strong>The
+                  backend system instantly runs an unzipping routine upon
+                  completing the upload, parsing your file trees without
+                  requiring manual terminal extraction commands.
+                </li>
+                <li>
+                  <strong>Import Existing Codebases into the Workspace:</strong
+                  >Populates your empty developer environment with your
+                  historical logic blocks, configuration settings, and static
+                  assets in one step.
+                </li>
+              </ul>
+
+              <p style="margin-top: 20px">
+                <strong>Step-by-Step Upload Procedure </strong>
+              </p>
+              <ol class="cd-overview-ol">
+                <li>
+                  Click the Choose File target button within the configuration
+                  modal to trigger your operating system's native file explorer.
+                </li>
+                <li>
+                  Locate and select the targeted .zip archive containing your
+                  application files.
+                </li>
+                <li>
+                  Verify that the correct archive filename appears next to the
+                  selection button.
+                </li>
+                <li>
+                  If you need to switch to an alternative seed method (such as
+                  pulling from a public GitHub URL), switch between the tabs
+                </li>
+                <li>
+                  Click the solid purple 📤 Upload & extract action button to
+                  initiate the transfer process.
+                </li>
+                <li>
+                  Keep your browser window open while the file is processed;
+                  once complete, your unpacked folder architecture will populate
+                  directly into the left side of your developer canvas.
+                </li>
+              </ol>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Option 3 – Git Provider (advanced)</h4>
+
+              <p>
+                The <strong>Git Provider (Advanced)</strong> option allows users
+                to connect the project directly to a remote Version Control
+                System (VCS) repository such as GitHub, GitLab, or Bitbucket
+                using authenticated credentials.
+              </p>
+              <p style="margin-top: 20px">
+                This option is recommended for projects that are actively
+                maintained in a source control repository and require secure
+                access.
+              </p>
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/import-git-provider.png"
+                  alt="Git Provider"
+                  class="demo-img"
+                />
+              </div>
+              <p><strong>What is a VCS? </strong></p>
+              <p><strong>VCS</strong> stands for Version Control System.</p>
+              <p>A Version Control System is a tool used to:</p>
+              <ul class="cd-overview-ul">
+                <li>Store and manage source code</li>
+                <li>Track file and code changes over time</li>
+                <li>Support collaboration between multiple developers</li>
+                <li>Maintain version history and backups</li>
+                <li>Restore previous versions when needed</li>
+              </ul>
+
+              <p style="margin-top: 20px">
+                <strong>ZIP files containing</strong>
+              </p>
+              <ul class="cd-overview-ul">
+                <li>Source code</li>
+                <li>Assets</li>
+                <li>Configuration files</li>
+                <li>Project folders</li>
+              </ul>
+
+              <p style="margin-top: 20px">
+                <strong>Common VCS platforms include: </strong>
+              </p>
+              <ul class="cd-overview-ul">
+                <li>GitHub</li>
+                <li>GitLab</li>
+                <li>Bitbucket</li>
+              </ul>
+
+              <p style="margin-top: 20px">
+                <strong>How to Connect Project using VCS: </strong>
+              </p>
+              <ol class="cd-overview-ol">
+                <li>Select <strong>Connect my version control.</strong></li>
+                <li>Authenticate with the repository provider.</li>
+                <li>Select the repository to import.</li>
+                <li>
+                  Confirm synchronization settings by clicking on
+                  <strong>Save</strong>
+                  Integrations.
+                </li>
+              </ol>
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/connect-git-repo.png"
+                  alt=" Connect Project"
+                  class="demo-img"
+                />
+              </div>
+
+              <p style="margin-top: 20px">
+                <strong
+                  >Step-by-Step Setup Guide on how to import existing project
+                </strong>
+              </p>
+              <p style="margin-top: 20px">
+                Follow these steps to configure your project parameters before
+                launch:
+              </p>
+              <p style="margin-top: 20px">
+                <strong>Step 1: Choose How to Build</strong>
+              </p>
+              <p>
+                Under the <strong>How to build</strong> section, select your
+                project's starting point:
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong> Start from scratch: </strong>Select this option if
+                  you want to build a completely brand-new project with a clean
+                  workspace.
+                </li>
+                <li>
+                  <strong> Import existing: </strong>Select this option if you
+                  want to bring in a pre-existing codebase, local files, or
+                  repository data to continue working on an old project.
+                </li>
+              </ul>
+
+              <p><strong>Step 2: Choose Your Technology Stack</strong></p>
+              <p>
+                Under the Technology Stack section, define the programming tools
+                and frameworks for your environment:
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong> Default stack applied (Recommended): </strong>Click
+                  this button to let the platform automatically apply a
+                  standard, pre-tested technology stack. This setup runs
+                  automatically and includes built-in support for automated
+                  testing. workspace.
+                </li>
+                <li>
+                  <strong>Pick custom stack: </strong>Click this button if you
+                  have specific coding languages, databases, or software
+                  frameworks in mind and want to select them manually.
+                </li>
+              </ul>
+
+              <p><strong>Step 3: Launch Your Workspace </strong></p>
+              <p>
+                Once you have made your selections, look to the bottom right of
+                the pop-up window to finalize your choice:
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong>Cancel: </strong>Click this button to exit the setup
+                  window and discard any changes you made.
+                </li>
+                <li>
+                  <strong>Open project:</strong>Click this blue action button to
+                  save your configurations and immediately load your customized
+                  workspace.
+                </li>
+              </ul>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">
+                Project Initialization: Selecting Your Build Path
+              </h4>
+              <p>
+                When creating a new project, the platform analyzes your initial
+                project details and provides an
+                <strong>AI Suggestion</strong> window (as shown in
+                image_c35566.jpg) to help you choose the most efficient
+                development workflow.
+              </p>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">AI Suggestion Panel</h4>
+              <p>
+                The system evaluates your project's scope and highlights a smart
+                recommendation at the top of the interface. For example, if your
+                project involves multiple service types, complex user roles, or
+                extensive integrations, the AI will pre-select the
+                Architect-first approach to ensure proper upfront planning. You
+                can proceed with this recommended path or manually select an
+                alternative option below it.
+              </p>
+              <p style="margin-top: 20px">
+                <strong>Available Build Methods </strong>
+              </p>
+              <p>
+                You can choose from three distinct setup methods depending on
+                your project's complexity and current development state:
+              </p>
+
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong> Incremental build </strong>
+                  <ul>
+                    <li>
+                      <strong>What it does: </strong>
+                      <span
+                        >Allows you to bypass the initial architecture planning
+                        phase and jump straight into the developer workspace to
+                        build the project step by step.
+                      </span>
+                    </li>
+                    <li>
+                      <strong>Best for:</strong>
+                      <span
+                        >Projects where the scope is already explicitly clear,
+                        or for small, medium, and standard large projects where
+                        you want to start coding immediately.
+                      </span>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <strong>Architect-first (Recommended) </strong>
+                  <ul>
+                    <li>
+                      <strong>What it does:</strong>
+                      <span
+                        >Opens the dedicated design and architect workspace to
+                        run a comprehensive requirements analyzer. The AI
+                        assistant will guide you through clarifying questions to
+                        map out full concepts—including screens, workflows, data
+                        models, and user roles—before seamlessly handing the
+                        project off to the development phase.
+                      </span>
+                    </li>
+                    <li>
+                      <strong>Best for:</strong>
+                      <span
+                        >Highly complex, multi-module platforms that require
+                        rigorous initial technical layout and structural design.
+                      </span>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <strong>Advanced setup </strong>
+                  <ul>
+                    <li>
+                      <strong>What it does:</strong>
+                      <span
+                        >Opens an advanced configuration window where you can
+                        import existing source code via a GitHub URL, Git
+                        provider, or a standard ZIP file. It also allows you to
+                        configure a custom tech stack and specify project
+                        opening parameters.
+                      </span>
+                    </li>
+                    <li>
+                      <strong>Best for:</strong>
+                      <span
+                        >Migrating existing applications or projects where you
+                        already have a definitive codebase and specific
+                        technology stack in mind.
+                      </span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Action Buttons</h4>
+              <p>
+                At the bottom right of the screen interface (visible in
+                image_c35566.jpg), you can complete this step using the
+                following controls:
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong>Decide later:</strong>
+                  Postpones the workflow selection and exits the initialization
+                  wizard.
+                </li>
+                <li>
+                  <strong>Open architect / Continue:</strong>
+                  Confirms your highlighted selection (e.g.,
+                  <strong>Open architect</strong> when the
+                  <em>Architect-first</em> path is selected) and transitions you
+                  directly into the chosen workspace interface.
+                </li>
+              </ul>
+            </div>
           </section>
         </main>
       </div>
