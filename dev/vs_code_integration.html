@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Think4ever - Developer</title>
+    <link href="../css/theme.css" rel="stylesheet" type="text/css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/onboarding.css" />
+    <link rel="stylesheet" href="../assets/css/portal.css" />
+    <link rel="stylesheet" href="../assets/css/dev_doc.css" />
+
+    <link rel="stylesheet" href="../assets/css/consumer_docs_home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="../assets/js/i18n.js"></script>
+  </head>
+
+  <body>
+    <div class="consumer-docs-home consumer-getting-started">
+      <!-- Skip to content -->
+      <a
+        href="#cd-main"
+        class="sr-only"
+        style="
+          position: absolute;
+          left: -9999px;
+          top: auto;
+          width: 1px;
+          height: 1px;
+          overflow: hidden;
+        "
+        onfocus="
+          this.style.position = 'static';
+          this.style.width = 'auto';
+          this.style.height = 'auto';
+        "
+        onblur="
+          this.style.position = 'absolute';
+          this.style.left = '-9999px';
+          this.style.width = '1px';
+          this.style.height = '1px';
+          this.style.overflow = 'hidden';
+        "
+        >Skip to main content</a
+      >
+      <!-- Site Header -->
+      <header class="modern-header" id="consumerHeader"></header>
+
+      <div class="consumer-docs-layout">
+        <!-- Mobile sidebar toggle -->
+        <button
+          class="cgs-sidebar-toggle"
+          id="cgsSidebarToggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+        <!-- Sidebar overlay -->
+        <div class="cgs-sidebar-overlay" id="cgsSidebarOverlay"></div>
+        <!-- Sidebar -->
+        <div id="devSidebar"></div>
+        <!-- Main Content -->
+        <main class="cd-main-content" id="cd-main">
+          <!-- Page Title -->
+          <h1 class="cd-page-title" id="cdHomeTitle">
+            Connect your project to VSC (Visual Studio Code)
+          </h1>
+
+          <!-- Overview Section -->
+          <section class="cd-overview" id="cdHomeOverview">
+            <div class="image-wrapper">
+              <img
+                src="../assets/images/dev-doc/vscode-1.png"
+                alt="VS Code Integration"
+                class="demo-img"
+              />
+            </div>
+
+            <div class="para-box">
+              <p>To connect your project to <strong>VS Code:</strong></p>
+              <ol class="cd-overview-ul">
+                <li>
+                  Click the <strong>VS Code</strong> button (highlighted in the
+                  top-right corner).
+                </li>
+                <li>
+                  VS Code Integration popup will be prompted.
+
+                  <div class="image-wrapper">
+                    <img
+                      src="../assets/images/dev-doc/vscode-2.png"
+                      alt="VS Code Integration"
+                      class="demo-img"
+                    />
+                  </div>
+                </li>
+                <li>
+                  Ensure the VS Code extension is installed on your browser. If
+                  not, click the <strong>Download.vsix</strong> button then
+                  install.
+                </li>
+                <li>
+                  Once installed, click on the extension icon in the sidebar,
+                  then select <strong>Think4ever</strong> icon.
+                </li>
+                <li>
+                  Click the ... <strong>(More Actions)</strong> icon at the top
+                  of the Extensions pane.
+                </li>
+                <li>
+                  <strong>Click Install</strong> from VSIX
+                  <div class="image-wrapper">
+                    <img
+                      src="../assets/images/dev-doc/vscode-3.png"
+                      alt="VS Code Integration"
+                      class="demo-img"
+                    />
+                  </div>
+                </li>
+                <li>
+                  Choose your .vsix file from the file explorer to complete the
+                  installation.-
+                </li>
+                <li>
+                  Once opened, your project files will appear in the Explorer
+                  panel on the left side.
+
+                  <div class="image-wrapper">
+                    <img
+                      src="../assets/images/dev-doc/vscode-4.png"
+                      alt="VS Code Integration"
+                      class="demo-img"
+                    />
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">
+                Troubleshooting: If VS Code does not open automatically
+              </h4>
+              <p>Try these:</p>
+              <ul class="cd-overview-ul">
+                <li>Allow pop-ups in your browser</li>
+                <li>Refresh the page and click the button again</li>
+                <li>Check if your browser blocked the redirect</li>
+              </ul>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Optional: Open Terminal in VS Code</h4>
+              <p>Inside VS Code:</p>
+              <ul class="cd-overview-ul">
+                <li>Go to <strong>Terminal → New Terminal</strong></li>
+                <li>
+                  Or press:
+                  <ul>
+                    <li><strong>Ctrl +</strong> ` (Windows)</li>
+                    <li><strong>Cmd +</strong> ` (Mac)</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+    <div id="docFooter"></div>
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/consumer_docs_home.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        if (window.I18n) {
+          window.I18n.init();
+        }
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  </body>
+</html>
