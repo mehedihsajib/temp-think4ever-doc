@@ -5282,3 +5282,7 @@ body.dark .theme-toggle-thumb {
   white-space: nowrap;
   z-index: 0;
 }
+
+.demo-img {
+  position: relative;
+}
