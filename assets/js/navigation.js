@@ -1463,3 +1463,24 @@ document.addEventListener("i18n:applied", (e) => {
     }
   });
 });
+
+function copyToClipboard(button) {
+  const codeElement = button
+    .closest(".code-block-wrapper")
+    .querySelector("pre code");
+  const text = codeElement.textContent || codeElement.innerText;
+  navigator.clipboard
+    .writeText(text)
+    .then(() => {
+      const originalHTML = button.innerHTML;
+      button.innerHTML = '<i class="fa-solid fa-check"></i> Copied';
+      button.classList.add("copied");
+      setTimeout(() => {
+        button.innerHTML = originalHTML;
+        button.classList.remove("copied");
+      }, 2000);
+    })
+    .catch((err) => {
+      console.error("Failed to copy: ", err);
+    });
+}

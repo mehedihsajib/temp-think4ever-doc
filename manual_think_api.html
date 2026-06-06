@@ -260,12 +260,148 @@
         list-style-type: circle;
       }
 
-      pre > code {
-        display: block;
-        background: #f1f1f1;
-        padding: 1.33em;
-        border-radius: 0.33em;
+      /* Premium Light Theme Code Blocks */
+      .code-block-wrapper {
+        margin: 24px 0;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        box-shadow:
+          0 4px 6px -1px rgba(15, 23, 42, 0.05),
+          0 2px 4px -2px rgba(15, 23, 42, 0.05);
+        overflow: hidden;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       }
+
+      .code-block-wrapper:hover {
+        border-color: #cbd5e1;
+        box-shadow:
+          0 10px 15px -3px rgba(15, 23, 42, 0.08),
+          0 4px 6px -4px rgba(15, 23, 42, 0.08);
+      }
+
+      .code-block-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 18px;
+        background: #f8fafc;
+        border-bottom: 1px solid #e2e8f0;
+        user-select: none;
+      }
+
+      .code-block-header-left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .code-block-dots {
+        display: flex;
+        gap: 6px;
+      }
+
+      .code-block-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #e2e8f0;
+        transition: background-color 0.2s ease;
+      }
+
+      .code-block-wrapper:hover .code-block-dot.dot-red {
+        background-color: #ff5f56;
+      }
+      .code-block-wrapper:hover .code-block-dot.dot-yellow {
+        background-color: #ffbd2e;
+      }
+      .code-block-wrapper:hover .code-block-dot.dot-green {
+        background-color: #27c93f;
+      }
+
+      .code-block-lang {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #64748b;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .code-block-copy-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: transparent;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        padding: 6px 12px;
+        font-family: "Inter", sans-serif;
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: #475569;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .code-block-copy-btn:hover {
+        background: #f1f5f9;
+        color: #0f172a;
+        border-color: #cbd5e1;
+      }
+
+      .code-block-copy-btn:active {
+        transform: scale(0.97);
+      }
+
+      .code-block-copy-btn.copied {
+        background: #f0fdf4;
+        color: #16a34a;
+        border-color: #bbf7d0;
+      }
+
+      .code-block-wrapper pre {
+        margin: 0;
+        padding: 20px 24px;
+        background: #ffffff;
+        overflow-x: auto;
+      }
+
+      .code-block-wrapper pre code {
+        display: block;
+        font-family:
+          ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+        font-size: 0.875rem;
+        line-height: 1.7;
+        color: #334155;
+        background: none;
+        padding: 0;
+        border-radius: 0;
+        white-space: pre;
+      }
+
+      /* Simple syntax highlighting colors for light theme */
+      .code-keyword {
+        color: #0f766e;
+        font-weight: 600;
+      } /* GET/POST, curl, etc. */
+      .code-string {
+        color: #0891b2;
+      } /* strings in json */
+      .code-comment {
+        color: #94a3b8;
+        font-style: italic;
+      } /* comments */
+      .code-number {
+        color: #d97706;
+      } /* numbers */
+      .code-boolean {
+        color: #be185d;
+        font-weight: 600;
+      } /* true/false */
+      .code-header-param {
+        color: #4f46e5;
+      } /* curl headers */
     </style>
   </head>
 
@@ -409,28 +545,39 @@
                 JSON layout format, facilitating clean runtime exception
                 handling and uniform metadata parsing:
               </p>
+              <div class="code-block-wrapper">
+                <div class="code-block-header">
+                  <div class="code-block-header-left">
+                    <div class="code-block-dots">
+                      <span class="code-block-dot dot-red"></span>
+                      <span class="code-block-dot dot-yellow"></span>
+                      <span class="code-block-dot dot-green"></span>
+                    </div>
+                    <span class="code-block-lang">JSON</span>
+                  </div>
+                  <button
+                    class="code-block-copy-btn"
+                    onclick="copyToClipboard(this)"
+                  >
+                    <i class="fa-regular fa-copy"></i> Copy
+                  </button>
+                </div>
+                <pre><code><span class="code-comment">// Successful Handshake Layout</span>
+{
+  <span class="code-string">"ok"</span>: <span class="code-boolean">true</span>,
+  <span class="code-string">"data"</span>: { ... },
+  <span class="code-string">"meta"</span>: { ... }
+}
 
-              <pre>
-                    <code>
-                        // Successful Handshake Layout 
-                        "ok": true, 
-
-                        "data": { ... }, 
-
-                        "meta": { ... } 
-                    </code>
-                    <code>
-                        // Operational Exception Layout 
-                        "ok": false, 
-
-                        "error": { 
-
-                            "code": "ERROR_CODE", 
-
-                            "message": "Detailed description outlining the underlying <br/> validation or execution exception." 
-                        }
-                    </code>
-                </pre>
+<span class="code-comment">// Operational Exception Layout</span>
+{
+  <span class="code-string">"ok"</span>: <span class="code-boolean">false</span>,
+  <span class="code-string">"error"</span>: {
+    <span class="code-string">"code"</span>: <span class="code-string">"ERROR_CODE"</span>,
+    <span class="code-string">"message"</span>: <span class="code-string">"Detailed description outlining the underlying validation or execution exception."</span>
+  }
+}</code></pre>
+              </div>
             </div>
 
             <div class="para-box">
@@ -571,27 +718,35 @@
                 deployment server, dispatch an authenticated POST request to the
                 project's agent run endpoint:
               </p>
-              <pre>
-                <code>
-                    Bash 
+              <div class="code-block-wrapper">
+                <div class="code-block-header">
+                  <div class="code-block-header-left">
+                    <div class="code-block-dots">
+                      <span class="code-block-dot dot-red"></span>
+                      <span class="code-block-dot dot-yellow"></span>
+                      <span class="code-block-dot dot-green"></span>
+                    </div>
+                    <span class="code-block-lang">Bash</span>
+                  </div>
+                  <button
+                    class="code-block-copy-btn"
+                    onclick="copyToClipboard(this)"
+                  >
+                    <i class="fa-regular fa-copy"></i> Copy
+                  </button>
+                </div>
+                <pre><code><span class="code-keyword">curl</span> -X POST http://localhost:3005/v1/projects/160/agent-runs \
+  -H <span class="code-header-param">"Authorization: Bearer tf_YOUR_TOKEN"</span> \
+  -H <span class="code-header-param">"Content-Type: application/json"</span> \
+  -d <span class="code-string">'{
+    "agent_type_id": 1,
+    "folder_id": 1,
+    "task_description": "Implement the login page"
+  }'</span></code></pre>
+              </div>
+            </div>
 
-                    curl -X POST http://localhost:3005/v1/projects/160/agent-runs \ 
-
-                    -H "Authorization: Bearer tf_YOUR_TOKEN" \ 
-
-                    -H "Content-Type: application/json" \ 
-
-                    -d '{ 
-
-                        "agent_type_id": 1, 
-
-                        "folder_id": 1, 
-
-                        "task_description": "Implement the login page" 
-
-                    }' 
-                </code>
-              </pre>
+            <div class="para-box">
               <p>Infrastructure Credit Guardrails & Prerequisites</p>
               <p style="margin-top: 20px">
                 Background task compilation loops and automated agent execution
