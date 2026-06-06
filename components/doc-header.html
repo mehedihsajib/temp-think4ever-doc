@@ -14,11 +14,13 @@
   <!-- Desktop + Mobile Navigation -->
   <nav class="modern-nav t4e-nav" aria-label="Main navigation">
     <a class="t4e-toplink" href="#">Home</a>
-    <a class="t4e-toplink" href="https://think4ever.ai/product">How it Works</a>
+    <a class="t4e-toplink" href="https://think4ever.ai/how-it-works/"
+      >How it Works</a
+    >
     <a class="t4e-toplink" href="https://think4ever.ai/vscode-plugin/"
       >VS Code Plugin</a
     >
-    <a class="t4e-toplink" href="https://think4ever.ai/pricing">Pricing</a>
+    <a class="t4e-toplink" href="https://think4ever.ai/#pricing">Pricing</a>
 
     <div class="modern-nav-group t4e-nav-group" data-nav-group>
       <button
@@ -260,6 +262,28 @@
       gap: 20px;
     }
 
+    .modern-mobile-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition:
+        opacity 300ms ease,
+        visibility 300ms ease;
+      z-index: 997;
+    }
+
+    .modern-mobile-menu-overlay.open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
     .t4e-toplink {
       height: 38px;
       padding: 0 16px;
@@ -409,6 +433,31 @@
       flex: 0 0 auto;
     }
 
+    .modern-mobile-menu-toggle {
+      display: none;
+      background: #fff;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 8px;
+      color: #6b7280;
+      font-size: 18px;
+      transition: all 0.2s ease;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+    }
+
+    .modern-mobile-menu-toggle:hover {
+      background: rgba(241, 245, 249, 0.75);
+      color: #111827;
+    }
+
+    .modern-mobile-menu-toggle i {
+      transition: transform 200ms ease;
+    }
+
     .t4e-cta {
       font-size: 14px;
       display: inline-flex;
@@ -453,40 +502,121 @@
         padding: 0 16px;
       }
 
+      .modern-mobile-menu-toggle {
+        display: flex;
+      }
+
       .t4e-nav {
-        top: 72px;
+        position: fixed;
+        top: 64px;
         left: auto;
         right: 0;
         width: min(380px, 100vw);
+        height: calc(100vh - 72px);
         box-shadow: -1px 0 0 #e2e8f0;
         transform: translateX(100%);
+        transition: transform 300ms ease;
+        z-index: 999;
+        background: white;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
       }
 
       .t4e-nav.open {
         transform: translateX(0);
       }
 
+      /* Mobile dropdowns */
+      .t4e-nav-group {
+        border-bottom: 1px solid #f3f4f6;
+      }
+
+      .t4e-nav-trigger {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        padding: 12px;
+        border-radius: 0;
+        font-weight: 600;
+        color: #6b7280;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.15s ease;
+      }
+
+      .t4e-nav-trigger:hover {
+        background: rgba(241, 245, 249, 0.5);
+      }
+
+      .t4e-nav-trigger i {
+        margin-left: 8px;
+        transition: transform 200ms ease;
+      }
+
+      .t4e-nav-group.open .t4e-nav-trigger i {
+        transform: rotate(180deg);
+      }
+
       .t4e-dropdown-menu,
       .t4e-dropdown-menu-right {
+        position: static;
         width: 100%;
-        padding: 10px 0 14px 12px;
-        gap: 12px;
+        padding: 0;
+        gap: 0;
+        left: auto !important;
+        transform: none !important;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 200ms ease,
+          opacity 200ms ease;
+      }
+
+      .t4e-nav-group.open .t4e-dropdown-menu,
+      .t4e-nav-group.open .t4e-dropdown-menu-right {
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
-        transform: none;
-        transition: none;
+        max-height: 1000px;
+        padding: 8px 0;
       }
 
       .t4e-dropdown-item {
-        padding: 12px 10px;
-        border-radius: 12px;
+        padding: 12px 16px;
+        border-radius: 0;
+        margin: 0;
+        border-bottom: 1px solid #f3f4f6;
+      }
+
+      .t4e-dropdown-item:hover {
+        background: #f9fafb;
       }
 
       .t4e-item-icon {
-        width: 34px;
-        height: 34px;
-        flex-basis: 34px;
+        width: 32px;
+        height: 32px;
+        flex-basis: 32px;
+      }
+
+      .t4e-toplink {
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 12px 16px;
+        border-radius: 0;
+        border-bottom: 1px solid #f3f4f6;
+        text-align: left;
+      }
+
+      .t4e-toplink:hover {
+        background: #f9fafb;
       }
 
       .t4e-actions .t4e-cta {
@@ -495,6 +625,10 @@
 
       .modern-nav a.t4e-mobile-cta {
         display: flex !important;
+      }
+
+      .t4e-nav-group.open .t4e-dropdown-menu {
+        transform: unset !important;
       }
     }
 

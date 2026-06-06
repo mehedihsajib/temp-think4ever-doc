@@ -634,7 +634,8 @@ function initMobileMenu() {
   if (toggle.dataset.bound === "true") return;
   toggle.dataset.bound = "true";
 
-  toggle.addEventListener("click", function () {
+  toggle.addEventListener("click", function (event) {
+    event.stopPropagation();
     const isOpen = nav.classList.toggle("open");
     overlay.classList.toggle("open");
 
@@ -651,9 +652,19 @@ function initMobileMenu() {
     toggle.setAttribute("aria-expanded", "false");
   });
 
-  // Close menu on link click
-  nav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
+  // Close menu on link click (except dropdown triggers)
+  nav.querySelectorAll("a:not(.modern-nav-group-trigger)").forEach((link) => {
+    if (link.dataset.boundMobileClose === "true") return;
+    link.dataset.boundMobileClose = "true";
+
+    link.addEventListener("click", (event) => {
+      // Don't close for disabled links
+      if (link.getAttribute("data-disabled") === "true") {
+        event.preventDefault();
+        return;
+      }
+
+      // Close menu
       nav.classList.remove("open");
       overlay.classList.remove("open");
       toggle.innerHTML = '<i class="fa fa-bars"></i>';
@@ -712,7 +723,7 @@ function initHeaderNavDropdowns() {
     let hoverCloseTimer = null;
 
     const setOpen = (open) => {
-      if (open) closeAllGroups();
+      if (open && isDesktop()) closeAllGroups();
       group.classList.toggle("open", open);
       trigger.setAttribute("aria-expanded", String(open));
     };
@@ -729,7 +740,7 @@ function initHeaderNavDropdowns() {
       hoverCloseTimer = setTimeout(() => setOpen(false), 140);
     };
 
-    // Desktop: open on hover (and keep click as a fallback for accessibility)
+    // Desktop: open on hover
     group.addEventListener("mouseenter", function () {
       if (!isDesktop()) return;
       cancelHoverClose();
@@ -742,18 +753,21 @@ function initHeaderNavDropdowns() {
 
     trigger.addEventListener("click", function (event) {
       event.stopPropagation();
-      // Desktop uses hover; clicks should not "stick" open.
-      if (isDesktop()) {
-        cancelHoverClose();
-        setOpen(true);
+      event.preventDefault();
+
+      // Mobile: toggle dropdown open/closed
+      if (!isDesktop()) {
+        const willOpen = !group.classList.contains("open");
+        setOpen(willOpen);
         return;
       }
 
-      const willOpen = !group.classList.contains("open");
-      setOpen(willOpen);
+      // Desktop: open on click, don't close
+      cancelHoverClose();
+      setOpen(true);
     });
 
-    // Keyboard focus: open on focus within (desktop & mobile)
+    // Keyboard: open on focus (desktop only)
     trigger.addEventListener("focus", function () {
       if (isDesktop()) setOpen(true);
     });
@@ -764,12 +778,14 @@ function initHeaderNavDropdowns() {
     });
   });
 
+  // Close all dropdowns on document click (desktop)
   document.addEventListener("click", function (event) {
-    if (!event.target.closest(".modern-nav-group")) {
+    if (isDesktop() && !event.target.closest(".modern-nav-group")) {
       closeAllGroups();
     }
   });
 
+  // Escape key closes dropdowns
   document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {
       closeAllGroups();
@@ -777,7 +793,7 @@ function initHeaderNavDropdowns() {
   });
 
   // Mobile nav: close drawer when a real navigation link is clicked.
-  nav.querySelectorAll("a").forEach((link) => {
+  nav.querySelectorAll("a:not(.modern-nav-group-trigger)").forEach((link) => {
     if (link.dataset.boundNavLink === "true") return;
     link.dataset.boundNavLink = "true";
 
@@ -790,6 +806,7 @@ function initHeaderNavDropdowns() {
       const mobileNavOpen = nav.classList.contains("open");
       if (!mobileNavOpen) return;
 
+      // Close mobile menu on link click
       const toggle = document.getElementById("mobileMenuToggle");
       const overlay = document.getElementById("mobileMenuOverlay");
       nav.classList.remove("open");
@@ -798,6 +815,8 @@ function initHeaderNavDropdowns() {
         toggle.innerHTML = '<i class="fa fa-bars"></i>';
         toggle.setAttribute("aria-expanded", "false");
       }
+      // Close all dropdowns
+      closeAllGroups();
     });
   });
 }
