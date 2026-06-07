@@ -1,0 +1,1281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Think4ever - Designer</title>
+    <link href="css/theme.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/consumer_docs_home.css" />
+    <link rel="stylesheet" href="assets/css/portal.css" />
+    <link rel="stylesheet" href="assets/css/dev_doc.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="assets/js/i18n.js"></script>
+    <style>
+      /* Basic reset for preview consistency */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+
+      /* Premium Modern Header Styles */
+      .modern-header {
+        font-family: "Inter", sans-serif;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 64px;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: saturate(180%) blur(20px);
+        -webkit-backdrop-filter: saturate(180%) blur(20px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        z-index: 300;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease;
+      }
+
+      .modern-header-inner {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+
+      .modern-header-logo-plate {
+        display: flex;
+        align-items: center;
+        padding-left: 36px;
+        height: 100%;
+        box-sizing: border-box;
+      }
+
+      .modern-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .modern-logo span {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #0f172a;
+        letter-spacing: -0.04em;
+      }
+
+      .modern-header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
+        padding: 0 40px;
+        height: 100%;
+      }
+
+      .modern-header-actions {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      /* Responsive Utilities */
+      @media (max-width: 1024px) {
+        .modern-header-logo-plate {
+          width: 240px;
+          min-width: 240px;
+          padding-left: 24px;
+        }
+      }
+
+      /* Modern Layout Overrides */
+      .consumer-docs-layout {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 0 !important;
+        display: flex !important;
+        background: #ffffff;
+      }
+
+      .cd-sidebar {
+        box-sizing: content-box !important;
+        width: 240px !important;
+        min-width: 240px !important;
+        background: #f8fafc !important;
+        border-right: 1px solid #e2e8f0 !important;
+        padding-left: 36px !important;
+        padding-right: 24px !important;
+        padding-top: 36px !important;
+      }
+
+      /* Modernizing Sidebar Internal Elements */
+      .cd-sidebar-header {
+        padding: 0 !important;
+        border-bottom: none !important;
+        margin-bottom: 32px !important;
+      }
+
+      .cd-sidebar-header h3 {
+        color: #0f172a !important;
+        font-family: "Inter", sans-serif !important;
+        font-size: 0.9375rem !important;
+        font-weight: 600 !important;
+        letter-spacing: -0.01em !important;
+        text-transform: none !important;
+        display: flex !important;
+        align-items: center !important;
+      }
+
+      .cd-sidebar-header h3 i {
+        color: #3b82f6 !important;
+        margin-right: 10px !important;
+        font-size: 1.1rem !important;
+      }
+
+      .cd-sidebar-section {
+        margin-bottom: 24px !important;
+      }
+
+      .cd-sidebar-section-label {
+        font-family: "Inter", sans-serif !important;
+        font-size: 0.725rem !important;
+        font-weight: 600 !important;
+        color: #64748b !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.08em !important;
+        padding: 0 12px 10px 0 !important;
+        display: block !important;
+      }
+
+      .cd-sidebar-nav li {
+        padding: 0 !important;
+        margin-bottom: 2px !important;
+      }
+
+      .cd-sidebar-nav li a {
+        padding: 8px 12px !important;
+        font-family: "Inter", sans-serif !important;
+        font-size: 0.875rem !important;
+        color: #475569 !important;
+        border-radius: 6px !important;
+        background: transparent !important;
+        transition: all 0.2s ease !important;
+        font-weight: 500 !important;
+        display: flex !important;
+        align-items: flex-start !important;
+        line-height: 1.5 !important;
+      }
+
+      .cd-sidebar-nav li a i {
+        font-size: 0.825rem !important;
+        width: 24px !important;
+        text-align: left !important;
+        color: #94a3b8 !important;
+        transition: color 0.2s ease !important;
+        margin-top: 3px !important;
+      }
+
+      .cd-sidebar-nav li a:hover {
+        background: #f1f5f9 !important;
+        color: #0f172a !important;
+      }
+
+      .cd-sidebar-nav li a:hover i {
+        color: #475569 !important;
+      }
+
+      .cd-sidebar-nav li a.active {
+        background: #eff6ff !important;
+        color: #1d4ed8 !important;
+        font-weight: 600 !important;
+        box-shadow: inset 3px 0 0 #3b82f6 !important;
+      }
+
+      .cd-sidebar-nav li a.active i {
+        color: #2563eb !important;
+      }
+
+      .cd-main-content {
+        max-width: 960px !important;
+        background: #ffffff !important;
+        padding-top: 56px !important;
+        padding-left: 48px !important;
+        padding-right: 48px !important;
+      }
+
+      /* Custom lists */
+      .cd-overview-ul {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        padding-left: 20px;
+        list-style-type: disc;
+      }
+
+      .cd-overview-ol {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        padding-left: 24px;
+        list-style-type: decimal;
+      }
+
+      .cd-overview-ul li,
+      .cd-overview-ol li {
+        margin-bottom: 16px;
+        font-family: "Inter", sans-serif;
+        font-size: 1rem;
+        color: #475569;
+        line-height: 1.6;
+      }
+
+      .cd-overview-ul li ul {
+        padding-left: 20px;
+      }
+
+      .cd-overview-ul li ul li {
+        list-style-type: circle;
+      }
+
+      .cd-overview-ul li strong,
+      .cd-overview-ol li strong {
+        color: #0f172a;
+        font-weight: 600;
+      }
+
+      .sub-list {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        padding-left: 20px;
+        list-style-type: circle;
+      }
+
+      .cd-overview-ul li ol {
+        list-style-type: decimal !important;
+        padding-left: 20px !important;
+      }
+
+      /* Premium Light Theme Code Blocks */
+      .code-block-wrapper {
+        margin: 24px 0;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        box-shadow:
+          0 4px 6px -1px rgba(15, 23, 42, 0.05),
+          0 2px 4px -2px rgba(15, 23, 42, 0.05);
+        overflow: hidden;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .code-block-wrapper:hover {
+        border-color: #cbd5e1;
+        box-shadow:
+          0 10px 15px -3px rgba(15, 23, 42, 0.08),
+          0 4px 6px -4px rgba(15, 23, 42, 0.08);
+      }
+
+      .code-block-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 18px;
+        background: #f8fafc;
+        border-bottom: 1px solid #e2e8f0;
+        user-select: none;
+      }
+
+      .code-block-header-left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .code-block-dots {
+        display: flex;
+        gap: 6px;
+      }
+
+      .code-block-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #e2e8f0;
+        transition: background-color 0.2s ease;
+      }
+
+      .code-block-wrapper:hover .code-block-dot.dot-red {
+        background-color: #ff5f56;
+      }
+      .code-block-wrapper:hover .code-block-dot.dot-yellow {
+        background-color: #ffbd2e;
+      }
+      .code-block-wrapper:hover .code-block-dot.dot-green {
+        background-color: #27c93f;
+      }
+
+      .code-block-lang {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: #64748b;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .code-block-copy-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background: transparent;
+        border: 1px solid #e2e8f0;
+        border-radius: 6px;
+        padding: 6px 12px;
+        font-family: "Inter", sans-serif;
+        font-size: 0.75rem;
+        font-weight: 500;
+        color: #475569;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .code-block-copy-btn:hover {
+        background: #f1f5f9;
+        color: #0f172a;
+        border-color: #cbd5e1;
+      }
+
+      .code-block-copy-btn:active {
+        transform: scale(0.97);
+      }
+
+      .code-block-copy-btn.copied {
+        background: #f0fdf4;
+        color: #16a34a;
+        border-color: #bbf7d0;
+      }
+
+      .code-block-wrapper pre {
+        margin: 0;
+        padding: 20px 24px;
+        background: #ffffff;
+        overflow-x: auto;
+      }
+
+      .code-block-wrapper pre code {
+        display: block;
+        font-family:
+          ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", "Courier New", monospace;
+        font-size: 0.875rem;
+        line-height: 1.7;
+        color: #334155;
+        background: none;
+        padding: 0;
+        border-radius: 0;
+        white-space: pre;
+      }
+
+      /* Simple syntax highlighting colors for light theme */
+      .code-keyword {
+        color: #0f766e;
+        font-weight: 600;
+      } /* GET/POST, curl, etc. */
+      .code-string {
+        color: #0891b2;
+      } /* strings in json */
+      .code-comment {
+        color: #94a3b8;
+        font-style: italic;
+      } /* comments */
+      .code-number {
+        color: #d97706;
+      } /* numbers */
+      .code-boolean {
+        color: #be185d;
+        font-weight: 600;
+      } /* true/false */
+      .code-header-param {
+        color: #4f46e5;
+      } /* curl headers */
+    </style>
+  </head>
+
+  <body>
+    <div class="consumer-docs-home consumer-getting-started">
+      <!-- Skip to content -->
+      <a
+        href="#cd-main"
+        class="sr-only"
+        style="
+          position: absolute;
+          left: -9999px;
+          top: auto;
+          width: 1px;
+          height: 1px;
+          overflow: hidden;
+        "
+        onfocus="
+          this.style.position = 'static';
+          this.style.width = 'auto';
+          this.style.height = 'auto';
+        "
+        onblur="
+          this.style.position = 'absolute';
+          this.style.left = '-9999px';
+          this.style.width = '1px';
+          this.style.height = '1px';
+          this.style.overflow = 'hidden';
+        "
+        >Skip to main content</a
+      >
+      <!-- Site Header -->
+      <header class="modern-header" id="consumerHeader"></header>
+
+      <div class="consumer-docs-layout">
+        <!-- Mobile sidebar toggle -->
+        <button
+          class="cgs-sidebar-toggle"
+          id="cgsSidebarToggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+        <!-- Sidebar overlay -->
+        <div class="cgs-sidebar-overlay" id="cgsSidebarOverlay"></div>
+        <!-- Sidebar -->
+        <div id="consumerSidebar"></div>
+        <!-- Main Content -->
+        <main class="cd-main-content" id="cd-main">
+          <!-- Page Title -->
+          <h1 class="cd-page-title" id="cdHomeTitle">Think MCP</h1>
+
+          <!-- Overview Section -->
+          <section class="cd-overview" id="cdHomeOverview">
+            <div class="para-box">
+              <h3 class="h3">Overview</h3>
+              <p>
+                The <strong>Think MCP Console</strong> implements the
+                open-source Model Context Protocol (MCP) standard directly into
+                Think4ever’s integration framework via the Connect & Tools
+                panel. Think MCP serves as a secure, live communication bridge,
+                exposing the platform's architectural design capabilities as
+                standard tools that an external AI client can call dynamically.
+              </p>
+              <p style="margin-top: 20px">
+                Instead of operating in an isolated terminal workspace without
+                structural awareness, external AI development assistants can
+                connect directly to this single HTTPS endpoint. This unified
+                context layer allows local agents to safely query project
+                properties, database objects, and active milestones, ensuring
+                all generated code remains strictly aligned with the centralized
+                blueprint.
+              </p>
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/mcp-overview.png"
+                  alt="MCP Overview"
+                  class="demo-img"
+                />
+              </div>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Technical Protocol Architecture</h4>
+              <p>
+                Think MCP functions natively as an <strong>MCP Server</strong>,
+                utilizing an optimized
+                <strong>Streamable HTTP</strong> transport mechanism to
+                communicate with external applications.
+              </p>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Global Endpoint Metadata</h4>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong>MCP Server Endpoint Route:</strong>
+                  <span
+                    >https://cell-ssm-use1-0005.us.portal.think4ever.com/mcp
+                  </span>
+                </li>
+                <li>
+                  <strong>Transport Protocol Type:</strong>
+                  <span>Streamable HTTP </span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Universal Core Method Set</h4>
+              <p style="margin-top: 20px">
+                Once an external developer tool binds to the server interface,
+                it automatically inherits programmatic context capabilities
+                spanning the entire platform architecture:
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong>Project Models: </strong>
+                  <span
+                    >list_projects, get_project, list_concepts, and
+                    get_concept_flow.
+                  </span>
+                </li>
+                <li>
+                  <strong>Block System Engineering:</strong>
+                  <span
+                    >list_concept_blocks, get_concept_block, add_concept_block,
+                    and update_concept_block.
+                  </span>
+                </li>
+                <li>
+                  <strong>Milestone Coordination:</strong>
+                  <span
+                    >list_tasks, get_task, create_task, and set_task_status.
+                  </span>
+                </li>
+                <li>
+                  <strong>Agent Infrastructure Execution:</strong>
+                  <span>submit_agent_run and list_folders. </span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="para-box">
+              <h3 class="h3">Establishing Connection Authentication</h3>
+              <p>
+                The Think MCP engine shares its underlying authentication token
+                pool with the core REST API layer. To connect an external
+                development client safely, complete the following procedural
+                phases:
+              </p>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Step 1: Create a Secure Token</h4>
+              <p>
+                Navigate to either the platform's global top bar configuration
+                panel or navigate through API $\rightarrow$ Access Tokens.
+                Alternatively, click the blue Create token action element
+                positioned inside the header layout of the MCP Console tab.
+              </p>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Recommended Token Security Scopes</h4>
+              <p>
+                For typical local client integrations, configuring your token
+                with a combined permission layer of read + write + agents:submit
+                is highly recommended to support automated code asset
+                verification. For increased team security, toggle access
+                constraints to explicitly restrict the key's authorization scope
+                to your active project instance exclusively.
+              </p>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Step 2: Register the Server inside Your Client</h4>
+              <p>
+                Copy the auto-generated connection string parameters from the
+                console tab window, then access your local development
+                application configurations to attach the remote Think MCP URL
+                alongside your secure bearer key string (tf_YOUR_TOKEN).
+              </p>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Step 3: Execute Connection Diagnostics</h4>
+              <p>
+                Open the <strong>Tools & test</strong> sub-tab inside your
+                workspace panel. Trigger a live connection verification pass to
+                force-list available system schemas and ensure the background
+                RPC channel is functioning flawlessly.
+              </p>
+            </div>
+
+            <div class="para-box">
+              <h3 class="h3">Think MCP & Claude Code Integration Manual</h3>
+              <p>
+                The <strong>Think MCP Console</strong> seamlessly connects
+                native terminal assistants to your centralized project workspace
+                using the open-source Model Context Protocol (MCP) standard. By
+                linking <strong>Claude Code (CLI)</strong> directly to your live
+                environment, you provide your local AI engineer with complete
+                context over your application's architecture, data models, and
+                milestones, eliminating isolated or broken code generation.
+              </p>
+
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/mcp-claude-cli.png"
+                  alt="Claude Code Integration"
+                  class="demo-img"
+                />
+              </div>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Establishing Client Authentication</h4>
+              <p>
+                Think MCP and the standard REST API draw from a unified token
+                pool. Before running terminal commands, you must provision an
+                access token to authorize your local client.
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong>Token Provisioning:</strong>
+                  <span
+                    >Navigate to the top bar of the platform interface or head
+                    to API $\rightarrow$ <strong>Access Tokens</strong>.
+                    Alternatively, use the <strong>Create token</strong> button
+                    inside your current console workspace.
+                  </span>
+                </li>
+                <li>
+                  <strong>Recommended Scopes:</strong>
+                  <span
+                    >For seamless Claude Code synchronization, ensure your token
+                    is granted read + write + agents:submit privileges</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="para-box">
+              <h3 class="h3">Mounting Think MCP in Claude Code</h3>
+              <p>
+                Claude Code supports remote HTTP MCP servers natively out of the
+                box. You can register the Think4ever server directly within your
+                terminal workspace using two distinct methods.
+              </p>
+
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/mcp-claude-cli-2.png"
+                  alt="Claude Code Integration"
+                  class="demo-img"
+                />
+              </div>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Option A: Direct Terminal Registration</h4>
+              <p>
+                Execute the following transport configuration sequence directly
+                inside your active command-line terminal to register the server:
+              </p>
+
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/mcp-claude-cli-3.png"
+                  alt="Claude Code Integration"
+                  class="demo-img"
+                />
+              </div>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong> Global Access Scope: </strong>
+                  <span>
+                    Append the --scope user modifier flag to the end of the
+                    command to make the Think4ever server context universally
+                    available across all terminal directories on your machine.
+                  </span>
+                  <div class="image-wrapper">
+                    <img
+                      src="assets/images/mcp-claude-cli-4.png"
+                      alt="Claude Code Integration"
+                      class="demo-img"
+                    />
+                  </div>
+                </li>
+                <li>
+                  <strong> Project Access Scope: </strong>
+                  <span>
+                    Append the --scope project modifier flag instead to write a
+                    localized, shared environment bridge into your active
+                    development folder.
+                  </span>
+
+                  <div class="image-wrapper">
+                    <img
+                      src="assets/images/mcp-claude-cli-4.png"
+                      alt="Claude Code Integration"
+                      class="demo-img"
+                    />
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">
+                Option B: Root Repository Configuration Manifest
+              </h4>
+              <p>
+                For engineering teams looking to standardize architectural
+                context across multiple contributors, you can bypass manual
+                terminal commands by committing a dedicated project config file
+                named .mcp.json directly into the root directory of your source
+                code repository:
+              </p>
+              <div class="code-block-wrapper">
+                <div class="code-block-header">
+                  <div class="code-block-header-left">
+                    <div class="code-block-dots">
+                      <span class="code-block-dot dot-red"></span>
+                      <span class="code-block-dot dot-yellow"></span>
+                      <span class="code-block-dot dot-green"></span>
+                    </div>
+                    <span class="code-block-lang">JSON</span>
+                  </div>
+                  <button
+                    class="code-block-copy-btn"
+                    onclick="copyToClipboard(this)"
+                  >
+                    <i class="fa-regular fa-copy"></i> Copy
+                  </button>
+                </div>
+                <pre><code> <span class="code-string">{ 
+
+  "mcpServers": { 
+
+    "think4ever": { 
+
+      "type": "http", 
+
+      "url": "https://cell-ssm-use1-0005.us.portal.think4ever.com/mcp", 
+
+      "headers": { 
+
+        "Authorization": "Bearer tf_YOUR_TOKEN" 
+
+      } 
+
+  
+
+} </span></code></pre>
+              </div>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Connection Verification Protocols</h4>
+              <p>
+                Once you have applied your configuration via the terminal or a
+                local JSON manifest, verify that the RPC connection channel is
+                successfully initialized.
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong>Step 1:</strong>
+                  <span>
+                    Run the protocol list command in your terminal to ensure the
+                    client recognizes the tool mapping:
+                  </span>
+                  <div class="image-wrapper">
+                    <img
+                      src="assets/images/mcp-claude-cli-6.png"
+                      alt="Agent and Task Interfaces"
+                      class="demo-img"
+                    />
+                  </div>
+                </li>
+                <li>
+                  <strong> Step 2: </strong>
+                  <span
+                    >Start a fresh interactive session with your assistant, and
+                    run the inline diagnostic check to confirm live tool
+                    synchronization:
+                  </span>
+                  <p>Bash</p>
+                  <p>/mcp</p>
+                  <div class="image-wrapper">
+                    <img
+                      src="assets/images/mcp-claude-cli-7.png"
+                      alt="Agent and Task Interfaces"
+                      class="demo-img"
+                    />
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="para-box">
+              <h3 class="h3">Security & Version Control Guardrails</h3>
+              <h4 class="h4">Operational Safety Notice</h4>
+              <p>
+                <strong>
+                  Never commit a live, unencrypted authentication token directly
+                  to a shared version control repository (such as public GitHub
+                  branches). >
+                </strong>
+              </p>
+              <p style="margin-top: 20px">
+                If you are utilizing a committed .mcp.json file at your
+                repository root to coordinate team environments, keep the token
+                out of version control by running claude mcp add --scope user
+                locally, or reference a secured local environment variable
+                mapping ($THINK4EVER_TOKEN) within your client configuration
+                strings instead.
+              </p>
+            </div>
+
+            <div class="para-box">
+              <h3 class="h3">Troubleshooting Guide</h3>
+              <p>
+                This centralized guide provides technical diagnostics,
+                step-by-step resolution pathways, and error code definitions for
+                both the <strong>Think API</strong> and
+                <strong>Think MCP</strong> runtime environments. Follow these
+                procedures if your automated scripts, continuous integration
+                pipelines, or local AI terminal assistants fail to connect or
+                execute tasks.
+              </p>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Core API Status & Error Code Reference</h4>
+              <p>
+                When an external client or programmatic pipeline receives an
+                error, parse the outer JSON response envelope ("ok": false) and
+                examine the returned error.code against the official status
+                matrix:
+              </p>
+
+              <table class="config-table">
+                <thead>
+                  <tr>
+                    <th>HTTP Status</th>
+                    <th>error.code</th>
+                    <th>Meaning / Core Resolution Context</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>400 </strong>
+                    </td>
+                    <td>BAD_REQUEST</td>
+                    <td>
+                      <strong>Missing/Invalid parameters:</strong> The request
+                      body payload or query string variables fail strict schema
+                      validation.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>401 </strong>
+                    </td>
+                    <td>UNAUTHORIZED</td>
+                    <td>
+                      <strong>Missing/invalid token:</strong> The required
+                      Authorization header is missing, malformed, or the
+                      cryptographic token does not match known records.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>402 </strong>
+                    </td>
+                    <td>INSUFFICIENT_CREDITS</td>
+                    <td>
+                      <strong>Out of credits: </strong> Programmatic agent
+                      initializations and pipeline execution queues require
+                      active server resource capacity and are gated by your
+                      remaining account balance.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>403 </strong>
+                    </td>
+                    <td>FORBIDDEN</td>
+                    <td>
+                      <strong
+                        >Token missing a scope / project mismatch:
+                      </strong>
+                      The token signature is authenticated, but it lacks the
+                      necessary method privileges or project-level boundaries
+                      required for the request.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>404 </strong>
+                    </td>
+                    <td>NOT_FOUND</td>
+                    <td>
+                      <strong>Resource missing or not accessible: </strong>
+                      Resource missing or not accessible: The target URL path,
+                      project ID, block component, or task tracking identifier
+                      does not exist or has been deleted.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>409 </strong>
+                    </td>
+                    <td>CONFLICT</td>
+                    <td>
+                      <strong>State conflict: </strong>
+                      The payload introduces changes that conflict with the
+                      current system state, such as attempting to inject an item
+                      with a duplicate block ID.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>500 </strong>
+                    </td>
+                    <td>INTERNAL</td>
+                    <td>
+                      <strong>Unexpected server error: </strong>
+                      An unhandled exception occurred within the platform
+                      engine. If this error persists, contact system support.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="para-box">
+              <p style="margin-top: 20px">
+                <strong>Resolving 401 UNAUTHORIZED Errors </strong>
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong>The Root Cause:</strong
+                  ><span
+                    >The platform cannot validate your identity because the
+                    token is expired, missing, or malformed.
+                  </span>
+                </li>
+                <li>
+                  <strong>The Fix: </strong>
+                  <ol>
+                    <li>
+                      Navigate to the Access Tokens manager tab inside the
+                      console interface.
+                    </li>
+                    <li>
+                      Confirm your token is active. If it has expired or been
+                      revoked, generate a new bearer string.
+                    </li>
+                    <li>
+                      Verify your script's HTTP header formatting. The token
+                      must be passed exactly as follows (including the single
+                      space after Bearer): HTTP
+                    </li>
+                  </ol>
+                </li>
+              </ul>
+              <p><em>Authorization: Bearer tf_YOUR_TOKEN </em></p>
+            </div>
+
+            <div class="para-box">
+              <p style="margin-top: 20px">
+                <strong>Resolving 403 FORBIDDEN Errors </strong>
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong>The Root Cause:</strong
+                  ><span
+                    >Your token is cryptographically authentic, but it lacks the
+                    precise functional permission level (scope) or
+                    project-specific access required to execute the action.
+                  </span>
+                </li>
+                <li>
+                  <strong>The Fix: </strong>
+                  <ol>
+                    <li>
+                      Check the Scope column in your console definitions to
+                      identify the exact permission required for your target
+                      endpoint (e.g., agents:submit or tasks:write).
+                    </li>
+                    <li>
+                      Return to the <strong> Access Tokens </strong> tab and
+                      provision a new token.
+                    </li>
+                    <li>
+                      Explicitly check the necessary read/write method scopes
+                      and make sure the token's project boundary matches the
+                      active target project ID. For full local client
+                      capabilities, configuring read + write + agents:submit is
+                      highly recommended.
+                    </li>
+                  </ol>
+                </li>
+              </ul>
+            </div>
+
+            <div class="para-box">
+              <p style="margin-top: 20px">
+                <strong>Resolving 402 INSUFFICIENT_CREDITS Errors </strong>
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong>The Root Cause:</strong
+                  ><span
+                    >The request is authorized, but the background multi-agent
+                    compilation engine or execution queue has been throttled due
+                    to an empty resource balance.
+                  </span>
+                </li>
+                <li>
+                  <strong>The Fix: </strong>
+                  <ol>
+                    <li>
+                      Check the top-right corner of the web interface workspace
+                      to find your active <strong>Credits</strong> counter.
+                    </li>
+                    <li>
+                      If your account balance is depleted, navigate to your
+                      team's billing and subscription profile to allocate
+                      additional infrastructure points before retrying queue
+                      tasks.
+                    </li>
+                  </ol>
+                </li>
+              </ul>
+            </div>
+
+            <div class="para-box">
+              <p style="margin-top: 20px">
+                <strong>Resolving 400 BAD_REQUEST Errors </strong>
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong>The Root Cause:</strong
+                  ><span
+                    >The request body structure or path variables failed
+                    automated system parsing schemas.
+                  </span>
+                </li>
+                <li>
+                  <strong>The Fix: </strong>
+                  <ol>
+                    <li>
+                      Ensure you are not hardcoding outdated or mock parameter
+                      records into your automated scripts.
+                    </li>
+                    <li>
+                      You must fetch valid parameter keys dynamically from the
+                      environment before submitting a task execution payload.
+                      For example, query /v1/agent-types to pull a valid
+                      agent_type_id, and fetch /v1/projects/:id/folders to
+                      identify the correct target folder_id.
+                    </li>
+                  </ol>
+                </li>
+              </ul>
+            </div>
+
+            <div class="para-box">
+              <h3 class="h3">Think MCP Client & Transport Diagnostics</h3>
+              <p>
+                If local developer utilities—such as Claude Code (CLI), Cursor,
+                or Codex—fail to establish a connection loop with the Model
+                Context Protocol background layer, run through these protocol
+                checks.
+              </p>
+              <p style="margin-top: 20px">
+                Client Fails to Bind / Transport Socket Timeouts
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong>The Root Cause:</strong>
+                  <span>
+                    Support for remote HTTP MCP server endpoints varies
+                    depending on your IDE software and active build version.
+                    Some third-party clients can only communicate natively using
+                    local standard input/output (stdio) pipelines.
+                  </span>
+                </li>
+                <li>
+                  <strong>TThe Fix: </strong>
+                  <span>
+                    If your client does not natively process streamable remote
+                    HTTP transport connections, you must use an explicit Node.js
+                    bridge to map stdio streams over to the live server
+                    endpoint. Update your application's global configuration
+                    file (e.g., claude_desktop_config.json) to invoke the
+                    mcp-remote proxy module:
+                  </span>
+                </li>
+              </ul>
+              <pre>
+                <code>
+                    JSON 
+
+{ 
+
+  "mcpServers": { 
+
+    "think4ever": { 
+
+      "command": "npx", 
+
+      "args": [ 
+
+        "-y", 
+
+        "mcp-remote", 
+
+        "https://cell-ssm-use1-0005.us.portal.think4ever.com/mcp", 
+
+        "--header", 
+
+        "Authorization: Bearer tf_YOUR_TOKEN" 
+
+      ] 
+
+    } 
+
+  } 
+
+} 
+                </code>
+              </pre>
+            </div>
+
+            <div class="para-box">
+              <h3 class="h3">Context Alignment Failures inside Claude Code</h3>
+              <p>
+                <strong>The Root Cause: </strong> The transport server setup was
+                bound using highly restrictive localized scopes, which prevents
+                the terminal assistant from fetching the architecture maps when
+                you navigate away from a specific folder.
+              </p>
+              <p style="margin-top: 20px">The Fix:</p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong> To make the server globally accessible: </strong>
+                  <span>
+                    If you want your system context universally available across
+                    every terminal directory and codebase workspace on your
+                    machine, register the tool with the user-level scope
+                  </span>
+
+                  <span>flag: </span>
+                  Bash claude mcp add think4ever --transport http
+                  https://cell-ssm-use1-0005. "Authorization: Bearer
+                  tf_YOUR_TOKEN" --scope use r
+                </li>
+                <li>
+                  <strong> To isolate configuration states safely: </strong>
+                  <span>
+                    If you prefer to purposefully lock the API credentials to an
+                    isolated repository so your team can collaborate securely
+                    without leaking personal tokens, run the command with the
+                    project-level scope flag instead. This writes a localized,
+                    self-contained .mcp.json manifest directly into the current
+                    repository root directory.
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="para-box">
+              <h3 class="h3">Sandbox Connectivity Verification Checklist</h3>
+              <p>
+                Use these three quick terminal diagnostics to completely rule
+                out network firewalls, DNS routing blocks, or hidden syntax bugs
+                before launching continuous delivery pipelines or complex
+                multi-agent runs:
+              </p>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Step 1: Base URL Cluster Ping</h4>
+              <p>
+                Dispatch a clean head request from your local command line
+                against your assigned workspace cluster instance path:
+              </p>
+              <p>
+                <em>
+                  Verify that the cluster responds with an expected 200 OK or
+                  401 Unauthorized block payload to confirm that the endpoint is
+                  reachable from your network.
+                </em>
+              </p>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Step 2: Live RPC Schema Enumeration</h4>
+              <p>
+                Test your token validation accuracy and remote transport
+                capabilities simultaneously by manually dispatching a raw
+                JSON-RPC tools/list sequence over the streamable HTTP channel:
+              </p>
+              <p style="margin-top: 20px">
+                <em>
+                  Verify that the cluster responds with an expected 200 OK or
+                  401 Unauthorized block payload to confirm that the endpoint is
+                  reachable from your network.
+                </em>
+              </p>
+              <p style="margin-top: 20px">
+                curl -X POST
+                https://cell-ssm-use1-0005.us.portal.think4ever.com/mcp \ -H
+                "Authorization: Bearer tf_YOUR_TOKEN" \ -H "Content-Type:
+                application/json" \ -d
+                '{"jsonrpc":"2.0","id":1,"method":"tools/list"}'
+              </p>
+              <p style="margin-top: 20px">
+                <em>
+                  Review the response stream. A pristine connection will
+                  instantly return a clean JSON payload mapping out your
+                  project's active tool schema arrays (including list_projects,
+                  get_concept_flow, and submit_agent_run).
+                </em>
+              </p>
+            </div>
+
+            <div class="para-box">
+              <h4 class="h4">Step 3: Console Live Diagnostics Pass</h4>
+              <p>
+                If your local tool's terminal log streams remain unpopulated,
+                open your web browser and navigate directly to the
+                <strong>Tools</strong> & test sub-tab inside the
+                <strong>Connect & Tools</strong> sidebar menu. Trigger a live
+                connection check to view the real-time RPC transport frame
+                directly on your screen, letting you isolate version disparities
+                or syntax mismatches instantly.
+              </p>
+              <p style="margin-top: 20px">
+                <em>
+                  Verify that the cluster responds with an expected 200 OK or
+                  401 Unauthorized block payload to confirm that the endpoint is
+                  reachable from your network.
+                </em>
+              </p>
+            </div>
+            <!-- ===== Explanation Video ===== -->
+            <div class="yt-video" data-video-id="CQpIODqNFek"></div>
+          </section>
+        </main>
+      </div>
+    </div>
+    <div id="docFooter"></div>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/consumer_docs_home.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        if (window.I18n) {
+          window.I18n.init();
+        }
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  </body>
+</html>
