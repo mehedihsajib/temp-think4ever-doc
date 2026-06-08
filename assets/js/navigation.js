@@ -1121,6 +1121,15 @@ document.addEventListener("DOMContentLoaded", function () {
     id: "consumerHeader",
     url: toBasePath("components/doc-header.html"),
     onLoaded: (el) => {
+      // Load header styles dynamically
+      if (!document.getElementById("t4e-header-css")) {
+        const link = document.createElement("link");
+        link.id = "t4e-header-css";
+        link.rel = "stylesheet";
+        link.href = toBasePath("assets/css/header.css");
+        document.head.appendChild(link);
+      }
+
       initDocHeader(el);
       setHeaderActive(el, currentPage);
       if (window.I18n) window.I18n.applyToDOM(el);
