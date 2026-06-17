@@ -5286,3 +5286,8 @@ body.dark .theme-toggle-thumb {
 .demo-img {
   position: relative;
 }
+
+.nav-svg-icon {
+  display: inline-block;
+  width: 20px;
+}
