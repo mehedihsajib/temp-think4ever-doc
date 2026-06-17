@@ -456,19 +456,20 @@
             <!-- Main Content -->
             <main class="cd-main-content" id="cd-main">
                 <!-- Page Title -->
-                <h1 class="cd-page-title" id="cdHomeTitle">Cursor</h1>
+                <h1 class="cd-page-title" id="cdHomeTitle">VS Code</h1>
 
                 <!-- Overview Section -->
                 <section class="cd-overview" id="cdHomeOverview">
                     <div class="para-box">
                         <p>
-                            Cursor supports remote HTTP MCP servers natively using an <code>mcp.json</code>
-                            configuration file. This
-                            allows Cursor's Composer or
-                            Agent mode to reference your product specifications seamlessly as you edit code.
+                            VS Code’s GitHub Copilot agent mode supports remote HTTP MCP servers natively (VS Code
+                            1.99+). This integration ensures
+                            every Copilot developer seat has access to the exact same governed product context,
+                            regardless of their local machine
+                            configuration.
                         </p>
                         <div class="image-wrapper">
-                            <img src="assets/images/mcp/mcp_cursor.png" alt="Cursor" class="demo-img" />
+                            <img src="assets/images/mcp/mcp-vscode.png" alt="VS Code" class="demo-img" />
                         </div>
                     </div>
 
@@ -476,16 +477,23 @@
                         <h4 class="h4">
                             Technical Integration
                         </h4>
-                        <p>Follow these configuration steps to register the think4ever MCP server within your Cursor IDE
+                        <p>Follow these configuration steps to register the think4ever MCP server within your VS Code
                             environment.</p>
+                    </div>
+
+                    <div class="para-box">
+                        <h4 class="h4">
+                            VS Code (GitHub Copilot)
+                        </h4>
+                        <p>VS Code's Copilot agent mode supports remote HTTP MCP servers natively (VS Code 1.99+).</p>
                     </div>
 
 
 
                     <div class="para-box">
                         <h4 class="h4">Step 1</h4>
-                        <p>Add to <code>~/.cursor/mcp.json</code> (global) or <code>.cursor/mcp.json</code> (per
-                            project):</p>
+                        <p>Create <code>.vscode/mcp.json</code> in your workspace (note: top-level key is
+                            <code>servers</code>, not <code>mcpServers</code>):</p>
                         <div class="code-block-wrapper">
                             <div class="code-block-header">
                                 <div class="code-block-header-left">
@@ -501,49 +509,56 @@
                                 </button>
                             </div>
                             <pre><code>{
-  <span class="code-keyword">"mcpServers"</span>: {
+  <span class="code-keyword">"servers"</span>: {
     <span class="code-keyword">"think4ever"</span>: {
+      <span class="code-keyword">"type"</span>: <span class="code-string">"http"</span>,
       <span class="code-keyword">"url"</span>: <span class="code-string">"https://cell-ssm-use1-0005.us.portal.think4ever.com/mcp"</span>,
       <span class="code-keyword">"headers"</span>: { <span class="code-keyword">"Authorization"</span>: <span class="code-string">"Bearer tf_71b84ebb8284f86491f24b85311a55dfd2b0c9e74c678c7e"</span> }
     }
   }
 }</code></pre>
                         </div>
+                        <p style="margin-top: 16px;">Or run <strong>MCP: Add Server</strong> from the Command Palette
+                            and pick <strong>HTTP</strong>. To make it available in every workspace, add it to your user
+                            configuration via <strong>MCP: Open User Configuration</strong>.</p>
                     </div>
 
                     <div class="para-box">
                         <h4 class="h4">Step 2</h4>
-                        <p>Open <strong>Settings &rarr; MCP</strong> in Cursor to confirm <code>think4ever</code> shows
-                            a green status and lists its tools.</p>
+                        <p>Open Copilot Chat in <strong>Agent</strong> mode and click the tools icon &mdash; the
+                            <code>think4ever</code> tools should be listed. Toggle on the ones you want active.</p>
                     </div>
 
                     <div class="para-box">
                         <h4 class="h4">Step 3</h4>
-                        <p>Use it from <strong>Agent</strong> mode in the chat panel &mdash; Cursor decides when to call
-                            the tools, and asks before each call unless you enable auto-run for the server.</p>
+                        <p>You can also reference tools directly in chat with <code>#</code> (e.g.
+                            <code>#list_tasks</code>) to force a specific call.</p>
                     </div>
 
                     <div class="para-box">
-                        <h4 class="h4">Tips</h4>
-                        <p>Add a Cursor rule (<code>.cursor/rules</code>) such as &ldquo;<em>Product specs, tasks and
-                                issues live in the think4ever MCP server &mdash; consult the active concept before
-                                structural edits, and file issues there instead of TODO comments.</em>&rdquo;</p>
+                        <h4 class="h4">💡 Tips</h4>
+                        <p style="margin-top: 10px;">Add standing context to
+                            <code>.github/copilot-instructions.md</code> to keep Copilot aligned: &ldquo;<em>This
+                                project's specs, tasks and issues live in the think4ever MCP server; check the active
+                                concept before structural changes.</em>&rdquo;</p>
                     </div>
 
                     <div class="para-box">
                         <h4 class="h4">⚠️ Security Warning</h4>
-                        <p style="margin-top: 10px;">Do not commit a real API token in a per-project
-                            <code>.cursor/mcp.json</code> file on a shared repository. Prefer using the global file in
-                            your home directory for private tokens.</p>
+                        <p style="margin-top: 10px;">Do not commit a real API token in a shared
+                            <code>.vscode/mcp.json</code> file. VS Code supports an <code>inputs</code> section that
+                            prompts for secrets and stores them securely&mdash;see the official VS Code MCP
+                            documentation for advanced secrets management.</p>
                     </div>
 
                     <div class="para-box">
                         <h3 class="h3">
-                            Cursor Use Cases & Sample Prompts
+                            VS Code Copilot Use Cases & Sample Prompts
                         </h3>
                         <p>
-                            Cursor operates human-in-the-loop directly inside your editor. Connecting it to think4ever
-                            allows every edit, refactor, and review to be driven by a centralized product brain.
+                            Integrating think4ever with GitHub Copilot anchors agent mode directly to your
+                            specifications, allowing code creation, documentation, and task tracking to happen
+                            side-by-side inside your workspace.
                         </p>
                         <table class="config-table">
                             <thead>
@@ -555,111 +570,111 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        <strong>UI Designs to Components</strong>
+                                        <strong>Spec-Anchored Agent Runs</strong>
                                     </td>
                                     <td>
                                         <em>
-                                            "Get the 'Customer Dashboard' UI design from think4ever and implement it as
-                                            a React page in this repo, matching it pixel for pixel."
+                                            "Implement the think4ever requirement 'Bulk user import' in this workspace;
+                                            follow the stored API contract and ask me before schema changes."
                                         </em>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <strong>The Design Contract, Enforced</strong>
+                                        <strong>Direct Tool Calls with #</strong>
                                     </td>
                                     <td>
                                         <em>
-                                            "Fetch the think4ever design contract and restyle this component to comply —
-                                            colors, spacing, navigation, and accessibility rules."
+                                            "Try #get_active_concept — then implement the missing validation this
+                                            concept block requires."
                                         </em>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <strong>Concept as Living Context</strong>
+                                        <strong>The Task Board in Copilot Chat</strong>
                                     </td>
                                     <td>
                                         <em>
-                                            "What does the think4ever concept say the notifications module is
-                                            responsible for? Does this file match it?"
+                                            "List my open think4ever tasks for this project, then mark task 87 as in
+                                            progress and link this branch in a comment."
                                         </em>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <strong>ERD-Aware Edits</strong>
+                                        <strong>Designs to Components, with Tests</strong>
                                     </td>
                                     <td>
                                         <em>
-                                            "Before we change this model, check the think4ever data object for
-                                            'reservations' — relationships, cardinalities, and sensitivities."
+                                            "Fetch the 'Settings page' UI design from think4ever and build it with our
+                                            component library, following the think4ever design contract."
                                         </em>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <strong>Rule Lookup Before Risky Edits</strong>
+                                        <strong>Rule-Aware Refactors</strong>
                                     </td>
                                     <td>
                                         <em>
-                                            "Pull the think4ever business rules covering cancellations before we change
-                                            this function, and confirm the change violates none of them."
+                                            "Refactor this billing service, but first pull the think4ever business rules
+                                            attached to billing — the refactor must violate none of them."
                                         </em>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <strong>Tasks Without Tab-Switching</strong>
+                                        <strong>Problems Panel &rarr; Tracked Issues</strong>
                                     </td>
                                     <td>
                                         <em>
-                                            "Create a think4ever task for refactoring this service, medium priority,
-                                            assigned to me — and link it to the concept block it touches."
+                                            "Create think4ever issues for the three TypeScript errors you just found —
+                                            one per root cause, with file and line references."
                                         </em>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <strong>Inline Issue Filing</strong>
+                                        <strong>Cross-Source Answers</strong>
                                     </td>
                                     <td>
                                         <em>
-                                            "File a think4ever issue: this query has an N+1 problem — include this file
-                                            and line in the description and tag it performance."
+                                            "Compare our local config with the deployment config stored in think4ever
+                                            files and list every difference that matters."
                                         </em>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <strong>Two-Way Sync</strong>
+                                        <strong>Drift Check Before Merge</strong>
                                     </td>
                                     <td>
                                         <em>
-                                            "We merged auth and sessions into one service — update the think4ever
-                                            concept blocks accordingly."
+                                            "Check this branch against the think4ever concept and API contracts: flag
+                                            drift, and update the spec where our change is the new truth."
                                         </em>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <strong>Day-One Ramp-Up</strong>
+                                        <strong>Onboarding Inside the Editor</strong>
                                     </td>
                                     <td>
                                         <em>
-                                            "I'm new here — walk me through the think4ever concept for this project,
-                                            then show me how this repo maps to it."
+                                            "I'm new to this codebase — read the think4ever concept and give me a tour
+                                            of how this workspace implements it."
                                         </em>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <strong>Spec-Cited Reviews</strong>
+                                        <strong>PR Descriptions with Spec Links</strong>
                                     </td>
                                     <td>
                                         <em>
-                                            "Summarize this change set citing the think4ever requirements and tasks it
-                                            implements, ready to paste into the PR."
+                                            "Draft a PR description for this diff referencing the think4ever tasks it
+                                            closes and the requirements it implements."
                                         </em>
                                     </td>
                                 </tr>
