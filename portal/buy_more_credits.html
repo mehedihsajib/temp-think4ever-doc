@@ -1,245 +1,206 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Think4ever - Portal</title>
-    <link href="../css/theme.css" rel="stylesheet" type="text/css" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="../assets/css/global.css" />
-    <link rel="stylesheet" href="../assets/css/onboarding.css" />
-    <link rel="stylesheet" href="../assets/css/dev_doc.css" />
-    <link rel="stylesheet" href="../assets/css/portal.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Think4Ever - Portal</title>
+  <link href="../css/theme.css" rel="stylesheet" type="text/css" />
 
-    <link rel="stylesheet" href="../assets/css/consumer_docs_home.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="../assets/js/i18n.js"></script>
-  </head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/onboarding.css" />
+  <link rel="stylesheet" href="../assets/css/dev_doc.css" />
+  <link rel="stylesheet" href="../assets/css/portal.css" />
 
-  <body>
-    <div class="consumer-docs-home consumer-getting-started">
-      <!-- Skip to content -->
-      <a
-        href="#cd-main"
-        class="sr-only"
-        style="
+  <link rel="stylesheet" href="../assets/css/consumer_docs_home.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="../assets/js/i18n.js"></script>
+</head>
+
+<body>
+  <div class="consumer-docs-home consumer-getting-started">
+    <!-- Skip to content -->
+    <a href="#cd-main" class="sr-only" style="
           position: absolute;
           left: -9999px;
           top: auto;
           width: 1px;
           height: 1px;
           overflow: hidden;
-        "
-        onfocus="
+        " onfocus="
           this.style.position = 'static';
           this.style.width = 'auto';
           this.style.height = 'auto';
-        "
-        onblur="
+        " onblur="
           this.style.position = 'absolute';
           this.style.left = '-9999px';
           this.style.width = '1px';
           this.style.height = '1px';
           this.style.overflow = 'hidden';
-        "
-        >Skip to main content</a
-      >
-      <!-- Site Header -->
-      <header class="modern-header" id="consumerHeader"></header>
+        ">Skip to main content</a>
+    <!-- Site Header -->
+    <header class="modern-header" id="consumerHeader"></header>
 
-      <div class="consumer-docs-layout">
-        <!-- Mobile sidebar toggle -->
-        <button
-          class="cgs-sidebar-toggle"
-          id="cgsSidebarToggle"
-          aria-label="Toggle navigation menu"
-          aria-expanded="false"
-        >
-          <i class="fa fa-bars"></i>
-        </button>
-        <!-- Sidebar overlay -->
-        <div class="cgs-sidebar-overlay" id="cgsSidebarOverlay"></div>
-        <!-- Sidebar -->
-        <div id="portalSidebar"></div>
-        <!-- Main Content -->
-        <main class="cd-main-content" id="cd-main">
-          <!-- Page Title -->
-          <h1 class="cd-page-title" id="cdHomeTitle">Buy More Credits</h1>
+    <div class="consumer-docs-layout">
+      <!-- Mobile sidebar toggle -->
+      <button class="cgs-sidebar-toggle" id="cgsSidebarToggle" aria-label="Toggle navigation menu"
+        aria-expanded="false">
+        <i class="fa fa-bars"></i>
+      </button>
+      <!-- Sidebar overlay -->
+      <div class="cgs-sidebar-overlay" id="cgsSidebarOverlay"></div>
+      <!-- Sidebar -->
+      <div id="portalSidebar"></div>
+      <!-- Main Content -->
+      <main class="cd-main-content" id="cd-main">
+        <!-- Page Title -->
+        <h1 class="cd-page-title" id="cdHomeTitle">Buy More Credits</h1>
 
-          <!-- Overview Section -->
-          <section class="cd-overview" id="cdHomeOverview">
+        <!-- Overview Section -->
+        <section class="cd-overview" id="cdHomeOverview">
+          <p class="cd-overview-text">
+            Tapping the Buy more credits button will display a list of
+            available credit packages for purchase..
+          </p>
+
+          <div class="image-wrapper">
+            <img src="../assets/images/portal/01-buy-credits-1.png" alt="Buy More Credits" class="demo-img" />
+            <img src="../assets/images/portal/01-buy-credits-2.png" alt="Buy More Credits" class="demo-img"
+              style="margin-top: 20px" />
+          </div>
+
+          <h3 class="h3">Metrics Bar</h3>
+          <p>
+            This section gives you an at-a-glance overview of your current
+            usage data and active projects:
+          </p>
+          <ul class="cd-overview-ul">
+            <li>
+              <strong>Today's Requests:</strong>
+              <span>Displays the count of AI agent actions processed during the
+                current calendar day.</span>
+            </li>
+            <li>
+              <strong>Credits Used (Month):</strong>
+              <span>Shows your cumulative credit consumption for the current
+                billing cycle, along with the corresponding equivalent token
+                volume (e.g., 19.5M tokens).
+              </span>
+            </li>
+            <li>
+              <strong>Active Projects:</strong>
+              <span>Indicates the total number of live development workspaces
+                currently configured on your account.
+              </span>
+            </li>
+            <li>
+              <strong>Available Credits:</strong>
+              <span>Shows your total remaining credit balance across your
+                account.
+              </span>
+            </li>
+          </ul>
+
+          <div class="section-details">
+            <h3 class="h3">Credits Breakdown Section</h3>
             <p class="cd-overview-text">
-              Tapping the Buy more credits button will display a list of
-              available credit packages for purchase..
-            </p>
-
-            <div class="image-wrapper">
-              <img
-                src="../assets/images/portal/01-buy-credits-1.png"
-                alt="Buy More Credits"
-                class="demo-img"
-              />
-              <img
-                src="../assets/images/portal/01-buy-credits-2.png"
-                alt="Buy More Credits"
-                class="demo-img"
-                style="margin-top: 20px"
-              />
-            </div>
-
-            <h3 class="h3">Metrics Bar</h3>
-            <p>
-              This section gives you an at-a-glance overview of your current
-              usage data and active projects:
+              This card provides a detailed look at your subscription plan
+              allowances and consumption vs. included credits:
             </p>
             <ul class="cd-overview-ul">
               <li>
-                <strong>Today's Requests:</strong>
-                <span
-                  >Displays the count of AI agent actions processed during the
-                  current calendar day.</span
-                >
+                <strong>Available:</strong>
+                <span>Your absolute remaining credits ready for allocation.</span>
               </li>
               <li>
-                <strong>Credits Used (Month):</strong>
-                <span
-                  >Shows your cumulative credit consumption for the current
-                  billing cycle, along with the corresponding equivalent token
-                  volume (e.g., 19.5M tokens).
+                <strong>This Month:</strong>
+                <span>Tracks your usage for the current billing cycle against
+                  your baseline. A red visual progress bar indicates high
+                  resource consumption relative to your base plan.
                 </span>
               </li>
               <li>
-                <strong>Active Projects:</strong>
-                <span
-                  >Indicates the total number of live development workspaces
-                  currently configured on your account.
+                <strong>Plan: </strong>
+                <span>Displays your current active subscription tier (e.g., Think
+                  New).
                 </span>
               </li>
               <li>
-                <strong>Available Credits:</strong>
-                <span
-                  >Shows your total remaining credit balance across your
-                  account.
+                <strong>Included / Month: </strong>
+                <span>The standard baseline credit allocation assigned to your
+                  specific plan tier each month.
+                </span>
+              </li>
+              <li>
+                <strong>Buy More Credits: </strong>
+                <span>Click this blue button to immediately add individual top-up
+                  credits to your balance without changing your base tier
+                  plan.
                 </span>
               </li>
             </ul>
 
-            <div class="section-details">
-              <h3 class="h3">Credits Breakdown Section</h3>
-              <p class="cd-overview-text">
-                This card provides a detailed look at your subscription plan
-                allowances and consumption vs. included credits:
-              </p>
-              <ul class="cd-overview-ul">
-                <li>
-                  <strong>Available:</strong>
-                  <span
-                    >Your absolute remaining credits ready for allocation.</span
-                  >
-                </li>
-                <li>
-                  <strong>This Month:</strong>
-                  <span
-                    >Tracks your usage for the current billing cycle against
-                    your baseline. A red visual progress bar indicates high
-                    resource consumption relative to your base plan.
-                  </span>
-                </li>
-                <li>
-                  <strong>Plan: </strong>
-                  <span
-                    >Displays your current active subscription tier (e.g., Think
-                    New).
-                  </span>
-                </li>
-                <li>
-                  <strong>Included / Month: </strong>
-                  <span
-                    >The standard baseline credit allocation assigned to your
-                    specific plan tier each month.
-                  </span>
-                </li>
-                <li>
-                  <strong>Buy More Credits: </strong>
-                  <span
-                    >Click this blue button to immediately add individual top-up
-                    credits to your balance without changing your base tier
-                    plan.
-                  </span>
-                </li>
-              </ul>
+            <h3 class="h3">Server Status & Workspace Access</h3>
+            <p>
+              This card lets you track your underlying infrastructure status
+              and directly access your agent pipelines:
+            </p>
 
-              <h3 class="h3">Server Status & Workspace Access</h3>
-              <p>
-                This card lets you track your underlying infrastructure status
-                and directly access your agent pipelines:
-              </p>
-
-              <ul class="cd-overview-ul">
-                <li>
-                  <strong>Infrastructure ID: :</strong>
-                  <span
-                    >Displays your active background server cluster identifier
-                    (e.g., child-20260510-0753) along with an immediate
-                    operational status tag (e.g., Health: healthy).
-                  </span>
-                </li>
-                <li>
-                  <strong>Assigned User:</strong>
-                  <span
-                    >Shows the primary registered administrator email address
-                    managing the server node.
-                  </span>
-                </li>
-                <li>
-                  <strong>Last Heartbeat:</strong>
-                  <span
-                    >Tracks the exact time elapsed since the server last
-                    communicated and verified its active status with the
-                    platform (e.g., 2m ago).
-                  </span>
-                </li>
-                <li>
-                  <strong>Enter Workspace:</strong>
-                  <span
-                    >Click this large blue button to jump straight into your
-                    end-to-end SDLC pipeline, agent configurations, and
-                    deployment settings.
-                  </span>
-                </li>
-                <li>
-                  <strong>View Detailed Analytics:</strong>
-                  <span
-                    >Click this button to review granular, time-series data
-                    charts regarding your infrastructure usage and token
-                    distributions over time.
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </section>
-        </main>
-      </div>
+            <ul class="cd-overview-ul">
+              <li>
+                <strong>Infrastructure ID: :</strong>
+                <span>Displays your active background server cluster identifier
+                  (e.g., child-20260510-0753) along with an immediate
+                  operational status tag (e.g., Health: healthy).
+                </span>
+              </li>
+              <li>
+                <strong>Assigned User:</strong>
+                <span>Shows the primary registered administrator email address
+                  managing the server node.
+                </span>
+              </li>
+              <li>
+                <strong>Last Heartbeat:</strong>
+                <span>Tracks the exact time elapsed since the server last
+                  communicated and verified its active status with the
+                  platform (e.g., 2m ago).
+                </span>
+              </li>
+              <li>
+                <strong>Enter Workspace:</strong>
+                <span>Click this large blue button to jump straight into your
+                  end-to-end SDLC pipeline, agent configurations, and
+                  deployment settings.
+                </span>
+              </li>
+              <li>
+                <strong>View Detailed Analytics:</strong>
+                <span>Click this button to review granular, time-series data
+                  charts regarding your infrastructure usage and token
+                  distributions over time.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
     </div>
-    <div id="docFooter"></div>
-    <script src="../assets/js/navigation.js"></script>
-    <script src="../assets/js/consumer_docs_home.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        if (window.I18n) {
-          window.I18n.init();
-        }
-      });
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-  </body>
+  </div>
+  <div id="docFooter"></div>
+  <script src="../assets/js/navigation.js"></script>
+  <script src="../assets/js/consumer_docs_home.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.I18n) {
+        window.I18n.init();
+      }
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+
 </html>
