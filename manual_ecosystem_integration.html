@@ -253,6 +253,10 @@
             padding-left: 20px;
             list-style-type: circle;
         }
+
+        .doc-ex-link {
+            color: #2563eb;
+        }
     </style>
 </head>
 
@@ -309,9 +313,74 @@
                             tools.
                         </li>
                     </ul>
-                    <div class="image-wrapper">
-                        <img src="assets/images/sidekick/connect-tools.png" alt="Connect & Tools" class="demo-img" />
+                    <div class="para-box">
+                        <p>We need to setup oauth connections in order to connect to Third Party Tools . Provide the
+                            Client
+                            ID and Client Secret
+                            values for each integration.</p>
+                        <ul class="cd-overview-ul">
+                            <li>
+                                <strong>Jira + Confluence (one app) - </strong>
+                                <span>
+                                    register at <a href="https://developer.atlassian.com/console/myapps"
+                                        class="doc-ex-link" target="_blank">
+                                        https://developer.atlassian.com/console/myapps</a> (OAuth 2.0 integration,
+                                    add Jira +
+                                    Confluence scopes and
+                                    offline_access) — send back Client ID and Client Secret.
+                                </span>
+                            </li>
+
+                            <li>
+                                <strong>GitHub - </strong>
+                                <span>
+                                    register at <a href="https://github.com/settings/developers" class="doc-ex-link"
+                                        target="_blank">
+                                        github.com</a> → Settings → Developer settings → OAuth Apps — send back
+                                    Client ID and Client Secret.
+                                </span>
+                            </li>
+                            <li>
+                                <strong>Slack - </strong>
+                                <span>
+                                    register at <a href="https://api.slack.com/apps" class="doc-ex-link"
+                                        target="_blank">
+                                        api.slack.com/apps</a> (add scopes channels:read, channels:history,
+                                    chat:write) — send back Client ID and Client
+                                    Secret.
+                                </span>
+                            </li>
+                            <li>
+                                <strong>Notion - </strong>
+                                <span>
+                                    register at <a href="https://notion.so/my-integrations" class="doc-ex-link"
+                                        target="_blank">
+                                        notion.so/my-integrations</a> (make it a Public integration) — send back
+                                    Client ID and Client Secret.
+                                </span>
+                            </li>
+                            <li>
+                                <strong>Linear - </strong>
+                                <span>
+                                    register at <a href="https://linear.app" class="doc-ex-link" target="_blank">
+                                        linear.app</a> → Settings → API → OAuth applications — send back Client ID
+                                    and Client Secret.
+                                </span>
+                            </li>
+                            <li>
+                                <strong>Figma - </strong>
+                                <span>
+                                    register at <a href="https://figma.com/developers/apps" class="doc-ex-link"
+                                        target="_blank">
+                                        figma.com/developers/apps</a> — send back Client ID and Client Secret.
+                                </span>
+                            </li>
+                        </ul>
                     </div>
+                </div>
+
+                <div class="image-wrapper">
+                    <img src="assets/images/sidekick/connect-tools.png" alt="Connect & Tools" class="demo-img" />
                 </div>
 
                 <div class="para-box">
