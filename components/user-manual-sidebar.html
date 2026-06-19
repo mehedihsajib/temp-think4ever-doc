@@ -56,6 +56,11 @@
             aria-hidden="true"></i>
           <span data-i18n="dev_sidebar.version_control">Version Control</span></a>
       </li>
+      <li>
+        <a class="cgs-nav-link" onclick="load_page('manual_sidekick')"><i class="fa-solid fa-user-secret"
+            aria-hidden="true"></i>
+          <span>Sidekick</span></a>
+      </li>
       <!-- <li>
         <a class="cgs-nav-link" onclick="load_page('manual_reverse_engineering')"><i
             class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i>
@@ -140,6 +145,97 @@
         <a class="cgs-nav-link" onclick="load_page('manual_requirements_docs')"><i class="fa-solid fa-file-lines"
             aria-hidden="true"></i>
           <span data-i18n="dev_sidebar.requirements_docs">Requirements Docs</span></a>
+      </li>
+    </ul>
+  </nav>
+  <nav class="cgs-nav-section">
+    <p class="cgs-nav-section-label">MCP Connect and Tools</p>
+    <ul class="cgs-nav-list">
+      <li>
+        <a class="cgs-nav-link" onclick="load_page('mcp_overview')">
+          <i class="fa-solid fa-layer-group"></i>
+          <span>Overview</span>
+        </a>
+      </li>
+      <li>
+        <a class="cgs-nav-link" onclick="load_page('mcp_claude_code')">
+          <div class="nav-svg-icon">
+            <img src="assets/images/icons/claude.svg" alt="Claude Code">
+          </div>
+          <span>Claude Code</span>
+        </a>
+      </li>
+      <li>
+        <a class="cgs-nav-link" onclick="load_page('mcp_codex')">
+          <div class="nav-svg-icon">
+            <img src="assets/images/icons/codex.svg" alt="Codex">
+          </div>
+          <span>Codex</span>
+        </a>
+      </li>
+      <li>
+        <a class="cgs-nav-link" onclick="load_page('mcp_cursor')">
+          <div class="nav-svg-icon">
+            <img src="assets/images/icons/cursor.svg" alt="Cursor">
+          </div>
+          <span>Cursor</span>
+        </a>
+      </li>
+      <li>
+        <a class="cgs-nav-link" onclick="load_page('mcp_claude_desktop')">
+          <div class="nav-svg-icon">
+            <img src="assets/images/icons/claude-desktop.svg" alt="Claude Desktop">
+          </div>
+          <span>Claude Desktop</span>
+        </a>
+      </li>
+      <li>
+        <a class="cgs-nav-link" onclick="load_page('mcp_vscode')">
+          <div class="nav-svg-icon">
+            <img src="assets/images/icons/vscode.svg" alt="VS Code">
+          </div>
+          <span>VS Code</span>
+        </a>
+      </li>
+      <li>
+        <a class="cgs-nav-link" onclick="load_page('mcp_windsurf')">
+          <div class="nav-svg-icon">
+            <img src="assets/images/icons/windsurf.svg" alt="Windsurf">
+          </div>
+          <span>Windsurf</span>
+        </a>
+      </li>
+      <li>
+        <a class="cgs-nav-link" onclick="load_page('mcp_gemini')">
+          <div class="nav-svg-icon">
+            <img src="assets/images/icons/gemini.svg" alt="Gemini">
+          </div>
+          <span>Gemini CLI</span>
+        </a>
+      </li>
+      <li>
+        <a class="cgs-nav-link" onclick="load_page('mcp_amazonq')">
+          <div class="nav-svg-icon">
+            <img src="assets/images/icons/amazonq.svg" alt="AmazonQ">
+          </div>
+          <span>Amazon Q</span>
+        </a>
+      </li>
+      <li>
+        <a class="cgs-nav-link" onclick="load_page('mcp_kiro')">
+          <div class="nav-svg-icon">
+            <img src="assets/images/icons/kiro.svg" alt="Kiro">
+          </div>
+          <span>Kiro</span>
+        </a>
+      </li>
+      <li>
+        <a class="cgs-nav-link" onclick="load_page('mcp_test_and_tools')">
+          <div class="nav-svg-icon">
+            <i class="fa fa-tools"></i>
+          </div>
+          <span>Test & Tools</span>
+        </a>
       </li>
     </ul>
   </nav>
@@ -242,97 +338,6 @@
         <a class="cgs-nav-link" onclick="load_page('manual_think_mcp')">
           <i class="fa-solid fa-server"></i>
           <span>Think MCP</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <nav class="cgs-nav-section">
-    <p class="cgs-nav-section-label">MCP Connect and Tools</p>
-    <ul class="cgs-nav-list">
-      <li>
-        <a class="cgs-nav-link" onclick="load_page('mcp_overview')">
-          <i class="fa-solid fa-layer-group"></i>
-          <span>Overview</span>
-        </a>
-      </li>
-      <li>
-        <a class="cgs-nav-link" onclick="load_page('mcp_claude_code')">
-          <div class="nav-svg-icon">
-            <img src="assets/images/icons/claude.svg" alt="Claude Code">
-          </div>
-          <span>Claude Code</span>
-        </a>
-      </li>
-      <li>
-        <a class="cgs-nav-link" onclick="load_page('mcp_codex')">
-          <div class="nav-svg-icon">
-            <img src="assets/images/icons/codex.svg" alt="Codex">
-          </div>
-          <span>Codex</span>
-        </a>
-      </li>
-      <li>
-        <a class="cgs-nav-link" onclick="load_page('mcp_cursor')">
-          <div class="nav-svg-icon">
-            <img src="assets/images/icons/cursor.svg" alt="Cursor">
-          </div>
-          <span>Cursor</span>
-        </a>
-      </li>
-      <li>
-        <a class="cgs-nav-link" onclick="load_page('mcp_claude_desktop')">
-          <div class="nav-svg-icon">
-            <img src="assets/images/icons/claude-desktop.svg" alt="Claude Desktop">
-          </div>
-          <span>Claude Desktop</span>
-        </a>
-      </li>
-      <li>
-        <a class="cgs-nav-link" onclick="load_page('mcp_vscode')">
-          <div class="nav-svg-icon">
-            <img src="assets/images/icons/vscode.svg" alt="VS Code">
-          </div>
-          <span>VS Code</span>
-        </a>
-      </li>
-      <li>
-        <a class="cgs-nav-link" onclick="load_page('mcp_windsurf')">
-          <div class="nav-svg-icon">
-            <img src="assets/images/icons/windsurf.svg" alt="Windsurf">
-          </div>
-          <span>Windsurf</span>
-        </a>
-      </li>
-      <li>
-        <a class="cgs-nav-link" onclick="load_page('mcp_gemini')">
-          <div class="nav-svg-icon">
-            <img src="assets/images/icons/gemini.svg" alt="Gemini">
-          </div>
-          <span>Gemini CLI</span>
-        </a>
-      </li>
-      <li>
-        <a class="cgs-nav-link" onclick="load_page('mcp_amazonq')">
-          <div class="nav-svg-icon">
-            <img src="assets/images/icons/amazonq.svg" alt="AmazonQ">
-          </div>
-          <span>Amazon Q</span>
-        </a>
-      </li>
-      <li>
-        <a class="cgs-nav-link" onclick="load_page('mcp_kiro')">
-          <div class="nav-svg-icon">
-            <img src="assets/images/icons/kiro.svg" alt="Kiro">
-          </div>
-          <span>Kiro</span>
-        </a>
-      </li>
-      <li>
-        <a class="cgs-nav-link" onclick="load_page('mcp_test_and_tools')">
-          <div class="nav-svg-icon">
-            <i class="fa fa-tools"></i>
-          </div>
-          <span>Test & Tools</span>
         </a>
       </li>
     </ul>
