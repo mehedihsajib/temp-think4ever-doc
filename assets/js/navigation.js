@@ -1,18 +1,28 @@
 // ===============================
 // Page Navigation
 // ===============================
+function saveSidebarScroll() {
+  const sidebar = document.querySelector('.cgs-sidebar, .cd-sidebar, .admin-sidebar');
+  if (sidebar) {
+    sessionStorage.setItem("sidebarScroll", sidebar.scrollTop);
+  }
+}
+
 function load_page(pageId) {
+  saveSidebarScroll();
   localStorage.setItem("currentPage", pageId);
   window.location.href = toBasePath(pageId + ".html");
 }
 
 function load_dev_page(pageId) {
+  saveSidebarScroll();
   localStorage.setItem("currentPage", pageId);
 
   window.location.href = toBasePath(`dev/${pageId}.html`);
 }
 
 function load_portal_page(pageId) {
+  saveSidebarScroll();
   localStorage.setItem("currentPage", pageId);
 
   window.location.href = toBasePath(`portal/${pageId}.html`);
@@ -396,6 +406,16 @@ function loadComponent({ id, url, onLoaded }) {
 
       if (typeof onLoaded === "function") {
         onLoaded(el);
+      }
+
+      if (id.toLowerCase().includes("sidebar")) {
+        const sidebarEl = el.querySelector(".cgs-sidebar, .cd-sidebar, .admin-sidebar") || el.firstElementChild;
+        const savedScroll = sessionStorage.getItem("sidebarScroll");
+        if (sidebarEl && savedScroll) {
+          setTimeout(() => {
+            sidebarEl.scrollTop = parseInt(savedScroll, 10);
+          }, 10);
+        }
       }
 
       console.log(`${id} loaded`);
