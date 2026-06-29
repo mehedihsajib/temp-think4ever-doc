@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Think4Ever - Designer</title>
+    <link href="css/theme.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/consumer_docs_home.css" />
+    <link rel="stylesheet" href="assets/css/dev_doc.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="assets/js/i18n.js"></script>
+    <style>
+        /* Basic reset for preview consistency */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        /* Premium Modern Header Styles */
+        .modern-header {
+            font-family: "Inter", sans-serif;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 64px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            z-index: 300;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .modern-header-inner {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        .modern-header-logo-plate {
+            display: flex;
+            align-items: center;
+            padding-left: 36px;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        .modern-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .modern-logo span {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: -0.04em;
+        }
+
+        .modern-header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex: 1;
+            padding: 0 40px;
+            height: 100%;
+        }
+
+        .modern-header-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        /* Responsive Utilities */
+        @media (max-width: 1024px) {
+            .modern-header-logo-plate {
+                width: 240px;
+                min-width: 240px;
+                padding-left: 24px;
+            }
+        }
+
+        /* Modern Layout Overrides */
+        .consumer-docs-layout {
+            max-width: 100% !important;
+            width: 100% !important;
+            margin: 0 !important;
+            display: flex !important;
+            background: #ffffff;
+        }
+
+        .cd-sidebar {
+            box-sizing: content-box !important;
+            width: 240px !important;
+            min-width: 240px !important;
+            background: #f8fafc !important;
+            border-right: 1px solid #e2e8f0 !important;
+            padding-left: 36px !important;
+            padding-right: 24px !important;
+            padding-top: 36px !important;
+        }
+
+        /* Modernizing Sidebar Internal Elements */
+        .cd-sidebar-header {
+            padding: 0 !important;
+            border-bottom: none !important;
+            margin-bottom: 32px !important;
+        }
+
+        .cd-sidebar-header h3 {
+            color: #0f172a !important;
+            font-family: "Inter", sans-serif !important;
+            font-size: 0.9375rem !important;
+            font-weight: 600 !important;
+            letter-spacing: -0.01em !important;
+            text-transform: none !important;
+            display: flex !important;
+            align-items: center !important;
+        }
+
+        .cd-sidebar-header h3 i {
+            color: #3b82f6 !important;
+            margin-right: 10px !important;
+            font-size: 1.1rem !important;
+        }
+
+        .cd-sidebar-section {
+            margin-bottom: 24px !important;
+        }
+
+        .cd-sidebar-section-label {
+            font-family: "Inter", sans-serif !important;
+            font-size: 0.725rem !important;
+            font-weight: 600 !important;
+            color: #64748b !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.08em !important;
+            padding: 0 12px 10px 0 !important;
+            display: block !important;
+        }
+
+        .cd-sidebar-nav li {
+            padding: 0 !important;
+            margin-bottom: 2px !important;
+        }
+
+        .cd-sidebar-nav li a {
+            padding: 8px 12px !important;
+            font-family: "Inter", sans-serif !important;
+            font-size: 0.875rem !important;
+            color: #475569 !important;
+            border-radius: 6px !important;
+            background: transparent !important;
+            transition: all 0.2s ease !important;
+            font-weight: 500 !important;
+            display: flex !important;
+            align-items: flex-start !important;
+            line-height: 1.5 !important;
+        }
+
+        .cd-sidebar-nav li a i {
+            font-size: 0.825rem !important;
+            width: 24px !important;
+            text-align: left !important;
+            color: #94a3b8 !important;
+            transition: color 0.2s ease !important;
+            margin-top: 3px !important;
+        }
+
+        .cd-sidebar-nav li a:hover {
+            background: #f1f5f9 !important;
+            color: #0f172a !important;
+        }
+
+        .cd-sidebar-nav li a:hover i {
+            color: #475569 !important;
+        }
+
+        .cd-sidebar-nav li a.active {
+            background: #eff6ff !important;
+            color: #1d4ed8 !important;
+            font-weight: 600 !important;
+            box-shadow: inset 3px 0 0 #3b82f6 !important;
+        }
+
+        .cd-sidebar-nav li a.active i {
+            color: #2563eb !important;
+        }
+
+        .cd-main-content {
+            max-width: 960px !important;
+            background: #ffffff !important;
+            padding-top: 56px !important;
+            padding-left: 48px !important;
+            padding-right: 48px !important;
+        }
+
+        /* Custom lists */
+        .cd-overview-ul {
+            margin-top: 20px;
+            margin-bottom: 30px;
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        .cd-overview-ol {
+            margin-top: 20px;
+            margin-bottom: 30px;
+            padding-left: 24px;
+            list-style-type: decimal;
+        }
+
+        .cd-overview-ul li,
+        .cd-overview-ol li {
+            margin-bottom: 16px;
+            font-family: "Inter", sans-serif;
+            font-size: 1rem;
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        .cd-overview-ul li ul {
+            padding-left: 20px;
+        }
+
+        .cd-overview-ul li ul li {
+            list-style-type: circle;
+        }
+
+        .cd-overview-ul li strong,
+        .cd-overview-ol li strong {
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        .sub-list {
+            margin-top: 8px;
+            margin-bottom: 8px;
+            padding-left: 20px;
+            list-style-type: circle;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="consumer-docs-home consumer-getting-started">
+        <!-- Skip to content -->
+        <a href="#cd-main" class="sr-only" style="
+          position: absolute;
+          left: -9999px;
+          top: auto;
+          width: 1px;
+          height: 1px;
+          overflow: hidden;
+        " onfocus="
+          this.style.position = 'static';
+          this.style.width = 'auto';
+          this.style.height = 'auto';
+        " onblur="
+          this.style.position = 'absolute';
+          this.style.left = '-9999px';
+          this.style.width = '1px';
+          this.style.height = '1px';
+          this.style.overflow = 'hidden';
+        ">Skip to main content</a>
+        <!-- Site Header -->
+        <header class="modern-header" id="consumerHeader"></header>
+
+        <div class="consumer-docs-layout">
+            <!-- Mobile sidebar toggle -->
+            <button class="cgs-sidebar-toggle" id="cgsSidebarToggle" aria-label="Toggle navigation menu"
+                aria-expanded="false">
+                <i class="fa fa-bars"></i>
+            </button>
+            <!-- Sidebar overlay -->
+            <div class="cgs-sidebar-overlay" id="cgsSidebarOverlay"></div>
+            <!-- Sidebar -->
+            <div id="consumerSidebar"></div>
+            <!-- Main Content -->
+            <main class="cd-main-content" id="cd-main">
+                <h1 class="cd-page-title" id="cdHomeTitle">
+                    Navigating "Think Agents"
+                </h1>
+
+                <section class="cd-overview" id="cdHomeOverview">
+                    <p>
+                        The <strong>Think Agents</strong> menu provides a centralized hub to manage and deploy
+                        specialized AI agents tailored to specific business domains, regulatory frameworks, and
+                        operational tasks.
+                    </p>
+
+                    <div class="image-wrapper">
+                        <img src="assets/images/think-agent/think-agent-dropdown.png" alt="Think Agents"
+                            class="demo-img" />
+                    </div>
+
+                    <div class="para-box">
+                        <h3 class="h4">Core Management</h3>
+                        <ul class="cd-overview-ul">
+                            <li>
+                                <strong>Manage Think Agents:</strong> Click this option to configure, customize, or
+                                overview your active AI agents.
+                            </li>
+                            <li>
+                                <strong>Custom Think Agents:</strong> A dedicated section displaying custom-built agents
+                                tailored specifically to your organization's unique workflows <em>(Note: dynamically
+                                    shows "No custom agents yet" if none have been created).</em>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="para-box">
+                        <h3 class="h4">Global Think Agents (Pre-Built Categories)</h3>
+                        <p>The platform features an extensive library of out-of-the-box, domain-specific AI agents
+                            grouped into the following specialized categories:</p>
+
+                        <table class="config-table">
+                            <thead>
+                                <tr>
+                                    <th>Category Menu</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Architecture & Standards</strong></td>
+                                    <td>Review, validate, and align project structures against corporate, technical,
+                                        or industry-standard blueprints.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Finance & Accounting</strong></td>
+                                    <td>Assist with financial modeling, bookkeeping logic, auditing checks, and
+                                        general financial analysis tasks.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Security & AppSec</strong></td>
+                                    <td>Analyze system architecture, configurations, or inputs to identify potential
+                                        vulnerabilities and ensure strict application security compliance.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Engineering & Code Quality</strong></td>
+                                    <td>Evaluate code repositories, logic flow, and development practices to
+                                        maintain high technical standards and minimize technical debt.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Data & Analytics</strong></td>
+                                    <td>Process data sets, generate insights, and assist with data modeling,
+                                        pipelining, and analytics validation.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Legal, Compliance & Risk</strong></td>
+                                    <td>Audit documents and workflows against legal standards, regulatory
+                                        frameworks, and risk mitigation policies.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>HR & People</strong></td>
+                                    <td>Streamline talent acquisition workflows, organizational structure planning,
+                                        and policy documentation.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Sales & CRM</strong></td>
+                                    <td>Optimize customer relationship management strategies, sales pipelines, and
+                                        client communication frameworks.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Marketing & Content</strong></td>
+                                    <td>Assist with campaign planning, target audience analysis, brand alignment,
+                                        and content generation standards.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Customer Support</strong></td>
+                                    <td>Enhance customer service operations by modeling ticketing logic, FAQ
+                                        responses, and support workflows.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Operations & Corporate</strong></td>
+                                    <td>Streamline day-to-day organizational workflows, internal logistics, and
+                                        corporate administration tasks.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Healthcare</strong></td>
+                                    <td>Specialized tools configured to handle domain-specific healthcare
+                                        administrative requirements and medical operational workflows.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Retail & E-commerce</strong></td>
+                                    <td>Optimize digital storefront workflows, inventory management logic, and
+                                        retail consumer experience strategies.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Manufacturing & Supply Chain</strong></td>
+                                    <td>Address logistics, procurement workflows, production line logic, and supply
+                                        chain tracking standards.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Real Estate & Property</strong></td>
+                                    <td>Evaluate property data, contract logic, market analysis templates, and real
+                                        estate asset management.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>IT & DevOps</strong></td>
+                                    <td>Automate and validate cloud infrastructure setups, deployment pipelines, and
+                                        system operations workflows.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="para-box">
+                        <div
+                            style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 15px; margin: 20px 0; border-radius: 0 6px 6px 0;">
+                            <strong>💡 Quick Tip:</strong> Click on any category with an arrowhead (&gt;) to expand the
+                            menu and choose from specific sub-agents engineered for niche tasks within that department.
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <div id="docFooter"></div>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/consumer_docs_home.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (window.I18n) {
+                window.I18n.init();
+            }
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+
+</html>

@@ -272,17 +272,26 @@
   <nav class="cgs-nav-section">
     <p class="cgs-nav-section-label">Think Agents</p>
     <ul class="cgs-nav-list">
+      <li>
+        <a class="cgs-nav-link" onclick="load_page('manage_think_agents')"><i class="fa-solid fa-sliders"
+            aria-hidden="true"></i>
+          <span>Manage Think Agents</span></a>
+      </li>
       <li class="accordion-parent">
         <a class="cgs-nav-link accordion-trigger">
           <div class="nav-link-left">
-            <i class="fa-solid fa-layer-group"></i>
+            <i class="fa-solid fa-clipboard-check"></i>
             <span>Architecture & Standards</span>
           </div>
           <i class="fa-solid fa-chevron-down accordion-arrow"></i>
         </a>
 
         <div class="accordion-menu">
-          <a class="cgs-nav-link" onclick="load_page('mcp_business_rule')">
+          <a class="cgs-nav-link" onclick="load_page('architecture_standards_overview')">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>Overview</span>
+          </a>
+          <a class="cgs-nav-link" onclick="load_page('agent_business_rule')">
             <i class="fa-solid fa-gavel"></i>
             <span>Business Rule Validator</span>
           </a>

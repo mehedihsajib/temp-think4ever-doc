@@ -641,3 +641,51 @@ main.cd-main-content {
 .accordion-menu .cgs-nav-link:hover i {
     color: #2563eb !important;
 }
+
+
+/* Fix for Table Design */
+.config-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    font-family: Arial, sans-serif;
+    font-size: 0.95rem;
+}
+
+.config-table th,
+.config-table td {
+    border: 1px solid #000;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+.config-table th:first-child,
+.config-table td:first-child {
+    width: 18%;
+    white-space: nowrap;
+}
+
+.config-table th:last-child,
+.config-table td:last-child {
+    width: 82%;
+}
+
+.config-table th {
+    font-weight: bold;
+    color: #000;
+    background-color: transparent;
+}
+
+.config-table td {
+    color: #000;
+    line-height: 1.5;
+}
+
+.config-table strong {
+    font-weight: bold;
+}
+
+.config-table em {
+    font-style: italic;
+}
