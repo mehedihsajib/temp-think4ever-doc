@@ -4027,7 +4027,7 @@ body {
   border-right: 1px solid #e2e8f0 !important;
 
   padding-left: 32px !important;
-  padding-right: 24px !important;
+  padding-right: 10px !important;
   padding-top: 40px !important;
   position: sticky !important;
   top: 64px !important;
@@ -4073,7 +4073,7 @@ body {
 }
 
 .cgs-nav-section {
-  margin-bottom: 32px !important;
+  margin-bottom: 20px !important;
   padding: 0 !important;
 }
 

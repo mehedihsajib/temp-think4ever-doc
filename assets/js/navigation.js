@@ -406,6 +406,11 @@ function loadComponent({ id, url, onLoaded }) {
       if (typeof onLoaded === "function") {
         onLoaded(el);
       }
+      
+      // Initialize any accordion menus inside the loaded component
+      if (typeof initAccordionMenus === "function") {
+        initAccordionMenus(el);
+      }
 
       if (id.toLowerCase().includes("sidebar")) {
         const sidebarEl = el.querySelector(".cgs-sidebar, .cd-sidebar, .admin-sidebar") || el.firstElementChild;
@@ -1133,6 +1138,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ensureGlobalFavicon();
   ensureGlobalBrandAndOrbit();
   initThemeToggle();
+  initAccordionMenus(document);
   const currentPage = getCurrentPage();
 
   // -------- Header --------
@@ -1512,3 +1518,26 @@ function copyToClipboard(button) {
       console.error("Failed to copy: ", err);
     });
 }
+
+// ===============================
+// Accordion Menus (Sidebar)
+// ===============================
+function initAccordionMenus(container = document) {
+  const elements = container.querySelectorAll('.accordion-parent');
+  
+  elements.forEach(parent => {
+    // Prevent duplicate event binding
+    if (parent.dataset.accordionBound === "true") return;
+    parent.dataset.accordionBound = "true";
+    
+    const trigger = parent.querySelector('.accordion-trigger');
+    const menu = parent.querySelector('.accordion-menu');
+    if (!trigger || !menu) return;
+    
+    trigger.addEventListener('click', function(e) {
+      e.preventDefault();
+      parent.classList.toggle('open');
+    });
+  });
+}
+
