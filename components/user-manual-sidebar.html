@@ -133,11 +133,12 @@
             aria-hidden="true"></i>
           <span>Events & Jobs</span></a>
       </li>
-      <li>
+      <!-- Will be added later -->
+      <!-- <li>
         <a class="cgs-nav-link" onclick="load_page('manual_environment_config')"><i class="fa-solid fa-sliders"
             aria-hidden="true"></i>
           <span>Environment & Config</span></a>
-      </li>
+      </li> -->
     </ul>
   </nav>
   <nav class="cgs-nav-section">
@@ -366,6 +367,42 @@
           <a class="cgs-nav-link" onclick="load_page('agent_wcag_accessibility')">
             <i class="fa-solid fa-universal-access"></i>
             <span>WCAG Accessibility Auditor</span>
+          </a>
+        </div>
+      </li>
+      <li class="accordion-parent">
+        <a class="cgs-nav-link accordion-trigger">
+          <div class="nav-link-left">
+            <i class="fa-solid fa-coins"></i>
+            <span>Finance & Accounting</span>
+          </div>
+          <i class="fa-solid fa-chevron-down accordion-arrow"></i>
+        </a>
+
+        <div class="accordion-menu">
+          <a class="cgs-nav-link" onclick="load_page('finance-and-accounting')">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>Overview</span>
+          </a>
+          <a class="cgs-nav-link" onclick="load_page('agent_asc_606')">
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+            <span>ASC 606 Revenue Recognition Checker</span>
+          </a>
+          <a class="cgs-nav-link" onclick="load_page('agent_audit_trail')">
+            <i class="fa-solid fa-fingerprint"></i>
+            <span>Audit Trail Verifier</span>
+          </a>
+          <a class="cgs-nav-link" onclick="load_page('agent_expense_policy')">
+            <i class="fa-solid fa-receipt"></i>
+            <span>Expense Policy Auditor</span>
+          </a>
+          <a class="cgs-nav-link" onclick="load_page('agent_gaap_statement')">
+            <i class="fa-solid fa-scale-balanced"></i>
+            <span>GAAP Statement Checker</span>
+          </a>
+          <a class="cgs-nav-link" onclick="load_page('agent_sox_itgc')">
+            <i class="fa-solid fa-building-shield"></i>
+            <span>SOX ITGC Auditor</span>
           </a>
         </div>
       </li>
