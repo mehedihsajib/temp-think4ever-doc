@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Think4Ever - Designer</title>
+    <link href="css/theme.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/consumer_docs_home.css" />
+    <link rel="stylesheet" href="assets/css/dev_doc.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="assets/js/i18n.js"></script>
+    <style>
+        /* Basic reset for preview consistency */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        /* Premium Modern Header Styles */
+        .modern-header {
+            font-family: "Inter", sans-serif;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 64px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            z-index: 300;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .modern-header-inner {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        .modern-header-logo-plate {
+            display: flex;
+            align-items: center;
+            padding-left: 36px;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        .modern-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .modern-logo span {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: -0.04em;
+        }
+
+        .modern-header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex: 1;
+            padding: 0 40px;
+            height: 100%;
+        }
+
+        .modern-header-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        /* Responsive Utilities */
+        @media (max-width: 1024px) {
+            .modern-header-logo-plate {
+                width: 240px;
+                min-width: 240px;
+                padding-left: 24px;
+            }
+        }
+
+        /* Modern Layout Overrides */
+        .consumer-docs-layout {
+            max-width: 100% !important;
+            width: 100% !important;
+            margin: 0 !important;
+            display: flex !important;
+            background: #ffffff;
+        }
+
+        .cd-sidebar {
+            box-sizing: content-box !important;
+            width: 240px !important;
+            min-width: 240px !important;
+            background: #f8fafc !important;
+            border-right: 1px solid #e2e8f0 !important;
+            padding-left: 36px !important;
+            padding-right: 24px !important;
+            padding-top: 36px !important;
+        }
+
+        /* Modernizing Sidebar Internal Elements */
+        .cd-sidebar-header {
+            padding: 0 !important;
+            border-bottom: none !important;
+            margin-bottom: 32px !important;
+        }
+
+        .cd-sidebar-header h3 {
+            color: #0f172a !important;
+            font-family: "Inter", sans-serif !important;
+            font-size: 0.9375rem !important;
+            font-weight: 600 !important;
+            letter-spacing: -0.01em !important;
+            text-transform: none !important;
+            display: flex !important;
+            align-items: center !important;
+        }
+
+        .cd-sidebar-header h3 i {
+            color: #3b82f6 !important;
+            margin-right: 10px !important;
+            font-size: 1.1rem !important;
+        }
+
+        .cd-sidebar-section {
+            margin-bottom: 24px !important;
+        }
+
+        .cd-sidebar-section-label {
+            font-family: "Inter", sans-serif !important;
+            font-size: 0.725rem !important;
+            font-weight: 600 !important;
+            color: #64748b !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.08em !important;
+            padding: 0 12px 10px 0 !important;
+            display: block !important;
+        }
+
+        .cd-sidebar-nav li {
+            padding: 0 !important;
+            margin-bottom: 2px !important;
+        }
+
+        .cd-sidebar-nav li a {
+            padding: 8px 12px !important;
+            font-family: "Inter", sans-serif !important;
+            font-size: 0.875rem !important;
+            color: #475569 !important;
+            border-radius: 6px !important;
+            background: transparent !important;
+            transition: all 0.2s ease !important;
+            font-weight: 500 !important;
+            display: flex !important;
+            align-items: flex-start !important;
+            line-height: 1.5 !important;
+        }
+
+        .cd-sidebar-nav li a i {
+            font-size: 0.825rem !important;
+            width: 24px !important;
+            text-align: left !important;
+            color: #94a3b8 !important;
+            transition: color 0.2s ease !important;
+            margin-top: 3px !important;
+        }
+
+        .cd-sidebar-nav li a:hover {
+            background: #f1f5f9 !important;
+            color: #0f172a !important;
+        }
+
+        .cd-sidebar-nav li a:hover i {
+            color: #475569 !important;
+        }
+
+        .cd-sidebar-nav li a.active {
+            background: #eff6ff !important;
+            color: #1d4ed8 !important;
+            font-weight: 600 !important;
+            box-shadow: inset 3px 0 0 #3b82f6 !important;
+        }
+
+        .cd-sidebar-nav li a.active i {
+            color: #2563eb !important;
+        }
+
+        .cd-main-content {
+            max-width: 960px !important;
+            background: #ffffff !important;
+            padding-top: 56px !important;
+            padding-left: 48px !important;
+            padding-right: 48px !important;
+        }
+
+        /* Custom lists */
+        .cd-overview-ul {
+            margin-top: 20px;
+            margin-bottom: 30px;
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        .cd-overview-ol {
+            margin-top: 20px;
+            margin-bottom: 30px;
+            padding-left: 24px;
+            list-style-type: decimal;
+        }
+
+        .cd-overview-ul li,
+        .cd-overview-ol li {
+            margin-bottom: 16px;
+            font-family: "Inter", sans-serif;
+            font-size: 1rem;
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        .cd-overview-ul li ul {
+            padding-left: 20px;
+        }
+
+        .cd-overview-ul li ul li {
+            list-style-type: circle;
+        }
+
+        .cd-overview-ul li strong,
+        .cd-overview-ol li strong {
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        .sub-list {
+            margin-top: 8px;
+            margin-bottom: 8px;
+            padding-left: 20px;
+            list-style-type: circle;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="consumer-docs-home consumer-getting-started">
+        <!-- Skip to content -->
+        <a href="#cd-main" class="sr-only" style="
+          position: absolute;
+          left: -9999px;
+          top: auto;
+          width: 1px;
+          height: 1px;
+          overflow: hidden;
+        " onfocus="
+          this.style.position = 'static';
+          this.style.width = 'auto';
+          this.style.height = 'auto';
+        " onblur="
+          this.style.position = 'absolute';
+          this.style.left = '-9999px';
+          this.style.width = '1px';
+          this.style.height = '1px';
+          this.style.overflow = 'hidden';
+        ">Skip to main content</a>
+        <!-- Site Header -->
+        <header class="modern-header" id="consumerHeader"></header>
+
+        <div class="consumer-docs-layout">
+            <!-- Mobile sidebar toggle -->
+            <button class="cgs-sidebar-toggle" id="cgsSidebarToggle" aria-label="Toggle navigation menu"
+                aria-expanded="false">
+                <i class="fa fa-bars"></i>
+            </button>
+            <!-- Sidebar overlay -->
+            <div class="cgs-sidebar-overlay" id="cgsSidebarOverlay"></div>
+            <!-- Sidebar -->
+            <div id="consumerSidebar"></div>
+            <!-- Main Content -->
+            <main class="cd-main-content" id="cd-main">
+                <h1 class="cd-page-title" id="cdHomeTitle">
+                    Resume Screener
+                </h1>
+
+                <section class="cd-overview" id="cdHomeOverview">
+                    <div class="para-box">
+                        <p>
+                            The <strong>Resume Screener</strong> agent provides a systematic, evidence-based evaluation
+                            of job applicants by scoring candidate backgrounds directly against your explicit role
+                            requirements to build an objective talent pipeline.
+                        </p>
+                        <div class="image-wrapper">
+                            <img src="assets/images/think-agent/resume-screener-1.png" alt="Resume Screener"
+                                class="demo-img" />
+                        </div>
+
+                        <div class="para-box">
+                            <h3 class="h3">
+                                Core Mechanics
+                            </h3>
+                            <ul class="cd-overview-ul">
+                                <li>
+                                    <strong>
+                                        Batch Candidate Parsing:
+                                    </strong>
+                                    <span>
+                                        Accepts multiple resume profiles simultaneously in a single text field, using a
+                                        simple delimiter (---) to cleanly isolate individual candidate data.
+                                    </span>
+                                </li>
+                                <li>
+                                    <strong>
+                                        Pre-Screening Alignment:
+                                    </strong>
+                                    <span>
+                                        Reviews your target job description and draft evaluation criteria, pausing for
+                                        explicit confirmation before processing candidate information.
+                                    </span>
+                                </li>
+                                <li>
+                                    <strong>
+                                        Must-Have Criteria Scoring:
+                                    </strong>
+                                    <span>
+                                        Measures each candidate's professional history against your critical
+                                        prerequisites (such as specific technology stacks, certifications, or
+                                        operational experience).
+                                    </span>
+                                </li>
+                                <li>
+                                    <strong>
+                                        Ranked Candidate Shortlist:
+                                    </strong>
+                                    <span>
+                                        Compiles evaluations into a structured, performance-ranked leaderboard detailing
+                                        individual strengths, missing skill gaps, and a clear screening verdict (e.g.,
+                                        Proceed, Hold, or Decline).
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="para-box">
+                            <h3 class="h3">
+                                Step by Step Guide
+                            </h3>
+
+                            <h4 class="h4" style="margin-top: 20px;">
+                                Step 1: Input Candidate Resumes
+                            </h4>
+                            <p>
+                                Paste your candidate resumes into the text submission workspace. When uploading multiple
+                                applicants at once, separate each profile by inserting a three-dash horizontal rule
+                                (---) on its own line between them.
+                            </p>
+                            <div class="image-wrapper">
+                                <img src="assets/images/think-agent/resume-screener-2.png" alt="Resume Screener"
+                                    class="demo-img" />
+                            </div>
+                        </div>
+
+                        <div class="para-box">
+                            <h4 class="h4">
+                                Step 2: Establish and Confirm Evaluation Criteria
+                            </h4>
+                            <p>
+                                Review the initial screening plan generated by the agent based on your target role
+                                requirements. Adjust the "must-have" parameters or experience baselines as needed, then
+                                confirm the plan to initiate the evaluation.
+                            </p>
+                            <div class="image-wrapper">
+                                <img src="assets/images/think-agent/resume-screener-3.png" alt="Resume Screener"
+                                    class="demo-img" />
+                            </div>
+                        </div>
+
+                        <div class="para-box">
+                            <h4 class="h4">
+                                Step 3: Execute the Screening Sweep
+                            </h4>
+                            <p>
+                                Allow the agent to audit the applicant pool. The engine parses the professional history,
+                                education blocks, and core competencies of each candidate, checking for verifiable
+                                evidence of your required criteria while eliminating subjective bias.
+                            </p>
+                        </div>
+
+                        <div class="para-box">
+                            <h4 class="h4">
+                                Step 4: Analyze the Ranked Shortlist
+                            </h4>
+                            <p>
+                                Open the finalized screening board to make your hiring decisions:
+                            </p>
+                            <ul class="cd-overview-ul" style="margin-top: 10px; margin-bottom: 20px;">
+                                <li>
+                                    <strong>Ranked Leaderboard:</strong> View applicants ordered by their criteria match
+                                    scores to immediately identify top-tier talent.
+                                </li>
+                                <li>
+                                    <strong>Strengths & Gaps:</strong> Review the clear breakdowns of where candidates
+                                    excel and where their experience falls short.
+                                </li>
+                                <li>
+                                    <strong>Actionable Verdicts:</strong> Use the automated hiring verdicts to quickly
+                                    coordinate interviews or update candidate tracking statuses.
+                                </li>
+                            </ul>
+                            <div class="image-wrapper">
+                                <img src="assets/images/think-agent/resume-screener-4.png" alt="Resume Screener"
+                                    class="demo-img" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <div id="docFooter"></div>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/consumer_docs_home.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (window.I18n) {
+                window.I18n.init();
+            }
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+
+</html>
