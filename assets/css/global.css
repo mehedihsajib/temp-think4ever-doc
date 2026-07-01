@@ -4020,8 +4020,8 @@ body {
 
 .cgs-sidebar {
   box-sizing: border-box !important;
-  width: 280px !important;
-  min-width: 280px !important;
+  width: 320px !important;
+  min-width: 320px !important;
   background: #ffffff !important;
   /* Minimal white */
   border-right: 1px solid #e2e8f0 !important;

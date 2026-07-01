@@ -499,6 +499,10 @@ function setSidebarActive(container, activePage) {
     if (isOnclickMatch || isHrefMatch || isDataTargetMatch || isDataPathMatch) {
       link.classList.add("active");
       hasActiveMatch = true;
+      const accParent = link.closest(".accordion-parent");
+      if (accParent) {
+        accParent.classList.add("open");
+      }
     }
   });
 
@@ -519,6 +523,10 @@ function setSidebarActive(container, activePage) {
 
       if (page === currentPage || hrefPage === currentPage) {
         link.classList.add("active");
+        const accParent = link.closest(".accordion-parent");
+        if (accParent) {
+          accParent.classList.add("open");
+        }
       }
     });
   }

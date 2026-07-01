@@ -601,8 +601,8 @@ main.cd-main-content {
 .accordion-menu {
     display: none;
     flex-direction: column;
-    padding-left: 16px; /* Reduced left gap */
-    margin-top: 0;      /* Reduced whitespace */
+    padding-left: 32px; 
+    margin-top: 0;    
     margin-bottom: 4px;
     overflow: hidden;
 }
