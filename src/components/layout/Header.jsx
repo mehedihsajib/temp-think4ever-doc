@@ -13,7 +13,9 @@ import {
   FileText, 
   HelpCircle,
   Menu,
-  X
+  X,
+  Sun,
+  Moon
 } from 'lucide-react';
 
 const DropdownLink = ({ href, to, icon: Icon, title, description, onClick }) => {
@@ -47,15 +49,9 @@ const DropdownLink = ({ href, to, icon: Icon, title, description, onClick }) => 
 };
 
 const Header = ({ toggleSidebar, darkMode, setDarkMode }) => {
-  const [openDropdown, setOpenDropdown] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const toggleDropdown = (name) => {
-    setOpenDropdown(openDropdown === name ? null : name);
-  };
-
   const closeAll = () => {
-    setOpenDropdown(null);
     setMobileMenuOpen(false);
   };
 
@@ -83,20 +79,15 @@ const Header = ({ toggleSidebar, darkMode, setDarkMode }) => {
             How it Works
           </a>
 
-          <div 
-            className="relative"
-            onMouseEnter={() => setOpenDropdown('3rd-party')}
-            onMouseLeave={() => setOpenDropdown(null)}
-          >
+          <div className="group relative">
             <button
-              onClick={() => toggleDropdown('3rd-party')}
               className="flex items-center gap-1 px-3 py-2 text-sm font-semibold text-slate-500 hover:text-slate-950 dark:text-slate-400 dark:hover:text-slate-100 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
             >
               <span>3rd Party Integration</span>
-              <ChevronDown className={`h-4 w-4 transition-transform ${openDropdown === '3rd-party' ? 'rotate-180' : ''}`} />
+              <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
             </button>
-            {openDropdown === '3rd-party' && (
-              <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-80 rounded-xl bg-white p-3 shadow-lg border border-slate-100 dark:bg-slate-800 dark:border-slate-700 z-20 space-y-1">
+            <div className="absolute left-1/2 -translate-x-1/2 pt-2 w-80 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out z-20">
+              <div className="bg-white p-3 rounded-xl shadow-lg border border-slate-100 dark:bg-slate-800 dark:border-slate-700 space-y-1">
                 <DropdownLink 
                   href="https://think4ever.com/third-party-integration#think-mcp"
                   icon={Puzzle}
@@ -122,23 +113,18 @@ const Header = ({ toggleSidebar, darkMode, setDarkMode }) => {
                   description="Connect external tools like Jira, Slack, GitHub, and Figma."
                 />
               </div>
-            )}
+            </div>
           </div>
 
-          <div 
-            className="relative"
-            onMouseEnter={() => setOpenDropdown('docs')}
-            onMouseLeave={() => setOpenDropdown(null)}
-          >
+          <div className="group relative">
             <button
-              onClick={() => toggleDropdown('docs')}
               className="flex items-center gap-1 px-3 py-2 text-sm font-semibold text-slate-500 hover:text-slate-950 dark:text-slate-400 dark:hover:text-slate-100 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
             >
               <span>Docs</span>
-              <ChevronDown className={`h-4 w-4 transition-transform ${openDropdown === 'docs' ? 'rotate-180' : ''}`} />
+              <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
             </button>
-            {openDropdown === 'docs' && (
-              <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-[640px] rounded-xl bg-white p-4 shadow-lg border border-slate-100 dark:bg-slate-800 dark:border-slate-700 z-20 grid grid-cols-2 gap-3">
+            <div className="absolute left-1/2 -translate-x-1/2 pt-2 w-[640px] opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out z-20">
+              <div className="bg-white p-4 rounded-xl shadow-lg border border-slate-100 dark:bg-slate-800 dark:border-slate-700 grid grid-cols-2 gap-3">
                 <DropdownLink 
                   to="/onboarding/introduction"
                   icon={Rocket}
@@ -196,27 +182,22 @@ const Header = ({ toggleSidebar, darkMode, setDarkMode }) => {
                   onClick={closeAll}
                 />
               </div>
-            )}
+            </div>
           </div>
 
           <a href="https://think4ever.com/#pricing" className="px-4 py-2 text-sm font-semibold text-slate-500 hover:text-slate-950 dark:text-slate-400 dark:hover:text-slate-100 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
             Pricing
           </a>
 
-          <div 
-            className="relative"
-            onMouseEnter={() => setOpenDropdown('resources')}
-            onMouseLeave={() => setOpenDropdown(null)}
-          >
+          <div className="group relative">
             <button
-              onClick={() => toggleDropdown('resources')}
               className="flex items-center gap-1 px-3 py-2 text-sm font-semibold text-slate-500 hover:text-slate-950 dark:text-slate-400 dark:hover:text-slate-100 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
             >
               <span>Resources</span>
-              <ChevronDown className={`h-4 w-4 transition-transform ${openDropdown === 'resources' ? 'rotate-180' : ''}`} />
+              <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
             </button>
-            {openDropdown === 'resources' && (
-              <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-80 rounded-xl bg-white p-3 shadow-lg border border-slate-100 dark:bg-slate-800 dark:border-slate-700 z-20 space-y-1">
+            <div className="absolute left-1/2 -translate-x-1/2 pt-2 w-80 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 ease-out z-20">
+              <div className="bg-white p-3 rounded-xl shadow-lg border border-slate-100 dark:bg-slate-800 dark:border-slate-700 space-y-1">
                 <DropdownLink 
                   href="https://think4ever.com/blog"
                   icon={FileText}
@@ -230,7 +211,7 @@ const Header = ({ toggleSidebar, darkMode, setDarkMode }) => {
                   description="Frequently asked questions and detailed answers."
                 />
               </div>
-            )}
+            </div>
           </div>
 
           <a href="https://think4ever.com/contact-us" className="px-4 py-2 text-sm font-semibold text-slate-500 hover:text-slate-950 dark:text-slate-400 dark:hover:text-slate-100 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
@@ -240,6 +221,14 @@ const Header = ({ toggleSidebar, darkMode, setDarkMode }) => {
 
         {/* CTA and mobile menu toggle */}
         <div className="flex items-center gap-4">
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className="p-2 rounded-lg text-slate-500 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-slate-100 dark:hover:bg-slate-800 transition-colors"
+            aria-label="Toggle Theme"
+          >
+            {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+          </button>
+
           <a
             href="https://portal.think4ever.com"
             className="hidden sm:inline-flex items-center justify-center h-[35px] px-[15px] rounded-[100px] bg-[#093cad] hover:bg-[#072f8a] text-white font-semibold text-sm transition-all shadow-sm"

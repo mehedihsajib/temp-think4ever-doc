@@ -27,6 +27,7 @@ const SidebarAccordion = ({ group }) => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const isActive = group.items.some(item => location.pathname === item.path);
+  const GroupIcon = Icons[group.icon] || Icons.Server;
 
   return (
     <div className="space-y-1">
@@ -39,7 +40,7 @@ const SidebarAccordion = ({ group }) => {
         }`}
       >
         <div className="flex items-center gap-3">
-          <Icons.Server className="h-4.5 w-4.5 text-slate-400 shrink-0" />
+          <GroupIcon className="h-4.5 w-4.5 text-slate-400 shrink-0" />
           <span>{group.name}</span>
         </div>
         <Icons.ChevronDown

@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
@@ -32,6 +34,19 @@
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
+
+  /* Customize standard slate colors dynamically based on CSS variables */
+  --color-slate-50: var(--slate-50);
+  --color-slate-100: var(--slate-100);
+  --color-slate-200: var(--slate-200);
+  --color-slate-300: var(--slate-300);
+  --color-slate-400: var(--slate-400);
+  --color-slate-500: var(--slate-500);
+  --color-slate-600: var(--slate-600);
+  --color-slate-700: var(--slate-700);
+  --color-slate-800: var(--slate-800);
+  --color-slate-900: var(--slate-900);
+  --color-slate-950: var(--slate-950);
 }
 
 @layer base {
@@ -65,42 +80,78 @@
     --ring: 221.2 83.2% 53.3%;
 
     --radius: 0.5rem;
+
+    /* Light Slate standard hex colors */
+    --slate-50: #f8fafc;
+    --slate-100: #f1f5f9;
+    --slate-200: #e2e8f0;
+    --slate-300: #cbd5e1;
+    --slate-400: #94a3b8;
+    --slate-500: #64748b;
+    --slate-600: #475569;
+    --slate-700: #334155;
+    --slate-800: #1e293b;
+    --slate-900: #0f172a;
+    --slate-950: #020617;
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    .dark {
+      /* Soft premium warm charcoal dark theme variables */
+      --background: 220 10% 7.1%;       /* #121316 */
+      --foreground: 220 10% 90%;        /* #e2e4e9 - softer text */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+      --card: 220 10% 12.5%;            /* #1c1e22 - elevated cards */
+      --card-foreground: 220 10% 90%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+      --popover: 220 10% 12.5%;         /* #1c1e22 */
+      --popover-foreground: 220 10% 90%;
 
-    --primary: 217.2 91.2% 59.8%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+      --primary: 221.2 83.2% 53.3%;     /* Primary blue */
+      --primary-foreground: 210 40% 98%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+      --secondary: 220 10% 12.5%;
+      --secondary-foreground: 220 10% 90%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+      --muted: 220 10% 12.5%;
+      --muted-foreground: 215 8% 58%;   /* #8a939f - softer muted text */
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+      --accent: 220 10% 12.5%;
+      --accent-foreground: 220 10% 90%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 48%;
-  }
+      --border: 220 14% 16%;            /* #23272f - soft borders */
+      --input: 220 14% 16%;
+      --ring: 221.2 83.2% 53.3%;
+
+      /* Premium Slate Palette mapping for dark mode layout elements */
+      --slate-50: #1a1c20;              /* Elevated surface (table headers, active list item) */
+      --slate-100: #e2e4e9;             /* Bright headings */
+      --slate-200: #c9ccd3;             /* Primary text */
+      --slate-300: #b0b5c1;             /* Secondary text */
+      --slate-400: #8a919f;             /* Muted text */
+      --slate-500: #626975;             /* Disabled text */
+      --slate-600: #383c44;             /* Active nav item bg / borders */
+      --slate-700: #23272f;             /* Subtle borders */
+      --slate-800: #17181c;             /* Sidebar, cards panels */
+      --slate-900: #121316;             /* Default layout background */
+      --slate-950: #0a0b0d;             /* Inset surfaces (code blocks, text area) */
+    }
 }
 
 body {
   @apply bg-background text-foreground antialiased;
   font-family: 'Inter', sans-serif;
+}
+
+/* Global butter-smooth theme transitions */
+*,
+*::before,
+*::after {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
 }
 
 /* Custom premium styles for doc elements */
@@ -210,15 +261,16 @@ body {
   border-radius: 9999px;
 }
 
-.dark .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #334155;
-}
-
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #cbd5e1;
 }
 
+/* Dark mode scrollbar overrides */
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #2a2e36;
+}
+
 .dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #475569;
+  background: #3c424e;
 }
 
