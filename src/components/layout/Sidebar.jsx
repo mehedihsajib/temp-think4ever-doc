@@ -10,14 +10,14 @@ const SidebarItem = ({ item }) => {
     <NavLink
       to={item.path}
       className={({ isActive }) =>
-        `flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+        `flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-lg transition-colors text-left ${
           isActive
             ? 'bg-blue-50 text-blue-600 dark:bg-blue-900/50 dark:text-blue-400'
             : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200'
         }`
       }
     >
-      <IconComponent className="h-4.5 w-4.5 shrink-0" />
+      <IconComponent className="h-4.5 w-4.5 shrink-0 text-slate-400" />
       <span className="truncate">{item.title}</span>
     </NavLink>
   );
@@ -32,38 +32,42 @@ const SidebarAccordion = ({ group }) => {
     <div className="space-y-1">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`flex w-full items-center justify-between px-3 py-2 text-sm font-medium rounded-lg transition-colors ${
+        className={`flex w-full items-center justify-between px-3 py-2 text-sm font-medium rounded-lg transition-colors text-left ${
           isActive || isOpen
             ? 'text-slate-900 dark:text-slate-100'
             : 'text-slate-600 hover:bg-slate-50 dark:text-slate-400 dark:hover:bg-slate-800'
         }`}
       >
         <div className="flex items-center gap-3">
-          <Icons.Server className="h-4.5 w-4.5 text-slate-400" />
+          <Icons.Server className="h-4.5 w-4.5 text-slate-400 shrink-0" />
           <span>{group.name}</span>
         </div>
         <Icons.ChevronDown
-          className={`h-4 w-4 text-slate-400 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+          className={`h-4 w-4 text-slate-400 transition-transform ${isOpen || isActive ? 'rotate-180' : ''}`}
         />
       </button>
       
       {(isOpen || isActive) && (
-        <div className="pl-9 space-y-1.5 pt-1">
-          {group.items.map((item) => (
-            <NavLink
-              key={item.path}
-              to={item.path}
-              className={({ isActive }) =>
-                `block text-sm font-medium py-1.5 transition-colors ${
-                  isActive
-                    ? 'text-blue-600 dark:text-blue-400'
-                    : 'text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200'
-                }`
-              }
-            >
-              {item.title}
-            </NavLink>
-          ))}
+        <div className="pl-4 space-y-1 pt-1 border-l border-slate-100 dark:border-slate-800 ml-5">
+          {group.items.map((item) => {
+            const SubIcon = Icons[item.icon] || Icons.FileText;
+            return (
+              <NavLink
+                key={item.path}
+                to={item.path}
+                className={({ isActive }) =>
+                  `flex items-center gap-2.5 px-2.5 py-1.5 text-xs font-medium rounded-md transition-colors text-left ${
+                    isActive
+                      ? 'bg-blue-50 text-blue-600 dark:bg-blue-900/40 dark:text-blue-400'
+                      : 'text-slate-500 hover:bg-slate-50 hover:text-slate-800 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-200'
+                  }`
+                }
+              >
+                <SubIcon className="h-3.5 w-3.5 text-slate-400 shrink-0" />
+                <span className="truncate">{item.title}</span>
+              </NavLink>
+            );
+          })}
         </div>
       )}
     </div>
@@ -95,18 +99,18 @@ const Sidebar = ({ isOpen, onClose }) => {
       )}
 
       <aside
-        className={`fixed inset-y-0 left-0 z-35 w-64 border-r border-slate-200 bg-slate-50 px-4 py-6 transition-transform lg:static lg:translate-x-0 dark:border-slate-800 dark:bg-slate-900/50 ${
+        className={`fixed inset-y-0 left-0 z-35 w-76 border-r border-slate-200 bg-slate-50 px-4 py-6 transition-transform lg:sticky lg:top-16 lg:h-[calc(100vh-4rem)] lg:overflow-y-auto lg:translate-x-0 dark:border-slate-800 dark:bg-slate-900/50 custom-scrollbar ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col h-full text-left">
           <div className="mb-6 flex items-center justify-between">
             <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
               {title}
             </h3>
           </div>
 
-          <div className="flex-1 overflow-y-auto space-y-6 pr-2">
+          <div className="flex-1 overflow-y-auto space-y-6 pr-2 custom-scrollbar">
             {type === 'flat' ? (
               <nav className="space-y-1">
                 {nav.map((item) => (

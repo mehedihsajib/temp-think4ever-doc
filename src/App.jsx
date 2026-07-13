@@ -60,11 +60,11 @@ function App() {
     <Router>
       <Layout>
         <Routes>
-          <Route path="/" element={<Navigate to="/onboarding/introduction" replace />} />
+          <Route path="/" element={<Navigate to="/designer/introduction" replace />} />
           {routes.map(({ path, Component }) => (
             <Route key={path} path={path} element={<Component />} />
           ))}
-          <Route path="*" element={<Navigate to="/onboarding/introduction" replace />} />
+          <Route path="*" element={<Navigate to="/designer/introduction" replace />} />
         </Routes>
       </Layout>
     </Router>

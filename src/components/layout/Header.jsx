@@ -1,95 +1,304 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { BookOpen, Search, Moon, Sun, Menu, ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { 
+  ChevronDown, 
+  Puzzle, 
+  Code, 
+  Terminal, 
+  Plug, 
+  Rocket, 
+  Palette, 
+  Users, 
+  Cog, 
+  FileText, 
+  HelpCircle,
+  Menu,
+  X
+} from 'lucide-react';
 
-const Header = ({ toggleSidebar, darkMode, setDarkMode }) => {
-  const location = useLocation();
-  const [showDropdown, setShowDropdown] = useState(false);
+const DropdownLink = ({ href, to, icon: Icon, title, description, onClick }) => {
+  const className = "flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors";
+  
+  const innerContent = (
+    <>
+      <div className="w-9 h-9 shrink-0 flex items-center justify-center rounded-lg bg-slate-50 border border-slate-100 dark:bg-slate-900 dark:border-slate-800 text-slate-400">
+        <Icon className="h-5 w-5" />
+      </div>
+      <div>
+        <h4 className="text-xs font-bold text-slate-900 dark:text-slate-100">{title}</h4>
+        <p className="text-[11px] text-slate-400 mt-1">{description}</p>
+      </div>
+    </>
+  );
 
-  const getActiveSection = () => {
-    const path = location.pathname;
-    if (path.startsWith('/onboarding')) return 'Customer Onboarding';
-    if (path.startsWith('/developer')) return 'Think4Ever Developer';
-    if (path.startsWith('/portal')) return 'Think4Ever Portal';
-    if (path.startsWith('/reverse-engineering')) return 'Reverse Engineering';
-    return 'Think4Ever Designer';
-  };
-
-  const sections = [
-    { name: 'Customer Onboarding', path: '/onboarding/introduction' },
-    { name: 'Think4Ever Designer', path: '/designer/introduction' },
-    { name: 'Think4Ever Developer', path: '/developer/start-new-project' },
-    { name: 'Think4Ever Portal', path: '/portal/dashboard' },
-    { name: 'Reverse Engineering', path: '/reverse-engineering' },
-  ];
+  if (to) {
+    return (
+      <Link to={to} onClick={onClick} className={className}>
+        {innerContent}
+      </Link>
+    );
+  }
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-slate-200 bg-white/80 backdrop-blur-md dark:border-slate-800 dark:bg-slate-900/80">
-      <div className="flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+    <a href={href} className={className}>
+      {innerContent}
+    </a>
+  );
+};
+
+const Header = ({ toggleSidebar, darkMode, setDarkMode }) => {
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const toggleDropdown = (name) => {
+    setOpenDropdown(openDropdown === name ? null : name);
+  };
+
+  const closeAll = () => {
+    setOpenDropdown(null);
+    setMobileMenuOpen(false);
+  };
+
+  return (
+    <header className="sticky top-0 z-40 w-full border-b border-slate-200 bg-white/95 backdrop-blur-md dark:border-slate-800 dark:bg-slate-900/95">
+      <div className="flex h-16 items-center justify-between px-6 max-w-full">
+        {/* Logo */}
         <div className="flex items-center gap-4">
           <button
             type="button"
             onClick={toggleSidebar}
-            className="text-slate-500 hover:text-slate-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 lg:hidden"
+            className="text-slate-500 hover:text-slate-600 focus:outline-none lg:hidden"
           >
             <Menu className="h-6 w-6" />
           </button>
           
-          <Link to="/" className="flex items-center gap-2.5">
-            <img src="/assets/images/think4ever-logo.png" alt="think4ever" className="h-7 w-auto" />
-          </Link>
-
-          <div className="relative">
-            <button
-              onClick={() => setShowDropdown(!showDropdown)}
-              className="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-slate-700 hover:bg-slate-50 rounded-lg dark:text-slate-300 dark:hover:bg-slate-800"
-            >
-              <span>{getActiveSection()}</span>
-              <ChevronDown className="h-4 w-4 text-slate-500" />
-            </button>
-            
-            {showDropdown && (
-              <>
-                <div className="fixed inset-0 z-10" onClick={() => setShowDropdown(false)}></div>
-                <div className="absolute left-0 mt-2 w-56 origin-top-left rounded-xl bg-white p-1.5 shadow-lg ring-1 ring-black/5 focus:outline-none dark:bg-slate-800 dark:ring-white/5 z-20">
-                  {sections.map((sec) => (
-                    <Link
-                      key={sec.name}
-                      to={sec.path}
-                      onClick={() => setShowDropdown(false)}
-                      className={`block rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
-                        getActiveSection() === sec.name
-                          ? 'bg-blue-50 text-blue-600 dark:bg-blue-900/50 dark:text-blue-400'
-                          : 'text-slate-700 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-300 dark:hover:bg-slate-800'
-                      }`}
-                    >
-                      {sec.name}
-                    </Link>
-                  ))}
-                </div>
-              </>
-            )}
-          </div>
+          <a href="https://think4ever.com" className="flex items-center min-w-[240px]">
+            <img src="/assets/images/think4ever-logo.png" alt="Think4Ever" className="h-11 w-auto" />
+          </a>
         </div>
 
-        <div className="flex items-center gap-4">
-          <div className="relative w-48 sm:w-64">
-            <Search className="absolute left-3 top-2.5 h-4 w-4 text-slate-400" />
-            <input
-              type="text"
-              placeholder="Search docs..."
-              className="w-full bg-slate-50 pl-9 pr-4 py-1.5 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-800 dark:border-slate-700 dark:text-slate-200"
-            />
+        {/* Desktop Navigation */}
+        <nav className="hidden lg:flex items-center justify-center gap-5 flex-1">
+          <a href="https://think4ever.com/how-it-works/" className="px-4 py-2 text-sm font-semibold text-slate-500 hover:text-slate-950 dark:text-slate-400 dark:hover:text-slate-100 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+            How it Works
+          </a>
+
+          <div 
+            className="relative"
+            onMouseEnter={() => setOpenDropdown('3rd-party')}
+            onMouseLeave={() => setOpenDropdown(null)}
+          >
+            <button
+              onClick={() => toggleDropdown('3rd-party')}
+              className="flex items-center gap-1 px-3 py-2 text-sm font-semibold text-slate-500 hover:text-slate-950 dark:text-slate-400 dark:hover:text-slate-100 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+            >
+              <span>3rd Party Integration</span>
+              <ChevronDown className={`h-4 w-4 transition-transform ${openDropdown === '3rd-party' ? 'rotate-180' : ''}`} />
+            </button>
+            {openDropdown === '3rd-party' && (
+              <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-80 rounded-xl bg-white p-3 shadow-lg border border-slate-100 dark:bg-slate-800 dark:border-slate-700 z-20 space-y-1">
+                <DropdownLink 
+                  href="https://think4ever.com/third-party-integration#think-mcp"
+                  icon={Puzzle}
+                  title="Think MCP"
+                  description="Work in harmony with Claude Code, Codex, and other AI clients."
+                />
+                <DropdownLink 
+                  href="https://think4ever.com/third-party-integration#vscode-plugin"
+                  icon={Code}
+                  title="VS Code Plugin"
+                  description="Access T4E directly inside your VS Code editor."
+                />
+                <DropdownLink 
+                  href="https://think4ever.com/third-party-integration#vscode-plugin"
+                  icon={Terminal}
+                  title="Think API"
+                  description="A standard REST interface to programmatically manage tokens."
+                />
+                <DropdownLink 
+                  href="https://think4ever.com/third-party-integration#vscode-plugin"
+                  icon={Plug}
+                  title="Ecosystem Integration"
+                  description="Connect external tools like Jira, Slack, GitHub, and Figma."
+                />
+              </div>
+            )}
           </div>
 
-          <button
-            onClick={() => setDarkMode(!darkMode)}
-            className="p-2 text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800"
+          <div 
+            className="relative"
+            onMouseEnter={() => setOpenDropdown('docs')}
+            onMouseLeave={() => setOpenDropdown(null)}
           >
-            {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            <button
+              onClick={() => toggleDropdown('docs')}
+              className="flex items-center gap-1 px-3 py-2 text-sm font-semibold text-slate-500 hover:text-slate-950 dark:text-slate-400 dark:hover:text-slate-100 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+            >
+              <span>Docs</span>
+              <ChevronDown className={`h-4 w-4 transition-transform ${openDropdown === 'docs' ? 'rotate-180' : ''}`} />
+            </button>
+            {openDropdown === 'docs' && (
+              <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-[640px] rounded-xl bg-white p-4 shadow-lg border border-slate-100 dark:bg-slate-800 dark:border-slate-700 z-20 grid grid-cols-2 gap-3">
+                <DropdownLink 
+                  to="/onboarding/introduction"
+                  icon={Rocket}
+                  title="Customer Onboarding"
+                  description="Get started with Think4Ever and set up your environment."
+                  onClick={closeAll}
+                />
+                <DropdownLink 
+                  to="/designer/introduction"
+                  icon={Palette}
+                  title="Think4Ever Designer"
+                  description="Learn how to use the Designer to map your systems."
+                  onClick={closeAll}
+                />
+                <DropdownLink 
+                  to="/developer/start-new-project"
+                  icon={Code}
+                  title="Think4Ever Developer"
+                  description="Technical guide for developers building with Think4Ever."
+                  onClick={closeAll}
+                />
+                <DropdownLink 
+                  to="/portal/dashboard"
+                  icon={Users}
+                  title="Think4Ever Portal"
+                  description="Learn how to use the Think4Ever Portal."
+                  onClick={closeAll}
+                />
+                <DropdownLink 
+                  to="/reverse-engineering"
+                  icon={Plug}
+                  title="Reverse Engineering"
+                  description="Learn how to reverse engineer with Think4Ever."
+                  onClick={closeAll}
+                />
+                <DropdownLink 
+                  to="/designer/mcp-overview"
+                  icon={Puzzle}
+                  title="Think MCP"
+                  description="Work in harmony with Claude Code, Codex, and other AI clients."
+                  onClick={closeAll}
+                />
+                <DropdownLink 
+                  to="/developer/vs-code-integration"
+                  icon={Code}
+                  title="VS Code Plugin"
+                  description="Access T4E directly inside your VS Code editor."
+                  onClick={closeAll}
+                />
+                <DropdownLink 
+                  to="/designer/think-api"
+                  icon={Terminal}
+                  title="Think API"
+                  description="A standard REST interface to programmatically manage tokens."
+                  onClick={closeAll}
+                />
+              </div>
+            )}
+          </div>
+
+          <a href="https://think4ever.com/#pricing" className="px-4 py-2 text-sm font-semibold text-slate-500 hover:text-slate-950 dark:text-slate-400 dark:hover:text-slate-100 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+            Pricing
+          </a>
+
+          <div 
+            className="relative"
+            onMouseEnter={() => setOpenDropdown('resources')}
+            onMouseLeave={() => setOpenDropdown(null)}
+          >
+            <button
+              onClick={() => toggleDropdown('resources')}
+              className="flex items-center gap-1 px-3 py-2 text-sm font-semibold text-slate-500 hover:text-slate-950 dark:text-slate-400 dark:hover:text-slate-100 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+            >
+              <span>Resources</span>
+              <ChevronDown className={`h-4 w-4 transition-transform ${openDropdown === 'resources' ? 'rotate-180' : ''}`} />
+            </button>
+            {openDropdown === 'resources' && (
+              <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-80 rounded-xl bg-white p-3 shadow-lg border border-slate-100 dark:bg-slate-800 dark:border-slate-700 z-20 space-y-1">
+                <DropdownLink 
+                  href="https://think4ever.com/blog"
+                  icon={FileText}
+                  title="Blog"
+                  description="Insights, updates, and deep dives into agentic development."
+                />
+                <DropdownLink 
+                  href="https://think4ever.com/faq"
+                  icon={HelpCircle}
+                  title="FAQ"
+                  description="Frequently asked questions and detailed answers."
+                />
+              </div>
+            )}
+          </div>
+
+          <a href="https://think4ever.com/contact-us" className="px-4 py-2 text-sm font-semibold text-slate-500 hover:text-slate-950 dark:text-slate-400 dark:hover:text-slate-100 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+            Contact Us
+          </a>
+        </nav>
+
+        {/* CTA and mobile menu toggle */}
+        <div className="flex items-center gap-4">
+          <a
+            href="https://portal.think4ever.com"
+            className="hidden sm:inline-flex items-center justify-center h-[35px] px-[15px] rounded-[100px] bg-[#093cad] hover:bg-[#072f8a] text-white font-semibold text-sm transition-all shadow-sm"
+          >
+            Get Early Access
+          </a>
+
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="p-2 text-slate-500 hover:text-slate-600 lg:hidden rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800"
+          >
+            {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
       </div>
+
+      {/* Mobile Drawer Navigation */}
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 top-16 z-30 bg-white dark:bg-slate-900 lg:hidden overflow-y-auto px-6 py-4 flex flex-col gap-4 border-t border-slate-100 dark:border-slate-800">
+          <a href="https://think4ever.com/how-it-works/" className="py-2 text-sm font-bold text-slate-500 dark:text-slate-400">
+            How it Works
+          </a>
+          
+          <div className="border-b border-slate-100 pb-2 dark:border-slate-800">
+            <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">3rd Party Integration</span>
+            <div className="mt-2 pl-3 flex flex-col gap-2">
+              <a href="https://think4ever.com/third-party-integration#think-mcp" className="text-sm font-semibold text-slate-600 dark:text-slate-300">Think MCP</a>
+              <a href="https://think4ever.com/third-party-integration#vscode-plugin" className="text-sm font-semibold text-slate-600 dark:text-slate-300">VS Code Plugin</a>
+              <a href="https://think4ever.com/third-party-integration#vscode-plugin" className="text-sm font-semibold text-slate-600 dark:text-slate-300">Think API</a>
+            </div>
+          </div>
+
+          <div className="border-b border-slate-100 pb-2 dark:border-slate-800">
+            <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Documentation</span>
+            <div className="mt-2 pl-3 flex flex-col gap-2">
+              <Link to="/onboarding/introduction" onClick={closeAll} className="text-sm font-semibold text-slate-600 dark:text-slate-300">Customer Onboarding</Link>
+              <Link to="/designer/introduction" onClick={closeAll} className="text-sm font-semibold text-slate-600 dark:text-slate-300">Think4Ever Designer</Link>
+              <Link to="/developer/start-new-project" onClick={closeAll} className="text-sm font-semibold text-slate-600 dark:text-slate-300">Think4Ever Developer</Link>
+              <Link to="/portal/dashboard" onClick={closeAll} className="text-sm font-semibold text-slate-600 dark:text-slate-300">Think4Ever Portal</Link>
+              <Link to="/reverse-engineering" onClick={closeAll} className="text-sm font-semibold text-slate-600 dark:text-slate-300">Reverse Engineering</Link>
+            </div>
+          </div>
+
+          <a href="https://think4ever.com/#pricing" className="py-2 text-sm font-bold text-slate-500 dark:text-slate-400">
+            Pricing
+          </a>
+
+          <a href="https://think4ever.com/contact-us" className="py-2 text-sm font-bold text-slate-500 dark:text-slate-400">
+            Contact Us
+          </a>
+
+          <a
+            href="https://portal.think4ever.com"
+            className="w-full flex items-center justify-center h-12 rounded-xl bg-orange-600 text-white font-extrabold shadow-md mt-4"
+          >
+            Get Early Access
+          </a>
+        </div>
+      )}
     </header>
   );
 };
