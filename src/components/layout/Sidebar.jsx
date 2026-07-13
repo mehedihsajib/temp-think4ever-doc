@@ -24,10 +24,17 @@ const SidebarItem = ({ item }) => {
 };
 
 const SidebarAccordion = ({ group }) => {
-  const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const isActive = group.items.some(item => location.pathname === item.path);
+  const [isOpen, setIsOpen] = useState(isActive);
   const GroupIcon = Icons[group.icon] || Icons.Server;
+
+  // Sync state if navigation changes to a path inside this group
+  React.useEffect(() => {
+    if (isActive) {
+      setIsOpen(true);
+    }
+  }, [isActive]);
 
   return (
     <div className="space-y-1">
@@ -44,11 +51,11 @@ const SidebarAccordion = ({ group }) => {
           <span>{group.name}</span>
         </div>
         <Icons.ChevronDown
-          className={`h-4 w-4 text-slate-400 transition-transform ${isOpen || isActive ? 'rotate-180' : ''}`}
+          className={`h-4 w-4 text-slate-400 transition-transform ${isOpen ? 'rotate-180' : ''}`}
         />
       </button>
       
-      {(isOpen || isActive) && (
+      {isOpen && (
         <div className="pl-4 space-y-1 pt-1 border-l border-slate-100 dark:border-slate-800 ml-5">
           {group.items.map((item) => {
             const SubIcon = Icons[item.icon] || Icons.FileText;
