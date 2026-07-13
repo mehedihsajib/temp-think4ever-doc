@@ -1,0 +1,2831 @@
+{
+  "meta": {
+    "lang_name": "Español",
+    "lang_code": "es"
+  },
+  "nav": {
+    "overview": "Descripción general",
+    "merchant": "Comerciante",
+    "consumer": "Consumidor",
+    "blog": "Blog",
+    "changelog": "Cambios",
+    "search_placeholder": "Buscar en la documentación...",
+    "dashboard": "Panel",
+    "feedback": "Comentarios",
+    "search": "Buscar"
+  },
+  "header": {
+    "brand": "MPay Network"
+  },
+  "sidebar": {
+    "book_title": "Docs de Billetera del Consumidor",
+    "section_getting_started": "Primeros Pasos",
+    "section_using_wallet": "Usando tu Billetera",
+    "section_settings": "Configuración y Soporte",
+    "section_other_docs": "Otras Documentaciones",
+    "link_overview": "Descripción General",
+    "link_getting_started": "Primeros Pasos",
+    "link_account_setup": "Configuración de Cuenta",
+    "link_making_payments": "Realizar Pagos",
+    "link_wallet_management": "Gestión de Billetera",
+    "link_p2p_transfers": "Enviar y recibir dinero",
+    "link_settings_security": "Ajustes y Seguridad",
+    "link_troubleshooting": "Resolución de Problemas",
+    "link_merchant_docs": "Docs de Billetera Comerciante",
+    "link_consumer_docs": "Consumer Wallet Docs",
+    "link_changelog": "Historial de Cambios"
+  },
+  "breadcrumb": {
+    "docs": "Docs",
+    "consumer_wallet": "Billetera del Consumidor",
+    "merchant_wallet": "Logística de Comerciante",
+    "getting_started": "Primeros Pasos",
+    "qr_payments": "Pagos con Código QR",
+    "nfc_payments": "Pagos NFC",
+    "making_payments": "Realización de Pagos",
+    "transactions": "Transacciones",
+    "wallet_management": "Gestión de Billetera",
+    "p2p_transfers": "Enviar y recibir dinero",
+    "product_updates": "Actualizaciones de Producto",
+    "v2_5_0": "v2.5.0",
+    "account_setup": "Configuración de Cuenta",
+    "troubleshooting": "Solución de Problemas",
+    "security": "Seguridad",
+    "settings_security": "Ajustes y Seguridad"
+  },
+  "page": {
+    "title": "Primeros Pasos con la Billetera del Consumidor",
+    "subtitle": "Todo lo que necesitas para descargar, instalar y configurar tu Billetera de Consumidor mPay. Sigue esta guía paso a paso para comenzar a realizar pagos rápidos y seguros en minutos.",
+    "time_badge": "Tiempo estimado de configuración: 5 minutos"
+  },
+  "toc": {
+    "on_this_page": "En Esta Página",
+    "requirements": "Requisitos del Sistema",
+    "download": "Descargar e Instalar",
+    "install_steps": "Pasos de Instalación",
+    "signup": "Registrarse",
+    "first_login": "Primer Inicio y Configuración",
+    "profile_setup": "Configuración de Perfil",
+    "wallet_setup": "Configuración de Billetera",
+    "screenshots": "Guía Visual de Configuración",
+    "faq": "Preguntas Frecuentes"
+  },
+  "requirements": {
+    "heading": "Requisitos del Sistema",
+    "intro": "Antes de descargar, asegúrate de que tu dispositivo cumple los requisitos mínimos:",
+    "ios": {
+      "name": "iOS",
+      "desc": "iOS 15.0 o posterior. Compatible con iPhone 8 y modelos más nuevos. Se requieren aproximadamente 85 MB de almacenamiento."
+    },
+    "android": {
+      "name": "Android",
+      "desc": "Android 10.0 (nivel de API 29) o posterior. Se requieren aproximadamente 60 MB de almacenamiento."
+    },
+    "nfc_callout_title": "Requisito NFC",
+    "nfc_callout_body": "Para la funcionalidad de pago por contacto, tu dispositivo debe tener hardware NFC. La mayoría de los smartphones modernos (iPhone 7+ y Android con NFC) soportan esta función."
+  },
+  "download": {
+    "heading": "Descargar e Instalar",
+    "intro": "La Billetera de Consumidor mPay está disponible de forma gratuita en las dos tiendas de aplicaciones principales. Elige tu plataforma a continuación:",
+    "ios_btn": "App Store",
+    "ios_btn_pre": "Descargar en el",
+    "android_btn": "Google Play",
+    "android_btn_pre": "Disponible en",
+    "install_steps_heading": "Pasos de Instalación",
+    "steps": {
+      "1": {
+        "title": "Abre tu tienda de aplicaciones",
+        "content": "Abre la <strong>App Store</strong> (iOS) o <strong>Google Play Store</strong> (Android) en tu dispositivo."
+      },
+      "2": {
+        "title": "Busca mPay Wallet",
+        "content": "Escribe <code>mPay Consumer Wallet</code> en la barra de búsqueda. Busca la aplicación oficial con el logo de mPay y \"mPay Network\" como desarrollador."
+      },
+      "3": {
+        "title": "Descargar e instalar",
+        "content": "Toca <strong>Obtener</strong> (iOS) o <strong>Instalar</strong> (Android). La aplicación se descargará e instalará automáticamente. Es posible que se te pida autenticarte con la contraseña de tu dispositivo, Face ID o huella dactilar."
+      },
+      "4": {
+        "title": "Abre la aplicación",
+        "content": "Una vez instalada, toca <strong>Abrir</strong> o busca el ícono de mPay en tu pantalla de inicio. La aplicación se iniciará con la pantalla de bienvenida."
+      }
+    },
+    "verify_callout_title": "Verifica el Desarrollador",
+    "verify_callout_body": "Siempre verifica que el desarrollador aparezca como \"mPay Network\" antes de descargar. No instales aplicaciones de fuentes no oficiales."
+  },
+  "signup": {
+    "heading": "Registrarse",
+    "intro": "Crear tu cuenta mPay es rápido y sencillo. Necesitarás un número de teléfono y una dirección de correo electrónico válidos.",
+    "steps": {
+      "1": {
+        "title": "¿Eres cliente existente de mPay?",
+        "content": "En la pantalla de bienvenida, se te pedirá seleccionar si <strong>\"¿Eres cliente existente?\"</strong>. Para nuevos clientes, toca el botón <strong>NO</strong>. Si ya tienes una cuenta, selecciona el botón <strong>SÍ</strong>."
+      },
+      "2": {
+        "title": "Formulario de Inscripción de Nuevo Consumidor",
+        "content": "El usuario es llevado al formulario de <strong>Inscripción de Nuevo Consumidor</strong>."
+      },
+      "3": {
+        "title": "Información Requerida del Cliente",
+        "content": "El <strong>ID de Usuario</strong>, <strong>Dirección de E-mail</strong> y <strong>Número de Móvil</strong> deben ser únicos para cada cliente.",
+        "info_callout": "Durante el envío de la inscripción, el sistema verifica si el <strong>ID de Usuario</strong>, <strong>Dirección de E-mail</strong> y <strong>Número de Móvil</strong> ya están siendo utilizados por clientes existentes de mPay."
+      },
+      "4": {
+        "title": "Completa todos los campos requeridos",
+        "intro": "Ingresa tu información básica:",
+        "field_name": "<strong>Nombre y Apellido</strong> — Tal como aparece en tu identificación",
+        "field_email": "<strong>Correo Electrónico</strong> — Un email válido para notificaciones y recuperación",
+        "field_mobile": "<strong>Número Móvil</strong> — Debe ser un número de móvil válido que recibirá SMS de verificación",
+        "field_referral": "<strong>Código de Referido</strong> — Campo opcional para el código de referido del cliente mPay que te refirió."
+      },
+      "5": {
+        "title": "Acepta los términos",
+        "intro": "Hay dos casillas de verificación requeridas que debes aceptar antes de proceder con la inscripción:",
+        "check_terms": "Acepta los <strong>Términos y Condiciones</strong>",
+        "check_security": "Política de Seguridad que indica que solo un usuario está permitido por dispositivo: <em>\"Acepto que inscribir un nuevo cliente eliminará la cuenta existente vinculada a este dispositivo.\"</em>"
+      },
+      "6": {
+        "title": "Opción para Usar Email y Móvil en la App Comerciante",
+        "intro": "Elige si tu correo electrónico y número de móvil también pueden usarse para identificarte en la App Comerciante.",
+        "check_terms": "Acepta los <strong>Términos y Condiciones</strong>",
+        "check_security": "Política de Seguridad que indica que solo un usuario está permitido por dispositivo: <em>\"Acepto que inscribir un nuevo cliente eliminará la cuenta existente vinculada a este dispositivo.\"</em>"
+      }
+    },
+    "success_callout_title": "¡Cuenta Creada!",
+    "success_callout_body": "Una vez que veas la pantalla de confirmación, tu cuenta está lista. Ahora puedes proceder a configurar tu perfil y configurar tu billetera."
+  },
+  "first_login": {
+    "heading": "Primer Inicio y Configuración",
+    "intro": "Después de crear tu cuenta, serás guiado a través del asistente de configuración inicial. Esto es lo que puedes esperar:",
+    "profile_heading": "Configuración de Perfil",
+    "profile_steps": {
+      "1": {
+        "title": "Agrega tus datos personales",
+        "content": "Ingresa tu nombre completo tal como aparece en tu identificación oficial. Opcionalmente, agrega una foto de perfil para identificación fácil durante transferencias P2P."
+      },
+      "2": {
+        "title": "Configura la seguridad",
+        "content": "Configura tu método de autenticación preferido:",
+        "pin": "<strong>Código PIN</strong> — Establece un PIN de 6 dígitos para acceso rápido",
+        "biometric": "<strong>Biométrico</strong> — Habilita Face ID o autenticación por huella dactilar",
+        "recommend": "Recomendamos habilitar ambos para máxima seguridad"
+      },
+      "3": {
+        "title": "Habilita las notificaciones",
+        "content_pre": "Permite las notificaciones push para recibir confirmaciones de pago instantáneas, alertas de seguridad y ofertas promocionales. Puedes personalizar las preferencias de notificación más tarde en ",
+        "settings_link": "Configuración",
+        "content_post": "."
+      }
+    },
+    "wallet_heading": "Configuración de Billetera",
+    "wallet_steps": {
+      "1": {
+        "title": "Personaliza tu perfil",
+        "content": "Establece una foto de perfil para tu cuenta de billetera."
+      },
+      "2": {
+        "title": "Gestión de Preferencias de Notificación",
+        "content": "Puedes activar/desactivar una opción de notificación, según tus propias preferencias."
+      },
+      "3": {
+        "title": "Completa la configuración",
+        "content": "Toca <strong>Finalizar Configuración</strong> para llegar a tu panel de billetera. ¡Estás listo para empezar a realizar pagos!"
+      }
+    },
+    "tip_callout_title": "Consejo: Completa la Verificación Pronto",
+    "tip_callout_body": "El proceso de verificación puede tomar entre 24 y 48 horas. Es aconsejable completar el perfil lo antes posible para obtener acceso completo a las funciones de mPay Wallet."
+  },
+  "screenshots": {
+    "heading": "Guía Visual de Configuración",
+    "intro": "Aquí tienes una descripción visual de las pantallas clave que encontrarás durante la configuración:",
+    "step1_label": "Pantalla de Bienvenida",
+    "step1_sublabel": "Crear Cuenta o Iniciar Sesión",
+    "step1_caption": "Paso 1: Pantalla de Bienvenida",
+    "step2_label": "Verificación de Teléfono",
+    "step2_sublabel": "Ingresa el Código OTP",
+    "step2_caption": "Paso 2: Verificar Teléfono",
+    "step3_label": "Configuración de Seguridad",
+    "step3_sublabel": "PIN y Biométrico",
+    "step3_caption": "Paso 3: Configurar Seguridad",
+    "step4_label": "Información de Perfil",
+    "step4_sublabel": "Nombre y Foto",
+    "step4_caption": "Paso 4: Tu Perfil",
+    "step5_label": "Configuración de Billetera",
+    "step5_sublabel": "Moneda y Fondos",
+    "step5_caption": "Paso 5: Configurar Billetera",
+    "step6_label": "¡Todo Listo!",
+    "step6_sublabel": "Panel Listo",
+    "step6_caption": "Paso 6: ¡Listo para Empezar!"
+  },
+  "faq": {
+    "heading": "Preguntas Frecuentes",
+    "q1": "¿Puedo usar mPay Wallet en varios dispositivos?",
+    "a1": "Sí, puedes iniciar sesión en tu cuenta mPay en varios dispositivos. Sin embargo, por razones de seguridad, <b>solo un dispositivo puede estar activo a la vez</b>. Iniciar sesión en un nuevo dispositivo te cerrará la sesión automáticamente en el anterior.",
+    "q2": "¿Qué hago si no recibo el código OTP?",
+    "a2": "Si no recibes el OTP en 60 segundos, toca el botón \"Reenviar Código\". Asegúrate de que tu teléfono tenga señal y que los SMS no estén bloqueados. Si el problema persiste, prueba la opción \"Llámame\" para verificación por voz. Consulta nuestra guía de Resolución de Problemas para más soluciones.",
+    "q3": "¿Hay un depósito mínimo para comenzar a usar la billetera?",
+    "a3": "No, no se requiere depósito mínimo. Puedes crear tu cuenta y explorar la aplicación sin agregar fondos. Cuando estés listo para realizar un pago, puedes financiar tu billetera con cualquier monto. Consulta Gestión de Billetera para opciones de financiamiento y límites.",
+    "q4": "¿Puedo cambiar mi número de teléfono después del registro?",
+    "a4": "Sí, puedes actualizar tu número de teléfono desde la página de Configuración. Necesitarás verificar tu identidad y el nuevo número de teléfono mediante OTP. El número anterior se desvinculará tras una verificación exitosa. Por seguridad, hay un período de espera de 24 horas antes de que ciertas funciones se reactiven después de un cambio de número.",
+    "q5": "¿Qué debo hacer si la aplicación falla durante la configuración?",
+    "a5": "Si la aplicación falla durante la configuración, simplemente ábrela de nuevo. Tu progreso se guarda automáticamente en cada paso. Si el problema persiste, intenta borrar la caché de la aplicación (Android) o reinstalarla (iOS). Asegúrate de tener instalada la versión más reciente. Visita nuestra página de Resolución de Problemas para obtener más ayuda.",
+    "q6": "¿Están seguros mis datos personales durante el registro?",
+    "a6": "Absolutamente. Todos los datos transmitidos durante el registro están cifrados con el estándar TLS 1.3. Tu información personal se almacena de forma segura y nunca se comparte con terceros sin tu consentimiento. Lee nuestra Política de Privacidad para conocer todos los detalles sobre cómo manejamos tus datos."
+  },
+  "pagination": {
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "prev_title": "Inicio de Docs del Consumidor",
+    "next_title": "Configuración y Verificación de Cuenta"
+  },
+  "lang_switcher": {
+    "label": "Idioma"
+  },
+  "merchant_sidebar": {
+    "title": "Billetera Comerciante",
+    "section_getting_started": "Empezando",
+    "overview": "Resumen",
+    "getting_started": "Empezando",
+    "account_setup": "Configuración y Verificación",
+    "section_payments": "Pagos",
+    "qr_payments": "Pagos con Código QR",
+    "nfc_payments": "Pagos NFC",
+    "section_management": "Gestión",
+    "transaction_management": "Gestión de Transacciones",
+    "settings_config": "Gestión de tienda",
+    "section_support": "Soporte",
+    "troubleshooting": "Solución de problemas"
+  },
+  "home": {
+    "version_banner": "Está viendo la documentación para <span class=\"version-tag\">v3.2.1</span> — la última versión estable.",
+    "breadcrumb": {
+      "docs": "Docs",
+      "consumer_wallet": "Billetera del Consumidor"
+    },
+    "title": "Documentación de la Billetera del Consumidor",
+    "overview": {
+      "p1": "Bienvenido a la documentación de la <strong>Billetera del Consumidor de MPay Network</strong>. La Billetera del Consumidor es su solución de pago móvil todo en uno, que le permite realizar pagos rápidos y seguros en cualquier comercio habilitado para MPay, enviar dinero a amigos y familiares, y administrar sus finanzas con facilidad.",
+      "p2": "Ya sea que esté pagando en una cafetería a través de un código QR, acercando su teléfono para un pago NFC o enviando dinero a un amigo en todo el país, la Billetera del Consumidor lo tiene cubierto. Esta documentación lo guiará a través de todo, desde su primera descarga hasta las funciones avanzadas."
+    },
+    "features": {
+      "heading": "Características Clave",
+      "qr": "Pagos con Código QR",
+      "nfc": "Pago con un toque NFC",
+      "p2p": "Transferencias de Persona a Persona",
+      "wallet": "Recarga y Retiro de Billetera",
+      "history": "Historial de Transacciones y Recibos",
+      "security": "Seguridad de Varias Capas",
+      "notifications": "Notificaciones Instantáneas",
+      "biometric": "Autenticación Biométrica"
+    },
+    "quick_start": {
+      "heading": "Inicio Rápido",
+      "intro": "Póngase en marcha con la Billetera del Consumidor MPay en solo unos pocos pasos:",
+      "step1": {
+        "title": "Descargar e Instalar",
+        "description": "Obtenga la Billetera del Consumidor MPay de App Store o Google Play Store."
+      },
+      "step2": {
+        "title": "Cree su Cuenta",
+        "description": "Regístrese con su número de teléfono y complete el proceso de verificación rápida."
+      },
+      "step3": {
+        "title": "Recargue su Billetera",
+        "description": "Agregue dinero a su billetera mediante transferencia bancaria, tarjeta de débito u otros métodos compatibles."
+      },
+      "step4": {
+        "title": "Comience a Pagar",
+        "description": "Escanee un código QR o acerque su teléfono a cualquier comercio habilitado para MPay para pagar al instante."
+      }
+    },
+    "explore": {
+      "heading": "Explorar la Documentación",
+      "learn_more": "Aprende más",
+      "getting_started": {
+        "title": "Empezando",
+        "description": "Descargue, instale y configure su Billetera del Consumidor. Complete su primer inicio de sesión y explore la interfaz de la aplicación."
+      },
+      "account_setup": {
+        "title": "Configuración de la Cuenta",
+        "description": "Registre su cuenta, complete la verificación de identidad y personalice la configuración de su perfil personal."
+      },
+      "making_payments": {
+        "title": "Realización de Pagos",
+        "description": "Aprenda a pagar en comercios mediante el escaneo de códigos QR, NFC y otros métodos de pago admitidos."
+      },
+      "wallet_management": {
+        "title": "Gestión de la Billetera",
+        "description": "Administre el saldo de su billetera, recargue con varios métodos, retire fondos y vea el historial de transacciones."
+      },
+      "p2p_transfers": {
+        "title": "Transferencias P2P",
+        "description": "Envíe y reciba dinero de otros usuarios de MPay al instante. Divida facturas, solicite pagos y gestione contactos."
+      },
+      "settings_security": {
+        "title": "Configuración y Seguridad",
+        "description": "Configure las preferencias de notificación, habilite el inicio de sesión biométrico, gestione la configuración de seguridad y proteja su cuenta."
+      },
+      "troubleshooting": {
+        "title": "Solución de problemas",
+        "description": "Encuentre soluciones a problemas comunes, códigos de error, fallos en los pagos y obtenga ayuda cuando algo no funcione como se esperaba."
+      }
+    },
+    "pagination": {
+      "prev": "Anterior",
+      "prev_title": "Inicio de la Documentación",
+      "next": "Siguiente",
+      "next_title": "Empezando"
+    }
+  },
+  "account_setup": {
+    "breadcrumb": {
+      "docs": "Docs",
+      "consumer": "Consumidor",
+      "account_setup": "Configuración de Cuenta"
+    },
+    "title": "Configuración y Verificación de Cuenta",
+    "subtitle": "Aprenda cómo registrar su cuenta de Billetera del Consumidor mPay, completar la verificación de identidad y configurar las preferencias de su perfil.",
+    "registration": {
+      "heading": "Registro",
+      "intro": "Crear su cuenta de Billetera del Consumidor mPay es rápido y sencillo. Todo lo que necesita es un número de teléfono válido para comenzar.",
+      "wallet_registration": "Registro de Billetera",
+      "intro_2": "Su número de móvil y dirección de correo electrónico sirven como uno de los identificadores únicos en la Red mPay. Siga estos pasos para registrarse o inscribirse:",
+      "steps": {
+        "1": {
+          "title": "¿Es usted un cliente de mPay existente?",
+          "content": "En la pantalla de bienvenida, se le pedirá que seleccione si <strong>\"¿Es un cliente existente?\"</strong>. Para nuevos clientes, toque el botón <strong>NO</strong>. Si ya tiene una cuenta, seleccione el botón <strong>SÍ</strong> en su lugar."
+        },
+        "2": {
+          "title": "Formulario de Inscripción de Nuevo Cliente",
+          "content": "El usuario es llevado al formulario de <strong> Inscripción de Nuevo Consumidor </strong>."
+        },
+        "3": {
+          "title": "Información Requerida del Cliente",
+          "content": "El <strong> ID de Usuario </strong>, <strong> Dirección de Correo Electrónico </strong> y el <strong>Número de Móvil</strong> deben ser únicos para cada cliente."
+        },
+        "4": {
+          "title": "Cree su PIN",
+          "content": "Establezca un PIN de 6 dígitos que utilizará para autorizar transacciones y acceder a su billetera. Elija algo seguro pero memorable."
+        },
+        "5": {
+          "title": "Acepte los Términos de Servicio",
+          "content_pre": "Revise y acepte los ",
+          "tos": "Términos de Servicio",
+          "privacy": "Política de Privacidad",
+          "content_mid": " y la ",
+          "content_post": " de mPay Network."
+        },
+        "6": {
+          "title": "Configuración de Preguntas de Seguridad",
+          "content": "Configure la pregunta de seguridad, que se utilizará para la recuperación de la cuenta y el restablecimiento de la contraseña. Haga clic en el botón <strong>Enviar</strong>"
+        },
+        "7": {
+          "title": "Verificación OTP",
+          "content": "Se enviará un SMS a su número de móvil registrado con un <strong>OTP (PIN de un solo uso). </strong>",
+          "ensure": "Asegúrese de verificar el OTP correcto.",
+          "success": "Se mostrará un mensaje de éxito de que el registro fue exitoso, toque el botón <strong>OK</strong>."
+        },
+        "8": {
+          "title": "Configuración del PIN",
+          "content": "Se <strong>requiere</strong> que el cliente configure un PIN para la aplicación de la billetera.",
+          "pin_def": "El <strong>PIN</strong> actúa como el código de acceso seguro de su aplicación.",
+          "pin_req": "Los usuarios deben ingresar su PIN cada vez que inicien sesión para verificar su identidad y acceder a la aplicación."
+        },
+        "9": {
+          "title": "Configuración de Biometría para el Inicio de Sesión",
+          "content": "El cliente también puede usar datos biométricos para iniciar sesión en la aplicación de la billetera como una capa adicional de seguridad.",
+          "default": "Si se configura la biometría, utilizamos <strong>Face ID</strong> o <strong>Touch ID</strong> para iniciar sesión en la aplicación de la billetera <strong>por defecto.</strong>"
+        }
+      },
+      "security_tip_title": "Consejo de Seguridad",
+      "security_tip_body": "Se recomienda mantener activadas ambas medidas de seguridad para garantizar una mayor protección de su aplicación de billetera.",
+      "supported_regions_heading": "Regiones Soportadas",
+      "supported_regions_intro": "La Billetera del Consumidor mPay está disponible actualmente en las siguientes regiones:",
+      "regions": {
+        "curacao": "Curazao"
+      },
+      "voip_warning_title": "Números VoIP no soportados",
+      "voip_warning_body": "No se aceptan números de teléfono virtuales (Google Voice, Skype, etc.) para el registro. Debe utilizar un número de operador móvil."
+    },
+    "verification": {
+      "heading": "Verificación de Identidad",
+      "intro": "mPay necesita verificar la identidad de su cliente para prevenir el fraude. Consulte a continuación para obtener más información sobre el estado del perfil del cliente:",
+      "tiers_heading": "Estado de la Cuenta de la Billetera",
+      "tiers": {
+        "incomplete": {
+          "badge": "Perfil Incompleto",
+          "title": "Usuario Recién Inscrito",
+          "f1": "Cuenta creada",
+          "f2": "Necesita completar el perfil",
+          "f3": "Para cargar documentos de identidad",
+          "f4": "Acceso limitado"
+        },
+        "pending": {
+          "badge": "No Verificado",
+          "title": "Esperando Verificación",
+          "f1": "Ha completado el perfil",
+          "f2": "Documentos de identidad cargados",
+          "f3": "El perfil está <strong>Pendiente</strong>",
+          "f4": "Acceso limitado",
+          "f5": "Proceso de verificación de hasta 48 horas"
+        },
+        "verified": {
+          "badge": "Verificado",
+          "title": "Perfil Totalmente Verificado",
+          "f1": "La identidad fue verificada",
+          "f2": "Acceso total",
+          "f3": "Administrar cuenta de billetera",
+          "f4": "Enviar/Recibir fondos",
+          "f5": "Análisis avanzado"
+        }
+      },
+      "how_to_heading": "¿Cómo verificar su identidad?",
+      "how_to_intro": "Después de un registro exitoso, inicie sesión en su aplicación mPay Wallet para <strong>Completar el Perfil</strong> cargando los documentos de identificación pertinentes.",
+      "how_to_steps": {
+        "1": {
+          "title": "Ingrese los detalles de la dirección y otra información requerida",
+          "content": "Asegúrese de que la dirección coincida con la identificación emitida por el gobierno que se enviará en el proceso de verificación."
+        },
+        "2": {
+          "title": "Subir Identificación Emitida por el Gobierno",
+          "content": "Tome una foto clara de su identificación válida emitida por el gobierno. Los documentos admitidos incluyen pasaportes, tarjetas de identidad nacionales y licencias de conducir."
+        },
+        "3": {
+          "title": "Tome una foto para su imagen de perfil",
+          "content": "Tome una selfie en vivo para la comparación facial. Nuestro sistema compara su rostro con la foto de su identificación. Asegure una buena iluminación y quítese accesorios como gafas de sol."
+        },
+        "4": {
+          "title": "Espere la Revisión",
+          "content": "MPay Network revisará cuidadosamente todos los detalles del cliente y el proceso de verificación puede demorar entre 24 y 48 horas. Independientemente del resultado del proceso de verificación, el cliente será verificado por SMS y correo electrónico."
+        }
+      },
+      "required_docs_heading": "Documentos Requeridos",
+      "table": {
+        "doc": "Documento",
+        "consumer": "Consumidor",
+        "merchant": "Comerciante",
+        "notes": "Notas",
+        "required": "Requerido",
+        "optional": "Opcional",
+        "row1_name": "ID del Gobierno (Pasaporte / ID Nacional / Licencia de Conducir)",
+        "row1_notes": "Debe ser válido y no estar vencido",
+        "row2_name": "Foto Selfie",
+        "row2_notes": "Captura en vivo, sin cargas",
+        "row3_name": "Prueba de Dirección",
+        "row3_notes": "Factura de servicios públicos, extracto bancario (últimos 3 meses)",
+        "row4_name": "Número de Identificación Fiscal",
+        "row4_notes": "SSN, TIN o equivalente"
+      },
+      "data_secure_title": "Sus datos están seguros",
+      "data_secure_body": "All documentos están cifrados de extremo a extremo y procesados por nuestro socio de KYC certificado. Nunca almacenamos imágenes en bruto después de completar la verificación. Consulte nuestra <a onclick=\"load_page('privacy_policy')\" style=\"color: #166534; cursor: pointer; text-decoration: underline;\">Política de Privacidad</a> para obtener detalles.",
+      "status_heading": "Comprobación del Estado de Verificación",
+      "status_intro": "Puede comprobar su estado de verificación actual en cualquier momento:",
+      "status_list": {
+        "1": "Abra la aplicación mPay e inicie sesión.",
+        "2": "Dependiendo del estado del cliente, el usuario recibirá un mensaje después del inicio de sesión:"
+      },
+      "status_indicators": "Indicadores de estado:",
+      "verified_status": "<strong>Verificado</strong> — Puede acceder a las funcionalidades de la aplicación. Durante el primer inicio de sesión después de que se haya verificado la cuenta, recibirá un mensaje <strong>\"¡Felicitaciones! ¡Su cuenta ha sido totalmente verificada!\"</strong>",
+      "pending_status": "<strong>Pendiente</strong> — Bajo revisión y mostrará un mensaje de que <strong>\"Su cuenta aún está bajo revisión.\" </strong>",
+      "rejected_status": "<strong>Rechazado</strong> — el cliente verá un mensaje <strong>Hay un problema con su cuenta, comuníquese con support@mpaynetwork.com para obtener más detalles.</strong>"
+    },
+    "profile": {
+      "heading": "Configuración del Perfil",
+      "intro": "Personalice su perfil de mPay para que sus amigos y comercios puedan identificarlo fácilmente durante las transacciones.",
+      "preview": {
+        "name": "Alex Johnson",
+        "phone": "+1 (555) 012-3456",
+        "status": "Cuenta Verificada"
+      },
+      "fields_heading": "Campos del Perfil",
+      "fields": {
+        "name": {
+          "title": "Nombre Completo",
+          "content": "El nombre que se muestra a los demás durante las transacciones. Puede ser su nombre real o un apodo."
+        },
+        "photo": {
+          "title": "Foto de Perfil",
+          "content": "Sube una foto o toma una nueva. Opcional pero recomendado para transferencias P2P."
+        },
+        "email": {
+          "title": "Dirección de Correo Electrónico",
+          "content": "Se utiliza para recibos de transacciones y recuperación de cuentas. Muy recomendado."
+        },
+        "language": {
+          "title": "Idioma Preferido",
+          "content": "Establezca su idioma de visualización. Actualmente admite inglés, español, francés, alemán y portugués."
+        },
+        "qr": {
+          "title": "Perfil QR",
+          "content": "Su perfil QR para usar al recibir dinero en su cuenta de billetera."
+        },
+        "notifications": {
+          "title": "Preferencias de Notificación",
+          "content": "Configure notificaciones push, alertas por correo electrónico y SMS para eventos de pago y seguridad."
+        }
+      },
+      "edit_heading": "Edición de su Perfil",
+      "edit_intro": "Para <b>editar</b> la información de su perfil:",
+      "edit_steps": {
+        "1": "1. Abra la aplicación mPay",
+        "2": "2. Toque el <strong>icono de perfil</strong> en la esquina superior derecha (o vaya a <strong>Ajustes &rarr; Perfil</strong>)",
+        "3": "3. Toque el botón <strong>\"Editar\"</strong> junto al campo que desea cambiar",
+        "4": "4. Realice sus cambios y toque <strong>\"Guardar\"</strong>"
+      },
+      "phone_change_title": "Cambiar su número de teléfono está sujeto a la aprobación y verificación de MPay Network",
+      "phone_change_body": "Llame a la línea directa de mPay o envíe un correo electrónico a support@mpaynetwork.com.",
+      "security_heading": "Configuración de Seguridad Inicial",
+      "security_intro": "Durante la configuración de la cuenta, recomendamos encarecidamente configurar estas funciones de seguridad:",
+      "security_list": {
+        "biometric": "<strong>Autenticación Biométrica:</strong> Habilite la huella dactilar o Face ID para un acceso rápido y seguro",
+        "pin": "<strong>PIN de Transacción:</strong> Su PIN de 6 dígitos es necesario para todas las transacciones — nunca lo comparta con nadie"
+      },
+      "never_share_title": "Nunca comparta su PIN o códigos OTP",
+      "never_share_body": "mPay nunca le pedirá su PIN u OTP por teléfono, correo electrónico o chat. Cualquiera que los solicite está intentando un fraude. Informe de actividades sospechosas inmediatamente a través de la aplicación."
+    },
+    "faq": {
+      "heading": "Preguntas Frecuentes",
+      "q1": "¿Puedo registrarme con un número de teléfono de un país diferente?",
+      "a1": "Sí, puede registrarse con cualquier código de país admitido. Sin embargo, algunas funciones pueden estar limitadas según su región de registro. Los límites de transacción y las funciones disponibles pueden variar según el país debido a las regulaciones locales.",
+      "q2": "¿Cuánto tiempo tarda la verificación de identidad?",
+      "a2": "La verificación de Nivel 2 (Estándar) es automatizada y suele completarse en 5 minutos. La verificación de Nivel 3 (Premium) puede requerir una revisión manual y puede tardar hasta 48 horas laborables. Recibirá una notificación push cuando se complete la revisión.",
+      "q3": "¿Qué sucede si mi verificación es rechazada?",
+      "a3": "Si su verificación es rechazada, recibirá una notificación con el motivo específico (por ejemplo, foto borrosa, documento vencido, discrepancia de nombre). Puede volver a enviar sus documentos desde <strong>Ajustes → Cuenta → Verificación</strong>. No hay límite para los intentos de reenvío, pero los fallos repetidos pueden activar un período de enfriamiento temporal.",
+      "q4": "¿Puedo cambiar mi nombre de pantalla después del registro?",
+      "a4": "Sí, puede cambiar su nombre de pantalla en cualquier momento desde <strong>Ajustes → Perfil → Editar perfil</strong>. Tenga en cuenta que si ha completado la verificación de Nivel 2 o Nivel 3, su nombre legal registrado no podrá cambiarse sin una nueva verificación. Su nombre de pantalla (mostrado a otros usuarios) es independiente de su nombre legal.",
+      "q5": "No recibí el código OTP. ¿Qué debo hacer?",
+      "a5": "Espere al menos 60 segundos y luego toque \"Reenviar código\". Si sigue sin recibirlo: (1) asegúrese de que su teléfono tenga señal, (2) compruebe que su número es correcto, (3) compruebe su carpeta de mensajes de spam/bloqueados, (4) intente reiniciar su teléfono. Si el problema persiste, visite nuestra <a onclick=\"load_page('consumer_troubleshooting')\" style=\"color: var(--color-primary); cursor: pointer; text-decoration: underline;\">página de Solución de problemas</a>.",
+      "q6": "¿Están seguros mis datos personales durante la verificación?",
+      "a6": "Absolutamente. Todos los documentos se transmiten mediante cifrado de extremo a extremo (AES-256). Nuestra verificación de KYC es gestionada por un socio certificado que cumple con SOC 2 Tipo II. Las imágenes de documentos en bruto se eliminan una vez finalizada la verificación. Solo se almacenan el resultado de la verificación y un hash. Lea más en nuestra <a onclick=\"load_page('privacy_policy')\" style=\"color: #166534; cursor: pointer; text-decoration: underline;\">Política de Privacidad</a>."
+    },
+    "pagination": {
+      "previous": "Anterior",
+      "next": "Siguiente",
+      "prev_title": "Getting Started",
+      "next_title": "Making Payments"
+    },
+    "toc": {
+      "title": "En esta página",
+      "registration": "Registro",
+      "phone_registration": "Registro de Número de Teléfono",
+      "supported_regions": "Regiones Soportadas",
+      "identity_verification": "Verificación de Identidad",
+      "verification_tiers": "Niveles de Verificación",
+      "how_to_verify": "Cómo verificar",
+      "required_documents": "Documentos Requeridos",
+      "checking_status": "Comprobar Estado",
+      "profile_configuration": "Configuración del Perfil",
+      "profile_fields": "Campos del Perfil",
+      "editing_profile": "Editar su Perfil",
+      "security_setup": "Configuración de Seguridad",
+      "faq": "FAQ"
+    }
+  },
+  "making_payments": {
+    "breadcrumb": {
+      "docs": "Docs",
+      "consumer": "Consumidor",
+      "current": "Realizar Pagos"
+    },
+    "title": "Realizar Pagos",
+    "subtitle": "Aprenda a realizar pagos rápidos y seguros con el Monedero del Consumidor MPay. Ya sea escaneando un código QR, mostrando el suyo o tocando con NFC, pagar nunca ha sido tan fácil.",
+    "method_cards": {
+      "qr": {
+        "title": "Pagos con Código QR",
+        "body": "Escanee o muestre un código QR para completar pagos al instante en cualquier comercio de MPay."
+      },
+      "nfc": {
+        "title": "NFC Toca-para-Pagar",
+        "body": "Simplemente sostenga su teléfono cerca de la terminal para una experiencia de pago sin contacto."
+      }
+    },
+    "scan_qr": {
+      "heading": "Escaneo de Códigos QR",
+      "intro": "La forma más común de pagar es escaneando el código QR de un comercio. Este proceso solo toma unos segundos y procesa su pago de forma segura a través de la red MPay.",
+      "how_to_title": "Cómo Escanear para Pagar",
+      "how_to_intro": "<strong>Escanear para Pagar</strong> permite a los usuarios escanear un código QR para enviar dinero o realizar pagos rápidamente usando su monedero.",
+      "steps": {
+        "1": {
+          "title": "Toque \"Escanear para Pagar\"",
+          "body": "Desde la pantalla de inicio, toque el <strong>icono de Escanear para Pagar</strong> en la sección de <b>Enviar Dinero</b>."
+        },
+        "2": {
+          "title": "Escanee el Código QR del Destinatario",
+          "body": "Apunte su cámara al código QR del destinatario. Una vez escaneado, los detalles del destinatario se completarán automáticamente en el formulario de Escanear para Pagar.&nbsp;"
+        },
+        "3": {
+          "title": "Ingrese el Monto y Confirme",
+          "body": "Ingrese el monto de la transferencia, revise los detalles y confirme con su PIN o autenticación biométrica."
+        },
+        "4": {
+          "title": "Transferencia Completada",
+          "body": "Verá una pantalla de confirmación con un <b>número de referencia</b> de la transacción.&nbsp; <p>El destinatario es notificado al instante.</p>"
+        }
+      },
+      "visual_label": "Alinee el código QR dentro del marco",
+      "tip_title": "Consejo: Acceso Directo de Pago Rápido",
+      "tip_body": "También puede iniciar el escáner QR directamente tocando dos veces el icono de MPay en su pantalla de inicio, o usando el acceso directo \"Escanear\" desde el widget de la pantalla de notificaciones."
+    },
+    "show_qr": {
+      "heading": "Mostrar su Código QR",
+      "intro": "Algunos comercios prefieren escanear su código QR usando su terminal o dispositivo. En este caso, simplemente presente su código QR de pago personal para que lo escaneen.",
+      "how_to_title": "Cómo Mostrar su QR",
+      "steps": {
+        "1": {
+          "title": "Abra su Código de Pago",
+          "body": "Toque <strong>\"Pagar\"</strong> en la pantalla de inicio, luego seleccione <strong>\"Mostrar mi Código QR\"</strong>. Se mostrará su código QR de pago personal."
+        },
+        "2": {
+          "title": "Presentar al Comercio",
+          "body": "Sostenga su teléfono firme con el código QR visible. El comercio lo escaneará usando su terminal MPay Merchant o la cámara del dispositivo."
+        },
+        "3": {
+          "title": "Confirmar en su Dispositivo",
+          "body": "Después de que el comercio escanee e ingrese el monto, recibirá una notificación push. Confirme el monto del pago y autentíquese para completar."
+        }
+      },
+      "visual_label": "Muestre esto al comercio",
+      "security_title": "Nota de Seguridad",
+      "security_body": "Su código QR de pago se actualiza cada 60 segundos por seguridad. Nunca comparta una captura de pantalla de su código QR. Solo muéstrelo en el punto de venta al realizar un pago."
+    },
+    "nfc_tap": {
+      "heading": "NFC Toca-para-Pagar",
+      "intro": "Si su dispositivo soporta NFC y el comercio tiene una terminal habilitada para NFC, puede pagar simplemente tocando su teléfono contra su dispositivo de pago — sin necesidad de escanear.",
+      "how_to_title": "Cómo usar Pagos NFC",
+      "steps": {
+        "1": {
+          "title": "Habilitar NFC",
+          "body": "Asegúrese de que el NFC esté habilitado en los ajustes de su teléfono y en la aplicación MPay en <strong>Ajustes → Métodos de Pago → Pagos NFC</strong>."
+        },
+        "2": {
+          "title": "Sostener Cerca de la Terminal",
+          "body": "Cuando la terminal del comercio muestre el monto, sostenga la parte posterior de su teléfono (cerca de la antena NFC) a menos de 4 cm de la terminal de pago."
+        },
+        "3": {
+          "title": "Autenticar",
+          "body": "Una vibración o tono confirma la conexión. Autentíquese usando biometría o su PIN. El pago se procesa en menos de 2 segundos."
+        },
+        "4": {
+          "title": "Pago Completado",
+          "body": "Verá una marca de verificación de éxito y recibirá una notificación en la aplicación y un recibo SMS opcional."
+        }
+      },
+      "visual_phone": "Su Teléfono",
+      "visual_terminal": "Terminal de Pago",
+      "antenna_title": "Ubicación de la Antena NFC",
+      "antenna_body": "La antena NFC suele estar ubicada en la parte superior central de la parte posterior de su teléfono. Quite las fundas gruesas si tiene problemas para conectar."
+    },
+    "confirmation": {
+      "heading": "Confirmación de Pago",
+      "intro": "Después de cada pago exitoso, recibirá una confirmación instantánea con los detalles de la transacción. Esto sirve como su recibo digital.",
+      "receipt_title": "Qué se Incluye en su Recibo",
+      "receipt_intro": "Cada confirmación de pago incluye los siguientes detalles:",
+      "receipt": {
+        "success": "Pago Exitoso",
+        "merchant": "Coffee House Downtown",
+        "transaction_id": "ID de Transacción",
+        "datetime": "Fecha y Hora",
+        "method": "Método de Pago",
+        "status": "Estado",
+        "completed": "Completado",
+        "balance": "Saldo del Monedero"
+      },
+      "share_title": "Compartir y Exportar Recibos",
+      "share_body": "Toque el botón <strong>\"Compartir\"</strong> en cualquier recibo para enviarlo por correo electrónico, aplicaciones de mensajería o guardarlo como PDF.",
+      "failed_title": "Pagos Fallidos o Pendientes",
+      "failed_intro": "Si un pago falla o permanece pendiente, verá una pantalla de estado diferente:",
+      "failed_list": {
+        "pending": "<strong>Pendiente:</strong> El pago se está procesando. Esto suele resolverse en 30 segundos.",
+        "failed": "<strong>Fallido:</strong> El pago no pudo completarse. Compruebe su saldo y conexión.",
+        "refunded": "<strong>Reembolsado:</strong> El comercio inició un reembolso. Los fondos regresan en 1-3 días hábiles."
+      }
+    },
+    "history": {
+      "heading": "Historial de Transacciones",
+      "intro": "Rastree todos sus pagos pasados en un solo lugar. Su historial de transacciones mantiene un registro completo de cada pago realizado a través del Monedero mPay.",
+      "access_title": "Acceder a su Historial",
+      "access_body": "Navegue a <strong>Inicio → Transacciones</strong> o deslice hacia arriba en la pantalla de inicio.",
+      "sample_title": "Ejemplo de Historial de Transacciones",
+      "table": {
+        "date": "Fecha",
+        "merchant": "Comercio",
+        "method": "Método",
+        "amount": "Monto",
+        "status": "Estado",
+        "completed": "Completado",
+        "pending": "Pendiente"
+      },
+      "export_title": "Exportar sus Datos",
+      "export_body": "Puede exportar su historial de transacciones como CSV o PDF tocando el botón <strong>\"Exportar\"</strong>."
+    },
+    "overview": {
+      "heading": "Resumen del Flujo de Pago",
+      "intro": "Aquí tiene un recorrido visual del proceso de pago completo de principio a fin.",
+      "steps": {
+        "1": "Toque \"Pagar\" en la pantalla de inicio",
+        "2": "Elija escaneo QR o toque NFC",
+        "3": "Escanee el código QR del comercio",
+        "4": "Revise el monto del pago",
+        "5": "Autentíquese con biometría",
+        "6": "¡Pago confirmado!"
+      }
+    },
+    "faq": {
+      "heading": "Preguntas Frecuentes",
+      "q1": "¿Cuál es el monto máximo que puedo pagar por transacción?",
+      "a1": "El límite de transacción predeterminado es de $5,000 por pago. Las cuentas verificadas (KYC Nivel 2) pueden solicitar límites superiores. Puede gestionar sus límites en <strong>Ajustes → Límites de Pago</strong>.",
+      "q2": "¿Puedo pagar sin conexión a internet?",
+      "a2": "Los pagos NFC pueden funcionar en modo offline para pequeñas transacciones (menos de $50) si se configuran. Los pagos con código QR siempre requieren conexión a internet.",
+      "q3": "¿Qué debo hacer si el escáner QR no reconoce el código?",
+      "a3": "Asegúrese de tener una iluminación adecuada y limpie su lente. Si falla, solicite un código nuevo o ingrese el ID del comercio manualmente.",
+      "q4": "¿Es compatible el pago NFC en todos los dispositivos?",
+      "a4": "Los pagos NFC requieren un dispositivo con chip NFC. La mayoría de los teléfonos posteriores a 2018 e iPhones desde el 7 en adelante soportan NFC.",
+      "q5": "¿Hay alguna tarifa por realizar pagos? ",
+      "a5": "El Monedero del Consumidor MPay no cobra ninguna tarifa por realizar pagos a comercios. El procesamiento de la tarifa se gestiona del lado del comercio.",
+      "q6": "¿Puedo cancelar un pago después de enviarlo?",
+      "a6": "Los pagos completados no pueden cancelarse directamente. Contacte al comercio para un reembolso o reporte una disputa en <b>Transacciones</b>."
+    },
+    "pagination": {
+      "previous": "Anterior",
+      "next": "Siguiente",
+      "prev_title": "Configuración de la Cuenta",
+      "next_title": "Gestión del Monedero"
+    },
+    "toc": {
+      "title": "En esta página",
+      "scan_qr": "Escaneo de Códigos QR",
+      "show_qr": "Mostrar su Código QR",
+      "nfc_tap": "NFC Toca-para-Pagar",
+      "confirmation": "Confirmación de Pago",
+      "history": "Historial de Pagos",
+      "flow": "Resumen del Flujo de Pago",
+      "faq": "FAQs"
+    }
+  },
+  "wallet_management": {
+    "breadcrumb": {
+      "docs": "Docs",
+      "consumer": "Consumidor",
+      "current": "Gestión de billetera"
+    },
+    "title": "Gestión de billetera",
+    "subtitle": "Aprenda a consultar su saldo, añadir fondos, retirar dinero y entender sus límites de transacción.",
+    "overview": {
+      "title": "Su billetera MPay",
+      "body": "Su billetera mPay es una billetera digital segura que almacena sus fondos y le permite realizar pagos, transferir dinero y administrar sus finanzas, todo desde su teléfono inteligente."
+    },
+    "balance": {
+      "heading": "Consultar su saldo",
+      "intro": "El saldo de su billetera siempre es visible en la pantalla de inicio de la aplicación mPay. Aquí tiene todo lo que necesita saber sobre cómo ver y entender su saldo.",
+      "demo": {
+        "label": "Saldo disponible",
+        "currency": "Florines antillanos (XCG)",
+        "topup": "Recargar",
+        "withdraw": "Retirar",
+        "history": "Historial"
+      },
+      "how_to_title": "Cómo ver su saldo",
+      "steps": {
+        "1": {
+          "title": "Abra la aplicación MPay",
+          "desc": "Inicie la aplicación mPay Consumer en su dispositivo. Su saldo aparece de forma destacada en la pantalla de inicio."
+        },
+        "2": {
+          "title": "Ver el saldo disponible",
+          "desc": "Su saldo disponible se muestra en la parte superior de la pantalla. Esta es la cantidad que puede gastar o transferir inmediatamente."
+        },
+        "3": {
+          "title": "Cambiar la visibilidad del saldo",
+          "desc": "Toque el <strong>icono del ojo</strong> para ocultar o mostrar su saldo para mayor privacidad cuando esté en público."
+        }
+      },
+      "callout": "Las <strong>transacciones pendientes</strong> pueden reducir temporalmente su saldo disponible. Los montos pendientes se muestran por separado debajo de su saldo principal."
+    },
+    "topup": {
+      "heading": "Métodos de recarga",
+      "intro": "Añada fondos a su billetera MPay utilizando cualquiera de los siguientes métodos. Cada método tiene diferentes tiempos de procesamiento y cargos.",
+      "methods": {
+        "bank": {
+          "title": "Transferencia bancaria",
+          "desc": "Transfiera fondos desde cualquier banco local a su cuenta de billetera mPay mediante procesamiento de pago instantáneo. Seguro y rápido.",
+          "time": "Instantáneo"
+        },
+        "wallet": {
+          "title": "De billetera a billetera",
+          "desc": "Cargue instantáneamente su cuenta de billetera pidiendo a otro cliente de mPay que le envíe dinero y pagándole en efectivo.",
+          "time": "Instantáneo"
+        },
+        "agent": {
+          "title": "Agente de efectivo",
+          "desc": "Visite un comercio autorizado de mPay cerca de usted para depositar efectivo en su billetera. Presente su código QR de mPay al comerciante.",
+          "time": "Instantáneo"
+        }
+      }
+    },
+    "withdraw": {
+      "heading": "Retiros",
+      "intro": "Retire fondos de su billetera a su cuenta bancaria vinculada. MPay admite retiros instantáneos a los principales bancos locales.",
+      "callout": "<strong>Importante:</strong> mPay cumple con las políticas del Banco Central de Curazao. Asegúrese de que los detalles de la cuenta bancaria sean precisos y correctos antes de la transacción para evitar cualquier retraso."
+    },
+    "limits": {
+      "heading": "Límites de transacción",
+      "intro1": "mPay impone límites de transacción para proteger su cuenta. Sus límites dependen de muchos factores, como el tipo de cliente (consumidor o comercio), y se calculan en base a una acumulación diaria, mensual y anual.",
+      "intro2": "Aquí tiene una tabla de límites de ejemplo (estos son controlados por la Red mPay)",
+      "table": {
+        "type": "Tipo de transacción",
+        "consumer": "Consumidor",
+        "merchant": "Comercio",
+        "cashier": "Cajero",
+        "scan_pay": "Escanear para pagar",
+        "pay_bills": "Pagar facturas",
+        "pay_email": "Pagar por correo",
+        "pay_mobile": "Pagar por móvil",
+        "transfer_bank": "Transferir al banco",
+        "managed_by": "Gestionado por<br>el propietario del comercio"
+      },
+      "how_to_increase": "Cómo aumentar sus límites",
+      "callout_view": "<strong>Vea sus límites actuales:</strong> Vaya a <strong>Configuración del perfil → Límites de la billetera</strong> para ver su límite actual, uso y límites restantes para el día/mes.",
+      "callout_increase": "<strong>¿Aumentar su límite?</strong> Póngase en contacto con el soporte de mPay para esta solicitud; está sujeta a revisión y aprobación."
+    },
+    "faq": {
+      "heading": "Preguntas frecuentes",
+      "q1": "¿Cuánto tiempo tarda en aparecer mi recarga?",
+      "a1": "Las recargas con tarjeta aparecen instantáneamente. Las transferencias bancarias suelen tardar de 1 a 2 días hábiles, dependiendo de su banco. Las recargas por agente de efectivo también son instantáneas una vez confirmadas por el agente. Recibirá una notificación push tan pronto como se acrediten los fondos.",
+      "q2": "¿Puedo retirar dinero a la cuenta bancaria de otra persona?",
+      "a2": "No. Por razones de seguridad, los retiros solo pueden hacerse a cuentas bancarias registradas a nombre del mismo titular de la cuenta MPay. Este es un requisito regulatorio para prevenir el fraude y el lavado de dinero. Si necesita enviar dinero a otra persona, utilice la función de <strong>Transferencia P2P</strong> en su lugar.",
+      "q3": "¿Qué sucede si excedo mi límite de transacción?",
+      "a3": "La transacción será rechazada y verá un mensaje de error explicando que ha alcanzado su límite. Puede esperar a que el límite se reinicie (los límites diarios se reinician a la medianoche UTC, los mensuales el primero de cada mes) o mejorar su nivel de verificación para obtener límites más altos.",
+      "q4": "¿Hay algún cargo por mantener un saldo en la billetera?",
+      "a4": "No. No hay cargos mensuales, de mantenimiento ni por inactividad para su billetera MPay. Su saldo sigue siendo suyo. Los únicos cargos que pueden aplicarse son para ciertos métodos de recarga (recargas con tarjeta de crédito) y retiros exprés/instantáneos.",
+      "q5": "¿Puedo configurar recargas periódicas/automáticas?",
+      "a5": "¡Sí! Vaya a <strong>Configuración → Recarga automática</strong> para configurar la reposición automática del saldo. Puede establecer un umbral de saldo mínimo y un monto de recarga. Cuando su saldo caiga por debajo del umbral, MPay recargará automáticamente desde su fuente de financiación preferida.",
+      "q6": "¿Qué pasa con mi saldo si pierdo mi teléfono?",
+      "a6": "Su saldo está seguro; se almacena de forma segura en los servidores de MPay, no en su dispositivo. Si pierde su teléfono, comuníquese inmediatamente con el soporte de mPay para congelar su cuenta. Luego, cuando tenga un nuevo dispositivo, inicie sesión con sus credenciales y se restaurará todo su saldo. Active el borrado remoto en su teléfono como precaución adicional."
+    },
+    "pagination": {
+      "prev": "Anterior",
+      "prev_title": "Realización de pagos",
+      "next": "Siguiente",
+      "next_title": "Transferencias P2P"
+    },
+    "toc": {
+      "title": "En esta página",
+      "balance": "Consultar su saldo",
+      "topup": "Métodos de recarga",
+      "withdraw": "Retiros",
+      "limits": "Límites de transacción",
+      "faq": "Preguntas frecuentes"
+    }
+  },
+  "p2p_transfers": {
+    "breadcrumb": {
+      "docs": "Docs",
+      "consumer": "Consumidor",
+      "current": "Transferencias P2P"
+    },
+    "title": "Envío y recepción de dinero",
+    "subtitle": "Envíe, reciba y solicite dinero al instante de cualquier persona en la Red <b>mPay</b>. El envío y la recepción de dinero son rápidos, seguros y sin cargos para transacciones estándar.",
+    "illustration": {
+      "sender": "Remitente",
+      "receiver": "Destinatario"
+    },
+    "methods_grid": {
+      "send": {
+        "title": "Enviar dinero",
+        "desc": "Transfiera fondos a cualquier usuario de mPay al instante, de forma rápida y segura."
+      },
+      "receive": {
+        "title": "Recibir dinero",
+        "desc": "Acepte transferencias mediante código QR, correo electrónico o número de móvil."
+      },
+      "request": {
+        "title": "Solicitar pago",
+        "desc": "Envíe solicitudes de pago a otros usuarios generando un código QR."
+      }
+    },
+    "send": {
+      "heading": "Envío de dinero",
+      "intro_title": "Transferencias rápidas y seguras",
+      "intro_body": "Envíe dinero a cualquier persona en la <b>Red mPay</b> en segundos. Puede enviar por nombre de usuario, número de teléfono o código QR; lo que le resulte más cómodo."
+    },
+    "send_email_mobile": {
+      "title": "Enviar por correo electrónico o número móvil",
+      "intro": "La forma más nueva de enviar dinero es buscando al destinatario por su <b>correo electrónico</b> o <b>número móvil</b> de mPay.",
+      "steps": {
+        "1": {
+          "title": "Inicie \"Pagar por correo o Pagar por móvil\"",
+          "body": "Desde la pantalla de inicio, toque el icono <strong>\"Pagar por correo electrónico\"</strong> <span>o \"<b>Pagar por móvil\"</b></span>."
+        },
+        "2": {
+          "title": "Busque al destinatario",
+          "body": "Ingrese el <b>correo electrónico</b> o <b>número móvil</b> mPay del destinatario en el campo de búsqueda. La aplicación mostrará los usuarios coincidentes en tiempo real. También puede seleccionar de su lista de <strong>Contactos recientes</strong> o <strong>Favoritos</strong>."
+        },
+        "3": {
+          "title": "Ingrese el monto",
+          "body": "Escriba el monto que desea enviar. La aplicación mostrará el saldo actual de su billetera. Opcionalmente, puede añadir una nota en el campo <b>Descripción</b> (por ejemplo, <code>Pago de cena</code>)."
+        },
+        "4": {
+          "title": "Revise y confirme",
+          "body": "Revise los detalles de la transferencia, incluyendo el destinatario, el monto y los cargos. Toque <strong>Confirmar y enviar</strong> y autentíquese con su <b>PIN</b> o <b>biometría</b>."
+        },
+        "5": {
+          "title": "Transferencia completada",
+          "body": "Verá una pantalla de confirmación con un número de referencia de la transacción. El destinatario es notificado al instante."
+        }
+      }
+    },
+    "send_gallery": {
+      "title": "Enviar escaneando desde la galería",
+      "intro": "Una forma cómoda de enviar dinero utilizando un código QR <b>guardado</b> <span>en la galería de su teléfono</span>",
+      "steps": {
+        "1": {
+          "title": "Inicie \"Escanear desde galería\"",
+          "body": "Desde la pantalla de inicio, toque el icono <b>Escanear desde galería</b>."
+        },
+        "2": {
+          "title": "Suba el código QR desde su galería",
+          "body": "El remitente puede subir el código QR del destinatario desde la galería del teléfono móvil para iniciar la transacción."
+        },
+        "3": {
+          "title": "Ingrese el monto",
+          "body": "Escriba el monto que desea enviar. La aplicación mostrará el saldo actual de su billetera. Opcionalmente, puede añadir una nota en el campo <b>Descripción</b> (por ejemplo, <code>Pago de ropa</code>)."
+        },
+        "4": {
+          "title": "Revise y confirme",
+          "body": "Revise los detalles de la transferencia, incluyendo el destinatario, el monto y los cargos. Toque <strong>Confirmar y enviar</strong> y autentíquese con su <b>PIN</b> o <b>biometría</b>."
+        },
+        "5": {
+          "title": "Transferencia completada",
+          "body": "Verá una pantalla de confirmación con un número de referencia de la transacción. El destinatario es notificado al instante."
+        }
+      }
+    },
+    "send_scan_pay": {
+      "title": "Enviar por Escanear para pagar",
+      "intro": "<b>Escanear para pagar</b> permite a los usuarios escanear un código QR para enviar dinero o realizar pagos rápidamente con su billetera.",
+      "steps": {
+        "1": {
+          "title": "Toque \"Escanear para pagar\"",
+          "body": "Desde la pantalla de inicio, toque el icono <strong>Escanear para pagar</strong> en la sección <b>Enviar dinero</b>."
+        },
+        "2": {
+          "title": "Escanee el código QR del destinatario",
+          "body": "Apunte su cámara al código QR del destinatario. Una vez escaneado, los detalles del destinatario se completarán automáticamente en el formulario de Escanear para pagar."
+        },
+        "3": {
+          "title": "Ingrese el monto y confirme",
+          "body": "Ingrese el monto de la transferencia, revise los detalles y confirme con su PIN o autenticación biométrica."
+        },
+        "4": {
+          "title": "Transferencia completada",
+          "body": "Verá una pantalla de confirmación con un <b>número de referencia</b> de la transacción. <p>El destinatario es notificado al instante.</p>"
+        }
+      }
+    },
+    "send_pay_qr": {
+      "title": "Enviar por Pago mediante QR",
+      "intro": "<b>Pago mediante QR</b> permite a los usuarios generar un código QR que el destinatario puede escanear para recibir dinero.",
+      "steps": {
+        "1": {
+          "title": "Toque \"Pago mediante QR\"",
+          "body": "Desde la pantalla de inicio, toque el icono <strong>Pago mediante QR</strong> <span>en la sección </span> <b>Enviar dinero</b>."
+        },
+        "2": {
+          "title": "Ingrese los detalles del QR",
+          "body": "Los usuarios pueden definir el monto, el tipo de uso (único o múltiple) y el vencimiento al generar un código de Pago mediante QR."
+        },
+        "3": {
+          "title": "Revise y confirme",
+          "body": "Revise los detalles y confirme con su autenticación por <b>PIN</b> o <b>biometría</b>."
+        },
+        "4": {
+          "title": "Transferencia completada",
+          "body": "Verá una pantalla de confirmación con un <b>número de referencia</b> de la transacción. <p>El destinatario es notificado al instante.</p>"
+        }
+      }
+    },
+    "limits": {
+      "title": "Límites de transacción",
+      "desc": "Los límites de transacción dependen de lo configurado en la <b>Consola de administración</b>, que podría ser un <b>límite global</b> o un límite a <b>nivel de usuario</b>.",
+      "callout": {
+        "title": "Importante",
+        "body": "Los límites de transacción del usuario son definidos y controlados por la Red mPay y no pueden modificarse dentro de la aplicación. Sin embargo, el cliente puede ver sus límites <b>acumulados</b> en <b>Configuración del perfil → Límites de pago</b>"
+      }
+    },
+    "receive": {
+      "heading": "Recepción de dinero",
+      "intro_title": "Transferencias entrantes instantáneas",
+      "intro_body": "Cuando alguien le envía dinero, este llega a su billetera al instante. Recibirá una notificación push y el monto estará disponible de inmediato para gastar.",
+      "notifications": {
+        "title": "Notificaciones de transferencia",
+        "intro": "Cuando se envía una transferencia o pago a su cuenta de billetera, recibirá:",
+        "list": {
+          "push": "<strong>Notificación push</strong> — Muestra el nombre del remitente, el monto y la nota",
+          "in_app": "<strong>Notificación en la aplicación</strong> — Disponible en el centro de notificaciones",
+          "email": "<strong>Notificación por correo</strong> — Si está habilitada en su configuración",
+          "sms": "<strong>Alerta por SMS</strong> — Alerta de transacción a su número móvil registrado"
+        }
+      },
+      "share_qr": {
+        "title": "Comparta su código QR de perfil",
+        "intro": "Facilite que otros le envíen dinero compartiendo su código <b>QR de perfil</b>:",
+        "steps": {
+          "1": {
+            "title": "Abra su código QR",
+            "body": "Desde la pantalla de inicio, toque el <strong>Código QR de perfil</strong> en la esquina superior derecha de la página."
+          },
+          "2": {
+            "title": "Compartir o mostrar",
+            "body": "Muestre el código QR en su pantalla para que el remitente lo escanee, o toque <strong>Compartir</strong> para enviarlo por mensaje, correo o redes sociales."
+          }
+        },
+        "placeholder": "Pantalla de código QR personal con campo de monto"
+      },
+      "fees_callout": {
+        "title": "Sin cargos por recibir",
+        "body": "Recibir transferencias P2P en la Red mPay siempre es gratis. No hay cargos por transferencias estándar entrantes."
+      }
+    },
+    "request": {
+      "heading": "Solicitud de dinero",
+      "intro_title": "Solicitudes de pago fáciles",
+      "intro_body": "¿Necesita cobrar dinero a un amigo o dividir una cuenta? Envíe una solicitud de pago directamente desde la aplicación. El destinatario recibe una notificación y puede pagar con un solo toque.",
+      "req_qr": {
+        "title": "Solicitar dinero mediante QR",
+        "steps": {
+          "1": {
+            "title": "Abra la pantalla de solicitud",
+            "body": "Desde la pantalla de inicio, toque <strong>Solicitar por QR</strong> <span> en la sección <b>Recibir dinero</b>.</span>"
+          },
+          "2": {
+            "title": "Establezca el monto y detalles",
+            "body": "Ingrese el monto total y añada una descripción (por ejemplo, <code>Cena en La Piazza - 15 de marzo</code>)."
+          },
+          "3": {
+            "title": "Toque Enviar para generar el QR",
+            "body": "Haga clic en el botón <b>Enviar</b> <span> para generar un código QR personalizado.</span>"
+          },
+          "4": {
+            "title": "Comparta el QR con el remitente",
+            "body": "Comparta el <b>código QR generado</b> <span> con el <b>Remitente</b>.</span> <p>El remitente enviará el dinero usando este QR a través de <b>Escanear para pagar</b>.</p>"
+          }
+        }
+      },
+      "respond_qr": {
+        "title": "Responder a una solicitud por QR",
+        "intro": "Cuando alguien le envía una <b>Solicitud mediante código QR</b>, usted, siendo el <b>Remitente</b>, puede enviar el dinero o pagar usando <b>Escanear para pagar</b> o <b>Escanear desde galería.</b>",
+        "steps": {
+          "1": {
+            "title": "Revise la solicitud",
+            "body": "¿Es la persona que le solicita dinero alguien de su confianza?"
+          },
+          "2": {
+            "title": "Enviar dinero",
+            "body": "El remitente puede pagar el código de <b>Solicitud mediante QR</b> usando <b>Escanear para pagar</b> o <b>Escanear desde galería</b>."
+          },
+          "3": {
+            "title": "Verificar y autenticar",
+            "body": "Confirme la transacción con su <b>PIN</b> o autenticación <b>biométrica</b>. El dinero se transfiere de inmediato."
+          }
+        }
+      },
+      "tip_callout": {
+        "title": "Consejo profesional para enviar dinero",
+        "body": "Siempre verifique al solicitante antes de enviar el pago para evitar posibles fraudes."
+      },
+      "fraud_callout": {
+        "title": "Advertencia de fraude",
+        "body": "Nunca pague una solicitud de alguien que no conozca. Si recibe una solicitud de pago inesperada, verifique al remitente antes de pagar. Reporte solicitudes sospechosas a <strong>fraud@mpaynetwork.com</strong>."
+      }
+    },
+    "faq": {
+      "heading": "Preguntas frecuentes",
+      "q1": "¿Son gratuitas las transacciones de envío de dinero?",
+      "a1": "Sí, las transferencias P2P estándar entre usuarios de billetera MPay son completamente gratuitas. No hay cargos por enviar o recibir dinero. Sin embargo, las transferencias instantáneas a cuentas bancarias externas pueden incurrir en una pequeña comisión (normalmente del 1-2%).",
+      "q2": "¿Cuánto tiempo tarda una transferencia P2P?",
+      "a2": "Las transferencias P2P entre usuarios de MPay son instantáneas: el dinero aparece en la billetera del destinatario en cuestión de segundos. En casos raros de mucho tráfico, las transferencias pueden tardar hasta 30 segundos en procesarse.",
+      "q3": "¿Puedo cancelar una transferencia P2P después de enviarla?",
+      "a3": "Una vez que una transferencia P2P se confirma y envía, no se puede revertir. Si envió dinero a la persona equivocada, puede contactar al destinatario a través de la aplicación para pedirle que se lo devuelva. También puede abrir una disputa en <b>Ayuda → Reportar un problema</b> dentro de las 24 horas.",
+      "q4": "¿Puedo enviar dinero a alguien que no tenga MPay?",
+      "a4": "Puede invitar a usuarios que no sean de MPay a recibir transferencias. Cuando envía dinero a un número de teléfono no registrado en MPay, el destinatario recibe un SMS con un enlace para descargar la aplicación y reclamar los fondos. Las transferencias no reclamadas caducan después de 14 días y se reembolsan automáticamente.",
+      "q5": "¿Cómo aumento mis límites de transferencia?",
+      "a5": "Los límites de transferencia están vinculados a su nivel de verificación de cuenta. Para aumentar sus límites: <p>1. Vaya a <b>Configuración → Cuenta → Verificación</b>.<br>2. Complete los pasos de verificación requeridos para el siguiente nivel.<br>3. Los límites se actualizan automáticamente una vez que se aprueba la verificación (normalmente en 24 horas).</p>",
+      "q6": "¿Qué pasa si envío dinero a la persona equivocada?",
+      "a6": "Si accidentalmente envía dinero al destinatario equivocado, debe: <p>1. Contactar al destinatario a través de la mensajería de la aplicación para solicitar una devolución.<br>2. Si el destinatario no responde, presente una disputa dentro de las 24 horas a través de <b>Ayuda → Reportar un problema → Destinatario incorrecto</b>.<br>3. Nuestro equipo de soporte mediará en la situación. Tenga en cuenta que no podemos garantizar la recuperación de fondos enviados a la persona equivocada.</p> Siempre verifique el nombre y la foto de perfil del destinatario antes de confirmar una transferencia.",
+      "q7": "¿Puedo programar transferencias P2P periódicas?",
+      "a7": "¡Sí! Puede configurar transferencias periódicas para pagos de alquiler, asignaciones o pagos regulares. Después de ingresar los detalles de la transferencia, active <b>Hacer periódica</b> y elija su frecuencia (semanal, quincenal o mensual). Puede gestionar o cancelar transferencias periódicas en <b>Transferencias → Programadas</b>."
+    },
+    "pagination": {
+      "prev": "Anterior",
+      "prev_title": "Gestión de billetera",
+      "next": "Siguiente",
+      "next_title": "Ajustes y seguridad"
+    },
+    "toc": {
+      "title": "En esta página",
+      "sending": "Envío de dinero",
+      "by_username": "Por usuario/teléfono",
+      "via_qr": "Mediante código QR",
+      "limits": "Límites de transferencia",
+      "receiving": "Recepción de dinero",
+      "notifications": "Notificaciones",
+      "share_qr": "Compartir código QR",
+      "share_username": "Compartir usuario",
+      "requesting": "Solicitud de dinero",
+      "send_request": "Enviar una solicitud",
+      "manage_requests": "Gestionar solicitudes",
+      "respond_request": "Responder a solicitud",
+      "faq": "Preguntas frecuentes"
+    }
+  },
+  "settings": {
+    "breadcrumb": {
+      "docs": "Docs",
+      "consumer": "Consumidor",
+      "settings_security": "Ajustes y Seguridad"
+    },
+    "title": "Ajustes y Seguridad",
+    "subtitle": "Aprende cómo configurar los ajustes de tu Billetera de Consumidor MPay, gestionar preferencias de seguridad, habilitar la autenticación biométrica y proteger tu cuenta con funciones de seguridad avanzadas.",
+    "visual": {
+      "title": "Tu Seguridad es Importante",
+      "body": "MPay utiliza cifrado de nivel bancario y múltiples capas de seguridad para mantener tu billetera y transacciones seguras. Configura estos ajustes para maximizar tu protección."
+    },
+    "pin": {
+      "heading": "Gestión de PIN",
+      "intro": "Tu PIN de transacción es un código de 6 dígitos utilizado para autorizar pagos y operaciones de cuenta sensibles. Es independiente del bloqueo de pantalla de tu dispositivo y proporciona una capa adicional de seguridad.",
+      "setting_heading": "Configuración de tu PIN",
+      "setting_intro": "Cuando configures tu billetera mPay por primera vez, se te pedirá que crees un PIN de transacción. Sigue estos pasos:",
+      "steps": {
+        "1": {
+          "title": "Navegar a Ajustes de Seguridad",
+          "desc": "Abre el menú de la aplicación y toca <strong>Ajustes de Perfil</strong> → <strong>Seguridad</strong> → <strong>Cambiar PIN</strong>."
+        },
+        "2": {
+          "title": "Ingresar un PIN de 6 Dígitos",
+          "desc": "Elige un PIN que puedas recordar pero que no sea fácil de adivinar. Evita números secuenciales como <code>123456</code> o dígitos repetidos como <code>111111</code>."
+        },
+        "3": {
+          "title": "Confirmar tu PIN",
+          "desc": "Vuelve a ingresar tu PIN para confirmar. El sistema verificará que ambas entradas coincidan antes de guardar."
+        },
+        "4": {
+          "title": "PIN Guardado con Éxito",
+          "desc": "Tu PIN ahora está activo. Lo usarás para aprobar transacciones, transferencias y cambios en la cuenta."
+        }
+      },
+      "changing_heading": "Cambiar tu PIN",
+      "changing_intro": "Para cambiar tu PIN existente, primero deberás verificar tu PIN actual:",
+      "changing_steps": {
+        "1": {
+          "title": "Ir a Ajustes → Seguridad → Cambiar PIN",
+          "desc": "Navega a la sección de gestión de PIN en tus ajustes de seguridad."
+        },
+        "2": {
+          "title": "Ingresar PIN Actual",
+          "desc": "Verifica tu identidad ingresando tu PIN actual de 6 dígitos."
+        },
+        "3": {
+          "title": "Ingresar y Confirmar Nuevo PIN",
+          "desc": "Escribe tu nuevo PIN y confírmalo. Tu nuevo PIN entra en vigor de inmediato."
+        }
+      },
+      "tips_title": "Consejos de Seguridad para el PIN",
+      "tips_body": "Nunca compartas tu PIN con nadie, incluido el personal de soporte de MPay. MPay nunca te pedirá tu PIN por teléfono, correo electrónico o SMS. Tras 5 intentos fallidos de PIN, tu cuenta se bloqueará temporalmente durante 30 minutos.",
+      "forgot_title": "¿Olvidaste tu PIN?",
+      "forgot_body": "Si olvidas tu PIN de transacción, toca <strong>\"Olvidé mi PIN\"</strong> en la pantalla de entrada de PIN. Deberás verificar tu identidad a través de tu correo electrónico o número de teléfono registrado para restablecerlo."
+    },
+    "biometric": {
+      "heading": "Autenticación Biométrica",
+      "intro": "Habilita la autenticación por huella dactilar o Face ID para un acceso rápido y seguro a tu billetera. El inicio de sesión biométrico añade comodidad manteniendo una seguridad sólida.",
+      "methods": {
+        "fingerprint": {
+          "title": "Huella Dactilar",
+          "desc": "Usa tu huella dactilar registrada para un acceso rápido a la billetera y la aprobación de transacciones.",
+          "badge": "Más Común"
+        },
+        "faceid": {
+          "title": "Face ID",
+          "desc": "Auténticate con reconocimiento facial para una experiencia fluida sin manos.",
+          "badge": "Recomendado"
+        }
+      },
+      "enabling_heading": "Habilitar Inicio de Sesión Biométrico",
+      "steps": {
+        "1": {
+          "title": "Abrir Ajustes de Seguridad",
+          "desc": "Ve a <strong>Ajustes</strong> → <strong>Seguridad</strong> → <strong>Autenticación Biométrica</strong>."
+        },
+        "2": {
+          "title": "Activar Inicio de Sesión Biométrico",
+          "desc": "Activa el interruptor de autenticación biométrica. Tu dispositivo debe tener al menos una huella dactilar o Face ID registrado."
+        },
+        "3": {
+          "title": "Verificar con PIN",
+          "desc": "Ingresa tu PIN de transacción para confirmar el cambio. Esto garantiza que solo tú puedas habilitar la biometría."
+        },
+        "4": {
+          "title": "Probar tu Biometría",
+          "desc": "Se te pedirá que escanees tu huella dactilar o cara para verificar que funciona correctamente."
+        }
+      },
+      "toggles": {
+        "access": "Inicio de Sesión Biométrico para Acceso a la Billetera",
+        "transactions": "Aprobación Biométrica para Transacciones"
+      },
+      "requirements_title": "Requisitos del Dispositivo",
+      "requirements_body": "La autenticación biométrica requiere un dispositivo compatible con biometría registrada. Si tu dispositivo no admite biometría, esta opción no estará disponible. Siempre puedes recurrir a la autenticación por PIN."
+    },
+    "notifications": {
+      "heading": "Ajustes de Notificaciones",
+      "intro": "Configura cómo y cuándo MPay te envía alertas sobre transacciones, eventos de seguridad y actividad de la cuenta. Mantener las notificaciones habilitadas te ayuda a supervisar tu cuenta en tiempo real.",
+      "channels_heading": "Canales de Notificación Disponibles",
+      "channels": {
+        "push": {
+          "title": "Notificaciones Push",
+          "desc": "Alertas en tiempo real entregadas directamente a tu dispositivo. Recomendado para alertas de transacciones y notificaciones de seguridad."
+        },
+        "email": {
+          "title": "Notificaciones por Correo Electrónico",
+          "desc": "Notificaciones detalladas enviadas a tu dirección de correo electrónico registrada. Incluye recibos de transacciones y resúmenes mensuales."
+        },
+        "sms": {
+          "title": "Alertas por SMS",
+          "desc": "Alertas críticas por mensaje de texto. Se utilizan para transacciones de alto valor y eventos de seguridad cuando el push no está disponible."
+        }
+      },
+      "types_heading": "Tipos de Alerta Configurables",
+      "types": {
+        "transaction": "<strong>Alertas de Transacción</strong> — Cada pago enviado o recibido",
+        "promotional": "<strong>Promocional</strong> — Noticias, ofertas y anuncios de funciones",
+        "summary": "<strong>Resumen Semanal</strong> — Resumen semanal de gastos y actividad"
+      },
+      "pro_tip_title": "Consejo Profesional",
+      "pro_tip_body": "Recomendamos mantener habilitadas en todo momento las <strong>Alertas de Transacción</strong> y las <strong>Alertas de Seguridad</strong>. Estas te ayudan a detectar rápidamente actividad no autorizada en tu cuenta.",
+      "managing_heading": "Gestionar Notificaciones",
+      "managing_body": "Para ajustar tus preferencias de notificación, navega a <strong>Ajustes</strong> → <strong>Notificaciones</strong>. Usa los interruptores para habilitar o deshabilitar cada tipo de notificación por canal. Los cambios surten efecto de inmediato.",
+      "toggles": {
+        "transaction": "Alertas de Transacción (Push)",
+        "security": "Alertas de Seguridad (Push + Correo Electrónico)",
+        "promotional": "Notificaciones Promocionales"
+      }
+    },
+    "privacy": {
+      "heading": "Ajustes de Privacidad",
+      "intro": "MPay te da el control total sobre tus datos personales y preferencias de privacidad. Gestiona cómo se utiliza, comparte y almacena tu información.",
+      "controls_heading": "Controles de Privacidad",
+      "controls": {
+        "visibility": {
+          "title": "Visibilidad del Perfil",
+          "desc": "Controla quién puede ver tu nombre mostrado y foto de perfil al enviar o recibir pagos."
+        },
+        "analytics": {
+          "title": "Analítica y Datos de Uso",
+          "desc": "Elige si deseas compartir datos de uso anonimizados para ayudar a mejorar la experiencia MPay."
+        },
+        "location": {
+          "title": "Datos de Ubicación",
+          "desc": "Gestiona el acceso a la ubicación. Se utiliza para la detección de fraudes y funciones de comercios cercanos."
+        },
+        "contacts": {
+          "title": "Acceso a Contactos",
+          "desc": "Permite que MPay acceda a tus contactos para facilitar las transferencias P2P. Totalmente opcional."
+        }
+      },
+      "data_heading": "Gestión de Datos",
+      "data_intro": "Tienes derecho a acceder, exportar y eliminar tus datos personales en cualquier momento:",
+      "data_options": {
+        "export": {
+          "title": "Exportar Datos",
+          "desc": "Descarga una copia de todos tus datos personales e historial de transacciones"
+        },
+        "activity": {
+          "title": "Registro de Actividad",
+          "desc": "Revisa un registro completo de la actividad de la cuenta y eventos de acceso"
+        },
+        "delete": {
+          "title": "Eliminar Cuenta",
+          "desc": "Elimina permanentemente tu cuenta y todos los datos asociados"
+        }
+      },
+      "deletion_title": "Eliminación de Cuenta",
+      "deletion_body": "La eliminación de la cuenta es permanente y no se puede deshacer. Antes de eliminarla, asegúrate de que el saldo de tu billetera sea cero y que todas las transacciones pendientes se hayan completado. Los requisitos regulatorios pueden exigirnos conservar ciertos registros de transacciones hasta por 7 años.",
+      "policy_heading": "Política de Privacidad",
+      "policy_body": "Para obtener detalles completos sobre cómo MPay recopila, utiliza y protege tus datos, consulta nuestra <a onclick=\"load_page('privacy_policy')\" tabindex=\"0\" style=\"color: var(--color-primary, #2563eb); cursor: pointer; text-decoration: underline;\">Política de Privacidad</a>."
+    },
+    "faq": {
+      "heading": "Preguntas frecuentes",
+      "questions": {
+        "1": {
+          "q": "¿Qué pasa si olvido mi PIN de transacción?",
+          "a": "Toca \"Olvidé mi PIN\" en la pantalla de entrada de PIN. Deberás verificar tu identidad a través de su correo electrónico o número de teléfono registrado. Se te enviará un enlace de restablecimiento de PIN. Tras la verificación, puedes establecer un nuevo PIN de 6 dígitos. Tu cuenta puede estar restringida temporalmente durante el proceso de restablecimiento por seguridad."
+        },
+        "2": {
+          "q": "¿Puedo usar tanto la huella dactilar como Face ID?",
+          "a": "Solo puedes usar el método biométrico admitido por tu dispositivo. La mayoría de los dispositivos admiten o bien la huella dactilar o bien Face ID, no ambos simultáneamente. Si tu dispositivo admite ambos, puedes elegir cuál usar como método biométrico principal en los ajustes de seguridad."
+        },
+        "3": {
+          "q": "¿Cómo recupero mi cuenta si pierdo mi dispositivo 2FA?",
+          "a": "Usa uno de tus códigos de respaldo para iniciar sesión y desactivar el 2FA. Si no tienes códigos de respaldo, contacta con el soporte de MPay con tu correo electrónico registrado y una identificación emitida por el gobierno para verificar tu identidad. El proceso de recuperación suele tardar entre 24 y 48 horas por razones de seguridad."
+        },
+        "4": {
+          "q": "¿Por qué no recibo notificaciones push?",
+          "a": "Primero, verifica que las notificaciones estén habilitadas tanto en los ajustes de la aplicación MPay como en los ajustes del sistema de tu dispositivo. En Android, asegúrate de que la aplicación no esté restringida por la optimización de la batería. En iOS, verifica los ajustes del Centro de notificaciones. Si las notificaciones siguen sin funcionar, intenta cerrar la sesión y volver a entrar, o reinstalar la aplicación."
+        },
+        "5": {
+          "q": "¿Puedo descargar mi historial de transacciones?",
+          "a": "¡Sí! Ve a <strong>Ajustes → Privacidad → Exportar Datos</strong> para descargar una copia completa de tu historial de transacciones. Puedes exportar en formato CSV o PDF. La exportación se enviará a tu dirección de correo electrónico registrada y suele llegar en pocos minutos."
+        },
+        "6": {
+          "q": "¿Está mi PIN almacenado en los servidores de MPay?",
+          "a": "No. Tu PIN nunca se almacena en texto plano. MPay utiliza un hash unidireccional fuerte (bcrypt) para almacenar una versión hasheada de tu PIN. Esto significa que incluso los empleados de MPay no pueden ver tu PIN real. Toda la verificación del PIN ocurre de forma segura en el servidor comparando los hashes."
+        }
+      }
+    },
+    "pagination": {
+      "prev": "Anterior",
+      "prev_title": "Transferencias P2P",
+      "next": "Siguiente",
+      "next_title": "Resolución de Problemas"
+    },
+    "toc": {
+      "title": "En esta página",
+      "pin": "Gestión de PIN",
+      "biometric": "Autenticación Biométrica",
+      "2fa": "Autenticación de Dos Factores",
+      "notifications": "Ajustes de Notificaciones",
+      "privacy": "Ajustes de Privacidad",
+      "faq": "Preguntas frecuentes"
+    }
+  },
+  "troubleshooting": {
+    "breadcrumb": {
+      "docs": "Documentación",
+      "consumer": "Consumidor",
+      "current": "Resolución de Problemas"
+    },
+    "title": "Resolución de Problemas",
+    "subtitle": "Encuentre soluciones a problemas comunes, comprenda los códigos de error y aprenda a resolver problemas con su Billetera de Consumidor MPay.",
+    "search_placeholder": "Buscar problemas, códigos de error y preguntas frecuentes...",
+    "diagnostic": {
+      "title": "Herramienta de Diagnóstico Rápido",
+      "intro": "Realice una comprobación rápida para identificar posibles problemas con la configuración de su billetera. Este diagnóstico verifica los puntos de configuración comunes.",
+      "check_internet": "Conectividad a Internet",
+      "check_version": "Versión de la aplicación actualizada",
+      "check_permissions": "Permisos requeridos concedidos",
+      "check_nfc": "Hardware NFC disponible",
+      "check_storage": "Espacio de almacenamiento suficiente",
+      "btn": "Ejecutar Diagnósticos",
+      "running": "Ejecutando..."
+    },
+    "common_issues": {
+      "title": "Problemas Comunes",
+      "desc": "A continuación se muestran los problemas encontrados con más frecuencia y sus soluciones paso a paso.",
+      "issue1": {
+        "title": "No se puede conectar al servidor",
+        "summary": "La aplicación muestra \"Error de conexión\" o tarda demasiado en cargarse.",
+        "causes": "Posibles Causas",
+        "cause1": "Conexión a Internet inestable (Wi-Fi o datos móviles)",
+        "cause2": "Los servidores de MPay Network pueden estar en mantenimiento",
+        "cause3": "Interferencia de VPN o proxy",
+        "cause4": "Versión de la aplicación desactualizada",
+        "solution": "Solución",
+        "step1": "Verifique su conexión a Internet abriendo una página web en su navegador.",
+        "step2": "Active y desactive el modo avión, luego reintente.",
+        "step3": "Desactive temporalmente cualquier servicio de VPN o proxy.",
+        "step4": "Actualice la aplicación MPay Consumer Wallet desde su tienda de aplicaciones.",
+        "step5": "Si el problema persiste, consulte la <a href=\"#\" style=\"color:#2563eb;\">Página de Estado de MPay</a> para incidentes en curso.",
+        "callout": "El mantenimiento del servidor suele durar entre 15 y 30 minutos y se programa durante las horas de menor actividad (2:00 AM — 4:00 AM hora local)."
+      },
+      "issue2": {
+        "title": "El código QR no se escanea",
+        "summary": "La cámara no puede detectar o leer los códigos QR de los comerciantes.",
+        "causes": "Posibles Causas",
+        "cause1": "Permiso de cámara no concedido a la aplicación",
+        "cause2": "Pobres condiciones de iluminación",
+        "cause3": "Código QR dañado o borroso",
+        "cause4": "La lente de la cámara está sucia u obstruida",
+        "solution": "Solución",
+        "step1": "Vaya a <strong>Ajustes → Permisos de la Aplicación</strong> y asegúrese de que el acceso a la cámara esté habilitado para MPay.",
+        "step2": "Limpie la lente de su cámara con un paño suave.",
+        "step3": "Asegure una iluminación adecuada; use el interruptor de linterna en la vista del escáner.",
+        "step4": "Sujete su teléfono con firmeza, a unos 15-30 cm del código QR.",
+        "step5": "Si el código QR está en una pantalla, reduzca el brillo de la pantalla ajustando el ángulo.",
+        "callout": "Si el código QR parece dañado o corrupto, pida al comerciante que genere uno nuevo."
+      },
+      "issue3": {
+        "title": "Fallo en el pago NFC",
+        "summary": "No se detecta el toque para pagar o la transacción no se completa.",
+        "causes": "Posibles Causas",
+        "cause1": "NFC está desactivado en su dispositivo",
+        "cause2": "La funda del teléfono está bloqueando la antena NFC",
+        "cause3": "El dispositivo no está colocado correctamente en el terminal",
+        "cause4": "Saldo insuficiente en la billetera",
+        "solution": "Solución",
+        "step1": "Habilite NFC en los Ajustes de su teléfono: <span class=\"ctr-code\">Ajustes → Dispositivos Conectados → NFC</span>",
+        "step2": "Retire cualquier funda gruesa o accesorios metálicos que puedan bloquear el NFC.",
+        "step3": "Sujete la parte posterior de su teléfono sobre el terminal durante 2-3 segundos.",
+        "step4": "Asegúrese de que su billetera tenga saldo suficiente para la transacción.",
+        "callout": "La ubicación de la antena NFC varía según el modelo de teléfono. La mayoría de los teléfonos Android la tienen en la zona media-superior trasera. Los iPhones usan el borde superior."
+      },
+      "issue4": {
+        "title": "El inicio de sesión biométrico no funciona",
+        "summary": "El reconocimiento de huella dactilar o facial no logra autenticarse.",
+        "causes": "Posibles Causas",
+        "cause1": "Los datos biométricos cambiaron en el dispositivo (se añadió una nueva huella)",
+        "cause2": "Sensor de hardware biométrico sucio o dañado",
+        "cause3": "Permiso biométrico revocado para la aplicación",
+        "solution": "Solución",
+        "step1": "Inicie sesión con su código PIN como alternativa.",
+        "step2": "Vaya a <strong>Ajustes de MPay → Seguridad → Inicio de Sesión Biométrico</strong> y vuelva a habilitarlo.",
+        "step3": "Si se le solicita, vuelva a registrar sus datos biométricos.",
+        "step4": "Limpie el sensor de huellas dactilares o asegúrese de que el reconocimiento facial tenga una línea de visión clara."
+      },
+      "issue5": {
+        "title": "Transferencia P2P atascada o pendiente",
+        "summary": "Dinero enviado pero el destinatario no lo ha recibido.",
+        "causes": "Posibles Causas",
+        "cause1": "Congestión en la red causando retrasos",
+        "cause2": "La cuenta del destinatario puede tener restricciones",
+        "cause3": "El monto de la transacción supera los límites diarios",
+        "cause4": "Revisión de cumplimiento para montos grandes",
+        "solution": "Solución",
+        "step1": "Verifique el estado de la transacción en <strong>Actividad → Historial de Transacciones</strong>.",
+        "step2": "Si el estado es \"Procesando\", espere hasta 30 minutos para que se complete.",
+        "step3": "Si el estado es \"Pendiente de Revisión\", su transacción está siendo revisada. Recibirá una notificación una vez resuelto.",
+        "step4": "Si está atascada por más de 2 horas, contacte al soporte con el ID de Transacción.",
+        "callout": "<strong>No</strong> envíe la misma transferencia de nuevo mientras la original aún se esté procesando. Esto podría resultar en un cargo doble."
+      },
+      "issue6": {
+        "title": "Fallo en la recarga o retiro",
+        "summary": "No se pueden añadir fondos o retirar de la billetera.",
+        "causes": "Posibles Causas",
+        "cause1": "Cuenta bancaria o tarjeta no verificada",
+        "cause2": "Límites diarios o mensuales excedidos",
+        "cause3": "El banco rechaza la transacción",
+        "cause4": "Verificación de cuenta incompleta",
+        "solution": "Solución",
+        "step1": "Verifique su cuenta bancaria/tarjeta vinculada en <strong>Ajustes → Métodos de Pago</strong>.",
+        "step2": "Verifique sus límites actuales en <strong>Ajustes → Límites</strong>.",
+        "step3": "Complete la verificación KYC para desbloquear límites más altos.",
+        "step4": "Contacte a su banco para asegurarse de que no haya retenciones o bloqueos en las transacciones en línea."
+      }
+    },
+    "error_codes": {
+      "title": "Referencia de Códigos de Error",
+      "desc": "Si encuentra un código de error en la aplicación, use esta tabla de referencia para entender qué significa y cómo resolverlo.",
+      "filters": {
+        "all": "Todos",
+        "low": "Bajo",
+        "medium": "Medio",
+        "high": "Alto",
+        "critical": "Crítico"
+      },
+      "table": {
+        "code": "Código",
+        "description": "Descripción",
+        "severity": "Gravedad",
+        "resolution": "Resolución"
+      },
+      "e1001": {
+        "desc": "Tiempo de espera de conexión de red",
+        "res": "Verifique la conexión a Internet y reintente. Cambie entre Wi-Fi y datos móviles."
+      },
+      "e1002": {
+        "desc": "Autenticación fallida",
+        "res": "Vuelva a ingresar sus credenciales. Si persiste, restablezca la contraseña mediante recuperación por correo electrónico."
+      },
+      "e1003": {
+        "desc": "Sesión expirada",
+        "res": "Inicie sesión de nuevo. Esto es normal después de 30 minutos de inactividad."
+      },
+      "e2001": {
+        "desc": "Saldo insuficiente",
+        "res": "Recargue su billetera antes de reintentar la transacción."
+      },
+      "e2002": {
+        "desc": "Límite de transacción excedido",
+        "res": "Ha alcanzado su límite diario/mensual. Complete el KYC para límites más altos o espere al reinicio."
+      },
+      "e2003": {
+        "desc": "Pago rechazado por el comerciante",
+        "res": "El terminal del comerciante rechazó el pago. Verifique el monto y reintente, o use un método de pago diferente."
+      },
+      "e2004": {
+        "desc": "Transacción duplicada detectada",
+        "res": "El sistema detectó una posible duplicación. Verifique su historial de transacciones antes de reintentar."
+      },
+      "e3001": {
+        "desc": "Código QR inválido o expirado",
+        "res": "Pida al comerciante que genere un nuevo código QR. Los códigos QR expiran después de 5 minutos."
+      },
+      "e3002": {
+        "desc": "NFC no compatible",
+        "res": "Su dispositivo no es compatible con NFC. Use el escaneo de código QR para pagos en su lugar."
+      },
+      "e4001": {
+        "desc": "Cuenta suspendida",
+        "res": "Su cuenta ha sido suspendida temporalmente. Contacte al soporte de inmediato para su resolución."
+      },
+      "e4002": {
+        "desc": "Verificación KYC requerida",
+        "res": "Complete la verificación de identidad en Ajustes → Cuenta → Verificar Identidad."
+      },
+      "e5001": {
+        "desc": "Fallo en la recarga",
+        "res": "Verifique los detalles de su banco/tarjeta vinculada. Contacte a su banco si el problema continúa."
+      },
+      "e5002": {
+        "desc": "Retraso en el procesamiento del retiro",
+        "res": "Los retiros pueden tardar entre 1 y 3 días hábiles. No se requiere acción a menos que exceda los 5 días."
+      },
+      "e9999": {
+        "desc": "Error interno del servidor",
+        "res": "Ocurrió un error inesperado. Reinicie la aplicación y reintente. Si persiste, contacte al soporte."
+      },
+      "callout": "Puede encontrar su código de error tocando el mensaje de error en la aplicación. El código aparece en la parte inferior del cuadro de diálogo de error. Incluya este código cuando contacte al soporte para una resolución más rápida."
+    },
+    "contact_support": {
+      "title": "Contactar con Soporte",
+      "desc": "Si no puede resolver su problema con las guías anteriores, nuestro equipo de soporte está aquí para ayudar.",
+      "ticket": {
+        "title": "Ticket de Soporte",
+        "desc": "Envíe una solicitud de soporte detallada y reciba una respuesta en 24 horas.",
+        "link": "Enviar Ticket"
+      },
+      "email": {
+        "title": "Enviarnos un correo electrónico",
+        "desc": "Envíe un correo electrónico a nuestro equipo de soporte para problemas complejos o consultas de cuenta.",
+        "link": "support@mpaynetwork.com"
+      },
+      "chat": {
+        "title": "Chat en la aplicación",
+        "desc": "Use la función de chat integrada para recibir asistencia en tiempo real durante el horario de atención.",
+        "link": "Abrir en la aplicación"
+      },
+      "checklist_title": "Antes de contactar con soporte, tenga listo lo siguiente:",
+      "check1": "Su dirección de correo electrónico o número de teléfono registrado",
+      "check2": "Código de error (si corresponde)",
+      "check3": "ID de Transacción (para problemas de pago)",
+      "check4": "Modelo de dispositivo y versión del sistema operativo",
+      "check5": "Versión de la aplicación (se encuentra en Ajustes → Acerca de)"
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "desc": "Respuestas rápidas a las preguntas más comunes sobre la Billetera del Consumidor.",
+      "q1": "¿Cómo restablezco el PIN de mi billetera?",
+      "a1": "<p>Vaya a <strong>Ajustes → Seguridad → Cambiar PIN</strong>. Deberá verificar su identidad usando su correo electrónico o número de teléfono registrado primero. Ingrese su PIN actual (o use la opción \"Olvidé mi PIN\"), luego establezca un nuevo PIN de 6 dígitos.</p><p>Si ha olvidado su PIN por completo, toque \"Olvidé mi PIN\" en la pantalla de inicio de sesión y siga los pasos de recuperación. Recibirá un código de verificación por SMS o correo electrónico.</p>",
+      "q2": "¿Puedo usar la Billetera MPay en varios dispositivos?",
+      "a2": "<p>Por motivos de seguridad, su Billetera de Consumidor MPay solo puede estar activa en un dispositivo a la vez. Si inicia sesión en un dispositivo nuevo, su sesión anterior finalizará automáticamente.</p><p>Para cambiar de dispositivo, simplemente instale la aplicación en su nuevo dispositivo, inicie sesión con sus credenciales y verifique su identidad. Todos sus datos se sincronizarán automáticamente.</p>",
+      "q3": "¿Cuáles son los límites diarios de transacción?",
+      "a3": "<p>Los límites de transacción dependen de su nivel de verificación:</p><ul style=\"padding-left:20px;margin:8px 0;\"><li><strong>Básico (no verificado):</strong> $100/día, $500/mes</li><li><strong>Verificado (KYC completo):</strong> $5.000/día, $25.000/mes</li><li><strong>Premium:</strong> $25.000/día, $100.000/mes</li></ul><p>Puede verificar sus límites actuales y su nivel de verificación en <strong>Ajustes → Cuenta → Límites</strong>.</p>",
+      "q4": "¿Cuánto tiempo tardan en procesarse los reembolsos?",
+      "a4": "<p>Los reembolsos iniciados por los comerciantes suelen aparecer en su billetera en un plazo de 1 a 3 días hábiles. Recibirá una notificación push cuando se acredite el reembolso. Para reembolsos a su cuenta bancaria vinculada, espere entre 3 y 5 días hábiles adicionales.</p><p>Puede rastrear el estado del reembolso en <strong>Actividad → Historial de Transacciones</strong> — las transacciones reembolsadas están marcadas con una etiqueta verde de \"Reembolsado\".</p>",
+      "q5": "¿Por qué mi cuenta muestra \"En revisión\"?",
+      "a5": "<p>Las revisiones de cuenta se activan automáticamente por nuestro sistema de seguridad cuando se detecta actividad inusual. Esto puede suceder si:</p><ul style=\"padding-left:20px;margin:8px 0;\"><li>Múltiples intentos fallidos de inicio de sesión</li><li>Patrones de transacciones grandes o inusuales</li><li>Inicio de sesión desde una nueva ubicación o dispositivo</li><li>Verificación KYC incompleta</li></ul><p>Las revisiones suelen completarse en un plazo de 24 a 48 horas. Durante la revisión, aún puede ver su saldo e historial, pero las transacciones pueden estar restringidas temporalmente. Contacte al soporte si la revisión tarda más de lo esperado.</p>",
+      "q6": "¿Cómo elimino mi cuenta permanentemente?",
+      "a6": "<p>Para eliminar su cuenta, vaya a <strong>Ajustes → Cuenta → Eliminar Cuenta</strong>. Antes de la eliminación, debe:</p><ul style=\"padding-left:20px;margin:8px 0;\"><li>Retirar todo el saldo restante a su cuenta bancaria</li><li>Asegurarse de que no existan transacciones pendientes</li><li>Confirmar su identidad mediante verificación por correo electrónico/teléfono</li></ul><p>La eliminación de la cuenta es permanente y no se puede deshacer. Su historial de transacciones se conservará durante 7 años según lo exigen las regulaciones financieras, pero su perfil personal será anonimizado.</p>"
+    },
+    "pagination": {
+      "prev": "Anterior",
+      "prev_title": "Ajustes y Seguridad",
+      "next": "Volver a la vista general",
+      "next_title": "Inicio de Doc. del Consumidor"
+    },
+    "toc": {
+      "title": "En esta página",
+      "issues": "Problemas Comunes",
+      "errors": "Referencia de Códigos de Error",
+      "support": "Contactar con Soporte",
+      "faq": "Preguntas Frecuentes"
+    }
+  },
+  "merchant_home": {
+    "version_banner": {
+      "text": "Está viendo la documentación de <strong>MPay Merchant Wallet v2.4</strong>. ¿Busca una versión diferente?",
+      "changelog": "Ver registro de cambios",
+      "badge": "Último"
+    },
+    "breadcrumb": {
+      "docs": "Documentación",
+      "current": "Billetera de Comerciante"
+    },
+    "title": "Documentación de la Billetera de Comerciante",
+    "subtitle": "Todo lo que necesita para configurar, ajustar y gestionar su Billetera de Comerciante MPay.",
+    "overview": {
+      "title": "Descripción General",
+      "p1": "La Billetera de Comerciante mPay es una potente solución de aceptación de pagos móviles diseñada para empresas de todos los tamaños. Acepte pagos de forma fluida mediante códigos QR, pagos sin contacto NFC (tap-to-pay) y transferencias directas de billetera, todo desde su teléfono inteligente.",
+      "p2": "Con la Billetera de Comerciante, puede gestionar sus transacciones, generar informes detallados, configurar preferencias de pago y ofrecer a sus clientes una experiencia de pago rápida y segura.",
+      "feature1": "Acepte pagos con código QR al instante",
+      "feature2": "Pagos sin contacto NFC tap-to-pay",
+      "feature3": "Monitoreo de transacciones en tiempo real",
+      "feature4": "Informes de ventas y análisis detallados",
+      "feature5": "Soporte multi-moneda",
+      "feature6": "Seguridad y cifrado de grado bancario",
+      "feature7": "Perfil de negocio personalizable",
+      "feature8": "Exportar transacciones (CSV, PDF)",
+      "info_callout": "<strong>¿Nuevo en mPay?</strong> Comience con nuestra <a onclick=\"load_page('merchant_getting_started')\" tabindex=\"0\">guía de Inicio Rápido</a> para descargar la aplicación y configurar su primera cuenta de comerciante en minutos."
+    },
+    "quick_start": {
+      "title": "Inicio Rápido",
+      "subtitle": "Póngase en marcha en cuatro sencillos pasos:",
+      "step1": {
+        "title": "Descargar e Instalar",
+        "desc": "Obtenga la Billetera de Comerciante MPay desde la App Store o Google Play."
+      },
+      "step2": {
+        "title": "Crear su Cuenta",
+        "desc": "Regístrese con los detalles de su negocio y complete el perfil empresarial."
+      },
+      "step3": {
+        "title": "Completar el proceso de Verificación",
+        "desc": "Envíe los documentos comerciales pertinentes y espere a que el perfil sea verificado."
+      },
+      "step4": {
+        "title": "Comenzar a Aceptar Pagos",
+        "desc": "¡Ya está listo! Acepte su primer pago y gestione las transacciones sin esfuerzo."
+      }
+    },
+    "explore": {
+      "title": "Explorar Documentación",
+      "subtitle": "Sumérjase en guías detalladas para cada función de la Billetera de Comerciante.",
+      "getting_started": {
+        "title": "Primeros Pasos",
+        "desc": "Descargue, instale y configure la Billetera de Comerciante. Perfecto para usuarios primerizos."
+      },
+      "account": {
+        "title": "Configuración y Verificación de Cuenta",
+        "desc": "Registre su negocio, complete la verificación KYC y configure su perfil de comerciante."
+      },
+      "qr": {
+        "title": "Pagos con Código QR",
+        "desc": "Genere, muestre y gestione códigos QR para pagos fáciles de clientes."
+      },
+      "nfc": {
+        "title": "Pagos NFC",
+        "desc": "Habilite y configure el pago sin contacto NFC para transacciones rápidas."
+      },
+      "transactions": {
+        "title": "Gestión de Transacciones",
+        "desc": "Vea, busque, filtre y exporte sus transacciones e informes de pago."
+      },
+      "settings": {
+        "title": "Ajustes y Configuración",
+        "desc": "Configure notificaciones, ajustes de seguridad, preferencias de pago y más."
+      },
+      "troubleshooting": {
+        "title": "Resolución de Problemas",
+        "desc": "Encuentre soluciones a problemas comunes, códigos de error y contacte con soporte."
+      }
+    },
+    "pagination": {
+      "next": "Siguiente",
+      "next_title": "Primeros Pasos"
+    }
+  },
+  "changelog": {
+    "ui": {
+      "title": "Registro de Cambios y Notas de Versión",
+      "description": "Siga todas las actualizaciones y mejoras de mPay Network Wallet",
+      "filter_wallet": "Billetera",
+      "filter_all": "Todas las Billeteras",
+      "filter_merchant": "Billetera de Comerciante",
+      "filter_consumer": "Billetera de Consumidor",
+      "filter_tags": "Etiquetas",
+      "tag_new_feature": "Nueva Función",
+      "tag_bug_fix": "Corrección de Errores",
+      "tag_improvement": "Mejora",
+      "tag_breaking_change": "Cambio Importante",
+      "tag_security": "Seguridad",
+      "filters_active": "Filtros activos",
+      "clear_all": "Limpiar todo",
+      "showing_releases_html": "Mostrando <strong>{{count}} lanzamientos</strong>",
+      "showing_of_releases_html": "Mostrando <strong>{{count}}</strong> de <strong>{{total}} lanzamientos</strong>",
+      "empty_title": "No se encontraron lanzamientos",
+      "empty_text": "Intente ajustar sus filtros para ver más resultados.",
+      "empty_reset": "Restablecer Filtros",
+      "back_home": "Volver al Inicio",
+      "latest": "Último",
+      "both_wallets": "Ambas Billeteras",
+      "merchant": "Comerciante",
+      "consumer": "Consumidor",
+      "scroll_top": "Desplazarse hacia arriba"
+    },
+    "entries": {
+      "v2_3_0": [
+        "Soporte de autenticación biométrica para pagos NFC en ambas billeteras",
+        "Soporte multi-idioma: español, francés, portugués y árabe",
+        "Historial de transacciones rediseñado con filtrado avanzado y opciones de exportación",
+        "Flujo de incorporación mejorado con tutoriales interactivos",
+        "Se corrigieron problemas de accesibilidad con la navegación por lector de pantalla en los flujos de pago"
+      ],
+      "v2_2_1": [
+        "Se resolvió el tiempo de espera de generación de código QR en dispositivos Android antiguos",
+        "Se corrigió el formato de moneda incorrecto en los recibos de transacciones",
+        "Se actualizó el anclaje de certificados TLS para una seguridad de API mejorada",
+        "Se corrigieron los retrasos en las notificaciones push para las confirmaciones de pago"
+      ],
+      "v2_2_0": [
+        "Las transferencias P2P ahora admiten pagos programados y recurrentes",
+        "Nuevos métodos de recarga de billetera: transferencia bancaria y tarjeta de débito",
+        "Pantalla de confirmación de pago mejorada con detalles del comerciante y ubicación en el mapa",
+        "Se agregó el intercambio de recibos de transacciones a través de WhatsApp, SMS y correo electrónico"
+      ],
+      "v2_1_2": [
+        "Se corrigió que el lector de pagos NFC no respondiera después del modo de suspensión",
+        "Se resolvió la discrepancia en el cálculo del informe de liquidación",
+        "Se corrigió la visualización de la zona horaria en las marcas de tiempo de las transacciones"
+      ],
+      "v2_1_0": [
+        "Códigos QR dinámicos con montos y descripciones de pago personalizables",
+        "Seguimiento del estado del pago en tiempo real con notificaciones en vivo",
+        "Puntos finales de la API v1 obsoletos: migre a las API v2 antes del 1 de marzo",
+        "Requisitos mínimos del sistema operativo actualizados: iOS 15+ y Android 10+",
+        "Soporte de modo oscuro en todas las pantallas"
+      ],
+      "v2_0_3": [
+        "Vulnerabilidad parcheada en el mecanismo de actualización del token de sesión",
+        "Se corrigió que el saldo de la billetera no se actualizara después de completar la transferencia P2P",
+        "Cifrado mejorado para las credenciales de pago almacenadas"
+      ],
+      "v2_0_0": [
+        "Rediseño completo de la interfaz de usuario con la nueva identidad de marca azul real",
+        "Soporte de pago NFC para las billeteras de comerciante y consumidor",
+        "Nuevo tablero de comerciante con análisis de ventas y conocimientos",
+        "Migración a una nueva infraestructura de procesamiento de pagos segura",
+        "Se eliminaron las integraciones de métodos de pago heredados (procesamiento de tarjetas v1)",
+        "Verificación KYC optimizada con escaneo de documentos"
+      ],
+      "v1_8_0": [
+        "Exportación de transacciones por lotes en formatos CSV, PDF y Excel",
+        "Velocidad de escaneo de códigos QR mejorada en un 40% con un nuevo motor de cámara",
+        "Preferencias de notificación personalizables por tipo de transacción"
+      ]
+    }
+  },
+  "search": {
+    "title": "Resultados de Búsqueda",
+    "hero_title": "Buscar Documentación",
+    "input_placeholder": "Buscar documentos, blog, cambios...",
+    "btn_search": "Buscar",
+    "recent_label": "Búsquedas Recientes",
+    "results_found": "<strong>{{count}}</strong> resultados encontrados para <span class=\"sr-query-text\">\"{{query}}\"</span>",
+    "results_none": "<strong>0</strong> resultados encontrados para <span class=\"sr-query-text\">\"{{query}}\"</span>",
+    "filters": {
+      "all": "Todo",
+      "merchant": "Docs de Comerciante",
+      "consumer": "Docs de Consumidor",
+      "blog": "Blog",
+      "changelog": "Cambios"
+    },
+    "no_results": {
+      "title": "No se encontraron resultados",
+      "text": "No pudimos encontrar ninguna coincidencia para su búsqueda. Intente ajustar sus palabras clave o explore nuestra documentación directamente.",
+      "tips_title": "Consejos de búsqueda:",
+      "tip_broader": "Pruebe con palabras clave más amplias o alternativas",
+      "tip_spelling": "Revise su ortografía e inténtelo de nuevo",
+      "tip_fewer": "Use menos palabras para ampliar la búsqueda",
+      "tip_related": "Intente buscar un tema relacionado"
+    },
+    "back_home": "Volver al Inicio",
+    "quick_links": {
+      "feedback": "Enviar Comentarios"
+    },
+    "meta": {
+      "read_time": "{{count}} min de lectura"
+    },
+    "results": {
+      "r1": {
+        "title": "Primeros pasos con pagos mediante código QR",
+        "excerpt": "Aprenda cómo configurar y aceptar pagos con <mark>código QR</mark> en su billetera de comerciante. Genere <mark>códigos QR</mark> dinámicos para cualquier monto y comience a aceptar pagos instantáneamente."
+      },
+      "r2": {
+        "title": "Guía de configuración de pago por contacto NFC",
+        "excerpt": "Configure la funcionalidad de pago por contacto <mark>NFC</mark> para <mark>pagos</mark> sin contacto. Habilite su dispositivo para aceptar pagos con un simple toque."
+      },
+      "r3": {
+        "title": "Realizar pagos como consumidor",
+        "excerpt": "Escanee <mark>códigos QR</mark> de comerciantes o use <mark>NFC</mark> para realizar <mark>pagos</mark> rápidos y seguros. Siga nuestra guía paso a paso para completar su primera transacción."
+      },
+      "r4": {
+        "title": "Gestión y exportación de transacciones",
+        "excerpt": "Vea, filtre y exporte su historial de transacciones de <mark>pago</mark>. Descargue informes en formato CSV o PDF para contabilidad."
+      },
+      "r5": {
+        "title": "Métodos de recarga y retiro de billetera",
+        "excerpt": "Agregue fondos a su billetera mediante transferencia bancaria, tarjeta u otros métodos de <mark>pago</mark>. Retire su saldo a su cuenta bancaria de forma segura."
+      },
+      "r6": {
+        "title": "MPay Network lanza soporte para pagos NFC",
+        "excerpt": "Nos complace anunciar que el soporte de <mark>pago</mark> sin contacto <mark>NFC</mark> ya está disponible para todos los comerciantes. El pago por contacto ha llegado."
+      },
+      "r7": {
+        "title": "Transferencias de dinero P2P entre usuarios",
+        "excerpt": "Envíe dinero a amigos y familiares al instante usando su número de teléfono o ID de billetera. Sin cargos por <mark>pagos</mark> de persona a persona."
+      },
+      "r8": {
+        "title": "Versión 2.5.0 — Mejoras en el código QR",
+        "excerpt": "Se agregó la generación dinámica de <mark>códigos QR</mark> con montos personalizados, se mejoró la velocidad de escaneo de <mark>QR</mark> en un 40% y se corrigieron problemas de visualización en dispositivos más antiguos."
+      },
+      "r9": {
+        "title": "Configuración de cuenta y verificación KYC",
+        "excerpt": "Complete el registro de su cuenta de comerciante y la verificación KYC para comenzar a aceptar <mark>pagos</mark>. Cargue los documentos requeridos y verifique su negocio."
+      },
+      "r10": {
+        "title": "Solución de errores de pago",
+        "excerpt": "Códigos de error de <mark>pago</mark> comunes y sus soluciones. Solucione problemas con transacciones fallidas, problemas de escaneo de <mark>códigos QR</mark> y errores de conectividad <mark>NFC</mark>."
+      },
+      "r11": {
+        "title": "Mejores prácticas de seguridad para pagos digitales",
+        "excerpt": "Proteja sus datos de <mark>pago</mark> con estos consejos esenciales de seguridad. Habilite la autenticación de dos factores, use contraseñas seguras y monitoree las transacciones."
+      },
+      "r12": {
+        "title": "Configuración de seguridad y privacidad de la aplicación del consumidor",
+        "excerpt": "Configure sus preferencias de seguridad, incluyendo inicio de sesión biométrico, límites de <mark>pago</mark>, notificaciones de transacciones y controles de privacidad."
+      }
+    }
+  },
+  "landing": {
+    "title": "Documentación de la Billetera MPay",
+    "nav": {
+      "merchant": "Docs de Comercio",
+      "consumer": "Docs de Consumidor",
+      "blog": "Blog y Actualizaciones",
+      "feedback": "Enviar Comentarios",
+      "search": "Buscar"
+    },
+    "search": {
+      "trigger_text": "Buscar docs...",
+      "kbd_hint": "Ctrl K",
+      "modal_placeholder": "Buscar en la documentación...",
+      "modal_empty": "Comience a escribir para buscar...",
+      "esc_hint": "ESC"
+    },
+    "hero": {
+      "badge": "Portal de Documentación v2.0",
+      "title": "Documentación de la Billetera MPay Network",
+      "subtitle": "Tu solución de billetera QR y NFC: guías completas para comercios y consumidores para configurar, administrar y crecer con MPay Network.",
+      "tagline": "Todo lo que necesitas para aceptar y realizar pagos, todo en un solo lugar.",
+      "cta_merchant": "Docs de Billetera de Comercio",
+      "cta_consumer": "Docs de Billetera de Consumidor",
+      "phone_status": "Billetera MPay",
+      "amount_label": "Monto",
+      "scan_btn": "Escanear para Pagar"
+    },
+    "features": {
+      "label": "Características",
+      "title": "Todo lo que necesitas para pagos digitales",
+      "desc": "MPay Network proporciona un ecosistema completo para pagos QR y NFC. Explore las características que impulsan transacciones fluidas.",
+      "qr_title": "Pagos con Código QR",
+      "qr_desc": "Genere y escanee códigos QR para transacciones instantáneas y sin contacto. Funciona sin conexión y admite montos de pago dinámicos.",
+      "nfc_title": "Pago por Contacto NFC",
+      "nfc_desc": "Simplemente toca con tu teléfono para pagar o recibir pagos. Rápido, seguro y compatible con dispositivos modernos.",
+      "merchant_tools_title": "Herramientas para comercios",
+      "merchant_tools_desc": "Panel de control integral con análisis, gestión de transacciones e información comercial para hacer crecer su negocio.",
+      "consumer_wallet_title": "Billetera del Consumidor",
+      "consumer_wallet_desc": "Billetera digital fácil de usar para pagos diarios, transferencias P2P y gestión de saldo. Pague en cualquier lugar y en cualquier momento.",
+      "secure_title": "Seguro y Confiable",
+      "secure_desc": "Cifrado de nivel bancario, autenticación multifactor y detección de fraude en tiempo real para mantener tu dinero seguro.",
+      "multilingual_title": "Soporte Multi-idioma",
+      "multilingual_desc": "Disponible en inglés, español, francés, holandés y papiamento. Llegue a una audiencia más amplia con experiencias localizadas."
+    },
+    "quicknav": {
+      "label": "Navegación Rápida",
+      "title": "Explore la Documentación",
+      "desc": "Salte directamente a la sección que necesita. Ya sea un comercio o un consumidor, lo tenemos cubierto.",
+      "merchant_card_title": "Documentación de la Billetera de Comercio",
+      "merchant_card_desc": "Guías de configuración, procesamiento de pagos, integración QR y NFC, gestión de transacciones y resolución de problemas para comercios.",
+      "merchant_card_link": "Explorar Docs de Comercio",
+      "consumer_card_title": "Documentación de la Billetera de Consumidor",
+      "consumer_card_desc": "Primeros pasos, realización de pagos, gestión de su billetera, transferencias P2P y ajustes de seguridad para consumidores.",
+      "consumer_card_link": "Explorar Docs de Consumidor",
+      "blog_desc": "Últimas noticias, anuncios de funciones y consejos para aprovechar al máximo MPay Network.",
+      "blog_link": "Leer Blog",
+      "feedback": "Enviar Comentarios",
+      "feedback_desc": "Informe errores, solicite funciones o comparta sus ideas para ayudarnos a mejorar.",
+      "feedback_link": "Dar Comentarios",
+      "changelog_desc": "Siga todas las actualizaciones, mejoras y correcciones en cada versión de ambas billeteras.",
+      "changelog_link": "Ver Historial"
+    },
+    "footer": {
+      "desc": "La solución completa de billetera digital QR y NFC para comercios y consumidores. Rápida, segura y accesible.",
+      "col_docs": "Documentación",
+      "col_community": "Comunidad",
+      "col_legal": "Legal",
+      "link_privacy": "Política de Privacidad",
+      "link_terms": "Términos de Servicio",
+      "link_contact": "Contacto",
+      "copyright": "© 2026 MPay Network. Todos los derechos reservados."
+    }
+  },
+  "feedback": {
+    "breadcrumb": "Comentarios",
+    "title": "Envíanos tus comentarios",
+    "description": "Valoramos tus comentarios. Haznos saber cómo podemos mejorar mPay Network Wallet.",
+    "type": {
+      "bug": "Reporte de errores",
+      "feature": "Solicitud de funciones",
+      "general": "Comentarios generales"
+    },
+    "form": {
+      "category_label": "Categoría",
+      "category_placeholder": "Selecciona una categoría...",
+      "category_bug": "Reporte de errores",
+      "category_feature": "Solicitud de funciones",
+      "category_general": "Comentarios generales",
+      "category_merchant": "Monedero del comerciante",
+      "category_consumer": "Monedero del consumidor",
+      "name_label": "Nombre",
+      "name_optional": "(opcional)",
+      "name_placeholder": "Tu nombre",
+      "email_label": "Correo electrónico",
+      "email_optional": "(opcional)",
+      "email_placeholder": "tu@email.com",
+      "email_hint": "Solo utilizaremos esto para dar seguimiento a tus comentarios.",
+      "subject_label": "Asunto",
+      "subject_placeholder": "Breve descripción de tus comentarios",
+      "message_label": "Mensaje",
+      "message_placeholder": "Cuéntanos más sobre tu experiencia, sugerencia o el problema que encontraste...",
+      "rating_label": "Calificación general",
+      "rating_text_default": "Sin calificar",
+      "submit_btn": "Enviar comentarios",
+      "submitting_text": "Enviando..."
+    },
+    "info_callout": "Tus comentarios nos ayudan a mejorar MPay Network Wallet para todos. Todas las presentaciones son revisadas por nuestro equipo. Para problemas urgentes, ponte en contacto con support@mpaynetwork.com.",
+    "success": {
+      "title": "¡Gracias por tus comentarios!",
+      "description": "Tu mensaje ha sido recibido. Nuestro equipo lo revisará en breve. Si proporcionaste un correo electrónico, es posible que nos pongamos en contacto contigo.",
+      "back_home": "Volver al inicio",
+      "submit_another": "Enviar otro"
+    }
+  },
+  "blog": {
+    "sidebar": {
+      "nav_title": "Navegación",
+      "all_posts": "Todas las entradas",
+      "filter_tags": "Filtrar por etiqueta",
+      "recent_posts": "Entradas recientes",
+      "rss": "Feed RSS"
+    },
+    "hero": {
+      "title": "Blog de MPay Network",
+      "description": "Últimas noticias, actualizaciones y consejos para MPay Network Wallet"
+    },
+    "filters": {
+      "all": "Todo",
+      "news": "Noticias",
+      "updates": "Actualizaciones",
+      "tutorials": "Tutoriales",
+      "tips": "Consejos",
+      "merchant": "Comerciante",
+      "consumer": "Consumidor",
+      "active_label": "Filtros activos:",
+      "clear_all": "Limpiar todo",
+      "sort_by": "Ordenar por:",
+      "sort_newest": "Los más nuevos primero",
+      "sort_oldest": "Los más antiguos primero",
+      "sort_rating": "Mejor calificados",
+      "sort_reading": "Lecturas rápidas"
+    },
+    "results": {
+      "showing": "Mostrando <strong>{{count}}</strong> de <strong>{{total}}</strong> entradas",
+      "no_posts": "No se encontraron entradas",
+      "no_posts_desc": "Intenta ajustar tus filtros o explora todas las entradas.",
+      "show_all": "Mostrar todas las entradas"
+    },
+    "post": {
+      "featured": "Destacado",
+      "min_read": "{{min}} min de lectura",
+      "read_more": "Leer más"
+    },
+    "data": {
+      "p1": {
+        "title": "Presentamos MPay Network 2.0: Una revisión completa",
+        "excerpt": "Estamos encantados de anunciar el lanzamiento de MPay Network 2.0, con una interfaz completamente rediseñada, un procesamiento de transacciones más rápido y funciones de seguridad mejoradas tanto para comerciantes como para consumidores."
+      },
+      "p2": {
+        "title": "Cómo configurar pagos con código QR para su negocio",
+        "excerpt": "Una guía paso a paso sobre la configuración de pagos con código QR en MPay Merchant Wallet. Conozca las mejores prácticas para la colocación de pantallas y la gestión de transacciones."
+      },
+      "p3": {
+        "title": "5 consejos para pagos móviles seguros",
+        "excerpt": "Proteja sus transacciones con estos consejos de seguridad esenciales. Desde la autenticación biométrica hasta las alertas de transacciones, aprenda a mantener su billetera MPay segura."
+      },
+      "p4": {
+        "title": "Pagos NFC: El futuro del comercio sin contacto",
+        "excerpt": "Explore cómo la tecnología de pago por contacto NFC está revolucionando el panorama de los pagos. Conozca la tecnología detrás de la implementación NFC de MPay."
+      },
+      "p5": {
+        "title": "Panel del comerciante: Entendiendo sus análisis",
+        "excerpt": "Sumérjase en los análisis del panel de control para comerciantes de MPay. Aprenda a leer informes de transacciones, identificar tendencias y optimizar sus operaciones de pago."
+      },
+      "p6": {
+        "title": "Transferencias P2P fáciles: Envía dinero en segundos",
+        "excerpt": "Aprenda a usar la función de transferencia entre pares de MPay para enviar dinero a amigos y familiares al instante. Sin cargos, sin complicaciones."
+      },
+      "p7": {
+        "title": "Actualización de seguridad de febrero de MPay Network",
+        "excerpt": "Detalles sobre los últimos parches de seguridad y las mejoras implementadas en MPay Network. Incluye información sobre nuevas opciones de autenticación de dos factores."
+      },
+      "p8": {
+        "title": "Primeros pasos con MPay Consumer Wallet",
+        "excerpt": "¿Nuevo en MPay? Esta guía para principiantes le indica cómo descargar, instalar y realizar su primer pago con MPay Consumer Wallet."
+      },
+      "p9": {
+        "title": "Comprender las tarifas y los límites de las transacciones",
+        "excerpt": "Un desglose completo de la estructura de tarifas de MPay Network, los límites de transacciones y cómo optimizar sus costos como comerciante o consumidor."
+      }
+    }
+  },
+  "dev_intro": {
+    "title": "Introducción",
+    "description": "Construya aplicaciones completas desde el concepto hasta el despliegue con una plataforma inteligente basada en agentes. Diseñe, desarrolle, pruebe, asegure y lance todo en un solo lugar, manteniendo una supervisión humana total en cada etapa."
+  },
+  "dev_features": {
+    "title": "Características Principales",
+    "f1": {
+      "title": "Diseño Antes Que Código",
+      "desc": "Planifique su aplicación a fondo antes de escribir una sola línea de código. Defina la interfaz de usuario, la arquitectura del sistema y las especificaciones funcionales por adelantado para asegurar una hoja de ruta de desarrollo clara y reducir iteraciones costosas más adelante."
+    },
+    "f2": {
+      "title": "Impulsado por Voz y Chat",
+      "desc": "Interactúe con agentes de IA inteligentes utilizando comandos de voz o texto naturales. Construya, modifique y refine su aplicación en tiempo real, haciendo que el desarrollo sea intuitivo, rápido y accesible incluso sin profunda experiencia en programación."
+    },
+    "f3": {
+      "title": "Agentes Post-Despliegue",
+      "desc": "Sus asistentes de IA no dejan de funcionar cuando su aplicación se pone en marcha. Monitoree, optimice y mejore continuamente su aplicación después del despliegue, asegurando que evolucione junto con las necesidades del usuario y las tendencias del mercado."
+    },
+    "f4": {
+      "title": "Supervisión Humana",
+      "desc": "Mantenga un control total durante todo el ciclo de vida de desarrollo. Revise cada decisión, apruebe actualizaciones y guíe a la IA, combinando la automatización con el juicio humano para obtener resultados confiables y de alta calidad."
+    }
+  },
+  "dev_dashboard": {
+    "title": "Panel de Control",
+    "intro": "Este panel proporciona una vista clara y organizada de todos sus proyectos en un solo lugar. Las características clave incluyen:",
+    "f1_title": "Descripción General del Proyecto:",
+    "f1_desc": "Cada proyecto se muestra como una tarjeta que contiene el nombre del proyecto y una breve descripción. Esto permite un reconocimiento rápido y un acceso fácil.",
+    "f2_title": "Funcionalidad de Búsqueda:",
+    "f2_desc": "Una barra de búsqueda en la parte superior le permite encontrar proyectos rápidamente por su nombre.",
+    "f3_title": "Crear y Gestionar Proyectos:",
+    "f3_desc": "Inicie fácilmente un nuevo proyecto con el botón \"Crear Nuevo Proyecto\" o cierre sesión con un solo clic.",
+    "f4_title": "Navegación de Proyectos:",
+    "f4_desc": "Al hacer clic en la tarjeta del proyecto, será redirigido directamente al espacio de trabajo de ese proyecto para mayor gestión y desarrollo.",
+    "f5_title": "Diseño Limpio y Minimalista:",
+    "f5_desc": "La interfaz es sencilla e intuitiva, enfocándose en la productividad sin distracciones.",
+    "f6_title": "Indicador de Recuento de Proyectos:",
+    "f6_desc": "Muestra el número total de proyectos en la esquina inferior derecha, ayudando a los usuarios a realizar un seguimiento de su carga de trabajo.",
+    "outro": "Este panel actúa como un centro principal para gestionar, acceder y ejecutar todos sus proyectos en curso de manera eficiente."
+  },
+  "dev_create_project": {
+    "title": "Crear un Nuevo Proyecto",
+    "how_to_title": "Cómo Crear un Nuevo Proyecto",
+    "step1": "En el Panel de Control, haga clic en el botón Crear un Nuevo Proyecto.",
+    "step2": "Ingrese el Nombre del Proyecto. La descripción es opcional.",
+    "step3": "Haga clic en el botón Crear Proyecto.",
+    "interface_intro": "Esta interfaz aparece cuando un usuario elige crear un nuevo proyecto desde el panel de control. Los elementos clave incluyen:",
+    "f1_title": "Campo de Nombre del Proyecto:",
+    "f1_desc": "Una entrada de texto donde el usuario ingresa el nombre de su nuevo proyecto, por ejemplo, \"Mi Aplicación Increíble\". Este es un campo obligatorio.",
+    "f2_title": "Campo de Descripción:",
+    "f2_desc": "Un área de texto opcional para una breve descripción del proyecto, que ayuda a aclarar su propósito o alcance.",
+    "f3_title": "Botones de Acción:",
+    "f3_1": "<strong>Crear Proyecto</strong> – Confirma la creación del proyecto y lo agrega al panel de control.",
+    "f3_2": "<strong>Cancelar</strong> – Cierra la ventana emergente sin crear un proyecto.",
+    "f4_title": "Diseño Limpio del Modal:",
+    "f4_desc": "La ventana emergente está centrada con un diseño minimalista y libre de distracciones que la separa claramente del fondo borroso del panel de control.",
+    "f5_title": "Guía para el Usuario:",
+    "f5_desc": "El texto de marcador de posición en los campos guía al usuario sobre qué información proporcionar.",
+    "outro": "Esta ventana emergente simplifica el proceso de iniciar un nuevo proyecto, asegurando que los usuarios puedan agregar y documentar rápidamente sus proyectos dentro del entorno del panel de control."
+  },
+  "dev_project_settings": {
+    "title": "Empezando",
+    "intro": "Este módulo es la fase de configuración esencial donde se define la identidad y el ADN técnico de su aplicación.",
+    "core_obj_title": "Objetivos principales:",
+    "obj1_title": "Alineación Arquitectónica:",
+    "obj1_desc": "Al seleccionar su pila tecnológica, calibra los agentes de IA para el ecosistema preferido.",
+    "obj2_title": "Preparación del Entorno:",
+    "obj2_desc": "Configure claves de API y control de versiones para asegurar la conexión de su proyecto.",
+    "obj3_title": "Integración Heredada:",
+    "obj3_desc": "Utilice la herramienta de Ingeniería Inversa para ingerir datos y aprovechar su base técnica.",
+    "submenus_title": "Empezando tiene estos submenús:",
+    "sm1_title": "Configuración del Proyecto",
+    "sm1_desc": "Centro de comando para la identidad de su aplicación y configuración de la pila tecnológica.",
+    "sm2_title": "Claves API",
+    "sm2_desc": "Administre sus conexiones seguras e integraciones de terceros.",
+    "sm3_title": "Control de Versiones",
+    "sm3_desc": "Conecte su proyecto a su proveedor de Git preferido para sincronizar el entorno local con repositorios remotos.",
+    "sm4_title": "Ingeniería Inversa",
+    "sm4_desc": "Acelere su desarrollo importando activos existentes para que la plataforma pueda mapear su código actual.",
+    "ps_title": "Configuración del Proyecto",
+    "ps_intro": "Aquí establece la identidad de alto nivel y calibra el motor de IA.",
+    "ps_1_title": "1. Información General",
+    "ps_1_desc": "Esta subsección define los metadatos de su proyecto.",
+    "ps_1_f1_title": "Nombre del Proyecto:",
+    "ps_1_f1_desc": "Ingrese un identificador único para su aplicación.",
+    "ps_1_f2_title": "Descripción:",
+    "ps_1_f2_desc": "Proporcione un breve resumen del propósito del proyecto.",
+    "ps_2_title": "2. Configuración de Pila Tecnológica",
+    "ps_2_desc": "Guía a los agentes de IA en patrones de arquitectura y sintaxis del marco de trabajo.",
+    "ps_2_1_title": "2.1 Servidor / Backend",
+    "ps_2_1_desc": "Seleccione el lenguaje y marco principal:",
+    "ps_2_1_l1": "<strong>JavaScript/TypeScript:</strong> Node.js, Express, etc.",
+    "ps_2_1_l2": "<strong>Python:</strong> Django, Flask, FastAPI.",
+    "ps_2_1_l3": "<strong>PHP:</strong> Laravel, Symfony, etc.",
+    "ps_2_1_l4": "<strong>C#:</strong> ASP.NET Core, Blazor.",
+    "ps_2_2_title": "2.2 Base de Datos",
+    "ps_2_2_desc": "Identifique la capa de persistencia de datos (SQL vs NoSQL).",
+    "ps_2_3_title": "2.3 Configuración de UI/Frontend",
+    "ps_2_3_desc": "Dedicado a definir el \"Lado del Cliente\" de su aplicación.",
+    "bp_title": "Mejores Prácticas",
+    "bp_desc": "Siga estas pautas para la máxima precisión:",
+    "bp_1_title": "La Precisión Importa:",
+    "bp_1_desc": "Elija un marco de trabajo específico en lugar de un entorno de ejecución genérico.",
+    "bp_2_title": "Guardar Cambios:",
+    "bp_2_desc": "Haga clic siempre en Guardar Cambios para evitar perder configuración.",
+    "bp_3_title": "Actualizaciones Iterativas:",
+    "bp_3_desc": "Puede volver a esta sección en cualquier momento."
+  },
+  "dev_api_keys": {
+    "title": "Claves API",
+    "intro": "Centro principal para administrar el acceso seguro a modelos de IA integrados.",
+    "area1_title": "Gestión de Claves:",
+    "area1_desc": "Donde puede crear, ver y asegurar sus claves de API personales.",
+    "area2_title": "Dashboard de Uso:",
+    "area2_desc": "Para rastrear solicitudes, consumo de tokens y costos asociados.",
+    "access_note": "Acceda a esta sección desde el menú lateral debajo de <strong>Empezando</strong>.",
+    "managing_title": "Administrar sus Claves API Personales",
+    "managing_intro": "Encuentre aquí todas las configuraciones de claves en su cuenta.",
+    "viewing_keys_title": "1. Ver Claves",
+    "viewing_keys_desc": "Si no hay claves configuradas, verá el mensaje \"No config personal API keys\".",
+    "creating_keys_title": "2. Crear una Nueva Clave",
+    "creating_keys_step1": "Haga clic en el botón <strong>\"+ Add New Key\"</strong>.",
+    "creating_keys_step2": "Siga las instrucciones para nombrar la clave.",
+    "creating_keys_step3": "<strong>Advertencia:</strong> Guarde de forma segura su clave, no se mostrará de nuevo.",
+    "dashboard_title": "3. Dashboard de Uso",
+    "dashboard_intro": "Proporciona análisis granulares y en tiempo real.",
+    "dashboard_3_1_title": "3.1. Filtros y Control",
+    "dashboard_3_1_intro": "Esquina superior derecha del panel.",
+    "dashboard_3_1_f1_title": "Filtro de Tiempo:",
+    "dashboard_3_1_f1_desc": "Use el menú desplegable para cambiar el periodo a mostrar.",
+    "dashboard_3_1_f2_title": "Botón Refrescar:",
+    "dashboard_3_1_f2_desc": "Actualice los datos al instante.",
+    "dashboard_3_2_title": "3.2. Visión General de Métricas",
+    "dashboard_3_2_intro": "Cuatro tarjetas principales resumen la actividad.",
+    "dashboard_3_2_f1_title": "Peticiones Totales:",
+    "dashboard_3_2_f1_desc": "Número total de llamadas a modelos de API.",
+    "dashboard_3_2_f2_title": "Tokens Totales:",
+    "dashboard_3_2_f2_desc": "Tokens de completado más tokens de petición.",
+    "dashboard_3_2_f3_title": "Aprox. Costo:",
+    "dashboard_3_2_f3_desc": "Estimación en dólares de su facturación.",
+    "dashboard_3_2_f4_title": "Caché:",
+    "dashboard_3_2_f4_desc": "Número de lecturas del caché.",
+    "analyzing_title": "4. Análisis de Uso",
+    "analyzing_intro": "Visualizaciones y tablas detalladas.",
+    "analyzing_4_1_title": "4.1. Gráfico de Uso Diario",
+    "analyzing_4_1_intro": "Ilustra sus tokens diarios a lo largo del tiempo.",
+    "analyzing_4_1_f1_title": "Pasar el ratón (Hover):",
+    "analyzing_4_1_f1_desc": "Vea el desglose de un día específico por modelo.",
+    "analyzing_4_1_f2_title": "Leyenda:",
+    "analyzing_4_1_f2_desc": "Modelos que aportan a ese día.",
+    "analyzing_4_2_title": "4.2. Uso por Modelo",
+    "analyzing_4_2_intro": "Desglose por IA:",
+    "model_cols": [
+      "<strong>MODELO:</strong> Nombre y proveedor.",
+      "<strong>PETICIONES:</strong> Llamadas realizadas al modelo.",
+      "<strong>TOKENS ENTRADA:</strong> Tokens enviados.",
+      "<strong>TOKENS SALIDA:</strong> Tokens generados.",
+      "<strong>TOKENS TOTAL:</strong> Suma de entrada y salida.",
+      "<strong>CACHÉ:</strong> Tokens recuperados de la caché.",
+      "<strong>TIEMPO MEDIA:</strong> Latencia promedio.",
+      "<strong>COSTO:</strong> Costo del modelo."
+    ],
+    "transaction_title": "4.3. Historial de Transacciones",
+    "transaction_intro": "Registro para cada solicitud al final de la página.",
+    "filtering_title": "Filtros y Organización",
+    "filtering_f1_title": "Todas las IAS:",
+    "filtering_f1_desc": "Especifique el modelo.",
+    "filtering_f2_title": "Estado:",
+    "filtering_f2_desc": "Filtre por éxito o error.",
+    "log_title": "Columnas de Registro",
+    "log_cols": [
+      "<strong>TIEMPO:</strong> Marca de tiempo exacta.",
+      "<strong>TOKENS:</strong> Total utilizado.",
+      "<strong>CACHÉ:</strong> Rendimiento del caché.",
+      "<strong>MS:</strong> Tiempo en milisegundos.",
+      "<strong>COSTO:</strong> Costo en dólares."
+    ]
+  },
+  "dev_vc": {
+    "title": "Control de Versiones",
+    "intro": "La página de Control de Versiones es donde administra la integración de su proyecto con plataformas basadas en Git. Al conectar un repositorio, permite a la plataforma enviar actualizaciones y rastrear cambios.",
+    "table_title": "Tabla de Integraciones de Control de Versiones",
+    "table_intro": "El panel principal muestra todas las conexiones activas al repositorio:",
+    "table_f1_title": "Integration:",
+    "table_f1_desc": "The name of the connection (e.g., <em>Main Repository</em>). A folder icon indicates the specific directory mapping within the repository.",
+    "table_f2_title": "Repository:",
+    "table_f2_desc": "The full URL path to your remote Git repository (e.g., https://gitlab.com/.../studytool.git).",
+    "table_f3_title": "Branch:",
+    "table_f3_desc": "The specific branch currently targeted for synchronization (e.g., main).",
+    "table_f4_title": "Status:",
+    "table_f4_desc": "Indicates the current health of the connection. A <strong>CONNECTED</strong> badge signifies that the platform has successful read/write access.",
+    "table_f5_title": "Last Sync:",
+    "table_f5_desc": "Displays the timestamp of the most recent data exchange between the platform and your repository.",
+    "actions_title": "Management Actions",
+    "actions_intro": "On the right side of each integration row, you will find several quick-action icons to manage your repository:",
+    "actions_f1_title": "Sync History (Clock Icon):",
+    "actions_f1_desc": "View a log of previous synchronization events, including commits and updates.",
+    "actions_f2_title": "Push/Pull (Upload/Download Icons):",
+    "actions_f2_desc": "Manually trigger a data transfer. Use <strong>Push</strong> to send platform changes to your Git provider, or <strong>Pull</strong> to update the platform with external changes.",
+    "actions_f3_title": "Edit Integration (Pencil Icon):",
+    "actions_f3_desc": "Modify the connection settings, such as changing the target branch or updating credentials.",
+    "actions_f4_title": "Delete (Trash Icon):",
+    "actions_f4_desc": "Remove the integration from the project. <em>Note: This will stop synchronization but will not delete the code from your Git provider.</em>",
+    "bp_title": "Mejores Prácticas",
+    "bp_1_title": "Target Specific Branches:",
+    "bp_1_desc": "It is highly recommended to use a dedicated development or \"staging\" branch rather than your primary production branch to safely review generated code before merging.",
+    "bp_2_title": "Check Sync Status:",
+    "bp_2_desc": "Always verify the <strong>Last Sync</strong> time before starting a new design or ideation session to ensure you are working with the most recent version of your project.",
+    "bp_3_title": "Manual Refresh:",
+    "bp_3_desc": "Use the <strong>Refresh</strong> icon in the top-right corner of the panel to update the connection status if you have recently made changes on your Git provider's website."
+  },
+  "dev_re": {
+    "title": "Ingeniería Inversa",
+    "overview_title": "Visión General",
+    "overview_desc": "Desconstruye el código existente transformando datos crudos en Conceptos Estructurados.",
+    "tasks_title": "Tareas de Visión",
+    "tasks_intro": "Administra sus flujos de ingeniería inversa.",
+    "tasks_f1_title": "Task Status:",
+    "tasks_f1_desc": "If no analysis has been performed, the screen displays \"No reverse engineering tasks yet.\" * <strong>Process Flow:</strong> Once a task is initiated, this area will track the progress of the AI's analysis, displaying task names, timestamps, and completion statuses.",
+    "features_title": "Key Features & Functionality",
+    "features_f1_title": "Codebase Analysis:",
+    "features_f1_desc": "Upload or link existing source code to identify data structures, API endpoints, and business logic.",
+    "features_f2_title": "Schema Mapping:",
+    "features_f2_desc": "Ingest database SQL files to automatically generate <strong>Data Objects</strong> within the platform.",
+    "features_f3_title": "Structured Concept Generation:",
+    "features_f3_desc": "The AI converts its findings into high-level concepts that populate the Concept, Business Flows, and Data Objects sections in the sidebar.",
+    "start_title": "How to Start Reverse Engineering",
+    "start_intro": "To begin an analysis task:",
+    "start_step1": "Click the blue \"Start Reverse Engineer\" button (found both in the center of the screen and the top-right corner).",
+    "start_step2": "Select your <strong>Source Type</strong> (e.g., File Upload, Git Repository Link, or Database Connection).",
+    "start_step3": "Configure the <strong>Scope</strong> of the analysis by selecting specific folders or tables to include.",
+    "start_step4": "Launch the task and monitor the <strong>Diffusion Vision Tasks</strong> list for real-time updates.",
+    "why_title": "Why Use Reverse Engineering?",
+    "why_f1_title": "Accelerated Onboarding:",
+    "why_f1_desc": "Quickly bring an existing project or legacy system into the platform for modernization.",
+    "why_f2_title": "Consistency:",
+    "why_f2_desc": "Ensure that new features developed in the <strong>Development</strong> section are 100% compatible with your existing data structures.",
+    "why_f3_title": "Documentation Recovery:",
+    "why_f3_desc": "Generate fresh <strong>Requirements Docs</strong> and <strong>Technical Diagrams</strong> for projects that currently lack them."
+  },
+  "dev_struc": {
+    "title": "Estructura e Ideación",
+    "intro_1": "El corazón arquitectónico de la plataforma.",
+    "intro_2": "Sirve como puente entre 'qué' hacer y 'cómo' funcionará."
+  },
+  "dev_req": {
+    "submenu_title": "Estructura e Ideación tiene los siguientes submenús:",
+    "title": "1. Requisitos",
+    "intro": "Como punto de entrada para esta categoría, esta página almacena la visión central de su proyecto. Actúa como la \"Fuente de la Verdad\".",
+    "f1_title": "Uso:",
+    "f1_desc": "Defina las características de su MVP y los roles de usuario.",
+    "action_desc": "En esta sección, puede modificar o agregar nuevos requisitos. Una vez que esté todo bien, haga clic en el botón <strong>Guardar Requisitos</strong>."
+  },
+  "dev_concept": {
+    "title": "2. Concepto",
+    "intro": "Este módulo desglosa sus requisitos en <strong>Bloques de Concepto</strong> individuales. Para un proyecto como \"Herramienta de Estudio\", los conceptos pueden incluir <em>Autenticación de Usuario</em> o <em>Algoritmo Adaptativo</em>.",
+    "f1_title": "Uso:",
+    "f1_desc": "Mapee las \"grandes ideas\" de su software para asegurar que se tome en cuenta toda la funcionalidad."
+  },
+  "dev_bf": {
+    "title": "3. Flujos de Negocio",
+    "intro": "Los Flujos de Negocio visualizan el viaje paso a paso que toma un usuario para completar una tarea.",
+    "f1_title": "Ejemplo:",
+    "f1_desc": "La secuencia de eventos desde que un estudiante sube un PDF hasta que la IA genera un resumen y un cuestionario.",
+    "f2_title": "Uso:",
+    "f2_desc": "Identifique cuellos de botella en la experiencia del usuario antes de que se escriba una sola línea de código."
+  },
+  "dev_do": {
+    "title": "4. Objetos de Datos",
+    "intro": "Esta sección define los \"sustantivos\" de su sistema, es decir, las estructuras de datos que se almacenarán en su base de datos.",
+    "f1_title": "Ejemplos:",
+    "f1_desc": "Usuario, MaterialEstudio, ResultadoCuestionario, PlanSuscripcion.",
+    "f2_title": "Uso:",
+    "f2_desc": "Defina propiedades (por ejemplo, correo electrónico, marca de tiempo, puntaje) y cómo estos objetos se relacionan entre sí."
+  },
+  "dev_roles": {
+    "title": "5. Roles y Permisos",
+    "intro": "La seguridad comienza aquí. Defina lo que diferentes tipos de usuarios pueden ver y hacer.",
+    "f1_title": "Ejemplo:",
+    "f1_desc": "Un Admin puede eliminar usuarios, mientras que un Estudiante solo puede ver sus materiales.",
+    "f2_title": "Uso:",
+    "f2_desc": "Establezca la Lista de Control de Acceso (ACL) para su API y Frontend."
+  },
+  "dev_br": {
+    "title": "6. Reglas de Negocio",
+    "intro": "Las Reglas de Negocio son la lógica \"si/entonces\" que rige el comportamiento de su aplicación, independientemente del código.",
+    "f1_title": "Ejemplo:",
+    "f1_desc": "\"Si un usuario tiene una cuenta de nivel Gratuito, solo puede subir 1 documento por mes.\"",
+    "f2_title": "Uso:",
+    "f2_desc": "Centralice la lógica que determina cómo opera el negocio."
+  },
+  "dev_int": {
+    "title": "7. Mapas de Integración",
+    "intro": "Esta herramienta describe cómo se comunica su aplicación con sistemas externos.",
+    "f1_title": "Ejemplo:",
+    "f1_desc": "Cómo se comunica su aplicación con una Pasarela de Pago (Stripe) o un Modelo de IA (OpenAI/Claude).",
+    "f2_title": "Uso:",
+    "f2_desc": "Visualice los puntos de intercambio de datos entre su sistema y el mundo exterior."
+  },
+  "dev_dd": {
+    "title": "Diseño y Docs",
+    "intro_1": "<strong>Diseño y Docs</strong> sirve como centro para administrar la documentación visual y técnica relacionada con el proyecto.",
+    "intro_2": "Tiene 3 submenús:",
+    "sub1_title": "Diseños de UI",
+    "sub1_desc": "Este submenú es su espacio de trabajo principal para todos los <strong>activos visuales</strong> relacionados con la interfaz de usuario.",
+    "purpose": "Propósito:",
+    "count": "Recuento Actual:",
+    "best_for": "Mejor para:",
+    "sub1_p": "Almacena prototipos de alta fidelidad, esquemas y prototipos interactivos.",
+    "sub1_c": "<strong>30</strong> items.",
+    "sub1_b": "Revisar diseños de pantalla, elementos de marca y animaciones de flujo de usuario.",
+    "sub2_title": "Diagramas Técnicos",
+    "sub2_desc": "Este submenú organiza las visualizaciones <strong>estructurales y basadas en la lógica</strong> del proyecto.",
+    "sub2_p": "Alberga mapas de arquitectura del sistema, diagramas de flujo y diagramas entidad-relación.",
+    "sub2_c": "<strong>14</strong> items.",
+    "sub2_b": "Entender la base técnica subyacente y cómo circulan los datos por el sistema.",
+    "sub3_title": "Docs de Requisitos",
+    "sub3_desc": "Este submenú actúa como repositorio para la <strong>documentación formal del proyecto</strong> y las especificaciones."
+  },
+  "dev_ui": {
+    "title": "Diseños de interfaz de usuario",
+    "intro": "El submenú <strong>Diseños de IU</strong> sirve como repositorio principal para los activos de la interfaz visual del proyecto. Está diseñado para cerrar la brecha entre el diseño conceptual y el desarrollo al proporcionar una ubicación central para recursos visuales de alta fidelidad.",
+    "core_fn_title": "Funciones Principales",
+    "cf1_title": "Almacenamiento de Interfaz Visual:",
+    "cf1_desc": "Acceda a todos los diseños de pantalla, desde esquemas básicos hasta modelos pulidos de alta fidelidad.",
+    "cf2_title": "Prototipado:",
+    "cf2_desc": "Ubique prototipos interactivos para revisar los recorridos del usuario y las animaciones de la interfaz.",
+    "cf3_title": "Gestión de Activos:",
+    "cf3_desc": "Vea el recuento total de los archivos (actualmente <strong>30</strong>) de un vistazo a través del indicador numérico a la derecha.",
+    "uguide_title": "Guía de Usuario",
+    "ug1_title": "Estado Activo:",
+    "ug1_desc": "Cuando se selecciona, este submenú se resalta con un fondo púrpura y texto azul, lo que indica que los archivos que se muestran pertenecen a esta categoría.",
+    "ug2_title": "Navegación:",
+    "ug2_desc": "Use el <strong>Ícono de Monitor</strong> para identificar rápidamente esta sección en la barra lateral.",
+    "bp": "<strong>Mejor Práctica:</strong> Mantenga esta sección actualizada con las últimas iteraciones de diseño para asegurar que el equipo trabaje con la versión más reciente.",
+    "view_look_prompt": "Haga clic en cada carpeta para ver cómo se ve:",
+    "typo_title": "Editor de Estilos de Tipografía",
+    "typo_intro": "El <strong>Editor de Tipografía</strong> es un panel de configuración especializado que permite un control preciso sobre el aspecto de los textos dentro de la interfaz, orientado a <code>span.sidebar-nav-text</code>.",
+    "config_opt_title": "Opciones de Configuración",
+    "table_h1": "Característica",
+    "table_h2": "Descripción",
+    "t_c1_1": "<strong>Color de Texto</strong>",
+    "t_c1_2": "Ajuste el color de la fuente usando un valor RGB (actualmente rgb(191, 219, 254)).",
+    "t_c2_1": "<strong>Tamaño de Fuente</strong>",
+    "t_c2_2": "Establezca las dimensiones de <strong>6px</strong> a <strong>120px</strong>.",
+    "t_c3_1": "<strong>Grosor de Fuente</strong>",
+    "t_c3_2": "Defina el grosor de los caracteres (actualmente configurado en <strong>500 Medium</strong>).",
+    "t_c4_1": "<strong>Familia Tipográfica</strong>",
+    "t_c4_2": "Elija cómo se visualiza un tipo de pila prioritaria (p. ej., <strong>Inter</strong>).",
+    "t_c5_1": "<strong>Estilo y Decoración</strong>",
+    "t_c5_2": "Alterne estilos como <em>Italic</em> (Cursiva) o utilice <strong>Subrayado</strong>.",
+    "t_c6_1": "<strong>Alineación de Texto</strong>",
+    "t_c6_2": "Controle la ubicación horizontal del texto (<strong>inicio</strong>, <strong>centro</strong> o <strong>fin</strong>).",
+    "key_ele_title": "Elementos Clave de Interfaz",
+    "ke1_title": "Ruta CSS:",
+    "ke1_desc": "El encabezado azul muestra la ruta del selector CSS exacto (<code>div.sidebar-nav > ...</code>), asegurando que sepa exactamente qué elemento se está modificando.",
+    "ke2_title": "Guardar y Cerrar:",
+    "ke2_desc": "Use el botón <strong>Save</strong> para aplicar cambios al proyecto en vivo, o haga clic en \"<strong>X</strong>\" para descartarlos.",
+    "ke3_title": "Selector de Unidades:",
+    "ke3_desc": "Cambie fácilmente entre píxeles (<strong>px</strong>) y otras unidades relativas para el dimensionamiento.",
+    "typo_note": "<strong>Nota:</strong> Los cambios realizados en este panel se aplican a menudo a todos los elementos que comparten la misma clase, manteniendo la coherencia visual en toda la navegación de la barra lateral.",
+    "overlay_prompt": "Se mostrará una ventana superpuesta",
+    "resp_title": "Capacidad de Respuesta",
+    "resp_intro": "En el centro superior de la interfaz, puede encontrar los <strong>iconos de cambio de dispositivo (Escritorio, Tableta y Móvil)</strong> utilizados para obtener una vista previa de cómo el diseño se adapta a diferentes tamaños de pantalla.",
+    "resp_desk_title": "Vista de Escritorio",
+    "resp_desk_desc": "La vista actual predeterminada: optimizada para pantallas grandes, ofreciendo un diseño espacioso y organizado.",
+    "resp_tab_title": "Vista de Tableta",
+    "resp_tab_desc": "En este modo, la interfaz cambia para adaptarse a pantallas táctiles medianas.",
+    "resp_mob_title": "Vista Móvil",
+    "resp_mob_desc": "La vista móvil prioriza el apilamiento vertical para garantizar la legibilidad en pantallas pequeñas.",
+    "mpa_title": "Asistente para Modificar Página",
+    "mpa_intro": "La <strong>superposición de Modificar Página</strong> es una interfaz conversacional impulsada por IA diseñada para ayudarlo a realizar cambios rápidos en el diseño y la estructura de su proyecto. Al seleccionar elementos específicos y describir el resultado deseado, el asistente automatiza los ajustes de CSS o HTML por usted.",
+    "mpa_core_comp": "Componentes Principales",
+    "table2_h1": "Elemento",
+    "table2_h2": "Descripción",
+    "t2_c1_1": "<strong>Agente Conversacional</strong>",
+    "t2_c1_2": "La burbuja de mensaje en la parte superior proporciona actualizaciones de estado y le solicita instrucciones de diseño específicas.",
+    "t2_c2_1": "<strong>Selector de Elemento</strong>",
+    "t2_c2_2": "La etiqueta azul (p. ej., <code>span.sidebar-nav-text</code>) indica exactamente qué parte de la página está seleccionada actualmente.",
+    "t2_c3_1": "<strong>Entrada de Instrucción</strong>",
+    "t2_c3_2": "El área de texto principal donde puede escribir comandos en lenguaje natural como <em>\"Hacer este texto en negrita\"</em> o <em>\"Cambiar el color a rojo oscuro\"</em>.",
+    "t2_c4_1": "<strong>Botones de Acción</strong>",
+    "t2_c4_2": "<strong>Send</strong> (Enviar) inicia la solicitud, mientras que <strong>Undo</strong> (Deshacer) le permite revertir el último cambio de inmediato.",
+    "mpa_kf": "Características Clave",
+    "kf1_title": "Conciencia Contextual:",
+    "kf1_desc": "El asistente sabe qué elemento ha seleccionado, lo que le permite dar comandos cortos sin tener que volver a especificar el objetivo.",
+    "kf2_title": "Retroalimentación en Tiempo Real:",
+    "kf2_desc": "A medida que escribe, la interfaz proporciona un marcador recordándole la selección activa.",
+    "kf3_title": "Edición No Destructiva:",
+    "kf3_desc": "La presencia del botón <strong>Undo</strong> garantiza que pueda experimentar con diferentes estilos de forma segura.",
+    "mpa_htu": "Cómo Usar",
+    "htu1_title": "Seleccionar:",
+    "htu1_desc": "Haga clic en un elemento de la página para enfocar la atención del asistente.",
+    "htu2_title": "Describir:",
+    "htu2_desc": "Escriba su cambio deseado en el cuadro de entrada (p. ej., <em>\"Aumentar el relleno y agregar borde\"</em>).",
+    "htu3_title": "Ejecutar:",
+    "htu3_desc": "Haga clic en <strong>Send</strong> para ver los cambios aplicados en tiempo real.",
+    "mpa_other_opts": "Otras Opciones:"
+  },
+  "tech_diag": {
+    "title": "Diagramas Técnicos",
+    "intro": "El panel de control de <strong>Diagramas Técnicos</strong> es una suite completa de gestión visual diseñada para arquitectos, desarrolladores y planificadores de sistemas. Sirve como repositorio central para todas las visualizaciones estructurales y basadas en la lógica de un proyecto, asegurando que los flujos de trabajo estén documentados.",
+    "grid_intro": "La interfaz muestra una cuadrícula de <strong>Tarjetas de Diagrama</strong>, cada una representando una perspectiva técnica específica. Cada tarjeta incluye:",
+    "b1_title": "Título del Tipo de Diagrama:",
+    "b1_desc": "(p. ej., Pila de Tecnología, Diagrama de Infraestructura).",
+    "b2_title": "Indicador de Estado:",
+    "b2_desc": "Una insignia \"ACTIVE\" confirma que el diagrama está actualizado y validado.",
+    "b3_title": "Iconografía Estandarizada:",
+    "b3_desc": "Utiliza marcadores visuales estándar de la industria para una rápida identificación."
+  },
+  "avail_diag": {
+    "title": "Tipos de Diagramas Disponibles",
+    "intro": "El panel de control está dividido en varias categorías especializadas para cubrir el ciclo de desarrollo completo:",
+    "table_h1": "Categoría",
+    "table_h2": "Diagramas Específicos Incluidos",
+    "t_c1_1": "<strong>Arquitectura del Sistema</strong>",
+    "t_c1_2": "Pila de Tecnología, Arquitectura de Seguridad, Infraestructura, Despliegue, Arquitectura de Alto Nivel.",
+    "t_c2_1": "<strong>Datos y Lógica</strong>",
+    "t_c2_2": "Diagrama de Entidad-Relación (ERD), Esquema de Base de Datos, Diagrama de Flujo de Datos (DFD).",
+    "t_c3_1": "<strong>Proceso y Flujo</strong>",
+    "t_c3_2": "Diagrama de Secuencia, Flujo de Procesos / Negocio, Casos de Uso, Diagrama de Flujo de Usuario.",
+    "t_c4_1": "<strong>Diseño Estructural</strong>",
+    "t_c4_2": "Arquitectura de API, Diagrama de Componentes.",
+    "kac_title": "Comandos de Acción Clave",
+    "kac_intro": "Ubicados en la parte superior derecha, estos controles permiten la gestión activa del proyecto:",
+    "k1_title": "Construir Diagramas de Arquitectura:",
+    "k1_desc": "Lanza la herramienta de creación automatizada para generar diagramas basados en datos existentes o código.",
+    "k2_title": "Añadir Diagrama:",
+    "k2_desc": "Abre una interfaz de carga o creación manual para introducir una nueva visualización.",
+    "ad_title": "Añadir Diagrama",
+    "ad_intro": "Este botón es para <strong>entrada manual y creación personalizada</strong>.",
+    "ad_hw_title": "Cómo funciona:",
+    "ad_hw_desc": "Abre una galería de plantillas o un lienzo en blanco donde puede elegir un tipo de diagrama (p. ej., Diagrama de Secuencia, ERD o Diagrama de Flujo).",
+    "ad_res_title": "Resultado:",
+    "ad_res_desc": "Usted define manualmente la lógica, formas y conexiones. También puede subir una imagen existente (PNG o PDF).",
+    "ad_best_title": "Ideal para:",
+    "ad_best_desc": "Conceptualizar nuevas ideas o documentar reglas de negocio específicas y referencias externas.",
+    "bad_title": "Construir Diagramas de Arquitectura",
+    "bad_intro": "Este botón desencadena un <strong>proceso de generación automatizada</strong>.",
+    "bad_hw_title": "Cómo funciona:",
+    "bad_hw_desc": "Utiliza la IA de la plataforma para analizar los datos del proyecto o la base de código.",
+    "bad_res_title": "Resultado:",
+    "bad_res_desc": "Crea automáticamente una \"Arquitectura del Sistema de Alto Nivel\" o diagrama de \"Pila de Tecnología\".",
+    "bad_best_title": "Ideal para:",
+    "bad_best_desc": "Documentar rápidamente sistemas complejos o mantener diagramas sincronizados con cambios recientes.",
+    "idv_title": "Visor Interactivo de Diagramas",
+    "idv_intro": "El <strong>Visor Interactivo</strong> le permite pasar de una descripción general de su arquitectura a un espacio de trabajo detallado y editable.",
+    "nw_title": "Flujo de Navegación",
+    "nw_s1_title": "Seleccionar:",
+    "nw_s1_desc": "Desde el panel principal, haga clic en una tarjeta activa (p. ej., <strong>Diagrama de Flujo de Datos [DFD]</strong>).",
+    "nw_s2_title": "Abrir:",
+    "nw_s2_desc": "El sistema lanza un lienzo superpuesto, centrado en ese modelo.",
+    "nw_s3_title": "Explorar:",
+    "nw_s3_desc": "Use la barra lateral para saltar entre diferentes diagramas rápidamente.",
+    "wc_title": "Componentes del Espacio de Trabajo",
+    "wc_t1": "Área",
+    "wc_t2": "Descripción",
+    "wc_r1_1": "<strong>Barra de Elementos</strong>",
+    "wc_r1_2": "Ubicada en la parte superior, proporciona componentes (<strong>Inicio, Proceso, Decisión, Base de Datos, API</strong>) para arrastrar y soltar.",
+    "wc_r2_1": "<strong>Lienzo Lógico</strong>",
+    "wc_r2_2": "El área principal donde se visualiza el flujo de trabajo con soporte para ramas múltiples.",
+    "wc_r3_1": "<strong>Barra del Editor</strong>",
+    "wc_r3_2": "Enumera todas las categorías con indicadores numéricos de iteraciones (p. ej., <strong>Arquitectura: 42</strong>).",
+    "wc_r4_1": "<strong>Suite de Acción</strong>",
+    "wc_r4_2": "Un conjunto de botones para gestión de diseño, asistente de voz, y control de zoom.",
+    "kf_title": "Características Clave",
+    "kf_ce_title": "Elementos Contextuales:",
+    "kf_ce_desc": "La barra de herramientas se actualiza automáticamente con la notación correcta.",
+    "kf_lm_title": "Gestión del Diseño:",
+    "kf_lm_desc": "Use los menús para reorganizar instantáneamente diagramas complejos en estructuras legibles.",
+    "kf_ce2_title": "Colaboración y Exportación:",
+    "kf_ce2_desc": "Al finalizar, use el botón <strong>Export</strong> para descargar la visualización.",
+    "idv_tip": "<strong>Consejo:</strong> Habilite el <strong>Asistente de IA</strong> para realizar cambios rápidos mediante lenguaje natural.",
+    "tb_title": "Barra de Herramientas",
+    "tb_intro": "La barra de herramientas superior se divide en tres zonas funcionales: <strong>Creación de Nodos, Gestión de Diseño y Utilidades.</strong>",
+    "nct_title": "Herramientas de Creación de Nodos",
+    "nct_intro": "Estos botones agregan elementos lógicos específicos a su lienzo:",
+    "nct1_title": "+ Inicio:",
+    "nct1_desc": "Inserta un nodo terminal que representa el punto de entrada.",
+    "nct2_title": "+ Proceso:",
+    "nct2_desc": "Agrega un nodo rectangular para representar una acción.",
+    "nct3_title": "+ Decisión:",
+    "nct3_desc": "Inserta un nodo en forma de diamante para lógica de ramificación.",
+    "nct4_title": "+ Base de Datos:",
+    "nct4_desc": "Agrega un nodo cilíndrico que representa el almacenamiento.",
+    "nct5_title": "+ API:",
+    "nct5_desc": "Inserta un nodo para integraciones de servicios externos.",
+    "nct6_title": "+ Fin:",
+    "nct6_desc": "Representa el punto de salida o finalización.",
+    "ldc_title": "Controles de Diseño y Dirección",
+    "ldc_intro": "Utilice estos menús para definir la estructura visual general:",
+    "ldc1_title": "Diseño en Capas (Menú):",
+    "ldc1_desc": "Elija entre estilos algorítmicos como \"Capas\", \"Árbol\" u \"Orgánico\".",
+    "ldc2_title": "Dirección (Menú):",
+    "ldc2_desc": "Establece la orientación del flujo (p. ej., de arriba a abajo).",
+    "cus_title": "Suite de Utilidades del Lienzo",
+    "cus_intro": "Estos botones proporcionan características avanzadas:",
+    "cus1_title": "Alineación Automática:",
+    "cus1_desc": "Ajusta instantáneamente todos los conectores en una cuadrícula.",
+    "cus2_title": "Mostrar Cuadrícula:",
+    "cus2_desc": "Alterna una cuadrícula de fondo para ayudar en la alineación manual.",
+    "cus3_title": "Sidekick / Asistente de Voz:",
+    "cus3_desc": "Activa soporte impulsado por IA con lenguaje natural.",
+    "cus4_title": "Borrar Todo:",
+    "cus4_desc": "Limpia todo el lienzo para comenzar un nuevo diseño.",
+    "ne_title": "Navegación y Exportación",
+    "ne1_title": "Controles de Zoom:",
+    "ne1_desc": "Ajuste su vista. <strong>Fit</strong> (Ajustar) escala automáticamente el diagrama.",
+    "ne2_title": "Exportar:",
+    "ne2_desc": "Guarda la visualización actual como una imagen o PDF."
+  },
+  "req_docs": {
+    "title": "Documentos de Requisitos",
+    "intro": "El panel de <strong>Documentos de Requisitos</strong> es el repositorio central de las especificaciones formales. Permite gestionar, revisar y regenerar documentos clave que definen el alcance, la funcionalidad y el marco técnico.",
+    "adt_title": "Tipos de Documentos Disponibles",
+    "adt_intro": "El panel organiza la documentación en cuatro categorías principales:",
+    "t_h1": "Documento",
+    "t_h2": "Propósito",
+    "t_h3": "Contenido Clave",
+    "t_r1_1": "<strong>Resumen de Concepto</strong>",
+    "t_r1_2": "Visión de alto nivel del proyecto.",
+    "t_r1_3": "Descripción visual y propuesta de valor.",
+    "t_r2_1": "<strong>Especificación Funcional</strong>",
+    "t_r2_2": "Comportamiento orientado al usuario.",
+    "t_r2_3": "Requisitos, historias de usuario y lógica de características.",
+    "t_r3_1": "<strong>Especificación Técnica</strong>",
+    "t_r3_2": "Hoja de ruta para desarrolladores.",
+    "t_r3_3": "Arquitectura del sistema e implementación de API.",
+    "t_r4_1": "<strong>Diseño de Base de Datos</strong>",
+    "t_r4_2": "Estructuras de datos.",
+    "t_r4_3": "Esquemas, relaciones (ERD) y tablas.",
+    "dsm_title": "Estado y Gestión de Documentos",
+    "dsm_intro": "Cada tarjeta cuenta con indicadores de estado en tiempo real:",
+    "dsm_b1_title": "Insignia Ready:",
+    "dsm_b1_desc": "El color verde indica que el documento está actualizado.",
+    "dsm_b2_title": "Abrir:",
+    "dsm_b2_desc": "Visualiza o descarga una copia local del documento.",
+    "dsm_b3_title": "Reconstruir:",
+    "dsm_b3_desc": "Permite al motor de IA regenerar el documento manteniéndolo sincronizado.",
+    "dsm_b4_title": "Actualizar (Global):",
+    "dsm_b4_desc": "Botón superior derecho para comprobar actualizaciones generales.",
+    "kw_title": "Flujo de Trabajo",
+    "kw_1_title": "Generación:",
+    "kw_1_desc": "Utilice <strong>Reconstruir</strong> para crear sus primeras especificaciones.",
+    "kw_2_title": "Verificación:",
+    "kw_2_desc": "Verifique el estado <strong>Ready</strong> antes de compartir con los usuarios.",
+    "kw_3_title": "Iteración:",
+    "kw_3_desc": "Al modificar un diagrama, haga clic en <strong>Reconstruir</strong> en su documento correspondiente.",
+    "dev_title": "Desarrollo",
+    "dev_intro": "La sección <strong>Desarrollo</strong> es el motor técnico que brinda acceso al código y a la gestión del proyecto.",
+    "dev_sub_intro": "Existen 4 sub-menús:",
+    "dev_sub1_title": "1. Tareas",
+    "dev_sub1_desc": "Registro central de acciones y reporte de errores.",
+    "dev_sub2_title": "2. Base de Datos",
+    "dev_sub2_desc": "Acceso a la capa de datos, esquemas de tablas y migraciones.",
+    "dev_sub3_title": "3. Código Fuente",
+    "dev_sub3_desc": "Repositorio de lógica y programación en el frontend/backend.",
+    "dev_sub4_title": "4. Contenedores",
+    "dev_sub4_desc": "Gestión para implementaciones en Docker o entornos Kubernetes."
+  },
+  "tasks": {
+    "title": "Tareas",
+    "intro": "<strong>Tareas</strong> es el centro de mando donde los requisitos se traducen en desarrollo procesable.",
+    "knc_title": "Navegación Clave y Controles",
+    "knc_b1_title": "Filtros de Estado:",
+    "knc_b1_desc": "Alterne fácilmente entre Pendiente, En Progreso, Completado, y Fallido.",
+    "knc_b2_title": "Acciones Globales:",
+    "knc_b2_1_title": "Actualizar:",
+    "knc_b2_1_desc": "Sincroniza la cola con la actividad actual.",
+    "knc_b2_2_title": "Cancelar/Borrar Todo:",
+    "knc_b2_2_desc": "Administra el historial y detiene procesos activos.",
+    "knc_b2_3_title": "+ Nueva Tarea:",
+    "knc_b2_3_desc": "Activa manualmente un nuevo objetivo.",
+    "aoc_title": "Anatomía de una Tarjeta de Tarea",
+    "aoc_intro": "Cada tarea brinda transparencia total en la ejecución de la IA:",
+    "aoc_t1": "Característica",
+    "aoc_t2": "Descripción",
+    "aoc_r1_1": "<strong>Resumen</strong>",
+    "aoc_r1_2": "Instrucción ejecutada.",
+    "aoc_r2_1": "<strong>Asignación de Agente</strong>",
+    "aoc_r2_2": "Agente asignado a la tarea.",
+    "aoc_r3_1": "<strong>Insignias de Contexto</strong>",
+    "aoc_r3_2": "Muestra la carpeta y la fecha.",
+    "aoc_r4_1": "<strong>Fase de Ejecución</strong>",
+    "aoc_r4_2": "Cajas azules de información del proceso.",
+    "aoc_r5_1": "<strong>Tipo de Salida</strong>",
+    "aoc_r5_2": "Naturaleza del resultado (Análisis, Código).",
+    "pmf_title": "Características de Gestión Potentes",
+    "pmf_b1_title": "Análisis de Brechas:",
+    "pmf_b1_desc": "Compara esquemas existentes para encontrar faltantes.",
+    "pmf_b2_title": "Subtareas:",
+    "pmf_b2_desc": "Descomponga metas grandes en pasos técnicos.",
+    "pmf_b3_title": "Control de Versiones:",
+    "pmf_b3_desc": "Edite, Vuelva a ejecutar, Elimine iteraciones.",
+    "pmf_b4_title": "Inspección a Nivel de Archivo:",
+    "pmf_b4_desc": "Vistazo transparente a archivos leídos/modificados.",
+    "tc_intro": "Los <strong>Controles de Tareas</strong> se encuentran en la esquina superior derecha.",
+    "tc_refresh_title": "Actualizar",
+    "tc_refresh_1": "Función:",
+    "tc_refresh_2": "Actualiza la lista manualmente.",
+    "tc_refresh_3": "Cuándo usar:",
+    "tc_refresh_4": "Tras enviar una tarea o para consultar su avance.",
+    "tc_cancel_title": "Cancelar Todo",
+    "tc_cancel_1": "Función:",
+    "tc_cancel_2": "Detiene todas las tareas.",
+    "tc_cancel_3": "Cuándo usar:",
+    "tc_cancel_4": "Si el prompt fue incorrecto o para ahorrar recursos.",
+    "tc_delete_title": "Borrar Todo",
+    "tc_delete_1": "Función:",
+    "tc_delete_2": "Limpia todo el historial de tareas.",
+    "tc_delete_3": "Cuándo usar:",
+    "tc_delete_4": "Al terminar hitos principales para hacer limpieza.",
+    "tc_new_title": "+ Nueva Tarea",
+    "tc_new_1": "Función:",
+    "tc_new_2": "Abre la ventana modal.",
+    "tc_new_3": "Cuándo usar:",
+    "tc_new_4": "Punto de entrada primario para delegar trabajos.",
+    "cnt_title": "Creando una Nueva Tarea",
+    "cnt_intro": "Delega objetivos a los agentes especializados desde aquí.",
+    "cnt_comp_title": "Componentes de la ventana Nueva Tarea:",
+    "cnt_1_title": "1. Descripción de la Tarea",
+    "cnt_1_intro": "Para instrucciones en lenguaje natural.",
+    "cnt_1_b1_title": "Sea Específico:",
+    "cnt_1_b1_desc": "Describa el problema directamente y detalle la lógica.",
+    "cnt_1_b2_title": "Fuentes de Referencia:",
+    "cnt_1_b2_desc": "Mencione archivos específicos, tablas, etc.",
+    "cnt_2_title": "2. Asignar Agente",
+    "cnt_2_intro": "Elegir el especialista asegura que usa el set correcto.",
+    "cnt_t2_h1": "Agente",
+    "cnt_t2_h2": "Responsabilidad",
+    "cnt_t2_r1_1": "<strong>Terminal Agent</strong>",
+    "cnt_t2_r1_2": "Instrucciones de comando CLI, maneja archivos.",
+    "cnt_t2_r2_1": "<strong>Developer Agent</strong>",
+    "cnt_t2_r2_2": "Escribe y corrige código de aplicación.",
+    "cnt_t2_r3_1": "<strong>Database Agent</strong>",
+    "cnt_t2_r3_2": "Esquemas, SQL, y migraciones de datos.",
+    "cnt_t2_r4_1": "<strong>Presentation Agent</strong>",
+    "cnt_t2_r4_2": "Interfaces UI/UX, layouts.",
+    "cnt_t2_r5_1": "<strong>Document Agent</strong>",
+    "cnt_t2_r5_2": "Manuales de usuario, especificaciones técnicas.",
+    "cnt_t2_r6_1": "<strong>Container Agent</strong>",
+    "cnt_t2_r6_2": "Docker, Kubernetes, despliegue.",
+    "cnt_t2_r7_1": "<strong>Task Manager Agent</strong>",
+    "cnt_t2_r7_2": "Genera planeamiento multinivel.",
+    "cnt_t2_r8_1": "<strong>QA Agent</strong>",
+    "cnt_t2_r8_2": "Control de calidad y de flujos.",
+    "cnt_t2_r9_1": "<strong>Video Agent</strong>",
+    "cnt_t2_r9_2": "Genera tutoriales de video.",
+    "cnt_t2_r10_1": "<strong>Analytical Agent</strong>",
+    "cnt_t2_r10_2": "Auditorías de seguridad y lecturas profundas.",
+    "cnt_t2_r11_1": "<strong>Security Agent</strong>",
+    "cnt_t2_r11_2": "Busca vulnerabilidades (encriptación/autenticación).",
+    "cnt_t2_r12_1": "<strong>Test Cases Agent</strong>",
+    "cnt_t2_r12_2": "Autogenera tests unitarios y end-to-end.",
+    "cnt_3_title": "3. Carpeta Asociada",
+    "cnt_3_intro": "El proyecto a donde este agente trabajará.",
+    "cnt_3_b1": "Su carpeta del proyecto actual es por defecto.",
+    "cnt_3_b2": "Mantiene separado el código evitando cruces.",
+    "cnt_fa_title": "Acciones Finales",
+    "cnt_fa_1_title": "Cancelar:",
+    "cnt_fa_1_desc": "Desarta borrador y vuelve atrás.",
+    "cnt_fa_2_title": "Crear Tarea:",
+    "cnt_fa_2_desc": "Inicia la petición en la cola de IA para su rastreo inmediato."
+  },
+  "database": {
+    "title": "Base de Datos",
+    "intro": "El módulo de <strong>Conexiones a Base de Datos</strong> es la base técnica de tu aplicación. Es aquí donde se define y gestiona la \"Fuente de Verdad\". Transforma una base de datos en crudo en un activo visual que la IA usa.",
+    "actions_title": "Acciones",
+    "act_b1_title": "Exportar y Descargar (Icono Azul)",
+    "act_b1_desc": "Empaqueta toda su base de datos (tablas, restricciones, filas) en un <code>.sql</code> y lo descarga.",
+    "act_b2_title": "Exportar a Origen (Icono Naranja)",
+    "act_b2_desc": "Guarda el esquema de la base de datos en el sistema de archivos del proyecto.",
+    "act_b3_title": "Conectar y Explorar (Icono Verde)",
+    "act_b3_desc": "Activa el Explorador de Esquemas para la conexión seleccionada.",
+    "td_title": "Detalles de Tabla",
+    "td_intro": "Cuando haces clic en un bloque, la superposición <strong>Detalles de Tabla</strong> actúa como radiografía profunda. Es fundamental para auditar la integridad estructural.",
+    "ts_title": "La Tabla Estructural (Vista de Esquema)",
+    "ts_h1": "Columna",
+    "ts_h2": "Propósito",
+    "ts_r1_1": "<strong>Columna</strong>",
+    "ts_r1_2": "Nombre único de cada campo (ej. <code>claim_number</code>).",
+    "ts_r2_1": "<strong>Tipo</strong>",
+    "ts_r2_2": "Formato técnico. Nota <code>int</code> para números, <code>varchar</code> para texto, etc.",
+    "ts_r3_1": "<strong>Nulable</strong>",
+    "ts_r3_2": "Indica si el campo puede estar vacío (<strong>Yes</strong>) o es obligatorio (<strong>No</strong>).",
+    "ts_r4_1": "<strong>Preadeterminado</strong>",
+    "ts_r4_2": "El valor si no se provee información (ej. status es <code>'OPEN'</code>).",
+    "ts_r5_1": "<strong>Llave</strong>",
+    "ts_r5_2": "Representa una Clave Primaria (icono de llave 🔑)."
+  },
+  "source_code": {
+    "title": "Source Code",
+    "intro": "The Source Code dashboard is where your project transitions from high-level \"Concept\" to actual digital infrastructure. This is a live file system where Think4ever manages every script, style, and configuration file of any project.",
+    "ns_title": "Navigation & Structure",
+    "ns_intro": "The Files Browser provides a standard, intuitive directory structure. In your current view (the insurance folder), the AI has organized the project into logical sections:",
+    "ns_b1_title": "config/:",
+    "ns_b1_desc": "Contains environment settings and database connection strings.",
+    "ns_b2_title": "public/:",
+    "ns_b2_desc": "The \"Front Door\" of your app—houses the HTML, CSS, and images the user actually sees.",
+    "ns_b3_title": "routes/:",
+    "ns_b3_desc": "The \"Traffic Controller\"—defines the paths (URLs) for your application (e.g., /dashboard or /expenditures).",
+    "ns_b4_title": "utils/:",
+    "ns_b4_desc": "Helper functions and small scripts that handle repetitive tasks.",
+    "apf_title": "Anatomy of Your Project Files",
+    "apf_intro": "Every file listed includes its Type, Size, and the Last Modified date, giving you a clear audit trail of development.",
+    "apf_t1": "Notable File",
+    "apf_t2": "Description",
+    "apf_r1_1": "db.sql",
+    "apf_r1_2": "A snapshot of your database structure, often created by the \"Export to Source\" function.",
+    "apf_r2_1": "insuranceserver.js",
+    "apf_r2_2": "The main entry point for your backend server—this is the \"brain\" that connects your UI to your data.",
+    "apf_r3_1": "package.json",
+    "apf_r3_2": "A manifest file that lists all the technical dependencies your project needs to run.",
+    "apf_r4_1": "README.md",
+    "apf_r4_2": "The project's documentation, detailing how to install and use the application.",
+    "apf_outro": "In the Source Code section, navigating and managing your technical assets is designed to be as intuitive as a standard desktop environment, but with high-end developer tools built right in.",
+    "nt_title": "Navigation & Tracking",
+    "nt_b1_title": "Breadcrumb Navigation:",
+    "nt_b1_desc": "Use the dynamic path links (e.g., Root / public / assets) at the top of the browser to move instantly between parent and child directories.",
+    "nt_b2_title": "File Metadata:",
+    "nt_b2_desc": "Every asset is listed with its Name, Type (JS, HTML, CSS, etc.), Size, and the exact Timestamp of the last modification. This provides a clear audit trail for every change the AI agents make.",
+    "ifa_title": "Individual File Action",
+    "ifa_intro": "For surgical control over your application's files, each row in the browser offers four primary actions:",
+    "ifa_b1_title": "View — Read-Only Mode",
+    "ifa_b1_d1_title": "The Function:",
+    "ifa_b1_d1_desc": "Opens a quick-look preview of the file's content.",
+    "ifa_b1_d2_title": "The Utility:",
+    "ifa_b1_d2_desc": "Perfect for a \"spot check\" to verify that a logic fix or a UI update was applied correctly without accidentally changing anything.",
+    "ifa_b2_title": "Edit — Full-Screen Code Editor",
+    "ifa_b2_d1_title": "The Function:",
+    "ifa_b2_d1_desc": "Launches a professional-grade development environment featuring the high-contrast Catppuccin theme.",
+    "ifa_b2_d2_title": "The Utility:",
+    "ifa_b2_d2_desc": "Features full syntax highlighting, making it easy to manually tweak code or add custom comments. It's the ultimate tool for \"Final Form\" personalization.",
+    "ifa_b3_title": "Download — Local Export",
+    "ifa_b3_d1_title": "The Function:",
+    "ifa_b3_d1_desc": "Instantly saves the specific file to your computer.",
+    "ifa_b3_d2_title": "The Utility:",
+    "ifa_b3_d2_desc": "Use this if you need to share a specific script with a collaborator or want to keep a local backup of a critical configuration file like db.sql.",
+    "ifa_b4_title": "Delete — Secure Removal",
+    "ifa_b4_d1_title": "The Function:",
+    "ifa_b4_d1_desc": "Removes the file from the project directory.",
+    "ifa_b4_d2_title": "The Utility:",
+    "ifa_b4_d2_desc": "Includes a confirmation step to prevent accidental loss of data. Use this to prune legacy files or experimental scripts that are no longer needed."
+  },
+  "containers": {
+    "title": "Contenedores",
+    "intro": "El módulo de <strong>Contenedores</strong> es donde su aplicación pasa de ser una colección de archivos a un sistema portátil listo para producción. Al aprovechar <strong>Docker</strong>, Think4ever AI asegura que su proyecto funcione idénticamente en su máquina local, un servidor de prueba o en la nube.",
+    "fpt_title": "Hay cuatro pestañas poderosas:",
+    "t1_h1": "Pestaña",
+    "t1_h2": "Lo que permite",
+    "r1_c1": "Configuración",
+    "r1_c2": "Ver su archivo docker-compose.yml. Cambie al <strong>Modo Visual</strong> para ver sus servidores como tarjetas interactivas.",
+    "r2_c1": "Agente Asistente",
+    "r2_c2": "¿No le gusta una configuración? Solo dígale a la IA: <em>\"Cambia el puerto de la base de datos a 3306\"</em> o <em>\"Agrega un servicio de respaldo.\"</em>",
+    "r3_c1": "Historial",
+    "r3_c2": "Una \"Máquina del Tiempo\" para su infraestructura. Si un cambio rompe la construcción, retroceda a una versión anterior instantáneamente.",
+    "r4_c1": "Construcciones",
+    "r4_c2": "El paso final. <strong>Descargar como ZIP</strong> para su máquina local o <strong>Empujar al Código Fuente</strong> para agregarlo a los archivos de su proyecto."
+  },
+  "dev_sidebar": {
+    "user_manual": "Manual de Usuario",
+    "getting_started": "Empezando",
+    "introduction": "Introducción",
+    "key_features": "Características Clave",
+    "dashboard": "Panel de Control",
+    "create_project": "Crear un nuevo Proyecto",
+    "project_settings": "Configuración del Proyecto",
+    "api_keys": "Claves API",
+    "add_api_key": "Agregar nueva Clave API",
+    "version_control": "Control de Versiones",
+    "reverse_engineering": "Ingeniería Inversa",
+    "structure_ideation": "Estructura e Ideación",
+    "requirements": "Requisitos",
+    "concept": "Concepto",
+    "business_flow": "Flujo de Negocio",
+    "data_objects": "Objetos de Datos",
+    "roles_permissions": "Roles y Permisos",
+    "business_rules": "Reglas de Negocio",
+    "integration_maps": "Mapas de Integración",
+    "design_docs": "Diseño y Documentación",
+    "ui_design": "Diseño de Interfaz",
+    "technical_diagrams": "Diagramas Técnicos",
+    "available_diagrams": "Tipos de Diagramas",
+    "requirements_docs": "Docs de Requisitos",
+    "development": "Desarrollo",
+    "tasks": "Tareas",
+    "database": "Base de Datos",
+    "source_code": "Código Fuente",
+    "containers": "Contenedores",
+    "others": "Otros",
+    "changelog": "Registro de Cambios"
+  }
+}

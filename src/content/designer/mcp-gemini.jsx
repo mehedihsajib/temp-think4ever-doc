@@ -1,0 +1,129 @@
+import React from 'react';
+
+const DesignerMcpGemini = () => {
+  return (
+    <div className="doc-page-content">
+      <main className="cd-main-content" id="cd-main">
+
+<h1 className="cd-page-title" id="cdHomeTitle">Gemini CLI Integration Manual (Model Context Protocol)</h1>
+
+<section className="cd-overview" id="cdHomeOverview">
+<div className="para-box">
+<p>
+                            This section guides you through connecting the <strong>Gemini CLI</strong> to the platform
+                            using the Model
+                            Context Protocol (MCP).
+                            Connecting your client allows a terminal agent to leverage a large context window over your
+                            entire project toolchain to
+                            analyze requirements, track tasks, and audit code repositories.
+                        </p>
+<div className="image-wrapper">
+<img alt="Gemini CLI" className="demo-img" src="/assets/images/mcp/mcp-gemini.png"/>
+</div>
+<p style={{marginTop: '20px'}}>
+<strong>Prerequisites &amp; Access Token Generation</strong>
+</p>
+<p>Before configuring the CLI, you must generate a secure access
+                            token. This token serves as your REST API key and
+                            authenticates your MCP session.</p>
+<ul className="cd-overview-ul">
+<li>
+                                Navigate to the MCP &mdash; <strong>Gemini CLI</strong> dashboard.
+                            </li>
+<li>
+                                Click the blue <strong>Create token</strong> button located in the upper-right corner of
+                                the instruction
+                                panel.
+                            </li>
+<li>
+                                Copy the generated token immediately.
+                            </li>
+</ul>
+</div>
+<div className="para-box">
+<p style={{marginTop: '20px'}}>
+                            ⚠️ <strong>Important Security Note:</strong> The token configuration snippet fills in
+                            automatically upon creation and is only displayed once. Do not commit your
+                            active token to a shared repository. If you are using a per-project configuration file
+                            within a shared repository,
+                            prefer using a global file in your home directory instead.
+                        </p>
+</div>
+<div className="para-box">
+<h4 className="h4">
+                            Configuration Setup
+                        </h4>
+<p>
+                            Gemini CLI reads its server profiles from a JSON configuration file. You can define this
+                            configuration globally or on a
+                            per-project basis.
+                        </p>
+<p style={{marginTop: '20px'}}>
+<strong>Configuration File Paths</strong>
+</p>
+<ul className="cd-overview-ul">
+<li>
+<strong>Global Configuration:</strong>
+<code>~/.gemini/settings.json</code>
+</li>
+<li>
+<strong>Per-Project Configuration:</strong>
+<code>./.gemini/settings.json</code>
+</li>
+</ul>
+</div>
+<div className="para-box">
+<h4 className="h4">JSON Configuration Block</h4>
+<p>
+                            Add the following block to your settings.json file, replacing tf_YOUR_TOKEN with the access
+                            token you generated:
+                        </p>
+<p style={{marginTop: '20px'}}>Gemini CLI configures MCP servers
+                            in <code>~/.gemini/settings.json</code> (global) or <code>.gemini/settings.json</code> (per
+                            project) and
+                            supports remote HTTP servers via httpUrl.</p>
+</div>
+<div className="para-box">
+<h4 className="h4">Step 1</h4>
+<p>Add this to the settings file:</p>
+<div className="code-block-wrapper">
+<div className="code-block-header">
+<div className="code-block-header-left">
+<div className="code-block-dots">
+<span className="code-block-dot dot-red"></span>
+<span className="code-block-dot dot-yellow"></span>
+<span className="code-block-dot dot-green"></span>
+</div>
+<span className="code-block-lang">JSON</span>
+</div>
+<button className="code-block-copy-btn" onclick="copyToClipboard(this)">
+<i className="fa-regular fa-copy"></i> Copy
+                                </button>
+</div>
+<pre><code>&#123;
+  <span className="code-keyword">"mcpServers"</span>: &#123;
+    <span className="code-keyword">"think4ever"</span>: &#123;
+      <span className="code-keyword">"httpUrl"</span>: <span className="code-string">"https://cell-ssm-use1-0005.us.portal.think4ever.com/mcp"</span>,
+      <span className="code-keyword">"headers"</span>: &#123; <span className="code-keyword">"Authorization"</span>: <span className="code-string">"Bearer tf_YOUR_TOKEN"</span> &#125;
+    &#125;
+  &#125;
+&#125;</code></pre>
+</div>
+</div>
+<div className="para-box">
+<h4 className="h4">Step 2</h4>
+<p>Restart Gemini CLI and run <code>/mcp</code> to confirm the <code>think4ever</code> server is
+                            connected and its tools are listed.</p>
+</div>
+<div className="para-box">
+<h4 className="h4">Step 3</h4>
+<p>Use <code>/mcp desc</code> to see tool descriptions, and mention think4ever in your prompt so
+                            the model reaches for the right tools.</p>
+</div>
+</section>
+</main>
+    </div>
+  );
+};
+
+export default DesignerMcpGemini;

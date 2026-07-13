@@ -1,0 +1,2831 @@
+{
+  "meta": {
+    "lang_name": "Nederlands",
+    "lang_code": "nl"
+  },
+  "nav": {
+    "overview": "Overzicht",
+    "merchant": "Handelaar",
+    "consumer": "Consument",
+    "blog": "Blog",
+    "changelog": "Changelog",
+    "search_placeholder": "Zoeken in documentatie...",
+    "dashboard": "Dashboard",
+    "feedback": "Feedback",
+    "search": "Zoeken"
+  },
+  "header": {
+    "brand": "MPay Network"
+  },
+  "sidebar": {
+    "book_title": "Consument Portefeuille Docs",
+    "section_getting_started": "Aan de slag",
+    "section_using_wallet": "Uw Portefeuille Gebruiken",
+    "section_settings": "Instellingen & Ondersteuning",
+    "section_other_docs": "Andere Docs",
+    "link_overview": "Overzicht",
+    "link_getting_started": "Aan de slag",
+    "link_account_setup": "Account Instellen",
+    "link_making_payments": "Betalingen Doen",
+    "link_wallet_management": "Portefeuille Beheer",
+    "link_p2p_transfers": "Geld verzenden en ontvangen",
+    "link_settings_security": "Instellingen & Beveiliging",
+    "link_troubleshooting": "Probleemoplossing",
+    "link_merchant_docs": "Handelaar Portefeuille Docs",
+    "link_consumer_docs": "Handelaar Consumentenwallet Docs",
+    "link_changelog": "Changelog"
+  },
+  "breadcrumb": {
+    "docs": "Documentatie",
+    "consumer_wallet": "Consumentenwallet",
+    "merchant_wallet": "Merchant Wallet",
+    "getting_started": "Aan de slag",
+    "qr_payments": "QR-code betalingen",
+    "nfc_payments": "NFC betalingen",
+    "making_payments": "Betalingen uitvoeren",
+    "transactions": "Transacties",
+    "wallet_management": "Wallet-beheer",
+    "p2p_transfers": "Geld verzenden en ontvangen",
+    "product_updates": "Productupdates",
+    "v2_5_0": "v2.5.0",
+    "account_setup": "Accountinstelling",
+    "troubleshooting": "Probleemoplossing",
+    "security": "Beveiliging",
+    "settings_security": "Instellingen & Beveiliging"
+  },
+  "page": {
+    "title": "Aan de slag met de Consumenten Portefeuille",
+    "subtitle": "Alles wat u moet weten om uw mPay Consumenten Portefeuille te downloaden, installeren en in te stellen. Volg deze stap-voor-stap gids om binnen enkele minuten te beginnen met snelle, veilige betalingen.",
+    "time_badge": "Geschatte insteltijd: 5 minuten"
+  },
+  "toc": {
+    "on_this_page": "Op deze pagina",
+    "requirements": "Systeemvereisten",
+    "download": "Downloaden & Installeren",
+    "install_steps": "Installatiestappen",
+    "signup": "Aanmelden",
+    "first_login": "Eerste Login & Setup",
+    "profile_setup": "Profiel Instellen",
+    "wallet_setup": "Portefeuille Configuratie",
+    "screenshots": "Walkthrough van de Instellingen",
+    "faq": "FAQ"
+  },
+  "requirements": {
+    "heading": "Systeemvereisten",
+    "intro": "Zorg er voor het downloaden voor dat uw apparaat voldoet aan de minimale vereisten:",
+    "ios": {
+      "name": "iOS",
+      "desc": "iOS 15.0 of hoger. Compatibel met iPhone 8 en nieuwer. Ongeveer 85 MB opslagruimte vereist."
+    },
+    "android": {
+      "name": "Android",
+      "desc": "Android 10.0 (API level 29) of hoger. Ongeveer 60 MB opslagruimte vereist."
+    },
+    "nfc_callout_title": "NFC Vereiste",
+    "nfc_callout_body": "Voor tap-to-pay functionaliteit moet uw apparaat over NFC-hardware beschikken. De meeste moderne smartphones (iPhone 7+ en Android met NFC) ondersteunen deze functie."
+  },
+  "download": {
+    "heading": "Downloaden & Installeren",
+    "intro": "De mPay Consumenten Portefeuille is gratis beschikbaar in beide grote app stores. Kies hieronder uw platform:",
+    "ios_btn": "App Store",
+    "ios_btn_pre": "Download in de",
+    "android_btn": "Google Play",
+    "android_btn_pre": "Ontdek het op",
+    "install_steps_heading": "Installatiestappen",
+    "steps": {
+      "1": {
+        "title": "Open uw app store",
+        "content": "Open de <strong>App Store</strong> (iOS) or <strong>Google Play Store</strong> (Android) op uw apparaat."
+      },
+      "2": {
+        "title": "Zoek naar mPay Wallet",
+        "content": "Typ <code>mPay Consumer Wallet</code> in de zoekbalk. Zoek naar de officiële app met het mPay-logo and \"mPay Network\" als ontwikkelaar."
+      },
+      "3": {
+        "title": "Downloaden en installeren",
+        "content": "Tik op <strong>Download</strong> (iOS) of <strong>Installeren</strong> (Android). De app wordt automatisch gedownload en geïnstalleerd. Mogelijk wordt u gevraagd om u te authenticeren met uw apparaatwachtwoord, Face ID of vingerafdruk."
+      },
+      "4": {
+        "title": "Open de app",
+        "content": "Tik na de installatie op <strong>Openen</strong> of zoek het mPay-icoon op uw startscherm. De app start met het welkomstscherm."
+      }
+    },
+    "verify_callout_title": "Verifieer de Ontwikkelaar",
+    "verify_callout_body": "Verifieer altijd of de ontwikkelaar vermeld staat als \"mPay Network\" voordat u downloadt. Installeer geen apps van onofficiële bronnen."
+  },
+  "signup": {
+    "heading": "Aanmelden",
+    "intro": "Uw mPay-account aanmaken is snel en eenvoudig. U heeft een geldig telefoonnummer and e-mailadres nodig.",
+    "steps": {
+      "1": {
+        "title": "Bent u een bestaande mPay-klant?",
+        "content": "Op het welkomstscherm wordt u gevraagd of u <strong>\"Een bestaande klant bent?\"</strong>. Voor nieuwe klanten tikt u op de knop <strong>NEE</strong>. Als u al een account heeft, selecteert u de knop <strong>JA</strong>."
+      },
+      "2": {
+        "title": "Nieuw Consumenten Registratieformulier",
+        "content": "De gebruiker wordt naar het <strong>Nieuwe Consument Registreren</strong> formulier geleid."
+      },
+      "3": {
+        "title": "Vereiste Klantinformatie",
+        "content": "De <strong>Gebruikers-ID</strong>, het <strong>E-mailadres</strong>, en het <strong>Mobiele Nummer</strong> moeten uniek zijn voor elke klant.",
+        "info_callout": "Tijdens de indiening van de registratie verifieert het systeem of de <strong>Gebruikers-ID</strong>, het <strong>E-mailadres</strong> en het <strong>Mobiele Nummer</strong> al in gebruik zijn door bestaande mPay-klanten."
+      },
+      "4": {
+        "title": "Vul alle verplichte velden in",
+        "intro": "Voer uw basisinformatie in:",
+        "field_name": "<strong>Voor- en Achternaam</strong> — Zoals vermeld op uw identiteitsbewijs",
+        "field_email": "<strong>E-mailadres</strong> — Een geldig e-mailadres voor meldingen en herstel",
+        "field_mobile": "<strong>Mobiel Nummer</strong> — Moet een geldig mobiel nummer zijn dat SMS ontvangt voor verificatie",
+        "field_referral": "<strong>Referral Code</strong> — Optioneel veld voor de verwijzingscode van de verwijzende mPay-klant."
+      },
+      "5": {
+        "title": "Akkoord gaan met de voorwaarden",
+        "intro": "Er zijn twee verplichte selectievakjes die geaccepteerd moeten worden voordat de registratie kan worden voortgezet:",
+        "check_terms": "Accepteer de <strong>Algemene Voorwaarden</strong>",
+        "check_security": "Beveiligingsbeleid dat slechts één gebruiker per apparaat toestaat, waarin staat: <em>\"Ik ga ermee akkoord dat het registreren van een nieuwe klant het bestaande account dat aan dit apparaat is gekoppeld, zal verwijderen.\"</em>"
+      },
+      "6": {
+        "title": "Optie om E-mail en Mobiel te Gebruiken in de Handelaar App",
+        "intro": "Kies of uw e-mailadres en mobiele nummer ook gebruikt kunnen worden om u te identificeren in de Handelaar App.",
+        "check_terms": "Accepteer de <strong>Algemene Voorwaarden</strong>",
+        "check_security": "Beveiligingsbeleid dat slechts één gebruiker per apparaat toestaat, waarin staat: <em>\"Ik ga ermee akkoord dat het registreren van een nieuwe klant het bestaande account dat aan dit apparaat is gekoppeld, zal verwijderen.\"</em>"
+      }
+    },
+    "success_callout_title": "Account Aangemaakt!",
+    "success_callout_body": "Zodra u het bevestigingsscherm ziet, is uw account klaar. U kunt nu doorgaan met het instellen van uw profiel en uw portefeuille configureren."
+  },
+  "first_login": {
+    "heading": "Eerste Login & Setup",
+    "intro": "Na het aanmaken van uw account wordt u door de initiële installatiewizard geleid. Dit is wat u kunt verwachten:",
+    "profile_heading": "Profiel Instellen",
+    "profile_steps": {
+      "1": {
+        "title": "Voeg uw persoonlijke gegevens toe",
+        "content": "Voer uw volledige naam in zoals deze op uw door de overheid uitgegeven identiteitsbewijs staat. Voeg optioneel een profielfoto toe voor eenvoudige identificatie tijdens P2P-overboekingen."
+      },
+      "2": {
+        "title": "Beveiliging instellen",
+        "content": "Configureer uw favoriete authenticatiemethode:",
+        "pin": "<strong>PIN-code</strong> — Stel een 6-cijferige PIN in voor snelle toegang",
+        "biometric": "<strong>Biometrie</strong> — Schakel Face ID of vingerafdrukauthenticatie in",
+        "recommend": "We raden aan om beide in te schakelen voor maximale beveiliging"
+      },
+      "3": {
+        "title": "Meldingen inschakelen",
+        "content_pre": "Sta pushmeldingen toe om direct betalingsbevestigingen, beveiligingswaarschuwingen en promotie-aanbiedingen te ontvangen. U kunt meldingsvoorkeuren later aanpassen in ",
+        "settings_link": "Instellingen",
+        "content_post": "."
+      }
+    },
+    "wallet_heading": "Portefeuille Configuratie",
+    "wallet_steps": {
+      "1": {
+        "title": "Personaliseer uw profiel",
+        "content": "Stel een profielfoto in voor uw portefeuille-account."
+      },
+      "2": {
+        "title": "Meldingsvoorkeuren Beheren",
+        "content": "U kunt een meldingsoptie aan- of uitzetten op basis van uw eigen voorkeuren."
+      },
+      "3": {
+        "title": "De installatie voltooien",
+        "content": "Tik op <strong>Installatie Voltooien</strong> om op uw portefeuille-dashboard te komen. U bent klaar om te beginnen met betalen!"
+      }
+    },
+    "tip_callout_title": "Tip: Voltooi de Verificatie Vroegtijdig",
+    "tip_callout_body": "Het verificatieproces kan 24 tot 48 uur duren; het is raadzaam om het profiel zo snel mogelijk te voltooien om volledige toegang te krijgen tot de functies van de mPay-portefeuille."
+  },
+  "screenshots": {
+    "heading": "Walkthrough van de Instellingen",
+    "intro": "Hier is een visueel overzicht van de belangrijkste schermen die u tijdens de installatie tegenkomt:",
+    "step1_label": "Welkomstscherm",
+    "step1_sublabel": "Account Aanmaken of Inloggen",
+    "step1_caption": "Stap 1: Welkomstscherm",
+    "step2_label": "Telefoonverificatie",
+    "step2_sublabel": "Voer OTP-code in",
+    "step2_caption": "Stap 2: Telefoon Verifiëren",
+    "step3_label": "Beveiligingsinstellingen",
+    "step3_sublabel": "PIN & Biometrie",
+    "step3_caption": "Stap 3: Beveiliging Instellen",
+    "step4_label": "Profielinfo",
+    "step4_sublabel": "Naam & Foto",
+    "step4_caption": "Stap 4: Uw Profiel",
+    "step5_label": "Portefeuille Setup",
+    "step5_sublabel": "Valuta & Financiering",
+    "step5_caption": "Stap 5: Portefeuille Configureren",
+    "step6_label": "Helemaal Klaar!",
+    "step6_sublabel": "Dashboard Gereed",
+    "step6_caption": "Stap 6: Klaar voor Gebruik!"
+  },
+  "faq": {
+    "heading": "Veelgestelde Vragen",
+    "q1": "Kan ik de mPay Wallet op meerdere apparaten gebruiken?",
+    "a1": "Ja, u kunt op meerdere apparaten inloggen op uw mPay-account. Om veiligheidsredenen kan echter <b>slechts één apparaat tegelijk actief zijn</b>. Inloggen op een nieuw apparaat meldt u automatisch af op het vorige apparaat.",
+    "q2": "Wat als ik de OTP-code niet ontvang?",
+    "a2": "Als u de OTP niet binnen 60 seconden ontvangt, tikt u op de knop \"Code Opnieuw Verzenden\". Zorg ervoor dat uw telefoon signaal heeft en dat SMS niet geblokkeerd is. Als het probleem aanhoudt, probeer dan de optie \"Bel Mij\" voor spraakverificatie. Raadpleeg onze gids voor probleemoplossing voor meer oplossingen.",
+    "q3": "Is er een minimale storting om de portefeuille te gaan gebruiken?",
+    "a3": "Nee, er is geen minimale storting vereist. U kunt uw account aanmaken en de app verkennen zonder geld toe te voegen. Wanneer u klaar bent om een betaling te doen, kunt u uw portefeuille met elk gewenst bedrag financieren. Bekijk Portefeuillebeheer voor financieringsopties en limieten.",
+    "q4": "Kan ik mijn telefoonnummer na registratie wijzigen?",
+    "a4": "Ja, u kunt uw telefoonnummer bijwerken op de pagina Instellingen. U moet uw identiteit en het nieuwe telefoonnummer verifiëren via OTP. Het oude nummer wordt na een succesvolle verificatie losgekoppeld. Uit veiligheidsoverwegingen geldt er een afkoelperiode van 24 uur voordat bepaalde functies na een nummerwijziging weer worden ingeschakeld.",
+    "q5": "Wat moet ik doen als de app vastloopt tijdens de installatie?",
+    "a5": "Als de app vastloopt tijdens de installatie, open deze dan gewoon opnieuw. Uw voortgang wordt automatisch bij elke stap opgeslagen. Als het probleem aanhoudt, probeer dan het app-cachegeheugen te wissen (Android) of de app opnieuw te installeren (iOS). Zorg ervoor dat u de nieuwste versie hebt geïnstalleerd. Bezoek onze pagina voor probleemoplossing voor meer hulp.",
+    "q6": "Zijn mijn persoonlijke gegevens veilig tijdens de registratie?",
+    "a6": "Absoluut. Alle gegevens die tijdens de registratie worden verzonden, zijn gecodeerd met de industriestandaard TLS 1.3. Uw persoonlijke gegevens worden veilig opgeslagen en nooit met derden gedeeld zonder uw toestemming. Lees ons Privacybeleid voor volledige details over hoe we met uw gegevens omgaan."
+  },
+  "pagination": {
+    "previous": "Vorige",
+    "next": "Volgende",
+    "prev_title": "Consument Docs Home",
+    "next_title": "Account Instellen & Verificatie"
+  },
+  "lang_switcher": {
+    "label": "Taal"
+  },
+  "merchant_sidebar": {
+    "title": "Handelaar Portefeuille",
+    "section_getting_started": "Aan de slag",
+    "overview": "Overzicht",
+    "getting_started": "Aan de slag",
+    "account_setup": "Account Instellen & Verificatie",
+    "section_payments": "Betalingen",
+    "qr_payments": "QR-code Betalingen",
+    "nfc_payments": "NFC Betalingen",
+    "section_management": "Beheer",
+    "transaction_management": "Transactiebeheer",
+    "settings_config": "Winkel beheren",
+    "section_support": "Ondersteuning",
+    "troubleshooting": "Probleemoplossing"
+  },
+  "home": {
+    "version_banner": "U bekijkt de documentatie voor <span class=\"version-tag\">v3.2.1</span> — de nieuwste stabiele release.",
+    "breadcrumb": {
+      "docs": "Docs",
+      "consumer_wallet": "Consument Portefeuille"
+    },
+    "title": "Documentatie Consumenten Portefeuille",
+    "overview": {
+      "p1": "Welkom bij de documentatie van de <strong>MPay Network Consumenten Portefeuille</strong>. De Consumenten Portefeuille is uw alles-in-één mobiele betalingsoplossing, waarmee u snel en veilig kunt betalen bij elke door mPay ondersteunde handelaar, geld kunt overmaken naar vrienden en familie, en uw financiën met gemak kunt beheren.",
+      "p2": "Of u nu bij een koffiebar betaalt via een QR-code, uw telefoon tikt voor een NFC-betaling, of geld stuurt naar een vriend aan de andere kant van het land, de Consumenten Portefeuille heeft de oplossing. Deze documentatie leidt u door alles heen, van uw eerste download tot geavanceerde functies."
+    },
+    "features": {
+      "heading": "Belangrijkste Functies",
+      "qr": "QR-code Betalingen",
+      "nfc": "NFC Tap-to-Pay",
+      "p2p": "Persoon-tot-Persoon Overboekingen",
+      "wallet": "Portefeuille Opwaarderen & Opnemen",
+      "history": "Transactiegeschiedenis & Bewijzen",
+      "security": "Meervoudige Beveiliging",
+      "notifications": "Directe Meldingen",
+      "biometric": "Biometrische Authenticatie"
+    },
+    "quick_start": {
+      "heading": "Snel aan de slag",
+      "intro": "Ga aan de slag met de MPay Consumenten Portefeuille in slechts enkele stappen:",
+      "step1": {
+        "title": "Downloaden & Installeren",
+        "description": "Krijg de MPay Consumenten Portefeuille in de App Store of Google Play Store."
+      },
+      "step2": {
+        "title": "Uw account aanmaken",
+        "description": "Meld u aan met uw telefoonnummer en voltooi het snelle verificatieproces."
+      },
+      "step3": {
+        "title": "Uw portefeuille financieren",
+        "description": "Voeg geld toe aan uw portefeuille via bankoverschrijving, pinpas of andere ondersteunde methoden."
+      },
+      "step4": {
+        "title": "Beginnen met betalen",
+        "description": "Scan een QR-code of tik met uw telefoon bij een mPay-handelaar om direct te betalen."
+      }
+    },
+    "explore": {
+      "heading": "Verken de Documentatie",
+      "learn_more": "Meer informatie",
+      "getting_started": {
+        "title": "Aan de slag",
+        "description": "Download, installeer en stel uw Consumenten Portefeuille in. Voltooi uw eerste login en verken de app-interface."
+      },
+      "account_setup": {
+        "title": "Account Instellen",
+        "description": "Registreer uw account, voltooi identiteitsverificatie en pas uw persoonlijke profielinstellingen aan."
+      },
+      "making_payments": {
+        "title": "Betalingen Doen",
+        "description": "Leer hoe u bij handelaren kunt betalen met behulp van QR-codescans, NFC tap-to-pay en andere ondersteunde betalingsmethoden."
+      },
+      "wallet_management": {
+        "title": "Portefeuille Beheer",
+        "description": "Beheer uw portefeuillesaldo, waardeer op met verschillende methoden, neem geld op en bekijk uw transactiegeschiedenis."
+      },
+      "p2p_transfers": {
+        "title": "P2P Overboekingen",
+        "description": "Stuur en ontvang direct geld van andere mPay-gebruikers. Deel rekeningen, vraag betalingen aan en beheer contacten."
+      },
+      "settings_security": {
+        "title": "Instellingen & Beveiliging",
+        "description": "Configureer meldingsvoorkeuren, schakel biometrisch inloggen in, beheer beveiligingsinstellingen en bescherm uw account."
+      },
+      "troubleshooting": {
+        "title": "Probleemoplossing",
+        "description": "Vind oplossingen voor veelvoorkomende problemen, foutcodes, mislukte betalingen en krijg hulp wanneer iets niet werkt zoals verwacht."
+      }
+    },
+    "pagination": {
+      "prev": "Vorige",
+      "prev_title": "Documentatie Home",
+      "next": "Volgende",
+      "next_title": "Aan de slag"
+    }
+  },
+  "account_setup": {
+    "breadcrumb": {
+      "docs": "Docs",
+      "consumer": "Consument",
+      "account_setup": "Account Instellen"
+    },
+    "title": "Account Instellen & Verificatie",
+    "subtitle": "Leer hoe u uw mPay Consumenten Portefeuille-account registreert, identiteitsverificatie voltooit en uw profielvoorkeuren configureert.",
+    "registration": {
+      "heading": "Registratie",
+      "intro": "Het aanmaken van uw mPay Consumenten Portefeuille-account is snel en eenvoudig. Alles wat u nodig heeft is een geldig telefoonnummer om aan de slag te gaan.",
+      "wallet_registration": "Portefeuille Registratie",
+      "intro_2": "Uw mobiele nummer en e-mailadres fungeren als een van de unieke identificatiemiddelen in het mPay-netwerk. Volg deze stappen om te registreren of aan te melden:",
+      "steps": {
+        "1": {
+          "title": "Bent u een bestaande mPay-klant?",
+          "content": "Op het welkomstscherm wordt u gevraagd of u <strong>\"Een bestaande klant bent?\"</strong>. Voor nieuwe klanten tikt u op de knop <strong>NEE</strong>. Als u al een account heeft, selecteert u in plaats daarvan de knop <strong>JA</strong>."
+        },
+        "2": {
+          "title": "Nieuw Klant Registratieformulier",
+          "content": "De gebruiker wordt naar het <strong>Nieuwe Consument Registreren</strong> formulier geleid."
+        },
+        "3": {
+          "title": "Vereiste Klantinformatie",
+          "content": "De <strong>Gebruikers-ID</strong>, het <strong>E-mailadres</strong>, en het <strong>Mobiele Nummer</strong> moeten uniek zijn voor elke klant."
+        },
+        "4": {
+          "title": "Maak uw PIN aan",
+          "content": "Stel een 6-cijferige PIN in die u gebruikt om transacties te autoriseren en toegang te krijgen tot uw portefeuille. Kies iets veiligs maar memorabels."
+        },
+        "5": {
+          "title": "Algemene Voorwaarden Accepteren",
+          "content_pre": "Bekijk en accepteer de mPay Network ",
+          "tos": "Algemene Voorwaarden",
+          "privacy": "Privacybeleid",
+          "content_mid": " and ",
+          "content_post": "."
+        },
+        "6": {
+          "title": "Beveiligingsvragen Instellen",
+          "content": "Stel beveiligingsvragen in, die worden gebruikt voor account-herstel en het resetten van wachtwoorden. Klik op de knop <strong>Verzenden</strong>."
+        },
+        "7": {
+          "title": "OTP Verificatie",
+          "content": "Er wordt een SMS naar uw geregistreerde mobiele nummer gestuurd met een <strong>OTP (One-Time PIN). </strong>",
+          "ensure": "Zorg ervoor dat u de juiste OTP verifieert.",
+          "success": "Er verschijnt een succesmelding dat de registratie is voltooid, tik op de knop <strong>OK</strong>."
+        },
+        "8": {
+          "title": "PIN Configuratie",
+          "content": "De klant is <strong>verplicht</strong> om een PIN in te stellen voor de portefeuille-applicatie.",
+          "pin_def": "De <strong>PIN</strong> fungeert als de beveiligde toegangscode van uw applicatie.",
+          "pin_req": "Gebruikers moeten hun PIN invoeren telkens wanneer ze inloggen om hun identiteit te verifiëren en toegang te krijgen tot de applicatie."
+        },
+        "9": {
+          "title": "Biometrie Instellen voor Inloggen",
+          "content": "De klant kan ook biometrische gegevens gebruiken om in te loggen bij de portefeuille-applicatie als een extra beveiligingslaag.",
+          "default": "Als biometrie is ingesteld, gebruiken we <strong>Face ID</strong> of <strong>Touch ID</strong> om <strong>standaard</strong> in te loggen bij de portefeuille-applicatie."
+        }
+      },
+      "security_tip_title": "Beveiligingstip",
+      "security_tip_body": "Het wordt aanbevolen om beide beveiligingsmaatregelen ingeschakeld te houden om een sterkere bescherming voor uw portefeuille-applicatie te garanderen.",
+      "supported_regions_heading": "Ondersteunde Regio's",
+      "supported_regions_intro": "De mPay Consumenten Portefeuille is momenteel beschikbaar in de volgende regio's:",
+      "regions": {
+        "curacao": "Curaçao"
+      },
+      "voip_warning_title": "VoIP-nummers worden niet ondersteund",
+      "voip_warning_body": "Virtuele telefoonnummers (Google Voice, Skype, etc.) worden niet geaccepteerd voor registratie. U moet een nummer van een mobiele provider gebruiken."
+    },
+    "verification": {
+      "heading": "Identiteitsverificatie",
+      "intro": "mPay moet de identiteit van haar klanten verifiëren om fraude te voorkomen. Raadpleeg hieronder meer informatie over de profielstatus van de klant:",
+      "tiers_heading": "Status van Portefeuille-account",
+      "tiers": {
+        "incomplete": {
+          "badge": "Onvolledig Profiel",
+          "title": "Nieuw Geregistreerde Gebruiker",
+          "f1": "Account aangemaakt",
+          "f2": "Moet profiel voltooien",
+          "f3": "ID-documenten uploaden",
+          "f4": "Beperkte Toegang"
+        },
+        "pending": {
+          "badge": "Niet Geverifieerd",
+          "title": "Wacht op Verificatie",
+          "f1": "Heeft profiel voltooid",
+          "f2": "ID-documenten geüpload",
+          "f3": "Profiel is <strong>in behandeling</strong>",
+          "f4": "Beperkte Toegang",
+          "f5": "Verificatieproces duurt maximaal 48 uur"
+        },
+        "verified": {
+          "badge": "Geverifieerd",
+          "title": "Profiel Volledig Geverifieerd",
+          "f1": "Identiteit is geverifieerd",
+          "f2": "Volledige toegang",
+          "f3": "Portefeuille-account beheren",
+          "f4": "Geld Verzenden/Ontvangen",
+          "f5": "Geavanceerde analyses"
+        }
+      },
+      "how_to_heading": "Hoe u uw Identiteit Kunt Verifiëren",
+      "how_to_intro": "Na een succesvolle registratie logt u in op uw mPay Wallet-applicatie om het <strong>Profiel te Voltooien</strong> door relevante identificatiedocumenten te uploaden.",
+      "how_to_steps": {
+        "1": {
+          "title": "Voer adresgegevens en andere vereiste informatie in",
+          "content": "Zorg ervoor dat het adres overeenkomt met het door de overheid uitgegeven identiteitsbewijs dat wordt ingediend bij het verificatieproces."
+        },
+        "2": {
+          "title": "Upload een door de overheid uitgegeven identiteitsbewijs",
+          "content": "Maak een duidelijke foto van uw geldige identiteitsbewijs. Ondersteunde documenten zijn paspoorten, nationale identiteitskaarten en rijbewijzen."
+        },
+        "3": {
+          "title": "Maak een foto voor uw profielfoto",
+          "content": "Maak een live selfie voor gezichtsvergelijking. Ons systeem vergelijkt uw gezicht met uw ID-foto. Zorg voor goede verlichting en verwijder accessoires zoals een zonnebril."
+        },
+        "4": {
+          "title": "Wacht op Beoordeling",
+          "content": "Het mPay-netwerk zal alle gegevens van de klant zorgvuldig beoordelen; het verificatieproces kan 24 tot 48 uur duren. Ongeacht het resultaat van het verificatieproces, wordt de klant op de hoogte gesteld via SMS en e-mail."
+        }
+      },
+      "required_docs_heading": "Vereiste Documenten",
+      "table": {
+        "doc": "Document",
+        "consumer": "Consument",
+        "merchant": "Handelaar",
+        "notes": "Opmerkingen",
+        "required": "Vereist",
+        "optional": "Optioneel",
+        "row1_name": "Overheids-ID (Paspoort / Nationale ID / Rijbewijs)",
+        "row1_notes": "Moet geldig en niet verlopen zijn",
+        "row2_name": "Selfie Foto",
+        "row2_notes": "Live opname, geen uploads",
+        "row3_name": "Adresbewijs",
+        "row3_notes": "Nutsrekening, bankafschrift (laatste 3 maanden)",
+        "row4_name": "Fiscaal Identificatienummer",
+        "row4_notes": "BSN, TIN of equivalent"
+      },
+      "data_secure_title": "Uw gegevens zijn veilig",
+      "data_secure_body": "Alle documenten worden end-to-end gecodeerd en verwerkt door onze gecertificeerde KYC-partner. We slaan nooit onbewerkte beelden op nadat de verificatie is voltooid. Zie ons <a onclick=\"load_page('privacy_policy')\" style=\"color: #166534; cursor: pointer; text-decoration: underline;\">Privacybeleid</a> voor details.",
+      "status_heading": "Verificatiestatus Controleren",
+      "status_intro": "U kunt uw huidige verificatiestatus op elk moment controleren:",
+      "status_list": {
+        "1": "Open de mPay-app en log in.",
+        "2": "Afhankelijk van de status van de klant ontvangt de gebruiker na het inloggen een bericht:"
+      },
+      "status_indicators": "Statusindicatoren:",
+      "verified_status": "<strong>Geverifieerd</strong> — U heeft toegang tot de app-functionaliteiten. Tijdens de eerste keer inloggen nadat het account is geverifieerd, krijgt u het bericht <strong>\"Gefeliciteerd! Uw account is volledig geverifieerd!\"</strong>",
+      "pending_status": "<strong>In behandeling</strong> — Wordt beoordeeld en toont het bericht <strong>\"Uw account wordt nog beoordeeld.\" </strong>",
+      "rejected_status": "<strong>Afgewezen</strong> — de klant ziet het bericht <strong>Er is een probleem met uw account, neem contact op met support@mpaynetwork.com voor meer details.</strong>"
+    },
+    "profile": {
+      "heading": "Profielconfiguratie",
+      "intro": "Personaliseer uw mPay-profiel zodat vrienden en handelaren u gemakkelijk kunnen identificeren tijdens transacties.",
+      "preview": {
+        "name": "Alex Johnson",
+        "phone": "+1 (555) 012-3456",
+        "status": "Account Geverifieerd"
+      },
+      "fields_heading": "Profielvelden",
+      "fields": {
+        "name": {
+          "title": "Volledige Naam",
+          "content": "De naam die aan anderen wordt getoond tijdens transacties. Kan uw echte naam of een bijnaam zijn."
+        },
+        "photo": {
+          "title": "Profielfoto",
+          "content": "Upload een foto of maak een nieuwe. Optioneel maar aanbevolen voor P2P-overboekingen."
+        },
+        "email": {
+          "title": "E-mailadres",
+          "content": "Wordt gebruikt voor transactiebewijzen en account-herstel. Sterk aanbevolen."
+        },
+        "language": {
+          "title": "Voorkeurstaal",
+          "content": "Stel uw weergavetaal in. Ondersteunt momenteel Engels, Spaans, Frans, Duits en Portugees."
+        },
+        "qr": {
+          "title": "QR-profiel",
+          "content": "Uw profiel-QR die wordt gebruikt voor het ontvangen van geld op uw portefeuille-account."
+        },
+        "notifications": {
+          "title": "Meldingsvoorkeuren",
+          "content": "Configureer pushmeldingen, e-mailwaarschuwingen en SMS voor betalings- en beveiligingsgebeurtenissen."
+        }
+      },
+      "edit_heading": "Uw Profiel Bewerken",
+      "edit_intro": "Om uw profielinformatie te <b>bewerken</b>:",
+      "edit_steps": {
+        "1": "1. Open de mPay-app",
+        "2": "2. Tik op het <strong>profielicoon</strong> in de rechterbovenhoek (of ga naar <strong>Instellingen &rarr; Profiel</strong>)",
+        "3": "3. Tik op de knop <strong>\"Bewerken\"</strong> naast het veld dat u wilt wijzigen",
+        "4": "4. Breng uw wijzigingen aan en tik op <strong>\"Opslaan\"</strong>"
+      },
+      "phone_change_title": "Het wijzigen van uw telefoonnummer is onderworpen aan goedkeuring en verificatie door het mPay-netwerk",
+      "phone_change_body": "Bel de mPay-hotline of stuur een e-mail naar support@mpaynetwork.com.",
+      "security_heading": "Initiële Beveiligingsinstellingen",
+      "security_intro": "Tijdens het instellen van uw account raden we ten zeerste aan om deze beveiligingsfuncties te configureren:",
+      "security_list": {
+        "biometric": "<strong>Biometrische Authenticatie:</strong> Schakel vingerafdruk of Face ID in voor snelle, veilige toegang",
+        "pin": "<strong>Transactie-PIN:</strong> Uw 6-cijferige PIN is vereist voor alle transacties — deel deze nooit met iemand"
+      },
+      "never_share_title": "Deel nooit uw PIN of OTP-codes",
+      "never_share_body": "mPay zal u nooit vragen om uw PIN of OTP via telefoon, e-mail of chat. Iedereen die hierom vraagt, probeert fraude te plegen. Meld verdachte activiteiten onmiddellijk via de app."
+    },
+    "faq": {
+      "heading": "Veelgestelde Vragen",
+      "q1": "Kan ik registreren met een telefoonnummer uit een ander land?",
+      "a1": "Ja, u kunt zich registreren met elke ondersteunde landcode. Sommige functies kunnen echter beperkt zijn op basis van uw registratieregio. Transactielimieten en beschikbare functies kunnen per land verschillen als gevolg van lokale regelgeving.",
+      "q2": "Hoe lang duurt identiteitsverificatie?",
+      "a2": "Tier 2 (Standaard) verificatie is geautomatiseerd en wordt doorgaans binnen 5 minuten voltooid. Tier 3 (Premium) verificatie kan een handmatige beoordeling vereisen en kan tot 48 kantooruren duren. U ontvangt een pushmelding wanneer de beoordeling is voltooid.",
+      "q3": "Wat gebeurt er als mijn verificatie wordt afgewezen?",
+      "a3": "Als uw verificatie wordt afgewezen, ontvangt u een melding met de specifieke reden (bijv. wazige foto, verlopen document, naam komt niet overeen). U kunt uw documenten opnieuw indienen via <strong>Instellingen → Account → Verificatie</strong>. Er is geen limiet aan het aantal pogingen, maar herhaaldelijke mislukkingen kunnen leiden tot een tijdelijke afkoelperiode.",
+      "q4": "Kan ik mijn weergavenaam na registratie wijzigen?",
+      "a4": "Ja, u kunt uw weergavenaam op elk gewenst moment wijzigen via <strong>Instellingen → Profiel → Profiel Bewerken</strong>. Houd er rekening mee dat als u Tier 2- of Tier 3-verificatie hebt voltooid, uw officiële naam in het dossier niet kan worden gewijzigd zonder herverificatie. Uw weergavenaam (getoond aan andere gebruikers) staat los van uw officiële naam.",
+      "q5": "Ik heb de OTP-code niet ontvangen. Wat moet ik doen?",
+      "a5": "Wacht ten minste 60 seconden en tik vervolgens op \"Code Opnieuw Verzenden\". Als u deze nog steeds niet ontvangt: (1) zorg ervoor dat uw telefoon signaal heeft, (2) controleer of uw nummer correct is, (3) controleer uw map met spam of geblokkeerde berichten, (4) probeer uw telefoon opnieuw op te starten. Als het probleem aanhoudt, bezoek dan onze <a onclick=\"load_page('consumer_troubleshooting')\" style=\"color: var(--color-primary); cursor: pointer; text-decoration: underline;\">pagina voor probleemoplossing</a>.",
+      "q6": "Zijn mijn persoonlijke gegevens veilig tijdens verificatie?",
+      "a6": "Absoluut. Alle documenten worden verzonden met behulp van end-to-end encryptie (AES-256). Onze KYC-verificatie wordt afgehandeld door een gecertificeerde partner die voldoet aan SOC 2 Type II. Onbewerkte documentafbeeldingen worden verwijderd nadat de verificatie is voltooid. Alleen het verificatieresultaat en een hash worden opgeslagen. Lees meer in ons <a onclick=\"load_page('privacy_policy')\" style=\"color: var(--color-primary); cursor: pointer; text-decoration: underline;\">Privacybeleid</a>."
+    },
+    "pagination": {
+      "previous": "Vorige",
+      "next": "Volgende",
+      "prev_title": "Aan de slag",
+      "next_title": "Betalingen Doen"
+    },
+    "toc": {
+      "title": "Op deze pagina",
+      "registration": "Registratie",
+      "phone_registration": "Registratie Telefoonnummer",
+      "supported_regions": "Ondersteunde Regio's",
+      "identity_verification": "Identiteitsverificatie",
+      "verification_tiers": "Verificatieniveaus",
+      "how_to_verify": "Hoe te Verifiëren",
+      "required_documents": "Vereiste Documenten",
+      "checking_status": "Status Controleren",
+      "profile_configuration": "Profielconfiguratie",
+      "profile_fields": "Profielvelden",
+      "editing_profile": "Uw Profiel Bewerken",
+      "security_setup": "Beveiligingsinstellingen",
+      "faq": "FAQ"
+    }
+  },
+  "making_payments": {
+    "breadcrumb": {
+      "docs": "Docs",
+      "consumer": "Consument",
+      "current": "Betalingen Doen"
+    },
+    "title": "Betalingen Doen",
+    "subtitle": "Leer hoe u snel en veilig betalingen kunt doen met de mPay Consumenten Portefeuille. Of u nu een QR-code scant, de uwe laat zien of tikt met NFC — betalen is nog nooit zo eenvoudig geweest.",
+    "method_cards": {
+      "qr": {
+        "title": "QR-code Betalingen",
+        "body": "Scan of toon een QR-code om direct betalingen te doen bij elke mPay-handelaar."
+      },
+      "nfc": {
+        "title": "NFC Tap-to-Pay",
+        "body": "Houd uw telefoon gewoon bij de terminal voor een contactloze betalingservaring."
+      }
+    },
+    "scan_qr": {
+      "heading": "QR-codes Scannen",
+      "intro": "De meest voorkomende manier om te betalen is door de QR-code van een handelaar te scannen. Dit proces duurt slechts enkele seconden en verwerkt uw betaling veilig via het mPay-netwerk.",
+      "how_to_title": "Hoe u Scant om te Betalen",
+      "steps": {
+        "1": {
+          "title": "Tik op \"Scan om te Betalen\"",
+          "body": "Tik vanaf het startscherm op het <strong>Scannen om te Betalen icoon</strong> in de sectie <b>Geld Verzenden</b>."
+        },
+        "2": {
+          "title": "Scan de QR-code van de Ontvanger",
+          "body": "Richt uw camera op de QR-code van de ontvanger. Eenmaal gescand, worden de gegevens van de ontvanger automatisch ingevuld in het Scan om te Betalen-formulier."
+        },
+        "3": {
+          "title": "Bedrag Invoeren en Bevestigen",
+          "body": "Voer het bedrag van de overboeking in, controleer de details en bevestig met uw PIN of biometrische authenticatie."
+        },
+        "4": {
+          "title": "Overboeking Voltooid",
+          "body": "U ziet een bevestigingsscherm met een transactie <b>referentienummer.</b> <p>De ontvanger wordt direct op de hoogte gesteld.</p>"
+        }
+      },
+      "visual_label": "Lijn de QR-code uit binnen het kader",
+      "tip_title": "Tip: Snelkoppeling voor Betalen",
+      "tip_body": "U kunt de QR-scanner ook rechtstreeks starten door dubbel op het mPay-icoon op uw startscherm te tikken, of door de snelkoppeling \"Scannen\" in de widget van het meldingenvenster te gebruiken."
+    },
+    "show_qr": {
+      "heading": "Uw QR-code Tonen",
+      "intro": "Sommige handelaren scannen liever uw QR-code met hun terminal of apparaat. In dit geval toont u gewoon uw persoonlijke betalings-QR-code zodat zij deze kunnen scannen.",
+      "how_to_title": "Hoe u uw QR-code Toont",
+      "steps": {
+        "1": {
+          "title": "Open uw Betalingscode",
+          "body": "Tik op <strong>\"Betalen\"</strong> op het startscherm en selecteer vervolgens <strong>\"Mijn QR-code Tonen\"</strong>. Uw persoonlijke betalings-QR-code wordt weergegeven."
+        },
+        "2": {
+          "title": "Aan de Handelaar Tonen",
+          "body": "Houd uw telefoon stil terwijl de QR-code zichtbaar is. De handelaar scant deze met zijn mPay-terminal of apparaatcamera."
+        },
+        "3": {
+          "title": "Bevestigen op uw Apparaat",
+          "body": "Nadat de handelaar heeft gescand en het bedrag heeft ingevoerd, ontvangt u een pushmelding. Bevestig het betalingsbedrag en authentiseer om te voltooien."
+        }
+      },
+      "visual_label": "Toon dit aan de handelaar",
+      "security_title": "Beveiligingsopmerking",
+      "security_body": "Uw betalings-QR-code wordt om de 60 seconden vernieuwd voor de veiligheid. Deel nooit een screenshot van uw QR-code. Toon deze alleen bij het verkooppunt wanneer u een betaling doet."
+    },
+    "nfc_tap": {
+      "heading": "NFC Tap-to-Pay",
+      "intro": "Als uw apparaat NFC ondersteunt en de handelaar een NFC-terminal heeft, kunt u betalen door simpelweg uw telefoon tegen hun betalingsapparaat te tikken — scannen is niet nodig.",
+      "how_to_title": "Hoe u NFC-betalingen Gebruikt",
+      "steps": {
+        "1": {
+          "title": "Schakel NFC in",
+          "body": "Zorg ervoor dat NFC is ingeschakeld in uw telefooninstellingen en in de mPay-app onder <strong>Instellingen → Betalingsmethoden → NFC-betalingen</strong>."
+        },
+        "2": {
+          "title": "Dichtbij Terminal Houden",
+          "body": "Wanneer de terminal van de handelaar het bedrag toont, houdt u de achterkant van uw telefoon (bij de NFC-antenne) binnen 4 cm van de betalingsterminal."
+        },
+        "3": {
+          "title": "Authentiseren",
+          "body": "Een trilling of toon bevestigt de verbinding. Authentiseer met biometrie of uw PIN. De betaling wordt in minder dan 2 seconden verwerkt."
+        },
+        "4": {
+          "title": "Betaling Voltooid",
+          "body": "U ziet een groen vinkje en ontvangt zowel een in-app melding als een optioneel SMS-bewijs."
+        }
+      },
+      "visual_phone": "Uw Telefoon",
+      "visual_terminal": "Betalingsterminal",
+      "antenna_title": "Locatie NFC-antenne",
+      "antenna_body": "De NFC-antenne bevindt zich meestal bovenaan in het midden van de achterkant van uw telefoon. Verwijder dikke hoesjes als u problemen heeft met verbinden."
+    },
+    "confirmation": {
+      "heading": "Betalingsbevestiging",
+      "intro": "Na elke succesvolle betaling ontvangt u direct een bevestiging met transactiegegevens. Dit dient als uw digitale bewijs.",
+      "receipt_title": "Wat is Inbegrepen in uw Bewijs",
+      "receipt_intro": "Elke betalingsbevestiging bevat de volgende details:",
+      "receipt": {
+        "success": "Betaling Succesvol",
+        "merchant": "Coffee House Downtown",
+        "transaction_id": "Transactie-ID",
+        "datetime": "Datum & Tijd",
+        "method": "Betalingsmethode",
+        "status": "Status",
+        "completed": "Voltooid",
+        "balance": "Portefeuillesaldo"
+      },
+      "share_title": "Bewijzen Delen & Exporteren",
+      "share_body": "Tik op de knop <strong>\"Delen\"</strong> op een bewijs om het te verzenden via e-mail, berichten-apps of op te slaan als PDF.",
+      "failed_title": "Mislukte of In Behandeling Zijnde Betalingen",
+      "failed_intro": "Als een betaling mislukt of in behandeling blijft, ziet u een ander statusscherm:",
+      "failed_list": {
+        "pending": "<strong>In behandeling:</strong> De betaling wordt verwerkt. Dit wordt meestal binnen 30 seconden opgelost.",
+        "failed": "<strong>Mislukt:</strong> De betaling kon niet worden voltooid. Controleer uw saldo en verbinding.",
+        "refunded": "<strong>Terugbetaald:</strong> De handelaar heeft een terugbetaling gestart. Het geld wordt binnen 1-3 werkdagen teruggestort."
+      }
+    },
+    "history": {
+      "heading": "Transactiegeschiedenis",
+      "intro": "Houd al uw eerdere betalingen op één plek bij. Uw transactiegeschiedenis houdt een volledig overzicht bij van elke betaling via de mPay Wallet.",
+      "access_title": "Toegang tot uw Geschiedenis",
+      "access_body": "Ga naar <strong>Home → Transacties</strong> of veeg omhoog op het startscherm.",
+      "sample_title": "Voorbeeld Transactiegeschiedenis",
+      "table": {
+        "date": "Datum",
+        "merchant": "Handelaar",
+        "method": "Methode",
+        "amount": "Bedrag",
+        "status": "Status",
+        "completed": "Voltooid",
+        "pending": "In behandeling"
+      },
+      "export_title": "Uw Gegevens Exporteren",
+      "export_body": "U kunt uw transactiegeschiedenis exporteren als CSV of PDF door op de knop <strong>\"Exporteren\"</strong> te tikken."
+    },
+    "overview": {
+      "heading": "Overzicht Betalingsstroom",
+      "intro": "Hier is een visuele walkthrough van het volledige betalingsproces van begin tot eind.",
+      "steps": {
+        "1": "Tik op \"Betalen\" op het startscherm",
+        "2": "Kies QR-scan of NFC-tik",
+        "3": "Scan de QR-code van de handelaar",
+        "4": "Controleer het betalingsbedrag",
+        "5": "Authentiseer met biometrie",
+        "6": "Betaling bevestigd!"
+      }
+    },
+    "faq": {
+      "heading": "Veelgestelde Vragen",
+      "q1": "Wat is het maximale bedrag dat ik per transactie kan betalen?",
+      "a1": "De standaard transactielimiet is $5.000 per betaling. Geverifieerde accounts (KYC-niveau 2) kunnen hogere limieten aanvragen. U kunt uw limieten beheren in <strong>Instellingen → Betalingslimieten</strong>.",
+      "q2": "Kan ik betalen zonder internetverbinding?",
+      "a2": "NFC-betalingen kunnen in offline modus werken voor kleine transacties (onder $50) indien geconfigureerd. QR-code betalingen vereisen altijd een internetverbinding.",
+      "q3": "Wat moet ik doen als de QR-scanner de code niet herkent?",
+      "a3": "Zorg voor voldoende verlichting en maak uw lens schoon. Als het mislukt, vraag dan om een nieuwe code of voer de handelaars-ID handmatig in.",
+      "q4": "Wordt NFC-betaling ondersteund op alle apparaten?",
+      "a4": "NFC-betalingen vereisen een apparaat met een NFC-chip. De meeste telefoons na 2018 en iPhones vanaf de 7 ondersteunen NFC.",
+      "q5": "Zijn er kosten verbonden aan het doen van betalingen?",
+      "a5": "De mPay Consumenten Portefeuille brengt geen kosten in rekening voor betalingen aan handelaren. De verwerker handelt de kosten af.",
+      "q6": "Kan ik een betaling annuleren nadat deze is verzonden?",
+      "a6": "Voltooide betalingen kunnen niet rechtstreeks worden geannuleerd. Neem contact op met de handelaar voor een terugbetaling of meld een geschil bij <b>Transacties</b>."
+    },
+    "pagination": {
+      "previous": "Vorige",
+      "next": "Volgende",
+      "prev_title": "Account Instellen",
+      "next_title": "Portefeuille Beheer"
+    },
+    "toc": {
+      "title": "Op deze pagina",
+      "scan_qr": "QR-codes Scannen",
+      "show_qr": "Uw QR-code Tonen",
+      "nfc_tap": "NFC Tap-to-Pay",
+      "confirmation": "Betalingsbevestiging",
+      "history": "Betalingsgeschiedenis",
+      "flow": "Overzicht Betalingsstroom",
+      "faq": "Veelgestelde vragen"
+    }
+  },
+  "wallet_management": {
+    "breadcrumb": {
+      "docs": "Docs",
+      "consumer": "Consument",
+      "current": "Portefeuille Beheer"
+    },
+    "title": "Portefeuille Beheer",
+    "subtitle": "Leer hoe u uw saldo controleert, geld toevoegt, geld opneemt en uw transactielimieten begrijpt.",
+    "overview": {
+      "title": "Uw mPay Portefeuille",
+      "body": "Uw mPay-portefeuille is een beveiligde digitale portefeuille die uw geld bewaart en u in staat stelt betalingen te doen, geld over te maken en uw financiën te beheren — allemaal vanaf uw smartphone."
+    },
+    "balance": {
+      "heading": "Uw Saldo Controleren",
+      "intro": "Uw portefeuillesaldo is altijd zichtbaar op het startscherm van de mPay-app. Hier is alles wat u moet weten over het bekijken en begrijpen van uw saldo.",
+      "demo": {
+        "label": "Beschikbaar Saldo",
+        "currency": "Antilliaanse Guldens (XCG)",
+        "topup": "Opwaarderen",
+        "withdraw": "Opnemen",
+        "history": "Geschiedenis"
+      },
+      "how_to_title": "Hoe u uw Saldo Bekijkt",
+      "steps": {
+        "1": {
+          "title": "Open de mPay-app",
+          "desc": "Start de mPay Consumenten-app op uw apparaat. Uw saldo verschijnt prominent op het startscherm."
+        },
+        "2": {
+          "title": "Bekijk Beschikbaar Saldo",
+          "desc": "Uw beschikbare saldo wordt bovenaan het scherm weergegeven. Dit is het bedrag dat u direct kunt uitgeven of overmaken."
+        },
+        "3": {
+          "title": "Zichtbaarheid van Saldo Omschakelen",
+          "desc": "Tik op het <strong>oog-icoon</strong> om uw saldo te verbergen of te tonen voor privacy wanneer u in het openbaar bent."
+        }
+      },
+      "callout": "<strong>In behandeling zijnde transacties</strong> kunnen uw beschikbare saldo tijdelijk verlagen. Bedragen in behandeling worden apart weergegeven onder uw hoofdsaldo."
+    },
+    "topup": {
+      "heading": "Opwaardeermethoden",
+      "intro": "Voeg geld toe aan uw mPay-portefeuille met een van de volgende methoden. Elke methode heeft verschillende verwerkingstijden en kosten.",
+      "methods": {
+        "bank": {
+          "title": "Bankoverschrijving",
+          "desc": "Maak geld over van lokale banken naar uw mPay-portefeuille via Instant Payment verwerking. Veilig en snel.",
+          "time": "Direct"
+        },
+        "wallet": {
+          "title": "Portefeuille naar Portefeuille",
+          "desc": "Laad direct uw portefeuille op door een andere mPay-klant te vragen u geld te sturen en hen contant te betalen.",
+          "time": "Direct"
+        },
+        "agent": {
+          "title": "Contant Agent",
+          "desc": "Bezoek een erkende mPay-handelaar bij u in de buurt om contant geld in uw portefeuille te storten. Toon uw mPay QR-code aan de handelaar.",
+          "time": "Direct"
+        }
+      }
+    },
+    "withdraw": {
+      "heading": "Opnames",
+      "intro": "Neem geld op uit uw portefeuille naar uw gekoppelde bankrekening. mPay ondersteunt directe opnames naar grote lokale banken.",
+      "callout": "<strong>Belangrijk:</strong> mPay houdt zich aan het beleid van de Centrale Bank van Curaçao. Zorg ervoor dat de bankrekeninggegevens nauwkeurig en correct zijn vóór de transactie om vertragingen te voorkomen."
+    },
+    "limits": {
+      "heading": "Transactielimieten",
+      "intro1": "mPay handhaaft transactielimieten om uw account te beschermen. Uw limieten hangen af van vele factoren, zoals het type klant (Consument of Handelaar), en worden berekend op basis van dagelijkse, maandelijkse en jaarlijkse accumulatie.",
+      "intro2": "Hier is een voorbeeldtabel met limieten (deze worden beheerd door het mPay-netwerk)",
+      "table": {
+        "type": "Transactietype",
+        "consumer": "Consument",
+        "merchant": "Handelaar",
+        "cashier": "Kassier",
+        "scan_pay": "Scannen om te Betalen",
+        "pay_bills": "Facturen Betalen",
+        "pay_email": "Betalen via E-mail",
+        "pay_mobile": "Betalen via Mobiel",
+        "transfer_bank": "Overboeken naar Bank",
+        "managed_by": "Beheerd door<br>Handelaarseigenaar"
+      },
+      "how_to_increase": "Hoe u uw Limieten Kunt Verhogen",
+      "callout_view": "<strong>Bekijk uw huidige limieten:</strong> Ga naar <strong>Profielinstellingen → Portefeuillelimieten</strong> om uw huidige limiet, gebruik en resterende limieten voor de dag/maand te zien.",
+      "callout_increase": "<strong>Uw limiet verhogen?</strong> Neem contact op met mPay Support voor dit verzoek; dit is onderworpen aan beoordeling en goedkeuring."
+    },
+    "faq": {
+      "heading": "Veelgestelde Vragen",
+      "q1": "Hoe lang duurt het voordat mijn opwaardering verschijnt?",
+      "a1": "Kaartopwaarderingen verschijnen direct. Bankoverschrijvingen duren doorgaans 1-2 werkdagen, afhankelijk van uw bank. Opwaarderingen via contant-agenten zijn ook direct zodra ze door de agent zijn bevestigd. U ontvangt een pushmelding zodra het geld is bijgeschreven.",
+      "q2": "Kan ik geld opnemen naar de bankrekening van iemand anders?",
+      "a2": "Nee. Om beveiligingsredenen kunnen opnames alleen worden gedaan naar bankrekeningen die op dezelfde naam staan geregistreerd als uw mPay-account. Dit is een wettelijke vereiste om fraude en witwassen te voorkomen. Als u geld naar iemand anders moet sturen, gebruik dan de functie <strong>P2P Overboeking</strong>.",
+      "q3": "Wat gebeurt er als ik mijn transactielimiet overschrijd?",
+      "a3": "De transactie wordt geweigerd en u ziet een foutmelding waarin wordt uitgelegd dat u uw limiet heeft bereikt. U kunt wachten tot de limiet wordt gereset (dagelijkse limieten worden om middernacht UTC gereset, maandelijkse limieten op de 1e van elke maand) of uw verificatieniveau verhogen voor hogere limieten.",
+      "q4": "Zijn er kosten verbonden aan het aanhouden van een portefeuillesaldo?",
+      "a4": "Nee. Er zijn geen maandelijkse kosten, administratiekosten of inactiviteitskosten voor uw mPay-portefeuille. Uw saldo blijft van u. De enige kosten die van toepassing kunnen zijn, zijn voor bepaalde opwaardeermethoden (creditcard) en spoedopnames.",
+      "q5": "Kan ik terugkerende/automatische opwaarderingen instellen?",
+      "a5": "Ja! Ga naar <strong>Instellingen → Automatisch Opwaarderen</strong> om automatische saldo-aanvulling te configureren. U kunt een drempelbedrag voor het minimale saldo en een opwaardeerbedrag instellen. Wanneer uw saldo onder de drempel zakt, zal mPay automatisch opwaarderen vanaf uw voorkeursbron.",
+      "q6": "Wat gebeurt er met mijn saldo als ik mijn telefoon verlies?",
+      "a6": "Uw saldo is veilig — het wordt veilig opgeslagen op mPay-servers, niet op uw apparaat. Als u uw telefoon verliest, neem dan onmiddellijk contact op met mPay-ondersteuning om uw account te bevriezen. Wanneer u een nieuw apparaat heeft, logt u in met uw gegevens en wordt uw volledige saldo hersteld. Schakel wissen op afstand in op uw telefoon als extra voorzorgsmaatregel."
+    },
+    "pagination": {
+      "prev": "Vorige",
+      "prev_title": "Betalingen Doen",
+      "next": "Volgende",
+      "next_title": "P2P Overboekingen"
+    },
+    "toc": {
+      "title": "Op deze pagina",
+      "balance": "Uw Saldo Controleren",
+      "topup": "Opwaardeermethoden",
+      "withdraw": "Opnames",
+      "limits": "Transactielimieten",
+      "faq": "Veelgestelde vragen"
+    }
+  },
+  "p2p_transfers": {
+    "breadcrumb": {
+      "docs": "Docs",
+      "consumer": "Consument",
+      "current": "P2P Overboekingen"
+    },
+    "title": "Geld Verzenden en Ontvangen",
+    "subtitle": "Stuur, ontvang en vraag direct geld aan bij iedereen in het <b>mPay</b>-netwerk. Geld verzenden en ontvangen is snel, veilig en kosteloos voor standaardtransacties.",
+    "illustration": {
+      "sender": "Verzender",
+      "receiver": "Ontvanger"
+    },
+    "methods_grid": {
+      "send": {
+        "title": "Geld Verzenden",
+        "desc": "Transfer fondsen direct naar elke mPay-gebruiker, snel en beveiligd."
+      },
+      "receive": {
+        "title": "Geld Ontvangen",
+        "desc": "Accepteer overboekingen via QR-code, e-mail of mobiel nummer."
+      },
+      "request": {
+        "title": "Betalingsverzoek",
+        "desc": "Stuur betalingsverzoeken naar andere gebruikers door een QR-code te genereren."
+      }
+    },
+    "send": {
+      "heading": "Geld Verzenden",
+      "intro_title": "Snelle & Veilige Overboekingen",
+      "intro_body": "Stuur binnen enkele seconden geld naar iedereen op het <b>mPay-netwerk</b>. U kunt verzenden via gebruikersnaam, telefoonnummer of QR-code — wat voor u het handigst is."
+    },
+    "send_email_mobile": {
+      "title": "Verzenden via E-mail of Mobiel Nummer",
+      "intro": "De nieuwste manier om geld te verzenden is door de ontvanger te zoeken met hun mPay <b>e-mail</b> of <b>mobiel nummer</b>.",
+      "steps": {
+        "1": {
+          "title": "Start de \"Betalen via E-mail of Betalen via Mobiel\"",
+          "body": "Tik vanaf het startscherm op het icoon <strong>\"Betalen via E-mail\" </strong> <span>of \"<b>Betalen via Mobiel\"</b></span>."
+        },
+        "2": {
+          "title": "Vind de Ontvanger",
+          "body": "Voer het mPay <b>e-mailadres</b> of <b>mobiele nummer</b> van de ontvanger in het zoekveld in. De app toont overeenkomende gebruikers in real-time. U kunt ook kiezen uit uw lijst met <strong>Recente Contacten</strong> of <strong>Favorieten</strong>."
+        },
+        "3": {
+          "title": "Voer het Bedrag in",
+          "body": "Typ het bedrag dat u wilt verzenden. De app toont het huidige saldo van uw portefeuille. U kunt optioneel een notitie of memo toevoegen in het veld <b>Omschrijving</b> (bijv. <code>Diner gedeeld</code>)."
+        },
+        "4": {
+          "title": "Controleren en Bevestigen",
+          "body": "Controleer de details van de overboeking, inclusief ontvanger, bedrag en eventuele kosten. Tik op <strong>Bevestigen & Verzenden</strong> and authentiseer met uw <b>PIN</b> of <b>biometrie</b>."
+        },
+        "5": {
+          "title": "Overboeking Voltooid",
+          "body": "U ziet een bevestigingsscherm met een transactiereferentienummer. De ontvanger wordt direct op de hoogte gesteld."
+        }
+      }
+    },
+    "send_gallery": {
+      "title": "Verzenden via Scan uit Galerij",
+      "intro": "Een handige manier om geld te verzenden met behulp van een <b>opgeslagen</b> <span>QR-code in de galerij van uw telefoon</span>",
+      "steps": {
+        "1": {
+          "title": "Start de \"Scannen uit Galerij\"",
+          "body": "Tik vanaf het startscherm op het icoon <b>Scannen uit Galerij</b>."
+        },
+        "2": {
+          "title": "Upload de QR-code uit uw galerij",
+          "body": "De verzender kan de QR-code van de ontvanger uploaden vanuit de galerij van de mobiele telefoon om de transactie te starten."
+        },
+        "3": {
+          "title": "Voer het Bedrag in",
+          "body": "Typ het bedrag dat u wilt verzenden. De app toont het huidige saldo van uw portefeuille. U kunt optioneel een notitie of memo toevoegen in het veld <b>Omschrijving</b> (bijv. <code>Betaling voor kleding</code>)."
+        },
+        "4": {
+          "title": "Controleren en Bevestigen",
+          "body": "Controleer de details van de overboeking, inclusief ontvanger, bedrag en eventuele kosten. Tik op <strong>Bevestigen & Verzenden</strong> and authentiseer met uw <b>PIN</b> of <b>biometrie</b>."
+        },
+        "5": {
+          "title": "Overboeking Voltooid",
+          "body": "U ziet een bevestigingsscherm met een transactiereferentienummer. De ontvanger wordt direct op de hoogte gesteld."
+        }
+      }
+    },
+    "send_scan_pay": {
+      "title": "Verzenden via Scan om te Betalen",
+      "intro": "<b>Scan om te Betalen</b> stelt gebruikers in staat een QR-code te scannen om snel geld te verzenden of betalingen te doen met hun portefeuille.",
+      "steps": {
+        "1": {
+          "title": "Tik op \"Scan om te Betalen\"",
+          "body": "Tik vanaf het startscherm op het <strong>Scannen om te Betalen icoon</strong> in de sectie <b>Geld Verzenden</b>."
+        },
+        "2": {
+          "title": "Scan de QR-code van de Ontvanger",
+          "body": "Richt uw camera op de QR-code van de ontvanger. Eenmaal gescand, worden de gegevens van de ontvanger automatisch ingevuld in het Scan om te Betalen-formulier."
+        },
+        "3": {
+          "title": "Bedrag Invoeren en Bevestigen",
+          "body": "Voer het bedrag van de overboeking in, controleer de details en bevestig met uw PIN of biometrische authenticatie."
+        },
+        "4": {
+          "title": "Overboeking Voltooid",
+          "body": "U ziet een bevestigingsscherm met een transactie <b>referentienummer.</b> <p>De ontvanger wordt direct op de hoogte gesteld.</p>"
+        }
+      }
+    },
+    "send_pay_qr": {
+      "title": "Verzenden via Betalen met QR",
+      "intro": "<b>Betalen met QR</b> stelt gebruikers in staat een QR-code te genereren die de ontvanger kan scannen om geld te ontvangen.",
+      "steps": {
+        "1": {
+          "title": "Tik op \"Betalen met QR\"",
+          "body": "Tik vanaf het startscherm op het <strong>Betalen met QR </strong> <span>icoon</span> in de sectie <b>Geld Verzenden </b> <span>.</span>"
+        },
+        "2": {
+          "title": "Voer QR-gegevens in",
+          "body": "Gebruikers kunnen het bedrag, het type gebruik (eenmalig of meervoudig) en de vervaldatum definiëren bij het genereren van een Betalen met QR-code."
+        },
+        "3": {
+          "title": "Controleren en Bevestigen",
+          "body": "Controleer de details en bevestig met uw <b>PIN</b> of <b>biometrische</b> authenticatie."
+        },
+        "4": {
+          "title": "Overboeking Voltooid",
+          "body": "U ziet een bevestigingsscherm met een transactie <b>referentienummer.</b> <p>De ontvanger wordt direct op de hoogte gesteld.</p>"
+        }
+      }
+    },
+    "limits": {
+      "title": "Transactielimieten",
+      "desc": "Transactielimieten zijn afhankelijk van wat er is ingesteld in de <b>Admin Console</b>, wat een <b>globale limiet</b> of een limiet op <b>gebruikersniveau</b> kan zijn.",
+      "callout": {
+        "title": "Belangrijk",
+        "body": "Gebruikerslimieten voor transacties worden gedefinieerd en beheerd door het mPay-netwerk en kunnen niet binnen de applicatie worden gewijzigd. De klant kan echter zijn <b>geaccumuleerde</b> limieten bekijken in <b>Profielinstellingen → Betalingslimieten</b>"
+      }
+    },
+    "receive": {
+      "heading": "Geld Ontvangen",
+      "intro_title": "Directe Inkomende Overboekingen",
+      "intro_body": "Wanneer iemand u geld stuurt, komt het direct in uw portefeuille aan. U ontvangt een pushmelding en het bedrag is onmiddellijk beschikbaar om uit te geven.",
+      "notifications": {
+        "title": "Meldingen van Overboekingen",
+        "intro": "Wanneer een overboeking of betaling naar uw portefeuille-account wordt verzonden, ontvangt u:",
+        "list": {
+          "push": "<strong>Pushmelding</strong> — Toont naam afzender, bedrag en memo",
+          "in_app": "<strong>In-app melding</strong> — Beschikbaar in het Meldingencentrum",
+          "email": "<strong>E-mailmelding</strong> — Indien ingeschakeld in uw meldingsinstellingen",
+          "sms": "<strong>SMS-alert</strong> — Transactiemelding naar uw geregistreerde mobiele nummer"
+        }
+      },
+      "share_qr": {
+        "title": "Deel uw Profiel-QR-code",
+        "intro": "Maak het anderen gemakkelijk om u geld te sturen door uw <b>profiel-QR</b>-code te delen:",
+        "steps": {
+          "1": {
+            "title": "Open uw QR-code",
+            "body": "Tik vanaf het startscherm op de <strong>Profiel-QR-code</strong> in de rechterbovenhoek van de pagina."
+          },
+          "2": {
+            "title": "Delen of Tonen",
+            "body": "Toon de QR-code op uw scherm zodat de verzender deze kan scannen, of tik op <strong>Delen</strong> om deze te verzenden via bericht, e-mail of sociale media."
+          }
+        },
+        "placeholder": "Persoonlijk QR-codescherm met bedragveld"
+      },
+      "fees_callout": {
+        "title": "Geen Kosten voor Ontvangen",
+        "body": "Het ontvangen van P2P-overboekingen op het mPay-netwerk is altijd gratis. Er zijn geen kosten verbonden aan inkomende standaardoverboekingen."
+      }
+    },
+    "request": {
+      "heading": "Geld Aanvragen",
+      "intro_title": "Betalingsverzoeken Gemakkelijk Gemaakt",
+      "intro_body": "Wilt u geld innen van een vriend of een rekening delen? Stuur direct een betalingsverzoek vanuit de app. De ontvanger krijgt een melding en kan met één tik betalen.",
+      "req_qr": {
+        "title": "Geld Aanvragen via QR",
+        "steps": {
+          "1": {
+            "title": "Open Aanvraagscherm",
+            "body": "Tik vanaf het startscherm op <strong>Aanvragen via QR</strong> <span> in de sectie <b>Geld Ontvangen</b>.</span>"
+          },
+          "2": {
+            "title": "Stel het Bedrag en de Details in",
+            "body": "Voer het totale bedrag in en voeg een omschrijving toe (bijv. <code>Diner bij La Piazza - 15 maart</code>)."
+          },
+          "3": {
+            "title": "Tik op Verzenden om QR te genereren",
+            "body": "Klik op de knop <b>Verzenden</b> <span> om een aangepaste QR-code te genereren.</span>"
+          },
+          "4": {
+            "title": "Deel de QR met de Verzender",
+            "body": "Deel de <b>gegenereerde QR-code</b> <span> met de <b>Verzender</b>.</span> <p>De verzender stuurt dan geld met deze QR via <b>Scan om te Betalen</b>.</p>"
+          }
+        }
+      },
+      "respond_qr": {
+        "title": "Reageren op een Aanvraag via QR",
+        "intro": "Wanneer iemand u een <b>Aanvraag via QR-code</b> stuurt, kunt u als <b>Verzender</b> het geld sturen of betalen via <b>Scan om te Betalen</b> of <b>Scannen uit Galerij.</b>",
+        "steps": {
+          "1": {
+            "title": "Beoordeel de Aanvraag",
+            "body": "Is de persoon die geld bij u aanvraagt iemand die u vertrouwt?"
+          },
+          "2": {
+            "title": "Geld Verzenden",
+            "body": "De verzender kan de <b>Aanvraag via QR</b> code betalen met <b>Scan om te Betalen</b> of <b>Scannen uit Galerij</b>."
+          },
+          "3": {
+            "title": "Verifiëren en Authentiseren",
+            "body": "Bevestig de transactie met uw <b>PIN</b> of <b>biometrische</b> authenticatie. Het geld wordt direct overgemaakt."
+          }
+        }
+      },
+      "tip_callout": {
+        "title": "Pro-tip voor Geld Verzenden",
+        "body": "Verifieer altijd de aanvrager voordat u een betaling doet, om potentiële fraude te voorkomen."
+      },
+      "fraud_callout": {
+        "title": "Fraudewaarschuwing",
+        "body": "Betaal nooit een verzoek van iemand die u niet kent. Als u een onverwacht betalingsverzoek ontvangt, verifieer dan de afzender voordat u betaalt. Meld verdachte verzoeken bij <strong>fraud@mpaynetwork.com</strong>."
+      }
+    },
+    "faq": {
+      "heading": "Veelgestelde Vragen",
+      "q1": "Zijn Geld Verzenden transacties gratis?",
+      "a1": "Ja, standaard P2P-overboekingen tussen mPay-gebruikers zijn volledig gratis. Er zijn geen kosten voor het verzenden of ontvangen van geld. Instant overboekingen naar externe bankrekeningen kunnen echter een kleine vergoeding met zich meebrengen (meestal 1-2%).",
+      "q2": "Hoe lang duurt een P2P-overboeking?",
+      "a2": "P2P-overboekingen tussen mPay-gebruikers zijn direct — het geld verschijnt binnen enkele seconden in de portefeuille van de ontvanger. In zeldzame gevallen kan de verwerking tot 30 seconden duren.",
+      "q3": "Kan ik een P2P-overboeking annuleren na verzending?",
+      "a3": "Zodra een P2P-overboeking is bevestigd en verzonden, kan deze niet meer ongedaan worden gemaakt. Als u geld naar de verkeerde persoon heeft gestuurd, kunt u via de app contact opnemen met de ontvanger om te vragen of zij het terugstorten. U kunt ook binnen 24 uur een geschil openen via <strong>Help → Een probleem melden</strong>.",
+      "q4": "Kan ik geld sturen naar iemand die geen mPay heeft?",
+      "a4": "U kunt niet-mPay gebruikers uitnodigen om overboekingen te ontvangen. Wanneer u geld stuurt naar een telefoonnummer dat niet geregistreerd is op mPay, ontvangt de ontvanger een SMS met een link om de app te downloaden en het geld te claimen. Niet-geclaimde overboekingen vervallen na 14 dagen en worden automatisch teruggestort.",
+      "q5": "Hoe verhoog ik mijn overboeklimieten?",
+      "a5": "Overboeklimieten zijn gekoppeld aan het verificatieniveau van uw account. Om uw limieten te verhogen: <p>1. Ga naar <strong>Instellingen → Account → Verificatie</strong>.<br>2. Voltooi de vereiste verificatiestappen voor het volgende niveau.<br>3. Limieten worden automatisch bijgewerkt zodra de verificatie is goedgekeurd (meestal binnen 24 uur).</p>",
+      "q6": "Wat gebeurt er als ik geld naar de verkeerde persoon stuur?",
+      "a6": "Als u per ongeluk geld naar de verkeerde ontvanger stuurt, moet u: <p>1. Contact opnemen met de ontvanger via de ingebouwde berichtenfunctie van de app om een terugbetaling aan te vragen.<br>2. Als de ontvanger niet reageert, dien dan binnen 24 uur een geschil in via <strong>Help → Een probleem melden → Verkeerde ontvanger</strong>.<br>3. Ons ondersteuningsteam zal de situatie bemiddelen. Houd er rekening mee dat we de terugvordering van gelden die naar de verkeerde persoon zijn gestuurd niet kunnen garanderen.</p> Controleer altijd de naam en profielfoto van de ontvanger voordat u een overboeking bevestigt.",
+      "q7": "Kan ik terugkerende P2P-overboekingen instellen?",
+      "a7": "Ja! U kunt terugkerende overboekingen instellen voor huurbetalingen, toelagen of regelmatige betalingen. Schakel na het invoeren van de overboekingsgegevens <strong>Maak Terugkerend</strong> in en kies uw frequentie (wekelijks, tweewekelijks of maandelijks). U kunt terugkerende overboekingen beheren of annuleren in <strong>Overboekingen → Gepland</strong>."
+    },
+    "pagination": {
+      "prev": "Vorige",
+      "prev_title": "Portefeuille Beheer",
+      "next": "Volgende",
+      "next_title": "Instellingen & Beveiliging"
+    },
+    "toc": {
+      "title": "Op deze pagina",
+      "sending": "Geld Verzenden",
+      "by_username": "Via gebruikersnaam/mobiel",
+      "via_qr": "Via QR-code",
+      "limits": "Overboeklimieten",
+      "receiving": "Geld Ontvangen",
+      "notifications": "Meldingen",
+      "share_qr": "QR-code delen",
+      "share_username": "Gebruikersnaam delen",
+      "requesting": "Geld Aanvragen",
+      "send_request": "Een verzoek sturen",
+      "manage_requests": "Verzoeken beheren",
+      "respond_request": "Reageren op verzoek",
+      "faq": "FAQ"
+    }
+  },
+  "settings": {
+    "breadcrumb": {
+      "docs": "Docs",
+      "consumer": "Consument",
+      "settings_security": "Instellingen & Beveiliging"
+    },
+    "title": "Instellingen & Beveiliging",
+    "subtitle": "Leer hoe u de instellingen van uw mPay Consumenten Portefeuille configureert, beveiligingsvoorkeuren beheert, biometrische authenticatie inschakelt en uw account beschermt met geavanceerde beveiligingsfuncties.",
+    "visual": {
+      "title": "Uw Beveiliging is Belangrijk",
+      "body": "mPay gebruikt encryptie van bankniveau en meerdere beveiligingslagen om uw portefeuille en transacties veilig te houden. Configureer deze instellingen voor maximale bescherming."
+    },
+    "pin": {
+      "heading": "PIN-beheer",
+      "intro": "Uw transactie-PIN is een 6-cijferige code die wordt gebruikt om betalingen en gevoelige accountbewerkingen te autoriseren. Deze staat los van de vergrendeling van uw apparaat en biedt een extra beveiligingslaag.",
+      "setting_heading": "Uw PIN Instellen",
+      "setting_intro": "Wanneer u uw mPay-portefeuille voor het eerst configureert, wordt u gevraagd een transactie-PIN aan te maken. Volg deze stappen:",
+      "steps": {
+        "1": {
+          "title": "Navigeer naar Beveiligingsinstellingen",
+          "desc": "Open het app-menu en tik op <strong>Profielinstellingen</strong> → <strong>Beveiliging</strong> → <strong>PIN Wijzigen</strong>."
+        },
+        "2": {
+          "title": "Voer een 6-cijferige PIN in",
+          "desc": "Kies een PIN die u kunt onthouden, maar die niet gemakkelijk te raden is. Vermijd opeenvolgende getallen zoals <code>123456</code> of herhalende cijfers zoals <code>111111</code>."
+        },
+        "3": {
+          "title": "Bevestig uw PIN",
+          "desc": "Voer uw PIN opnieuw in om te bevestigen. Het systeem zal controleren of beide invoerpogingen overeenkomen voordat deze worden opgeslagen."
+        },
+        "4": {
+          "title": "PIN Succesvol Opgeslagen",
+          "desc": "Uw PIN is nu actief. U gebruikt deze om transacties, overboekingen en accountwijzigingen goed te keuren."
+        }
+      },
+      "changing_heading": "Uw PIN Wijzigen",
+      "changing_intro": "Om uw bestaande PIN te wijzigen, moet u eerst uw huidige PIN verifiëren:",
+      "changing_steps": {
+        "1": {
+          "title": "Ga naar Instellingen → Beveiliging → PIN Wijzigen",
+          "desc": "Navigeer naar de sectie PIN-beheer in uw beveiligingsinstellingen."
+        },
+        "2": {
+          "title": "Voer Huidige PIN in",
+          "desc": "Verifieer uw identiteit door uw huidige 6-cijferige PIN in te voeren."
+        },
+        "3": {
+          "title": "Nieuwe PIN Invoeren & Bevestigen",
+          "desc": "Typ uw nieuwe PIN en bevestig deze. Uw nieuwe PIN wordt onmiddellijk van kracht."
+        }
+      },
+      "tips_title": "Veiligheidstips voor PIN",
+      "tips_body": "Deel uw PIN nooit met iemand, ook niet met de medewerkers van mPay-ondersteuning. mPay zal u nooit naar uw PIN vragen via telefoon, e-mail of SMS. Na 5 mislukte PIN-pogingen wordt uw account tijdelijk geblokkeerd voor 30 minuten.",
+      "forgot_title": "Uw PIN Vergeten?",
+      "forgot_body": "Als u uw transactie-PIN bent vergeten, tikt u op <strong>\"PIN vergeten\"</strong> op het PIN-invoerscherm. U moet uw identiteit verifiëren via uw geregistreerde e-mailadres of telefoonnummer om deze te resetten."
+    },
+    "biometric": {
+      "heading": "Biometrische Authenticatie",
+      "intro": "Schakel vingerafdruk- of Face ID-authenticatie in voor snelle en veilige toegang tot uw portefeuille. Biometrisch inloggen voegt gemak toe met behoud van sterke beveiliging.",
+      "methods": {
+        "fingerprint": {
+          "title": "Vingerafdruk",
+          "desc": "Gebruik uw geregistreerde vingerafdruk voor snelle toegang tot de portefeuille en goedkeuring van transacties.",
+          "badge": "Meest voorkomend"
+        },
+        "faceid": {
+          "title": "Face ID",
+          "desc": "Authentiseren met gezichtsherkenning voor een naadloze handsfree ervaring.",
+          "badge": "Aanbevolen"
+        }
+      },
+      "enabling_heading": "Biometrisch Inloggen Inschakelen",
+      "steps": {
+        "1": {
+          "title": "Beveiligingsinstellingen Openen",
+          "desc": "Ga naar <strong>Instellingen</strong> → <strong>Beveiliging</strong> → <strong>Biometrische Authenticatie</strong>."
+        },
+        "2": {
+          "title": "Biometrisch Inloggen Omschakelen",
+          "desc": "Zet de schakelaar voor biometrische authenticatie aan. Uw apparaat moet ten minste één geregistreerde vingerafdruk of Face ID hebben."
+        },
+        "3": {
+          "title": "Verifiëren met PIN",
+          "desc": "Voer uw transactie-PIN in om de wijziging te bevestigen. Dit zorgt ervoor dat alleen u biometrie kunt inschakelen."
+        },
+        "4": {
+          "title": "Uw Biometrie Testen",
+          "desc": "U wordt gevraagd uw vingerafdruk of gezicht te scannen om te controleren of het correct werkt."
+        }
+      },
+      "toggles": {
+        "access": "Biometrisch inloggen voor toegang tot portefeuille",
+        "transactions": "Biometrische goedkeuring voor transacties"
+      },
+      "requirements_title": "Apparaatvereisten",
+      "requirements_body": "Biometrische authenticatie vereist een compatibel apparaat met geregistreerde biometrie. Als uw apparaat geen biometrie ondersteunt, is deze optie niet beschikbaar. U kunt altijd terugvallen op PIN-authenticatie."
+    },
+    "notifications": {
+      "heading": "Meldingsinstellingen",
+      "intro": "Configureer hoe en wanneer mPay u waarschuwingen stuurt over transacties, beveiligingsgebeurtenissen en accountactiviteit. Door meldingen ingeschakeld te houden, kunt u uw account in real-time controleren.",
+      "channels_heading": "Beschikbare Meldingskanalen",
+      "channels": {
+        "push": {
+          "title": "Pushmeldingen",
+          "desc": "Real-time waarschuwingen die direct op uw apparaat worden afgeleverd. Aanbevolen voor transactie-alerts en beveiligingsmeldingen."
+        },
+        "email": {
+          "title": "E-mailmeldingen",
+          "desc": "Gedetailleerde meldingen verzonden naar uw geregistreerde e-mailadres. Inclusief transactiebewijzen en maandelijkse overzichten."
+        },
+        "sms": {
+          "title": "SMS-alerts",
+          "desc": "Kritieke waarschuwingen via tekstbericht. Gebruikt voor transacties met hoge waarde en beveiligingsgebeurtenissen wanneer push niet beschikbaar is."
+        }
+      },
+      "types_heading": "Configureerbare Beltoontypen",
+      "types": {
+        "transaction": "<strong>Transactie-alerts</strong> — Elke verzonden of ontvangen betaling",
+        "promotional": "<strong>Promotioneel</strong> — Nieuws, aanbiedingen en aankondigingen van functies",
+        "summary": "<strong>Wekelijks overzicht</strong> — Wekelijks overzicht van bestedingen en activiteit"
+      },
+      "pro_tip_title": "Pro-tip",
+      "pro_tip_body": "We raden aan om <strong>Transactie-alerts</strong> en <strong>Beveiligingsalerts</strong> te allen tijde ingeschakeld te houden. Hiermee kunt u ongeoorloofde activiteiten op uw account snel detecteren.",
+      "managing_heading": "Meldingen Beheren",
+      "managing_body": "Om uw meldingsvoorkeuren aan te passen, gaat u naar <strong>Instellingen</strong> → <strong>Meldingen</strong>. Gebruik de schakelaars om elk meldingstype per kanaal in of uit te schakelen. Wijzigingen worden onmiddellijk van kracht.",
+      "toggles": {
+        "transaction": "Transactie-alerts (Push)",
+        "security": "Beveiligingsalerts (Push + E-mail)",
+        "promotional": "Promotionele meldingen"
+      }
+    },
+    "privacy": {
+      "heading": "Privacyinstellingen",
+      "intro": "mPay geeft u volledige controle over uw persoonlijke gegevens en privacyvoorkeuren. Beheer hoe uw informatie wordt gebruikt, gedeeld en opgeslagen.",
+      "controls_heading": "Privacyregelaars",
+      "controls": {
+        "visibility": {
+          "title": "Profielzichtbaarheid",
+          "desc": "Bepaal wie uw weergavenaam en profielfoto kan zien bij het verzenden of ontvangen van betalingen."
+        },
+        "analytics": {
+          "title": "Analyse- & Gebruiksgegevens",
+          "desc": "Kies of u geanonimiseerde gebruiksgegevens wilt delen om de mPay-ervaring te helpen verbeteren."
+        },
+        "location": {
+          "title": "Locatiegegevens",
+          "desc": "Beheer toegang tot locatiegegevens. Wordt gebruikt voor fraudedetectie en functies voor handelaren in de buurt."
+        },
+        "contacts": {
+          "title": "Toegang tot Contacten",
+          "desc": "Sta mPay toe om toegang te krijgen tot uw contacten voor eenvoudige P2P-overboekingen. Volledig optioneel."
+        }
+      },
+      "data_heading": "Gegevensbeheer",
+      "data_intro": "U heeft het recht om op elk moment toegang te krijgen tot uw persoonlijke gegevens, deze te exporteren en te verwijderen:",
+      "data_options": {
+        "export": {
+          "title": "Gegevens Exporteren",
+          "desc": "Download een kopie van al uw persoonlijke gegevens en transactiegeschiedenis"
+        },
+        "activity": {
+          "title": "Activiteitenlogboek",
+          "desc": "Bekijk een volledig logboek van accountactiviteiten en toegangsgebeurtenissen"
+        },
+        "delete": {
+          "title": "Account Verwijderen",
+          "desc": "Verwijder permanent uw account en alle bijbehorende gegevens"
+        }
+      },
+      "deletion_title": "Account Verwijderen",
+      "deletion_body": "Het verwijderen van een account is permanent en kan niet ongedaan worden gemaakt. Zorg er voor het verwijderen voor dat uw portefeuillesaldo nul is en alle openstaande transacties zijn voltooid. Wettelijke vereisten kunnen ons verplichten om bepaalde transactiegegevens tot 7 jaar te bewaren.",
+      "policy_heading": "Privacybeleid",
+      "policy_body": "Voor volledige details over hoe mPay uw gegevens verzamelt, gebruikt en beschermt, raadpleegt u ons <a onclick=\"load_page('privacy_policy')\" tabindex=\"0\" style=\"color: var(--color-primary, #2563eb); cursor: pointer; text-decoration: underline;\">Privacybeleid</a>."
+    },
+    "faq": {
+      "heading": "Veelgestelde Vragen",
+      "questions": {
+        "1": {
+          "q": "Wat gebeurt er als ik mijn transactie-PIN ben vergeten?",
+          "a": "Tik op \"PIN vergeten\" op het PIN-invoerscherm. U moet uw identiteit verifiëren via uw geregistreerde e-mailadres of telefoonnummer. Er wordt een link voor het resetten van de PIN naar u verzonden. Na verificatie kunt u een nieuwe 6-cijferige PIN instellen. Uw account kan tijdens het resetproces tijdelijk worden beperkt uit veiligheidsoverwegingen."
+        },
+        "2": {
+          "q": "Kan ik zowel vingerafdruk als Face ID gebruiken?",
+          "a": "U kunt alleen de biometrische methode gebruiken die door uw apparaat wordt ondersteund. De meeste apparaten ondersteunen ofwel vingerafdruk of Face ID, niet beide tegelijkertijd. Als uw apparaat beide ondersteunt, kunt u in de beveiligingsinstellingen kiezen welke u als primaire biometrische methode wilt gebruiken."
+        },
+        "3": {
+          "q": "Hoe kan ik mijn account herstellen als ik mijn 2FA-apparaat verlies?",
+          "a": "Gebruik een van uw back-upcodes om in te loggen en 2FA uit te schakelen. Als u geen back-upcodes heeft, neem dan contact op met de mPay-ondersteuning met uw geregistreerde e-mailadres en een door de overheid uitgegeven identiteitsbewijs voor identiteitsverificatie. Het herstelproces duurt om veiligheidsredenen doorgaans 24-48 uur."
+        },
+        "4": {
+          "q": "Waarom ontvang ik geen pushmeldingen?",
+          "a": "Controleer eerst of meldingen zijn ingeschakeld in zowel de mPay-app-instellingen als de systeeminstellingen van uw apparaat. Zorg er op Android voor dat de app niet wordt beperkt door batterijoptimalisatie. Controleer op iOS de instellingen van het Berichtencentrum. Als meldingen nog steeds niet werken, probeer dan uit en weer in te loggen, of de app opnieuw te installeren."
+        },
+        "5": {
+          "q": "Kan ik mijn transactiegeschiedenis downloaden?",
+          "a": "Ja! Ga naar <strong>Instellingen → Privacy → Gegevens Exporteren</strong> om een volledige kopie van uw transactiegeschiedenis te downloaden. U kunt exporteren in CSV- of PDF-formaat. De export wordt verzonden naar uw geregistreerde e-mailadres en komt meestal binnen enkele minuten aan."
+        },
+        "6": {
+          "q": "Wordt mijn PIN opgeslagen op mPay-servers?",
+          "a": "Nee. Uw PIN wordt nooit in duidelijke tekst opgeslagen. mPay gebruikt sterke eenrichtings-hashing (bcrypt) om een gehashte versie van uw PIN op te slaan. Dit betekent dat zelfs medewerkers van mPay uw werkelijke PIN niet kunnen zien. Alle PIN-verificatie gebeurt veilig aan de serverzijde door hashes te vergelijken."
+        }
+      }
+    },
+    "pagination": {
+      "prev": "Vorige",
+      "prev_title": "P2P Overboekingen",
+      "next": "Volgende",
+      "next_title": "Probleemoplossing"
+    },
+    "toc": {
+      "title": "Op deze pagina",
+      "pin": "PIN-beheer",
+      "biometric": "Biometrische Authenticatie",
+      "2fa": "Twee-factor Authenticatie",
+      "notifications": "Meldingsinstellingen",
+      "privacy": "Privacyinstellingen",
+      "faq": "FAQ"
+    }
+  },
+  "troubleshooting": {
+    "breadcrumb": {
+      "docs": "Documentatie",
+      "consumer": "Consument",
+      "current": "Probleemoplossing"
+    },
+    "title": "Probleemoplossing",
+    "subtitle": "Vind oplossingen voor veelvoorkomende problemen, begrijp foutcodes en leer hoe u problemen met uw mPay Consumenten Portefeuille kunt oplossen.",
+    "search_placeholder": "Zoek problemen, foutcodes en FAQ's...",
+    "diagnostic": {
+      "title": "Snelle Diagnostische Tool",
+      "intro": "Voer een snelle controle uit om potentiële problemen met uw portefeuille-instellingen te identificeren. Deze diagnose verifieert veelvoorkomende configuratiepunten.",
+      "check_internet": "Internetverbinding",
+      "check_version": "App-versie up-to-date",
+      "check_permissions": "Vereiste machtigingen verleend",
+      "check_nfc": "NFC-hardware beschikbaar",
+      "check_storage": "Voldoende opslagruimte",
+      "btn": "Diagnose Uitvoeren",
+      "running": "Bezig met uitvoeren..."
+    },
+    "common_issues": {
+      "title": "Veelvoorkomende Problemen",
+      "desc": "Hieronder vindt u de meest voorkomende problemen en hun stapsgewijze oplossingen.",
+      "issue1": {
+        "title": "Kan geen Verbinding maken met Server",
+        "summary": "App toont \"Verbindingsfout\" of het laden duurt te lang.",
+        "causes": "Mogelijke Oorzaken",
+        "cause1": "Onstabiele internetverbinding (Wi-Fi of mobiele data)",
+        "cause2": "mPay Netwerkservers kunnen in onderhoud zijn",
+        "cause3": "VPN- of proxy-interferentie",
+        "cause4": "Verouderde app-versie",
+        "solution": "Oplossing",
+        "step1": "Controleer uw internetverbinding door een webpagina in uw browser te openen.",
+        "step2": "Schakel de vliegtuigmodus in en uit en probeer het opnieuw.",
+        "step3": "Schakel eventuele VPN- of proxydiensten tijdelijk uit.",
+        "step4": "Update de mPay Consumenten Portefeuille app vanuit uw app store.",
+        "step5": "Als het probleem aanhoudt, controleer dan de <a href=\"#\" style=\"color:#2563eb;\">mPay Statuspagina</a> voor lopende incidenten.",
+        "callout": "Serveronderhoud duurt doorgaans 15-30 minuten en wordt gepland tijdens daluren (02:00 — 04:00 lokale tijd)."
+      },
+      "issue2": {
+        "title": "QR-code Scant Niet",
+        "summary": "Camera kan QR-codes van handelaren niet detecteren of lezen.",
+        "causes": "Mogelijke Oorzaken",
+        "cause1": "Cameratoestemming niet verleend aan de app",
+        "cause2": "Slechte lichtomstandigheden",
+        "cause3": "Beschadigde of wazige QR-code",
+        "cause4": "Cameralens is vuil of geblokkeerd",
+        "solution": "Oplossing",
+        "step1": "Ga naar <strong>Instellingen → App-machtigingen</strong> en zorg ervoor dat cameratoegang is ingeschakeld voor mPay.",
+        "step2": "Reinig uw cameralens met een zachte doek.",
+        "step3": "Zorg voor voldoende verlichting — gebruik de zaklantaarnschakelaar in de scannerweergave.",
+        "step4": "Houd uw telefoon stil, ongeveer 15-30 cm van de QR-code.",
+        "step5": "Als de QR-code op een scherm staat, verminder dan de schittering door de hoek aan te passen.",
+        "callout": "Als de QR-code beschadigd of corrupt lijkt, vraag de handelaar dan om een nieuwe te genereren."
+      },
+      "issue3": {
+        "title": "NFC-betaling Mislukt",
+        "summary": "Tikken-om-te-betalen niet gedetecteerd of transactie wordt niet voltooid.",
+        "causes": "Mogelijke Oorzaken",
+        "cause1": "NFC is uitgeschakeld op uw apparaat",
+        "cause2": "Telefoonhoesje blokkeert de NFC-antenne",
+        "cause3": "Apparaat niet correct op de terminal geplaatst",
+        "cause4": "Onvoldoende portefeuillesaldo",
+        "solution": "Oplossing",
+        "step1": "Schakel NFC in bij de instellingen van uw telefoon: <span class=\"ctr-code\">Instellingen → Verbonden apparaten → NFC</span>",
+        "step2": "Verwijder dikke telefoonhoesjes of metalen accessoires die NFC kunnen blokkeren.",
+        "step3": "Houd de achterkant van uw telefoon 2-3 seconden plat tegen de terminal.",
+        "step4": "Zorg ervoor dat uw portefeuille voldoende saldo heeft voor de transactie.",
+        "callout": "De locatie van de NFC-antenne varieert per telefoonmodel. De meeste Android-telefoons hebben deze in het middenboven-gedeelte van de achterkant. iPhones gebruiken de bovenrand."
+      },
+      "issue4": {
+        "title": "Biometrisch Inloggen Werkt Niet",
+        "summary": "Vingerafdruk- of gezichtsherkenning slaagt er niet in te authenticeren.",
+        "causes": "Mogelijke Oorzaken",
+        "cause1": "Biometrische gegevens gewijzigd op het apparaat (nieuwe vingerafdruk toegevoegd)",
+        "cause2": "Biometrische hardwaresensor vuil of beschadigd",
+        "cause3": "Biometrische toestemming ingetrokken voor de app",
+        "solution": "Oplossing",
+        "step1": "Log in met uw PIN-code als back-up.",
+        "step2": "Ga naar <strong>mPay Instellingen → Beveiliging → Biometrisch Inloggen</strong> en schakel het opnieuw in.",
+        "step3": "Indien gevraagd, registreer uw biometrische gegevens opnieuw.",
+        "step4": "Reinig de vingerafdruksensor of zorg ervoor dat gezichtsherkenning een duidelijke zichtlijn heeft."
+      },
+      "issue5": {
+        "title": "P2P Overboeking Vastgelopen of In Behandeling",
+        "summary": "Geld verzonden maar ontvanger heeft het niet ontvangen.",
+        "causes": "Mogelijke Oorzaken",
+        "cause1": "Netwerkcongestie veroorzaakt vertragingen",
+        "cause2": "Account van de ontvanger kan beperkingen hebben",
+        "cause3": "Transactiebedrag overschrijdt dagelijkse limieten",
+        "cause4": "Compliance-beoordeling voor grote bedragen",
+        "solution": "Oplossing",
+        "step1": "Controleer de transactiestatus in <strong>Activiteit → Transactiegeschiedenis</strong>.",
+        "step2": "Als de status \"In verwerking\" is, wacht dan maximaal 30 minuten op voltooiing.",
+        "step3": "Als de status \"In afwachting van beoordeling\" is, wordt uw transactie gecontroleerd. U ontvangt een melding zodra dit is opgelost.",
+        "step4": "Indien langer dan 2 uur vastgelopen, neem contact op met ondersteuning met de Transactie-ID.",
+        "callout": "<strong>Verzend niet</strong> dezelfde overboeking opnieuw terwijl de originele nog in verwerking is. Dit kan leiden tot een dubbele afschrijving."
+      },
+      "issue6": {
+        "title": "Opwaarderen of Opname Mislukt",
+        "summary": "Kan geen geld toevoegen of opnemen uit de portefeuille.",
+        "causes": "Mogelijke Oorzaken",
+        "cause1": "Bankrekening of kaart niet geverifieerd",
+        "cause2": "Dagelijkse of maandelijkse limieten overschreden",
+        "cause3": "Bank weigert de transactie",
+        "cause4": "Accountverificatie onvolledig",
+        "solution": "Oplossing",
+        "step1": "Verifieer uw gekoppelde bankrekening/kaart in <strong>Instellingen → Betaalmethoden</strong>.",
+        "step2": "Controleer uw huidige limieten in <strong>Instellingen → Limieten</strong>.",
+        "step3": "Voltooi KYC-verificatie om hogere limieten te ontgrendelen.",
+        "step4": "Neem contact op met uw bank om er zeker van te zijn dat er geen beperkingen zijn voor online transacties."
+      }
+    },
+    "error_codes": {
+      "title": "Foutcodes Referentie",
+      "desc": "Als u een foutcode tegenkomt in de app, gebruik dan deze referentietabel om te begrijpen wat het betekent en hoe u het kunt oplossen.",
+      "filters": {
+        "all": "Alle",
+        "low": "Laag",
+        "medium": "Gemiddeld",
+        "high": "Hoog",
+        "critical": "Kritiek"
+      },
+      "table": {
+        "code": "Code",
+        "description": "Omschrijving",
+        "severity": "Ernst",
+        "resolution": "Oplossing"
+      },
+      "e1001": {
+        "desc": "Netwerkverbinding Time-out",
+        "res": "Controleer de internetverbinding en probeer het opnieuw. Schakel tussen Wi-Fi en mobiele data."
+      },
+      "e1002": {
+        "desc": "Authenticatie Mislukt",
+        "res": "Voer uw inloggegevens opnieuw in. Als het probleem aanhoudt, reset uw wachtwoord via e-mailherstel."
+      },
+      "e1003": {
+        "desc": "Sessie Verlopen",
+        "res": "Log opnieuw in. Dit is normaal na 30 minuten inactiviteit."
+      },
+      "e2001": {
+        "desc": "Onvoldoende Saldo",
+        "res": "Waardeer uw portefeuille op voordat u de transactie opnieuw probeert."
+      },
+      "e2002": {
+        "desc": "Transactielimiet Overschreden",
+        "res": "U heeft uw dagelijkse/maandelijkse limiet bereikt. Voltooi KYC voor hogere limieten of wacht op reset."
+      },
+      "e2003": {
+        "desc": "Betaling Geweigerd door Handelaar",
+        "res": "De terminal van de handelaar heeft de betaling geweigerd. Controleer het bedrag en probeer het opnieuw, of gebruik een andere betaalmethode."
+      },
+      "e2004": {
+        "desc": "Dubbele Transactie Gedetecteerd",
+        "res": "Het systeem heeft een mogelijke dubbele transactie gedetecteerd. Controleer uw transactiegeschiedenis voordat u het opnieuw probeert."
+      },
+      "e3001": {
+        "desc": "QR-code Ongeldig of Verlopen",
+        "res": "Vraag de handelaar om een nieuwe QR-code te genereren. QR-codes verlopen na 5 minuten."
+      },
+      "e3002": {
+        "desc": "NFC niet ondersteund",
+        "res": "Uw apparaat ondersteunt geen NFC. Gebruik QR-code scannen voor betalingen."
+      },
+      "e4001": {
+        "desc": "Account Opgeschort",
+        "res": "Uw account is tijdelijk opgeschort. Neem onmiddellijk contact op met de ondersteuning voor een oplossing."
+      },
+      "e4002": {
+        "desc": "KYC-verificatie Vereist",
+        "res": "Voltooi identiteitsverificatie via Instellingen → Account → Identiteit Verifiëren."
+      },
+      "e5001": {
+        "desc": "Opwaarderen Mislukt",
+        "res": "Controleer uw gekoppelde bank- of kaartgegevens. Neem contact op met uw bank als het probleem aanhoudt."
+      },
+      "e5002": {
+        "desc": "Vertraging bij Verwerking Opname",
+        "res": "Opnames kunnen 1-3 werkdagen duren. Geen actie vereist tenzij het langer dan 5 dagen duurt."
+      },
+      "e9999": {
+        "desc": "Interne Serverfout",
+        "res": "Er is een onverwachte fout opgetreden. Start de app opnieuw en probeer het opnieuw. Neem contact op met ondersteuning als het probleem aanhoudt."
+      },
+      "callout": "U kunt uw foutcode vinden door op de foutmelding in de app te tikken. De code verschijnt onderaan het foutvenster. Vermeld deze code wanneer u contact opneemt met de ondersteuning voor een snellere afhandeling."
+    },
+    "contact_support": {
+      "title": "Contact Ondersteuning",
+      "desc": "Als u uw probleem niet kunt oplossen met de bovenstaande gidsen, staat ons ondersteuningsteam klaar om te helpen.",
+      "ticket": {
+        "title": "Ondersteuningsticket",
+        "desc": "Dien een gedetailleerd ondersteuningsverzoek in en ontvang binnen 24 uur een reactie.",
+        "link": "Ticket Indienen"
+      },
+      "email": {
+        "title": "E-mail Ons",
+        "desc": "Stuur een e-mail naar ons ondersteuningsteam voor complexe problemen of accountvragen.",
+        "link": "support@mpaynetwork.com"
+      },
+      "chat": {
+        "title": "In-App Chat",
+        "desc": "Gebruik de ingebouwde chatfunctie voor real-time hulp tijdens kantooruren.",
+        "link": "Open in App"
+      },
+      "checklist_title": "Houd het volgende gereed voordat u contact opneemt met de ondersteuning:",
+      "check1": "Uw geregistreerde e-mailadres of telefoonnummer",
+      "check2": "Foutcode (indien van toepassing)",
+      "check3": "Transactie-ID (voor betalingsproblemen)",
+      "check4": "Apparaatmodel en OS-versie",
+      "check5": "App-versie (te vinden in Instellingen → Over)"
+    },
+    "faq": {
+      "title": "Veelgestelde Vragen",
+      "desc": "Snelle antwoorden op de meest voorkomende vragen over de Consumenten Portefeuille.",
+      "q1": "Hoe reset ik mijn portefeuille-PIN?",
+      "a1": "<p>Ga naar <strong>Instellingen → Beveiliging → PIN Wijzigen</strong>. U moet eerst uw identiteit verifiëren met uw geregistreerde e-mail of telefoonnummer. Voer uw huidige PIN in (of gebruik de optie \"PIN Vergeten\") en stel vervolgens een nieuwe 6-cijferige PIN in.</p><p>Als u uw PIN volledig bent vergeten, tikt u op \"PIN Vergeten\" op het inlogscherm en volgt u de herstelstappen. U ontvangt een verificatiecode via SMS of e-mail.</p>",
+      "q2": "Kan ik mPay Portefeuille op meerdere apparaten gebruiken?",
+      "a2": "<p>Om veiligheidsredenen kan uw mPay Consumenten Portefeuille slechts op één apparaat tegelijk actief zijn. Als u inlogt op een nieuw apparaat, wordt uw vorige sessie automatisch beëindigd.</p><p>Om van apparaat te wisselen, installeert u de app op uw nieuwe apparaat, logt u in met uw gegevens en verifieert u uw identiteit. Al uw gegevens worden automatisch gesynchroniseerd.</p>",
+      "q3": "Wat zijn de dagelijkse transactielimieten?",
+      "a3": "<p>Transactielimieten hangen af van uw verificatieniveau:</p><ul style=\"padding-left:20px;margin:8px 0;\"><li><strong>Basis (niet geverifieerd):</strong> $100/dag, $500/maand</li><li><strong>Geverifieerd (KYC voltooid):</strong> $5.000/dag, $25.000/maand</li><li><strong>Premium:</strong> $25.000/dag, $100.000/maand</li></ul><p>U kunt uw huidige limieten en verificatieniveau controleren in <strong>Instellingen → Account → Limieten</strong>.</p>",
+      "q4": "Hoe lang duurt het verwerken van terugbetalingen?",
+      "a4": "<p>Terugbetalingen die door handelaren zijn gestart, verschijnen doorgaans binnen 1-3 werkdagen in uw portefeuille. U ontvangt een pushmelding wanneer de terugbetaling is bijgeschreven. Houd voor terugbetalingen naar uw gekoppelde bankrekening rekening met 3-5 extra werkdagen.</p><p>U kunt de status van terugbetalingen volgen in <strong>Activiteit → Transactiegeschiedenis</strong> — terugbetaalde transacties zijn gemarkeerd met een groen \"Terugbetaald\" label.</p>",
+      "q5": "Waarom staat mijn account op \"In Behandeling\"?",
+      "a5": "<p>Accountbeoordelingen worden automatisch geactiveerd door ons beveiligingssysteem wanneer ongebruikelijke activiteit wordt gedetecteerd. Dit kan gebeuren bij:</p><ul style=\"padding-left:20px;margin:8px 0;\"><li>Meerdere mislukte inlogpogingen</li><li>Grote of ongebruikelijke transactiepatronen</li><li>Inloggen vanaf een nieuwe locatie of apparaat</li><li>Onvolledige KYC-verificatie</li></ul><p>Beoordelingen worden doorgaans binnen 24-48 uur voltooid. Tijdens de beoordeling kunt u nog steeds uw saldo en geschiedenis bekijken, maar kunnen transacties tijdelijk beperkt zijn. Neem contact op met ondersteuning als de beoordeling langer duurt dan verwacht.</p>",
+      "q6": "Hoe verwijder ik mijn account permanent?",
+      "a6": "<p>Om uw account te verwijderen, gaat u naar <strong>Instellingen → Account → Account Verwijderen</strong>. Voor verwijdering moet u:</p><ul style=\"padding-left:20px;margin:8px 0;\"><li>Al het resterende saldo opnemen naar uw bankrekening</li><li>Zorgen dat er geen transacties in behandeling zijn</li><li>Uw identiteit bevestigen via e-mail/telefoonverificatie</li></ul><p>Accountverwijdering is permanent en kan niet ongedaan worden gemaakt. Uw transactiegeschiedenis wordt 7 jaar bewaard zoals vereist door financiële regelgeving, maar uw persoonlijke profiel wordt geanonimiseerd.</p>"
+    },
+    "pagination": {
+      "prev": "Vorige",
+      "prev_title": "Instellingen & Beveiliging",
+      "next": "Terug naar Overzicht",
+      "next_title": "Consumentendoc Home"
+    },
+    "toc": {
+      "title": "Op deze pagina",
+      "issues": "Veelvoorkomende Problemen",
+      "errors": "Foutcodes Referentie",
+      "support": "Contact Ondersteuning",
+      "faq": "Veelgestelde Vragen"
+    }
+  },
+  "merchant_home": {
+    "version_banner": {
+      "text": "U bekijkt de documentatie voor <strong>MPay Merchant Wallet v2.4</strong>. Op zoek naar een andere versie?",
+      "changelog": "Bekijk wijzigingslogboek",
+      "badge": "Nieuwste"
+    },
+    "breadcrumb": {
+      "docs": "Docs",
+      "current": "Merchant Wallet"
+    },
+    "title": "Merchant Wallet Documentatie",
+    "subtitle": "Alles wat u nodig hebt om uw MPay Merchant Wallet in te stellen, te configureren en te beheren.",
+    "overview": {
+      "title": "Overzicht",
+      "p1": "De mPay Merchant Wallet is een krachtige oplossing voor het accepteren van mobiele betalingen, ontworpen voor bedrijven van elke omvang. Accepteer naadloos betalingen via QR-codes, NFC 'tap-to-pay' en directe overboekingen — allemaal vanaf uw smartphone.",
+      "p2": "Met de Merchant Wallet kunt u uw transacties beheren, gedetailleerde rapporten genereren, betalingsvoorkeuren configureren en uw klanten een snelle, veilige afrekenervaring bieden.",
+      "feature1": "Accepteer direct betalingen via QR-codes",
+      "feature2": "NFC 'tap-to-pay' contactloze betalingen",
+      "feature3": "Realtime monitoring van transacties",
+      "feature4": "Gedetailleerde verkooprapporten & analyses",
+      "feature5": "Ondersteuning voor meerdere valuta's",
+      "feature6": "Beveiliging & versleuteling op bankniveau",
+      "feature7": "Aanpasbaar bedrijfsprofiel",
+      "feature8": "Exporteer transacties (CSV, PDF)",
+      "info_callout": "<strong>Nieuw bij mPay?</strong> Begin met onze <a onclick=\"load_page('merchant_getting_started')\" tabindex=\"0\">Aan de slag-gids</a> om de app te downloaden en binnen enkele minuten uw eerste merchant-account in te stellen."
+    },
+    "quick_start": {
+      "title": "Aan de slag",
+      "subtitle": "Ga aan de slag in vier eenvoudige stappen:",
+      "step1": {
+        "title": "Downloaden & Installeren",
+        "desc": "Download de MPay Merchant Wallet via de App Store of Google Play."
+      },
+      "step2": {
+        "title": "Uw account aanmaken",
+        "desc": "Registreer met uw bedrijfsgegevens en voltooi het bedrijfsprofiel."
+      },
+      "step3": {
+        "title": "Voltooi het verificatieproces",
+        "desc": "Dien de relevante bedrijfsdocumenten in en wacht tot uw profiel is geverifieerd."
+      },
+      "step4": {
+        "title": "Begin met het accepteren van betalingen",
+        "desc": "U bent er klaar voor! Accepteer uw eerste betaling en beheer transacties moeiteloos."
+      }
+    },
+    "explore": {
+      "title": "Documentatie Verkennen",
+      "subtitle": "Duik in gedetailleerde handleidingen voor elke functie van de Merchant Wallet.",
+      "getting_started": {
+        "title": "Aan de slag",
+        "desc": "Download, installeer en stel de Merchant Wallet in. Perfect voor nieuwe gebruikers."
+      },
+      "account": {
+        "title": "Accountinstelling & Verificatie",
+        "desc": "Registreer uw bedrijf, voltooi de KYC-verificatie en stel uw merchant-profiel in."
+      },
+      "qr": {
+        "title": "Betalingen via QR-code",
+        "desc": "Genereer, toon en beheer QR-codes voor eenvoudige betalingen door klanten."
+      },
+      "nfc": {
+        "title": "NFC-betalingen",
+        "desc": "Schakel NFC 'tap-to-pay' in en configureer dit voor snelle contactloze transacties."
+      },
+      "transactions": {
+        "title": "Transactiebeheer",
+        "desc": "Bekijk, zoek, filter en exporteer uw betalingstransacties en rapporten."
+      },
+      "settings": {
+        "title": "Instellingen & Configuratie",
+        "desc": "Configureer meldingen, beveiligingsinstellingen, betalingsvoorkeuren en meer."
+      },
+      "troubleshooting": {
+        "title": "Probleemoplossing",
+        "desc": "Vind oplossingen voor veelvoorkomende problemen, foutcodes en neem contact op met de klantenservice."
+      }
+    },
+    "pagination": {
+      "next": "Volgende",
+      "next_title": "Aan de slag"
+    }
+  },
+  "changelog": {
+    "ui": {
+      "title": "Wijzigingslogboek & Release-opmerkingen",
+      "description": "Volg alle updates en verbeteringen aan MPay Network Wallet",
+      "filter_wallet": "Wallet",
+      "filter_all": "Alle Wallets",
+      "filter_merchant": "Merchant Wallet",
+      "filter_consumer": "Consumenten Wallet",
+      "filter_tags": "Tags",
+      "tag_new_feature": "Nieuwe functie",
+      "tag_bug_fix": "Foutoplossing",
+      "tag_improvement": "Verbetering",
+      "tag_breaking_change": "Ingrijpende verandering",
+      "tag_security": "Beveiliging",
+      "filters_active": "Filters actief",
+      "clear_all": "Alles wissen",
+      "showing_releases_html": "Toont <strong>{{count}} releases</strong>",
+      "showing_of_releases_html": "Toont <strong>{{count}}</strong> van <strong>{{total}} releases</strong>",
+      "empty_title": "Geen releases gevonden",
+      "empty_text": "Probeer uw filters aan te passen om meer resultaten te zien.",
+      "empty_reset": "Filters herstellen",
+      "back_home": "Terug naar Home",
+      "latest": "Nieuwste",
+      "both_wallets": "Beide Wallets",
+      "merchant": "Merchant",
+      "consumer": "Consument",
+      "scroll_top": "Naar boven scrollen"
+    },
+    "entries": {
+      "v2_3_0": [
+        "Biometrische authenticatie-ondersteuning voor NFC-betalingen op beide wallets",
+        "Meertalige ondersteuning: Spaans, Frans, Portugees en Arabisch",
+        "Vernieuwde transactiegeschiedenis met geavanceerde filtering en exportopties",
+        "Verbeterde onboarding-flow met interactieve tutorials",
+        "Toegankelijkheidsproblemen opgelost met schermlezer-navigatie in betalingsflows"
+      ],
+      "v2_2_1": [
+        "Time-out bij het genereren van QR-codes op oudere Android-apparaten opgelost",
+        "Onjuiste valutanotatie in transactiebewijzen gecorrigeerd",
+        "TLS-certificaatpinning bijgewerkt voor verbeterde API-beveiliging",
+        "Vertragingen in pushmeldingen voor betalingsbevestigingen gecorrigeerd"
+      ],
+      "v2_2_0": [
+        "P2P-overboekingen ondersteunen nu geplande en periodieke betalingen",
+        "Nieuwe opwaardeermethoden voor wallets: bankoverschrijving en debetkaart",
+        "Verbeterd betalingsbevestigingsscherm met merchant-gegevens en kaartlocatie",
+        "Transactiebewijzen delen via WhatsApp, sms en e-mail toegevoegd"
+      ],
+      "v2_1_2": [
+        "NFC-betalingslezer reageert weer na slaapstand",
+        "Berekeningsverschil in afwikkelingsrapport opgelost",
+        "Tijdzoneweergave in transactietijdstempels gecorrigeerd"
+      ],
+      "v2_1_0": [
+        "Dynamische QR-codes met aanpasbare betalingsbedragen en omschrijvingen",
+        "Realtime tracking van betalingsstatus met live meldingen",
+        "v1 API-endpoints verouderd — stap vóór 1 maart over op v2 API's",
+        "Minimale OS-vereisten bijgewerkt: iOS 15+ en Android 10+",
+        "Ondersteuning voor donkere modus in alle schermen"
+      ],
+      "v2_0_3": [
+        "Beveiligingslek in sessietoken-verversingsmechanisme gedicht",
+        "Wallet-saldo wordt nu direct bijgewerkt na voltooiing van P2P-overboeking",
+        "Verbeterde versleuteling voor opgeslagen betalingsgegevens"
+      ],
+      "v2_0_0": [
+        "Volledig nieuw UI-ontwerp met nieuwe koningsblauwe merkidentiteit",
+        "Ondersteuning voor NFC 'tap-to-pay' voor zowel merchant- als consumentenwallets",
+        "Nieuw merchant-dashboard met verkoopanalyses en inzichten",
+        "Gemigreerd naar nieuwe beveiligde infrastructuur voor betalingsverwerking",
+        "Legacy-integraties voor betalingsmethoden verwijderd (v1 kaartverwerking)",
+        "KYC-verificatie gestroomlijnd met scannen van documenten"
+      ],
+      "v1_8_0": [
+        "Batch-export van transacties in CSV-, PDF- en Excel-formaten",
+        "QR-codes scannen is 40% sneller dankzij nieuwe camera-engine",
+        "Aanpasbare meldingsvoorkeuren per transactietype"
+      ]
+    }
+  },
+  "search": {
+    "title": "Zoekresultaten",
+    "hero_title": "Documentatie Zoeken",
+    "input_placeholder": "Zoek documenten, blog, changelog...",
+    "btn_search": "Zoeken",
+    "recent_label": "Recente Zoekopdrachten",
+    "results_found": "<strong>{{count}}</strong> resultaten gevonden voor <span class=\"sr-query-text\">\"{{query}}\"</span>",
+    "results_none": "<strong>0</strong> resultaten gevonden voor <span class=\"sr-query-text\">\"{{query}}\"</span>",
+    "filters": {
+      "all": "Alle",
+      "merchant": "Handelaar Docs",
+      "consumer": "Consument Docs",
+      "blog": "Blog",
+      "changelog": "Changelog"
+    },
+    "no_results": {
+      "title": "Geen resultaten gevonden",
+      "text": "We konden geen overeenkomsten vinden voor uw zoekopdracht. Probeer uw zoekwoorden aan te passen of blader rechtstreeks door onze documentatie.",
+      "tips_title": "Zoektips:",
+      "tip_broader": "Probeer bredere of alternatieve zoekwoorden",
+      "tip_spelling": "Controleer uw spelling en probeer het opnieuw",
+      "tip_fewer": "Gebruik minder woorden om de zoekopdracht te verbreden",
+      "tip_related": "Probeer te zoeken naar een gerelateerd onderwerp"
+    },
+    "back_home": "Terug naar Home",
+    "quick_links": {
+      "feedback": "Feedback verzenden"
+    },
+    "meta": {
+      "read_time": "{{count}} min leestijd"
+    },
+    "results": {
+      "r1": {
+        "title": "Aan de slag met QR-code betalingen",
+        "excerpt": "Leer hoe u <mark>QR-code</mark> betalingen kunt instellen en accepteren in uw merchant wallet. Genereer dynamische <mark>QR-codes</mark> voor elk bedrag en begin direct met het accepteren van betalingen."
+      },
+      "r2": {
+        "title": "NFC Tap-to-Pay installatiehandleiding",
+        "excerpt": "Configureer <mark>NFC</mark> tap-to-pay functionaliteit voor contactloze <mark>betalingen</mark>. Stel uw apparaat in staat om betalingen te accepteren met een simpele tik."
+      },
+      "r3": {
+        "title": "Betalingen uitvoeren als consument",
+        "excerpt": "Scan <mark>QR-codes</mark> van verkopers of gebruik <mark>NFC</mark> om snel en veilig <mark>betalingen</mark> uit te voeren. Volg onze stap-voor-stap gids om uw eerste transactie te voltooien."
+      },
+      "r4": {
+        "title": "Transactiebeheer & Export",
+        "excerpt": "Bekijk, filter en exporteer uw <mark>betaling</mark> transactiegeschiedenis. Download rapporten in CSV- of PDF-formaat voor de boekhouding."
+      },
+      "r5": {
+        "title": "Methoden voor het opwaarderen en opnemen van wallets",
+        "excerpt": "Stort geld in uw wallet via bankoverschrijving, kaart of andere <mark>betaalmethoden</mark>. Neem uw saldo veilig op naar uw bankrekening."
+      },
+      "r6": {
+        "title": "MPay Network lanceert ondersteuning voor NFC-betalingen",
+        "excerpt": "We zijn verheugd aan te kondigen dat ondersteuning voor contactloze <mark>NFC-betalingen</mark> nu beschikbaar is voor alle merchants. Tap-to-pay is er."
+      },
+      "r7": {
+        "title": "P2P-overboekingen tussen gebruikers",
+        "excerpt": "Stuur direct geld naar vrienden en familie via hun telefoonnummer of wallet-ID. Geen kosten voor persoonlijke <mark>betalingen</mark>."
+      },
+      "r8": {
+        "title": "Versie 2.5.0 — Verbeteringen aan QR-codes",
+        "excerpt": "Dynamische <mark>QR-code</mark> generatie met aangepaste bedragen toegevoegd, <mark>QR-scansnelheid</mark> met 40% verbeterd en weergaveproblemen op oudere apparaten opgelost."
+      },
+      "r9": {
+        "title": "Accountinstelling & KYC-verificatie",
+        "excerpt": "Voltooi uw merchant-accountregistratie en KYC-verificatie om <mark>betalingen</mark> te accepteren. Upload vereiste documenten en verifieer uw bedrijf."
+      },
+      "r10": {
+        "title": "Problemen met betalingsfouten oplossen",
+        "excerpt": "Veelvoorkomende <mark>betaling</mark> foutcodes en hun oplossingen. Los problemen op met mislukte transacties, problemen met het scannen van <mark>QR-codes</mark> en <mark>NFC-verbindingsfouten</mark>."
+      },
+      "r11": {
+        "title": "Beste praktijken voor beveiliging bij digitale betalingen",
+        "excerpt": "Bescherm uw <mark>betaalgegevens</mark> met deze essentiële beveiligingstips. Schakel tweestapsverificatie in, gebruik sterke wachtwoorden en controleer transacties."
+      },
+      "r12": {
+        "title": "Consumenten-app beveiliging & privacy-instellingen",
+        "excerpt": "Configureer uw beveiligingsvoorkeuren, inclusief biometrisch inloggen, <mark>betaallimieten</mark>, transactiemeldingen en privacyinstellingen."
+      }
+    }
+  },
+  "landing": {
+    "title": "MPay Wallet Documentatie",
+    "nav": {
+      "merchant": "Handelaars Docs",
+      "consumer": "Consumenten Docs",
+      "blog": "Blog & Updates",
+      "feedback": "Feedback Verzenden",
+      "changelog": "Changelog & Release Notes",
+      "search": "Zoeken"
+    },
+    "search": {
+      "trigger_text": "Zoek docs...",
+      "kbd_hint": "Ctrl K",
+      "modal_placeholder": "Zoek in documentatie...",
+      "modal_empty": "Begin met typen om te zoeken...",
+      "esc_hint": "ESC"
+    },
+    "hero": {
+      "badge": "Documentatieportaal v2.0",
+      "title": "MPay Network Wallet Documentatie",
+      "subtitle": "Uw QR & NFC Wallet Oplossing — uitgebreide gidsen voor handelaars en consumenten om MPay Network in te stellen, te beheren en ermee te groeien.",
+      "tagline": "Alles wat u nodig heeft om betalingen te accepteren en te doen, op één plek.",
+      "cta_merchant": "Handelaars Wallet Docs",
+      "cta_consumer": "Consumenten Wallet Docs",
+      "phone_status": "MPay Wallet",
+      "amount_label": "Bedrag",
+      "scan_btn": "Scan om te Betalen"
+    },
+    "features": {
+      "label": "Functies",
+      "title": "Alles wat u Nodig Heeft voor Digitale Betalingen",
+      "desc": "MPay Network biedt een compleet ecosysteem voor QR- en NFC-betalingen. Ontdek de functies die naadloze transacties mogelijk maken.",
+      "qr_title": "QR-code Betalingen",
+      "qr_desc": "Genereer en scan QR-codes voor directe, contactloze transacties. Werkt offline en ondersteunt dynamische betalingsbedragen.",
+      "nfc_title": "NFC Tap-to-Pay",
+      "nfc_desc": "Tik gewoon op uw telefoon om betalingen te doen of te ontvangen. Snel, veilig en ondersteund door moderne apparaten.",
+      "merchant_tools_title": "Handelaars Tools",
+      "merchant_tools_desc": "Uitgebreid dashboard met analyses, transactiebeheer en zakelijke inzichten om uw bedrijf te laten groeien.",
+      "consumer_wallet_title": "Consumenten Wallet",
+      "consumer_wallet_desc": "Eenvoudig te gebruiken digitale portemonnee voor dagelijkse betalingen, P2P-overboekingen en saldobeheer. Betaal overal en altijd.",
+      "secure_title": "Veilig & Betrouwbaar",
+      "secure_desc": "Encryptie op bankniveau, multi-factor authenticatie en real-time fraude-detectie om uw geld veilig te houden.",
+      "multilingual_title": "Meertalige Ondersteuning",
+      "multilingual_desc": "Beschikbaar in het Engels, Spaans, Frans, Nederlands en Papiamentu. Bereik een breder publiek met gelokaliseerde ervaringen."
+    },
+    "quicknav": {
+      "label": "Snelle Navigatie",
+      "title": "Verken de Documentatie",
+      "desc": "Spring direct naar de sectie die u nodig heeft. Of u nu een handelaar of een consument bent, wij hebben u gedekt.",
+      "merchant_card_title": "Handelaars Wallet Documentatie",
+      "merchant_card_desc": "Configuratiegidsen, betalingsverwerking, QR & NFC integratie, transactiebeheer en probleemoplossing voor handelaars.",
+      "merchant_card_link": "Ontdek Handelaars Docs",
+      "consumer_card_title": "Consumenten Wallet Documentatie",
+      "consumer_card_desc": "Aan de slag, betalingen doen, uw portemonnee beheren, P2P-overboekingen en beveiligingsinstellingen voor consumenten.",
+      "consumer_card_link": "Ontdek Consumenten Docs",
+      "blog_desc": "Laatste nieuws, aankondigingen van functies en tips om het meeste uit MPay Network te halen.",
+      "blog_link": "Lees Blog",
+      "feedback": "Feedback Verzenden",
+      "feedback_desc": "Rapporteer bugs, vraag functies aan of deel uw gedachten om ons te helpen verbeteren.",
+      "feedback_link": "Geef Feedback",
+      "changelog_desc": "Volg alle updates, verbeteringen en oplossingen in elke versie van beide wallets.",
+      "changelog_link": "Bekijk Changelog"
+    },
+    "footer": {
+      "desc": "De complete QR & NFC digitale portemonnee-oplossing voor handelaars en consumenten. Snel, veilig en toegankelijk.",
+      "col_docs": "Documentatie",
+      "col_community": "Gemeenschap",
+      "col_legal": "Juridisch",
+      "link_privacy": "Privacybeleid",
+      "link_terms": "Servicevoorwaarden",
+      "link_contact": "Contact",
+      "copyright": "© 2026 MPay Network. Alle rechten voorbehouden."
+    }
+  },
+  "feedback": {
+    "breadcrumb": "Feedback",
+    "title": "Stuur ons feedback",
+    "description": "Wij waarderen uw feedback. Laat ons weten hoe wij mPay Network Wallet kunnen verbeteren.",
+    "type": {
+      "bug": "Bugrapport",
+      "feature": "Functieverzoek",
+      "general": "Algemene feedback"
+    },
+    "form": {
+      "category_label": "Categorie",
+      "category_placeholder": "Selecteer een categorie...",
+      "category_bug": "Bugrapport",
+      "category_feature": "Functieverzoek",
+      "category_general": "Algemene feedback",
+      "category_merchant": "Handelaarsportemonnee",
+      "category_consumer": "Consumentenportemonnee",
+      "name_label": "Naam",
+      "name_optional": "(optioneel)",
+      "name_placeholder": "Uw naam",
+      "email_label": "E-mailadres",
+      "email_optional": "(optioneel)",
+      "email_placeholder": "uw@email.com",
+      "email_hint": "We gebruiken dit alleen om contact met u op te nemen over uw feedback.",
+      "subject_label": "Onderwerp",
+      "subject_placeholder": "Korte beschrijving van uw feedback",
+      "message_label": "Bericht",
+      "message_placeholder": "Vertel ons meer over uw ervaring, suggestie of het probleem dat u bent tegengekomen...",
+      "rating_label": "Algemene beoordeling",
+      "rating_text_default": "Niet beoordeeld",
+      "submit_btn": "Feedback verzenden",
+      "submitting_text": "Bezig met verzenden..."
+    },
+    "info_callout": "Uw feedback helpt ons mPay Network Wallet voor iedereen te verbeteren. Alle inzendingen worden beoordeeld door ons team. Neem voor dringende zaken contact op met support@mpaynetwork.com.",
+    "success": {
+      "title": "Bedankt voor uw feedback!",
+      "description": "Uw bericht is ontvangen. Ons team zal het binnenkort beoordelen. Als u een e-mailadres heeft opgegeven, kunnen wij contact met u opnemen.",
+      "back_home": "Terug naar startpagina",
+      "submit_another": "Nog een verzenden"
+    }
+  },
+  "blog": {
+    "sidebar": {
+      "nav_title": "Navigatie",
+      "all_posts": "Alle berichten",
+      "filter_tags": "Filteren op tag",
+      "recent_posts": "Recente berichten",
+      "rss": "RSS-feed"
+    },
+    "hero": {
+      "title": "MPay Network Blog",
+      "description": "Laatste nieuws, updates en tips voor MPay Network Wallet"
+    },
+    "filters": {
+      "all": "Alle",
+      "news": "Nieuws",
+      "updates": "Updates",
+      "tutorials": "Tutorials",
+      "tips": "Tips",
+      "merchant": "Handelaar",
+      "consumer": "Consument",
+      "active_label": "Actieve filters:",
+      "clear_all": "Alles wissen",
+      "sort_by": "Sorteren op:",
+      "sort_newest": "Nieuwste eerst",
+      "sort_oldest": "Oudste eerst",
+      "sort_rating": "Hoogste score",
+      "sort_reading": "Snelle lezers"
+    },
+    "results": {
+      "showing": "<strong>{{count}}</strong> van de <strong>{{total}}</strong> berichten worden getoond",
+      "no_posts": "Geen berichten gevonden",
+      "no_posts_desc": "Pas je filters aan of bekijk alle berichten.",
+      "show_all": "Toon alle berichten"
+    },
+    "post": {
+      "featured": "Uitgelicht",
+      "min_read": "{{min}} min leestijd",
+      "read_more": "Lees meer"
+    },
+    "data": {
+      "p1": {
+        "title": "Introductie van MPay Network 2.0: een complete vernieuwing",
+        "excerpt": "We zijn verheugd om de lancering aan te kondigen van MPay Network 2.0, met een volledig vernieuwde interface, snellere transactieverwerking en verbeterde beveiligingsfuncties voor zowel handelaars als consumenten."
+      },
+      "p2": {
+        "title": "Ophalen van QR-code betalingen voor jouw bedrijf",
+        "excerpt": "Een stapsgewijze handleiding voor het configureren van QR-code betalingen in de MPay Merchant Wallet. Leer best practices voor de plaatsing van het display en transactiebeheer."
+      },
+      "p3": {
+        "title": "5 tips voor veilige mobiele betalingen",
+        "excerpt": "Bescherm je transacties met deze essentiële beveiligingstips. Van biometrische authenticatie tot transactiewaarschuwingen, leer hoe je je MPay-portemonnee veilig houdt."
+      },
+      "p4": {
+        "title": "NFC-betalingen: de toekomst van contactloze handel",
+        "excerpt": "Ontdek hoe NFC tap-to-pay technologie het betalingslandschap revolutioneert. Leer meer over de technologie achter de NFC-implementatie van MPay."
+      },
+      "p5": {
+        "title": "Merchant Dashboard: je statistieken begrijpen",
+        "excerpt": "Duik diep in de statistieken van het MPay Merchant Dashboard. Leer transactieoverzichten lezen, trends identificeren en je betalingsactiviteiten optimaliseren."
+      },
+      "p6": {
+        "title": "Eenvoudige P2P-transfers: verzend geld binnen enkele seconden",
+        "excerpt": "Leer hoe je de peer-to-peer overdrachtsfunctie van MPay gebruikt om direct geld naar vrienden en familie te sturen. Geen kosten, geen gedoe."
+      },
+      "p7": {
+        "title": "MPay Network beveiligingsupdate voor februari",
+        "excerpt": "Details over de nieuwste beveiligingspatches en verbeteringen die zijn doorgevoerd in het MPay Network. Bevat informatie over nieuwe opties voor tweestapsverificatie."
+      },
+      "p8": {
+        "title": "Aan de slag met MPay Consumer Wallet",
+        "excerpt": "Nieuw bij MPay? Deze gids voor beginners helpt je bij het downloaden, installeren en doen van je eerste betaling met de MPay Consumer Wallet."
+      },
+      "p9": {
+        "title": "Inzicht in transactiekosten en limieten",
+        "excerpt": "Een uitgebreid overzicht van de tarievenstructuur van MPay Network, transactielimieten en hoe je je kosten kunt optimaliseren als handelaar of consument."
+      }
+    }
+  },
+  "dev_intro": {
+    "title": "Introductie",
+    "description": "Bouw volledige applicaties van concept tot implementatie met een intelligent, op agenten gebaseerd platform. Ontwerp, ontwikkel, test, beveilig en lanceer—alles op één plek—met behoud van volledig menselijk toezicht in elke fase."
+  },
+  "dev_features": {
+    "title": "Belangrijkste Kenmerken",
+    "f1": {
+      "title": "Ontwerp Voor Code",
+      "desc": "Plan uw applicatie grondig voordat u een enkele regel code schrijft. Bepaal de UI, de systeemarchitectuur en functionele specificaties vooraf om een duidelijke ontwikkelroadmap te garanderen en dure iteraties later te verminderen."
+    },
+    "f2": {
+      "title": "Spraak & Chat Gestuurd",
+      "desc": "Communiceer met intelligente AI-agenten met behulp van natuurlijke spraak- of tekstcommando's. Bouw, wijzig en verfijn uw app in realtime, waardoor ontwikkeling intuïtief, snel en toegankelijk wordt, zelfs zonder diepgaande programmeerkennis."
+    },
+    "f3": {
+      "title": "Post-Deployment Agenten",
+      "desc": "Uw AI-assistenten stoppen niet met werken zodra uw app live gaat. Blijf uw applicatie continu volgen, optimaliseren en verbeteren na implementatie, zodat deze meegroeit met de behoeften van de gebruiker en markttrends."
+    },
+    "f4": {
+      "title": "Menselijk Toezicht",
+      "desc": "Behoud volledige controle gedurende de hele levenscyclus van de ontwikkeling. Controleer elke beslissing, keur updates goed en begeleid de AI, door automatisering te combineren met menselijk oordeel voor betrouwbare en hoogwaardige resultaten."
+    }
+  },
+  "dev_dashboard": {
+    "title": "Dashboard",
+    "intro": "Dit dashboard biedt een duidelijk, georganiseerd overzicht van al uw projecten op één plek. Belangrijke kenmerken zijn:",
+    "f1_title": "Projectoverzicht:",
+    "f1_desc": "Elk project wordt weergegeven als een kaart met de naam en een korte beschrijving van het project. Dit zorgt voor snelle herkenning en gemakkelijke toegang.",
+    "f2_title": "Zoekfunctionaliteit:",
+    "f2_desc": "Met een zoekbalk bovenaan kunt u snel projecten op naam vinden.",
+    "f3_title": "Maak & Beheer Projecten:",
+    "f3_desc": "Start eenvoudig een nieuw project met de knop \"Nieuw Project Maken\" of log uit met één klik.",
+    "f4_title": "Projectnavigatie:",
+    "f4_desc": "Door op een projectkaart te klikken, gaat u rechtstreeks naar de werkruimte van dat project voor verder beheer en ontwikkeling.",
+    "f5_title": "Schone & Minimale Lay-out:",
+    "f5_desc": "De interface is eenvoudig en intuïtief, gericht op productiviteit zonder afleidingen.",
+    "f6_title": "Indicator Aantal Projecten:",
+    "f6_desc": "Toont het totale aantal projecten rechtsonder, waardoor gebruikers hun werklast kunnen bijhouden.",
+    "outro": "Dit dashboard fungeert als een centrale hub voor het efficiënt beheren, openen en starten van al uw lopende projecten."
+  },
+  "dev_create_project": {
+    "title": "Maak een Nieuw Project",
+    "how_to_title": "Hoe maak je een nieuw project",
+    "step1": "Klik in het dashboard op de knop Nieuw Project Maken.",
+    "step2": "Voer de projectnaam in. De beschrijving is optioneel.",
+    "step3": "Klik op de knop Project Maken.",
+    "interface_intro": "Deze interface verschijnt wanneer een gebruiker ervoor kiest om een nieuw project aan te maken vanaf het dashboard. Belangrijke elementen zijn:",
+    "f1_title": "Veld Projectnaam:",
+    "f1_desc": "Een tekstinvoer waar de gebruiker de naam van zijn nieuwe project invoert, bijv. \"Mijn Geweldige App\". Dit is een verplicht veld.",
+    "f2_title": "Veld Beschrijving:",
+    "f2_desc": "Een optioneel tekstvak voor een korte beschrijving van het project, wat helpt om het doel of de reikwijdte ervan te verduidelijken.",
+    "f3_title": "Actieknoppen:",
+    "f3_1": "<strong>Project Maken</strong> – Bevestigt de creatie van het project en voegt het toe aan het dashboard.",
+    "f3_2": "<strong>Annuleren</strong> – Sluit de pop-up zonder een project aan te maken.",
+    "f4_title": "Schoon Modaal Ontwerp:",
+    "f4_desc": "De pop-up is gecentreerd met een minimale, afleidingsvrije lay-out die deze duidelijk onderscheidt van de wazige achtergrond van het dashboard.",
+    "f5_title": "Gebruikersbegeleiding:",
+    "f5_desc": "Tijdelijke aanduidingstekst in de velden begeleidt de gebruiker over welke informatie moet worden verstrekt.",
+    "outro": "Deze pop-up vereenvoudigt het proces van het starten van een nieuw project, zodat gebruikers hun projecten snel kunnen toevoegen en documenteren."
+  },
+  "dev_project_settings": {
+    "title": "Aan de slag",
+    "intro": "Deze module is de essentiële configuratiefase waar u de kernidentiteit en het technische DNA van uw applicatie definieert.",
+    "core_obj_title": "Kerndoelen:",
+    "obj1_title": "Architectonische Afstemming:",
+    "obj1_desc": "Kies uw technologiestack om de AI op uw ecosysteem af te stemmen.",
+    "obj2_title": "Omgevingsgereedheid:",
+    "obj2_desc": "Configureer API Keys en versiebeheer.",
+    "obj3_title": "Bestaande Integratie:",
+    "obj3_desc": "Gebruik Reverse Engineer om bestaande gegevens te uploaden.",
+    "submenus_title": "Kern submenu's:",
+    "sm1_title": "Project Instellingen",
+    "sm1_desc": "Opdrachtcentrum voor de identiteit van uw app.",
+    "sm2_title": "API Sleutels",
+    "sm2_desc": "Beheer veilige integraties met derden.",
+    "sm3_title": "Versiebeheer",
+    "sm3_desc": "Koppel met uw Git-provider (GitHub, GitLab, enz.)",
+    "sm4_title": "Reverse Engineer",
+    "sm4_desc": "Importeer de bestaande broncode, documentatie, enz.",
+    "ps_title": "Project Instellingen",
+    "ps_intro": "Waar u de basisidentiteit voor uw app instelt.",
+    "ps_1_title": "1. Algemene Informatie",
+    "ps_1_desc": "Project metagegevens.",
+    "ps_1_f1_title": "Projectnaam:",
+    "ps_1_f1_desc": "Een unieke naam voor uw toepassing.",
+    "ps_1_f2_title": "Omschrijving:",
+    "ps_1_f2_desc": "Een beknopte beschrijving van uw applicatiedoel.",
+    "ps_2_title": "2. Technologiestack",
+    "ps_2_desc": "Cruciaal; leidt AI bij het ontwikkelen.",
+    "ps_2_1_title": "2.1 Backend / Server",
+    "ps_2_1_desc": "Kies de programmeertaal en backend:",
+    "ps_2_1_l1": "<strong>JavaScript/TypeScript:</strong> Node.js, Express, enz.",
+    "ps_2_1_l2": "<strong>Python:</strong> Django, FastAPI, enz.",
+    "ps_2_1_l3": "<strong>PHP:</strong> Laravel, Symfony, enz.",
+    "ps_2_1_l4": "<strong>C#:</strong> ASP.NET, Blazor, enz.",
+    "ps_2_2_title": "2.2 Database",
+    "ps_2_2_desc": "Kies SQL- of NoSQL-database voor dataopslag.",
+    "ps_2_3_title": "2.3 Frontend",
+    "ps_2_3_desc": "Klant- of consumentgerichte UI.",
+    "bp_title": "Beste Praktijken",
+    "bp_desc": "Zorg voor nauwkeurigheid door:",
+    "bp_1_title": "Precisie telt:",
+    "bp_1_desc": "Wees zo specifiek mogelijk (bijv. Node.js + NestJS).",
+    "bp_2_title": "Opslaan:",
+    "bp_2_desc": "Sla altijd uw wijzigingen op voordat u weggaat.",
+    "bp_3_title": "Bijwerken:",
+    "bp_3_desc": "U kunt ten allen tijde details wijzigen."
+  },
+  "dev_api_keys": {
+    "title": "API Sleutels",
+    "intro": "Het API Keys gedeelte is uw hoofdhub voor toegangsbeheer en AI-diensten.",
+    "area1_title": "Sleutelbeheer:",
+    "area1_desc": "API sleutels inzien, maken en opslaan.",
+    "area2_title": "Gebruikersdashboard:",
+    "area2_desc": "Traceer API-aanvragen en actuele tokenkosten.",
+    "access_note": "Toegankelijk via de zijbalk onder <strong>Aan de slag</strong>.",
+    "managing_title": "Sleutelbeheer Instellingen",
+    "managing_intro": "Een lijst van alle ingestelde API-sleutels van dit account.",
+    "viewing_keys_title": "1. Sleutels Weergeven",
+    "viewing_keys_desc": "Zonder sleutels geeft de pagina \"No personal API keys configured.\"",
+    "creating_keys_title": "2. Een nieuwe API Sleutel Toevoegen",
+    "creating_keys_step1": "Klik op de <strong>\"+ Add New Key\"</strong> knop.",
+    "creating_keys_step2": "Benoem de sleutel zoals u dat wenst.",
+    "creating_keys_step3": "<strong>Let op:</strong> Bewaar deze code direct veilig! Eénmalig te zien.",
+    "dashboard_title": "3. Gebruikersdashboard",
+    "dashboard_intro": "Biedt diepgaand inzicht op realistische reactietijden voor (Gemini, Claude, enz).",
+    "dashboard_3_1_title": "3.1. Filter Opties",
+    "dashboard_3_1_intro": "Rechtsbovenaan:",
+    "dashboard_3_1_f1_title": "Tijdsbestek Filter:",
+    "dashboard_3_1_f1_desc": "Toon statistiek van de \"Laatste 30 Dagen\".",
+    "dashboard_3_1_f2_title": "Verversen:",
+    "dashboard_3_1_f2_desc": "Refresh realtime uw metrics direct zichtbaar.",
+    "dashboard_3_2_title": "3.2. Metrics Overview",
+    "dashboard_3_2_intro": "Samengevat in 4 tabellen.",
+    "dashboard_3_2_f1_title": "Totaal verzoeken:",
+    "dashboard_3_2_f1_desc": "Aantal API calls over alle LLM-modellen.",
+    "dashboard_3_2_f2_title": "Totaal aantal tokens:",
+    "dashboard_3_2_f2_desc": "Zowel ingevoerde (prompt) als ontvangen tokens gecalculeerd.",
+    "dashboard_3_2_f3_title": "Geschatte kosten:",
+    "dashboard_3_2_f3_desc": "Uw betaling geschat, aangeduid in US Dollar.",
+    "dashboard_3_2_f4_title": "Cache verbruik:",
+    "dashboard_3_2_f4_desc": "Direct aangesproken caching en optimalisatie levert snelheid op.",
+    "analyzing_title": "4. Tabel Gegevens Analyseren",
+    "analyzing_intro": "Onder de overzichtelijke kaarten zit uw grafiek data.",
+    "analyzing_4_1_title": "4.1. Dagelijkse Gebruiksgrafiek",
+    "analyzing_4_1_intro": "Stavenillustratie voor dagelijkse consumptie:",
+    "analyzing_4_1_f1_title": "Muis-over/Hover:",
+    "analyzing_4_1_f1_desc": "Plaats uw cursor over de dagen en bekijk de breakdown metrics data.",
+    "analyzing_4_1_f2_title": "Legenda (Kleur):",
+    "analyzing_4_1_f2_desc": "Onderscheid tussen gpt-4 of claude-opus wordt daar weergegeven.",
+    "analyzing_4_2_title": "4.2. Gebruik Op Basis van Model",
+    "analyzing_4_2_intro": "Bekijk gedetailleerde prestaties op AI-basisniveau:",
+    "model_cols": [
+      "<strong>MODEL:</strong> Het specifieke geselecteerde slimme model in gebruik.",
+      "<strong>Aanvragen:</strong> API verbindingen per variant.",
+      "<strong>PROMPT TOKENS:</strong> Tokens meegeleverd vanaf het account op de app.",
+      "<strong>COMPLETIE TOKENS:</strong> Door AI verzonden tokens de andere kant op.",
+      "<strong>TOTAAL AANTAL:</strong> Totale berekende en betaalsom.",
+      "<strong>CACHE R/W:</strong> Gecached datastroom verbruik.",
+      "<strong>VERWERKINGSTIJD:</strong> Traagheden in uw systeem per aanroep gemeten milliseconde.",
+      "<strong>KOSTEN:</strong> Externe en finale facturatie, aangeduid per platformdienst."
+    ],
+    "transaction_title": "4.3. Uw Loggeschiedenis (Transacties Logs)",
+    "transaction_intro": "Helemaal op de bodem bevindt zich de geschiedenistabel die ieder dataverzoek in beeld brengt.",
+    "filtering_title": "Statistische Sorting en Log filtering:",
+    "filtering_f1_title": "Doorzoeken op model AI dropdown selectie:",
+    "filtering_f1_desc": "Filters die specifiek 1 LLM als bijvoorbeeld 'Claude' selecteren.",
+    "filtering_f2_title": "Succes of Mislukte API (Error):",
+    "filtering_f2_desc": "Om bug squashing aan te pakken kan u een data verfijning uitoefenen en alle onjuiste verbinding eruitlichten.",
+    "log_title": "Overzichtskolommen:",
+    "log_cols": [
+      "<strong>DATUM & TIJD (TIME):</strong> Seconden preceise verzoeken.",
+      "<strong>TOTAAL TOKENS:</strong> Wat die enkelvoudige klik of request aan tokens opbracht of opstookte.",
+      "<strong>CACHE (RW):</strong> Hoe de tijdelijke en snelle data zich inzette in de load en optimalisatie voor uw client app.",
+      "<strong>MILLI-SECONDEN Runtijd:</strong> Uw pure connectiviteit of LLM model langzaamheid in prestatie.",
+      "<strong>EXACTE DOLLAR PRIJS (COST):</strong> De gespecificeerde vergoeding daarvan, direct gecalculeerd om uw overhead voorop te kunnen verdedigen."
+    ]
+  },
+  "dev_vc": {
+    "title": "Versiebeheer",
+    "intro": "Op de Versiebeheer-pagina beheert u de integratie van uw project met Git-platforms. Hierdoor kunt u een veilige code-basis onderhouden.",
+    "table_title": "Versiebeheer Tabel",
+    "table_intro": "Het dashboard toont realtime connecties en synchronisaties.",
+    "table_f1_title": "Integration:",
+    "table_f1_desc": "The name of the connection (e.g., <em>Main Repository</em>). A folder icon indicates the specific directory mapping within the repository.",
+    "table_f2_title": "Repository:",
+    "table_f2_desc": "The full URL path to your remote Git repository (e.g., https://gitlab.com/.../studytool.git).",
+    "table_f3_title": "Branch:",
+    "table_f3_desc": "The specific branch currently targeted for synchronization (e.g., main).",
+    "table_f4_title": "Status:",
+    "table_f4_desc": "Indicates the current health of the connection. A <strong>CONNECTED</strong> badge signifies that the platform has successful read/write access.",
+    "table_f5_title": "Last Sync:",
+    "table_f5_desc": "Displays the timestamp of the most recent data exchange between the platform and your repository.",
+    "actions_title": "Management Actions",
+    "actions_intro": "On the right side of each integration row, you will find several quick-action icons to manage your repository:",
+    "actions_f1_title": "Sync History (Clock Icon):",
+    "actions_f1_desc": "View a log of previous synchronization events, including commits and updates.",
+    "actions_f2_title": "Push/Pull (Upload/Download Icons):",
+    "actions_f2_desc": "Manually trigger a data transfer. Use <strong>Push</strong> to send platform changes to your Git provider, or <strong>Pull</strong> to update the platform with external changes.",
+    "actions_f3_title": "Edit Integration (Pencil Icon):",
+    "actions_f3_desc": "Modify the connection settings, such as changing the target branch or updating credentials.",
+    "actions_f4_title": "Delete (Trash Icon):",
+    "actions_f4_desc": "Remove the integration from the project. <em>Note: This will stop synchronization but will not delete the code from your Git provider.</em>",
+    "bp_title": "Beste Praktijken",
+    "bp_1_title": "Target Specific Branches:",
+    "bp_1_desc": "It is highly recommended to use a dedicated development or \"staging\" branch rather than your primary production branch to safely review generated code before merging.",
+    "bp_2_title": "Check Sync Status:",
+    "bp_2_desc": "Always verify the <strong>Last Sync</strong> time before starting a new design or ideation session to ensure you are working with the most recent version of your project.",
+    "bp_3_title": "Manual Refresh:",
+    "bp_3_desc": "Use the <strong>Refresh</strong> icon in the top-right corner of the panel to update the connection status if you have recently made changes on your Git provider's website."
+  },
+  "dev_re": {
+    "title": "Reverse Engineering",
+    "overview_title": "Overzicht",
+    "overview_desc": "AI deconstrueert uw code base in Gestructureerde Concepten.",
+    "tasks_title": "Diffusion Vision Taken",
+    "tasks_intro": "Beheert uw workflows mbt code inlezen.",
+    "tasks_f1_title": "Task Status:",
+    "tasks_f1_desc": "If no analysis has been performed, the screen displays \"No reverse engineering tasks yet.\" * <strong>Process Flow:</strong> Once a task is initiated, this area will track the progress of the AI's analysis, displaying task names, timestamps, and completion statuses.",
+    "features_title": "Key Features & Functionality",
+    "features_f1_title": "Codebase Analysis:",
+    "features_f1_desc": "Upload or link existing source code to identify data structures, API endpoints, and business logic.",
+    "features_f2_title": "Schema Mapping:",
+    "features_f2_desc": "Ingest database SQL files to automatically generate <strong>Data Objects</strong> within the platform.",
+    "features_f3_title": "Structured Concept Generation:",
+    "features_f3_desc": "The AI converts its findings into high-level concepts that populate the Concept, Business Flows, and Data Objects sections in the sidebar.",
+    "start_title": "How to Start Reverse Engineering",
+    "start_intro": "To begin an analysis task:",
+    "start_step1": "Click the blue \"Start Reverse Engineer\" button (found both in the center of the screen and the top-right corner).",
+    "start_step2": "Select your <strong>Source Type</strong> (e.g., File Upload, Git Repository Link, or Database Connection).",
+    "start_step3": "Configure the <strong>Scope</strong> of the analysis by selecting specific folders or tables to include.",
+    "start_step4": "Launch the task and monitor the <strong>Diffusion Vision Tasks</strong> list for real-time updates.",
+    "why_title": "Why Use Reverse Engineering?",
+    "why_f1_title": "Accelerated Onboarding:",
+    "why_f1_desc": "Quickly bring an existing project or legacy system into the platform for modernization.",
+    "why_f2_title": "Consistency:",
+    "why_f2_desc": "Ensure that new features developed in the <strong>Development</strong> section are 100% compatible with your existing data structures.",
+    "why_f3_title": "Documentation Recovery:",
+    "why_f3_desc": "Generate fresh <strong>Requirements Docs</strong> and <strong>Technical Diagrams</strong> for projects that currently lack them."
+  },
+  "dev_struc": {
+    "title": "Structuur & Ideatie",
+    "intro_1": "Het architectonische hart van het systeem.",
+    "intro_2": "Vormt een brug voor visie en operatie."
+  },
+  "dev_req": {
+    "submenu_title": "Structuur & Ideatie heeft de volgende submenu's:",
+    "title": "1. Vereisten",
+    "intro": "Als startpunt voor deze categorie slaat deze pagina de kernvisie van uw project op als \"Source of Truth\".",
+    "f1_title": "Gebruik:",
+    "f1_desc": "Definieer uw MVP kenmerken en gebruikersrollen.",
+    "action_desc": "In deze sectie kunt u vereisten wijzigen of toevoegen. Klik vervolgens op <strong>Vereisten opslaan</strong>."
+  },
+  "dev_concept": {
+    "title": "2. Concept",
+    "intro": "Deze module deelt uw vereisten op in individuele <strong>Conceptblokken</strong>.",
+    "f1_title": "Gebruik:",
+    "f1_desc": "Breng de \"grote ideeën\" van uw software in kaart om ervoor te zorgen dat alle benodigde functionaliteit aanwezig is."
+  },
+  "dev_bf": {
+    "title": "3. Bedrijfsstromen",
+    "intro": "Bedrijfsstromen visualiseren de stapsgewijze reis die een gebruiker maakt om een taak te voltooien.",
+    "f1_title": "Voorbeeld:",
+    "f1_desc": "De reeks gebeurtenissen van een student die een PDF uploadt tot de AI die een samenvatting en quiz genereert.",
+    "f2_title": "Gebruik:",
+    "f2_desc": "Identificeer knelpunten in de gebruikerservaring voordat er code is geschreven."
+  },
+  "dev_do": {
+    "title": "4. Data Objecten",
+    "intro": "Deze sectie definieert de \"zelfstandige naamwoorden\" van uw systeem - de datastructuren die in uw database worden opgeslagen.",
+    "f1_title": "Voorbeelden:",
+    "f1_desc": "Gebruiker, Studiemateriaal, QuizResultaat, Abonnementenplan.",
+    "f2_title": "Gebruik:",
+    "f2_desc": "Definieer eigenschappen (bijv. e-mail, tijdstempel, score) en hoe deze objecten zich met elkaar verhouden."
+  },
+  "dev_roles": {
+    "title": "5. Rollen en Rechten",
+    "intro": "Beveiliging begint hier. Definieer wat verschillende soorten gebruikers kunnen zien en doen.",
+    "f1_title": "Voorbeeld:",
+    "f1_desc": "Een Beheerder kan gebruikers verwijderen, terwijl een Student alleen zijn eigen studiemateriaal kan bekijken.",
+    "f2_title": "Gebruik:",
+    "f2_desc": "Stel de Access Control List (ACL) in voor uw API en Frontend."
+  },
+  "dev_br": {
+    "title": "6. Bedrijfsregels",
+    "intro": "Bedrijfsregels zijn de \"als/dan\"-logica die het gedrag van uw app bepaalt, onafhankelijk van de code.",
+    "f1_title": "Voorbeeld:",
+    "f1_desc": "\"Als een gebruiker een Free tier account heeft, mag hij slechts 1 document per maand uploaden.\"",
+    "f2_title": "Gebruik:",
+    "f2_desc": "Centraliseer de logica die bepaalt hoe het bedrijf opereert."
+  },
+  "dev_int": {
+    "title": "7. Integratiekaarten",
+    "intro": "Deze tool beschrijft hoe uw applicatie communiceert met externe systemen.",
+    "f1_title": "Voorbeeld:",
+    "f1_desc": "Hoe uw app communiceert met een Betalingsgateway (Stripe) of een AI-model (OpenAI/Claude).",
+    "f2_title": "Gebruik:",
+    "f2_desc": "Visualiseer de gegevensuitwisselingspunten tussen uw systeem en de buitenwereld."
+  },
+  "dev_dd": {
+    "title": "Ontwerp en Docs",
+    "intro_1": "<strong>Design & Docs</strong> dient als een gecentraliseerde hub voor het beheer van visuele en technische documentatie.",
+    "intro_2": "Het heeft 3 submenu's:",
+    "sub1_title": "UI-ontwerpen",
+    "sub1_desc": "Dit submenu is uw primaire werkruimte voor alle <strong>visuele middelen</strong> met betrekking tot de interface.",
+    "purpose": "Doel:",
+    "count": "Huidig Aantal:",
+    "best_for": "Ideaal voor:",
+    "sub1_p": "Slaat high-fidelity mockups, wireframes en interactieve prototypes op.",
+    "sub1_c": "<strong>30</strong> items.",
+    "sub1_b": "Het beoordelen van de indeling van schermen en animaties van gebruikersstromen.",
+    "sub2_title": "Technische Diagrammen",
+    "sub2_desc": "Dit submenu organiseert de <strong>structurele en op logica gebaseerde</strong> visualisaties van het project.",
+    "sub2_p": "Huisvest systeemarchitectuurkaarten, stroomschema's en ERD's.",
+    "sub2_c": "<strong>14</strong> items.",
+    "sub2_b": "Begrip van het onderliggende technische kader en hoe gegevens door het systeem bewegen.",
+    "sub3_title": "Vereisten Docs",
+    "sub3_desc": "Dit submenu fungeert als de opslagplaats voor <strong>formele projectdocumentatie</strong>."
+  },
+  "dev_ui": {
+    "title": "UI-ontwerpen",
+    "intro": "Het submenu <strong>UI-ontwerpen</strong> fungeert als de primaire opslagplaats voor visuele interface.",
+    "core_fn_title": "Kernfuncties",
+    "cf1_title": "Visuele Opslagruimte:",
+    "cf1_desc": "Verkrijg toegang tot alle schets-naar-geavanceerde schermweergaven uit hoogst kwalitatieve resolutie.",
+    "cf2_title": "Prototyping:",
+    "cf2_desc": "Laat interactieve animatieresultaten terugvinden ten aanzien van gebruikersgedrag.",
+    "cf3_title": "Hulpbronnen Beheer:",
+    "cf3_desc": "Overzie hoeveelheidsindicators rechtstreeks (er zitten nu <strong>30</strong> varianten daarin).",
+    "uguide_title": "Gebruikersinstructies",
+    "ug1_title": "Status Indicatie:",
+    "ug1_desc": "Onderbouwt helder waar alle hoofdafdelingen en actieve content geplaatst zijn naar mate je verder verduurzaamt.",
+    "ug2_title": "Gerichte Navigatie:",
+    "ug2_desc": "Maak gebruik van de welbekende <strong>Monitor-symbooltjes</strong> voor inzicht en herkenning.",
+    "bp": "<strong>Best Practice:</strong> Garandeert aan je constructieteam van ontwerpers up-to-date dataversies van beeldscherminterfaces.",
+    "view_look_prompt": "Klik op elke map om te zien hoe deze eruitziet:",
+    "typo_title": "Stijl Editor Configuratie",
+    "typo_intro": "Deze <strong>bewerkingstool</strong> wordt toegewezen door de controlepanel in interface, direct werkend bij <code>span.sidebar-nav-text</code>.",
+    "config_opt_title": "Aanpassingsopties",
+    "table_h1": "Component",
+    "table_h2": "Voorstelling / Interpretatie",
+    "t_c1_1": "<strong>Weergavekleur Tekst</strong>",
+    "t_c1_2": "Vormkleuringsafstelling waaronder een handig kleuren palet selectie (stel RGB naar smaak).",
+    "t_c2_1": "<strong>Corresponderende Tekstgrootte</strong>",
+    "t_c2_2": "Glijd over schuifbare waardes variërend tussen een scala van <strong>6px</strong> - <strong>120px</strong>.",
+    "t_c3_1": "<strong>Dikte van Tekst</strong>",
+    "t_c3_2": "Schrijvingsprofiel, afgestemd aan een vooraf bepaalde afmeting (ongeveer gelimiteerd tot <strong>500 Medium</strong>).",
+    "t_c4_1": "<strong>Hoofdontwerp Formeel Familie Font</strong>",
+    "t_c4_2": "Toonaangevende lettervormen die een zachte look hanteren (vaak <strong>Inter</strong> enzv.).",
+    "t_c5_1": "<strong>Aankleding & Decoratief Voorraad</strong>",
+    "t_c5_2": "Zet tekst om in specifieke <em>verhoudings</em> en onderlijnde of uitgeschakeld.",
+    "t_c6_1": "<strong>Midden Allignatie Basis Punt Marge</strong>",
+    "t_c6_2": "Koppel verbuigingen en afwegingen door te speling met linker-, midden-of eind positie constructies.",
+    "key_ele_title": "Interfaciële Grond Componenten",
+    "ke1_title": "Architectuur CSS Routepad:",
+    "ke1_desc": "De blauwe navigatiebalk toont nauwlettend vast gelegd doelpunt uit CSS pad structuren (bijvoorbeeld: <code>div.sidebar-nav > ...</code>), een perfecte wijzigingshulpmiddel.",
+    "ke2_title": "Opslaan en Terug naar Huis Keer Punt:",
+    "ke2_desc": "Laat resultaten render door op <strong>Save</strong> te benutten en ongewilde handelingen los te laten voor een efficiënt workflow proces met de x-knop annulering mechanisme.",
+    "ke3_title": "Soortschakel Mechanismen:",
+    "ke3_desc": "Grote handigheid om mee test afleggingen als responsif mobiel formaat of absolute positioneringen (naargelang in <strong>px</strong>) en weergavestijlen passend toe te passen in het veld.",
+    "typo_note": "<strong>Aantekening Notitie Blok:</strong> Herhaalde globale wijzigingen vinden tevens hun invloed plaats van verandering om zodoende de consistentie afloop te waarborgen en beveiligen na een visueel doordacht process verloop binnen project overgave instellingen in linkerbarmenu interface.",
+    "overlay_prompt": "Er wordt een overlayvenster weergegeven",
+    "resp_title": "Responsiviteit",
+    "resp_intro": "Bovenaan het midden vindt u de <strong>apparaatschakelaarpictogrammen (Desktop, Tablet en Mobiel)</strong> om te zien hoe de layout zich aanpast.",
+    "resp_desk_title": "Desktop Weergave",
+    "resp_desk_desc": "De huidige standaardweergave, geoptimaliseerd voor grote schermen.",
+    "resp_tab_title": "Tablet Weergave",
+    "resp_tab_desc": "In deze modus past de interface zich aan middelgrote touchscreens aan.",
+    "resp_mob_title": "Mobiele Weergave",
+    "resp_mob_desc": "De mobiele weergave geeft prioriteit aan verticale stapeling voor leesbaarheid.",
+    "mpa_title": "Pagina Wijzigen Assistent",
+    "mpa_intro": "Deze <strong>conversatie-interface (AI)</strong> helpt u snel ontwerpwijzigingen aan te brengen. De AI automatiseert de wijzigingen op basis van uw omschrijving.",
+    "mpa_core_comp": "Kerncomponenten",
+    "table2_h1": "Element",
+    "table2_h2": "Beschrijving",
+    "t2_c1_1": "<strong>AI Assistent</strong>",
+    "t2_c1_2": "Updates en richtlijnen over de opmaakinstructies.",
+    "t2_c2_1": "<strong>Element Selectie</strong>",
+    "t2_c2_2": "Aanwijzing welk deel wordt gewijzigd.",
+    "t2_c3_1": "<strong>Instructie Input</strong>",
+    "t2_c3_2": "Om te typen, bijvoorbeeld <em>\"Maak de tekst rood.\"</em>",
+    "t2_c4_1": "<strong>Actieknoppen</strong>",
+    "t2_c4_2": "<strong>Send</strong> verstuurt en <strong>Undo</strong> maakt wijzigingen ongedaan.",
+    "mpa_kf": "Belangrijkste Functies",
+    "kf1_title": "Contextueel Bewustzijn:",
+    "kf1_desc": "De assistent kent uw selectie al.",
+    "kf2_title": "Directe Feedback:",
+    "kf2_desc": "Tijdelijke aanduiding voor de actieve selectie.",
+    "kf3_title": "Veilig Bewerken:",
+    "kf3_desc": "De knop <strong>Undo</strong> verzekert veilig testen.",
+    "mpa_htu": "Hoe te Gebruiken",
+    "htu1_title": "Selecteren:",
+    "htu1_desc": "Klik op het gewenste element.",
+    "htu2_title": "Beschrijven:",
+    "htu2_desc": "Typ wat u wilt wijzigen.",
+    "htu3_title": "Uitvoeren:",
+    "htu3_desc": "Klik op <strong>Send</strong> om live te bekijken.",
+    "mpa_other_opts": "Overige Opties:"
+  },
+  "tech_diag": {
+    "title": "Technische Diagrammen",
+    "intro": "Het dashboard <strong>Technische Diagrammen</strong> is een suite voor visueel management, ontworpen voor architecten, ontwikkelaars en systeemplanners. Het dient als centrale opslag voor logica en structurele visualisaties.",
+    "grid_intro": "De interface toont een raster van <strong>Diagram Kaarten</strong>, die stuk voor stuk een technisch perspectief weerspiegelen. Elke kaart bevat:",
+    "b1_title": "Diagram Type Titel:",
+    "b1_desc": "(bijv. Technologie Stack, Infrastructuur Diagram).",
+    "b2_title": "Status Indicator:",
+    "b2_desc": "Een badge \"ACTIVE\" bevestigt dat het diagram actueel is.",
+    "b3_title": "Gestandaardiseerde Iconografie:",
+    "b3_desc": "Gebruikt standaard visuele markers voor snelle identificatie."
+  },
+  "avail_diag": {
+    "title": "Beschikbare Diagram Types",
+    "intro": "Het dashboard is verdeeld in verschillende gespecialiseerde categorieën om de volledige ontwikkelingslevenscyclus te dekken:",
+    "table_h1": "Categorie",
+    "table_h2": "Specifieke Diagrammen Inbegrepen",
+    "t_c1_1": "<strong>Systeemarchitectuur</strong>",
+    "t_c1_2": "Technology Stack, Beveiligingsarchitectuur, Infrastructuur, Implementatie, High-Level Architectuur.",
+    "t_c2_1": "<strong>Data & Logica</strong>",
+    "t_c2_2": "Entity Relationship Diagram (ERD), Database Schema, Data Flow Diagram (DFD).",
+    "t_c3_1": "<strong>Proces & Flow</strong>",
+    "t_c3_2": "Sequence Diagram, Process / Business Flow, Use Case, User Flow.",
+    "t_c4_1": "<strong>Structureel Ontwerp</strong>",
+    "t_c4_2": "API Architectuur, Component Diagram.",
+    "kac_title": "Belangrijkste Actiecommando's",
+    "kac_intro": "Rechtsbovenin het dashboard bieden deze beheerfuncties de volgende opties:",
+    "k1_title": "Bouw Architectuurdiagrammen:",
+    "k1_desc": "Start de geautomatiseerde tool om diagrammen te genereren o.b.v. data of code.",
+    "k2_title": "Voeg Diagram Toe:",
+    "k2_desc": "Opent het upload- of creatiescherm om een nieuwe visualisatie toe te voegen.",
+    "ad_title": "Voeg Diagram Toe",
+    "ad_intro": "Deze knop is ontworpen voor <strong>handmatige invoer en aangepaste creatie</strong>.",
+    "ad_hw_title": "Hoe het werkt:",
+    "ad_hw_desc": "Opent een sjabloongalerij of een leeg vel voor Sequence / Flowcharts enz.",
+    "ad_res_title": "Resultaat:",
+    "ad_res_desc": "Er kunnen elementen verbonden of foto's geload worden (PNG/PDF).",
+    "ad_best_title": "Beste voor:",
+    "ad_best_desc": "Nieuwe ideeen conceptualiseren of onafhankelijk van broncode.",
+    "bad_title": "Bouw Architectuurdiagrammen",
+    "bad_intro": "Dit activeert een <strong>automatisch generatieproces</strong>.",
+    "bad_hw_title": "Hoe het werkt:",
+    "bad_hw_desc": "Het maakt gebruik van platform geintegreerde scan AI op data en codebases.",
+    "bad_res_title": "Resultaat:",
+    "bad_res_desc": "Diagrammen ontstaat vanzelf o.b.v harde feiten in Technology Stacks.",
+    "bad_best_title": "Beste voor:",
+    "bad_best_desc": "Snel documenteren en actuele synchronisatie bij live productie updates.",
+    "idv_title": "Interactieve Diagramweergave",
+    "idv_intro": "Van globale weergaves stap je rechtstreeks in verfijnd bewerkruimte voor schema's en overige doeleinden.",
+    "nw_title": "Navigatiestructuur",
+    "nw_s1_title": "Selecteer:",
+    "nw_s1_desc": "Klik op de hoofd Dashboard map schema's (bijv. <strong>Data Flow Diagram [DFD]</strong>).",
+    "nw_s2_title": "Open:",
+    "nw_s2_desc": "Een volledige canvaslaag wordt daar op gelaunched.",
+    "nw_s3_title": "Verken:",
+    "nw_s3_desc": "Links biedt de balk manieren in springen qua variabele methodieksoorten mapen.",
+    "wc_title": "Werkruimte Onderdelen",
+    "wc_t1": "Gebied",
+    "wc_t2": "Beschrijving",
+    "wc_r1_1": "<strong>Elementenbalk</strong>",
+    "wc_r1_2": "Heeft drag-and-drop knopen inclusief <strong>Start, Proces, Beslissing, API</strong> e.a.",
+    "wc_r2_1": "<strong>Logica Canvas</strong>",
+    "wc_r2_2": "Hoofdgebied waar lijnen en vertakkingen plaats vinden.",
+    "wc_r3_1": "<strong>Editorzijbalk</strong>",
+    "wc_r3_2": "Telt op de lijsten alle bestaande diagramversies (o.a. <strong>Systeem Architectuur: 42</strong>).",
+    "wc_r4_1": "<strong>Actiesuite</strong>",
+    "wc_r4_2": "Beheeropties, auto-structureren, Clear All, zoom opties.",
+    "kf_title": "Kernfunctionaliteit",
+    "kf_ce_title": "Contextgevoeligheid:",
+    "kf_ce_desc": "Het houdt bij of juiste diamantvormen bij juiste stijlen genoteerd staan.",
+    "kf_lm_title": "Leesbare Layouting:",
+    "kf_lm_desc": "Ruimt complexe spaghetti modellen perfect naar propere georganiseerde lagen op.",
+    "kf_ce2_title": "Exporteerbaar en Samenwerken:",
+    "kf_ce2_desc": "Maak gebruik achteraf van de export button PDF.",
+    "idv_tip": "<strong>Tipwijzer:</strong> Schakel natuurlijke spraak instructie wijzigers aan.",
+    "tb_title": "Werkbalk",
+    "tb_intro": "Opgedeeld in Drie zones: <strong>Knooppunten, Layouts, en Hulpmiddelen.</strong>",
+    "nct_title": "Knoop Typen",
+    "nct_intro": "Voegt logica en elementen daadwerkelijk toe:",
+    "nct1_title": "+ Start:",
+    "nct1_desc": "Punt van inkomst en begin traject.",
+    "nct2_title": "+ Proces:",
+    "nct2_desc": "Een actiestap.",
+    "nct3_title": "+ Beslissing:",
+    "nct3_desc": "Voor takken of stroom keuzes (If/Else).",
+    "nct4_title": "+ Database:",
+    "nct4_desc": "Opslag node.",
+    "nct5_title": "+ API:",
+    "nct5_desc": "Verbindt systemen door API nodes te tekenen.",
+    "nct6_title": "+ Einde:",
+    "nct6_desc": "Afrondend eind punt.",
+    "ldc_title": "Layout Richting Controls",
+    "ldc_intro": "Geef de grote lijnen van positie op:",
+    "ldc1_title": "Gestapeld Navigeren:",
+    "ldc1_desc": "Plaatst nodes in boom of organisch formaat.",
+    "ldc2_title": "Flow Richting:",
+    "ldc2_desc": "Stelt het vizier van top naar bottom of willekeurig.",
+    "cus_title": "Canvas Hulpmiddelen",
+    "cus_intro": "Geavanceerde werkingen:",
+    "cus1_title": "Automatisch Sorteren:",
+    "cus1_desc": "Tijdbesparend positioneren in rasters.",
+    "cus2_title": "Toon Raster:",
+    "cus2_desc": "Zichtbare richtlijnstippen instellen.",
+    "cus3_title": "Spraak AI Assist :",
+    "cus3_desc": "Geeft AI acties de macht uw workflow sneller te bouwen.",
+    "cus4_title": "Wis Alles:",
+    "cus4_desc": "Start vanaf nullijn.",
+    "ne_title": "Navigatie / Export",
+    "ne1_title": "Zoom Niveaus:",
+    "ne1_desc": "Stel <strong>Fit</strong> of vergroot / verklein visie.",
+    "ne2_title": "Export:",
+    "ne2_desc": "Download de visuele elementen (PNG/SVG/PDF)."
+  },
+  "req_docs": {
+    "title": "Specificatie Documenten",
+    "intro": "Het dashboard hiervan dient om uw project af te bakenen en structureren op het vlak van software specificaties.",
+    "adt_title": "Inbegrepen DocumentTypes",
+    "adt_intro": "Opdeling weerspiegelend in vier aparte logische stukken ontwikkeling:",
+    "t_h1": "Document",
+    "t_h2": "Doelstelling",
+    "t_h3": "Inhoud Binnenin",
+    "t_r1_1": "<strong>Concept Samenvatting</strong>",
+    "t_r1_2": "Vogelvlucht aanzicht.",
+    "t_r1_3": "Conceptuele voorbijgangers waarde.",
+    "t_r2_1": "<strong>Functioneel Deskop</strong>",
+    "t_r2_2": "Klantgerichte flow schema.",
+    "t_r2_3": "User features, logica.",
+    "t_r3_1": "<strong>Systeem Techniek</strong>",
+    "t_r3_2": "Developer pad sturing.",
+    "t_r3_3": "Architectuur en API interfaces.",
+    "t_r4_1": "<strong>Database Design</strong>",
+    "t_r4_2": "Datalaag implementatie.",
+    "t_r4_3": "Tafels inzicht met ERD koppeling.",
+    "dsm_title": "Versie en Document Statussen",
+    "dsm_intro": "De kaarten dragen signaleringstools bij zich:",
+    "dsm_b1_title": "Gereed Badge:",
+    "dsm_b1_desc": "Upto date document bij de groene Ready button.",
+    "dsm_b2_title": "Bekijk:",
+    "dsm_b2_desc": "De lezer ontwaakt of een zip/pdf is klaar.",
+    "dsm_b3_title": "Herbouwen:",
+    "dsm_b3_desc": "Verzoekt de engine code te scannen en up te updaten aanpassen realiteit met verleden scripts.",
+    "dsm_b4_title": "Refresh:",
+    "dsm_b4_desc": "Pagina controle op globaal aanwezige vinkjes.",
+    "kw_title": "Workflow",
+    "kw_1_title": "Genereer:",
+    "kw_1_desc": "Om the beginnen, forceer je met <strong>Herbouw</strong> initieel.",
+    "kw_2_title": "Keur:",
+    "kw_2_desc": "Kijk na om fouten en status naars te besparen.",
+    "kw_3_title": "Herhaal:",
+    "kw_3_desc": "Elke wijziging UI moet resulteren op knop herlezing updates om in snelle realtime syncs te blijven acteren.",
+    "dev_title": "Ontwikkeling",
+    "dev_intro": "Hier regisseer je infrastructuur en bestanden binnen developers management omgeving.",
+    "dev_sub_intro": "Opgedeeld in strakke logische 4 folders:",
+    "dev_sub1_title": "1. Taken",
+    "dev_sub1_desc": "Problemen log opdrachten logica en requests verzamelplek.",
+    "dev_sub2_title": "2. Database",
+    "dev_sub2_desc": "Tabel aanroep laag via opgeslagen queries.",
+    "dev_sub3_title": "3. Broncode",
+    "dev_sub3_desc": "Opslagplaats van uw echte front-end talen in map structuren.",
+    "dev_sub4_title": "4. Containers",
+    "dev_sub4_desc": "Omgevingsbeheer Kubernetes omgeving acties afhandelen."
+  },
+  "tasks": {
+    "title": "Taken",
+    "intro": "<strong>Task board</strong> voor alles van sturing commandos control rooms naar dev omgeving applicaties code files.",
+    "knc_title": "Onderverdelingen",
+    "knc_b1_title": "Statussen Filter:",
+    "knc_b1_desc": "Activeert tab weergave voor af of pending states van AI.",
+    "knc_b2_title": "Aanstuur Actie Controle:",
+    "knc_b2_1_title": "Vernieuw:",
+    "knc_b2_1_desc": "Synchroniseer met data van queue en UI op de realiteit acties verbonden in engine log streams locale backend poorten en mappen structuur webserver updates check logica realtime update status knop",
+    "knc_b2_2_title": "Annuleer Actief/Verwijderen:",
+    "knc_b2_2_desc": "Bestuur task rijen direct vanuit control interface.",
+    "knc_b2_3_title": "+ Nieuw:",
+    "knc_b2_3_desc": "Bouwt en vuurt nieuw script of bug fixing script verzoek af in het agent panel venster pop-up modus prompt creatie start direct hiermee. Code of fix verzoek naar de agents doorgeven start hier.",
+    "aoc_title": "Task Map Inspectie Opbouw UI element:",
+    "aoc_intro": "Transparant blik onder de logica motorkap:",
+    "aoc_t1": "Element",
+    "aoc_t2": "Actie Beschrijving Functie Doel Logica",
+    "aoc_r1_1": "<strong>Opdracht Start</strong>",
+    "aoc_r1_2": "Laat getypte text zien op de kaart en titel weer.",
+    "aoc_r2_1": "<strong>Agent Specialist Doel</strong>",
+    "aoc_r2_2": "Vernoemt het agent proces type.",
+    "aoc_r3_1": "<strong>Data Locatie Label</strong>",
+    "aoc_r3_2": "Op welk specifiek folder wordt gemikt en tijden.",
+    "aoc_r4_1": "<strong>Fase Inzicht Details</strong>",
+    "aoc_r4_2": "Een info blok dat uitlegt in complexe taal stappen of multiphase structuur waar AI in acteert. (fase 1 van 10 log).",
+    "aoc_r5_1": "<strong>Badge Type Oplossing</strong>",
+    "aoc_r5_2": "Klei, Analyse tekst of Code uitvoer (purperen of blauwe badging styling effect kleuren tags).",
+    "pmf_title": "Andere Functionaliteiten Extensies.",
+    "pmf_b1_title": "Gegevens Schema Analyse en vergelijken Audit Logs:",
+    "pmf_b1_desc": "Laat je logica design tabel in sync zijn met de Concept en vind logica gaten. System check up control audit voor code logische foute opsporing functionaliteit controle mechanismen.",
+    "pmf_b2_title": "Taak Bomen (Onderliggend Verdelen van Jobs):",
+    "pmf_b2_desc": "Een grote structuur moet simpel gemaakte structuur delen hebben. Hier doe je dat om agents taak te ontlasten complexiteiten uitbouwen per onderdeel stap. Multiphase macro job manager.",
+    "pmf_b3_title": "Terug in de tijd:",
+    "pmf_b3_desc": "Bewerk een oude omgegooide foute opdracht voor re run actie bewerking herstel loop fix. Edit en update tekst prompt instructie logica element query taal run het dan nog eens via re-run.",
+    "pmf_b4_title": "File en Mappen Inzichten Inspector Tool Tracker Data View:",
+    "pmf_b4_desc": "Bied details en file inspecties. Welke is aan de beurt op welke byte line. Voor de data die open staat.",
+    "tc_intro": "Hier regisseert men de data door de <strong>Agent Queue</strong> (Wacht Rijen van Taken) en alle taken af te handelen met één UI button menu knop click via the Task Dashboard control room rechts bovenin UI navigatie de besturings blok met 4 functionele optionele buttons.",
+    "tc_refresh_title": "Vernieuw Actie",
+    "tc_refresh_1": "Rol:",
+    "tc_refresh_2": "Data refresh trigger (lijsten).",
+    "tc_refresh_3": "Moment:",
+    "tc_refresh_4": "Na dat AI complex aan t iteraten is om 'In de Maak' status naar 'Compleet' te zetten.",
+    "tc_cancel_title": "Stop Al De Rijen Queue",
+    "tc_cancel_1": "Rol:",
+    "tc_cancel_2": "Kill AI processes direct met direct en onmiddellijk impact.",
+    "tc_cancel_3": "Moment:",
+    "tc_cancel_4": "Om dure server data CPU tijd van foute agents foutprompt loop stops te zetten cancel en redo the setup. Zonder schade opslaan process fouten code of destructies UI logische file manipulatie door corrumperende loop of niet werkende instructie concepten van developer user prompt intent.",
+    "tc_delete_title": "Wissen Opschonen",
+    "tc_delete_1": "Rol:",
+    "tc_delete_2": "Gooit the cache the logging van tasks UI venster panel database of files system op opgeruimd stand. Verwijderen is niet meer te stoppen permanentie.",
+    "tc_delete_3": "Moment:",
+    "tc_delete_4": "Grote versies (milestone gereed) om de view overzicht en focus over de nieuwe aanpassingen de ruimte overzichtelijkheid behouden te laten.",
+    "tc_new_title": "+ Invoeren Taak Menu (Nieuw Optreden Agent)",
+    "tc_new_1": "Rol:",
+    "tc_new_2": "Popup en creatie flow actie scherm voor form data user prompt taak setup actie log.",
+    "tc_new_3": "Moment:",
+    "tc_new_4": "Het centrale portaal voor de bouw.",
+    "cnt_title": "Hoe Formules Van de Taken Werken",
+    "cnt_intro": "Door logica te bouwen zorg je met de <strong>AI Taken Builder Windows Modals Popup UI</strong> functionaliteit selecteer je alle assets die we hier tonen in combinatie tot specifieke agent delegatie of files selectie stappen setup logic forms UI data inputs requirements parameters logic. Goede input data de tekst de keuze van een specifieke AI in combinatie of folder resulteert in beter succes eind doelen resultaat UI of code creaties backend of bestanden of doc the creeren. Dit scherm forms venster in belangrijk.",
+    "cnt_comp_title": "Op de Kaart Setup Elementen UI Windows Details Data Omschrijving:",
+    "cnt_1_title": "1. Task Instructie Form",
+    "cnt_1_intro": "Ruimte voor u logica in engels typen text AI prompt area in UI textbox (Text area input filed).",
+    "cnt_1_b1_title": "Specifiek Gerichte Input Typen (Tips):",
+    "cnt_1_b1_desc": "Logica. 'Fix log-in UI view'. Nee! Type data logic 'Pas de file login.html in components div authContainer CSS klasse aan zodat background transparant blauw wordt is correctere logic input text data. Context prompt instructie logica the specifiek details.",
+    "cnt_1_b2_title": "File Verwijzingen Reference Details:",
+    "cnt_1_b2_desc": "Gebruik text die een file (naam) document.txt op UI dekt agent ziet het. Dit noemen we Assets en File references in AI input taal tekst logic concept instructions sturing AI concept logic file of doc referer tekst in textveld typen formulier.",
+    "cnt_2_title": "2. Agent Kiezen Typen Setup Configuratie UI Tooling Element",
+    "cnt_2_intro": "Gereedschap the speciale bot voor job sturing in grid panel UI data element.",
+    "cnt_t2_h1": "Bots AI Types",
+    "cnt_t2_h2": "Waardes Verantwoordelijkheid Data en Actie Doeleinden Logica Code UI logic the job",
+    "cnt_t2_r1_1": "<strong>Commando Terminal (CLI Agent)</strong>",
+    "cnt_t2_r1_2": "Package npm dependencies sturing PowerShell bash cmd commands uitvoeringen. Shell file folder manage files logic ops.",
+    "cnt_t2_r2_1": "<strong>Software Developer Agent Programmatuur Maker Scripting Agent Bot Specialist Tool 100x Engineer Coding Logics. De Maker of code HTML javascript css etc. Frontend Backend script en core algoritmes. Core Agent!</strong>",
+    "cnt_t2_r2_2": "Refactoring bouwen schrijven bugfix de programmer of application logic. Coding in file edit create etc the maker in actions dev operations.",
+    "cnt_t2_r3_1": "<strong>Data Ops en Schema SQL Backend Data Structuur Bot. Database agent control.</strong>",
+    "cnt_t2_r3_2": "Migreert data via queries schemas en bouwt relationele tabellen op structuur niveaus. DBA DBA virtual tool.",
+    "cnt_t2_r4_1": "<strong>Look Feel UI Design Presenter Bot Tool Design Concept Architect and PPT presentation maker visual concept agent voor concept slides etc.</strong>",
+    "cnt_t2_r4_2": "Layouts CSS UI the layout the the aesthetics. Presentation UI layout logic screen designs.",
+    "cnt_t2_r5_1": "<strong>User Doc Admin Manual Agent Scripters Bot. De Markdown of PDF logic info the content.</strong>",
+    "cnt_t2_r5_2": "Drafts technische manuals of features de document maker bot voor manuals etc info sharing documentation writing creation system process doc info gen logic.",
+    "cnt_t2_r6_1": "<strong>Containers Docker Kubernetes Bot Tools. The Infra the deployment Devops Logic Environment Orchestrator of Deployments container.</strong>",
+    "cnt_t2_r6_2": "Deploy logica container or Docker files Docker config tools env actions build release logica structuur.",
+    "cnt_t2_r7_1": "<strong>Manager Hoofd Planning Task bot the Manager the the Roadmap the Multi phases logica plannings agent planning.</strong>",
+    "cnt_t2_r7_2": "Plannified ops multi steps de break down in sub tasks logica master planner logic de delegator AI voor architecture plans of large scales the manager ops planner acties.",
+    "cnt_t2_r8_1": "<strong>Kwaliteits (QA) Controle Tester Audit Logic QA Agent bot bug tester flow checker the review check tool.</strong>",
+    "cnt_t2_r8_2": "Controleert op inconsistente code test logic QA visual of dev operations code bug vinden en testing flows UI action etc.",
+    "cnt_t2_r9_1": "<strong>Video Creation Agent. Screen capture video bot. De instructie the training video.</strong>",
+    "cnt_t2_r9_2": "Tutorials the screencast the generation of help training content creation tool of video. Training guides tutorials walkthrough system features demonstration for employees.",
+    "cnt_t2_r10_1": "<strong>Analytical Gap Scanner Bot The Audit logic deep analyses Read Only scanner. Data analyzer the system process logic check.</strong>",
+    "cnt_t2_r10_2": "Audit and gaps system security checks on logic overviews (No code writing read read the files the concept gaps) the gap analytics tool agent data overviews.",
+    "cnt_t2_r11_1": "<strong>Security Cyber en encrypties Security logic Agent audit tool en the bug protection the defense tool bot cyber check code agent logic en de penetration testing bot system network ops dev security audits tools checks scanner bot tool logic en firewalls network the api auth encryption check.</strong>",
+    "cnt_t2_r11_2": "Kwetsbaarheid scanning check login password the hash encryption checks auth flows token validation cross sites injection fix the data system defense operations code refactor logica beveiligings operations in file and database operations audit data encrypt logic defense cyber code ops logica checks scan for protection over data leaks en XSS attacks system tools defenses fixers bug hunters defense network logica system api gateways endpoints checks audit system and logic data systems the protection. Secures infrastructure system operations system data files code logs checks logic in network structure network security system.",
+    "cnt_t2_r12_1": "<strong>Testing Code Automation bots QA QA automation Testing logic Testing tools Agent Code Test Unit tests Jest Playwright the the tools script code testing generators automation unit bot</strong>",
+    "cnt_t2_r12_2": "Scripts unit tests or mock logics end to end check code scripts generation testing the function auto generating logica script testing dev tooling automated systems test check in tests functions system app bot logic creation file tools system unit testing generators in file creation tools QA tests generators automation checks functions mock endpoints in testing tests bot logic. Jest playwright vitest code checks bot scripts generators functions testing automation dev bot tooling scripts bot automation test logica unit automation checks file logic bot data tools checks system apps tools bot tool file QA generator data tools dev script system.",
+    "cnt_3_title": "3. Project Map Structuur Selectie Setup Configuratie Target data system bot data context focus system tools.",
+    "cnt_3_intro": "Locatie UI. Focus systeem mappen the data isolatie systeem context focus directory files focus tool folder data selection.",
+    "cnt_3_b1": "Geselecteerd project the UI tree the file folder the project the logic of focus system tools context project the selection of data tool logica files the data focus system context target area focus tools data struct files bot app logic system directory targets selection file tools system project file config tools setup folder of focus target map system path map logic tools project directory files setup system targets file focus directory context path map bots select system tooling logica paths app logic configuration file target context configuration project dir tools file directory apps bot tools system dir app system project bots focus of context.",
+    "cnt_3_b2": "Isolatiemeetsystemen voorkomen conflicten bot the over the code paths the tools directory the files project map bots project data tool logic setup maps config app data directories bot tools data the structure path context system target bot config selection project of context configuration bots config bot focus tools target bot tools file logic dir tools apps setup target map path map configuration context selection the directory bots config context file directory for isolated apps data app config setup the context map tools app configuration of bots. Zorgt dat het apart is the sandbox structuur concept of workspace targets system context configuraties of system setup tool map focus apps tool target bots apps context bots setup and files configuration system bot tooling folder projects map file tools logica context data target directory logic context system tool bot context tooling ops apps directories tooling app system bot target configuration apps system project config directory data ops bots tool targets map apps.",
+    "cnt_fa_title": "Afsluit Actie UI Actie Knoppen:",
+    "cnt_fa_1_title": "Cancel Button UI Bot Knop:",
+    "cnt_fa_1_desc": "Annuleer en verlaat the venster formulier acties sluiten ongedaan the UI modale form the bot creation tools UI sluit knop the cancel logic bot actie venster UI.",
+    "cnt_fa_2_title": "Submit Create Task UI Ops bot Actie Generatie Tool Ops Bot Start UI Knoppen Formulier Actie Start Logic Verzenden Bot AI Tool Actie:",
+    "cnt_fa_2_desc": "Start The AI. the submit the bot generation in queue operations in pending state system AI agent triggers actions operations from the AI logic operations in network agent bot logic tools the dashboard the list of UI the agent process setup AI tooling the task dashboard AI tracking operations agent logic ops systems bot in pending tracker bot ops tools from task generation start the queue tracking operation tools system ops agents generation tool triggers logic dashboard update bot logic tools in state tracking setup tool triggers system dashboard tracking system process agents ops tracking bot operations tools AI tracking list operations bot tools agents updates in list tool list ops the bot queue generation system op the tracking task log the dashboard agents lists creation operations start dashboard system operations bots AI start."
+  },
+  "database": {
+    "title": "Database",
+    "intro": "De module <strong>Database connecties</strong> is de basis structuur voor de software. De Single Source of Trust ligt logisch hier gebonden.",
+    "actions_title": "Acties",
+    "act_b1_title": "Exporteer en Downloaden (Blauwe Knop)",
+    "act_b1_desc": "Sla data of query logica op naar lokaal in <code>.sql</code> bestand.",
+    "act_b2_title": "Exporteren naar Source Map (Oranje Knop)",
+    "act_b2_desc": "Exporteert de sql logica schema lokaal de map directory structs in opslagen verwerken.",
+    "act_b3_title": "Verbind and Inzien (Groene Knop)",
+    "act_b3_desc": "Visualisatie Data Flow over Schema.",
+    "td_title": "Tabellen Details",
+    "td_intro": "Indien een DB geselecteerd is start the X Ray view in de entity logics van applicaties in beeld weergave structuur logs.",
+    "ts_title": "Structuur log tabel views (Schema Log)",
+    "ts_h1": "Kolom",
+    "ts_h2": "De Doelen",
+    "ts_r1_1": "<strong>Kolom</strong>",
+    "ts_r1_2": "Waardes van the log veld (voorbeelden <code>claim_number</code>).",
+    "ts_r2_1": "<strong>Types</strong>",
+    "ts_r2_2": "De format technische waarde. <code>int</code> nummers, <code>varchar</code> teksten.",
+    "ts_r3_1": "<strong>Null Waardes</strong>",
+    "ts_r3_2": "Als een waarden mag missen in regel entry veld in tables struct boolean opties of restricties.",
+    "ts_r4_1": "<strong>Standaarden Waarde</strong>",
+    "ts_r4_2": "Wat t moet in vul default als het leeg verzonden actie text.",
+    "ts_r5_1": "<strong>De Sleutel Struct</strong>",
+    "ts_r5_2": "Primary Key connecties logic identiteit markers in records (🔑)."
+  },
+  "source_code": {
+    "title": "Source Code",
+    "intro": "The Source Code dashboard is where your project transitions from high-level \"Concept\" to actual digital infrastructure. This is a live file system where Think4ever manages every script, style, and configuration file of any project.",
+    "ns_title": "Navigation & Structure",
+    "ns_intro": "The Files Browser provides a standard, intuitive directory structure. In your current view (the insurance folder), the AI has organized the project into logical sections:",
+    "ns_b1_title": "config/:",
+    "ns_b1_desc": "Contains environment settings and database connection strings.",
+    "ns_b2_title": "public/:",
+    "ns_b2_desc": "The \"Front Door\" of your app—houses the HTML, CSS, and images the user actually sees.",
+    "ns_b3_title": "routes/:",
+    "ns_b3_desc": "The \"Traffic Controller\"—defines the paths (URLs) for your application (e.g., /dashboard or /expenditures).",
+    "ns_b4_title": "utils/:",
+    "ns_b4_desc": "Helper functions and small scripts that handle repetitive tasks.",
+    "apf_title": "Anatomy of Your Project Files",
+    "apf_intro": "Every file listed includes its Type, Size, and the Last Modified date, giving you a clear audit trail of development.",
+    "apf_t1": "Notable File",
+    "apf_t2": "Description",
+    "apf_r1_1": "db.sql",
+    "apf_r1_2": "A snapshot of your database structure, often created by the \"Export to Source\" function.",
+    "apf_r2_1": "insuranceserver.js",
+    "apf_r2_2": "The main entry point for your backend server—this is the \"brain\" that connects your UI to your data.",
+    "apf_r3_1": "package.json",
+    "apf_r3_2": "A manifest file that lists all the technical dependencies your project needs to run.",
+    "apf_r4_1": "README.md",
+    "apf_r4_2": "The project's documentation, detailing how to install and use the application.",
+    "apf_outro": "In the Source Code section, navigating and managing your technical assets is designed to be as intuitive as a standard desktop environment, but with high-end developer tools built right in.",
+    "nt_title": "Navigation & Tracking",
+    "nt_b1_title": "Breadcrumb Navigation:",
+    "nt_b1_desc": "Use the dynamic path links (e.g., Root / public / assets) at the top of the browser to move instantly between parent and child directories.",
+    "nt_b2_title": "File Metadata:",
+    "nt_b2_desc": "Every asset is listed with its Name, Type (JS, HTML, CSS, etc.), Size, and the exact Timestamp of the last modification. This provides a clear audit trail for every change the AI agents make.",
+    "ifa_title": "Individual File Action",
+    "ifa_intro": "For surgical control over your application's files, each row in the browser offers four primary actions:",
+    "ifa_b1_title": "View — Read-Only Mode",
+    "ifa_b1_d1_title": "The Function:",
+    "ifa_b1_d1_desc": "Opens a quick-look preview of the file's content.",
+    "ifa_b1_d2_title": "The Utility:",
+    "ifa_b1_d2_desc": "Perfect for a \"spot check\" to verify that a logic fix or a UI update was applied correctly without accidentally changing anything.",
+    "ifa_b2_title": "Edit — Full-Screen Code Editor",
+    "ifa_b2_d1_title": "The Function:",
+    "ifa_b2_d1_desc": "Launches a professional-grade development environment featuring the high-contrast Catppuccin theme.",
+    "ifa_b2_d2_title": "The Utility:",
+    "ifa_b2_d2_desc": "Features full syntax highlighting, making it easy to manually tweak code or add custom comments. It's the ultimate tool for \"Final Form\" personalization.",
+    "ifa_b3_title": "Download — Local Export",
+    "ifa_b3_d1_title": "The Function:",
+    "ifa_b3_d1_desc": "Instantly saves the specific file to your computer.",
+    "ifa_b3_d2_title": "The Utility:",
+    "ifa_b3_d2_desc": "Use this if you need to share a specific script with a collaborator or want to keep a local backup of a critical configuration file like db.sql.",
+    "ifa_b4_title": "Delete — Secure Removal",
+    "ifa_b4_d1_title": "The Function:",
+    "ifa_b4_d1_desc": "Removes the file from the project directory.",
+    "ifa_b4_d2_title": "The Utility:",
+    "ifa_b4_d2_desc": "Includes a confirmation step to prevent accidental loss of data. Use this to prune legacy files or experimental scripts that are no longer needed."
+  },
+  "containers": {
+    "title": "Containers",
+    "intro": "De module <strong>Containers</strong> is waar uw applicatie overgaat van een verzameling bestanden naar een draagbaar, productierijp systeem. Door gebruik te maken van <strong>Docker</strong>, zorgt Think4ever AI ervoor dat uw project identiek draait op uw lokale machine, een staging-server of de cloud.",
+    "fpt_title": "Er zijn vier krachtige tabbladen:",
+    "t1_h1": "Tabblad",
+    "t1_h2": "Wat het mogelijk maakt",
+    "r1_c1": "Configuratie",
+    "r1_c2": "Bekijk uw docker-compose.yml-bestand. Schakel over naar de <strong>Visuele Modus</strong> om uw servers als interactieve kaarten te bekijken.",
+    "r2_c1": "Assistent Agent",
+    "r2_c2": "Bevalt een instelling u niet? Vertel het de AI: <em>\"Verander de databasepoort naar 3306\"</em> of <em>\"Voeg een back-upservice toe.\"</em>",
+    "r3_c1": "Geschiedenis",
+    "r3_c2": "Een \"Tijdmachine\" voor uw infrastructuur. Als een wijziging de build verbreekt, schakelt u direct terug naar een eerdere versie.",
+    "r4_c1": "Builds",
+    "r4_c2": "De laatste stap. <strong>Download als ZIP</strong> voor uw lokale machine of <strong>Push naar Bron</strong> om het aan uw projectbestanden toe te voegen."
+  },
+  "dev_sidebar": {
+    "user_manual": "Gebruikershandleiding",
+    "getting_started": "Aan de Slag",
+    "introduction": "Introductie",
+    "key_features": "Kenmerken",
+    "dashboard": "Dashboard",
+    "create_project": "Maak een Project",
+    "project_settings": "Projectinstellingen",
+    "api_keys": "API Sleutels",
+    "add_api_key": "Nieuwe API Sleutel",
+    "version_control": "Versiebeheer",
+    "reverse_engineering": "Reverse Engineering",
+    "structure_ideation": "Structuur en Ideatie",
+    "requirements": "Vereisten",
+    "concept": "Concept",
+    "business_flow": "Zakelijke Stroom",
+    "data_objects": "Data Objecten",
+    "roles_permissions": "Rollen & Rechten",
+    "business_rules": "Bedrijfsregels",
+    "integration_maps": "Integratie Kaarten",
+    "design_docs": "Ontwerp en Documenten",
+    "ui_design": "UI Ontwerp",
+    "technical_diagrams": "Technische Diagrammen",
+    "available_diagrams": "Beschikbare Diagram Types",
+    "requirements_docs": "Vereisten Documenten",
+    "development": "Ontwikkeling",
+    "tasks": "Taken",
+    "database": "Database",
+    "source_code": "Broncode",
+    "containers": "Containers",
+    "others": "Anderen",
+    "changelog": "Wijzigingslogboek"
+  }
+}

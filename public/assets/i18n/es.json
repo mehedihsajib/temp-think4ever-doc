@@ -1,0 +1,50 @@
+{
+  "nav": {
+    "overview": "Resumen",
+    "merchant": "Comerciante",
+    "consumer": "Consumidor",
+    "blog": "Blog",
+    "changelog": "Registro de cambios",
+    "search_placeholder": "Buscar...",
+    "dashboard": "Panel de control"
+  },
+  "meta": {
+    "lang_name": "Español"
+  },
+  "header": {
+    "english": "English",
+    "spanish": "Español"
+  },
+  "consumer_sidebar": {
+    "title": "Documentos Billetera Consumidor",
+    "section_getting_started": "Empezando",
+    "overview": "Resumen",
+    "getting_started": "Empezando",
+    "account_setup": "Configuración de cuenta",
+    "section_using_wallet": "Usando Tu Billetera",
+    "making_payments": "Haciendo Pagos",
+    "wallet_management": "Gestión de Billetera",
+    "p2p_transfers": "Transferencias P2P",
+    "section_settings_support": "Configuración y Soporte",
+    "settings_security": "Configuraciones y Seguridad",
+    "troubleshooting": "Solución de problemas",
+    "section_other_docs": "Otros Documentos",
+    "merchant_wallet_docs": "Documentos Billetera Comerciante",
+    "changelog": "Registro de cambios"
+  },
+  "merchant_sidebar": {
+    "title": "Billetera Comerciante",
+    "section_getting_started": "Empezando",
+    "overview": "Resumen",
+    "getting_started": "Empezando",
+    "account_setup": "Configuración y Verificación",
+    "section_payments": "Pagos",
+    "qr_payments": "Pagos con Código QR",
+    "nfc_payments": "Pagos NFC",
+    "section_management": "Gestión",
+    "transaction_management": "Gestión de Transacciones",
+    "settings_config": "Gestión de tienda",
+    "section_support": "Soporte",
+    "troubleshooting": "Solución de problemas"
+  }
+}

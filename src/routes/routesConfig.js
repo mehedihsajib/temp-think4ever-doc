@@ -1,0 +1,337 @@
+import { lazy } from 'react';
+
+const DesignerAgentAccessReviewSod = lazy(() => import('../content/designer/agent-access-review-sod'));
+const DesignerAgentAnomalyFinder = lazy(() => import('../content/designer/agent-anomaly-finder'));
+const DesignerAgentApiDocGenerator = lazy(() => import('../content/designer/agent-api-doc-generator'));
+const DesignerAgentAsc606 = lazy(() => import('../content/designer/agent-asc-606'));
+const DesignerAgentAuditTrail = lazy(() => import('../content/designer/agent-audit-trail'));
+const DesignerAgentAuthAccess = lazy(() => import('../content/designer/agent-auth-access'));
+const DesignerAgentBoardReportCompiler = lazy(() => import('../content/designer/agent-board-report-compiler'));
+const DesignerAgentBrandGuidelineVerifier = lazy(() => import('../content/designer/agent-brand-guideline-verifier'));
+const DesignerAgentBrandVoiceChecker = lazy(() => import('../content/designer/agent-brand-voice-checker'));
+const DesignerAgentBusinessRule = lazy(() => import('../content/designer/agent-business-rule'));
+const DesignerAgentCareGapFinder = lazy(() => import('../content/designer/agent-care-gap-finder'));
+const DesignerAgentCatalogDataQualityAuditor = lazy(() => import('../content/designer/agent-catalog-data-quality-auditor'));
+const DesignerAgentCatalogHygiene = lazy(() => import('../content/designer/agent-catalog-hygiene'));
+const DesignerAgentCcpaCpra = lazy(() => import('../content/designer/agent-ccpa-cpra'));
+const DesignerAgentCisControls = lazy(() => import('../content/designer/agent-cis-controls'));
+const DesignerAgentClinicalNoteSummarizer = lazy(() => import('../content/designer/agent-clinical-note-summarizer'));
+const DesignerAgentCodeReviewer = lazy(() => import('../content/designer/agent-code-reviewer'));
+const DesignerAgentComparableFinder = lazy(() => import('../content/designer/agent-comparable-finder'));
+const DesignerAgentComplianceFrameworkMapper = lazy(() => import('../content/designer/agent-compliance-framework-mapper'));
+const DesignerAgentConceptVsCode = lazy(() => import('../content/designer/agent-concept-vs-code'));
+const DesignerAgentConfigAuditor = lazy(() => import('../content/designer/agent-config-auditor'));
+const DesignerAgentContentSeoAuditor = lazy(() => import('../content/designer/agent-content-seo-auditor'));
+const DesignerAgentContractRiskReviewer = lazy(() => import('../content/designer/agent-contract-risk-reviewer'));
+const DesignerAgentCrmDataQualityAuditor = lazy(() => import('../content/designer/agent-crm-data-quality-auditor'));
+const DesignerAgentCsatAnalyzer = lazy(() => import('../content/designer/agent-csat-analyzer'));
+const DesignerAgentDataQualitySentinel = lazy(() => import('../content/designer/agent-data-quality-sentinel'));
+const DesignerAgentDatabaseNormalization = lazy(() => import('../content/designer/agent-database-normalization'));
+const DesignerAgentDatabaseSchemaDocs = lazy(() => import('../content/designer/agent-database-schema-docs'));
+const DesignerAgentDbHealthOptimizer = lazy(() => import('../content/designer/agent-db-health-optimizer'));
+const DesignerAgentDemandForecastHelper = lazy(() => import('../content/designer/agent-demand-forecast-helper'));
+const DesignerAgentDependencyCve = lazy(() => import('../content/designer/agent-dependency-cve'));
+const DesignerAgentDpiaBuilder = lazy(() => import('../content/designer/agent-dpia-builder'));
+const DesignerAgentEnvSecretsChecker = lazy(() => import('../content/designer/agent-env-secrets-checker'));
+const DesignerAgentExpensePolicy = lazy(() => import('../content/designer/agent-expense-policy'));
+const DesignerAgentFaqGenerator = lazy(() => import('../content/designer/agent-faq-generator'));
+const DesignerAgentFeedbackSummarizer = lazy(() => import('../content/designer/agent-feedback-summarizer'));
+const DesignerAgentGaapStatement = lazy(() => import('../content/designer/agent-gaap-statement'));
+const DesignerAgentGdprCompliance = lazy(() => import('../content/designer/agent-gdpr-compliance'));
+const DesignerAgentHipaaComplianceChecker = lazy(() => import('../content/designer/agent-hipaa-compliance-checker'));
+const DesignerAgentHipaaSafeguards = lazy(() => import('../content/designer/agent-hipaa-safeguards'));
+const DesignerAgentHl7FhirConformanceChecker = lazy(() => import('../content/designer/agent-hl7-fhir-conformance-checker'));
+const DesignerAgentHrPolicyComplianceChecker = lazy(() => import('../content/designer/agent-hr-policy-compliance-checker'));
+const DesignerAgentHrPolicyGapAuditor = lazy(() => import('../content/designer/agent-hr-policy-gap-auditor'));
+const DesignerAgentIntegrationSecurity = lazy(() => import('../content/designer/agent-integration-security'));
+const DesignerAgentInventoryReport = lazy(() => import('../content/designer/agent-inventory-report'));
+const DesignerAgentInventoryRiskWatcher = lazy(() => import('../content/designer/agent-inventory-risk-watcher'));
+const DesignerAgentIso27001 = lazy(() => import('../content/designer/agent-iso-27001'));
+const DesignerAgentKpiDigest = lazy(() => import('../content/designer/agent-kpi-digest'));
+const DesignerAgentLeadQualifier = lazy(() => import('../content/designer/agent-lead-qualifier'));
+const DesignerAgentLeaseClauseChecker = lazy(() => import('../content/designer/agent-lease-clause-checker'));
+const DesignerAgentLeaseReviewer = lazy(() => import('../content/designer/agent-lease-reviewer'));
+const DesignerAgentLicenseComplianceScanner = lazy(() => import('../content/designer/agent-license-compliance-scanner'));
+const DesignerAgentLogErrorTriage = lazy(() => import('../content/designer/agent-log-error-triage'));
+const DesignerAgentLogisticsDelayTracker = lazy(() => import('../content/designer/agent-logistics-delay-tracker'));
+const DesignerAgentMedicalCodingAssistant = lazy(() => import('../content/designer/agent-medical-coding-assistant'));
+const DesignerAgentNistCsf = lazy(() => import('../content/designer/agent-nist-csf'));
+const DesignerAgentObligationTracker = lazy(() => import('../content/designer/agent-obligation-tracker'));
+const DesignerAgentOwaspTop10 = lazy(() => import('../content/designer/agent-owasp-top-10'));
+const DesignerAgentPciDss = lazy(() => import('../content/designer/agent-pci-dss'));
+const DesignerAgentPiiData = lazy(() => import('../content/designer/agent-pii-data'));
+const DesignerAgentPipelineHygiene = lazy(() => import('../content/designer/agent-pipeline-hygiene'));
+const DesignerAgentPoAnomalyDetector = lazy(() => import('../content/designer/agent-po-anomaly-detector'));
+const DesignerAgentPolicyQaConcierge = lazy(() => import('../content/designer/agent-policy-qa-concierge'));
+const DesignerAgentPricingAnalyzer = lazy(() => import('../content/designer/agent-pricing-analyzer'));
+const DesignerAgentProcurementSpendAnalyzer = lazy(() => import('../content/designer/agent-procurement-spend-analyzer'));
+const DesignerAgentPropertyDataAnalyzer = lazy(() => import('../content/designer/agent-property-data-analyzer'));
+const DesignerAgentPtoPolicyQa = lazy(() => import('../content/designer/agent-pto-policy-qa'));
+const DesignerAgentReleaseNotesGenerator = lazy(() => import('../content/designer/agent-release-notes-generator'));
+const DesignerAgentRentRollReport = lazy(() => import('../content/designer/agent-rent-roll-report'));
+const DesignerAgentReorderPlanner = lazy(() => import('../content/designer/agent-reorder-planner'));
+const DesignerAgentReqTraceability = lazy(() => import('../content/designer/agent-req-traceability'));
+const DesignerAgentRestOpenapi = lazy(() => import('../content/designer/agent-rest-openapi'));
+const DesignerAgentResumeScreener = lazy(() => import('../content/designer/agent-resume-screener'));
+const DesignerAgentReviewSummarizer = lazy(() => import('../content/designer/agent-review-summarizer'));
+const DesignerAgentRiskRegisterManager = lazy(() => import('../content/designer/agent-risk-register-manager'));
+const DesignerAgentRolePermission = lazy(() => import('../content/designer/agent-role-permission'));
+const DesignerAgentSchemaDocGenerator = lazy(() => import('../content/designer/agent-schema-doc-generator'));
+const DesignerAgentSecretScanner = lazy(() => import('../content/designer/agent-secret-scanner'));
+const DesignerAgentSecurityAnalyst = lazy(() => import('../content/designer/agent-security-analyst'));
+const DesignerAgentSoc2 = lazy(() => import('../content/designer/agent-soc-2'));
+const DesignerAgentSoxItgc = lazy(() => import('../content/designer/agent-sox-itgc'));
+const DesignerAgentSqlExplorer = lazy(() => import('../content/designer/agent-sql-explorer'));
+const DesignerAgentSupplierScorecard = lazy(() => import('../content/designer/agent-supplier-scorecard'));
+const DesignerAgentTechDebtMapper = lazy(() => import('../content/designer/agent-tech-debt-mapper'));
+const DesignerAgentTenantScreeningSummary = lazy(() => import('../content/designer/agent-tenant-screening-summary'));
+const DesignerAgentTestGapFinder = lazy(() => import('../content/designer/agent-test-gap-finder'));
+const DesignerAgentTicketTriage = lazy(() => import('../content/designer/agent-ticket-triage'));
+const DesignerAgentTwelveFactor = lazy(() => import('../content/designer/agent-twelve-factor'));
+const DesignerAgentUiConcept = lazy(() => import('../content/designer/agent-ui-concept'));
+const DesignerAgentWcagAccessibility = lazy(() => import('../content/designer/agent-wcag-accessibility'));
+const DesignerApiEndpoints = lazy(() => import('../content/designer/api-endpoints'));
+const DesignerApiKeys = lazy(() => import('../content/designer/api-keys'));
+const DesignerAvailableDiagramTypes = lazy(() => import('../content/designer/available-diagram-types'));
+const DesignerBusinessFlow = lazy(() => import('../content/designer/business-flow'));
+const DesignerBusinessRules = lazy(() => import('../content/designer/business-rules'));
+const DesignerCollaboration = lazy(() => import('../content/designer/collaboration'));
+const DesignerConcept = lazy(() => import('../content/designer/concept'));
+const DesignerContainers = lazy(() => import('../content/designer/containers'));
+const DesignerCreateProject = lazy(() => import('../content/designer/create-project'));
+const DesignerDashboard = lazy(() => import('../content/designer/dashboard'));
+const DesignerDataObjects = lazy(() => import('../content/designer/data-objects'));
+const DesignerDatabase = lazy(() => import('../content/designer/database'));
+const DesignerDesignDocs = lazy(() => import('../content/designer/design-docs'));
+const DesignerEcosystemIntegration = lazy(() => import('../content/designer/ecosystem-integration'));
+const DesignerEventsJobs = lazy(() => import('../content/designer/events-jobs'));
+const DesignerFeedback = lazy(() => import('../content/designer/feedback'));
+const DesignerIntegrationMaps = lazy(() => import('../content/designer/integration-maps'));
+const DesignerIntroduction = lazy(() => import('../content/designer/introduction'));
+const DesignerIssues = lazy(() => import('../content/designer/issues'));
+const DesignerJira = lazy(() => import('../content/designer/jira'));
+const DesignerKeyFeatures = lazy(() => import('../content/designer/key-features'));
+const DesignerMcpAmazonq = lazy(() => import('../content/designer/mcp-amazonq'));
+const DesignerMcpClaudeCode = lazy(() => import('../content/designer/mcp-claude-code'));
+const DesignerMcpClaudeDesktop = lazy(() => import('../content/designer/mcp-claude-desktop'));
+const DesignerMcpCodex = lazy(() => import('../content/designer/mcp-codex'));
+const DesignerMcpCursor = lazy(() => import('../content/designer/mcp-cursor'));
+const DesignerMcpGemini = lazy(() => import('../content/designer/mcp-gemini'));
+const DesignerMcpKiro = lazy(() => import('../content/designer/mcp-kiro'));
+const DesignerMcpOverview = lazy(() => import('../content/designer/mcp-overview'));
+const DesignerMcpTestAndTools = lazy(() => import('../content/designer/mcp-test-and-tools'));
+const DesignerMcpVscode = lazy(() => import('../content/designer/mcp-vscode'));
+const DesignerMcpWindsurf = lazy(() => import('../content/designer/mcp-windsurf'));
+const DesignerPages = lazy(() => import('../content/designer/pages'));
+const DesignerProjectSettings = lazy(() => import('../content/designer/project-settings'));
+const DesignerRequirements = lazy(() => import('../content/designer/requirements'));
+const DesignerRequirementsDocs = lazy(() => import('../content/designer/requirements-docs'));
+const DesignerReverseEngineering = lazy(() => import('../content/designer/reverse-engineering'));
+const DesignerRolesPermissions = lazy(() => import('../content/designer/roles-permissions'));
+const DesignerSidekick = lazy(() => import('../content/designer/sidekick'));
+const DesignerSourceCode = lazy(() => import('../content/designer/source-code'));
+const DesignerStateLifecycle = lazy(() => import('../content/designer/state-lifecycle'));
+const DesignerStructureTemplates = lazy(() => import('../content/designer/structure-templates'));
+const DesignerTasks = lazy(() => import('../content/designer/tasks'));
+const DesignerTechnicalDiagrams = lazy(() => import('../content/designer/technical-diagrams'));
+const DesignerTheme = lazy(() => import('../content/designer/theme'));
+const DesignerThinkApi = lazy(() => import('../content/designer/think-api'));
+const DesignerThinkMcp = lazy(() => import('../content/designer/think-mcp'));
+const DesignerUiDesign = lazy(() => import('../content/designer/ui-design'));
+const DesignerVersionControl = lazy(() => import('../content/designer/version-control'));
+const DeveloperAiAssistant = lazy(() => import('../content/developer/ai-assistant'));
+const DeveloperDatabase = lazy(() => import('../content/developer/database'));
+const DeveloperDeveloperMode = lazy(() => import('../content/developer/developer-mode'));
+const DeveloperGeneratingConcepts = lazy(() => import('../content/developer/generating-concepts'));
+const DeveloperIssues = lazy(() => import('../content/developer/issues'));
+const DeveloperPublicAccess = lazy(() => import('../content/developer/public-access'));
+const DeveloperRunApplication = lazy(() => import('../content/developer/run-application'));
+const DeveloperStartNewProject = lazy(() => import('../content/developer/start-new-project'));
+const DeveloperStructure = lazy(() => import('../content/developer/structure'));
+const DeveloperTerminal = lazy(() => import('../content/developer/terminal'));
+const DeveloperTestingApplication = lazy(() => import('../content/developer/testing-application'));
+const DeveloperVsCodeIntegration = lazy(() => import('../content/developer/vs-code-integration'));
+const OnboardingAddApiKey = lazy(() => import('../content/onboarding/add-api-key'));
+const OnboardingBuildProject = lazy(() => import('../content/onboarding/build-project'));
+const OnboardingCreateAccount = lazy(() => import('../content/onboarding/create-account'));
+const OnboardingCreateProject = lazy(() => import('../content/onboarding/create-project'));
+const OnboardingIntroduction = lazy(() => import('../content/onboarding/introduction'));
+const PortalApiKeysUsages = lazy(() => import('../content/portal/api-keys-usages'));
+const PortalAutoTopup = lazy(() => import('../content/portal/auto-topup'));
+const PortalBilling = lazy(() => import('../content/portal/billing'));
+const PortalBuyMoreCredits = lazy(() => import('../content/portal/buy-more-credits'));
+const PortalDashboard = lazy(() => import('../content/portal/dashboard'));
+const PortalSettings = lazy(() => import('../content/portal/settings'));
+const PortalSupport = lazy(() => import('../content/portal/support'));
+const PortalUsageAndAnalysis = lazy(() => import('../content/portal/usage-and-analysis'));
+const PortalWorkspace = lazy(() => import('../content/portal/workspace'));
+const ReverseEngineeringReverseEngineering = lazy(() => import('../content/reverse-engineering/reverse-engineering'));
+
+export const routes = [
+  { path: '/designer/agent-access-review-sod', Component: DesignerAgentAccessReviewSod },
+  { path: '/designer/agent-anomaly-finder', Component: DesignerAgentAnomalyFinder },
+  { path: '/designer/agent-api-doc-generator', Component: DesignerAgentApiDocGenerator },
+  { path: '/designer/agent-asc-606', Component: DesignerAgentAsc606 },
+  { path: '/designer/agent-audit-trail', Component: DesignerAgentAuditTrail },
+  { path: '/designer/agent-auth-access', Component: DesignerAgentAuthAccess },
+  { path: '/designer/agent-board-report-compiler', Component: DesignerAgentBoardReportCompiler },
+  { path: '/designer/agent-brand-guideline-verifier', Component: DesignerAgentBrandGuidelineVerifier },
+  { path: '/designer/agent-brand-voice-checker', Component: DesignerAgentBrandVoiceChecker },
+  { path: '/designer/agent-business-rule', Component: DesignerAgentBusinessRule },
+  { path: '/designer/agent-care-gap-finder', Component: DesignerAgentCareGapFinder },
+  { path: '/designer/agent-catalog-data-quality-auditor', Component: DesignerAgentCatalogDataQualityAuditor },
+  { path: '/designer/agent-catalog-hygiene', Component: DesignerAgentCatalogHygiene },
+  { path: '/designer/agent-ccpa-cpra', Component: DesignerAgentCcpaCpra },
+  { path: '/designer/agent-cis-controls', Component: DesignerAgentCisControls },
+  { path: '/designer/agent-clinical-note-summarizer', Component: DesignerAgentClinicalNoteSummarizer },
+  { path: '/designer/agent-code-reviewer', Component: DesignerAgentCodeReviewer },
+  { path: '/designer/agent-comparable-finder', Component: DesignerAgentComparableFinder },
+  { path: '/designer/agent-compliance-framework-mapper', Component: DesignerAgentComplianceFrameworkMapper },
+  { path: '/designer/agent-concept-vs-code', Component: DesignerAgentConceptVsCode },
+  { path: '/designer/agent-config-auditor', Component: DesignerAgentConfigAuditor },
+  { path: '/designer/agent-content-seo-auditor', Component: DesignerAgentContentSeoAuditor },
+  { path: '/designer/agent-contract-risk-reviewer', Component: DesignerAgentContractRiskReviewer },
+  { path: '/designer/agent-crm-data-quality-auditor', Component: DesignerAgentCrmDataQualityAuditor },
+  { path: '/designer/agent-csat-analyzer', Component: DesignerAgentCsatAnalyzer },
+  { path: '/designer/agent-data-quality-sentinel', Component: DesignerAgentDataQualitySentinel },
+  { path: '/designer/agent-database-normalization', Component: DesignerAgentDatabaseNormalization },
+  { path: '/designer/agent-database-schema-docs', Component: DesignerAgentDatabaseSchemaDocs },
+  { path: '/designer/agent-db-health-optimizer', Component: DesignerAgentDbHealthOptimizer },
+  { path: '/designer/agent-demand-forecast-helper', Component: DesignerAgentDemandForecastHelper },
+  { path: '/designer/agent-dependency-cve', Component: DesignerAgentDependencyCve },
+  { path: '/designer/agent-dpia-builder', Component: DesignerAgentDpiaBuilder },
+  { path: '/designer/agent-env-secrets-checker', Component: DesignerAgentEnvSecretsChecker },
+  { path: '/designer/agent-expense-policy', Component: DesignerAgentExpensePolicy },
+  { path: '/designer/agent-faq-generator', Component: DesignerAgentFaqGenerator },
+  { path: '/designer/agent-feedback-summarizer', Component: DesignerAgentFeedbackSummarizer },
+  { path: '/designer/agent-gaap-statement', Component: DesignerAgentGaapStatement },
+  { path: '/designer/agent-gdpr-compliance', Component: DesignerAgentGdprCompliance },
+  { path: '/designer/agent-hipaa-compliance-checker', Component: DesignerAgentHipaaComplianceChecker },
+  { path: '/designer/agent-hipaa-safeguards', Component: DesignerAgentHipaaSafeguards },
+  { path: '/designer/agent-hl7-fhir-conformance-checker', Component: DesignerAgentHl7FhirConformanceChecker },
+  { path: '/designer/agent-hr-policy-compliance-checker', Component: DesignerAgentHrPolicyComplianceChecker },
+  { path: '/designer/agent-hr-policy-gap-auditor', Component: DesignerAgentHrPolicyGapAuditor },
+  { path: '/designer/agent-integration-security', Component: DesignerAgentIntegrationSecurity },
+  { path: '/designer/agent-inventory-report', Component: DesignerAgentInventoryReport },
+  { path: '/designer/agent-inventory-risk-watcher', Component: DesignerAgentInventoryRiskWatcher },
+  { path: '/designer/agent-iso-27001', Component: DesignerAgentIso27001 },
+  { path: '/designer/agent-kpi-digest', Component: DesignerAgentKpiDigest },
+  { path: '/designer/agent-lead-qualifier', Component: DesignerAgentLeadQualifier },
+  { path: '/designer/agent-lease-clause-checker', Component: DesignerAgentLeaseClauseChecker },
+  { path: '/designer/agent-lease-reviewer', Component: DesignerAgentLeaseReviewer },
+  { path: '/designer/agent-license-compliance-scanner', Component: DesignerAgentLicenseComplianceScanner },
+  { path: '/designer/agent-log-error-triage', Component: DesignerAgentLogErrorTriage },
+  { path: '/designer/agent-logistics-delay-tracker', Component: DesignerAgentLogisticsDelayTracker },
+  { path: '/designer/agent-medical-coding-assistant', Component: DesignerAgentMedicalCodingAssistant },
+  { path: '/designer/agent-nist-csf', Component: DesignerAgentNistCsf },
+  { path: '/designer/agent-obligation-tracker', Component: DesignerAgentObligationTracker },
+  { path: '/designer/agent-owasp-top-10', Component: DesignerAgentOwaspTop10 },
+  { path: '/designer/agent-pci-dss', Component: DesignerAgentPciDss },
+  { path: '/designer/agent-pii-data', Component: DesignerAgentPiiData },
+  { path: '/designer/agent-pipeline-hygiene', Component: DesignerAgentPipelineHygiene },
+  { path: '/designer/agent-po-anomaly-detector', Component: DesignerAgentPoAnomalyDetector },
+  { path: '/designer/agent-policy-qa-concierge', Component: DesignerAgentPolicyQaConcierge },
+  { path: '/designer/agent-pricing-analyzer', Component: DesignerAgentPricingAnalyzer },
+  { path: '/designer/agent-procurement-spend-analyzer', Component: DesignerAgentProcurementSpendAnalyzer },
+  { path: '/designer/agent-property-data-analyzer', Component: DesignerAgentPropertyDataAnalyzer },
+  { path: '/designer/agent-pto-policy-qa', Component: DesignerAgentPtoPolicyQa },
+  { path: '/designer/agent-release-notes-generator', Component: DesignerAgentReleaseNotesGenerator },
+  { path: '/designer/agent-rent-roll-report', Component: DesignerAgentRentRollReport },
+  { path: '/designer/agent-reorder-planner', Component: DesignerAgentReorderPlanner },
+  { path: '/designer/agent-req-traceability', Component: DesignerAgentReqTraceability },
+  { path: '/designer/agent-rest-openapi', Component: DesignerAgentRestOpenapi },
+  { path: '/designer/agent-resume-screener', Component: DesignerAgentResumeScreener },
+  { path: '/designer/agent-review-summarizer', Component: DesignerAgentReviewSummarizer },
+  { path: '/designer/agent-risk-register-manager', Component: DesignerAgentRiskRegisterManager },
+  { path: '/designer/agent-role-permission', Component: DesignerAgentRolePermission },
+  { path: '/designer/agent-schema-doc-generator', Component: DesignerAgentSchemaDocGenerator },
+  { path: '/designer/agent-secret-scanner', Component: DesignerAgentSecretScanner },
+  { path: '/designer/agent-security-analyst', Component: DesignerAgentSecurityAnalyst },
+  { path: '/designer/agent-soc-2', Component: DesignerAgentSoc2 },
+  { path: '/designer/agent-sox-itgc', Component: DesignerAgentSoxItgc },
+  { path: '/designer/agent-sql-explorer', Component: DesignerAgentSqlExplorer },
+  { path: '/designer/agent-supplier-scorecard', Component: DesignerAgentSupplierScorecard },
+  { path: '/designer/agent-tech-debt-mapper', Component: DesignerAgentTechDebtMapper },
+  { path: '/designer/agent-tenant-screening-summary', Component: DesignerAgentTenantScreeningSummary },
+  { path: '/designer/agent-test-gap-finder', Component: DesignerAgentTestGapFinder },
+  { path: '/designer/agent-ticket-triage', Component: DesignerAgentTicketTriage },
+  { path: '/designer/agent-twelve-factor', Component: DesignerAgentTwelveFactor },
+  { path: '/designer/agent-ui-concept', Component: DesignerAgentUiConcept },
+  { path: '/designer/agent-wcag-accessibility', Component: DesignerAgentWcagAccessibility },
+  { path: '/designer/api-endpoints', Component: DesignerApiEndpoints },
+  { path: '/designer/api-keys', Component: DesignerApiKeys },
+  { path: '/designer/available-diagram-types', Component: DesignerAvailableDiagramTypes },
+  { path: '/designer/business-flow', Component: DesignerBusinessFlow },
+  { path: '/designer/business-rules', Component: DesignerBusinessRules },
+  { path: '/designer/collaboration', Component: DesignerCollaboration },
+  { path: '/designer/concept', Component: DesignerConcept },
+  { path: '/designer/containers', Component: DesignerContainers },
+  { path: '/designer/create-project', Component: DesignerCreateProject },
+  { path: '/designer/dashboard', Component: DesignerDashboard },
+  { path: '/designer/data-objects', Component: DesignerDataObjects },
+  { path: '/designer/database', Component: DesignerDatabase },
+  { path: '/designer/design-docs', Component: DesignerDesignDocs },
+  { path: '/designer/ecosystem-integration', Component: DesignerEcosystemIntegration },
+  { path: '/designer/events-jobs', Component: DesignerEventsJobs },
+  { path: '/designer/feedback', Component: DesignerFeedback },
+  { path: '/designer/integration-maps', Component: DesignerIntegrationMaps },
+  { path: '/designer/introduction', Component: DesignerIntroduction },
+  { path: '/designer/issues', Component: DesignerIssues },
+  { path: '/designer/jira', Component: DesignerJira },
+  { path: '/designer/key-features', Component: DesignerKeyFeatures },
+  { path: '/designer/mcp-amazonq', Component: DesignerMcpAmazonq },
+  { path: '/designer/mcp-claude-code', Component: DesignerMcpClaudeCode },
+  { path: '/designer/mcp-claude-desktop', Component: DesignerMcpClaudeDesktop },
+  { path: '/designer/mcp-codex', Component: DesignerMcpCodex },
+  { path: '/designer/mcp-cursor', Component: DesignerMcpCursor },
+  { path: '/designer/mcp-gemini', Component: DesignerMcpGemini },
+  { path: '/designer/mcp-kiro', Component: DesignerMcpKiro },
+  { path: '/designer/mcp-overview', Component: DesignerMcpOverview },
+  { path: '/designer/mcp-test-and-tools', Component: DesignerMcpTestAndTools },
+  { path: '/designer/mcp-vscode', Component: DesignerMcpVscode },
+  { path: '/designer/mcp-windsurf', Component: DesignerMcpWindsurf },
+  { path: '/designer/pages', Component: DesignerPages },
+  { path: '/designer/project-settings', Component: DesignerProjectSettings },
+  { path: '/designer/requirements', Component: DesignerRequirements },
+  { path: '/designer/requirements-docs', Component: DesignerRequirementsDocs },
+  { path: '/designer/reverse-engineering', Component: DesignerReverseEngineering },
+  { path: '/designer/roles-permissions', Component: DesignerRolesPermissions },
+  { path: '/designer/sidekick', Component: DesignerSidekick },
+  { path: '/designer/source-code', Component: DesignerSourceCode },
+  { path: '/designer/state-lifecycle', Component: DesignerStateLifecycle },
+  { path: '/designer/structure-templates', Component: DesignerStructureTemplates },
+  { path: '/designer/tasks', Component: DesignerTasks },
+  { path: '/designer/technical-diagrams', Component: DesignerTechnicalDiagrams },
+  { path: '/designer/theme', Component: DesignerTheme },
+  { path: '/designer/think-api', Component: DesignerThinkApi },
+  { path: '/designer/think-mcp', Component: DesignerThinkMcp },
+  { path: '/designer/ui-design', Component: DesignerUiDesign },
+  { path: '/designer/version-control', Component: DesignerVersionControl },
+  { path: '/developer/ai-assistant', Component: DeveloperAiAssistant },
+  { path: '/developer/database', Component: DeveloperDatabase },
+  { path: '/developer/developer-mode', Component: DeveloperDeveloperMode },
+  { path: '/developer/generating-concepts', Component: DeveloperGeneratingConcepts },
+  { path: '/developer/issues', Component: DeveloperIssues },
+  { path: '/developer/public-access', Component: DeveloperPublicAccess },
+  { path: '/developer/run-application', Component: DeveloperRunApplication },
+  { path: '/developer/start-new-project', Component: DeveloperStartNewProject },
+  { path: '/developer/structure', Component: DeveloperStructure },
+  { path: '/developer/terminal', Component: DeveloperTerminal },
+  { path: '/developer/testing-application', Component: DeveloperTestingApplication },
+  { path: '/developer/vs-code-integration', Component: DeveloperVsCodeIntegration },
+  { path: '/onboarding/add-api-key', Component: OnboardingAddApiKey },
+  { path: '/onboarding/build-project', Component: OnboardingBuildProject },
+  { path: '/onboarding/create-account', Component: OnboardingCreateAccount },
+  { path: '/onboarding/create-project', Component: OnboardingCreateProject },
+  { path: '/onboarding/introduction', Component: OnboardingIntroduction },
+  { path: '/portal/api-keys-usages', Component: PortalApiKeysUsages },
+  { path: '/portal/auto-topup', Component: PortalAutoTopup },
+  { path: '/portal/billing', Component: PortalBilling },
+  { path: '/portal/buy-more-credits', Component: PortalBuyMoreCredits },
+  { path: '/portal/dashboard', Component: PortalDashboard },
+  { path: '/portal/settings', Component: PortalSettings },
+  { path: '/portal/support', Component: PortalSupport },
+  { path: '/portal/usage-and-analysis', Component: PortalUsageAndAnalysis },
+  { path: '/portal/workspace', Component: PortalWorkspace },
+  { path: '/reverse-engineering', Component: ReverseEngineeringReverseEngineering },
+];
