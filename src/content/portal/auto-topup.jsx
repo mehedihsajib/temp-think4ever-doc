@@ -1,124 +1,130 @@
-import React from 'react';
+import React from "react";
 
 const PortalAutoTopup = () => {
   return (
     <div className="doc-page-content">
-      <main className="cd-main-content" id="cd-main">
+      <main>
+        <h1>Auto-Top Up</h1>
 
-<h1 className="cd-page-title" id="cdHomeTitle">Auto-Top Up</h1>
-
-<section className="cd-overview" id="cdHomeOverview">
-<p className="cd-overview-text">
-            The Auto Top-up settings page lets you automate credit purchases
-            to prevent processing interruptions. When your credit balance
-            drops below a set floor, the system automatically bills your
-            linked payment method to replenish your account.
+        <section>
+          <p>
+            The Auto Top-up settings page lets you automate credit purchases to
+            prevent processing interruptions. When your credit balance drops
+            below a set floor, the system automatically bills your linked
+            payment method to replenish your account.
           </p>
-<div className="content-box">
-<div className="image-wrapper">
-<img alt="Auto-Top Up" className="demo-img" src="/assets/images/portal/05-auto-topup.png"/>
-</div>
-<h3 className="h3">Status Indicator</h3>
-<ul className="cd-overview-ul">
-<li>
+          <div className="content-box">
+            <div>
+              <img
+                alt="Auto-Top Up"
+                src="/assets/images/portal/05-auto-topup.png"
+              />
+            </div>
+            <h3>Status Indicator</h3>
+            <ul>
+              <li>
                 Located directly under the section title, a green Active badge
                 indicates that the automation rules are currently live and
                 monitoring your account balance in real time.
               </li>
-</ul>
-<h3 className="h3">Configuration Settings Panel</h3>
-<p>
+            </ul>
+            <h3>Configuration Settings Panel</h3>
+            <p>
               This section houses the control parameters for managing your
               automated replenishment rules:
             </p>
-<ul className="cd-overview-ul">
-<li>
-<strong>Enable auto top-up Checkbox:</strong>
-<span>Toggles the automatic replenishment feature on or off.
+            <ul>
+              <li>
+                <strong>Enable auto top-up Checkbox:</strong>
+                <span>
+                  Toggles the automatic replenishment feature on or off.
                 </span>
-</li>
-<li>
-<strong>Trigger when balance falls below:</strong>
-<span>A customizable input field where you define your minimum
+              </li>
+              <li>
+                <strong>Trigger when balance falls below:</strong>
+                <span>
+                  A customizable input field where you define your minimum
                   safety threshold (e.g., 500 credits). If your active balance
                   dips below this number, a refill is automatically initiated.
                 </span>
-</li>
-<li>
-<strong>Refill pack:</strong>
-<span>Displays the active card on file allocated specifically for
+              </li>
+              <li>
+                <strong>Refill pack:</strong>
+                <span>
+                  Displays the active card on file allocated specifically for
                   automated charges (e.g., AMEX &bull;&bull;&bull;&bull; 2006).
                 </span>
-<ul>
-<li>
-                    Click the Change button to select or link a different
-                    card.
+                <ul>
+                  <li>
+                    Click the Change button to select or link a different card.
                   </li>
-</ul>
-</li>
-<li>
-<strong>Save settings Button:</strong>
-<span>Saves any modifications made to your trigger thresholds or
+                </ul>
+              </li>
+              <li>
+                <strong>Save settings Button:</strong>
+                <span>
+                  Saves any modifications made to your trigger thresholds or
                   refill packs.
                 </span>
-</li>
-<li>
-<strong>Turn off Button</strong>
-<span>Instantly disables the automatic billing automation.
-                </span>
-</li>
-</ul>
-<h3 className="h3">Current Balance Snapshot</h3>
-<ul className="cd-overview-ul">
-<li>
-                Displays your immediate credits available balance (e.g.,
-                8,116) alongside a reminder of your active trigger threshold
-                limit (500 credits), making it easy to see how close you are
-                to an automated refill.
               </li>
-</ul>
-<h3 className="h3">Recent Attempts Log</h3>
-<p>
+              <li>
+                <strong>Turn off Button</strong>
+                <span>
+                  Instantly disables the automatic billing automation.
+                </span>
+              </li>
+            </ul>
+            <h3>Current Balance Snapshot</h3>
+            <ul>
+              <li>
+                Displays your immediate credits available balance (e.g., 8,116)
+                alongside a reminder of your active trigger threshold limit (500
+                credits), making it easy to see how close you are to an
+                automated refill.
+              </li>
+            </ul>
+            <h3>Recent Attempts Log</h3>
+            <p>
               An audit trail displaying a history of your latest automated
               transaction events:
             </p>
-<table className="config-table">
-<thead>
-<tr>
-<th>When</th>
-<th>Status</th>
-<th>Amount / Credits</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>5/13/2026, 3:39:17 PM</td>
-<td>success</td>
-<td>$50.00 for +1,100 credits</td>
-</tr>
-<tr>
-<td>Completion tokens</td>
-<td>1.2M</td>
-<td>
+            <table className="config-table">
+              <thead>
+                <tr>
+                  <th>When</th>
+                  <th>Status</th>
+                  <th>Amount / Credits</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>5/13/2026, 3:39:17 PM</td>
+                  <td>success</td>
+                  <td>$50.00 for +1,100 credits</td>
+                </tr>
+                <tr>
+                  <td>Completion tokens</td>
+                  <td>1.2M</td>
+                  <td>
                     Represents the actual output generated by your AI agents
                     (e.g., code, generated text, or processed system steps).
                   </td>
-</tr>
-<tr>
-<td>5/13/2026, 7:02:20 AM</td>
-<td>success</td>
-<td>$50.00 for +1,100 credits</td>
-</tr>
-</tbody>
-</table>
-<p style={{fontStyle: 'italic'}}>
+                </tr>
+                <tr>
+                  <td>5/13/2026, 7:02:20 AM</td>
+                  <td>success</td>
+                  <td>$50.00 for +1,100 credits</td>
+                </tr>
+              </tbody>
+            </table>
+            <p style={{ fontStyle: "italic" }}>
               (Note: The log monitors execution attempts and explicitly notes
               whether a purchase succeeded or encountered an issue, such as an
               expired card).
             </p>
-</div>
-</section>
-</main>
+          </div>
+        </section>
+      </main>
     </div>
   );
 };

@@ -3,11 +3,9 @@ import React from "react";
 const DesignerAgentAccessReviewSod = () => {
   return (
     <div className="doc-page-content">
-      <main className="cd-main-content" id="cd-main">
-        <h1 className="cd-page-title" id="cdHomeTitle">
-          Access Review &amp; SoD
-        </h1>
-        <section className="cd-overview" id="cdHomeOverview">
+      <main>
+        <h1>Access Review &amp; SoD</h1>
+        <section>
           <div className="para-box">
             <p>
               The <strong>Access Review &amp; SoD</strong> (Separation of
@@ -17,16 +15,16 @@ const DesignerAgentAccessReviewSod = () => {
               it flags toxic access combinations per role to prevent internal
               fraud, operational risk, and data breaches.
             </p>
-            <div className="image-wrapper">
+            <div>
               <img
                 alt="Access Review &amp; SoD"
-                className="demo-img"
+
                 src="/assets/images/think-agent/access-review-1.png"
               />
             </div>
             <div className="para-box">
-              <h3 className="h3">Key Features</h3>
-              <ul className="cd-overview-ul">
+              <h3>Key Features</h3>
+              <ul>
                 <li>
                   <strong>Flexible Scope Selection:</strong>
                   <span>
@@ -63,16 +61,16 @@ const DesignerAgentAccessReviewSod = () => {
               </ul>
             </div>
             <div className="para-box">
-              <h3 className="h3">Step by Step Guide</h3>
-              <ol className="cd-overview-ol">
+              <h3>Step by Step Guide</h3>
+              <ol>
                 <li>
                   <strong>Select Target Roles:</strong> Keep the default
                   full-system role configuration or specify target access
                   profiles for evaluation.
-                  <div className="image-wrapper">
+                  <div>
                     <img
                       alt="Access Review &amp; SoD"
-                      className="demo-img"
+
                       src="/assets/images/think-agent/access-review-2.png"
                     />
                   </div>
@@ -81,10 +79,10 @@ const DesignerAgentAccessReviewSod = () => {
                   <strong>Confirm Schema Plan:</strong> Review the structural
                   audit blueprint and authorize the execution plan to initiate
                   the compliance scan.
-                  <div className="image-wrapper">
+                  <div>
                     <img
                       alt="Access Review &amp; SoD"
-                      className="demo-img"
+
                       src="/assets/images/think-agent/access-review-3.png"
                     />
                   </div>
@@ -98,10 +96,10 @@ const DesignerAgentAccessReviewSod = () => {
                   <strong>Remediate Risks:</strong> Apply the system's concrete
                   access recommendations to safely separate conflicting duties
                   and enforce least-privilege principles.
-                  <div className="image-wrapper">
+                  <div>
                     <img
                       alt="Access Review &amp; SoD"
-                      className="demo-img"
+
                       src="/assets/images/think-agent/access-review-4.png"
                     />
                   </div>
