@@ -1,3 +1,4 @@
+import CodeBlock from "../../components/CodeBlock";
 import React from "react";
 
 const DesignerMcpTestAndTools = () => {
@@ -120,41 +121,14 @@ const DesignerMcpTestAndTools = () => {
           </div>
           <div className="para-box">
             <h4 className="h">Raw JSON-RPC</h4>
-            <div className="code-block-wrapper">
-              <div className="code-block-header">
-                <div className="code-block-header-left">
-                  <div className="code-block-dots">
-                    <span className="code-block-dot dot-red"></span>
-                    <span className="code-block-dot dot-yellow"></span>
-                    <span className="code-block-dot dot-green"></span>
-                  </div>
-                  <span className="code-block-lang">BASH</span>
-                </div>
-                <button
-                  className="code-block-copy-btn"
-                  onclick="copyToClipboard(this)"
-                >
-                  <i className="fa-regular fa-copy"></i> Copy
-                </button>
-              </div>
-              <pre>
-                <code>
-                  <span className="code-keyword">curl</span> -X POST
-                  https://cell-ssm-use1-0005.us.portal.think4ever.com/mcp \ -H{" "}
-                  <span className="code-string">
-                    "Authorization: Bearer tf_YOUR_TOKEN"
-                  </span>{" "}
-                  \ -H{" "}
-                  <span className="code-string">
-                    "Content-Type: application/json"
-                  </span>{" "}
-                  \ -d{" "}
-                  <span className="code-string">
-                    '&#123;"jsonrpc":"2.0","id":1,"method":"tools/list"&#125;'
-                  </span>
-                </code>
-              </pre>
-            </div>
+            {/* prettier-ignore */}
+            <CodeBlock language="bash" code={`curl -X POST https://cell-ssm-use1-0005.us.portal.think4ever.com/mcp \
+
+  -H "Authorization: Bearer tf_YOUR_TOKEN" \
+
+  -H "Content-Type: application/json" \
+
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/list"}'`} />
           </div>
         </section>
       </main>

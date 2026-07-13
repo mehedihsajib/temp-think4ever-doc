@@ -180,15 +180,17 @@ body {
 }
 
 .doc-page-content ul {
-  @apply list-disc list-inside text-slate-600 space-y-2 mb-6 ml-4 dark:text-slate-400;
+  list-style-type: disc;
+  @apply list-outside pl-6 text-slate-600 dark:text-slate-400 space-y-2.5 mb-6;
 }
 
 .doc-page-content ol {
-  @apply list-decimal list-inside text-slate-600 space-y-2 mb-6 ml-4 dark:text-slate-400;
+  list-style-type: decimal;
+  @apply list-outside pl-6 text-slate-600 dark:text-slate-400 space-y-2.5 mb-6;
 }
 
 .doc-page-content li {
-  @apply leading-7;
+  @apply leading-7 pl-1;
 }
 
 .doc-page-content strong {
@@ -196,23 +198,39 @@ body {
 }
 
 .doc-page-content table {
-  @apply min-w-full divide-y divide-slate-200 my-6 dark:divide-slate-800;
+  @apply w-full border-collapse text-left text-sm my-8 overflow-hidden rounded-xl border border-slate-200/80 dark:border-slate-800/80;
+}
+
+.doc-page-content thead {
+  @apply bg-slate-50/75 dark:bg-slate-900/50 border-b border-slate-200/80 dark:border-slate-800/80;
 }
 
 .doc-page-content th {
-  @apply px-6 py-3 bg-slate-50 text-left text-xs font-medium text-slate-500 uppercase tracking-wider dark:bg-slate-800 dark:text-slate-400;
+  @apply px-4 py-3 font-semibold text-slate-900 text-xs uppercase tracking-wider dark:text-slate-100;
+}
+
+.doc-page-content tr {
+  @apply border-b border-slate-100 dark:border-slate-800/60 last:border-0;
 }
 
 .doc-page-content td {
-  @apply px-6 py-4 whitespace-nowrap text-sm text-slate-500 border-b border-slate-100 dark:text-slate-400 dark:border-slate-800;
+  @apply px-4 py-3 text-slate-600 dark:text-slate-400 align-top leading-6;
+}
+
+.doc-page-content tr:nth-child(even) {
+  @apply bg-slate-50/30 dark:bg-slate-900/20;
 }
 
 .doc-page-content pre {
-  @apply bg-slate-950 text-slate-100 p-4 rounded-lg overflow-x-auto my-6 font-mono text-sm leading-6 dark:bg-slate-900;
+  @apply my-6 overflow-x-auto rounded-xl border border-slate-200/80 p-4 font-mono text-sm leading-6 text-slate-800 bg-slate-50 dark:border-slate-800/80 dark:text-slate-200 dark:bg-[#121316];
 }
 
 .doc-page-content code {
-  @apply bg-slate-100 text-slate-900 px-1.5 py-0.5 rounded font-mono text-sm dark:bg-slate-800 dark:text-slate-200;
+  @apply font-mono text-[13px] font-medium px-1.5 py-0.5 rounded-md border border-slate-200/50 bg-slate-100/80 text-slate-800 dark:border-slate-800/30 dark:bg-slate-800/60 dark:text-slate-200;
+}
+
+.doc-page-content pre code {
+  @apply p-0 border-0 bg-transparent text-inherit text-sm font-normal;
 }
 
 .doc-page-content blockquote {
@@ -277,4 +295,103 @@ body {
 .dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: rgba(59, 130, 246, 0.45);
 }
+
+/* Premium Code Block Wrapper & Header */
+.code-block-wrapper {
+  @apply my-6 overflow-hidden rounded-xl border border-slate-200/80 bg-slate-50/50 shadow-sm dark:border-slate-800/80 dark:bg-[#121316]/50;
+}
+
+.code-block-header {
+  @apply flex items-center justify-between px-4 py-2.5 bg-slate-50/75 border-b border-slate-200/80 dark:bg-[#16171b]/80 dark:border-slate-800/80;
+}
+
+.code-block-header-left {
+  @apply flex items-center gap-3;
+}
+
+.code-block-dots {
+  @apply flex items-center gap-1.5;
+}
+
+.code-block-dot {
+  @apply w-2.5 h-2.5 rounded-full;
+}
+
+.code-block-dot.dot-red {
+  @apply bg-red-400 dark:bg-red-500/80;
+}
+
+.code-block-dot.dot-yellow {
+  @apply bg-yellow-400 dark:bg-yellow-500/80;
+}
+
+.code-block-dot.dot-green {
+  @apply bg-green-400 dark:bg-green-500/80;
+}
+
+.code-block-lang {
+  @apply font-mono text-[11px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500;
+}
+
+.code-block-copy-btn {
+  @apply flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium text-slate-500 hover:text-slate-800 bg-white border border-slate-200 rounded-md transition-colors shadow-sm hover:bg-slate-50 cursor-pointer dark:bg-[#1c1e22] dark:border-slate-800 dark:text-slate-400 dark:hover:text-slate-200 dark:hover:bg-[#23272f];
+}
+
+/* Ensure code blocks inside wrappers are styled correctly */
+.code-block-wrapper pre {
+  @apply m-0 border-0 bg-transparent rounded-none p-4 text-slate-800 dark:text-slate-200;
+}
+
+/* Prism Token Syntax Highlighting Colors (Light/Dark Mode responsive) */
+.token.keyword,
+.token.boolean,
+.token.selector,
+.token.tag,
+.token.constant {
+  @apply font-semibold text-blue-600 dark:text-blue-400;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+  @apply text-emerald-600 dark:text-emerald-400;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  @apply text-slate-400 dark:text-slate-500 italic;
+}
+
+.token.number,
+.token.entity,
+.token.url {
+  @apply text-violet-600 dark:text-violet-400;
+}
+
+.token.property,
+.token.attr-name,
+.token.symbol,
+.token.inserted {
+  @apply font-semibold text-slate-700 dark:text-slate-300;
+}
+
+.token.punctuation,
+.token.operator,
+.token.entity {
+  @apply text-slate-500 dark:text-slate-400;
+}
+
+.token.function,
+.token.class-name,
+.token.maybe-class-name {
+  @apply font-semibold text-amber-600 dark:text-amber-400;
+}
+
+
+
+
 

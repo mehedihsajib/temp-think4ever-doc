@@ -1,3 +1,4 @@
+import CodeBlock from "../../components/CodeBlock";
 import React from "react";
 
 const DesignerMcpAmazonq = () => {
@@ -64,44 +65,16 @@ const DesignerMcpAmazonq = () => {
             <p>
               Add this to <code>~/.aws/amazonq/mcp.json</code>:
             </p>
-            <div className="code-block-wrapper">
-              <div className="code-block-header">
-                <div className="code-block-header-left">
-                  <div className="code-block-dots">
-                    <span className="code-block-dot dot-red"></span>
-                    <span className="code-block-dot dot-yellow"></span>
-                    <span className="code-block-dot dot-green"></span>
-                  </div>
-                  <span className="code-block-lang">JSON</span>
-                </div>
-                <button
-                  className="code-block-copy-btn"
-                  onclick="copyToClipboard(this)"
-                >
-                  <i className="fa-regular fa-copy"></i> Copy
-                </button>
-              </div>
-              <pre>
-                <code>
-                  &#123;
-                  <span className="code-keyword">"mcpServers"</span>: &#123;
-                  <span className="code-keyword">"think4ever"</span>: &#123;
-                  <span className="code-keyword">"command"</span>:{" "}
-                  <span className="code-string">"npx"</span>,
-                  <span className="code-keyword">"args"</span>: [
-                  <span className="code-string">"-y"</span>,{" "}
-                  <span className="code-string">"mcp-remote"</span>,{" "}
-                  <span className="code-string">
-                    "https://cell-ssm-use1-0005.us.portal.think4ever.com/mcp"
-                  </span>
-                  ,<span className="code-string">"--header"</span>,{" "}
-                  <span className="code-string">
-                    "Authorization: Bearer tf_YOUR_TOKEN"
-                  </span>
-                  ] &#125; &#125; &#125;
-                </code>
-              </pre>
-            </div>
+            {/* prettier-ignore */}
+            <CodeBlock language="json" code={`{
+  "mcpServers": {
+    "think4ever": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://cell-ssm-use1-0005.us.portal.think4ever.com/mcp",
+               "--header", "Authorization: Bearer tf_YOUR_TOKEN"]
+    }
+  }
+}`} />
           </div>
           <div className="para-box">
             <h4>Step 2</h4>

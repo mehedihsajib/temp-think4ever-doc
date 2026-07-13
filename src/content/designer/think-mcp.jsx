@@ -1,3 +1,4 @@
+import CodeBlock from "../../components/CodeBlock";
 import React from "react";
 
 const DesignerThinkMcp = () => {
@@ -245,41 +246,18 @@ const DesignerThinkMcp = () => {
               .mcp.json directly into the root directory of your source code
               repository:
             </p>
-            <div className="code-block-wrapper">
-              <div className="code-block-header">
-                <div className="code-block-header-left">
-                  <div className="code-block-dots">
-                    <span className="code-block-dot dot-red"></span>
-                    <span className="code-block-dot dot-yellow"></span>
-                    <span className="code-block-dot dot-green"></span>
-                  </div>
-                  <span className="code-block-lang">JSON</span>
-                </div>
-                <button
-                  className="code-block-copy-btn"
-                  onclick="copyToClipboard(this)"
-                >
-                  <i className="fa-regular fa-copy"></i> Copy
-                </button>
-              </div>
-              <pre>
-                <code>
-                  &#123;
-                  <span className="code-keyword">"mcpServers"</span>: &#123;
-                  <span className="code-keyword">"think4ever"</span>: &#123;
-                  <span className="code-keyword">"type"</span>:{" "}
-                  <span className="code-string">"http"</span>,
-                  <span className="code-keyword">"url"</span>:{" "}
-                  <span className="code-string">
-                    "https://cell-ssm-use1-0005.us.portal.think4ever.com/mcp"
-                  </span>
-                  ,<span className="code-keyword">"headers"</span>: &#123;
-                  <span className="code-keyword">"Authorization"</span>:{" "}
-                  <span className="code-string">"Bearer tf_YOUR_TOKEN"</span>
-                  &#125; &#125; &#125; &#125;
-                </code>
-              </pre>
-            </div>
+            {/* prettier-ignore */}
+            <CodeBlock language="json" code={`{
+  "mcpServers": {
+    "think4ever": {
+      "type": "http",
+      "url": "https://cell-ssm-use1-0005.us.portal.think4ever.com/mcp",
+      "headers": {
+        "Authorization": "Bearer tf_YOUR_TOKEN"
+      }
+    }
+  }
+}`} />
           </div>
           <div className="para-box">
             <h4>Connection Verification Protocols</h4>
@@ -312,27 +290,8 @@ const DesignerThinkMcp = () => {
                 <p>
                   <strong>Bash / Claude Code Command:</strong>
                 </p>
-                <div className="code-block-wrapper">
-                  <div className="code-block-header">
-                    <div className="code-block-header-left">
-                      <div className="code-block-dots">
-                        <span className="code-block-dot dot-red"></span>
-                        <span className="code-block-dot dot-yellow"></span>
-                        <span className="code-block-dot dot-green"></span>
-                      </div>
-                      <span className="code-block-lang">Claude Code</span>
-                    </div>
-                    <button
-                      className="code-block-copy-btn"
-                      onclick="copyToClipboard(this)"
-                    >
-                      <i className="fa-regular fa-copy"></i> Copy
-                    </button>
-                  </div>
-                  <pre>
-                    <code>/mcp</code>
-                  </pre>
-                </div>
+                {/* prettier-ignore */}
+                <CodeBlock language="claude code" code={`/mcp`} />
                 <div>
                   <img
                     alt="Agent and Task Interfaces"
@@ -505,30 +464,8 @@ const DesignerThinkMcp = () => {
                 </ol>
               </li>
             </ul>
-            <div className="code-block-wrapper">
-              <div className="code-block-header">
-                <div className="code-block-header-left">
-                  <div className="code-block-dots">
-                    <span className="code-block-dot dot-red"></span>
-                    <span className="code-block-dot dot-yellow"></span>
-                    <span className="code-block-dot dot-green"></span>
-                  </div>
-                  <span className="code-block-lang">HTTP</span>
-                </div>
-                <button
-                  className="code-block-copy-btn"
-                  onclick="copyToClipboard(this)"
-                >
-                  <i className="fa-regular fa-copy"></i> Copy
-                </button>
-              </div>
-              <pre>
-                <code>
-                  <span className="code-header-param">Authorization:</span>{" "}
-                  <span className="code-string">Bearer tf_YOUR_TOKEN</span>
-                </code>
-              </pre>
-            </div>
+            {/* prettier-ignore */}
+            <CodeBlock language="http" code={`Authorization: Bearer tf_YOUR_TOKEN`} />
           </div>
           <div className="para-box">
             <p>
@@ -657,44 +594,21 @@ const DesignerThinkMcp = () => {
                 </span>
               </li>
             </ul>
-            <div className="code-block-wrapper">
-              <div className="code-block-header">
-                <div className="code-block-header-left">
-                  <div className="code-block-dots">
-                    <span className="code-block-dot dot-red"></span>
-                    <span className="code-block-dot dot-yellow"></span>
-                    <span className="code-block-dot dot-green"></span>
-                  </div>
-                  <span className="code-block-lang">JSON</span>
-                </div>
-                <button
-                  className="code-block-copy-btn"
-                  onclick="copyToClipboard(this)"
-                >
-                  <i className="fa-regular fa-copy"></i> Copy
-                </button>
-              </div>
-              <pre>
-                <code>
-                  &#123;
-                  <span className="code-keyword">"mcpServers"</span>: &#123;
-                  <span className="code-keyword">"think4ever"</span>: &#123;
-                  <span className="code-keyword">"command"</span>:{" "}
-                  <span className="code-string">"npx"</span>,
-                  <span className="code-keyword">"args"</span>: [
-                  <span className="code-string">"-y"</span>,
-                  <span className="code-string">"mcp-remote"</span>,
-                  <span className="code-string">
-                    "https://cell-ssm-use1-0005.us.portal.think4ever.com/mcp"
-                  </span>
-                  ,<span className="code-string">"--header"</span>,
-                  <span className="code-string">
-                    "Authorization: Bearer tf_YOUR_TOKEN"
-                  </span>
-                  ] &#125; &#125; &#125;
-                </code>
-              </pre>
-            </div>
+            {/* prettier-ignore */}
+            <CodeBlock language="json" code={`{
+  "mcpServers": {
+    "think4ever": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote",
+        "https://cell-ssm-use1-0005.us.portal.think4ever.com/mcp",
+        "--header",
+        "Authorization: Bearer tf_YOUR_TOKEN"
+      ]
+    }
+  }
+}`} />
           </div>
           <div className="para-box">
             <h3>Context Alignment Failures inside Claude Code</h3>
@@ -713,32 +627,23 @@ const DesignerThinkMcp = () => {
                   every terminal directory and codebase workspace on your
                   machine, register the tool with the user-level scope flag:
                 </span>
-                <div className="code-block-wrapper">
-                  <div className="code-block-header">
-                    <div className="code-block-header-left">
-                      <div className="code-block-dots">
-                        <span className="code-block-dot dot-red"></span>
-                        <span className="code-block-dot dot-yellow"></span>
-                        <span className="code-block-dot dot-green"></span>
-                      </div>
-                      <span className="code-block-lang">Bash</span>
-                    </div>
-                    <button
-                      className="code-block-copy-btn"
-                      onclick="copyToClipboard(this)"
-                    >
-                      <i className="fa-regular fa-copy"></i> Copy
+                {/* prettier-ignore */}
+                <div className="code-block-wrapper" style="margin-top: 12px">
+<div className="code-block-header">
+<div className="code-block-header-left">
+<div className="code-block-dots">
+<span className="code-block-dot dot-red"></span>
+<span className="code-block-dot dot-yellow"></span>
+<span className="code-block-dot dot-green"></span>
+</div>
+<span className="code-block-lang">Bash</span>
+</div>
+<button className="code-block-copy-btn" onClick="copyToClipboard(this)">
+<i className="fa-regular fa-copy"></i> Copy
                     </button>
-                  </div>
-                  <pre>
-                    <code>
-                      claude mcp add --transport http think4ever
-                      https://cell-ssm-use1-0005.us.portal.think4ever.com/mcp
-                      --header "Authorization: Bearer tf_YOUR_TOKEN" --scope
-                      user
-                    </code>
-                  </pre>
-                </div>
+</div>
+<pre><code>claude mcp add --transport http think4ever https://cell-ssm-use1-0005.us.portal.think4ever.com/mcp --header "Authorization: Bearer tf_YOUR_TOKEN" --scope user</code></pre>
+</div>
               </li>
               <li>
                 <strong>To isolate configuration states safely:</strong>
@@ -790,41 +695,11 @@ const DesignerThinkMcp = () => {
                 reachable from your network.
               </em>
             </p>
-            <div className="code-block-wrapper">
-              <div className="code-block-header">
-                <div className="code-block-header-left">
-                  <div className="code-block-dots">
-                    <span className="code-block-dot dot-red"></span>
-                    <span className="code-block-dot dot-yellow"></span>
-                    <span className="code-block-dot dot-green"></span>
-                  </div>
-                  <span className="code-block-lang">Bash</span>
-                </div>
-                <button
-                  className="code-block-copy-btn"
-                  onclick="copyToClipboard(this)"
-                >
-                  <i className="fa-regular fa-copy"></i> Copy
-                </button>
-              </div>
-              <pre>
-                <code>
-                  <span className="code-keyword">curl</span> -X POST
-                  https://cell-ssm-use1-0005.us.portal.think4ever.com/mcp \ -H{" "}
-                  <span className="code-header-param">
-                    "Authorization: Bearer tf_YOUR_TOKEN"
-                  </span>{" "}
-                  \ -H{" "}
-                  <span className="code-header-param">
-                    "Content-Type: application/json"
-                  </span>{" "}
-                  \ -d{" "}
-                  <span className="code-string">
-                    '&#123;"jsonrpc":"2.0","id":1,"method":"tools/list"&#125;'
-                  </span>
-                </code>
-              </pre>
-            </div>
+            {/* prettier-ignore */}
+            <CodeBlock language="bash" code={`curl -X POST https://cell-ssm-use1-0005.us.portal.think4ever.com/mcp \
+  -H "Authorization: Bearer tf_YOUR_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/list"}'`} />
             <p>
               <em>
                 Review the response stream. A pristine connection will instantly

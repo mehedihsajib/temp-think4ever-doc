@@ -1,3 +1,4 @@
+import CodeBlock from "../../components/CodeBlock";
 import React from "react";
 
 const DesignerThinkApi = () => {
@@ -75,53 +76,22 @@ const DesignerThinkApi = () => {
               layout format, facilitating clean runtime exception handling and
               uniform metadata parsing:
             </p>
-            <div className="code-block-wrapper">
-              <div className="code-block-header">
-                <div className="code-block-header-left">
-                  <div className="code-block-dots">
-                    <span className="code-block-dot dot-red"></span>
-                    <span className="code-block-dot dot-yellow"></span>
-                    <span className="code-block-dot dot-green"></span>
-                  </div>
-                  <span className="code-block-lang">JSON</span>
-                </div>
-                <button
-                  className="code-block-copy-btn"
-                  onclick="copyToClipboard(this)"
-                >
-                  <i className="fa-regular fa-copy"></i> Copy
-                </button>
-              </div>
-              <pre>
-                <code>
-                  <span className="code-comment">
-                    // Successful Handshake Layout
-                  </span>
-                  &#123;
-                  <span className="code-string">"ok"</span>:{" "}
-                  <span className="code-boolean">true</span>,
-                  <span className="code-string">"data"</span>: &#123; ...
-                  &#125;,
-                  <span className="code-string">"meta"</span>: &#123; ... &#125;
-                  &#125;
-                  <span className="code-comment">
-                    // Operational Exception Layout
-                  </span>
-                  &#123;
-                  <span className="code-string">"ok"</span>:{" "}
-                  <span className="code-boolean">false</span>,
-                  <span className="code-string">"error"</span>: &#123;
-                  <span className="code-string">"code"</span>:{" "}
-                  <span className="code-string">"ERROR_CODE"</span>,
-                  <span className="code-string">"message"</span>:{" "}
-                  <span className="code-string">
-                    "Detailed description outlining the underlying validation or
-                    execution exception."
-                  </span>
-                  &#125; &#125;
-                </code>
-              </pre>
-            </div>
+            {/* prettier-ignore */}
+            <CodeBlock language="json" code={`// Successful Handshake Layout
+{
+  "ok": true,
+  "data": { ... },
+  "meta": { ... }
+}
+
+// Operational Exception Layout
+{
+  "ok": false,
+  "error": {
+    "code": "ERROR_CODE",
+    "message": "Detailed description outlining the underlying validation or execution exception."
+  }
+}`} />
           </div>
           <div className="para-box">
             <h4>Platform Core Navigation Pathways</h4>
@@ -256,42 +226,15 @@ const DesignerThinkApi = () => {
               server, dispatch an authenticated POST request to the project's
               agent run endpoint:
             </p>
-            <div className="code-block-wrapper">
-              <div className="code-block-header">
-                <div className="code-block-header-left">
-                  <div className="code-block-dots">
-                    <span className="code-block-dot dot-red"></span>
-                    <span className="code-block-dot dot-yellow"></span>
-                    <span className="code-block-dot dot-green"></span>
-                  </div>
-                  <span className="code-block-lang">Bash</span>
-                </div>
-                <button
-                  className="code-block-copy-btn"
-                  onclick="copyToClipboard(this)"
-                >
-                  <i className="fa-regular fa-copy"></i> Copy
-                </button>
-              </div>
-              <pre>
-                <code>
-                  <span className="code-keyword">curl</span> -X POST
-                  http://localhost:3005/v1/projects/160/agent-runs \ -H{" "}
-                  <span className="code-header-param">
-                    "Authorization: Bearer tf_YOUR_TOKEN"
-                  </span>{" "}
-                  \ -H{" "}
-                  <span className="code-header-param">
-                    "Content-Type: application/json"
-                  </span>{" "}
-                  \ -d{" "}
-                  <span className="code-string">
-                    '&#123; "agent_type_id": 1, "folder_id": 1,
-                    "task_description": "Implement the login page" &#125;'
-                  </span>
-                </code>
-              </pre>
-            </div>
+            {/* prettier-ignore */}
+            <CodeBlock language="bash" code={`curl -X POST http://localhost:3005/v1/projects/160/agent-runs \
+  -H "Authorization: Bearer tf_YOUR_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "agent_type_id": 1,
+    "folder_id": 1,
+    "task_description": "Implement the login page"
+  }'`} />
           </div>
           <div className="para-box">
             <p>Infrastructure Credit Guardrails &amp; Prerequisites</p>
