@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
         setDarkMode={setDarkMode}
       />
       
-      <div className="flex flex-1">
+      <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 flex flex-1">
         <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
         
         <main className="flex-1 overflow-y-auto px-4 py-8 sm:px-6 lg:px-8">
