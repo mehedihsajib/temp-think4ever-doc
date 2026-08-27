@@ -3670,7 +3670,7 @@ body {
 }
 
 .modern-nav a {
-  font-size: 0.875rem;
+  font-size: 15px;
   font-weight: 500;
   color: #64748b;
   /* Lighter color for non-active */
