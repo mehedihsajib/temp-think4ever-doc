@@ -3645,6 +3645,11 @@ body {
   height: 100%;
 }
 
+.modern-nav-group-trigger .fa-chevron-down {
+  font-size: 10px;
+  color: #093cad;
+}
+
 .modern-nav-group-trigger:hover,
 .modern-nav-group.open .modern-nav-group-trigger {
   color: #0f172a;

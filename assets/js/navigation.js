@@ -661,10 +661,10 @@ function initSidebarToggle() {
 // ===============================
 function initMobileMenu() {
   const toggle = document.getElementById("mobileMenuToggle");
+  const nav = document.getElementById("t4eMobileNav");
   const overlay = document.getElementById("mobileMenuOverlay");
-  const nav = document.querySelector(".modern-nav");
 
-  if (!toggle || !overlay || !nav) return;
+  if (!toggle || !nav || !overlay) return;
 
   // Prevent duplicate binding
   if (toggle.dataset.bound === "true") return;
@@ -688,19 +688,16 @@ function initMobileMenu() {
     toggle.setAttribute("aria-expanded", "false");
   });
 
-  // Close menu on link click (except dropdown triggers)
-  nav.querySelectorAll("a:not(.modern-nav-group-trigger)").forEach((link) => {
+  // Close menu on link click
+  nav.querySelectorAll("a").forEach((link) => {
     if (link.dataset.boundMobileClose === "true") return;
     link.dataset.boundMobileClose = "true";
 
     link.addEventListener("click", (event) => {
-      // Don't close for disabled links
       if (link.getAttribute("data-disabled") === "true") {
         event.preventDefault();
         return;
       }
-
-      // Close menu
       nav.classList.remove("open");
       overlay.classList.remove("open");
       toggle.innerHTML = '<i class="fa fa-bars"></i>';

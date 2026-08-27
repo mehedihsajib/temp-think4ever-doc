@@ -76,48 +76,42 @@
         <a class="t4e-dropdown-item" href="/docs/onboarding.html" rel="noopener noreferrer" role="menuitem">
           <span class="t4e-item-icon text-primary" aria-hidden="true"><i class="fa-solid fa-rocket"></i></span>
           <span class="t4e-item-text">
-            <span class="t4e-item-title">Customer Onboarding <i class="fa-solid fa-arrow-up-right-from-square"
-                style="font-size: 10px; opacity: 0.4; margin-left: 4px;"></i></span>
+            <span class="t4e-item-title">Customer Onboarding</span>
             <span class="t4e-item-desc">Get started with Think4Ever.</span>
           </span>
         </a>
         <a class="t4e-dropdown-item" href="/docs/manual_introduction.html" rel="noopener noreferrer" role="menuitem">
           <span class="t4e-item-icon text-primary" aria-hidden="true"><i class="fa-solid fa-palette"></i></span>
           <span class="t4e-item-text">
-            <span class="t4e-item-title">Think4Ever Designer <i class="fa-solid fa-arrow-up-right-from-square"
-                style="font-size: 10px; opacity: 0.4; margin-left: 4px;"></i></span>
+            <span class="t4e-item-title">Think4Ever Designer</span>
             <span class="t4e-item-desc">Learn how to map systems.</span>
           </span>
         </a>
         <a class="t4e-dropdown-item" href="/docs/dev/start_new_project.html" rel="noopener noreferrer" role="menuitem">
           <span class="t4e-item-icon text-indigo" aria-hidden="true"><i class="fa-solid fa-code"></i></span>
           <span class="t4e-item-text">
-            <span class="t4e-item-title">Think4Ever Developer <i class="fa-solid fa-arrow-up-right-from-square"
-                style="font-size: 10px; opacity: 0.4; margin-left: 4px;"></i></span>
+            <span class="t4e-item-title">Think4Ever Developer</span>
             <span class="t4e-item-desc">Technical guide for developers.</span>
           </span>
         </a>
         <a class="t4e-dropdown-item" href="/docs/portal/dashboard.html" rel="noopener noreferrer" role="menuitem">
           <span class="t4e-item-icon text-primary" aria-hidden="true"><i class="fa-solid fa-users"></i></span>
           <span class="t4e-item-text">
-            <span class="t4e-item-title">Think4Ever Portal <i class="fa-solid fa-arrow-up-right-from-square"
-                style="font-size: 10px; opacity: 0.4; margin-left: 4px;"></i></span>
+            <span class="t4e-item-title">Think4Ever Portal</span>
             <span class="t4e-item-desc">Manage team dashboard.</span>
           </span>
         </a>
         <a class="t4e-dropdown-item" href="/docs/reverse_engineering.html" rel="noopener noreferrer" role="menuitem">
           <span class="t4e-item-icon text-slate" aria-hidden="true"><i class="fa-solid fa-gear"></i></span>
           <span class="t4e-item-text">
-            <span class="t4e-item-title">Reverse Engineering <i class="fa-solid fa-arrow-up-right-from-square"
-                style="font-size: 10px; opacity: 0.4; margin-left: 4px;"></i></span>
+            <span class="t4e-item-title">Reverse Engineering</span>
             <span class="t4e-item-desc">Reverse engineer codebases.</span>
           </span>
         </a>
         <a class="t4e-dropdown-item" href="/docs/manual_think_mcp.html" rel="noopener noreferrer" role="menuitem">
           <span class="t4e-item-icon text-amber" aria-hidden="true"><i class="fa-solid fa-puzzle-piece"></i></span>
           <span class="t4e-item-text">
-            <span class="t4e-item-title">Think MCP <i class="fa-solid fa-arrow-up-right-from-square"
-                style="font-size: 10px; opacity: 0.4; margin-left: 4px;"></i></span>
+            <span class="t4e-item-title">Think MCP</span>
             <span class="t4e-item-desc">Claude Code, Codex, and Cursor.</span>
           </span>
         </a>
@@ -125,16 +119,14 @@
           role="menuitem">
           <span class="t4e-item-icon text-primary" aria-hidden="true"><i class="fa-solid fa-code"></i></span>
           <span class="t4e-item-text">
-            <span class="t4e-item-title">VS Code Plugin <i class="fa-solid fa-arrow-up-right-from-square"
-                style="font-size: 10px; opacity: 0.4; margin-left: 4px;"></i></span>
+            <span class="t4e-item-title">VS Code Plugin</span>
             <span class="t4e-item-desc">Access T4E inside VS Code.</span>
           </span>
         </a>
         <a class="t4e-dropdown-item" href="/docs/manual_think_api.html" rel="noopener noreferrer" role="menuitem">
           <span class="t4e-item-icon text-emerald" aria-hidden="true"><i class="fa-solid fa-terminal"></i></span>
           <span class="t4e-item-text">
-            <span class="t4e-item-title">Think API <i class="fa-solid fa-arrow-up-right-from-square"
-                style="font-size: 10px; opacity: 0.4; margin-left: 4px;"></i></span>
+            <span class="t4e-item-title">Think API</span>
             <span class="t4e-item-desc">Programmatically manage tokens.</span>
           </span>
         </a>
@@ -153,14 +145,66 @@
     </a>
   </nav>
 
+  <!-- Separate Mobile Navigation (Hidden on Desktop) -->
+  <nav class="t4e-mobile-nav" id="t4eMobileNav" aria-label="Mobile navigation">
+    <div class="t4e-mobile-nav-group">
+      <button class="t4e-mobile-nav-trigger" type="button" onclick="this.parentElement.classList.toggle('open')">
+        <span>Product</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="t4e-mobile-submenu">
+        <a href="https://think4ever.com/how-it-works">How it works</a>
+        <a href="https://think4ever.com/code-to-design">Code to Design</a>
+        <a href="https://think4ever.com/design-to-code">Design to Code</a>
+      </div>
+    </div>
+
+    <a class="t4e-mobile-toplink" href="https://think4ever.com/integrations">Integrations</a>
+
+    <div class="t4e-mobile-nav-group">
+      <button class="t4e-mobile-nav-trigger" type="button" onclick="this.parentElement.classList.toggle('open')">
+        <span>Resources</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="t4e-mobile-submenu">
+        <a href="https://think4ever.com/blog">Blog</a>
+        <a href="https://think4ever.com/faq">FAQ</a>
+      </div>
+    </div>
+
+    <div class="t4e-mobile-nav-group">
+      <button class="t4e-mobile-nav-trigger" type="button" onclick="this.parentElement.classList.toggle('open')">
+        <span>Docs</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="t4e-mobile-submenu">
+        <a href="/docs/onboarding.html">Customer Onboarding</a>
+        <a href="/docs/manual_introduction.html">Think4Ever Designer</a>
+        <a href="/docs/dev/start_new_project.html">Think4Ever Developer</a>
+        <a href="/docs/portal/dashboard.html">Think4Ever Portal</a>
+        <a href="/docs/reverse_engineering.html">Reverse Engineering</a>
+        <a href="/docs/manual_think_mcp.html">Think MCP</a>
+        <a href="/docs/dev/vs_code_integration.html">VS Code Plugin</a>
+        <a href="/docs/manual_think_api.html">Think API</a>
+      </div>
+    </div>
+
+    <a class="t4e-mobile-toplink" href="https://think4ever.com/pricing">Pricing</a>
+
+    <div class="t4e-mobile-actions-grid">
+      <a class="t4e-mobile-btn-outline" href="https://portal.think4ever.com/#/login">Sign in</a>
+      <a class="t4e-mobile-btn-primary" href="https://portal.think4ever.com/#/register">Start free</a>
+    </div>
+  </nav>
+
   <div class="t4e-actions">
-    <div class="t4e-lang-selector" id="desktopLangSelector">
+    <!-- <div class="t4e-lang-selector" id="desktopLangSelector">
       <button class="t4e-lang-btn" type="button">
         <i class="fa-solid fa-globe text-primary"></i>
         <span>EN</span>
         <i class="fa-solid fa-chevron-down"></i>
       </button>
-    </div>
+    </div> -->
 
     <a class="t4e-btn-ghost" href="https://portal.think4ever.com/#/login" rel="noopener noreferrer">
       Sign in
