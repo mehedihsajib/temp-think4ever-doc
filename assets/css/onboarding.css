@@ -468,14 +468,15 @@ body {
 }
 
 .btn-continue {
-    background: linear-gradient(to right, #07a7e1 0%, #093cad 100%);
+    background: #093cad; /* Plain primary button */
     color: white;
     box-shadow: var(--shadow-lg);
 }
 
 .btn-continue:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 20px -5px rgba(37, 99, 235, 0.3);
+    background: rgba(9, 60, 173, 0.9);
+    box-shadow: 0 12px 20px -5px rgba(9, 60, 173, 0.3);
 }
 
 .btn-continue:active {
@@ -583,10 +584,16 @@ body {
         /* Hide sidebar on mobile */
     }
 
-    .main-content,
+    .main-content {
+        margin-left: 0;
+    }
+
     .footer-nav {
         margin-left: 0;
         left: 0;
+        transform: none;
+        padding: 1rem;
+        width: 100%;
     }
 
     .bento-grid {
@@ -599,6 +606,24 @@ body {
 
     .footer-content {
         flex-direction: column;
-        gap: 1.5rem;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .progress-section {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .button-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.875rem;
+        justify-content: center;
     }
 }

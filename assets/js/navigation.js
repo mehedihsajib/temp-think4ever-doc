@@ -1148,7 +1148,7 @@ function initDocHeader(headerEl) {
 // ===============================
 document.addEventListener("DOMContentLoaded", function () {
   ensureGlobalFavicon();
-  ensureGlobalBrandAndOrbit();
+  // ensureGlobalBrandAndOrbit();
   initThemeToggle();
   initAccordionMenus(document);
   const currentPage = getCurrentPage();
