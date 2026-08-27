@@ -2069,9 +2069,6 @@ code:not([class]) {
 }
 
 /* === FOOTER === */
-footer {
-  background: #0f172a !important;
-}
 
 .site-footer {
   background: var(--color-text);

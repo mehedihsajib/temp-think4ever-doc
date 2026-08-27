@@ -1,24 +1,198 @@
 <style>
-  .t4e-doc-footer {
-    width: 100%;
-    background-color: #ffffff !important;
-    border-top: 1px solid #e4e4e7;
-    padding: 24px 24px;
-    font-family:
-      Inter,
-      system-ui,
-      -apple-system,
-      Segoe UI,
-      Roboto,
-      Helvetica,
-      Arial,
-      "Apple Color Emoji",
-      "Segoe UI Emoji";
+  .t4e-footer {
+    position: relative;
+    overflow: hidden;
+    background-color: #fafafa;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 64px;
+    padding-bottom: 32px;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
   }
 
-  .t4e-doc-footer-inner {
-    max-width: 1400px;
+  .t4e-footer-gradient-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(9, 60, 173, 0.6), transparent);
+  }
+
+  .t4e-footer-blob-1,
+  .t4e-footer-blob-2 {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    filter: blur(64px);
+    opacity: 0.5;
+  }
+
+  .t4e-footer-blob-1 {
+    top: 0;
+    left: 25%;
+    width: 600px;
+    height: 300px;
+    background-color: rgba(9, 60, 173, 0.05);
+  }
+
+  .t4e-footer-blob-2 {
+    bottom: 0;
+    right: 25%;
+    width: 400px;
+    height: 200px;
+    background-color: rgba(9, 60, 173, 0.05);
+  }
+
+  .t4e-footer-container {
+    max-width: 1600px;
     margin: 0 auto;
+    padding: 0 16px;
+    position: relative;
+    z-index: 10;
+  }
+
+  @media (min-width: 640px) {
+    .t4e-footer-container {
+      padding: 0 24px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .t4e-footer-container {
+      padding: 0 32px;
+    }
+  }
+
+  .t4e-footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  @media (min-width: 768px) {
+    .t4e-footer-grid {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 48px;
+    }
+
+    .t4e-footer-brand {
+      grid-column: span 4 / span 4;
+    }
+
+    .t4e-footer-links-grid {
+      grid-column: span 8 / span 8;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .t4e-footer-grid {
+      gap: 32px;
+    }
+
+    .t4e-footer-brand {
+      grid-column: span 5 / span 5;
+    }
+
+    .t4e-footer-links-grid {
+      grid-column: span 7 / span 7;
+    }
+  }
+
+  .t4e-footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .t4e-footer-logo img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 4px;
+  }
+
+  .t4e-footer-subtitle {
+    color: rgba(15, 23, 42, 0.7);
+    font-size: 14px;
+    line-height: 1.625;
+    max-width: 24rem;
+    margin: 0;
+  }
+
+  .t4e-footer-social {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 4px;
+  }
+
+  .t4e-footer-social a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(15, 23, 42, 0.7);
+    transition: all 300ms ease;
+    text-decoration: none;
+  }
+
+  .t4e-footer-social a:hover {
+    color: #093cad;
+    background-color: rgba(9, 60, 173, 0.1);
+    border-color: #093cad;
+  }
+
+  .t4e-footer-social i {
+    font-size: 20px;
+  }
+
+  .t4e-footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+  }
+
+  @media (min-width: 640px) {
+    .t4e-footer-links-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  .t4e-footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 14px;
+  }
+
+  .t4e-footer-heading {
+    color: #0f172a;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 12px;
+    margin: 0 0 8px 0;
+  }
+
+  .t4e-footer-link {
+    color: rgba(15, 23, 42, 0.7);
+    text-decoration: none;
+    transition: color 200ms ease;
+  }
+
+  .t4e-footer-link:hover {
+    color: #093cad;
+  }
+
+  .t4e-footer-bottom {
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1px solid #e2e8f0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,71 +200,126 @@
     gap: 16px;
   }
 
-  .t4e-doc-footer-links {
+  @media (min-width: 768px) {
+    .t4e-footer-bottom {
+      flex-direction: row;
+    }
+  }
+
+  .t4e-footer-copyright {
+    font-size: 12px;
+    color: rgba(15, 23, 42, 0.7);
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .t4e-footer-badge {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
   }
 
-  .t4e-doc-footer-links a {
-    font-size: 14px;
-    font-weight: 500;
-    color: #71717a;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  .t4e-badge-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #093cad;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
-  .t4e-doc-footer-links a:hover {
-    color: #2563eb;
-  }
-
-  .t4e-doc-footer-copy {
+  .t4e-badge-text {
     font-size: 12px;
-    font-weight: 500;
-    color: #a1a1a6;
-    text-align: center;
+    font-weight: 600;
+    color: rgba(15, 23, 42, 0.7);
   }
 
-  @media (min-width: 768px) {
-    .t4e-doc-footer {
-      padding: 32px 64px;
+  @keyframes pulse {
+
+    0%,
+    100% {
+      opacity: 1;
     }
 
-    .t4e-doc-footer-inner {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .t4e-doc-footer-copy {
-      text-align: right;
-    }
-  }
-
-  @media (max-width: 991px) {
-    .t4e-doc-footer-links {
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
+    50% {
+      opacity: 0.5;
     }
   }
 </style>
 
-<footer class="t4e-doc-footer">
-  <div class="t4e-doc-footer-inner">
-    <div class="t4e-doc-footer-links">
-      <a href="https://think4ever.com">Home</a>
-      <a href="https://think4ever.com/how-it-works/">How it Works</a>
-      <a href="https://think4ever.com/#pricing/">Pricing</a>
-      <a href="https://think4ever.com/blog/"> Blog</a>
-      <a href="https://think4ever.com/faq/">FAQ</a>
-      <a href="https://think4ever.com/contact-us/">Contact Us</a>
-      <a href="https://think4ever.com/privacy-policy/">Privacy Policy</a>
-      <a href="https://think4ever.com/terms-and-conditions/">Terms & Conditions</a>
+<footer class="t4e-footer">
+  <div class="t4e-footer-gradient-line"></div>
+  <div class="t4e-footer-blob-1"></div>
+  <div class="t4e-footer-blob-2"></div>
+
+  <div class="t4e-footer-container">
+    <div class="t4e-footer-grid">
+      <!-- Brand Column -->
+      <div class="t4e-footer-brand">
+        <a href="https://think4ever.com/" class="t4e-footer-logo">
+          <img src="/assets/images/think4ever-logo.png" alt="Think4Ever" />
+        </a>
+        <p class="t4e-footer-subtitle">
+          Turn a codebase into a shared, reviewable system map in minutes—then keep every change aligned with business
+          intent.
+        </p>
+        <div class="t4e-footer-social">
+          <a href="https://www.youtube.com/@Think4EverInc" target="_blank" rel="noopener noreferrer"
+            aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="https://www.linkedin.com/company/think4ever-global-inc/" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Links Grid -->
+      <div class="t4e-footer-links-grid">
+        <!-- Product Column -->
+        <div class="t4e-footer-col">
+          <h4 class="t4e-footer-heading">Product</h4>
+          <a href="https://think4ever.com/how-it-works" class="t4e-footer-link">How it works</a>
+          <a href="https://think4ever.com/code-to-design" class="t4e-footer-link">Code → Design</a>
+          <a href="https://think4ever.com/design-to-code" class="t4e-footer-link">Design → Code</a>
+          <a href="https://think4ever.com/integrations" class="t4e-footer-link">Integrations</a>
+          <a href="https://think4ever.com/pricing" class="t4e-footer-link">Pricing</a>
+        </div>
+
+        <!-- Resources Column -->
+        <div class="t4e-footer-col">
+          <h4 class="t4e-footer-heading">Resources</h4>
+          <a href="https://think4ever.com/resources" class="t4e-footer-link">Resource Library</a>
+          <a href="https://think4ever.com/blog" class="t4e-footer-link">Blog</a>
+          <a href="https://think4ever.com/faq" class="t4e-footer-link">FAQ</a>
+          <a href="https://think4ever.com/docs/onboarding.html" target="_blank" rel="noopener noreferrer"
+            class="t4e-footer-link">Docs</a>
+          <a href="https://think4ever.com/security" class="t4e-footer-link">Security & Trust</a>
+        </div>
+
+        <!-- Legal Column -->
+        <div class="t4e-footer-col">
+          <h4 class="t4e-footer-heading">Legal & Privacy</h4>
+          <a href="https://think4ever.com/contact-us" class="t4e-footer-link">Contact Us</a>
+          <a href="https://think4ever.com/privacy-policy" class="t4e-footer-link">Privacy Policy</a>
+          <a href="https://think4ever.com/terms-and-conditions" class="t4e-footer-link">Terms & Conditions</a>
+        </div>
+      </div>
     </div>
 
-    <div class="t4e-doc-footer-copy">
-      Copyright &copy; 2026 Think4Ever Global Inc. All Rights Reserved.
+    <!-- Bottom Footer -->
+    <div class="t4e-footer-bottom">
+      <p class="t4e-footer-copyright">
+        © 2026 Think4Ever Global Inc. All Rights Reserved.
+      </p>
+      <div class="t4e-footer-badge">
+        <span class="t4e-badge-dot"></span>
+        <span class="t4e-badge-text">Think4Ever Inc.</span>
+      </div>
     </div>
   </div>
 </footer>
