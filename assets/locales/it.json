@@ -2032,7 +2032,7 @@
   },
   "source_code": {
     "title": "Source Code",
-    "intro": "The Source Code dashboard is where your project transitions from high-level \"Concept\" to actual digital infrastructure. This is a live file system where Think4ever manages every script, style, and configuration file of any project.",
+    "intro": "The Source Code dashboard is where your project transitions from high-level \"Concept\" to actual digital infrastructure. This is a live file system where Think4Ever manages every script, style, and configuration file of any project.",
     "ns_title": "Navigation & Structure",
     "ns_intro": "The Files Browser provides a standard, intuitive directory structure. In your current view (the insurance folder), the AI has organized the project into logical sections:",
     "ns_b1_title": "config/:",
@@ -2086,7 +2086,7 @@
   },
   "containers": {
     "title": "Contenitori",
-    "intro": "Il modulo <strong>Contenitori</strong> è dove la tua applicazione passa da una raccolta di file a un sistema portatile pronto per la produzione. Sfruttando <strong>Docker</strong>, Think4ever AI garantisce che il tuo progetto funzioni in modo identico sulla tua macchina locale, su un server di staging o nel cloud.",
+    "intro": "Il modulo <strong>Contenitori</strong> è dove la tua applicazione passa da una raccolta di file a un sistema portatile pronto per la produzione. Sfruttando <strong>Docker</strong>, Think4Ever AI garantisce che il tuo progetto funzioni in modo identico sulla tua macchina locale, su un server di staging o nel cloud.",
     "fpt_title": "Ci sono quattro potenti schede:",
     "t1_h1": "Scheda",
     "t1_h2": "Cosa consente",

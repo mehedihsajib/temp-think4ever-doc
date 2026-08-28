@@ -16,13 +16,13 @@
   const searchIndex = [
     {
       title: "Introduction",
-      desc: "Get started with the think4ever platform vision and core documentation.",
+      desc: "Get started with the Think4Ever platform vision and core documentation.",
       page: "manual_introduction",
       keywords: ["overview", "user manual", "docs", "platform", "start"],
     },
     {
       title: "Key Features",
-      desc: "Explore the main think4ever features for orchestration and collaboration.",
+      desc: "Explore the main Think4Ever features for orchestration and collaboration.",
       page: "manual_key_features",
       keywords: ["features", "capabilities", "platform", "highlights"],
     },
@@ -34,7 +34,7 @@
     },
     {
       title: "Create a New Project",
-      desc: "Set up a new think4ever project and define the initial workspace.",
+      desc: "Set up a new Think4Ever project and define the initial workspace.",
       page: "manual_create_project",
       keywords: ["create", "project", "setup", "new project", "workspace"],
     },
@@ -46,7 +46,7 @@
     },
     {
       title: "API Keys",
-      desc: "Manage existing API keys used across your think4ever environment.",
+      desc: "Manage existing API keys used across your Think4Ever environment.",
       page: "manual_api_keys",
       keywords: ["api", "keys", "credentials", "tokens", "access"],
     },
@@ -58,7 +58,7 @@
     },
     {
       title: "Version Control",
-      desc: "Learn how version control fits into the think4ever workflow.",
+      desc: "Learn how version control fits into the Think4Ever workflow.",
       page: "manual_version_control",
       keywords: ["git", "repository", "source control", "versioning"],
     },
@@ -106,7 +106,7 @@
     },
     {
       title: "Integration Maps",
-      desc: "Plan how think4ever connects with external services and systems.",
+      desc: "Plan how Think4Ever connects with external services and systems.",
       page: "manual_integration_maps",
       keywords: ["integration", "maps", "services", "connections", "systems"],
     },
@@ -124,7 +124,7 @@
     },
     {
       title: "Available Diagram Types",
-      desc: "See which diagram formats are supported across think4ever documentation.",
+      desc: "See which diagram formats are supported across Think4Ever documentation.",
       page: "manual_available_diagram_types",
       keywords: ["diagram", "types", "formats", "charts"],
     },
@@ -160,19 +160,19 @@
     },
     {
       title: "Changelog",
-      desc: "Review recent think4ever documentation and product updates.",
+      desc: "Review recent Think4Ever documentation and product updates.",
       page: "changelog_page",
       keywords: ["changes", "release notes", "updates", "history"],
     },
     {
       title: "Blog",
-      desc: "Read think4ever articles, product updates, and platform insights.",
+      desc: "Read Think4Ever articles, product updates, and platform insights.",
       page: "blog_listing",
       keywords: ["articles", "updates", "news", "posts"],
     },
     {
       title: "Feedback",
-      desc: "Send feedback, requests, and suggestions to improve think4ever.",
+      desc: "Send feedback, requests, and suggestions to improve Think4Ever.",
       page: "feedback_form",
       keywords: ["feedback", "contact", "request", "suggestions"],
     },

@@ -2729,7 +2729,7 @@
   },
   "source_code": {
     "title": "Source Code",
-    "intro": "The <strong>Source Code</strong> dashboard is where your project transitions from high-level \"Concept\" to actual digital infrastructure. This is a live file system where <strong>Think4ever</strong> manages every script, style, and configuration file of any project.",
+    "intro": "The <strong>Source Code</strong> dashboard is where your project transitions from high-level \"Concept\" to actual digital infrastructure. This is a live file system where <strong>Think4Ever</strong> manages every script, style, and configuration file of any project.",
     "ns_title": "Navigation & Structure",
     "ns_intro": "The <strong>Files Browser</strong> provides a standard, intuitive directory structure. In your current view (the insurance folder), the AI has organized the project into logical sections:",
     "ns_b1_title": "config/:",
@@ -2783,7 +2783,7 @@
   },
   "containers": {
     "title": "Containers",
-    "intro": "The <strong>Containers</strong> module is where your application transitions from a collection of files into a portable, production-ready system. By leveraging <strong>Docker</strong>, Think4ever AI ensures that your project — runs identically on your local machine, a staging server, or the cloud.",
+    "intro": "The <strong>Containers</strong> module is where your application transitions from a collection of files into a portable, production-ready system. By leveraging <strong>Docker</strong>, Think4Ever AI ensures that your project — runs identically on your local machine, a staging server, or the cloud.",
     "fpt_title": "There are four powerful tabs:",
     "t1_h1": "Tab",
     "t1_h2": "What it enables",
