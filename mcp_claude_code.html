@@ -464,7 +464,7 @@
                         <p>
                             <strong>Claude Code</strong> natively supports remote HTTP MCP servers, allowing it to
                             interface directly
-                            with your think4ever project
+                            with your Think4Ever project
                             architecture without requiring a local bridge.
                         </p>
                     </div>
@@ -478,7 +478,7 @@
 
                     <div class="para-box">
                         <h4 class="h4">Add the Server via Terminal</h4>
-                        <p>Run the following initialization command in your terminal to register the think4ever MCP
+                        <p>Run the following initialization command in your terminal to register the Think4Ever MCP
                             server globally or locally:</p>
 
                         <div class="image-wrapper">
@@ -508,7 +508,7 @@
                                     <i class="fa-regular fa-copy"></i> Copy
                                 </button>
                             </div>
-                            <pre><code>claude mcp add think4ever \
+                            <pre><code>claude mcp add Think4Ever \
   --transport http https://cell-ssm-use1-0005.us.portal.think4ever.com/mcp \
   --header <span class="code-string">"Authorization: Bearer tf_71b84ebb8284f86491f24b85311a55dfd2b0c9e74c678c7e"</span></code></pre>
                         </div>
@@ -517,7 +517,7 @@
                             <li>
                                 <strong>Global Access:</strong>
                                 <span>
-                                    Append <code>--scope user</code> to make the think4ever tools available across all
+                                    Append <code>--scope user</code> to make the Think4Ever tools available across all
                                     of your
                                     projects.
                                 </span>
@@ -576,7 +576,7 @@
                             </div>
                             <pre><code>{
   <span class="code-keyword">"mcpServers"</span>: {
-    <span class="code-keyword">"think4ever"</span>: {
+    <span class="code-keyword">"Think4Ever"</span>: {
       <span class="code-keyword">"type"</span>: <span class="code-string">"http"</span>,
       <span class="code-keyword">"url"</span>: <span class="code-string">"https://cell-ssm-use1-0005.us.portal.think4ever.com/mcp"</span>,
       <span class="code-keyword">"headers"</span>: {
@@ -588,10 +588,10 @@
                         </div>
                         <p
                             style="margin-top: 16px; color: #475569; font-family: 'Inter', sans-serif; line-height: 1.6;">
-                            <strong>Tip:</strong> Mention the think4ever project by name (or ID) in your first prompt so
+                            <strong>Tip:</strong> Mention the Think4Ever project by name (or ID) in your first prompt so
                             the agent calls <code>list_projects</code> / <code>get_project</code> and anchors itself.
                             You can also add a line to your <code>CLAUDE.md</code> like “Project specs live in
-                            think4ever project #163 — read the active concept before large changes.”
+                            Think4Ever project #163 — read the active concept before large changes.”
                         </p>
                     </div>
                 </section>

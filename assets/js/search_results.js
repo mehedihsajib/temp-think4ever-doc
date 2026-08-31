@@ -4,7 +4,7 @@
 
   const uiText = {
     breadcrumbs: {
-      think4ever: "think4ever",
+      Think4Ever: "Think4Ever",
       documentation: "Documentation",
       product: "Product",
       strategy: "Strategy",
@@ -28,18 +28,18 @@
     {
       id: "r1",
       type: "docs",
-      breadcrumb: ["think4ever", "documentation", "product"],
+      breadcrumb: ["Think4Ever", "documentation", "product"],
       date: "2026-04-01",
       readTime: "5 min",
       page: "manual_introduction",
-      title: "Introduction to think4ever",
+      title: "Introduction to Think4Ever",
       excerpt:
-        "Start with the core platform vision, how multi-agent systems fit together, and what teams can accomplish with think4ever.",
+        "Start with the core platform vision, how multi-agent systems fit together, and what teams can accomplish with Think4Ever.",
     },
     {
       id: "r2",
       type: "docs",
-      breadcrumb: ["think4ever", "documentation", "product"],
+      breadcrumb: ["Think4Ever", "documentation", "product"],
       date: "2026-04-02",
       readTime: "4 min",
       page: "manual_key_features",
@@ -50,18 +50,18 @@
     {
       id: "r3",
       type: "docs",
-      breadcrumb: ["think4ever", "documentation", "product"],
+      breadcrumb: ["Think4Ever", "documentation", "product"],
       date: "2026-04-03",
       readTime: "6 min",
       page: "manual_dashboard",
       title: "Dashboard Overview",
       excerpt:
-        "Learn how the think4ever dashboard helps teams monitor projects, agents, and delivery progress in one place.",
+        "Learn how the Think4Ever dashboard helps teams monitor projects, agents, and delivery progress in one place.",
     },
     {
       id: "r4",
       type: "guides",
-      breadcrumb: ["think4ever", "guides", "launch"],
+      breadcrumb: ["Think4Ever", "guides", "launch"],
       date: "2026-04-04",
       readTime: "4 min",
       page: "manual_create_project",
@@ -72,7 +72,7 @@
     {
       id: "r5",
       type: "guides",
-      breadcrumb: ["think4ever", "guides", "operations"],
+      breadcrumb: ["Think4Ever", "guides", "operations"],
       date: "2026-04-05",
       readTime: "5 min",
       page: "manual_project_settings",
@@ -83,18 +83,18 @@
     {
       id: "r6",
       type: "blog",
-      breadcrumb: ["think4ever", "blog"],
+      breadcrumb: ["Think4Ever", "blog"],
       date: "2026-04-06",
       readTime: "3 min",
       page: "blog_listing",
-      title: "Inside the think4ever Product Journey",
+      title: "Inside the Think4Ever Product Journey",
       excerpt:
         "Read the latest platform stories, product updates, and ideas shaping our approach to multi-agent systems.",
     },
     {
       id: "r7",
       type: "guides",
-      breadcrumb: ["think4ever", "guides", "strategy"],
+      breadcrumb: ["Think4Ever", "guides", "strategy"],
       date: "2026-04-03",
       readTime: "4 min",
       page: "manual_business_flow",
@@ -105,40 +105,40 @@
     {
       id: "r8",
       type: "changelog",
-      breadcrumb: ["think4ever", "changelog"],
+      breadcrumb: ["Think4Ever", "changelog"],
       date: "2026-04-08",
       readTime: "2 min",
       page: "changelog_page",
-      title: "Latest think4ever Changelog",
+      title: "Latest Think4Ever Changelog",
       excerpt:
-        "Review recent improvements, documentation changes, and product updates across the think4ever experience.",
+        "Review recent improvements, documentation changes, and product updates across the Think4Ever experience.",
     },
     {
       id: "r9",
       type: "docs",
-      breadcrumb: ["think4ever", "documentation", "development"],
+      breadcrumb: ["Think4Ever", "documentation", "development"],
       date: "2026-04-05",
       readTime: "7 min",
       page: "manual_source_code",
       title: "Source Code Structure",
       excerpt:
-        "See how think4ever organizes code, delivery assets, and implementation details across the platform.",
+        "See how Think4Ever organizes code, delivery assets, and implementation details across the platform.",
     },
     {
       id: "r10",
       type: "guides",
-      breadcrumb: ["think4ever", "guides", "design"],
+      breadcrumb: ["Think4Ever", "guides", "design"],
       date: "2026-04-07",
       readTime: "6 min",
       page: "manual_ui_design",
       title: "UI Design Guidance",
       excerpt:
-        "Review interface structure, experience principles, and design decisions behind the think4ever product.",
+        "Review interface structure, experience principles, and design decisions behind the Think4Ever product.",
     },
     {
       id: "r11",
       type: "blog",
-      breadcrumb: ["think4ever", "blog"],
+      breadcrumb: ["Think4Ever", "blog"],
       date: "2026-03-30",
       readTime: "5 min",
       page: "blog_listing",
@@ -149,13 +149,13 @@
     {
       id: "r12",
       type: "docs",
-      breadcrumb: ["think4ever", "documentation", "development"],
+      breadcrumb: ["Think4Ever", "documentation", "development"],
       date: "2026-04-02",
       readTime: "5 min",
       page: "manual_database",
       title: "Database and Data Objects",
       excerpt:
-        "Understand how structured data, schema decisions, and data objects support the think4ever platform.",
+        "Understand how structured data, schema decisions, and data objects support the Think4Ever platform.",
     },
   ];
 
