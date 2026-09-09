@@ -1,249 +1,135 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Think4Ever Platform - Requirements</title>
-  <link href="css/theme.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="assets/css/global.css" />
-  <link rel="stylesheet" href="assets/css/consumer_docs_home.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <script src="assets/js/i18n.js"></script>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      background: #f8fafc;
-    }
-
-    .modern-header {
-      font-family: "Inter", sans-serif;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 64px;
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: saturate(180%) blur(20px);
-      -webkit-backdrop-filter: saturate(180%) blur(20px);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-      z-index: 300;
-      display: flex;
-      align-items: center;
-      transition: all 0.3s ease;
-    }
-
-    .modern-header-inner {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      height: 100%;
-    }
-
-    .modern-header-logo-plate {
-      display: flex;
-      align-items: center;
-      padding-left: 36px;
-      height: 100%;
-      box-sizing: border-box;
-    }
-
-    .modern-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .modern-logo span {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: #0f172a;
-      letter-spacing: -0.04em;
-    }
-
-    .modern-header-content {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex: 1;
-      padding: 0 40px;
-      height: 100%;
-    }
-
-    .modern-header-actions {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    @media (max-width: 1024px) {
-      .modern-header-logo-plate {
-        width: 240px;
-        min-width: 240px;
-        padding-left: 24px;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Think4Ever Platform - Requirements</title>
+    <link href="css/theme.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/consumer_docs_home.css" />
+    <link rel="stylesheet" href="assets/css/dev_doc.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="assets/js/i18n.js"></script>
+    <style>
+      /* Basic reset for preview consistency */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
       }
-    }
+    </style>
+  </head>
 
-    .consumer-docs-layout {
-      max-width: 100% !important;
-      width: 100% !important;
-      margin: 0 !important;
-      display: flex !important;
-      background: #ffffff;
-    }
+  <body>
+    <div class="consumer-docs-home consumer-getting-started">
+      <!-- Skip to content -->
+      <a
+        href="#cd-main"
+        class="sr-only"
+        style="
+          position: absolute;
+          left: -9999px;
+          top: auto;
+          width: 1px;
+          height: 1px;
+          overflow: hidden;
+        "
+        onfocus="
+          this.style.position = 'static';
+          this.style.width = 'auto';
+          this.style.height = 'auto';
+        "
+        onblur="
+          this.style.position = 'absolute';
+          this.style.left = '-9999px';
+          this.style.width = '1px';
+          this.style.height = '1px';
+          this.style.overflow = 'hidden';
+        "
+        >Skip to main content</a
+      >
+      <!-- Site Header -->
+      <header class="modern-header" id="consumerHeader"></header>
 
-    .cd-sidebar {
-      box-sizing: content-box !important;
-      width: 240px !important;
-      min-width: 240px !important;
-      background: #fcfcfd !important;
-      border-right: 1px solid #e2e8f0 !important;
-      padding-left: 36px !important;
-      padding-right: 24px !important;
-      padding-top: 36px !important;
-    }
+      <div class="consumer-docs-layout">
+        <!-- Mobile sidebar toggle -->
+        <button
+          class="cgs-sidebar-toggle"
+          id="cgsSidebarToggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+        <!-- Sidebar overlay -->
+        <div class="cgs-sidebar-overlay" id="cgsSidebarOverlay"></div>
+        <!-- Sidebar -->
+        <div id="consumerSidebar"></div>
 
-    .cd-main-content {
-      max-width: 1000px !important;
-      background: #ffffff !important;
-      padding-top: 56px !important;
-      padding-left: 64px !important;
-      padding-right: 64px !important;
-      padding-bottom: 100px !important;
-    }
+        <!-- Main Content -->
+        <main class="cd-main-content" id="cd-main">
+          <!-- Page Title -->
+          <h1 class="cd-page-title" id="cdHomeTitle">Requirements</h1>
 
-    h2.submenu-heading {
-      color: #1e3a8a;
-      font-family: "Inter", sans-serif;
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 16px;
-      border: none;
-    }
+          <!-- Overview Section -->
+          <section class="cd-overview" id="cdHomeOverview">
+            <div class="para-box doc-step-block">
+              <p class="cd-overview-p">
+                The <strong>Requirements</strong> tab serves as the foundational text reference for the application, detailing the project overview, core system capabilities, and designated user roles.
+              </p>
 
-    .doc-section {
-      margin-top: 24px;
-      margin-bottom: 32px;
-    }
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/portal/requirements/requirements-1.jpg"
+                  alt="Requirements Tab Interface and Actions"
+                  class="demo-img"
+                />
+              </div>
 
-    .cd-overview-ul {
-      margin-top: 16px;
-      margin-bottom: 24px;
-      padding-left: 24px;
-      list-style-type: disc;
-    }
-
-    .cd-overview-ul li {
-      margin-bottom: 16px;
-      font-family: "Inter", sans-serif;
-      font-size: 0.95rem;
-      color: #475569;
-      line-height: 1.6;
-    }
-
-    .cd-overview-ul li strong {
-      color: #0f172a;
-      font-weight: 600;
-    }
-
-    .cd-overview-p {
-      font-family: "Inter", sans-serif;
-      font-size: 1rem;
-      color: #475569;
-      line-height: 1.7;
-      margin-bottom: 16px;
-    }
-
-    .demo-img {
-      max-width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      border: 1px solid #e2e8f0;
-      margin-top: 24px;
-      margin-bottom: 40px;
-      display: block;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="consumer-docs-home consumer-getting-started">
-    <header class="modern-header" id="consumerHeader"></header>
-
-    <div class="consumer-docs-layout">
-      <div id="consumerSidebar"></div>
-
-      <main class="cd-main-content" id="cd-main">
-        <h1 class="cd-page-title">Requirements</h1>
-
-        <!-- ===== Explanation Video ===== -->
-        <div class="yt-video" data-video-id="kqRaUoV8K-E"></div>
-        <h3 class="cd-sub-heading" id="navigation-structure">
-          Structure & Ideation
-        </h3>
-        <img src="assets/images/structure-and-ideation.png" alt="structure" class="demo-img"
-          style="max-width: 300px;" />
-        <p class="cd-overview-p">
-          The <strong>Structure & Ideation</strong> section is the
-          architectural heart of the platform. It is here that the high-level
-          goals defined in your <strong>Requirements</strong> are decomposed
-          into functional, technical, and logical building blocks.
-        </p>
-
-        <div class="doc-section">
-          <img src="assets/images/structure-and-ideation-2.png" alt="structure" class="demo-img" />
-          <p class="cd-overview-p">
-            This section serves as a bridge, turning "what" the system should
-            do into "how" it will actually work.
-          </p>
-          <h3 class="cd-sub-heading" id="navigation-structure">
-            Structure & Ideation has the following submenus:
-          </h3>
-          <p class="cd-overview-p"><strong>Requirements</strong></p>
-          <p class="cd-overview-p">
-            As the entry point for this category, this page stores the core
-            vision of your project. It acts as the "Source of Truth." Every
-            other item in this menu is derived from the text provided here.
-          </p>
-          <ul class="cd-overview-ul">
-            <li>
-              <strong>Usage:</strong>
-              <span>Define your MVP (Minimum Viable Product) features and user
-                roles.</span>
-            </li>
-          </ul>
-          <!-- <img
-              src="assets/images/structure-and-ideation-3.png"
-              alt="structure"
-              class="demo-img"
-            /> -->
-          <p class="cd-overview-p">
-            In this section, you can modify or add new requirements. Once all
-            good, click on <strong>Save Requirements</strong> button.
-          </p>
-          <img src="assets/images/structure-and-ideation-4.png" alt="structure" class="demo-img" />
-        </div>
-      </main>
+              <h4 class="step-subhead">Key UI Components</h4>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong>Requirements Text View:</strong> Displays the overarching system summary (e.g., Cartify platform scope), itemized core capabilities (e.g., authentication, order submission, real-time tracking, substitution management), and defined user roles.
+                </li>
+                <li>
+                  <strong>Action Buttons:</strong> Located in the top-right corner:
+                  <ul class="sub-list">
+                    <li>
+                      <strong>Export:</strong> Downloads the requirements specification in external formats.
+                    </li>
+                    <li>
+                      <strong>Publish to Jira:</strong> Syncs and pushes requirements directly into connected Jira boards as epics or user stories.
+                    </li>
+                    <li>
+                      <strong>Save Requirements:</strong> Persists any manual edits or updates made to the specification text.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </main>
+      </div>
     </div>
-  </div>
-  <div id="docFooter"></div>
-  <script src="assets/js/navigation.js"></script>
-  <script src="assets/js/consumer_docs_home.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      if (window.I18n) {
-        window.I18n.init();
-      }
-    });
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-</body>
-
+    <div id="docFooter"></div>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/consumer_docs_home.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (window.I18n) {
+          window.I18n.init();
+        }
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  </body>
 </html>
