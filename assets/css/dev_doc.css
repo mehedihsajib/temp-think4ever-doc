@@ -607,3 +607,133 @@ main.cd-main-content {
 .config-table em {
     font-style: italic;
 }
+
+/* Documentation Content & Image Section Utilities */
+.doc-step-block {
+    margin-top: 32px;
+    margin-bottom: 36px;
+}
+
+.step-caption {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #334155;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.step-subhead {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.section-option-title {
+    color: #ea580c;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 36px;
+    margin-bottom: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+.image-wrapper {
+    padding-top: 12px;
+    padding-bottom: 24px;
+    position: relative;
+    text-align: left;
+}
+
+.image-wrapper .demo-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+    border: 1px solid #e2e8f0;
+    display: block;
+}
+
+.image-wrapper.img-sm .demo-img {
+    max-width: 420px;
+}
+
+.image-wrapper.img-md .demo-img {
+    max-width: 640px;
+}
+
+.image-wrapper.img-lg .demo-img {
+    max-width: 840px;
+}
+
+.text-muted-italic {
+    font-style: italic;
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+/* Documentation List Styling Utilities */
+.cd-overview-ul {
+    list-style-type: disc;
+    padding-left: 24px;
+    margin-top: 12px;
+    margin-bottom: 16px;
+}
+
+.cd-overview-ul > li {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #334155;
+    margin-bottom: 10px;
+}
+
+.cd-overview-ul > li strong {
+    color: #0f172a;
+    font-weight: 600;
+}
+
+.cd-overview-ol {
+    list-style-type: decimal;
+    padding-left: 24px;
+    margin-top: 12px;
+    margin-bottom: 16px;
+}
+
+.cd-overview-ol > li {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #334155;
+    margin-bottom: 10px;
+}
+
+.cd-overview-ol > li strong {
+    color: #0f172a;
+    font-weight: 600;
+}
+
+.sub-list {
+    list-style-type: circle;
+    padding-left: 22px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.sub-list > li {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #475569;
+    margin-bottom: 4px;
+}
+
+.sub-list > li em {
+    font-style: italic;
+    color: #334155;
+}

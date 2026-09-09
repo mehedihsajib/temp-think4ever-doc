@@ -11,6 +11,7 @@
     />
     <link rel="stylesheet" href="assets/css/global.css" />
     <link rel="stylesheet" href="assets/css/consumer_docs_home.css" />
+    <link rel="stylesheet" href="assets/css/dev_doc.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,198 +20,106 @@
     />
     <script src="assets/js/i18n.js"></script>
     <style>
+      /* Basic reset for preview consistency */
       body {
         margin: 0;
         padding: 0;
         font-family: sans-serif;
-        background: #f8fafc;
-      }
-
-      .modern-header {
-        font-family: "Inter", sans-serif;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 64px;
-        background: rgba(255, 255, 255, 0.85);
-        backdrop-filter: saturate(180%) blur(20px);
-        -webkit-backdrop-filter: saturate(180%) blur(20px);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-        z-index: 300;
-        display: flex;
-        align-items: center;
-        transition: all 0.3s ease;
-      }
-
-      .modern-header-inner {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        height: 100%;
-      }
-
-      .modern-header-logo-plate {
-        display: flex;
-        align-items: center;
-        padding-left: 36px;
-        height: 100%;
-        box-sizing: border-box;
-      }
-
-      .modern-logo {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        cursor: pointer;
-        text-decoration: none;
-      }
-
-      .modern-logo span {
-        font-size: 1.05rem;
-        font-weight: 700;
-        color: #0f172a;
-        letter-spacing: -0.04em;
-      }
-
-      .modern-header-content {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex: 1;
-        padding: 0 40px;
-        height: 100%;
-      }
-
-      .modern-header-actions {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-      }
-
-      @media (max-width: 1024px) {
-        .modern-header-logo-plate {
-          width: 240px;
-          min-width: 240px;
-          padding-left: 24px;
-        }
-      }
-
-      .consumer-docs-layout {
-        max-width: 100% !important;
-        width: 100% !important;
-        margin: 0 !important;
-        display: flex !important;
-        background: #ffffff;
-      }
-
-      .cd-sidebar {
-        box-sizing: content-box !important;
-        width: 240px !important;
-        min-width: 240px !important;
-        background: #fcfcfd !important;
-        border-right: 1px solid #e2e8f0 !important;
-        padding-left: 36px !important;
-        padding-right: 24px !important;
-        padding-top: 36px !important;
-      }
-
-      .cd-main-content {
-        max-width: 1000px !important;
-        background: #ffffff !important;
-        padding-top: 56px !important;
-        padding-left: 64px !important;
-        padding-right: 64px !important;
-        padding-bottom: 100px !important;
-      }
-
-      .doc-section {
-        margin-top: 24px;
-        margin-bottom: 32px;
-      }
-
-      .cd-overview-ul {
-        margin-top: 16px;
-        margin-bottom: 24px;
-        padding-left: 24px;
-        list-style-type: disc;
-      }
-
-      .cd-overview-ul li {
-        margin-bottom: 16px;
-        font-family: "Inter", sans-serif;
-        font-size: 0.95rem;
-        color: #475569;
-        line-height: 1.6;
-      }
-
-      .cd-overview-ul li strong {
-        color: #0f172a;
-        font-weight: 600;
-      }
-
-      .cd-overview-p {
-        font-family: "Inter", sans-serif;
-        font-size: 1rem;
-        color: #475569;
-        line-height: 1.7;
-        margin-bottom: 16px;
-      }
-
-      .demo-img {
-        max-width: 100%;
-        border-radius: 8px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        border: 1px solid #e2e8f0;
-        margin-top: 24px;
-        margin-bottom: 40px;
-        display: block;
       }
     </style>
   </head>
 
   <body>
     <div class="consumer-docs-home consumer-getting-started">
+      <!-- Skip to content -->
+      <a
+        href="#cd-main"
+        class="sr-only"
+        style="
+          position: absolute;
+          left: -9999px;
+          top: auto;
+          width: 1px;
+          height: 1px;
+          overflow: hidden;
+        "
+        onfocus="
+          this.style.position = 'static';
+          this.style.width = 'auto';
+          this.style.height = 'auto';
+        "
+        onblur="
+          this.style.position = 'absolute';
+          this.style.left = '-9999px';
+          this.style.width = '1px';
+          this.style.height = '1px';
+          this.style.overflow = 'hidden';
+        "
+        >Skip to main content</a
+      >
+      <!-- Site Header -->
       <header class="modern-header" id="consumerHeader"></header>
 
       <div class="consumer-docs-layout">
+        <!-- Mobile sidebar toggle -->
+        <button
+          class="cgs-sidebar-toggle"
+          id="cgsSidebarToggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+        <!-- Sidebar overlay -->
+        <div class="cgs-sidebar-overlay" id="cgsSidebarOverlay"></div>
+        <!-- Sidebar -->
         <div id="consumerSidebar"></div>
 
+        <!-- Main Content -->
         <main class="cd-main-content" id="cd-main">
-          <h1 class="cd-page-title" data-i18n="dev_int.title">
-            Integration Maps
-          </h1>
-          <p class="cd-overview-p" data-i18n-html="dev_int.intro">
-            This tool outlines how your application communicates with external
-            systems.
-          </p>
-          <!-- ===== Explanation Video ===== -->
-          <div class="yt-video" data-video-id="BZK9Prej4Jc"></div>
+          <!-- Page Title -->
+          <h1 class="cd-page-title" id="cdHomeTitle">Integration Maps</h1>
 
-          <div class="doc-section">
-            <ul class="cd-overview-ul">
-              <li>
-                <strong data-i18n="dev_int.f1_title">Example:</strong>
-                <span data-i18n-html="dev_int.f1_desc"
-                  >How your app talks to a Payment Gateway (Stripe) or an AI
-                  Model (OpenAI/Claude).</span
-                >
-              </li>
-              <li>
-                <strong data-i18n="dev_int.f2_title">Usage:</strong>
-                <span data-i18n-html="dev_int.f2_desc"
-                  >Visualize the data exchange points between your system and
-                  the outside world.</span
-                >
-              </li>
-            </ul>
+          <!-- Overview Section -->
+          <section class="cd-overview" id="cdHomeOverview">
+            <div class="para-box doc-step-block">
+              <p class="cd-overview-p">
+                The <strong>Integrations</strong> tab provides a visual management hub detailing all third-party service connections, payment gateways, messaging services, and external APIs connected to your platform architecture.
+              </p>
 
-            <img
-              src="assets/images/intregation-maps.png"
-              alt="Integration Maps Configuration"
-              class="demo-img"
-            />
-          </div>
+              <h4 class="step-subhead">Key UI Components</h4>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong>Integrations Sidebar:</strong> Itemizes all 18 configured integration services (such as <em>Stripe, Razorpay, Google Maps API, Mapbox, Twilio, SendGrid, Firebase Cloud Messaging,</em> and <em>AWS S3</em>) with search and quick-navigation controls.
+                </li>
+                <li>
+                  <strong>Integration Cards Grid:</strong> Interactive tiles displaying specific service configurations:
+                  <ul class="sub-list">
+                    <li>
+                      <strong>Service Details & Type:</strong> Name, category (e.g., PAYMENT_GATEWAY, SMS, FILE_STORAGE, ANALYTICS), and status tag (e.g., REQUIRED or OPTIONAL).
+                    </li>
+                    <li>
+                      <strong>Capabilities & Description:</strong> Highlights service functions such as tokenization, webhooks, address autocomplete, or infrastructure monitoring.
+                    </li>
+                    <li>
+                      <strong>Used in Flows:</strong> Direct links to the specific business processes using the integration (e.g., flow-payment-processing, flow-delivery-assignment, flow-registration).
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Canvas Toolbar:</strong> Top-right controls to toggle views between <strong>Cards</strong> and <strong>Graph</strong> mode, alongside a <strong>Phases (Roadmap)</strong> filter.
+                </li>
+              </ul>
+
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/portal/integration-maps/integration-maps-1.jpg"
+                  alt="Integrations Third-Party Service Connections and Cards Grid"
+                  class="demo-img"
+                />
+              </div>
+            </div>
+          </section>
         </main>
       </div>
     </div>
@@ -218,7 +127,7 @@
     <script src="assets/js/navigation.js"></script>
     <script src="assets/js/consumer_docs_home.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
+      document.addEventListener('DOMContentLoaded', () => {
         if (window.I18n) {
           window.I18n.init();
         }
