@@ -78,49 +78,408 @@
         <!-- Main Content -->
         <main class="cd-main-content" id="cd-main">
           <!-- Page Title -->
-          <h1 class="cd-page-title" id="cdHomeTitle">Roles and Permission</h1>
+          <h1 class="cd-page-title" id="cdHomeTitle">Roles & Permissions</h1>
 
           <!-- Overview Section -->
           <section class="cd-overview" id="cdHomeOverview">
             <div class="para-box doc-step-block">
               <p class="cd-overview-p">
-                The <strong>Roles & Permissions</strong> tab defines user personas, security access tiers, and operational permissions across the platform.
+                The <strong>Roles & Permissions</strong> tab allows
+                administrators to view and manage the roles, access levels, and
+                permissions assigned to different types of users across the
+                platform.
+              </p>
+              <p class="cd-overview-p">
+                Each role defines what a user can
+                <strong>see, access, and perform</strong>, helping ensure that
+                users only have access to the screens, data, and workflows
+                required for their responsibilities.
               </p>
 
+              <!-- Image 1 -->
               <div class="image-wrapper">
                 <img
-                  src="assets/images/portal/roles-permissions/roles-permissions-1.jpg"
-                  alt="Roles & Permissions Access Tiers and Persona Governance Cards"
+                  src="assets/images/portal/roles-permissions/roles-permissions-1.png"
+                  alt="Roles & Permissions Overview"
+                  class="demo-img"
+                />
+              </div>
+            </div>
+
+            <!-- Roles & Permissions Overview -->
+            <div class="para-box doc-step-block">
+              <h3 class="h3">Roles & Permissions Overview</h3>
+              <p class="cd-overview-p">
+                The Roles & Permissions page is organized into three main areas:
+              </p>
+              <ol class="cd-overview-ol">
+                <li>
+                  <strong>Roles Sidebar</strong> – Used to locate and select a
+                  system role.
+                </li>
+                <li>
+                  <strong>Role Cards Canvas</strong> – Displays the access and
+                  permission details for the selected roles.
+                </li>
+                <li>
+                  <strong>Canvas Toolbar</strong> – Provides options for
+                  changing the display layout and filtering roles by roadmap
+                  phase.
+                </li>
+              </ol>
+            </div>
+
+            <!-- 1. Roles Sidebar -->
+            <div class="para-box doc-step-block">
+              <h3 class="h3">1. Roles Sidebar</h3>
+              <p class="cd-overview-p">
+                The Roles Sidebar displays the system roles available on the
+                platform.
+              </p>
+              <p class="cd-overview-p">
+                The sidebar contains 12 predefined roles, such as:
+              </p>
+              <ul class="cd-overview-ul">
+                <li>Customer</li>
+                <li>Guest</li>
+                <li>Delivery Partner</li>
+                <li>Store Partner</li>
+                <li>Admin</li>
+                <li>Finance Officer</li>
+              </ul>
+
+              <h4 class="step-subhead">Search for a Role</h4>
+              <p class="cd-overview-p">
+                Use the <strong>Search</strong> option to quickly locate a
+                specific role.
+              </p>
+              <p class="step-caption">To search for a role:</p>
+              <ol class="cd-overview-ol">
+                <li>
+                  Click the <strong>Search</strong> field in the Roles Sidebar.
+                </li>
+                <li>Enter the name of the role you want to find.</li>
+                <li>Select the role from the filtered list.</li>
+              </ol>
+              <p class="cd-overview-p">
+                Selecting a role displays its corresponding access and
+                permission details in the Role Cards Canvas.
+              </p>
+            </div>
+
+            <!-- 2. Role Cards Canvas -->
+            <div class="para-box doc-step-block">
+              <h3 class="h3">2. Role Cards Canvas</h3>
+              <p class="cd-overview-p">
+                The <strong>Role Cards Canvas</strong> provides a detailed
+                overview of the permissions and access assigned to each role.
+              </p>
+              <p class="cd-overview-p">
+                Each role is presented as a card containing the following
+                information:
+              </p>
+
+              <h4 class="step-subhead">Role Details</h4>
+              <p class="cd-overview-p">
+                The <strong>Role Details</strong> section identifies the role
+                and its overall security classification.
+              </p>
+              <p class="cd-overview-p">It includes:</p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong>Role Name</strong> – The name of the system role.
+                </li>
+                <li>
+                  <strong>Clearance Level</strong> – Indicates the role's access
+                  level, such as Level 10.
+                </li>
+                <li>
+                  <strong>Description</strong> – Provides a brief explanation of
+                  the role's responsibilities and purpose.
+                </li>
+              </ul>
+
+              <h4 class="step-subhead">Screen Access</h4>
+              <p class="cd-overview-p">
+                The <strong>Screen Access</strong> section identifies the
+                screens or UI views that the role is authorized to access.
+              </p>
+              <p class="cd-overview-p">
+                Access may be assigned using different permission scopes, such
+                as:
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong>Full Access</strong> – The user can access and use all
+                  available functions on the screen.
+                </li>
+                <li>
+                  <strong>Read-Only</strong> – The user can view information but
+                  cannot make changes.
+                </li>
+              </ul>
+              <p class="cd-overview-p">
+                This section helps administrators understand
+                <strong
+                  >which parts of the platform are visible and accessible to
+                  each role.</strong
+                >
+              </p>
+
+              <h4 class="step-subhead">Data Access</h4>
+              <p class="cd-overview-p">
+                The <strong>Data Access</strong> section defines what operations
+                the role can perform on specific data or entities.
+              </p>
+              <p class="cd-overview-p">Permissions may include:</p>
+
+              <table class="config-table">
+                <thead>
+                  <tr>
+                    <th>Permission</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Create</td>
+                    <td>Allows the user to add new records or data.</td>
+                  </tr>
+                  <tr>
+                    <td>Read</td>
+                    <td>Allows the user to view existing records or data.</td>
+                  </tr>
+                  <tr>
+                    <td>Update</td>
+                    <td>Allows the user to modify existing records or data.</td>
+                  </tr>
+                  <tr>
+                    <td>Delete</td>
+                    <td>Allows the user to remove records or data.</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p class="cd-overview-p" style="margin-top: 16px">
+                For example, a role may have <strong>Read</strong> access to
+                financial records but may not have permission to
+                <strong>Update</strong> or <strong>Delete</strong> them.
+              </p>
+
+              <h4 class="step-subhead">Flow Access</h4>
+              <p class="cd-overview-p">
+                The <strong>Flow Access</strong> section defines the business
+                processes and workflow actions that the role is authorized to
+                initiate or perform.
+              </p>
+              <p class="cd-overview-p">This may include:</p>
+              <ul class="cd-overview-ul">
+                <li>Starting a business process</li>
+                <li>Approving or rejecting a request</li>
+                <li>Moving an item to the next workflow stage</li>
+                <li>Performing role-specific workflow actions</li>
+              </ul>
+              <p class="cd-overview-p">
+                Flow permissions ensure that users can only perform actions
+                appropriate to their assigned responsibilities.
+              </p>
+            </div>
+
+            <!-- 3. Canvas Toolbar -->
+            <div class="para-box doc-step-block">
+              <h3 class="h3">3. Canvas Toolbar</h3>
+              <p class="cd-overview-p">
+                The <strong>Canvas Toolbar</strong>, located in the upper-right
+                corner of the page, provides controls for changing how role
+                information is displayed.
+              </p>
+
+              <h4 class="step-subhead">Cards View</h4>
+              <p class="cd-overview-p">
+                The <strong>Cards view</strong> displays each role as an
+                individual card.
+              </p>
+              <p class="cd-overview-p">
+                Use this view when you want to review the permissions and access
+                details of roles individually.
+              </p>
+
+              <!-- Image 2 -->
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/portal/roles-permissions/roles-permissions-2.png"
+                  alt="Roles & Permissions Cards View"
                   class="demo-img"
                 />
               </div>
 
-              <h4 class="step-subhead">Key UI Components</h4>
+              <h4 class="step-subhead">Matrix View</h4>
+              <p class="cd-overview-p">
+                The <strong>Matrix view</strong> presents role permissions in a
+                structured matrix, making it easier to compare access across
+                multiple roles.
+              </p>
+
+              <!-- Image 3 -->
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/portal/roles-permissions/roles-permissions-3.png"
+                  alt="Roles & Permissions Matrix View"
+                  class="demo-img"
+                />
+              </div>
+
+              <p class="step-caption">Use this view when you need to:</p>
               <ul class="cd-overview-ul">
-                <li>
-                  <strong>Roles Sidebar:</strong> Lists all 12 defined system roles (e.g., <em>Customer, Guest, Delivery Partner, Store Partner, Admin, Finance Officer</em>) with search capability.
-                </li>
-                <li>
-                  <strong>Role Cards Canvas:</strong> Structured tiles detailing each role's specific governance parameters:
-                  <ul class="sub-list">
+                <li>Compare permissions between roles</li>
+                <li>Identify differences in access levels</li>
+                <li>Review permission coverage across the platform</li>
+              </ul>
+
+              <h4 class="step-subhead">Phases (Roadmap) Filter</h4>
+              <p class="cd-overview-p">
+                The <strong>Phases (Roadmap) </strong> filter allows you to
+                filter the displayed roles or permissions according to their
+                associated implementation or roadmap phase.
+              </p>
+              <p class="cd-overview-p">
+                Use this filter when reviewing roles and permissions based on
+                their planned rollout or development phase.
+              </p>
+            </div>
+
+            <!-- Image 4: Right before Understanding Role Permissions section -->
+            <div class="para-box doc-step-block">
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/portal/roles-permissions/roles-permissions-4.png"
+                  alt="Finance Officer Role Permissions Detail"
+                  class="demo-img"
+                />
+              </div>
+
+              <h3 class="h3">Understanding Role Permissions</h3>
+              <p class="cd-overview-p">
+                A role's access is determined by the combination of its:
+              </p>
+              <div
+                class="callout callout-info"
+                style="
+                  align-items: center;
+                  justify-content: center;
+                  text-align: center;
+                  font-size: 1.05rem;
+                  font-weight: 600;
+                  padding: 16px;
+                  margin: 20px 0;
+                "
+              >
+                <span>Screen Access</span>
+                <i
+                  class="fa fa-plus"
+                  style="margin: 0 12px; color: #3b82f6"
+                ></i>
+                <span>Data Access</span>
+                <i
+                  class="fa fa-plus"
+                  style="margin: 0 12px; color: #3b82f6"
+                ></i>
+                <span>Flow Access</span>
+              </div>
+              <p class="cd-overview-p">For example:</p>
+              <p class="cd-overview-p">
+                A Finance Officer may have <strong>Full Access</strong> to
+                finance-related screens,
+                <strong>Read/Update</strong> permissions for financial records,
+                and permission to perform specific finance-related workflow
+                actions.
+              </p>
+
+              <p class="cd-overview-p">
+                This layered permission model helps maintain appropriate
+                <strong
+                  >security, access control, and separation of responsibilities
+                  across the platform.</strong
+                >
+              </p>
+
+              <!-- Best Practice Callout Box -->
+              <div class="callout callout-tip">
+                <div class="callout-icon">
+                  <i class="fa-solid fa-lightbulb"></i>
+                </div>
+                <div class="callout-content">
+                  <p>
+                    <strong>Best Practice:</strong> When reviewing or
+                    configuring roles and permissions:
+                  </p>
+                  <ul
+                    class="sub-list"
+                    style="margin-top: 8px; margin-bottom: 0"
+                  >
                     <li>
-                      <strong>Role Details:</strong> Displays role name, clearance level (e.g., <em>Level 10</em>), and brief description.
+                      Grant users only the access required for their
+                      responsibilities.
                     </li>
                     <li>
-                      <strong>Screen Access:</strong> Lists authorized UI views tagged with permission scopes (e.g., full access, read-only).
+                      Use <strong>Read-Only</strong> access when users only need
+                      to view information.
                     </li>
                     <li>
-                      <strong>Data Access:</strong> Specifies entity permissions such as create, read, update, or delete operations.
+                      Review
+                      <strong>Create, Update, and Delete</strong> permissions
+                      carefully, as these allow users to modify platform data.
                     </li>
                     <li>
-                      <strong>Flow Access:</strong> Outlines permissible business process triggers and workflow actions.
+                      Verify workflow permissions to ensure users can only
+                      perform authorized business actions.
+                    </li>
+                    <li>
+                      Use <strong>Matrix View</strong> when comparing
+                      permissions across multiple roles.
+                    </li>
+                    <li>
+                      Use the <strong>Phases (Roadmap)</strong> filter when
+                      reviewing permissions by implementation phase.
                     </li>
                   </ul>
-                </li>
-                <li>
-                  <strong>Canvas Toolbar:</strong> Top-right controls to switch views between <strong>Cards</strong> and <strong>Matrix</strong> layout, along with a <strong>Phases (Roadmap)</strong> filter.
-                </li>
-              </ul>
+                </div>
+              </div>
+
+              <div
+                style="
+                  margin-top: 24px;
+                  padding-top: 16px;
+                  border-top: 1px dashed #e2e8f0;
+                "
+              >
+                <p
+                  class="cd-overview-p"
+                  style="color: #64748b; font-size: 0.95rem; line-height: 1.6"
+                >
+                  This version is more suitable for a
+                  <strong>client-facing User Manual</strong> because it explains
+                  not just <em>what the components are</em>, but also
+                  <strong
+                    >what users can do with them and when each view is
+                    useful</strong
+                  >.
+                </p>
+                <p
+                  class="cd-overview-p"
+                  style="
+                    color: #64748b;
+                    font-size: 0.95rem;
+                    line-height: 1.6;
+                    margin-top: 12px;
+                  "
+                >
+                  If this is for your
+                  <strong>Think4Ever/Mintlify documentation</strong>, I can also
+                  make the rest of your manual follow this same structure and
+                  writing style consistently.
+                </p>
+              </div>
             </div>
           </section>
         </main>
