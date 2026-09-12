@@ -11,6 +11,7 @@
     />
     <link rel="stylesheet" href="assets/css/global.css" />
     <link rel="stylesheet" href="assets/css/consumer_docs_home.css" />
+    <link rel="stylesheet" href="assets/css/dev_doc.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,196 +20,230 @@
     />
     <script src="assets/js/i18n.js"></script>
     <style>
+      /* Basic reset for preview consistency */
       body {
         margin: 0;
         padding: 0;
         font-family: sans-serif;
-        background: #f8fafc;
-      }
-
-      .modern-header {
-        font-family: "Inter", sans-serif;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 64px;
-        background: rgba(255, 255, 255, 0.85);
-        backdrop-filter: saturate(180%) blur(20px);
-        -webkit-backdrop-filter: saturate(180%) blur(20px);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-        z-index: 300;
-        display: flex;
-        align-items: center;
-        transition: all 0.3s ease;
-      }
-
-      .modern-header-inner {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        height: 100%;
-      }
-
-      .modern-header-logo-plate {
-        display: flex;
-        align-items: center;
-        padding-left: 36px;
-        height: 100%;
-        box-sizing: border-box;
-      }
-
-      .modern-logo {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        cursor: pointer;
-        text-decoration: none;
-      }
-
-      .modern-logo span {
-        font-size: 1.05rem;
-        font-weight: 700;
-        color: #0f172a;
-        letter-spacing: -0.04em;
-      }
-
-      .modern-header-content {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex: 1;
-        padding: 0 40px;
-        height: 100%;
-      }
-
-      .modern-header-actions {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-      }
-
-      @media (max-width: 1024px) {
-        .modern-header-logo-plate {
-          width: 240px;
-          min-width: 240px;
-          padding-left: 24px;
-        }
-      }
-
-      .consumer-docs-layout {
-        max-width: 100% !important;
-        width: 100% !important;
-        margin: 0 !important;
-        display: flex !important;
-        background: #ffffff;
-      }
-
-      .cd-sidebar {
-        box-sizing: content-box !important;
-        width: 240px !important;
-        min-width: 240px !important;
-        background: #fcfcfd !important;
-        border-right: 1px solid #e2e8f0 !important;
-        padding-left: 36px !important;
-        padding-right: 24px !important;
-        padding-top: 36px !important;
-      }
-
-      .cd-main-content {
-        max-width: 1000px !important;
-        background: #ffffff !important;
-        padding-top: 56px !important;
-        padding-left: 64px !important;
-        padding-right: 64px !important;
-        padding-bottom: 100px !important;
-      }
-
-      .doc-section {
-        margin-top: 24px;
-        margin-bottom: 32px;
-      }
-
-      .cd-overview-ul {
-        margin-top: 16px;
-        margin-bottom: 24px;
-        padding-left: 24px;
-        list-style-type: disc;
-      }
-
-      .cd-overview-ul li {
-        margin-bottom: 16px;
-        font-family: "Inter", sans-serif;
-        font-size: 0.95rem;
-        color: #475569;
-        line-height: 1.6;
-      }
-
-      .cd-overview-ul li strong {
-        color: #0f172a;
-        font-weight: 600;
-      }
-
-      .cd-overview-p {
-        font-family: "Inter", sans-serif;
-        font-size: 1rem;
-        color: #475569;
-        line-height: 1.7;
-        margin-bottom: 16px;
-      }
-
-      .demo-img {
-        max-width: 100%;
-        border-radius: 8px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        border: 1px solid #e2e8f0;
-        margin-top: 24px;
-        margin-bottom: 40px;
-        display: block;
       }
     </style>
   </head>
 
   <body>
     <div class="consumer-docs-home consumer-getting-started">
+      <!-- Skip to content -->
+      <a
+        href="#cd-main"
+        class="sr-only"
+        style="
+          position: absolute;
+          left: -9999px;
+          top: auto;
+          width: 1px;
+          height: 1px;
+          overflow: hidden;
+        "
+        onfocus="
+          this.style.position = 'static';
+          this.style.width = 'auto';
+          this.style.height = 'auto';
+        "
+        onblur="
+          this.style.position = 'absolute';
+          this.style.left = '-9999px';
+          this.style.width = '1px';
+          this.style.height = '1px';
+          this.style.overflow = 'hidden';
+        "
+        >Skip to main content</a
+      >
+      <!-- Site Header -->
       <header class="modern-header" id="consumerHeader"></header>
 
       <div class="consumer-docs-layout">
+        <!-- Mobile sidebar toggle -->
+        <button
+          class="cgs-sidebar-toggle"
+          id="cgsSidebarToggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+        <!-- Sidebar overlay -->
+        <div class="cgs-sidebar-overlay" id="cgsSidebarOverlay"></div>
+        <!-- Sidebar -->
         <div id="consumerSidebar"></div>
 
+        <!-- Main Content -->
         <main class="cd-main-content" id="cd-main">
-          <h1 class="cd-page-title" data-i18n="dev_br.title">Business Rules</h1>
-          <p class="cd-overview-p" data-i18n-html="dev_br.intro">
-            Business Rules are the "if/then" logic that governs your app's
-            behavior, independent of the code.
-          </p>
+          <!-- Page Title -->
+          <h1 class="cd-page-title" id="cdHomeTitle">Business Rules</h1>
 
-          <!-- ===== Explanation Video ===== -->
-          <div class="yt-video" data-video-id="kWxnCu0vh_I"></div>
-          <div class="doc-section">
-            <ul class="cd-overview-ul">
-              <li>
-                <strong data-i18n="dev_br.f1_title">Example:</strong>
-                <span data-i18n-html="dev_br.f1_desc"
-                  >"If a user has a Free tier account, they can only upload 1
-                  document per month."</span
-                >
-              </li>
-              <li>
-                <strong data-i18n="dev_br.f2_title">Usage:</strong>
-                <span data-i18n-html="dev_br.f2_desc"
-                  >Centralize the logic that determines how the business
-                  operates.</span
-                >
-              </li>
-            </ul>
+          <!-- Overview Section -->
+          <section class="cd-overview" id="cdHomeOverview">
+            <div class="para-box doc-step-block">
+              <p class="cd-overview-p">
+                The <strong>Business Rules</strong> section allows authorized users to define and manage the rules that control how the application behaves under specific conditions.
+              </p>
+              <p class="cd-overview-p">
+                Business rules represent the <strong>“if/then” logic</strong> of the application. They define what should happen when a particular condition is met, without requiring users to understand or modify the underlying application code.
+              </p>
 
-            <img
-              src="assets/images/b-rules.png"
-              alt="Business Rules Configuration"
-              class="demo-img"
-            />
-          </div>
+              <!-- Image 1 -->
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/portal/business-rules/business-rules-1.png"
+                  alt="Business Rules Overview Dashboard"
+                  class="demo-img"
+                />
+              </div>
+
+              <p class="cd-overview-p" style="margin-top: 24px;">
+                For example:
+              </p>
+              <div class="callout callout-info" style="font-size: 1rem; padding: 16px 20px; margin: 16px 0;">
+                <p style="margin: 0;">
+                  <strong>If</strong> a user has a <strong>Free</strong> tier account, <strong>then</strong> the user can upload only <strong>1 document per month</strong>.
+                </p>
+              </div>
+              <p class="cd-overview-p">
+                By centralizing these rules, the platform can consistently apply business policies across different features, users, and workflows.
+              </p>
+            </div>
+
+            <!-- Purpose of Business Rules -->
+            <div class="para-box doc-step-block">
+              <h3 class="h3">Purpose of Business Rules</h3>
+              <p class="cd-overview-p">
+                Business Rules help organizations translate business policies and requirements into configurable application behavior.
+              </p>
+              <p class="step-caption">They can be used to define rules related to:</p>
+              <ul class="cd-overview-ul">
+                <li>User eligibility</li>
+                <li>Account or subscription limits</li>
+                <li>Data validation</li>
+                <li>Transaction restrictions</li>
+                <li>Approval requirements</li>
+                <li>Workflow conditions</li>
+                <li>Access or feature availability</li>
+                <li>Operational limits and thresholds</li>
+              </ul>
+              <p class="cd-overview-p">
+                Centralizing these rules makes it easier to maintain business logic and reduces the need to hard-code individual business requirements into application features.
+              </p>
+            </div>
+
+            <!-- How Business Rules Work -->
+            <div class="para-box doc-step-block">
+              <h3 class="h3">How Business Rules Work</h3>
+              <p class="cd-overview-p">
+                A business rule generally consists of two parts:
+              </p>
+
+              <div class="callout callout-info" style="align-items: center; justify-content: center; text-align: center; font-size: 1.1rem; font-weight: 700; padding: 16px; margin: 20px 0;">
+                <span>Condition</span>
+                <i class="fa fa-arrow-right" style="margin: 0 16px; color: #2563eb;"></i>
+                <span>Action</span>
+              </div>
+
+              <p class="cd-overview-p">
+                The <strong>Condition</strong> determines when the rule should be applied, while the <strong>Action</strong> defines what the system should do when the condition is satisfied.
+              </p>
+
+              <h4 class="step-subhead">Example</h4>
+
+              <!-- Image 2 -->
+              <div class="image-wrapper">
+                <img
+                  src="assets/images/portal/business-rules/business-rules-2.png"
+                  alt="Verified Contact to Order Business Rule Example"
+                  class="demo-img"
+                />
+              </div>
+
+              <p class="cd-overview-p" style="margin-top: 16px;">
+                The system evaluates the condition and applies the corresponding action automatically.
+              </p>
+            </div>
+
+            <!-- Business Rules Configuration -->
+            <div class="para-box doc-step-block">
+              <h3 class="h3">Business Rules Configuration</h3>
+              <p class="cd-overview-p">
+                The <strong>Business Rules Configuration</strong> interface is used to define and manage the rules used by the application.
+              </p>
+              <p class="cd-overview-p">
+                When configuring a rule, users can specify the conditions and expected behavior that should be applied when those conditions are met.
+              </p>
+              <p class="step-caption">Depending on the rule, the configuration may include:</p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong>Rule Name</strong> – Identifies the business rule.
+                </li>
+                <li>
+                  <strong>Condition</strong> – Defines when the rule should be triggered.
+                </li>
+                <li>
+                  <strong>Action</strong> – Defines what the system should do when the condition is met.
+                </li>
+                <li>
+                  <strong>Value or Threshold</strong> – Specifies a limit, amount, status, or other value used by the rule.
+                </li>
+                <li>
+                  <strong>Status</strong> – Indicates whether the rule is currently active or inactive.
+                </li>
+              </ul>
+            </div>
+
+            <!-- Why Use Business Rules? -->
+            <div class="para-box doc-step-block">
+              <h3 class="h3">Why Use Business Rules?</h3>
+              <p class="cd-overview-p">
+                Using configurable business rules provides several benefits:
+              </p>
+              <ul class="cd-overview-ul">
+                <li>
+                  <strong>Consistency</strong> – Business policies are applied consistently throughout the application.
+                </li>
+                <li>
+                  <strong>Flexibility</strong> – Rules can be adjusted as business requirements change.
+                </li>
+                <li>
+                  <strong>Centralized Management</strong> – Business logic can be managed from a single location.
+                </li>
+                <li>
+                  <strong>Reduced Development Effort</strong> – Common business logic does not need to be repeatedly hard-coded.
+                </li>
+                <li>
+                  <strong>Better Governance</strong> – Rules provide a structured way to define and maintain operational policies.
+                </li>
+                <li>
+                  <strong>Scalability</strong> – New rules can be introduced as the application and business processes evolve.
+                </li>
+              </ul>
+            </div>
+
+            <!-- Best Practice -->
+            <div class="para-box doc-step-block">
+              <!-- Best Practice Callout Box -->
+              <div class="callout callout-tip">
+                <div class="callout-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                <div class="callout-content">
+                  <p><strong>Best Practice:</strong> When creating or reviewing business rules:</p>
+                  <ul class="sub-list" style="margin-top: 8px; margin-bottom: 0;">
+                    <li>Use clear and descriptive rule names.</li>
+                    <li>Define conditions precisely to avoid unexpected behavior.</li>
+                    <li>Specify the expected action or outcome clearly.</li>
+                    <li>Avoid creating overlapping or conflicting rules.</li>
+                    <li>Review thresholds and limits regularly as business requirements change.</li>
+                    <li>Deactivate obsolete rules rather than leaving outdated logic active.</li>
+                    <li>Test rules against both valid and invalid scenarios before deploying them.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
         </main>
       </div>
     </div>
@@ -216,7 +251,7 @@
     <script src="assets/js/navigation.js"></script>
     <script src="assets/js/consumer_docs_home.js"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
+      document.addEventListener('DOMContentLoaded', () => {
         if (window.I18n) {
           window.I18n.init();
         }
@@ -225,3 +260,4 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
   </body>
 </html>
+
