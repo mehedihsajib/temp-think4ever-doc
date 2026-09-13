@@ -299,8 +299,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 36px;
-    padding: 0 16px;
+    padding: 10px 25px;
     border-radius: 50px;
     background: #093cad;
     color: #ffffff;
