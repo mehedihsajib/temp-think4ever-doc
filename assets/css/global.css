@@ -4153,18 +4153,18 @@ body {
 }
 
 .cgs-nav-list li a.active {
-  color: #3b82f6 !important;
+  color: var(--color-primary) !important;
   /* Blue text */
   font-weight: 500 !important;
   /* Semi-bold for active */
-  border-left-color: #3b82f6 !important;
+  border-left-color: var(--color-primary) !important;
   /* SOLID thin blue active border line! */
   background: transparent !important;
   /* Minimal: no bg highlight */
 }
 
 .cgs-nav-list li a.active i {
-  color: #3b82f6 !important;
+  color: var(--color-primary) !important;
 }
 
 .cgs-main {
