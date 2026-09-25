@@ -1,405 +1,448 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Think4Ever Platform - Dashboard</title>
-    <link href="css/theme.css" rel="stylesheet" type="text/css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="assets/css/global.css" />
-    <link rel="stylesheet" href="assets/css/consumer_docs_home.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="assets/js/i18n.js"></script>
-    <style>
-      /* Basic reset for preview consistency */
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-      }
 
-      /* Premium Modern Header Styles */
-      .modern-header {
-        font-family: "Inter", sans-serif;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 64px;
-        background: rgba(255, 255, 255, 0.85);
-        backdrop-filter: saturate(180%) blur(20px);
-        -webkit-backdrop-filter: saturate(180%) blur(20px);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-        z-index: 300;
-        display: flex;
-        align-items: center;
-        transition: all 0.3s ease;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Think4Ever Platform - Dashboard</title>
+  <link href="css/theme.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/dev_doc.css" />
+  <link rel="stylesheet" href="assets/css/consumer_docs_home.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="assets/js/i18n.js"></script>
+  <style>
+    /* Basic reset for preview consistency */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
 
-      .modern-header-inner {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        height: 100%;
-      }
+    /* Premium Modern Header Styles */
+    .modern-header {
+      font-family: "Inter", sans-serif;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 64px;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      z-index: 300;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
 
+    .modern-header-inner {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    .modern-header-logo-plate {
+      display: flex;
+      align-items: center;
+      padding-left: 36px;
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+    .modern-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .modern-logo span {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: -0.04em;
+    }
+
+    .modern-header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1;
+      padding: 0 40px;
+      height: 100%;
+    }
+
+    .modern-header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    /* Responsive Utilities */
+    @media (max-width: 1024px) {
       .modern-header-logo-plate {
-        display: flex;
-        align-items: center;
-        padding-left: 36px;
-        height: 100%;
-        box-sizing: border-box;
+        width: 240px;
+        min-width: 240px;
+        padding-left: 24px;
       }
+    }
 
-      .modern-logo {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        cursor: pointer;
-        text-decoration: none;
-      }
+    /* Modern Layout Overrides */
+    .consumer-docs-layout {
+      max-width: 100% !important;
+      width: 100% !important;
+      margin: 0 !important;
+      display: flex !important;
+      background: #ffffff;
+    }
 
-      .modern-logo span {
-        font-size: 1.05rem;
-        font-weight: 700;
-        color: #0f172a;
-        letter-spacing: -0.04em;
-      }
+    .cd-sidebar {
+      box-sizing: content-box !important;
+      width: 240px !important;
+      min-width: 240px !important;
+      background: #f8fafc !important;
+      border-right: 1px solid #e2e8f0 !important;
+      padding-left: 36px !important;
+      padding-right: 24px !important;
+      padding-top: 36px !important;
+    }
 
-      .modern-header-content {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex: 1;
-        padding: 0 40px;
-        height: 100%;
-      }
+    /* Modernizing Sidebar Internal Elements */
+    .cd-sidebar-header {
+      padding: 0 !important;
+      border-bottom: none !important;
+      margin-bottom: 32px !important;
+    }
 
-      .modern-header-actions {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-      }
+    .cd-sidebar-header h3 {
+      color: #0f172a !important;
+      font-family: "Inter", sans-serif !important;
+      font-size: 0.9375rem !important;
+      font-weight: 600 !important;
+      letter-spacing: -0.01em !important;
+      text-transform: none !important;
+      display: flex !important;
+      align-items: center !important;
+    }
 
-      /* Responsive Utilities */
-      @media (max-width: 1024px) {
-        .modern-header-logo-plate {
-          width: 240px;
-          min-width: 240px;
-          padding-left: 24px;
-        }
-      }
+    .cd-sidebar-header h3 i {
+      color: #3b82f6 !important;
+      margin-right: 10px !important;
+      font-size: 1.1rem !important;
+    }
 
-      /* Modern Layout Overrides */
-      .consumer-docs-layout {
-        max-width: 100% !important;
-        width: 100% !important;
-        margin: 0 !important;
-        display: flex !important;
-        background: #ffffff;
-      }
+    .cd-sidebar-section {
+      margin-bottom: 24px !important;
+    }
 
-      .cd-sidebar {
-        box-sizing: content-box !important;
-        width: 240px !important;
-        min-width: 240px !important;
-        background: #f8fafc !important;
-        border-right: 1px solid #e2e8f0 !important;
-        padding-left: 36px !important;
-        padding-right: 24px !important;
-        padding-top: 36px !important;
-      }
+    .cd-sidebar-section-label {
+      font-family: "Inter", sans-serif !important;
+      font-size: 0.725rem !important;
+      font-weight: 600 !important;
+      color: #64748b !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.08em !important;
+      padding: 0 12px 10px 0 !important;
+      display: block !important;
+    }
 
-      /* Modernizing Sidebar Internal Elements */
-      .cd-sidebar-header {
-        padding: 0 !important;
-        border-bottom: none !important;
-        margin-bottom: 32px !important;
-      }
+    .cd-sidebar-nav li {
+      padding: 0 !important;
+      margin-bottom: 2px !important;
+    }
 
-      .cd-sidebar-header h3 {
-        color: #0f172a !important;
-        font-family: "Inter", sans-serif !important;
-        font-size: 0.9375rem !important;
-        font-weight: 600 !important;
-        letter-spacing: -0.01em !important;
-        text-transform: none !important;
-        display: flex !important;
-        align-items: center !important;
-      }
+    .cd-sidebar-nav li a {
+      padding: 8px 12px !important;
+      font-family: "Inter", sans-serif !important;
+      font-size: 0.875rem !important;
+      color: #475569 !important;
+      border-radius: 6px !important;
+      background: transparent !important;
+      transition: all 0.2s ease !important;
+      font-weight: 500 !important;
+      display: flex !important;
+      align-items: flex-start !important;
+      line-height: 1.5 !important;
+    }
 
-      .cd-sidebar-header h3 i {
-        color: #3b82f6 !important;
-        margin-right: 10px !important;
-        font-size: 1.1rem !important;
-      }
+    .cd-sidebar-nav li a i {
+      font-size: 0.825rem !important;
+      width: 24px !important;
+      text-align: left !important;
+      color: #94a3b8 !important;
+      transition: color 0.2s ease !important;
+      margin-top: 3px !important;
+    }
 
-      .cd-sidebar-section {
-        margin-bottom: 24px !important;
-      }
+    .cd-sidebar-nav li a:hover {
+      background: #f1f5f9 !important;
+      color: #0f172a !important;
+    }
 
-      .cd-sidebar-section-label {
-        font-family: "Inter", sans-serif !important;
-        font-size: 0.725rem !important;
-        font-weight: 600 !important;
-        color: #64748b !important;
-        text-transform: uppercase !important;
-        letter-spacing: 0.08em !important;
-        padding: 0 12px 10px 0 !important;
-        display: block !important;
-      }
+    .cd-sidebar-nav li a:hover i {
+      color: #475569 !important;
+    }
 
-      .cd-sidebar-nav li {
-        padding: 0 !important;
-        margin-bottom: 2px !important;
-      }
+    .cd-sidebar-nav li a.active {
+      background: #eff6ff !important;
+      color: #1d4ed8 !important;
+      font-weight: 600 !important;
+      box-shadow: inset 3px 0 0 #3b82f6 !important;
+    }
 
-      .cd-sidebar-nav li a {
-        padding: 8px 12px !important;
-        font-family: "Inter", sans-serif !important;
-        font-size: 0.875rem !important;
-        color: #475569 !important;
-        border-radius: 6px !important;
-        background: transparent !important;
-        transition: all 0.2s ease !important;
-        font-weight: 500 !important;
-        display: flex !important;
-        align-items: flex-start !important;
-        line-height: 1.5 !important;
-      }
+    .cd-sidebar-nav li a.active i {
+      color: #2563eb !important;
+    }
 
-      .cd-sidebar-nav li a i {
-        font-size: 0.825rem !important;
-        width: 24px !important;
-        text-align: left !important;
-        color: #94a3b8 !important;
-        transition: color 0.2s ease !important;
-        margin-top: 3px !important;
-      }
+    .cd-main-content {
+      max-width: 960px !important;
+      background: #ffffff !important;
+      padding-top: 56px !important;
+      padding-left: 48px !important;
+      padding-right: 48px !important;
+    }
 
-      .cd-sidebar-nav li a:hover {
-        background: #f1f5f9 !important;
-        color: #0f172a !important;
-      }
+    /* Custom lists */
+    .cd-overview-ul {
+      margin-top: 20px;
+      margin-bottom: 30px;
+      padding-left: 20px;
+      list-style-type: disc;
+    }
 
-      .cd-sidebar-nav li a:hover i {
-        color: #475569 !important;
-      }
+    .cd-overview-ul li {
+      margin-bottom: 16px;
+      font-family: "Inter", sans-serif;
+      font-size: 1rem;
+      color: #475569;
+      line-height: 1.6;
+    }
 
-      .cd-sidebar-nav li a.active {
-        background: #eff6ff !important;
-        color: #1d4ed8 !important;
-        font-weight: 600 !important;
-        box-shadow: inset 3px 0 0 #3b82f6 !important;
-      }
+    .cd-overview-ul li strong {
+      color: #0f172a;
+      font-weight: 600;
+    }
+  </style>
+</head>
 
-      .cd-sidebar-nav li a.active i {
-        color: #2563eb !important;
-      }
-
-      .cd-main-content {
-        max-width: 960px !important;
-        background: #ffffff !important;
-        padding-top: 56px !important;
-        padding-left: 48px !important;
-        padding-right: 48px !important;
-      }
-
-      /* Custom lists */
-      .cd-overview-ul {
-        margin-top: 20px;
-        margin-bottom: 30px;
-        padding-left: 20px;
-        list-style-type: disc;
-      }
-
-      .cd-overview-ul li {
-        margin-bottom: 16px;
-        font-family: "Inter", sans-serif;
-        font-size: 1rem;
-        color: #475569;
-        line-height: 1.6;
-      }
-
-      .cd-overview-ul li strong {
-        color: #0f172a;
-        font-weight: 600;
-      }
-    </style>
-  </head>
-
-  <body>
-    <div class="consumer-docs-home consumer-getting-started">
-      <!-- Skip to content -->
-      <a
-        href="#cd-main"
-        class="sr-only"
-        style="
+<body>
+  <div class="consumer-docs-home consumer-getting-started">
+    <!-- Skip to content -->
+    <a href="#cd-main" class="sr-only" style="
           position: absolute;
           left: -9999px;
           top: auto;
           width: 1px;
           height: 1px;
           overflow: hidden;
-        "
-        onfocus="
+        " onfocus="
           this.style.position = 'static';
           this.style.width = 'auto';
           this.style.height = 'auto';
-        "
-        onblur="
+        " onblur="
           this.style.position = 'absolute';
           this.style.left = '-9999px';
           this.style.width = '1px';
           this.style.height = '1px';
           this.style.overflow = 'hidden';
-        "
-        >Skip to main content</a
-      >
-      <!-- Site Header -->
-      <header class="modern-header" id="consumerHeader"></header>
+        ">Skip to main content</a>
+    <!-- Site Header -->
+    <header class="modern-header" id="consumerHeader"></header>
 
-      <div class="consumer-docs-layout">
-        <!-- Mobile sidebar toggle -->
-        <button
-          class="cgs-sidebar-toggle"
-          id="cgsSidebarToggle"
-          aria-label="Toggle navigation menu"
-          aria-expanded="false"
-        >
-          <i class="fa fa-bars"></i>
-        </button>
-        <!-- Sidebar overlay -->
-        <div class="cgs-sidebar-overlay" id="cgsSidebarOverlay"></div>
-        <!-- Sidebar -->
-        <div id="consumerSidebar"></div>
+    <div class="consumer-docs-layout">
+      <!-- Mobile sidebar toggle -->
+      <button class="cgs-sidebar-toggle" id="cgsSidebarToggle" aria-label="Toggle navigation menu"
+        aria-expanded="false">
+        <i class="fa fa-bars"></i>
+      </button>
+      <!-- Sidebar overlay -->
+      <div class="cgs-sidebar-overlay" id="cgsSidebarOverlay"></div>
+      <!-- Sidebar -->
+      <div id="consumerSidebar"></div>
 
-        <!-- Main Content -->
-        <main class="cd-main-content" id="cd-main">
-          <!-- Page Title -->
-          <h1
-            class="cd-page-title"
-            id="cdHomeTitle"
-            data-i18n="dev_dashboard.title"
-          >
-            Dashboard
-          </h1>
-          <!-- ===== Explanation Video ===== -->
-          <div class="yt-video" data-video-id="CQpIODqNFek"></div>
+      <!-- Main Content -->
+      <main class="cd-main-content" id="cd-main">
+        <!-- Page Title -->
+        <h1 class="cd-page-title" id="cdHomeTitle" data-i18n="dev_dashboard.title">
+          Dashboard
+        </h1>
+        <!-- ===== Explanation Video ===== -->
+        <div class="yt-video" data-video-id="CQpIODqNFek"></div>
 
-          <!-- Overview Section -->
-          <section class="cd-overview" id="cdHomeOverview">
-            <p class="cd-overview-text" data-i18n="dev_dashboard.intro">
-              This dashboard provides a clear, organized view of all your
-              projects in one place. Key features include:
-            </p>
+        <!-- Overview Section -->
+        <section class="cd-overview" id="cdHomeOverview">
+          <p class="cd-overview-text">
+            The <strong>Your Projects</strong> dashboard serves as the main portal for managing ongoing projects,
+            generating API
+            credentials, managing team access, and monitoring account usage metrics.
+          </p>
 
+          <div class="image-wrapper" style="margin-top: 20px;">
+            <img src="assets/images/dashboard.png" alt="Dashboard" class="demo-img">
+          </div>
+
+          <div class="para-box doc-step-block">
+            <h3 class="h3">Projects Tab</h3>
+
+            <h4 class="step-subhead">Purpose:</h4>
+            <p class="cd-overview-p">Serves as your primary workspace directory where you can locate, inspect, and
+              organize all current projects.</p>
+
+            <h4 class="step-subhead">Key Capabilities & Responsibilities:</h4>
             <ul class="cd-overview-ul">
-              <li>
-                <strong data-i18n="dev_dashboard.f1_title"
-                  >Project Overview:</strong
-                >
-                <span data-i18n="dev_dashboard.f1_desc"
-                  >Each project is displayed as a card showing the project name
-                  and a brief description. This allows for quick recognition and
-                  easy access.</span
-                >
-              </li>
-              <li>
-                <strong data-i18n="dev_dashboard.f2_title"
-                  >Search Functionality:</strong
-                >
-                <span data-i18n="dev_dashboard.f2_desc"
-                  >A search bar at the top lets you find projects quickly by
-                  name.</span
-                >
-              </li>
-              <li>
-                <strong data-i18n="dev_dashboard.f3_title"
-                  >Create & Manage Projects:</strong
-                >
-                <span data-i18n="dev_dashboard.f3_desc"
-                  >Easily start a new project with the "Create New Project"
-                  button or log out with a single click.</span
-                >
-              </li>
-              <li>
-                <strong data-i18n="dev_dashboard.f4_title"
-                  >Project Navigation:</strong
-                >
-                <span data-i18n="dev_dashboard.f4_desc"
-                  >Clicking on a project card takes you directly to that
-                  project's workspace for further management and
-                  development.</span
-                >
-              </li>
-              <li>
-                <strong data-i18n="dev_dashboard.f5_title"
-                  >Clean & Minimal Layout:</strong
-                >
-                <span data-i18n="dev_dashboard.f5_desc"
-                  >The interface is simple and intuitive, focusing on
-                  productivity without distractions.</span
-                >
-              </li>
-              <li>
-                <strong data-i18n="dev_dashboard.f6_title"
-                  >Project Count Indicator:</strong
-                >
-                <span data-i18n="dev_dashboard.f6_desc"
-                  >Displays the total number of projects at the bottom right,
-                  helping users track their workload.</span
-                >
-              </li>
+              <li><strong>Workspace Selection:</strong> View all active project tiles at a glance, showing titles,
+                descriptions, and workspace avatars.</li>
+              <li><strong>Real-time Search:</strong> Use the real-time filter input to search through large project
+                directories by title.</li>
+              <li><strong>Project Creation:</strong> Launch new project environments using the + Create New Project
+                setup flow.</li>
+              <li><strong>Quick Management:</strong> Access individual project settings via the context menu (⋮) on each
+                card to rename, reconfigure, or archive workspaces.</li>
             </ul>
 
-            <p class="cd-overview-text" data-i18n="dev_dashboard.outro">
-              This dashboard acts as a central hub for managing, accessing, and
-              launching all your ongoing projects efficiently.
-            </p>
+            <h4 class="step-subhead">When to Use:</h4>
+            <p class="cd-overview-p">Whenever you need to open an active project workspace, manage workspace settings,
+              or start a new development effort.</p>
 
-            <div
-              class="image-wrapper"
-              style="
-                margin-top: 40px;
-                margin-bottom: 40px;
-                padding: 20px;
-                text-align: center;
-              "
-            >
-              <img
-                src="assets/images/dashboard.png"
-                alt="Dashboard Overview Diagram"
-                style="
-                  max-width: 100%;
-                  border-radius: 8px;
-                  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-                "
-                class="demo-img"
-              />
+            <div class="image-wrapper" style="margin-top: 20px;">
+              <img src="assets/images/dashboard.png" alt="Dashboard" class="demo-img">
             </div>
-          </section>
-        </main>
-      </div>
+          </div>
+
+          <div class="para-box doc-step-block">
+            <h3 class="h3">API Keys & Usage Tab</h3>
+
+            <h4 class="step-subhead">Purpose:</h4>
+            <p class="cd-overview-p">Provides security controls for managing programmatic access keys and monitoring
+              system resource consumption.</p>
+
+            <h4 class="step-subhead">Key Capabilities & Responsibilities:</h4>
+            <ul class="cd-overview-ul">
+              <li><strong>API Key Generation & Security:</strong> Create, name, and manage secret API keys used for
+                authenticating external applications, SDKs, or automated pipelines.</li>
+              <li><strong>Key Revocation:</strong> Instantly revoke or cycle compromised API keys to prevent
+                unauthorized platform access.</li>
+              <li><strong>Resource Consumption Monitoring:</strong> Track real-time usage metrics, automated execution
+                costs, and credit balance consumption.</li>
+              <li><strong>Rate Limits & Quotas:</strong> Inspect active rate limits, API call frequency thresholds, and
+                endpoint throughput limits.</li>
+            </ul>
+
+            <h4 class="step-subhead">When to Use:</h4>
+            <p class="cd-overview-p">When integrating Think4ever with external tools, generating developer credentials,
+              auditing credit usage, or troubleshooting API rate limits.</p>
+
+            <div class="image-wrapper" style="margin-top: 20px;">
+              <img src="assets/images/dashboard-apikeys-usage.png" alt="Dashboard" class="demo-img">
+            </div>
+          </div>
+
+          <div class="para-box doc-step-block">
+            <h3 class="h3">Users</h3>
+
+            <h4 class="step-subhead">Purpose:</h4>
+            <p class="cd-overview-p">Centralizes team governance, access control, and user invitation management across
+              your organization.</p>
+
+            <h4 class="step-subhead">Key Capabilities & Responsibilities:</h4>
+            <ul class="cd-overview-ul">
+              <li><strong>Team Onboarding:</strong> Invite new collaborators, developers, or project managers to your
+                account via email or direct invitation links.</li>
+              <li><strong>Role & Permission Assignment:</strong> Assign access roles (such as Admin, Developer,
+                Reviewer, or Viewer) to enforce security policies.</li>
+              <li><strong>Seat & Access Management:</strong> Monitor active seat usage, pending invitations, and revoke
+                permissions for offboarded team members.</li>
+              <li><strong>Activity Tracking:</strong> Review user activity histories and workspace assignments to
+                maintain security compliance.</li>
+            </ul>
+
+            <h4 class="step-subhead">When to Use:</h4>
+            <p class="cd-overview-p">When onboarding new staff members, auditing team permissions, or adjusting project
+              access levels for existing collaborators.</p>
+
+            <div class="image-wrapper" style="margin-top: 20px;">
+              <img src="assets/images/dashboard-users.png" alt="Dashboard" class="demo-img">
+            </div>
+          </div>
+
+          <div class="para-box doc-step-block">
+            <h3 class="h3">Marketplace</h3>
+
+            <h4 class="step-subhead">Purpose:</h4>
+            <p class="cd-overview-p">Launches the integrated recruitment, job board, and freelance collaboration system.
+              When clicked, the Marketplace opens seamlessly in a new browser tab so your current dashboard context
+              remains open</p>
+
+            <h4 class="step-subhead">Key Capabilities & Responsibilities:</h4>
+            <ul class="cd-overview-ul">
+              <li><strong>Talent Sourcing:</strong> Search, filter, and inspect verified freelancer profiles using
+                criteria like hourly rates, skills, location, and ratings.</li>
+              <li><strong>Job Posting Management:</strong> Create, publish, and manage job listings with fixed or hourly
+                rate models.</li>
+              <li><strong>Proposal Review & Hiring:</strong> Process incoming applicant bids, review cover letters, and
+                issue binding contracts.</li>
+              <li><strong>Workspace Integration:</strong> Onboard hired freelancers directly into dedicated project
+                servers with defined access rights.</li>
+            </ul>
+
+            <h4 class="step-subhead">When to Use:</h4>
+            <p class="cd-overview-p">When hiring external talent, bidding on client jobs, managing submitted proposals,
+              or checking ongoing freelance contracts.</p>
+
+            <div class="image-wrapper" style="margin-top: 20px;">
+              <img src="assets/images/dashboard-marketplace.png" alt="Dashboard" class="demo-img">
+            </div>
+          </div>
+
+          <div class="para-box doc-step-block">
+            <h3 class="h3">Account Portal Tab</h3>
+
+            <h4 class="step-subhead">Purpose:</h4>
+            <p class="cd-overview-p">Connects to global organization settings, subscription plan management, and
+              financial billing profiles.</p>
+
+            <h4 class="step-subhead">Key Capabilities & Responsibilities:</h4>
+            <ul class="cd-overview-ul">
+              <li><strong>Subscription Management:</strong> View active subscription tiers, upgrade plans, or adjust
+                billing cycles.</li>
+              <li><strong>Credit Refills & Auto Top-Up:</strong> Purchase additional processing credits or configure
+                automated credit balance top-ups to prevent workflow interruptions.</li>
+              <li><strong>Invoices & Payment Methods:</strong> Access historical payment receipts, download tax
+                invoices, and manage credit cards or bank details.</li>
+              <li><strong>Organization Details:</strong> Update global company info, legal entity details, and primary
+                administrative billing contacts.</li>
+            </ul>
+
+            <h4 class="step-subhead">When to Use:</h4>
+            <p class="cd-overview-p">When updating payment methods, downloading invoices, modifying your platform
+              subscription tier, or purchasing additional credits.</p>
+
+            <div class="image-wrapper" style="margin-top: 20px;">
+              <img src="assets/images/dashboard-portal.png" alt="Dashboard" class="demo-img">
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
-    <div id="docFooter"></div>
-    <script src="assets/js/navigation.js"></script>
-    <script src="assets/js/consumer_docs_home.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        if (window.I18n) {
-          window.I18n.init();
-        }
-      });
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-  </body>
+  </div>
+  <div id="docFooter"></div>
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/consumer_docs_home.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.I18n) {
+        window.I18n.init();
+      }
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+
 </html>
