@@ -1,918 +1,800 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Think4Ever Platform - Create a New Project</title>
-    <link href="css/theme.css" rel="stylesheet" type="text/css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="assets/css/global.css" />
-    <link rel="stylesheet" href="assets/css/consumer_docs_home.css" />
-    <link rel="stylesheet" href="assets/css/dev_doc.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="assets/js/i18n.js"></script>
-    <style>
-      /* Basic reset for preview consistency */
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: sans-serif;
-      }
 
-      /* Premium Modern Header Styles */
-      .modern-header {
-        font-family: 'Inter', sans-serif;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 64px;
-        background: rgba(255, 255, 255, 0.85);
-        backdrop-filter: saturate(180%) blur(20px);
-        -webkit-backdrop-filter: saturate(180%) blur(20px);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-        z-index: 300;
-        display: flex;
-        align-items: center;
-        transition: all 0.3s ease;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Think4Ever Platform - Create a New Project</title>
+  <link href="css/theme.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/consumer_docs_home.css" />
+  <link rel="stylesheet" href="assets/css/dev_doc.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="assets/js/i18n.js"></script>
+  <style>
+    /* Basic reset for preview consistency */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
 
-      .modern-header-inner {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        height: 100%;
-      }
+    /* Premium Modern Header Styles */
+    .modern-header {
+      font-family: 'Inter', sans-serif;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 64px;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      z-index: 300;
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
 
+    .modern-header-inner {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    .modern-header-logo-plate {
+      display: flex;
+      align-items: center;
+      padding-left: 36px;
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+    .modern-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .modern-logo span {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: -0.04em;
+    }
+
+    .modern-header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1;
+      padding: 0 40px;
+      height: 100%;
+    }
+
+    .modern-header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    /* Responsive Utilities */
+    @media (max-width: 1024px) {
       .modern-header-logo-plate {
-        display: flex;
-        align-items: center;
-        padding-left: 36px;
-        height: 100%;
-        box-sizing: border-box;
-      }
-
-      .modern-logo {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        cursor: pointer;
-        text-decoration: none;
-      }
-
-      .modern-logo span {
-        font-size: 1.05rem;
-        font-weight: 700;
-        color: #0f172a;
-        letter-spacing: -0.04em;
-      }
-
-      .modern-header-content {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex: 1;
-        padding: 0 40px;
-        height: 100%;
-      }
-
-      .modern-header-actions {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-      }
-
-      /* Responsive Utilities */
-      @media (max-width: 1024px) {
-        .modern-header-logo-plate {
-          width: 240px;
-          min-width: 240px;
-          padding-left: 24px;
-        }
-      }
-
-      /* Modern Layout Overrides */
-      .consumer-docs-layout {
-        max-width: 100% !important;
-        width: 100% !important;
-        margin: 0 !important;
-        display: flex !important;
-        background: #ffffff;
-      }
-
-      .cd-sidebar {
-        box-sizing: content-box !important;
-        width: 240px !important;
-        min-width: 240px !important;
-        background: #f8fafc !important;
-        border-right: 1px solid #e2e8f0 !important;
-        padding-left: 36px !important;
-        padding-right: 24px !important;
-        padding-top: 36px !important;
-      }
-
-      /* Modernizing Sidebar Internal Elements */
-      .cd-sidebar-header {
-        padding: 0 !important;
-        border-bottom: none !important;
-        margin-bottom: 32px !important;
-      }
-
-      .cd-sidebar-header h3 {
-        color: #0f172a !important;
-        font-family: 'Inter', sans-serif !important;
-        font-size: 0.9375rem !important;
-        font-weight: 600 !important;
-        letter-spacing: -0.01em !important;
-        text-transform: none !important;
-        display: flex !important;
-        align-items: center !important;
-      }
-
-      .cd-sidebar-header h3 i {
-        color: #3b82f6 !important;
-        margin-right: 10px !important;
-        font-size: 1.1rem !important;
-      }
-
-      .cd-sidebar-section {
-        margin-bottom: 24px !important;
-      }
-
-      .cd-sidebar-section-label {
-        font-family: 'Inter', sans-serif !important;
-        font-size: 0.725rem !important;
-        font-weight: 600 !important;
-        color: #64748b !important;
-        text-transform: uppercase !important;
-        letter-spacing: 0.08em !important;
-        padding: 0 12px 10px 0 !important;
-        display: block !important;
-      }
-
-      .cd-sidebar-nav li {
-        padding: 0 !important;
-        margin-bottom: 2px !important;
-      }
-
-      .cd-sidebar-nav li a {
-        padding: 8px 12px !important;
-        font-family: 'Inter', sans-serif !important;
-        font-size: 0.875rem !important;
-        color: #475569 !important;
-        border-radius: 6px !important;
-        background: transparent !important;
-        transition: all 0.2s ease !important;
-        font-weight: 500 !important;
-        display: flex !important;
-        align-items: flex-start !important;
-        line-height: 1.5 !important;
-      }
-
-      .cd-sidebar-nav li a i {
-        font-size: 0.825rem !important;
-        width: 24px !important;
-        text-align: left !important;
-        color: #94a3b8 !important;
-        transition: color 0.2s ease !important;
-        margin-top: 3px !important;
-      }
-
-      .cd-sidebar-nav li a:hover {
-        background: #f1f5f9 !important;
-        color: #0f172a !important;
-      }
-
-      .cd-sidebar-nav li a:hover i {
-        color: #475569 !important;
-      }
-
-      .cd-sidebar-nav li a.active {
-        background: #eff6ff !important;
-        color: #1d4ed8 !important;
-        font-weight: 600 !important;
-        box-shadow: inset 3px 0 0 #3b82f6 !important;
-      }
-
-      .cd-sidebar-nav li a.active i {
-        color: #2563eb !important;
-      }
-
-      .cd-main-content {
-        max-width: 960px !important;
-        background: #ffffff !important;
-        padding-top: 56px !important;
-        padding-left: 48px !important;
-        padding-right: 48px !important;
-      }
-
-      /* Custom lists */
-      .cd-overview-ul {
-        margin-top: 20px;
-        margin-bottom: 30px;
-        padding-left: 20px;
-        list-style-type: disc;
-      }
-
-      .cd-overview-ol {
-        margin-top: 20px;
-        margin-bottom: 30px;
+        width: 240px;
+        min-width: 240px;
         padding-left: 24px;
-        list-style-type: decimal;
       }
+    }
 
-      .cd-overview-ul li,
-      .cd-overview-ol li {
-        margin-bottom: 16px;
-        font-family: 'Inter', sans-serif;
-        font-size: 1rem;
-        color: #475569;
-        line-height: 1.6;
-      }
+    /* Modern Layout Overrides */
+    .consumer-docs-layout {
+      max-width: 100% !important;
+      width: 100% !important;
+      margin: 0 !important;
+      display: flex !important;
+      background: #ffffff;
+    }
 
-      .cd-overview-ul li ul {
-        padding-left: 20px;
-      }
+    .cd-sidebar {
+      box-sizing: content-box !important;
+      width: 240px !important;
+      min-width: 240px !important;
+      background: #f8fafc !important;
+      border-right: 1px solid #e2e8f0 !important;
+      padding-left: 36px !important;
+      padding-right: 24px !important;
+      padding-top: 36px !important;
+    }
 
-      .cd-overview-ul li ul li {
-        list-style-type: circle;
-      }
+    /* Modernizing Sidebar Internal Elements */
+    .cd-sidebar-header {
+      padding: 0 !important;
+      border-bottom: none !important;
+      margin-bottom: 32px !important;
+    }
 
-      .cd-overview-ul li strong,
-      .cd-overview-ol li strong {
-        color: #0f172a;
-        font-weight: 600;
-      }
+    .cd-sidebar-header h3 {
+      color: #0f172a !important;
+      font-family: 'Inter', sans-serif !important;
+      font-size: 0.9375rem !important;
+      font-weight: 600 !important;
+      letter-spacing: -0.01em !important;
+      text-transform: none !important;
+      display: flex !important;
+      align-items: center !important;
+    }
 
-      .sub-list {
-        margin-top: 8px;
-        margin-bottom: 8px;
-        padding-left: 20px;
-        list-style-type: circle;
-      }
-    </style>
-  </head>
+    .cd-sidebar-header h3 i {
+      color: #3b82f6 !important;
+      margin-right: 10px !important;
+      font-size: 1.1rem !important;
+    }
 
-  <body>
-    <div class="consumer-docs-home consumer-getting-started">
-      <!-- Skip to content -->
-      <a
-        href="#cd-main"
-        class="sr-only"
-        style="
+    .cd-sidebar-section {
+      margin-bottom: 24px !important;
+    }
+
+    .cd-sidebar-section-label {
+      font-family: 'Inter', sans-serif !important;
+      font-size: 0.725rem !important;
+      font-weight: 600 !important;
+      color: #64748b !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.08em !important;
+      padding: 0 12px 10px 0 !important;
+      display: block !important;
+    }
+
+    .cd-sidebar-nav li {
+      padding: 0 !important;
+      margin-bottom: 2px !important;
+    }
+
+    .cd-sidebar-nav li a {
+      padding: 8px 12px !important;
+      font-family: 'Inter', sans-serif !important;
+      font-size: 0.875rem !important;
+      color: #475569 !important;
+      border-radius: 6px !important;
+      background: transparent !important;
+      transition: all 0.2s ease !important;
+      font-weight: 500 !important;
+      display: flex !important;
+      align-items: flex-start !important;
+      line-height: 1.5 !important;
+    }
+
+    .cd-sidebar-nav li a i {
+      font-size: 0.825rem !important;
+      width: 24px !important;
+      text-align: left !important;
+      color: #94a3b8 !important;
+      transition: color 0.2s ease !important;
+      margin-top: 3px !important;
+    }
+
+    .cd-sidebar-nav li a:hover {
+      background: #f1f5f9 !important;
+      color: #0f172a !important;
+    }
+
+    .cd-sidebar-nav li a:hover i {
+      color: #475569 !important;
+    }
+
+    .cd-sidebar-nav li a.active {
+      background: #eff6ff !important;
+      color: #1d4ed8 !important;
+      font-weight: 600 !important;
+      box-shadow: inset 3px 0 0 #3b82f6 !important;
+    }
+
+    .cd-sidebar-nav li a.active i {
+      color: #2563eb !important;
+    }
+
+    .cd-main-content {
+      max-width: 960px !important;
+      background: #ffffff !important;
+      padding-top: 56px !important;
+      padding-left: 48px !important;
+      padding-right: 48px !important;
+    }
+
+    /* Custom lists */
+    .cd-overview-ul {
+      margin-top: 20px;
+      margin-bottom: 30px;
+      padding-left: 20px;
+      list-style-type: disc;
+    }
+
+    .cd-overview-ol {
+      margin-top: 20px;
+      margin-bottom: 30px;
+      padding-left: 24px;
+      list-style-type: decimal;
+    }
+
+    .cd-overview-ul li,
+    .cd-overview-ol li {
+      margin-bottom: 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      color: #475569;
+      line-height: 1.6;
+    }
+
+    .cd-overview-ul li ul {
+      padding-left: 20px;
+    }
+
+    .cd-overview-ul li ul li {
+      list-style-type: circle;
+    }
+
+    .cd-overview-ul li strong,
+    .cd-overview-ol li strong {
+      color: #0f172a;
+      font-weight: 600;
+    }
+
+    .sub-list {
+      margin-top: 8px;
+      margin-bottom: 8px;
+      padding-left: 20px;
+      list-style-type: circle;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="consumer-docs-home consumer-getting-started">
+    <!-- Skip to content -->
+    <a href="#cd-main" class="sr-only" style="
           position: absolute;
           left: -9999px;
           top: auto;
           width: 1px;
           height: 1px;
           overflow: hidden;
-        "
-        onfocus="
+        " onfocus="
           this.style.position = 'static';
           this.style.width = 'auto';
           this.style.height = 'auto';
-        "
-        onblur="
+        " onblur="
           this.style.position = 'absolute';
           this.style.left = '-9999px';
           this.style.width = '1px';
           this.style.height = '1px';
           this.style.overflow = 'hidden';
-        "
-        >Skip to main content</a
-      >
-      <!-- Site Header -->
-      <header class="modern-header" id="consumerHeader"></header>
+        ">Skip to main content</a>
+    <!-- Site Header -->
+    <header class="modern-header" id="consumerHeader"></header>
 
-      <div class="consumer-docs-layout">
-        <!-- Mobile sidebar toggle -->
-        <button
-          class="cgs-sidebar-toggle"
-          id="cgsSidebarToggle"
-          aria-label="Toggle navigation menu"
-          aria-expanded="false"
-        >
-          <i class="fa fa-bars"></i>
-        </button>
-        <!-- Sidebar overlay -->
-        <div class="cgs-sidebar-overlay" id="cgsSidebarOverlay"></div>
-        <!-- Sidebar -->
-        <div id="consumerSidebar"></div>
+    <div class="consumer-docs-layout">
+      <!-- Mobile sidebar toggle -->
+      <button class="cgs-sidebar-toggle" id="cgsSidebarToggle" aria-label="Toggle navigation menu"
+        aria-expanded="false">
+        <i class="fa fa-bars"></i>
+      </button>
+      <!-- Sidebar overlay -->
+      <div class="cgs-sidebar-overlay" id="cgsSidebarOverlay"></div>
+      <!-- Sidebar -->
+      <div id="consumerSidebar"></div>
 
-        <!-- Main Content -->
-        <main class="cd-main-content" id="cd-main">
-          <!-- Page Title -->
-          <h1
-            class="cd-page-title"
-            id="cdHomeTitle"
-            data-i18n="dev_create_project.title"
-          >
-            Create a New Project
-          </h1>
+      <!-- Main Content -->
+      <main class="cd-main-content" id="cd-main">
+        <!-- Page Title -->
+        <h1 class="cd-page-title" id="cdHomeTitle" data-i18n="dev_create_project.title">
+          Create a New Project
+        </h1>
 
-          <!-- Overview Section -->
-          <section class="cd-overview" id="cdHomeOverview">
-            <p class="cd-overview-p">
-              The <strong>New Project</strong> screen allows users to describe
-              the application, platform, or solution they want to build. Simply
-              enter a business idea, project requirements, or technical
-              specifications in the description field.
-            </p>
-            <p class="cd-overview-p">
-              The platform analyzes the provided information and automatically
-              determines the most suitable project setup, including project
-              naming, recommended development approach, and initial project
-              structure.
-            </p>
-            <p class="cd-overview-p">
-              Users may also specify existing assets such as source code, a Git
-              repository, preferred technologies, or implementation
-              requirements. Based on the provided input, the system guides users
-              through the appropriate project creation workflow.
-            </p>
-            <p class="cd-overview-p">
-              After entering the project details, click
-              <strong>Continue</strong> to proceed with project generation and
-              setup.
-            </p>
+        <!-- Overview Section -->
+        <section class="cd-overview" id="cdHomeOverview">
+          <p class="cd-overview-p">
+            The <strong>New Project</strong> screen allows users to describe
+            the application, platform, or solution they want to build. Simply
+            enter a business idea, project requirements, or technical
+            specifications in the description field.
+          </p>
+          <p class="cd-overview-p">
+            The platform analyzes the provided information and automatically
+            determines the most suitable project setup, including project
+            naming, recommended development approach, and initial project
+            structure.
+          </p>
+          <p class="cd-overview-p">
+            Users may also specify existing assets such as source code, a Git
+            repository, preferred technologies, or implementation
+            requirements. Based on the provided input, the system guides users
+            through the appropriate project creation workflow.
+          </p>
+          <p class="cd-overview-p">
+            After entering the project details, click
+            <strong>Continue</strong> to proceed with project generation and
+            setup.
+          </p>
 
+          <div class="para-box doc-step-block">
+            <h3 class="h3">How to Create a New Project</h3>
+            <p class="step-caption">
+              1. In the Dashboard, click on
+              <strong>Create a New Project</strong> button
+            </p>
             <div class="image-wrapper">
-              <img
-                src="assets/images/portal/create-project/create-project-1.png"
-                alt="Create a New Project Dashboard"
-                class="demo-img"
-              />
+              <img src="assets/images/portal/create-project/create-project-1.png"
+                alt="Click Create a New Project button" class="demo-img" />
+            </div>
+          </div>
+
+          <div class="para-box doc-step-block">
+            <p class="step-caption">
+              2. There are <strong>two ways</strong> to create a project:
+            </p>
+            <ol class="cd-overview-ol">
+              <li>Analyze Existing Code</li>
+              <li>Design from intent</li>
+            </ol>
+            <div class="image-wrapper">
+              <img src="assets/images/portal/create-project/create-project-2.png" alt="Two ways to create a project"
+                class="demo-img" />
+            </div>
+          </div>
+
+          <div class="para-box doc-step-block">
+            <h3 class="section-option-title">
+              Option 1: Analyze existing code (Import Existing Code or
+              Project)
+            </h3>
+            <div class="image-wrapper img-sm">
+              <img src="assets/images/portal/create-project/create-project-3.png" alt="Analyze existing code card"
+                class="demo-img" />
             </div>
 
-            <div class="para-box doc-step-block">
-              <h3 class="h3">How to Create a New Project</h3>
-              <p class="step-caption">
-                1. In the Dashboard, click on
-                <strong>Create a New Project</strong> button
-              </p>
-              <div class="image-wrapper">
-                <img
-                  src="assets/images/portal/create-project/create-project-1.png"
-                  alt="Click Create a New Project button"
-                  class="demo-img"
-                />
-              </div>
-            </div>
+            <p class="step-caption">
+              <strong>Purpose:</strong> Designed to parse an existing codebase
+              and automatically turn a project into a visual, reviewable map
+              of the system.
+            </p>
+            <p class="step-caption">
+              <strong>Status:</strong> Marked as
+              <strong>RECOMMENDED</strong> for users starting with an active
+              project or codebase.
+            </p>
 
-            <div class="para-box doc-step-block">
-              <p class="step-caption">
-                2. There are <strong>two ways</strong> to create a project:
-              </p>
-              <ol class="cd-overview-ol">
-                <li>Analyze Existing Code</li>
-                <li>Design from intent</li>
-              </ol>
-              <div class="image-wrapper">
-                <img
-                  src="assets/images/portal/create-project/create-project-2.png"
-                  alt="Two ways to create a project"
-                  class="demo-img"
-                />
-              </div>
-            </div>
+            <ul class="cd-overview-ul">
+              <li>
+                <strong>Core Focus:</strong> Reverse-engineering existing
+                codebases into clear visual documentation.
+              </li>
+              <li>
+                <strong>How It Works:</strong> Scans repository source files,
+                dependencies, and API structures to auto-generate system
+                flowcharts, dependency graphs, and architectural overviews.
+              </li>
+              <li>
+                <strong>Best Used For:</strong> Onboarding onto unfamiliar
+                codebases, auditing legacy applications, mapping technical
+                debt, or verifying how a live system operates before making
+                modifications.
+              </li>
+            </ul>
+          </div>
 
-            <div class="para-box doc-step-block">
-              <h3 class="section-option-title">
-                Option 1: Analyze existing code (Import Existing Code or
-                Project)
-              </h3>
-              <div class="image-wrapper img-sm">
-                <img
-                  src="assets/images/portal/create-project/create-project-3.png"
-                  alt="Analyze existing code card"
-                  class="demo-img"
-                />
-              </div>
+          <div class="para-box doc-step-block">
+            <h3 class="h3">Analyze the Code: How to Create a Project</h3>
+            <div class="image-wrapper">
+              <img src="assets/images/portal/create-project/create-project-4.png" alt="Analyze the Code path options"
+                class="demo-img" />
+            </div>
+            <p class="step-caption">There are <strong>3 options</strong>:</p>
+            <ol class="cd-overview-ol">
+              <li>Upload a Zip</li>
+              <li>Public GitHub URL</li>
+              <li>Connect a repository</li>
+            </ol>
+          </div>
 
-              <p class="step-caption">
-                <strong>Purpose:</strong> Designed to parse an existing codebase
-                and automatically turn a project into a visual, reviewable map
-                of the system.
-              </p>
-              <p class="step-caption">
-                <strong>Status:</strong> Marked as
-                <strong>RECOMMENDED</strong> for users starting with an active
-                project or codebase.
-              </p>
+          <div class="para-box doc-step-block">
+            <p class="text-muted-italic">
+              Option 1: Importing Existing Code – using ZIP file
+            </p>
+            <p class="cd-overview-p">
+              To map and visualize an existing codebase, select one of the
+              following import options:
+            </p>
+            <p class="step-caption">
+              1. <strong>Upload a ZIP (Local Project)</strong>
+            </p>
+            <div class="image-wrapper img-sm">
+              <img src="assets/images/portal/create-project/create-project-5.png" alt="Upload a ZIP" class="demo-img" />
+            </div>
+            <p class="step-caption">
+              Upload a .zip archive directly from your local machine. This
+              method creates a static snapshot of your project without
+              requiring access to external source control or cloud storage
+              accounts.
+            </p>
+            <div class="image-wrapper img-lg">
+              <img src="assets/images/portal/create-project/create-project-6.png"
+                alt="Upload your project as a ZIP form" class="demo-img" />
+            </div>
+          </div>
 
-              <ul class="cd-overview-ul">
-                <li>
-                  <strong>Core Focus:</strong> Reverse-engineering existing
-                  codebases into clear visual documentation.
-                </li>
-                <li>
-                  <strong>How It Works:</strong> Scans repository source files,
-                  dependencies, and API structures to auto-generate system
-                  flowcharts, dependency graphs, and architectural overviews.
-                </li>
-                <li>
-                  <strong>Best Used For:</strong> Onboarding onto unfamiliar
-                  codebases, auditing legacy applications, mapping technical
-                  debt, or verifying how a live system operates before making
-                  modifications.
-                </li>
-              </ul>
+          <div class="para-box doc-step-block">
+            <p class="step-caption">
+              Tap on <strong>Analyze my codebase</strong>
+            </p>
+            <div class="image-wrapper img-md">
+              <img src="assets/images/portal/create-project/create-project-7.png" alt="Tap on Analyze my codebase"
+                class="demo-img" />
             </div>
+            <p class="step-caption">
+              The system will begin analyzing the codebase and generate the
+              initial concept. Notice the “<strong>What’s next?</strong>” box
+              in the lower right corner, this indicates what stage of software
+              development process you are currently working on.
+            </p>
+            <div class="image-wrapper">
+              <img src="assets/images/portal/create-project/create-project-9.png" alt="Structure analysis started"
+                class="demo-img" />
+            </div>
+          </div>
 
-            <div class="para-box doc-step-block">
-              <h3 class="h3">Analyze the Code: How to Create a Project</h3>
-              <div class="image-wrapper">
-                <img
-                  src="assets/images/portal/create-project/create-project-4.png"
-                  alt="Analyze the Code path options"
-                  class="demo-img"
-                />
-              </div>
-              <p class="step-caption">There are <strong>3 options</strong>:</p>
-              <ol class="cd-overview-ol">
-                <li>Upload a Zip</li>
-                <li>Public GitHub URL</li>
-                <li>Connect a repository</li>
-              </ol>
+          <div class="para-box doc-step-block">
+            <p class="step-caption">
+              Next step is to create the UI screens for your application
+            </p>
+            <div class="image-wrapper img-md">
+              <img src="assets/images/portal/create-project/create-project-10.png" alt="Next step create UI screens"
+                class="demo-img" />
             </div>
+          </div>
 
-            <div class="para-box doc-step-block">
-              <p class="text-muted-italic">
-                Option 1: Importing Existing Code – using ZIP file
-              </p>
-              <p class="cd-overview-p">
-                To map and visualize an existing codebase, select one of the
-                following import options:
-              </p>
-              <p class="step-caption">
-                1. <strong>Upload a ZIP (Local Project)</strong>
-              </p>
-              <div class="image-wrapper img-sm">
-                <img
-                  src="assets/images/portal/create-project/create-project-5.png"
-                  alt="Upload a ZIP"
-                  class="demo-img"
-                />
-              </div>
-              <p class="step-caption">
-                Upload a .zip archive directly from your local machine. This
-                method creates a static snapshot of your project without
-                requiring access to external source control or cloud storage
-                accounts.
-              </p>
-              <div class="image-wrapper img-lg">
-                <img
-                  src="assets/images/portal/create-project/create-project-6.png"
-                  alt="Upload your project as a ZIP form"
-                  class="demo-img"
-                />
-              </div>
+          <div class="para-box doc-step-block">
+            <p class="step-caption">
+              Tap <strong>Create the UI screens</strong> on the “<strong>What’s next?</strong>” box.
+            </p>
+            <div class="image-wrapper">
+              <img src="assets/images/portal/create-project/create-project-11.png" alt="Tap Create UI screens button"
+                class="demo-img" />
             </div>
+          </div>
 
-            <div class="para-box doc-step-block">
-              <p class="step-caption">
-                Tap on <strong>Analyze my codebase</strong>
-              </p>
-              <div class="image-wrapper img-md">
-                <img
-                  src="assets/images/portal/create-project/create-project-7.png"
-                  alt="Tap on Analyze my codebase"
-                  class="demo-img"
-                />
-              </div>
-              <p class="step-caption">
-                The system will begin analyzing the codebase and generate the
-                initial concept. Notice the “<strong>What’s next?</strong>” box
-                in the lower right corner, this indicates what stage of software
-                development process you are currently working on.
-              </p>
-              <div class="image-wrapper">
-                <img
-                  src="assets/images/portal/create-project/create-project-9.png"
-                  alt="Structure analysis started"
-                  class="demo-img"
-                />
-              </div>
+          <div class="para-box doc-step-block">
+            <p class="step-caption">
+              Select a theme for your application, Think4ever gives you wide
+              range of theme options.
+            </p>
+            <div class="image-wrapper">
+              <img src="assets/images/portal/create-project/create-project-12.png" alt="Select Theme modal"
+                class="demo-img" />
             </div>
+          </div>
 
-            <div class="para-box doc-step-block">
-              <p class="step-caption">
-                Next step is to create the UI screens for your application
-              </p>
-              <div class="image-wrapper img-md">
-                <img
-                  src="assets/images/portal/create-project/create-project-10.png"
-                  alt="Next step create UI screens"
-                  class="demo-img"
-                />
-              </div>
+          <div class="para-box doc-step-block">
+            <p class="step-caption">
+              Some of the templates available are below.
+            </p>
+            <div class="image-wrapper">
+              <img src="assets/images/portal/create-project/create-project-13.png" alt="Templates available"
+                class="demo-img" />
             </div>
+          </div>
 
-            <div class="para-box doc-step-block">
-              <p class="step-caption">
-                Tap <strong>Create the UI screens</strong> on the “<strong
-                  >What’s next?</strong
-                >” box.
-              </p>
-              <div class="image-wrapper">
-                <img
-                  src="assets/images/portal/create-project/create-project-11.png"
-                  alt="Tap Create UI screens button"
-                  class="demo-img"
-                />
-              </div>
+          <div class="para-box doc-step-block">
+            <p class="step-caption">
+              Once the template is selected, you can click on
+              <strong>Create Design</strong> button. Optional, you can add
+              <strong>Design Instructions</strong> too.
+            </p>
+            <div class="image-wrapper">
+              <img src="assets/images/portal/create-project/create-project-14.png" alt="Helvetica Grid theme selected"
+                class="demo-img" />
             </div>
+          </div>
 
-            <div class="para-box doc-step-block">
-              <p class="step-caption">
-                Select a theme for your application, Think4ever gives you wide
-                range of theme options.
-              </p>
-              <div class="image-wrapper">
-                <img
-                  src="assets/images/portal/create-project/create-project-12.png"
-                  alt="Select Theme modal"
-                  class="demo-img"
-                />
-              </div>
+          <div class="para-box doc-step-block">
+            <p class="step-caption">
+              Design Creation has started, the processing time varies
+              depending on the complexity of the UI design requirements.
+            </p>
+            <div class="image-wrapper">
+              <img src="assets/images/portal/create-project/create-project-15.png" alt="Design Creation Started dialog"
+                class="demo-img" />
             </div>
+          </div>
 
-            <div class="para-box doc-step-block">
-              <p class="step-caption">
-                Some of the templates available are below.
-              </p>
-              <div class="image-wrapper">
-                <img
-                  src="assets/images/portal/create-project/create-project-13.png"
-                  alt="Templates available"
-                  class="demo-img"
-                />
-              </div>
+          <div class="para-box doc-step-block">
+            <p class="step-caption">
+              User has the overview of the progress of UI screen creation, how
+              many are created and how many percentage is done.
+            </p>
+            <div class="image-wrapper">
+              <img src="assets/images/portal/create-project/create-project-16.png" alt="UI screen creation progress"
+                class="demo-img" />
             </div>
+          </div>
+          <div class="para-box doc-step-block">
+            <p class="step-caption">
+              Once the UI screens are done – next step is to
+              <strong>Develop the app</strong>.
+            </p>
+            <div class="image-wrapper">
+              <img src="assets/images/portal/create-project/create-project-17.png"
+                alt="Once the UI screens are done – next step is to Develop the app." class="demo-img" />
+            </div>
+          </div>
+          <div class="para-box doc-step-block">
+            <p class="step-caption">
+              Review the requirements, and confirm if good to be build.
+            </p>
+            <div class="image-wrapper">
+              <img src="assets/images/portal/create-project/create-project-18.png"
+                alt="Review the requirements, and confirm if good to be build." class="demo-img" />
+            </div>
+          </div>
 
-            <div class="para-box doc-step-block">
-              <p class="step-caption">
-                Once the template is selected, you can click on
-                <strong>Create Design</strong> button. Optional, you can add
-                <strong>Design Instructions</strong> too.
-              </p>
-              <div class="image-wrapper">
-                <img
-                  src="assets/images/portal/create-project/create-project-14.png"
-                  alt="Helvetica Grid theme selected"
-                  class="demo-img"
-                />
-              </div>
+          <div class="para-box doc-step-block">
+            <p class="text-muted-italic">
+              Option 2: Public GitHub URL (Public Repository)
+            </p>
+            <div class="image-wrapper img-sm">
+              <img src="assets/images/portal/create-project/create-project-19.png" alt="Public GitHub URL card"
+                class="demo-img" />
             </div>
+          </div>
 
-            <div class="para-box doc-step-block">
-              <p class="step-caption">
-                Design Creation has started, the processing time varies
-                depending on the complexity of the UI design requirements.
-              </p>
-              <div class="image-wrapper">
-                <img
-                  src="assets/images/portal/create-project/create-project-15.png"
-                  alt="Design Creation Started dialog"
-                  class="demo-img"
-                />
-              </div>
+          <div class="para-box doc-step-block">
+            <p class="step-caption">
+              Paste the URL of any open-access GitHub repository. The system
+              automatically fetches and analyzes a snapshot of your designated
+              branch—no authentication required.
+            </p>
+            <div class="image-wrapper">
+              <img src="assets/images/portal/create-project/create-project-20.png"
+                alt="Develop the app step in What's next box" class="demo-img" />
             </div>
+          </div>
 
-            <div class="para-box doc-step-block">
-              <p class="step-caption">
-                User has the overview of the progress of UI screen creation, how
-                many are created and how many percentage is done.
-              </p>
-              <div class="image-wrapper">
-                <img
-                  src="assets/images/portal/create-project/create-project-16.png"
-                  alt="UI screen creation progress"
-                  class="demo-img"
-                />
-              </div>
+          <div class="para-box doc-step-block">
+            <p class="step-caption">
+              Authenticate with your version control platform for secure
+              access to private codebases. Supported integrations include
+              <strong>GitHub</strong>, <strong>GitLab</strong>,
+              <strong>Bitbucket</strong>, <strong>Git</strong>, and
+              <strong>SVN</strong>.
+            </p>
+            <div class="image-wrapper img-lg">
+              <img src="assets/images/portal/create-project/create-project-21.png"
+                alt="Import from a public GitHub URL modal" class="demo-img" />
             </div>
-            <div class="para-box doc-step-block">
-              <p class="step-caption">
-                Once the UI screens are done – next step is to
-                <strong>Develop the app</strong>.
-              </p>
-              <div class="image-wrapper">
-                <img
-                  src="assets/images/portal/create-project/create-project-17.png"
-                  alt="Once the UI screens are done – next step is to Develop the app."
-                  class="demo-img"
-                />
-              </div>
+          </div>
+          <div class="para-box doc-step-block">
+            <h3 class="section-option-title">
+              Option 2: Design from intent (Build the app from scratch)
+            </h3>
+            <div class="image-wrapper img-sm">
+              <img src="assets/images/portal/create-project/create-project-22.png" alt="Design from intent card"
+                class="demo-img" />
             </div>
-            <div class="para-box doc-step-block">
-              <p class="step-caption">
-                Review the requirements, and confirm if good to be build.
-              </p>
-              <div class="image-wrapper">
-                <img
-                  src="assets/images/portal/create-project/create-project-18.png"
-                  alt="Review the requirements, and confirm if good to be build."
-                  class="demo-img"
-                />
-              </div>
-            </div>
+            <p class="step-caption">
+              This guide walks you through creating a complete application
+              blueprint—from defining high-level goals to generating system
+              requirements and UI concepts—using Think4ever.
+            </p>
+            <h4 class="step-subhead">Step 1: Initiate System Design</h4>
+            <ol class="cd-overview-ol">
+              <li>
+                From the Think4ever dashboard/home page, click on
+                <strong>Create a New Project</strong> button.
+              </li>
+              <li>
+                Click on the <strong>Design from Intent -</strong> button to
+                start creating your app from scratch.
+              </li>
+            </ol>
+          </div>
 
-            <div class="para-box doc-step-block">
-              <p class="text-muted-italic">
-                Option 2: Public GitHub URL (Public Repository)
-              </p>
-              <div class="image-wrapper img-sm">
-                <img
-                  src="assets/images/portal/create-project/create-project-19.png"
-                  alt="Public GitHub URL card"
-                  class="demo-img"
-                />
-              </div>
+          <div class="para-box doc-step-block">
+            <h4 class="step-subhead">
+              Step 2: Define the Application Objective
+            </h4>
+            <div class="image-wrapper">
+              <img src="assets/images/portal/create-project/create-project-23.png" alt="Define application objective"
+                class="demo-img" />
             </div>
+            <ol class="cd-overview-ol">
+              <li>
+                On the
+                <strong>What should this application accomplish?</strong>
+                screen, enter your main <strong>Business objective</strong> in
+                the text area.
+                <ul class="sub-list">
+                  <li>
+                    <em>Example: "Customers can request refunds, managers can
+                      review exceptions, and every decision remains visible to
+                      the customer."</em>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <em>(Optional)</em> Click <strong>Attach files</strong> or
+                <strong>Import from Jira & other tools</strong> to provide
+                context such as specs or mockups.
+              </li>
+              <li>
+                <em>(Alternative)</em> Select a pre-made template under
+                <strong>OR START FROM A READY-MADE SOLUTION DESIGN</strong>
+                (e.g., <em>Creator Fan Platform</em>,
+                <em>Class Scheduling System</em>).
+              </li>
+              <li>Click <strong>Continue</strong>.</li>
+            </ol>
+          </div>
 
-            <div class="para-box doc-step-block">
-              <p class="step-caption">
-                Paste the URL of any open-access GitHub repository. The system
-                automatically fetches and analyzes a snapshot of your designated
-                branch—no authentication required.
-              </p>
-              <div class="image-wrapper">
-                <img
-                  src="assets/images/portal/create-project/create-project-20.png"
-                  alt="Develop the app step in What's next box"
-                  class="demo-img"
-                />
-              </div>
+          <div class="para-box doc-step-block">
+            <h4 class="step-subhead">Step 3: Answer Concept Key Questions</h4>
+            <div class="image-wrapper">
+              <img src="assets/images/portal/create-project/create-project-24.png"
+                alt="Requirements Analysis Key Questions modal" class="demo-img" />
             </div>
+            <p class="step-caption">
+              A modal window titled <strong>Key Questions</strong> will prompt
+              you to shape the initial concept:
+            </p>
+            <ol class="cd-overview-ol">
+              <li>
+                Select target user roles (e.g.,
+                <em>Writers who create & sell</em>,
+                <em>Readers who browse & buy</em>, or <em>Both</em>).
+              </li>
+              <li>
+                Check allowable features and content items (e.g.,
+                <em>Cover image</em>, <em>Tags/categories</em>,
+                <em>Pricing</em>).
+              </li>
+              <li>
+                Choose platform configuration rules (e.g., platform cut
+                percentage).
+              </li>
+              <li>Click <strong>Submit</strong>.</li>
+            </ol>
+          </div>
 
-            <div class="para-box doc-step-block">
-              <p class="step-caption">
-                Authenticate with your version control platform for secure
-                access to private codebases. Supported integrations include
-                <strong>GitHub</strong>, <strong>GitLab</strong>,
-                <strong>Bitbucket</strong>, <strong>Git</strong>, and
-                <strong>SVN</strong>.
-              </p>
-              <div class="image-wrapper img-lg">
-                <img
-                  src="assets/images/portal/create-project/create-project-21.png"
-                  alt="Import from a public GitHub URL modal"
-                  class="demo-img"
-                />
-              </div>
+          <div class="para-box doc-step-block">
+            <h4 class="step-subhead">
+              Step 4: Requirements Analysis & Questionnaire
+            </h4>
+            <div class="image-wrapper">
+              <img src="assets/images/portal/create-project/create-project-25.png" alt="Key Questions choices"
+                class="demo-img" />
             </div>
-            <div class="para-box doc-step-block">
-              <h3 class="section-option-title">
-                Option 2: Design from intent (Build the app from scratch)
-              </h3>
-              <div class="image-wrapper img-sm">
-                <img
-                  src="assets/images/portal/create-project/create-project-22.png"
-                  alt="Design from intent card"
-                  class="demo-img"
-                />
-              </div>
-              <p class="step-caption">
-                This guide walks you through creating a complete application
-                blueprint—from defining high-level goals to generating system
-                requirements and UI concepts—using Think4ever.
-              </p>
-              <h4 class="step-subhead">Step 1: Initiate System Design</h4>
-              <ol class="cd-overview-ol">
-                <li>
-                  From the Think4ever dashboard/home page, click on
-                  <strong>Create a New Project</strong> button.
-                </li>
-                <li>
-                  Click on the <strong>Design from Intent -</strong> button to
-                  start creating your app from scratch.
-                </li>
-              </ol>
+            <ol class="cd-overview-ol">
+              <li>
+                Think4ever will generate a
+                <strong>Requirements Analysis</strong> summary covering:
+                <ul class="sub-list">
+                  <li><strong>Current Requirements Overview</strong></li>
+                  <li><strong>User Roles</strong></li>
+                  <li><strong>Key Features & Business Rules</strong></li>
+                  <li><strong>Integrations</strong></li>
+                </ul>
+              </li>
+              <li>
+                Work through the follow-up clarification questions. For
+                multiple-choice or edge-case questions (e.g., handling
+                post-publishing updates), you can:
+                <ul class="sub-list">
+                  <li>Select a specific rule option.</li>
+                  <li>
+                    Select <strong>Let AI decide</strong> to let the system
+                    determine the standard approach.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Click <strong>Submit Answers</strong>. The platform will
+                process your input in real time.
+              </li>
+            </ol>
+            <div class="image-wrapper">
+              <img src="assets/images/portal/create-project/create-project-26.png" alt="Processing your answers"
+                class="demo-img" />
             </div>
+          </div>
 
-            <div class="para-box doc-step-block">
-              <h4 class="step-subhead">
-                Step 2: Define the Application Objective
-              </h4>
-              <div class="image-wrapper">
-                <img
-                  src="assets/images/portal/create-project/create-project-23.png"
-                  alt="Define application objective"
-                  class="demo-img"
-                />
-              </div>
-              <ol class="cd-overview-ol">
-                <li>
-                  On the
-                  <strong>What should this application accomplish?</strong>
-                  screen, enter your main <strong>Business objective</strong> in
-                  the text area.
-                  <ul class="sub-list">
-                    <li>
-                      <em
-                        >Example: "Customers can request refunds, managers can
-                        review exceptions, and every decision remains visible to
-                        the customer."</em
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <em>(Optional)</em> Click <strong>Attach files</strong> or
-                  <strong>Import from Jira & other tools</strong> to provide
-                  context such as specs or mockups.
-                </li>
-                <li>
-                  <em>(Alternative)</em> Select a pre-made template under
-                  <strong>OR START FROM A READY-MADE SOLUTION DESIGN</strong>
-                  (e.g., <em>Creator Fan Platform</em>,
-                  <em>Class Scheduling System</em>).
-                </li>
-                <li>Click <strong>Continue</strong>.</li>
-              </ol>
+          <div class="para-box doc-step-block">
+            <h4 class="step-subhead">
+              Step 5: Review & Approve Requirements
+            </h4>
+            <div class="image-wrapper">
+              <img src="assets/images/portal/create-project/create-project-27.png"
+                alt="Review and approve your requirements" class="demo-img" />
             </div>
+            <ol class="cd-overview-ol">
+              <li>
+                Review the generated structured requirements under
+                <strong>Review & approve your requirements</strong>.
+              </li>
+              <li>
+                Toggle checkboxes to include or exclude specific
+                <strong>Overview</strong>, <strong>Goals</strong>, and system
+                behaviors.
+              </li>
+              <li>Once satisfied, click <strong>Approve & Build</strong>.</li>
+            </ol>
+          </div>
 
-            <div class="para-box doc-step-block">
-              <h4 class="step-subhead">Step 3: Answer Concept Key Questions</h4>
-              <div class="image-wrapper">
-                <img
-                  src="assets/images/portal/create-project/create-project-24.png"
-                  alt="Requirements Analysis Key Questions modal"
-                  class="demo-img"
-                />
-              </div>
-              <p class="step-caption">
-                A modal window titled <strong>Key Questions</strong> will prompt
-                you to shape the initial concept:
-              </p>
-              <ol class="cd-overview-ol">
-                <li>
-                  Select target user roles (e.g.,
-                  <em>Writers who create & sell</em>,
-                  <em>Readers who browse & buy</em>, or <em>Both</em>).
-                </li>
-                <li>
-                  Check allowable features and content items (e.g.,
-                  <em>Cover image</em>, <em>Tags/categories</em>,
-                  <em>Pricing</em>).
-                </li>
-                <li>
-                  Choose platform configuration rules (e.g., platform cut
-                  percentage).
-                </li>
-                <li>Click <strong>Submit</strong>.</li>
-              </ol>
+          <div class="para-box doc-step-block">
+            <h4 class="step-subhead">Step 6: Automated Concept Build</h4>
+            <div class="image-wrapper">
+              <img src="assets/images/portal/create-project/create-project-28.png"
+                alt="Building diagram from analyzed requirements" class="demo-img" />
             </div>
+            <ol class="cd-overview-ol">
+              <li>
+                The platform processes all requirements and generates systemic
+                diagrams, concept blocks, and logic flows automatically.
+              </li>
+              <li>
+                Wait for the processing pop-up (<em>"Building diagram from analyzed requirements..."</em>) to finish.
+              </li>
+            </ol>
+          </div>
 
-            <div class="para-box doc-step-block">
-              <h4 class="step-subhead">
-                Step 4: Requirements Analysis & Questionnaire
-              </h4>
-              <div class="image-wrapper">
-                <img
-                  src="assets/images/portal/create-project/create-project-25.png"
-                  alt="Key Questions choices"
-                  class="demo-img"
-                />
-              </div>
-              <ol class="cd-overview-ol">
-                <li>
-                  Think4ever will generate a
-                  <strong>Requirements Analysis</strong> summary covering:
-                  <ul class="sub-list">
-                    <li><strong>Current Requirements Overview</strong></li>
-                    <li><strong>User Roles</strong></li>
-                    <li><strong>Key Features & Business Rules</strong></li>
-                    <li><strong>Integrations</strong></li>
-                  </ul>
-                </li>
-                <li>
-                  Work through the follow-up clarification questions. For
-                  multiple-choice or edge-case questions (e.g., handling
-                  post-publishing updates), you can:
-                  <ul class="sub-list">
-                    <li>Select a specific rule option.</li>
-                    <li>
-                      Select <strong>Let AI decide</strong> to let the system
-                      determine the standard approach.
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  Click <strong>Submit Answers</strong>. The platform will
-                  process your input in real time.
-                </li>
-              </ol>
-              <div class="image-wrapper">
-                <img
-                  src="assets/images/portal/create-project/create-project-26.png"
-                  alt="Processing your answers"
-                  class="demo-img"
-                />
-              </div>
+          <div class="para-box doc-step-block">
+            <h4 class="step-subhead">
+              Step 7: Explore the Concept Blueprint & Next Steps
+            </h4>
+            <ol class="cd-overview-ol">
+              <li>
+                Upon completion, a <strong>Concept Ready</strong> modal will
+                display a summary of generated assets (e.g.,
+                <em>Concept blocks</em>, <em>Business flows</em>,
+                <em>Roles & permissions</em>, <em>Integrations mapping</em>,
+                <em>Data objects</em>, <em>Business rules</em>).
+              </li>
+              <li>
+                Click <strong>Start UI screens creation</strong> or close the
+                dialog.
+              </li>
+              <li>
+                You can now explore the visual canvas, review
+                roles/permissions, check data objects, or toggle into
+                <strong>Dev Mode</strong> to begin UI creation and hands-on
+                coding.
+              </li>
+            </ol>
+            <div class="image-wrapper">
+              <img src="assets/images/portal/create-project/create-project-29.png"
+                alt="Building diagram from analyzed requirements" class="demo-img" />
             </div>
-
-            <div class="para-box doc-step-block">
-              <h4 class="step-subhead">
-                Step 5: Review & Approve Requirements
-              </h4>
-              <div class="image-wrapper">
-                <img
-                  src="assets/images/portal/create-project/create-project-27.png"
-                  alt="Review and approve your requirements"
-                  class="demo-img"
-                />
-              </div>
-              <ol class="cd-overview-ol">
-                <li>
-                  Review the generated structured requirements under
-                  <strong>Review & approve your requirements</strong>.
-                </li>
-                <li>
-                  Toggle checkboxes to include or exclude specific
-                  <strong>Overview</strong>, <strong>Goals</strong>, and system
-                  behaviors.
-                </li>
-                <li>Once satisfied, click <strong>Approve & Build</strong>.</li>
-              </ol>
-            </div>
-
-            <div class="para-box doc-step-block">
-              <h4 class="step-subhead">Step 6: Automated Concept Build</h4>
-              <div class="image-wrapper">
-                <img
-                  src="assets/images/portal/create-project/create-project-28.png"
-                  alt="Building diagram from analyzed requirements"
-                  class="demo-img"
-                />
-              </div>
-              <ol class="cd-overview-ol">
-                <li>
-                  The platform processes all requirements and generates systemic
-                  diagrams, concept blocks, and logic flows automatically.
-                </li>
-                <li>
-                  Wait for the processing pop-up (<em
-                    >"Building diagram from analyzed requirements..."</em
-                  >) to finish.
-                </li>
-              </ol>
-            </div>
-
-            <div class="para-box doc-step-block">
-              <h4 class="step-subhead">
-                Step 7: Explore the Concept Blueprint & Next Steps
-              </h4>
-              <ol class="cd-overview-ol">
-                <li>
-                  Upon completion, a <strong>Concept Ready</strong> modal will
-                  display a summary of generated assets (e.g.,
-                  <em>Concept blocks</em>, <em>Business flows</em>,
-                  <em>Roles & permissions</em>, <em>Integrations mapping</em>,
-                  <em>Data objects</em>, <em>Business rules</em>).
-                </li>
-                <li>
-                  Click <strong>Start UI screens creation</strong> or close the
-                  dialog.
-                </li>
-                <li>
-                  You can now explore the visual canvas, review
-                  roles/permissions, check data objects, or toggle into
-                  <strong>Dev Mode</strong> to begin UI creation and hands-on
-                  coding.
-                </li>
-              </ol>
-              <div class="image-wrapper">
-                <img
-                  src="assets/images/portal/create-project/create-project-29.png"
-                  alt="Building diagram from analyzed requirements"
-                  class="demo-img"
-                />
-              </div>
-            </div>
-          </section>
-        </main>
-      </div>
+          </div>
+        </section>
+      </main>
     </div>
-    <div id="docFooter"></div>
-    <script src="assets/js/navigation.js"></script>
-    <script src="assets/js/consumer_docs_home.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        if (window.I18n) {
-          window.I18n.init();
-        }
-      });
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-  </body>
+  </div>
+  <div id="docFooter"></div>
+  <script src="assets/js/navigation.js"></script>
+  <script src="assets/js/consumer_docs_home.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (window.I18n) {
+        window.I18n.init();
+      }
+    });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+
 </html>
