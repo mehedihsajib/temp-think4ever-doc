@@ -54,6 +54,11 @@
             <div class="cgs-sidebar-overlay" id="cgsSidebarOverlay"></div>
             <!-- Sidebar -->
             <div id="portalSidebar"></div>
+            <script>
+                if (localStorage.getItem('currentPage') === 'portal/marketplace') {
+                    document.getElementById('portalSidebar').id = 'consumerSidebar';
+                }
+            </script>
             <!-- Main Content -->
             <main class="cd-main-content" id="cd-main">
                 <!-- Page Title -->
