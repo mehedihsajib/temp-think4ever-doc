@@ -405,6 +405,14 @@ function loadComponent({ id, url, onLoaded }) {
     .then((html) => {
       el.innerHTML = html;
 
+      // Automatically resolve dynamic asset paths for this component
+      el.querySelectorAll("[data-asset-src]").forEach((child) => {
+        const assetSrc = child.getAttribute("data-asset-src");
+        if (assetSrc) {
+          child.setAttribute("src", toBasePath(assetSrc));
+        }
+      });
+
       if (typeof onLoaded === "function") {
         onLoaded(el);
       }
