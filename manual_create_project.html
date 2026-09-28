@@ -300,291 +300,239 @@
 
         <!-- Overview Section -->
         <section class="cd-overview" id="cdHomeOverview">
-          <p class="cd-overview-p">
-            The <strong>New Project</strong> screen allows users to describe
-            the application, platform, or solution they want to build. Simply
-            enter a business idea, project requirements, or technical
-            specifications in the description field.
-          </p>
-          <p class="cd-overview-p">
-            The platform analyzes the provided information and automatically
-            determines the most suitable project setup, including project
-            naming, recommended development approach, and initial project
-            structure.
-          </p>
-          <p class="cd-overview-p">
-            Users may also specify existing assets such as source code, a Git
-            repository, preferred technologies, or implementation
-            requirements. Based on the provided input, the system guides users
-            through the appropriate project creation workflow.
-          </p>
-          <p class="cd-overview-p">
-            After entering the project details, click
-            <strong>Continue</strong> to proceed with project generation and
-            setup.
-          </p>
+          <p class="cd-overview-p">Creating a project has never been this easy with Think4ever. On this page, you will
+            be able to see different options to create or start your project:</p>
 
           <div class="para-box doc-step-block">
-            <h3 class="h3">How to Create a New Project</h3>
-            <p class="step-caption">
-              1. In the Dashboard, click on
-              <strong>Create a New Project</strong> button
-            </p>
+            <h3 class="h3">Project Initialization Options</h3>
+            <p class="cd-overview-p">Select the path that matches your current development state to establish a useful
+              system view:</p>
+            <ul class="cd-overview-ul">
+              <li><strong>Analyze Existing Code:</strong> Import an existing repository or local codebase to
+                automatically generate an interactive, reviewable architecture map.</li>
+              <li><strong>Production Hardening:</strong> Import code to run automated reviewer agent audits across
+                security, config, and system reliability checklists.</li>
+              <li><strong>Design from Intent:</strong> Define functional constraints, system invariants, and
+                architectural diagrams before writing any code.</li>
+            </ul>
             <div class="image-wrapper">
-              <img src="assets/images/portal/create-project/create-project-1.png"
-                alt="Click Create a New Project button" class="demo-img" />
+              <img src="assets/images/create-project/create-project-options.png" alt="Create Project" class="demo-img">
             </div>
           </div>
 
           <div class="para-box doc-step-block">
-            <p class="step-caption">
-              2. There are <strong>two ways</strong> to create a project:
-            </p>
-            <ol class="cd-overview-ol">
-              <li>Analyze Existing Code</li>
-              <li>Design from intent</li>
-            </ol>
-            <div class="image-wrapper">
-              <img src="assets/images/portal/create-project/create-project-2.png" alt="Two ways to create a project"
-                class="demo-img" />
-            </div>
-          </div>
-
-          <div class="para-box doc-step-block">
-            <h3 class="section-option-title">
-              Option 1: Analyze existing code (Import Existing Code or
-              Project)
-            </h3>
+            <h3 class="h3">Analyze Existing Code (Recommended)</h3>
+            <ul class="cd-overview-ul">
+              <li><strong>Category:</strong> Code →Understanding</li>
+              <li><strong>Best For:</strong> Developers or team leads taking over an existing codebase or needing
+                high-level system architectural visualization.</li>
+              <li><strong>Function:</strong> Automatically parses your existing repository to generate a visual,
+                reviewable map of system components and dependencies.</li>
+              <li><strong>Action:</strong> Click Analyze a project → to proceed.</li>
+            </ul>
             <div class="image-wrapper img-sm">
-              <img src="assets/images/portal/create-project/create-project-3.png" alt="Analyze existing code card"
-                class="demo-img" />
+              <img src="assets/images/create-project/analyze-existing-code.png" alt="Create Project" class="demo-img">
+            </div>
+            <p class="cd-overview-p">After selecting Analyze existing code from the onboarding menu, you are prompted to
+              choose your preferred method for importing source code into Think4ever. The system will automatically
+              ingest the codebase and build a visual map of the system architecture.</p>
+
+            <div class="image-wrapper">
+              <img src="assets/images/create-project/project-import-options.png" alt="Create Project" class="demo-img">
+            </div>
+          </div>
+
+          <div class="para-box doc-step-block">
+            <h3 class="h3">Source Code Import Methods</h3>
+            <p class="cd-overview-p">Select one of three methods to bring your application code into the workspace:</p>
+
+            <h4 class="step-subhead">Method A: Local Project (Upload a ZIP)</h4>
+            <ul class="cd-overview-ul">
+              <li><strong>Category:</strong> LOCAL PROJECT</li>
+              <li><strong>Description:</strong> Upload a local archive (.zip) containing your project files directly
+                from your computer.</li>
+              <li><strong>Best Used For:</strong> Quick evaluations, offline codebases, or testing projects without
+                linking a version control account.</li>
+              <li><strong>Action:</strong> Click Choose a file -> to launch the file picker and select your .zip
+                archive.</li>
+            </ul>
+
+            <div class="image-wrapper">
+              <img src="assets/images/create-project/upload-as-zip.png" alt="Create Project" class="demo-img">
             </div>
 
-            <p class="step-caption">
-              <strong>Purpose:</strong> Designed to parse an existing codebase
-              and automatically turn a project into a visual, reviewable map
-              of the system.
+            <h4 class="step-subhead">Method B: Public Repository (Public GitHub URL)</h4>
+            <ul class="cd-overview-ul">
+              <li><strong>Category:</strong> PUBLIC REPOSITORY</li>
+              <li><strong>Description:</strong> Paste a URL to any publicly accessible GitHub repository. Think4ever
+                downloads a snapshot of the selected repository branch for analysis.</li>
+              <li><strong>Best Used For:</strong> Analyzing open-source libraries, public frameworks, or accessible team
+                repositories without authentication.</li>
+              <li><strong>Action:</strong> Click Import from GitHub -> to enter the repository URL and target branch
+                name.</li>
+            </ul>
+
+            <div class="image-wrapper">
+              <img src="assets/images/create-project/import-from-github.png" alt="Create Project" class="demo-img">
+            </div>
+
+            <h4 class="step-subhead">Method C: Version Control (Connect a Repository)</h4>
+            <ul class="cd-overview-ul">
+              <li><strong>Category:</strong> VERSION CONTROL</li>
+              <li><strong>Description:</strong> Authenticate using provider credentials to import private or
+                organizational repositories.</li>
+              <li><strong>Supported Integrations:</strong> GitHub, GitLab, Bitbucket, Git, and SVN.</li>
+              <li><strong>Best Used For:</strong> Enterprise projects, private repositories, and continuous architecture
+                mapping directly tied to your source control.</li>
+              <li><strong>Action:</strong> Click Connect -> to authorize your version control provider.</li>
+            </ul>
+            <div class="image-wrapper">
+              <img src="assets/images/create-project/connect-git-repo.png" alt="Create Project" class="demo-img">
+            </div>
+          </div>
+
+          <div class="para-box doc-step-block">
+            <h3 class="h3">Step-by-Step Instructions</h3>
+            <p class="cd-overview-p">On the Choose your fastest path to value screen, review the three import options.
             </p>
-            <p class="step-caption">
-              <strong>Status:</strong> Marked as
-              <strong>RECOMMENDED</strong> for users starting with an active
-              project or codebase.
-            </p>
+            <p class="cd-overview-p">Choose your preferred import path:</p>
+            <ul class="cd-overview-ul">
+              <li><strong>ZIP Upload:</strong> Click Choose a file -> and select your project's .zip file.</li>
+              <li><strong>Public URL:</strong> Click Import from GitHub ->, paste the repository link, and click
+                confirm.</li>
+              <li><strong>Git Integration:</strong> Click Connect ->, authorize your Git provider, and select your
+                repository from the drop-down menu.</li>
+            </ul>
+            <p class="cd-overview-p">Click Back at any point if you need to return to Step 1 and change your onboarding
+              path.</p>
+            <p class="cd-overview-p">Once submitted, the system will begin parsing your files and generating your
+              interactive system view.</p>
+          </div>
+
+          <div class="para-box doc-step-block">
+            <h3 class="h3">Production Hardening</h3>
+            <p class="cd-overview-p">The Production Hardening automatically evaluates your codebase against a
+              comprehensive production-readiness checklist. Reviewer agents scan your project structure and source files
+              in real time, allowing you to monitor progress live or safely navigate away while the review runs in the
+              background.</p>
 
             <ul class="cd-overview-ul">
-              <li>
-                <strong>Core Focus:</strong> Reverse-engineering existing
-                codebases into clear visual documentation.
+              <li><strong>Category:</strong> Code →Production Ready</li>
+              <li><strong>Best For:</strong> Teams preparing to deploy applications to production or conducting security
+                and compliance audits.</li>
+              <li><strong>Function:</strong> Imports your codebase and maps the system architecture, then deploys
+                reviewer agents to audit against key production readiness domains (including security, configuration,
+                reliability, data management, and observability).</li>
+              <li><strong>Action:</strong> Click Harden a project →to proceed.</li>
+            </ul>
+            <div class="image-wrapper img-sm">
+              <img src="assets/images/create-project/product-hardening-1.png" alt="Create Project" class="demo-img">
+            </div>
+            <p class="cd-overview-p">The Production Hardening screen allows you to import your codebase into the
+              platform. Once imported, the system maps your architecture and automatically executes a
+              <strong>production-readiness review</strong>.
+            </p>
+            <div class="image-wrapper">
+              <img src="assets/images/create-project/product-hardening-2.png" alt="Create Project" class="demo-img">
+            </div>
+          </div>
+
+          <div class="para-box doc-step-block">
+            <h3 class="h3">Import Options</h3>
+            <p class="cd-overview-p">Select one of the three available methods to bring in your source code:</p>
+            <ul class="cd-overview-ul">
+              <li><strong>Upload a ZIP (Local Project):</strong> Upload an archived file directly from your local
+                machine without authenticating or connecting a source-control account. Click Choose a file → to select a
+                compressed .zip archive.
+                <div class="image-wrapper">
+                  <img src="assets/images/create-project/ph-upload-as-zip.png" alt="Create Project" class="demo-img">
+                </div>
               </li>
-              <li>
-                <strong>How It Works:</strong> Scans repository source files,
-                dependencies, and API structures to auto-generate system
-                flowcharts, dependency graphs, and architectural overviews.
+              <li><strong>Public GitHub URL (Public Repository):</strong> Paste a link to any public repository, and the
+                system will download a snapshot of your designated branch. Click Import from GitHub → to proceed.
+                <div class="image-wrapper">
+                  <img src="assets/images/create-project/ph-github-url.png" alt="Create Project" class="demo-img">
+                </div>
               </li>
-              <li>
-                <strong>Best Used For:</strong> Onboarding onto unfamiliar
-                codebases, auditing legacy applications, mapping technical
-                debt, or verifying how a live system operates before making
-                modifications.
+              <li><strong>Connect a repository (Version Control):</strong> Authorize private or public repositories
+                using account credentials. Click Connect → to link repositories hosted on GitHub, GitLab, Bitbucket,
+                Git, or SVN.
+                <div class="image-wrapper">
+                  <img src="assets/images/create-project/ph-connect-git-repo.png" alt="Create Project" class="demo-img">
+                </div>
               </li>
             </ul>
           </div>
 
           <div class="para-box doc-step-block">
-            <h3 class="h3">Analyze the Code: How to Create a Project</h3>
-            <div class="image-wrapper">
-              <img src="assets/images/portal/create-project/create-project-4.png" alt="Analyze the Code path options"
-                class="demo-img" />
-            </div>
-            <p class="step-caption">There are <strong>3 options</strong>:</p>
-            <ol class="cd-overview-ol">
-              <li>Upload a Zip</li>
-              <li>Public GitHub URL</li>
-              <li>Connect a repository</li>
-            </ol>
+            <h3 class="h3">Step by step process</h3>
+            <ul class="cd-overview-ul" style="list-style-type: none; padding-left: 0;">
+              <li><strong>Step 1:</strong> Select your preferred import method and complete the upload or authorization
+                prompt.
+                <div class="image-wrapper">
+                  <img src="assets/images/create-project/step-1.png" alt="Create Project" class="demo-img">
+                </div>
+              </li>
+              <li><strong>Step 2:</strong> Upload the file to be imported.
+                <div class="image-wrapper">
+                  <img src="assets/images/create-project/step-2.png" alt="Create Project" class="demo-img">
+                </div>
+              </li>
+              <li><strong>Step 3:</strong> Analysis of the codebase will begin
+                <div class="image-wrapper">
+                  <img src="assets/images/create-project/step-3.png" alt="Create Project" class="demo-img">
+                </div>
+              </li>
+              <li><strong>Step 4:</strong> System will build the concept from the uploaded codebase
+                <div class="image-wrapper">
+                  <img src="assets/images/create-project/step-4.png" alt="Create Project" class="demo-img">
+                </div>
+              </li>
+              <li><strong>Step 5:</strong> Once codebase concept is built, the production hardening process will start
+                by reviewing your existing codebase.
+                <div class="image-wrapper">
+                  <img src="assets/images/create-project/step-5.png" alt="Create Project" class="demo-img">
+                </div>
+              </li>
+              <li><strong>Step 6:</strong> View the overall readiness summary, showing the exact percentage of
+                completion and passed checks across all categories.
+                <div class="image-wrapper">
+                  <img src="assets/images/create-project/step-6.png" alt="Create Project" class="demo-img">
+                </div>
+              </li>
+              <li><strong>Step 7:</strong> The system will give you the option to Fix Findings, tap the button to start
+                fixing the issues. Or you can also click on Run again button to re-run the analysis of your codebase.
+                <div class="image-wrapper">
+                  <img src="assets/images/create-project/step-7.png" alt="Create Project" class="demo-img">
+                </div>
+              </li>
+              <li><strong>Step 8:</strong> Click on Fix Findings - then choose which agent to use.
+                <div class="image-wrapper">
+                  <img src="assets/images/create-project/step-8.png" alt="Create Project" class="demo-img">
+                </div>
+              </li>
+              <li><strong>Step 9:</strong> Wait for the system to fix each issues one by one.
+                <div class="image-wrapper">
+                  <img src="assets/images/create-project/step-9.png" alt="Create Project" class="demo-img">
+                </div>
+              </li>
+              <li><strong>Step 10:</strong> As the system addresses each issue, it will prompt proposed fixes or planned
+                changes; you need to confirm the changes before the system can proceed further.
+                <div class="image-wrapper">
+                  <img src="assets/images/create-project/step-10.png" alt="Create Project" class="demo-img">
+                </div>
+              </li>
+            </ul>
+            <p class="cd-overview-p">Once all the fixes are done, you can continue generating UI screens and bulding the
+              app.</p>
           </div>
 
-          <div class="para-box doc-step-block">
-            <p class="text-muted-italic">
-              Option 1: Importing Existing Code – using ZIP file
-            </p>
-            <p class="cd-overview-p">
-              To map and visualize an existing codebase, select one of the
-              following import options:
-            </p>
-            <p class="step-caption">
-              1. <strong>Upload a ZIP (Local Project)</strong>
-            </p>
-            <div class="image-wrapper img-sm">
-              <img src="assets/images/portal/create-project/create-project-5.png" alt="Upload a ZIP" class="demo-img" />
-            </div>
-            <p class="step-caption">
-              Upload a .zip archive directly from your local machine. This
-              method creates a static snapshot of your project without
-              requiring access to external source control or cloud storage
-              accounts.
-            </p>
-            <div class="image-wrapper img-lg">
-              <img src="assets/images/portal/create-project/create-project-6.png"
-                alt="Upload your project as a ZIP form" class="demo-img" />
-            </div>
-          </div>
-
-          <div class="para-box doc-step-block">
-            <p class="step-caption">
-              Tap on <strong>Analyze my codebase</strong>
-            </p>
-            <div class="image-wrapper img-md">
-              <img src="assets/images/portal/create-project/create-project-7.png" alt="Tap on Analyze my codebase"
-                class="demo-img" />
-            </div>
-            <p class="step-caption">
-              The system will begin analyzing the codebase and generate the
-              initial concept. Notice the “<strong>What’s next?</strong>” box
-              in the lower right corner, this indicates what stage of software
-              development process you are currently working on.
-            </p>
-            <div class="image-wrapper">
-              <img src="assets/images/portal/create-project/create-project-9.png" alt="Structure analysis started"
-                class="demo-img" />
-            </div>
-          </div>
-
-          <div class="para-box doc-step-block">
-            <p class="step-caption">
-              Next step is to create the UI screens for your application
-            </p>
-            <div class="image-wrapper img-md">
-              <img src="assets/images/portal/create-project/create-project-10.png" alt="Next step create UI screens"
-                class="demo-img" />
-            </div>
-          </div>
-
-          <div class="para-box doc-step-block">
-            <p class="step-caption">
-              Tap <strong>Create the UI screens</strong> on the “<strong>What’s next?</strong>” box.
-            </p>
-            <div class="image-wrapper">
-              <img src="assets/images/portal/create-project/create-project-11.png" alt="Tap Create UI screens button"
-                class="demo-img" />
-            </div>
-          </div>
-
-          <div class="para-box doc-step-block">
-            <p class="step-caption">
-              Select a theme for your application, Think4ever gives you wide
-              range of theme options.
-            </p>
-            <div class="image-wrapper">
-              <img src="assets/images/portal/create-project/create-project-12.png" alt="Select Theme modal"
-                class="demo-img" />
-            </div>
-          </div>
-
-          <div class="para-box doc-step-block">
-            <p class="step-caption">
-              Some of the templates available are below.
-            </p>
-            <div class="image-wrapper">
-              <img src="assets/images/portal/create-project/create-project-13.png" alt="Templates available"
-                class="demo-img" />
-            </div>
-          </div>
-
-          <div class="para-box doc-step-block">
-            <p class="step-caption">
-              Once the template is selected, you can click on
-              <strong>Create Design</strong> button. Optional, you can add
-              <strong>Design Instructions</strong> too.
-            </p>
-            <div class="image-wrapper">
-              <img src="assets/images/portal/create-project/create-project-14.png" alt="Helvetica Grid theme selected"
-                class="demo-img" />
-            </div>
-          </div>
-
-          <div class="para-box doc-step-block">
-            <p class="step-caption">
-              Design Creation has started, the processing time varies
-              depending on the complexity of the UI design requirements.
-            </p>
-            <div class="image-wrapper">
-              <img src="assets/images/portal/create-project/create-project-15.png" alt="Design Creation Started dialog"
-                class="demo-img" />
-            </div>
-          </div>
-
-          <div class="para-box doc-step-block">
-            <p class="step-caption">
-              User has the overview of the progress of UI screen creation, how
-              many are created and how many percentage is done.
-            </p>
-            <div class="image-wrapper">
-              <img src="assets/images/portal/create-project/create-project-16.png" alt="UI screen creation progress"
-                class="demo-img" />
-            </div>
-          </div>
-          <div class="para-box doc-step-block">
-            <p class="step-caption">
-              Once the UI screens are done – next step is to
-              <strong>Develop the app</strong>.
-            </p>
-            <div class="image-wrapper">
-              <img src="assets/images/portal/create-project/create-project-17.png"
-                alt="Once the UI screens are done – next step is to Develop the app." class="demo-img" />
-            </div>
-          </div>
-          <div class="para-box doc-step-block">
-            <p class="step-caption">
-              Review the requirements, and confirm if good to be build.
-            </p>
-            <div class="image-wrapper">
-              <img src="assets/images/portal/create-project/create-project-18.png"
-                alt="Review the requirements, and confirm if good to be build." class="demo-img" />
-            </div>
-          </div>
-
-          <div class="para-box doc-step-block">
-            <p class="text-muted-italic">
-              Option 2: Public GitHub URL (Public Repository)
-            </p>
-            <div class="image-wrapper img-sm">
-              <img src="assets/images/portal/create-project/create-project-19.png" alt="Public GitHub URL card"
-                class="demo-img" />
-            </div>
-          </div>
-
-          <div class="para-box doc-step-block">
-            <p class="step-caption">
-              Paste the URL of any open-access GitHub repository. The system
-              automatically fetches and analyzes a snapshot of your designated
-              branch—no authentication required.
-            </p>
-            <div class="image-wrapper">
-              <img src="assets/images/portal/create-project/create-project-20.png"
-                alt="Develop the app step in What's next box" class="demo-img" />
-            </div>
-          </div>
-
-          <div class="para-box doc-step-block">
-            <p class="step-caption">
-              Authenticate with your version control platform for secure
-              access to private codebases. Supported integrations include
-              <strong>GitHub</strong>, <strong>GitLab</strong>,
-              <strong>Bitbucket</strong>, <strong>Git</strong>, and
-              <strong>SVN</strong>.
-            </p>
-            <div class="image-wrapper img-lg">
-              <img src="assets/images/portal/create-project/create-project-21.png"
-                alt="Import from a public GitHub URL modal" class="demo-img" />
-            </div>
-          </div>
           <div class="para-box doc-step-block">
             <h3 class="section-option-title">
-              Option 2: Design from intent (Build the app from scratch)
+              Design from intent (Build the app from scratch)
             </h3>
             <div class="image-wrapper img-sm">
-              <img src="assets/images/portal/create-project/create-project-22.png" alt="Design from intent card"
+              <img src="assets/images/create-project/create-project-22.png" alt="Design from intent card"
                 class="demo-img" />
             </div>
             <p class="step-caption">
@@ -610,7 +558,7 @@
               Step 2: Define the Application Objective
             </h4>
             <div class="image-wrapper">
-              <img src="assets/images/portal/create-project/create-project-23.png" alt="Define application objective"
+              <img src="assets/images/create-project/create-project-23.png" alt="Define application objective"
                 class="demo-img" />
             </div>
             <ol class="cd-overview-ol">
@@ -645,7 +593,7 @@
           <div class="para-box doc-step-block">
             <h4 class="step-subhead">Step 3: Answer Concept Key Questions</h4>
             <div class="image-wrapper">
-              <img src="assets/images/portal/create-project/create-project-24.png"
+              <img src="assets/images/create-project/create-project-24.png"
                 alt="Requirements Analysis Key Questions modal" class="demo-img" />
             </div>
             <p class="step-caption">
@@ -676,7 +624,7 @@
               Step 4: Requirements Analysis & Questionnaire
             </h4>
             <div class="image-wrapper">
-              <img src="assets/images/portal/create-project/create-project-25.png" alt="Key Questions choices"
+              <img src="assets/images/create-project/create-project-25.png" alt="Key Questions choices"
                 class="demo-img" />
             </div>
             <ol class="cd-overview-ol">
@@ -708,7 +656,7 @@
               </li>
             </ol>
             <div class="image-wrapper">
-              <img src="assets/images/portal/create-project/create-project-26.png" alt="Processing your answers"
+              <img src="assets/images/create-project/create-project-26.png" alt="Processing your answers"
                 class="demo-img" />
             </div>
           </div>
@@ -718,8 +666,8 @@
               Step 5: Review & Approve Requirements
             </h4>
             <div class="image-wrapper">
-              <img src="assets/images/portal/create-project/create-project-27.png"
-                alt="Review and approve your requirements" class="demo-img" />
+              <img src="assets/images/create-project/create-project-27.png" alt="Review and approve your requirements"
+                class="demo-img" />
             </div>
             <ol class="cd-overview-ol">
               <li>
@@ -738,7 +686,7 @@
           <div class="para-box doc-step-block">
             <h4 class="step-subhead">Step 6: Automated Concept Build</h4>
             <div class="image-wrapper">
-              <img src="assets/images/portal/create-project/create-project-28.png"
+              <img src="assets/images/create-project/create-project-28.png"
                 alt="Building diagram from analyzed requirements" class="demo-img" />
             </div>
             <ol class="cd-overview-ol">
@@ -776,7 +724,7 @@
               </li>
             </ol>
             <div class="image-wrapper">
-              <img src="assets/images/portal/create-project/create-project-29.png"
+              <img src="assets/images/create-project/create-project-29.png"
                 alt="Building diagram from analyzed requirements" class="demo-img" />
             </div>
           </div>
