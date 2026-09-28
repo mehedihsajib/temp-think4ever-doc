@@ -633,6 +633,10 @@ main.cd-main-content {
     margin-bottom: 12px;
 }
 
+.multilang-wrapper .step-subhead {
+    margin-bottom: 0;
+}
+
 .section-option-title {
     color: #ea580c;
     font-size: 1.25rem;
@@ -736,4 +740,4 @@ main.cd-main-content {
 .sub-list > li em {
     font-style: italic;
     color: #334155;
-}
+}
