@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Think4Ever - Portal</title>
+    <link href="../css/theme.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/onboarding.css" />
+    <link rel="stylesheet" href="../assets/css/dev_doc.css" />
+    <link rel="stylesheet" href="../assets/css/portal.css" />
+
+    <link rel="stylesheet" href="../assets/css/consumer_docs_home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="../assets/js/i18n.js"></script>
+</head>
+
+<body>
+    <div class="consumer-docs-home consumer-getting-started">
+        <!-- Skip to content -->
+        <a href="#cd-main" class="sr-only" style="
+          position: absolute;
+          left: -9999px;
+          top: auto;
+          width: 1px;
+          height: 1px;
+          overflow: hidden;
+        " onfocus="
+          this.style.position = 'static';
+          this.style.width = 'auto';
+          this.style.height = 'auto';
+        " onblur="
+          this.style.position = 'absolute';
+          this.style.left = '-9999px';
+          this.style.width = '1px';
+          this.style.height = '1px';
+          this.style.overflow = 'hidden';
+        ">Skip to main content</a>
+        <!-- Site Header -->
+        <header class="modern-header" id="consumerHeader"></header>
+
+        <div class="consumer-docs-layout">
+            <!-- Mobile sidebar toggle -->
+            <button class="cgs-sidebar-toggle" id="cgsSidebarToggle" aria-label="Toggle navigation menu"
+                aria-expanded="false">
+                <i class="fa fa-bars"></i>
+            </button>
+            <!-- Sidebar overlay -->
+            <div class="cgs-sidebar-overlay" id="cgsSidebarOverlay"></div>
+            <!-- Sidebar -->
+            <div id="portalSidebar"></div>
+            <!-- Main Content -->
+            <main class="cd-main-content" id="cd-main">
+                <!-- Page Title -->
+                <h1 class="cd-page-title" id="cdHomeTitle">Marketplace</h1>
+
+                <section class="cd-overview" id="cdHomeOverview">
+                    <p class="cd-overview-text">
+                        The Think4ever <strong>Marketplace</strong> serves as a centralized hub connecting clients
+                        looking for talent with freelancers seeking open roles. This page walks you through navigating
+                        the marketplace and utilizing its key features.
+                    </p>
+                    <div class="image-wrapper">
+                        <img src="../assets/images/portal/marketplace/marketplace-overview.png" alt="Marketplace"
+                            class="demo-img" />
+                    </div>
+
+                    <div class="para-box doc-step-block">
+                        <h3 class="h3">How to Navigate to Marketplace from your portal?</h3>
+
+                        <h4 class="step-subhead">Option 1:</h4>
+                        <p class="cd-overview-p">From your workspace Dashboard, click on <strong>Marketplace</strong>
+                            tab</p>
+
+                        <div class="image-wrapper">
+                            <img src="../assets/images/portal/marketplace/navigate-1.png" alt="Marketplace"
+                                class="demo-img" />
+                        </div>
+
+                        <h4 class="step-subhead">Option 2:</h4>
+                        <p class="cd-overview-p">Go to your Account Dashboard, click on Marketplace from the left menu.
+                        </p>
+
+                        <div class="image-wrapper">
+                            <img src="../assets/images/portal/marketplace/navigate-2.png" alt="Marketplace"
+                                class="demo-img" />
+                        </div>
+                    </div>
+
+                    <div class="para-box doc-step-block">
+                        <h3 class="h3">Navigation Overview</h3>
+                        <p class="cd-overview-p">The top navigation bar inside the Marketplace section provides quick
+                            access to all core platform functions:</p>
+
+                        <h4 class="step-subhead">Overview</h4>
+                        <p class="cd-overview-p">Quick-start action dashboard to hire, find work, or update your
+                            profile.</p>
+
+                        <div class="image-wrapper">
+                            <img src="../assets/images/portal/marketplace/nav-overview.png" alt="Marketplace"
+                                class="demo-img" />
+                        </div>
+
+                        <h4 class="step-subhead">My Profile</h4>
+                        <p class="cd-overview-p">View and manage how your professional profile appears to others.</p>
+                        <div class="image-wrapper">
+                            <img src="../assets/images/portal/marketplace/nav-myprofile.png" alt="Marketplace"
+                                class="demo-img" />
+                        </div>
+                        <p class="cd-overview-p">The My Profile section enables users to build, update, and manage their
+                            marketplace profile.</p>
+
+                        <p class="cd-overview-p" style="margin-top: 20px;"><strong>IMPORTANT:</strong> A well-completed
+                            profile increases
+                            visibility to potential clients and talent across the platform.</p>
+                    </div>
+
+                    <div class="para-box doc-step-block">
+                        <h3 class="h3">Profile Completeness Indicator</h3>
+                        <div class="image-wrapper">
+                            <img src="../assets/images/portal/marketplace/profile-indicator.png" alt="Marketplace"
+                                class="demo-img" />
+                        </div>
+                        <p class="cd-overview-p">At the top of the section, a progress bar tracks your setup progress
+                            from 0% to 100%. Completing each of the following four core tasks fills the indicator bar:
+                        </p>
+
+                        <ul class="cd-overview-ul">
+                            <li><strong>Add a headline:</strong> Provide a concise title summarizing your primary
+                                expertise or offering.</li>
+                            <li><strong>Write an About section:</strong> Write a detailed description of your experience
+                                (minimum 200 characters).</li>
+                            <li><strong>Add at least 3 skills:</strong> Include relevant technical or professional
+                                competencies.</li>
+                            <li><strong>Pick your category:</strong> Select a primary work domain and up to 3
+                                specialized skills.</li>
+                        </ul>
+                    </div>
+
+                    <div class="para-box doc-step-block">
+                        <h3 class="h3">Marketplace Profile Fields</h3>
+
+                        <h4 class="step-subhead">A. Platform Usage Role ("I am using the marketplace as")</h4>
+
+                        <p class="cd-overview-p">Select your primary operational role on the platform using the toggle
+                            buttons:</p>
+                        <ul class="cd-overview-ul">
+                            <li><strong>Client:</strong> Choose this if you primarily post jobs and hire freelancers.
+                            </li>
+                            <li><strong>Freelancer:</strong> Choose this if you offer services and bid on client
+                                projects.</li>
+                            <li><strong>Both:</strong> Select this multi-role setting to hire talent and accept
+                                freelance work under a single unified account.</li>
+                        </ul>
+                        <div class="image-wrapper" style="padding-top: 0;">
+                            <img src="../assets/images/portal/marketplace/mp-profile.png" alt="Marketplace"
+                                class="demo-img" />
+                        </div>
+
+                        <h4 class="step-subhead">B. Headline</h4>
+                        <ul class="cd-overview-ul">
+                            <li><strong>Field Type:</strong> Single-line text input.</li>
+                            <li><strong>Instructions:</strong> Enter a short, compelling title that highlights your key
+                                skills or primary domain.</li>
+                            <li><strong>Example:</strong> Full-stack developer — Node.js, MySQL, UI design.</li>
+                        </ul>
+                        <div class="image-wrapper" style="padding-top: 0;">
+                            <img src="../assets/images/portal/marketplace/profile-headline.png" alt="Marketplace"
+                                class="demo-img" />
+                        </div>
+
+                        <h4 class="step-subhead">C. About</h4>
+                        <ul class="cd-overview-ul">
+                            <li><strong>Field Type:</strong> Multi-line text area (requires a minimum of 200
+                                characters).</li>
+                            <li><strong>Instructions:</strong> Write a comprehensive overview detailing your background,
+                                strengths, professional accomplishments, and the specific types of work you excel at.
+                            </li>
+                        </ul>
+
+                        <div class="image-wrapper" style="padding-top: 0;">
+                            <img src="../assets/images/portal/marketplace/profile-about.png" alt="Marketplace"
+                                class="demo-img" />
+                        </div>
+
+                        <h4 class="step-subhead">D. Skills</h4>
+                        <ul class="cd-overview-ul">
+                            <li><strong>Field Type:</strong> Interactive tag input field.</li>
+                            <li><strong>Instructions:</strong> Type a skill and press Enter to add it, or select
+                                matching options from the auto-suggested library. Minimum required: 3 skills.</li>
+                        </ul>
+
+                        <div class="image-wrapper" style="padding-top: 0;">
+                            <img src="../assets/images/portal/marketplace/profile-skills.png" alt="Marketplace"
+                                class="demo-img" />
+                        </div>
+
+                        <h4 class="step-subhead">E. Category & Specialties</h4>
+                        <ul class="cd-overview-ul">
+                            <li><strong>Field Type:</strong> Category picker & multi-select tags.</li>
+                            <li><strong>Instructions:</strong> Choose your primary business/technical domain along with
+                                up to 3 sub-specialties to categorize your profile for targeted search indexing.</li>
+                        </ul>
+
+                        <div class="image-wrapper" style="padding-top: 0;">
+                            <img src="../assets/images/portal/marketplace/profile-category.png" alt="Marketplace"
+                                class="demo-img" />
+                        </div>
+
+                        <h4 class="step-subhead">F. Hourly Rate & Pricing Terms</h4>
+                        <p class="cd-overview-p"><strong>Purpose:</strong> Define your standard baseline billing rates
+                            for hourly contracts and default budget expectations for flat-rate projects.</p>
+                        <p class="cd-overview-p" style="margin-top: 20px;"><strong>Key Capabilities:</strong></p>
+                        <ul class="cd-overview-ul">
+                            <li><strong>Base Hourly Rate ($/hr):</strong> Specify your default hourly billing rate shown
+                                on your public profile and pre-filled into job proposals.</li>
+                            <li><strong>Currency Selection:</strong> Set your default operating currency (e.g., USD,
+                                EUR) for all financial contracts.</li>
+                            <li><strong>Minimum Contract Size (Optional):</strong> Define a minimum project threshold
+                                for new clients (e.g., minimum $200 per project).</li>
+                        </ul>
+
+                        <div class="image-wrapper" style="padding-top: 0;">
+                            <img src="../assets/images/portal/marketplace/profile-rates.png" alt="Marketplace"
+                                class="demo-img" />
+                        </div>
+
+                        <h4 class="step-subhead">G. Availability & Weekly Capacity</h4>
+                        <p class="cd-overview-p"><strong>Purpose:</strong> Signal your current workload status to
+                            potential clients so they know if you are open for new commitments.</p>
+                        <p class="cd-overview-p" style="margin-top: 20px;"><strong>Key Options:</strong></p>
+                        <ul class="cd-overview-ul">
+                            <li><strong>As Needed / Open to Offers:</strong> Flexible workload availability.</li>
+                            <li><strong>Part-Time (&lt; 30 hrs/week):</strong> Available for minor maintenance or
+                                advisory roles.</li>
+                            <li><strong>Full-Time (&gt; 30 hrs/week):</strong> Ready for dedicated, high-capacity
+                                project engagement.</li>
+                            <li><strong>Unavailable / Not Accepting Work:</strong> Temporarily hide your profile from
+                                active talent searches.</li>
+                        </ul>
+
+                        <div class="image-wrapper" style="padding-top: 0;">
+                            <img src="../assets/images/portal/marketplace/profile-status.png" alt="Marketplace"
+                                class="demo-img" />
+                        </div>
+
+                        <h4 class="step-subhead">Portfolio & Featured Work</h4>
+                        <p class="cd-overview-p">Provide concrete proof of work to boost credibility when bidding on
+                            client postings.</p>
+
+                        <div class="image-wrapper">
+                            <img src="../assets/images/portal/marketplace/profile-portfolio.png" alt="Marketplace"
+                                class="demo-img" />
+                        </div>
+                    </div>
+
+                    <div class="para-box doc-step-block">
+                        <h3 class="h3">Find Freelancers</h3>
+                        <p class="cd-overview-p">Search and filter talented freelancers available for hire.</p>
+                        <div class="image-wrapper">
+                            <img src="../assets/images/portal/marketplace/find-freelancers.png" alt="Marketplace"
+                                class="demo-img" />
+                        </div>
+                        <p class="cd-overview-p">The Find Freelancers module allows clients to search, filter, and
+                            discover available talent across the platform. You can refine search parameters to match
+                            specific project requirements or sort candidates by relevance.</p>
+
+                        <ul class="cd-overview-ul">
+                            <li><strong>Search Filters Panel:</strong> The left sidebar provides specific criteria
+                                filters</li>
+                            <li><strong>Category:</strong> Dropdown menu to filter freelancers by domain expertise
+                                (e.g., Development, Design).</li>
+                            <li><strong>Skills:</strong> Text field for comma-separated skill keywords (e.g., React,
+                                Node.js).</li>
+                            <li><strong>Hourly rate (USD):</strong> Number fields setting minimum (Min) and maximum
+                                (Max) rates in USD.</li>
+                            <li><strong>Country:</strong> Text input to filter freelancers by geographic location (e.g.,
+                                Canada).</li>
+                            <li><strong>Availability:</strong> Quick-select buttons: Any, Available, or Busy.</li>
+                            <li><strong>Rating:</strong> Rating threshold buttons: Any, 4.5+, 4.0+, or 3.0+.</li>
+                            <li><strong>Talent badge:</strong> Special distinction buttons: Any, Top Rated, or Rising
+                                Talent.</li>
+                            <li><strong>Clear filters:</strong> Reset button at the bottom to restore default filter
+                                settings.</li>
+                        </ul>
+                        <div class="image-wrapper" style="padding-top: 0;">
+                            <img src="../assets/images/portal/marketplace/mp-filter.png" alt="Marketplace"
+                                class="demo-img" />
+                        </div>
+
+                        <h4 class="step-subhead">Freelancer Profile Cards</h4>
+                        <p class="cd-overview-p">Each freelancer is displayed in a dedicated grid card showing key
+                            summary details:</p>
+                        <ul class="cd-overview-ul">
+                            <li><strong>Header:</strong> Displays profile photo, full name, headline/title, and
+                                availability badge (e.g., available).</li>
+                            <li><strong>Badges:</strong> Identifies special platform distinctions such as Rising Talent.
+                            </li>
+                            <li><strong>Ratings & Performance:</strong> Displays average star rating, total review
+                                count, and completed job count (e.g., 5.0 (1), 0 jobs done).
+                                <div class="image-wrapper">
+                                    <img src="../assets/images/portal/marketplace/mp-profile-card.png" alt="Marketplace"
+                                        class="demo-img" />
+                                </div>
+                            </li>
+                            <li><strong>View Profile Button:</strong> Direct link (View profile -&gt;) at the
+                                bottom-right of each card to inspect the full freelancer profile and send job
+                                invitations.
+                                <div class="image-wrapper">
+                                    <img src="../assets/images/portal/marketplace/mp-view-profile.png" alt="Marketplace"
+                                        class="demo-img" />
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="para-box doc-step-block">
+                        <h3 class="h3">Jobs</h3>
+                        <p class="cd-overview-p">Explore open positions and projects listed on the platform.</p>
+                        <div class="image-wrapper">
+                            <img src="../assets/images/portal/marketplace/jobs-overview.png" alt="Marketplace"
+                                class="demo-img" />
+                        </div>
+                        <p class="cd-overview-p">The Jobs section acts as the primary job board on Think4ever, enabling
+                            freelancers to discover open work opportunities and clients to manage their posted listings.
+                        </p>
+
+                        <h4 class="step-subhead">Search & Filtering Toolbar</h4>
+                        <p class="cd-overview-p">Refine open project listings using the quick-filter bar below the
+                            search input:</p>
+                        <div class="image-wrapper">
+                            <img src="../assets/images/portal/marketplace/job-search-filter.png" alt="Marketplace"
+                                class="demo-img" />
+                        </div>
+                        <ul class="cd-overview-ul">
+                            <li><strong>Selector:</strong> Dropdown menu to filter jobs by industry domain (defaults to
+                                All categories).</li>
+                            <li><strong>Budget Type:</strong> Select budget terms: Any budget, Fixed (flat price), or
+                                Hourly (hourly rates).</li>
+                            <li><strong>Experience Level:</strong> Select required expertise levels: Any level, Entry,
+                                Intermediate, or Expert.</li>
+                            <li><strong>Sort Dropdown:</strong> Reorder listings based on publication date or relevance
+                                (defaults to Newest first).</li>
+                            <li><strong>Save Search:</strong> Save your current filter configuration for quick access
+                                during future sessions.</li>
+                        </ul>
+
+                        <h4 class="step-subhead">Job Listing Cards Overview</h4>
+                        <p class="cd-overview-p">Each job posting is presented as a summary card detailing essential
+                            contract requirements:</p>
+                        <div class="image-wrapper">
+                            <img src="../assets/images/portal/marketplace/job-listing-card.png" alt="Marketplace"
+                                class="demo-img" />
+                        </div>
+                        <ul class="cd-overview-ul">
+                            <li><strong>Job Title:</strong> Displayed prominently at the top of the card.</li>
+                            <li><strong>Status Indicator:</strong> Shows current listing availability (e.g., open).</li>
+                            <li><strong>MetaData Row:</strong> Details crucial project metrics including budget/rate,
+                                client name, posting date, skill level, duration, and weekly hourly commitment (e.g.,
+                                Less than 1 month, Less than 30 hrs/week).</li>
+                            <li><strong>Job Description Preview:</strong> A snippet summarizing project goals,
+                                responsibilities, and deliverables.</li>
+                            <li><strong>Skill Tags:</strong> Pill badges highlighting required core competencies and
+                                tools (e.g., Video Editing, Motion Graphics, Scriptwriting, Adobe After Effects).</li>
+                        </ul>
+                    </div>
+
+                    <div class="para-box doc-step-block">
+                        <h3 class="h3">My Proposals</h3>
+                        <p class="cd-overview-p">The My <strong>Proposals</strong> section tracks all submitted job
+                            applications, bids,
+                            and their current contract status. It allows freelancers to monitor their active outreach
+                            and quickly communicate with prospective clients.</p>
+
+                        <div class="image-wrapper">
+                            <img src="../assets/images/portal/marketplace/proposal-overview.png" alt="Marketplace"
+                                class="demo-img" />
+                        </div>
+
+                        <h4 class="step-subhead">Proposal Card Structure</h4>
+                        <p class="cd-overview-p">Each proposal is displayed in a dedicated summary card containing key
+                            submission details:</p>
+                        <ul class="cd-overview-ul">
+                            <li><strong>Job Title:</strong> Displayed prominently at the top left of the card (e.g.,
+                                Software QA tester).</li>
+                            <li><strong>Proposal Metadata:</strong>
+                                <ul class="cd-overview-ul">
+                                    <li><strong>Client / Hiring Manager:</strong> Shows the associated client account
+                                        name.</li>
+                                    <li><strong>Submitted Bid Amount:</strong> Displays the proposed price/rate (e.g.,
+                                        50 USD).</li>
+                                    <li><strong>Submission Time:</strong> Indicates when the proposal was submitted
+                                        (e.g., 17h ago).</li>
+
+                                </ul>
+                            </li>
+                            <li><strong>Cover Letter Preview:</strong> Excerpt showing the initial lines of your
+                                submitted pitch.</li>
+                            <li><strong>Status Badge:</strong> Indicates the current standing of the application
+                                (e.g., contracted).</li>
+                            <li><strong>Message Action Button:</strong> A quick-action Message button to open a
+                                direct chat thread with the client for that project.</li>
+                        </ul>
+
+                        <h4 class="step-subhead">Proposal Status Indicators</h4>
+                        <p class="cd-overview-p">Proposal cards display different status badges to reflect application
+                            progress:</p>
+                        <ul class="cd-overview-ul">
+                            <li><strong>Submitted / Pending:</strong> The proposal has been delivered and is awaiting
+                                client review.</li>
+                            <li><strong>Contracted:</strong> The client has accepted the proposal and established an
+                                active contract.</li>
+                            <li><strong>Declined / Closed:</strong> The application was not selected or the job posting
+                                was canceled.</li>
+                        </ul>
+
+                        <h4 class="step-subhead">Key Actions</h4>
+                        <ul class="cd-overview-ul">
+                            <li><strong>Review Proposal Details:</strong> Click anywhere on the proposal card to view
+                                the full cover letter, terms, and attachments.</li>
+                            <li><strong>Contact Client:</strong> Click the Message button on any card to communicate
+                                directly with the hiring manager regarding project specifics.</li>
+                        </ul>
+                    </div>
+
+                    <div class="para-box doc-step-block">
+                        <h3 class="h3">Active Jobs</h3>
+                        <p class="cd-overview-p">The Active Jobs section displays all currently active client-freelancer
+                            engagements and contracts. It serves as a portal to access collaborative workspaces and
+                            review contract details.</p>
+                        <div class="image-wrapper">
+                            <img src="../assets/images/portal/marketplace/active-jobs.png" alt="Marketplace"
+                                class="demo-img" />
+                        </div>
+
+                        <h4 class="step-subhead">Active Job Card Components</h4>
+                        <p class="cd-overview-p">Each running contract is summarized in a dedicated job card with key
+                            details and quick actions:</p>
+                        <ul class="cd-overview-ul">
+                            <li><strong>Job Title:</strong> The title of the ongoing engagement (e.g., Full-Stack
+                                Developer to Build Custom E-Commerce Dashboard).</li>
+                            <li><strong>Contract Status Badge:</strong> Shows the current operational status at the
+                                top-right (e.g., green Access active badge).</li>
+                            <li><strong>Contract Metadata Row:</strong>
+                                <ul class="cd-overview-ul">
+                                    <li><strong>Client / Manager Name:</strong> Displays the primary supervisor or
+                                        hiring client.</li>
+                                    <li><strong>Contract ID / Reference:</strong> Unique contract identifier code.</li>
+                                    <li><strong>Role / Title Tag:</strong> Assigned platform or project role.</li>
+                                    <li><strong>Access Level:</strong> Workspace permission tier (e.g., Workspace user).
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <ul class="cd-overview-ul">
+                            <li><strong>Quick Actions:</strong> Each active job card includes two primary buttons on the
+                                right side</li>
+                            <li><strong>Enter workspace:</strong> Launches the integrated project environment or server
+                                workspace directly, granting immediate access to project tools, deliverables, and team
+                                collaboration channels.</li>
+                            <li><strong>Details:</strong> Opens the expanded view of the contract terms, milestone
+                                schedules, payment history, and project agreement documents.</li>
+                        </ul>
+
+                        <h4 class="step-subhead">Workflow Guidance for Active Jobs</h4>
+                        <ul class="cd-overview-ul">
+                            <li><strong>Accessing Workspaces:</strong> Click the blue Enter workspace button on any
+                                active job card to jump straight into project channels and tools.</li>
+                            <li><strong>Reviewing Milestones & Terms:</strong> Click Details to check deliverable
+                                deadlines, review contract terms, or inspect payment schedules.</li>
+                        </ul>
+                    </div>
+
+                    <div class="para-box doc-step-block">
+                        <h3 class="h3">Contracts</h3>
+                        <p class="cd-overview-p">The Contracts section provides an overview of all formal agreements
+                            associated with your account. It categorizes agreements by user role (e.g., As client) and
+                            tracks both active and completed engagements.</p>
+                        <div class="image-wrapper">
+                            <img src="../assets/images/portal/marketplace/contract-overview.png" alt="Marketplace"
+                                class="demo-img" />
+                        </div>
+
+                        <h4 class="step-subhead">Section Structure & Role Categorization</h4>
+                        <ul class="cd-overview-ul">
+                            <li><strong>Role Heading:</strong> Contracts are grouped by your active platform role (e.g.,
+                                As client or As freelancer).</li>
+                            <li><strong>Contract Summary Cards:</strong> Each contract entry displays essential
+                                agreement metadata and access permissions:
+                                <ul class="cd-overview-ul">
+                                    <li><strong>Job Title:</strong> The official name of the project or position (e.g.,
+                                        Full-Stack Developer to Build Custom E-Commerce Dashboard, Software QA tester).
+                                    </li>
+                                    <li><strong>Metadata Row:</strong> Displays the contracted user/freelancer name,
+                                        unique contract reference ID, assigned role title, platform version/tier, rate
+                                        structure, and workspace access level (e.g., Workspace user).</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h4 class="step-subhead">Contract & Access Status Indicators</h4>
+                        <p class="cd-overview-p">Each contract card features status badges on the right side indicating
+                            its lifecycle and workspace access level:</p>
+                        <table class="config-table">
+                            <thead>
+                                <tr>
+                                    <th>Status Badge</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>active (Green) / Access active (Green)</strong></td>
+                                    <td>The contract is currently ongoing. The hired freelancer or client has full
+                                        active access to the workspace environment.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>ended (Gray) / Access removed (Gray)</strong></td>
+                                    <td>The project or contract has ended. Access permissions to the workspace
+                                        environment have been revoked.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="step-subhead">Key Actions</h4>
+                        <ul class="cd-overview-ul">
+                            <li><strong>Inspect Contract Details:</strong> Click on any contract card to open full
+                                details, including milestone histories, total payouts/invoices, and agreement
+                                agreements.</li>
+                            <li><strong>Review Workspace Access:</strong> Monitor whether workspace access is currently
+                                enabled or revoked for specific team members or freelancers.</li>
+                        </ul>
+                    </div>
+
+                    <div class="para-box doc-step-block">
+                        <h3 class="h3">Contract Details View</h3>
+                        <p class="cd-overview-p">Clicking on any contract card opens the Contract Details Modal,
+                            providing a comprehensive breakdown of agreement specifications, active timelines,
+                            participants, and management actions.</p>
+
+                        <div class="image-wrapper">
+                            <img src="../assets/images/portal/marketplace/contract-card-view.png" alt="Marketplace"
+                                class="demo-img" />
+                        </div>
+
+                        <h4 class="step-subhead">Contract Overview Information</h4>
+                        <p class="cd-overview-p">The top section of the modal highlights the project title alongside
+                            live status tags:</p>
+                        <ul class="cd-overview-ul">
+                            <li><strong>Project Title:</strong> Prominently displays the full job title (e.g.,
+                                Full-Stack Developer to Build Custom E-Commerce Dashboard).</li>
+                            <li><strong>Status Badges:</strong> Displays current operational states (e.g., green active
+                                and Access active badges).</li>
+                        </ul>
+
+                        <h4 class="step-subhead">Action Buttons</h4>
+                        <p class="cd-overview-p">At the bottom of the modal, three primary management actions are
+                            available:</p>
+                        <ul class="cd-overview-ul">
+                            <li><strong>Message:</strong> Opens a direct chat window with the user to communicate about
+                                contract milestones or deliverables.</li>
+                            <li><strong>End contract:</strong> Initiates the formal contract termination workflow,
+                                finalizing payments and revoking server access permissions.</li>
+                            <li><strong>Report a problem:</strong> Opens a dispute or support ticket to request platform
+                                assistance regarding contract issues.</li>
+                        </ul>
+                    </div>
+
+                    <div class="para-box doc-step-block">
+                        <h3 class="h3">Messages</h3>
+                        <p class="cd-overview-p">The Messages section provides a real-time messaging hub for direct
+                            communication between clients and freelancers regarding project proposals, active contracts,
+                            and deliverables.</p>
+
+                        <div class="image-wrapper">
+                            <img src="../assets/images/portal/marketplace/mp-msg.png" alt="Marketplace"
+                                class="demo-img" />
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <div id="docFooter"></div>
+    <script src="../assets/js/navigation.js"></script>
+    <script src="../assets/js/consumer_docs_home.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (window.I18n) {
+                window.I18n.init();
+            }
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+
+</html>
