@@ -30,25 +30,29 @@
             aria-hidden="true"></i>
           <span data-i18n="dev_sidebar.dashboard">Dashboard</span></a>
       </li>
-      <li>
-        <a class="cgs-nav-link" onclick="load_page('manual_create_project')"><i class="fa-solid fa-folder-plus"
-            aria-hidden="true"></i>
-          <span data-i18n="dev_sidebar.create_project">Create a new Project</span></a>
-      </li>
-      <li>
-        <a class="cgs-nav-link" onclick="load_page('manual_analyze_code')"><i class="fa-solid fa-magnifying-glass-chart"
-            aria-hidden="true"></i>
-          <span>Analyze Existing Code</span></a>
-      </li>
-      <li>
-        <a class="cgs-nav-link" onclick="load_page('manual_production_hardening')"><i class="fa-solid fa-shield-halved"
-            aria-hidden="true"></i>
-          <span>Production Hardening</span></a>
-      </li>
-      <li>
-        <a class="cgs-nav-link" onclick="load_page('manual_design_from_intent')"><i class="fa-solid fa-pen-ruler"
-            aria-hidden="true"></i>
-          <span>Design from Intent</span></a>
+      <li class="accordion-parent">
+        <a class="cgs-nav-link accordion-trigger" onclick="load_page('manual_create_project')">
+          <i class="fa-solid fa-folder-plus" aria-hidden="true"></i>
+          <span data-i18n="dev_sidebar.create_project">Create a new Project</span>
+          <i class="fa-solid fa-chevron-down accordion-icon" style="margin-left: auto; font-size: 0.8em; transition: transform 0.3s;"></i>
+        </a>
+        <ul class="accordion-menu">
+          <li>
+            <a class="cgs-nav-link" onclick="load_page('manual_analyze_code')">
+              <span>Analyze Existing Code</span>
+            </a>
+          </li>
+          <li>
+            <a class="cgs-nav-link" onclick="load_page('manual_production_hardening')">
+              <span>Production Hardening</span>
+            </a>
+          </li>
+          <li>
+            <a class="cgs-nav-link" onclick="load_page('manual_design_from_intent')">
+              <span>Design from Intent</span>
+            </a>
+          </li>
+        </ul>
       </li>
     </ul>
     <p class="cgs-nav-section-label" data-i18n="dev_sidebar.getting_started">

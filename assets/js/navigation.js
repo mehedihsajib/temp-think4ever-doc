@@ -529,7 +529,10 @@ function setSidebarActive(container, activePage) {
         ? hrefFile.replace(".html", "")
         : "";
 
-      if ((page && page === currentPage) || (hrefPage && hrefPage === currentPage)) {
+      if (
+        (page && page === currentPage) ||
+        (hrefPage && hrefPage === currentPage)
+      ) {
         link.classList.add("active");
         const accParent = link.closest(".accordion-parent");
         if (accParent) {
@@ -566,7 +569,10 @@ function getActiveSidebarLink() {
       : "";
     const currentPage = currentFile.replace(".html", "");
 
-    if ((page && page === currentPage) || (hrefPage && hrefPage === currentPage)) {
+    if (
+      (page && page === currentPage) ||
+      (hrefPage && hrefPage === currentPage)
+    ) {
       link.classList.add("active");
       return link;
     }
