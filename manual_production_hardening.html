@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Think4Ever Platform - Create a New Project</title>
+  <title>Think4Ever Platform - Production Hardening</title>
   <link href="css/theme.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/global.css" />
@@ -294,30 +294,126 @@
       <!-- Main Content -->
       <main class="cd-main-content" id="cd-main">
         <!-- Page Title -->
-        <h1 class="cd-page-title" id="cdHomeTitle" data-i18n="dev_create_project.title">
-          Create a New Project
+        <h1 class="cd-page-title" id="cdHomeTitle">Production Hardening</h1>
         </h1>
 
         <!-- Overview Section -->
         <section class="cd-overview" id="cdHomeOverview">
-          <p class="cd-overview-p">Creating a project has never been this easy with Think4ever. On this page, you will
-            be able to see different options to create or start your project:</p>
+          <div class="para-box doc-step-block">
+            <p class="cd-overview-p">The Production Hardening automatically evaluates your codebase against a
+              comprehensive production-readiness checklist. Reviewer agents scan your project structure and source files
+              in real time, allowing you to monitor progress live or safely navigate away while the review runs in the
+              background.</p>
+
+            <ul class="cd-overview-ul">
+              <li><strong>Category:</strong> Code →Production Ready</li>
+              <li><strong>Best For:</strong> Teams preparing to deploy applications to production or conducting security
+                and compliance audits.</li>
+              <li><strong>Function:</strong> Imports your codebase and maps the system architecture, then deploys
+                reviewer agents to audit against key production readiness domains (including security, configuration,
+                reliability, data management, and observability).</li>
+              <li><strong>Action:</strong> Click Harden a project →to proceed.</li>
+            </ul>
+            <div class="image-wrapper img-sm">
+              <img src="assets/images/create-project/product-hardening-1.png" alt="Create Project" class="demo-img">
+            </div>
+            <p class="cd-overview-p">The Production Hardening screen allows you to import your codebase into the
+              platform. Once imported, the system maps your architecture and automatically executes a
+              <strong>production-readiness review</strong>.
+            </p>
+            <div class="image-wrapper">
+              <img src="assets/images/create-project/product-hardening-2.png" alt="Create Project" class="demo-img">
+            </div>
+          </div>
 
           <div class="para-box doc-step-block">
-            <h3 class="h3">Project Initialization Options</h3>
-            <p class="cd-overview-p">Select the path that matches your current development state to establish a useful
-              system view:</p>
+            <h3 class="h3">Import Options</h3>
+            <p class="cd-overview-p">Select one of the three available methods to bring in your source code:</p>
             <ul class="cd-overview-ul">
-              <li><strong>Analyze Existing Code:</strong> Import an existing repository or local codebase to
-                automatically generate an interactive, reviewable architecture map.</li>
-              <li><strong>Production Hardening:</strong> Import code to run automated reviewer agent audits across
-                security, config, and system reliability checklists.</li>
-              <li><strong>Design from Intent:</strong> Define functional constraints, system invariants, and
-                architectural diagrams before writing any code.</li>
+              <li><strong>Upload a ZIP (Local Project):</strong> Upload an archived file directly from your local
+                machine without authenticating or connecting a source-control account. Click Choose a file → to select a
+                compressed .zip archive.
+                <div class="image-wrapper">
+                  <img src="assets/images/create-project/ph-upload-as-zip.png" alt="Create Project" class="demo-img">
+                </div>
+              </li>
+              <li><strong>Public GitHub URL (Public Repository):</strong> Paste a link to any public repository, and the
+                system will download a snapshot of your designated branch. Click Import from GitHub → to proceed.
+                <div class="image-wrapper">
+                  <img src="assets/images/create-project/ph-github-url.png" alt="Create Project" class="demo-img">
+                </div>
+              </li>
+              <li><strong>Connect a repository (Version Control):</strong> Authorize private or public repositories
+                using account credentials. Click Connect → to link repositories hosted on GitHub, GitLab, Bitbucket,
+                Git, or SVN.
+                <div class="image-wrapper">
+                  <img src="assets/images/create-project/ph-connect-git-repo.png" alt="Create Project" class="demo-img">
+                </div>
+              </li>
             </ul>
-            <div class="image-wrapper">
-              <img src="assets/images/create-project/create-project-options.png" alt="Create Project" class="demo-img">
-            </div>
+          </div>
+
+          <div class="para-box doc-step-block">
+            <h3 class="h3">Step by step process</h3>
+            <ul class="cd-overview-ul" style="list-style-type: none; padding-left: 0;">
+              <li><strong>Step 1:</strong> Select your preferred import method and complete the upload or authorization
+                prompt.
+                <div class="image-wrapper">
+                  <img src="assets/images/create-project/step-1.png" alt="Create Project" class="demo-img">
+                </div>
+              </li>
+              <li><strong>Step 2:</strong> Upload the file to be imported.
+                <div class="image-wrapper">
+                  <img src="assets/images/create-project/step-2.png" alt="Create Project" class="demo-img">
+                </div>
+              </li>
+              <li><strong>Step 3:</strong> Analysis of the codebase will begin
+                <div class="image-wrapper">
+                  <img src="assets/images/create-project/step-3.png" alt="Create Project" class="demo-img">
+                </div>
+              </li>
+              <li><strong>Step 4:</strong> System will build the concept from the uploaded codebase
+                <div class="image-wrapper">
+                  <img src="assets/images/create-project/step-4.png" alt="Create Project" class="demo-img">
+                </div>
+              </li>
+              <li><strong>Step 5:</strong> Once codebase concept is built, the production hardening process will start
+                by reviewing your existing codebase.
+                <div class="image-wrapper">
+                  <img src="assets/images/create-project/step-5.png" alt="Create Project" class="demo-img">
+                </div>
+              </li>
+              <li><strong>Step 6:</strong> View the overall readiness summary, showing the exact percentage of
+                completion and passed checks across all categories.
+                <div class="image-wrapper">
+                  <img src="assets/images/create-project/step-6.png" alt="Create Project" class="demo-img">
+                </div>
+              </li>
+              <li><strong>Step 7:</strong> The system will give you the option to Fix Findings, tap the button to start
+                fixing the issues. Or you can also click on Run again button to re-run the analysis of your codebase.
+                <div class="image-wrapper">
+                  <img src="assets/images/create-project/step-7.png" alt="Create Project" class="demo-img">
+                </div>
+              </li>
+              <li><strong>Step 8:</strong> Click on Fix Findings - then choose which agent to use.
+                <div class="image-wrapper">
+                  <img src="assets/images/create-project/step-8.png" alt="Create Project" class="demo-img">
+                </div>
+              </li>
+              <li><strong>Step 9:</strong> Wait for the system to fix each issues one by one.
+                <div class="image-wrapper">
+                  <img src="assets/images/create-project/step-9.png" alt="Create Project" class="demo-img">
+                </div>
+              </li>
+              <li><strong>Step 10:</strong> As the system addresses each issue, it will prompt proposed fixes or planned
+                changes; you need to confirm the changes before the system can proceed further.
+                <div class="image-wrapper">
+                  <img src="assets/images/create-project/step-10.png" alt="Create Project" class="demo-img">
+                </div>
+              </li>
+            </ul>
+            <p class="cd-overview-p">Once all the fixes are done, you can continue generating UI screens and bulding the
+              app.</p>
           </div>
 
         </section>

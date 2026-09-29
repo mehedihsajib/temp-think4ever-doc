@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Think4Ever Platform - Create a New Project</title>
+  <title>Think4Ever Platform - Analyze Existing Code</title>
   <link href="css/theme.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/global.css" />
@@ -294,30 +294,97 @@
       <!-- Main Content -->
       <main class="cd-main-content" id="cd-main">
         <!-- Page Title -->
-        <h1 class="cd-page-title" id="cdHomeTitle" data-i18n="dev_create_project.title">
-          Create a New Project
+        <h1 class="cd-page-title" id="cdHomeTitle">Analyze Existing Code</h1>
         </h1>
 
         <!-- Overview Section -->
         <section class="cd-overview" id="cdHomeOverview">
-          <p class="cd-overview-p">Creating a project has never been this easy with Think4ever. On this page, you will
-            be able to see different options to create or start your project:</p>
+          <div class="para-box doc-step-block">
+            <ul class="cd-overview-ul">
+              <li><strong>Category:</strong> Code →Understanding</li>
+              <li><strong>Best For:</strong> Developers or team leads taking over an existing codebase or needing
+                high-level system architectural visualization.</li>
+              <li><strong>Function:</strong> Automatically parses your existing repository to generate a visual,
+                reviewable map of system components and dependencies.</li>
+              <li><strong>Action:</strong> Click Analyze a project → to proceed.</li>
+            </ul>
+            <div class="image-wrapper img-sm">
+              <img src="assets/images/create-project/analyze-existing-code.png" alt="Create Project" class="demo-img">
+            </div>
+            <p class="cd-overview-p">After selecting Analyze existing code from the onboarding menu, you are prompted to
+              choose your preferred method for importing source code into Think4ever. The system will automatically
+              ingest the codebase and build a visual map of the system architecture.</p>
+
+            <div class="image-wrapper">
+              <img src="assets/images/create-project/project-import-options.png" alt="Create Project" class="demo-img">
+            </div>
+          </div>
 
           <div class="para-box doc-step-block">
-            <h3 class="h3">Project Initialization Options</h3>
-            <p class="cd-overview-p">Select the path that matches your current development state to establish a useful
-              system view:</p>
+            <h3 class="h3">Source Code Import Methods</h3>
+            <p class="cd-overview-p">Select one of three methods to bring your application code into the workspace:</p>
+
+            <h4 class="step-subhead">Method A: Local Project (Upload a ZIP)</h4>
             <ul class="cd-overview-ul">
-              <li><strong>Analyze Existing Code:</strong> Import an existing repository or local codebase to
-                automatically generate an interactive, reviewable architecture map.</li>
-              <li><strong>Production Hardening:</strong> Import code to run automated reviewer agent audits across
-                security, config, and system reliability checklists.</li>
-              <li><strong>Design from Intent:</strong> Define functional constraints, system invariants, and
-                architectural diagrams before writing any code.</li>
+              <li><strong>Category:</strong> LOCAL PROJECT</li>
+              <li><strong>Description:</strong> Upload a local archive (.zip) containing your project files directly
+                from your computer.</li>
+              <li><strong>Best Used For:</strong> Quick evaluations, offline codebases, or testing projects without
+                linking a version control account.</li>
+              <li><strong>Action:</strong> Click Choose a file -> to launch the file picker and select your .zip
+                archive.</li>
+            </ul>
+
+            <div class="image-wrapper">
+              <img src="assets/images/create-project/upload-as-zip.png" alt="Create Project" class="demo-img">
+            </div>
+
+            <h4 class="step-subhead">Method B: Public Repository (Public GitHub URL)</h4>
+            <ul class="cd-overview-ul">
+              <li><strong>Category:</strong> PUBLIC REPOSITORY</li>
+              <li><strong>Description:</strong> Paste a URL to any publicly accessible GitHub repository. Think4ever
+                downloads a snapshot of the selected repository branch for analysis.</li>
+              <li><strong>Best Used For:</strong> Analyzing open-source libraries, public frameworks, or accessible team
+                repositories without authentication.</li>
+              <li><strong>Action:</strong> Click Import from GitHub -> to enter the repository URL and target branch
+                name.</li>
+            </ul>
+
+            <div class="image-wrapper">
+              <img src="assets/images/create-project/import-from-github.png" alt="Create Project" class="demo-img">
+            </div>
+
+            <h4 class="step-subhead">Method C: Version Control (Connect a Repository)</h4>
+            <ul class="cd-overview-ul">
+              <li><strong>Category:</strong> VERSION CONTROL</li>
+              <li><strong>Description:</strong> Authenticate using provider credentials to import private or
+                organizational repositories.</li>
+              <li><strong>Supported Integrations:</strong> GitHub, GitLab, Bitbucket, Git, and SVN.</li>
+              <li><strong>Best Used For:</strong> Enterprise projects, private repositories, and continuous architecture
+                mapping directly tied to your source control.</li>
+              <li><strong>Action:</strong> Click Connect -> to authorize your version control provider.</li>
             </ul>
             <div class="image-wrapper">
-              <img src="assets/images/create-project/create-project-options.png" alt="Create Project" class="demo-img">
+              <img src="assets/images/create-project/connect-git-repo.png" alt="Create Project" class="demo-img">
             </div>
+          </div>
+
+          <div class="para-box doc-step-block">
+            <h3 class="h3">Step-by-Step Instructions</h3>
+            <p class="cd-overview-p">On the Choose your fastest path to value screen, review the three import options.
+            </p>
+            <p class="cd-overview-p">Choose your preferred import path:</p>
+            <ul class="cd-overview-ul">
+              <li><strong>ZIP Upload:</strong> Click Choose a file -> and select your project's .zip file.</li>
+              <li><strong>Public URL:</strong> Click Import from GitHub ->, paste the repository link, and click
+                confirm.</li>
+              <li><strong>Git Integration:</strong> Click Connect ->, authorize your Git provider, and select your
+                repository from the drop-down menu.</li>
+            </ul>
+            <p class="cd-overview-p">Click Back at any point if you need to return to Step 1 and change your onboarding
+              path.</p>
+            <p class="cd-overview-p">Once submitted, the system will begin parsing your files and generating your
+              interactive system view.</p>
           </div>
 
         </section>
