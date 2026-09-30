@@ -4244,7 +4244,7 @@ body {
 }
 
 .cgs-toc-link.active {
-  color: var(--color-orange) !important;
+  color: var(--color-blue) !important;
   border-left-color: #3b82f6 !important;
   font-weight: 500 !important;
 }
