@@ -34,7 +34,8 @@
 
 
   /* New theme */
-  --color-blue: #093cad;
+  --color-blue: #1D63E0;
+  --color-blue-header: #093cad;
   --color-deep-blue: #3A5690;
   --color-orange: #FF7A1A;
   --color-ink: #0B1B3A;
@@ -3553,7 +3554,7 @@ body {
   left: 0;
   right: 0;
   height: 74px !important;
-  background: var(--color-blue) !important;
+  background: var(--color-blue-header) !important;
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   border-bottom: 1px solid #e2e8f0;
@@ -4161,7 +4162,7 @@ body {
 }
 
 .cgs-nav-list li a.active {
-  color: var(--color-orange) !important;
+  color: var(--color-blue) !important;
   /* Blue text */
   font-weight: 500 !important;
   /* Semi-bold for active */
@@ -4865,7 +4866,7 @@ main.cd-main-content {
 }
 
 .modern-breadcrumb .current {
-  color: var(--color-orange);
+  color: var(--color-blue);
   /* dark slate */
   font-weight: var(--font-semibold);
 }
