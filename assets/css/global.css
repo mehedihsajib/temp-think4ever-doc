@@ -2,7 +2,7 @@
    MPay Network Wallet Documentation Site
    Global CSS Stylesheet
    ============================================ */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 /* === CSS CUSTOM PROPERTIES === */
 :root {
@@ -10,7 +10,6 @@
   --color-primary: #2563eb;
   --color-secondary: #3b82f6;
   --color-accent: #60a5fa;
-  --color-orange: #e25d24;
   --lp-text: #1f2937;
   --color-text-dark: #0f172a;
   --color-background: #ffffff;
@@ -33,9 +32,18 @@
   --color-code-text: #e2e8f0;
   --color-highlight: #fef3c7;
 
+
+  /* New theme */
+  --color-blue: #093cad;
+  --color-deep-blue: #3A5690;
+  --color-orange: #FF7A1A;
+  --color-ink: #0B1B3A;
+  --color-fog: #F4F6FA;
+  --color-sky: #B7CCF4;
+
   /* Typography */
-  --font-primary: 'Inter', sans-serif;
-  --font-heading: 'Inter', sans-serif;
+  --font-primary: "DM Sans", sans-serif;
+  --font-heading: "DM Sans", sans-serif;
   --font-mono:
     "JetBrains Mono", "Fira Code", "Cascadia Code", "Consolas", monospace;
 
@@ -246,7 +254,7 @@ hr {
 }
 
 /* === IMPORT FONTS === */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
 /* === TYPOGRAPHY === */
 h1 {
@@ -3539,13 +3547,13 @@ body {
 
 /* Premium Modern Header Styles */
 .modern-header {
-  font-family: "Inter", sans-serif;
+  font-family: "DM Sans", sans-serif;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 64px;
-  background: rgba(255, 255, 255, 0.85);
+  height: 74px !important;
+  background: var(--color-blue) !important;
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   border-bottom: 1px solid #e2e8f0;
@@ -3644,7 +3652,7 @@ body {
 
 .modern-nav-group-trigger .fa-chevron-down {
   font-size: 10px;
-  color: #093cad;
+  color: var(--color-fog);
 }
 
 .modern-nav-group-trigger:hover,
@@ -3674,7 +3682,7 @@ body {
 .modern-nav a {
   font-size: 15px;
   font-weight: 500;
-  color: #64748b;
+  color: rgba(255, 255, 255, .8);
   /* Lighter color for non-active */
   cursor: pointer;
   text-decoration: none;
@@ -3687,7 +3695,7 @@ body {
 }
 
 .modern-nav a:hover {
-  color: #0f172a;
+  color: #fff;
 }
 
 .modern-nav-group-menu a {
@@ -3774,7 +3782,7 @@ body {
   background-color: #f1f5f9;
   border: 1px solid transparent;
   border-radius: 8px;
-  font-family: "Inter", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.875rem;
   color: #64748b;
   cursor: pointer;
@@ -3823,7 +3831,7 @@ body {
   color: #ffffff;
   border: 1px solid #3b82f6 !important;
   border-radius: 8px;
-  font-family: "Inter", sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   cursor: pointer;
@@ -4080,7 +4088,7 @@ body {
 }
 
 .cgs-nav-section-label {
-  font-family: "Inter", sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
   font-size: 0.8125rem !important;
   font-weight: 500 !important;
   color: #0f172a !important;
@@ -4110,7 +4118,7 @@ body {
 
 .cgs-nav-list li a {
   padding: 6px 16px !important;
-  font-family: "Inter", sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
   font-size: 0.875rem !important;
   color: #64748b !important;
   /* Light slate text */
@@ -4153,7 +4161,7 @@ body {
 }
 
 .cgs-nav-list li a.active {
-  color: var(--color-primary) !important;
+  color: var(--color-orange) !important;
   /* Blue text */
   font-weight: 500 !important;
   /* Semi-bold for active */
@@ -4202,7 +4210,7 @@ body {
 }
 
 .cgs-toc-title {
-  font-family: "Inter", sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
   font-size: 0.875rem !important;
   color: #0f172a !important;
   margin: 0 0 16px 0 !important;
@@ -4219,7 +4227,7 @@ body {
 }
 
 .cgs-toc-link {
-  font-family: "Inter", sans-serif !important;
+  font-family: "DM Sans", sans-serif !important;
   font-size: 0.8125rem !important;
   color: #64748b;
   padding: 6px 0 6px 16px !important;
@@ -4235,7 +4243,7 @@ body {
 }
 
 .cgs-toc-link.active {
-  color: #3b82f6 !important;
+  color: var(--color-orange) !important;
   border-left-color: #3b82f6 !important;
   font-weight: 500 !important;
 }
@@ -4491,7 +4499,7 @@ body {
 }
 
 .lang-switcher button {
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.8rem;
   font-weight: 500;
   padding: 4px 10px;
@@ -4533,7 +4541,7 @@ body {
   border: 1px solid transparent;
   border-radius: 8px;
   padding: 6px 12px;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   color: #64748b;
@@ -4592,7 +4600,7 @@ body {
   border: none;
   border-radius: 6px;
   padding: 8px 12px;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.875rem;
   color: #475569;
   cursor: pointer;
@@ -4857,7 +4865,7 @@ main.cd-main-content {
 }
 
 .modern-breadcrumb .current {
-  color: var(--color-text);
+  color: var(--color-orange);
   /* dark slate */
   font-weight: var(--font-semibold);
 }

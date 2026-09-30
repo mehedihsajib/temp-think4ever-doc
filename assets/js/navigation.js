@@ -77,11 +77,21 @@ function ensureGlobalFavicon() {
   );
   if (existing) return;
 
-  const link = document.createElement("link");
-  link.rel = "icon";
-  link.type = "image/png";
-  link.href = toBasePath("assets/images/favicon.png");
-  document.head.appendChild(link);
+  const favicons = [
+    { rel: "apple-touch-icon", sizes: "180x180", href: "assets/images/apple-touch-icon.png" },
+    { rel: "icon", type: "image/png", sizes: "32x32", href: "assets/images/favicon-32x32.png" },
+    { rel: "icon", type: "image/png", sizes: "16x16", href: "assets/images/favicon-16x16.png" },
+    { rel: "shortcut icon", href: "assets/images/favicon.ico" }
+  ];
+
+  favicons.forEach(favicon => {
+    const link = document.createElement("link");
+    link.rel = favicon.rel;
+    if (favicon.type) link.type = favicon.type;
+    if (favicon.sizes) link.sizes = favicon.sizes;
+    link.href = toBasePath(favicon.href);
+    document.head.appendChild(link);
+  });
 }
 
 // ===============================

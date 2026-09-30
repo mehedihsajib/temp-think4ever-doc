@@ -20,7 +20,7 @@
 }
 
 .t4e-logo-img {
-    height: 40px;
+    height: 60px;
     width: auto;
     border-radius: 0;
     display: block;
@@ -84,7 +84,7 @@
     border: none;
     font-size: 15px;
     font-weight: 500;
-    color: #64748b;
+    color: rgba(255, 255, 255, .8);
     cursor: pointer;
     transition: color 0.15s ease;
     white-space: nowrap;
@@ -92,7 +92,7 @@
 
 .t4e-nav-trigger i {
     font-size: 10px;
-    color: #2563eb;
+    color: var(--color-fog) !important;
     transition: transform 0.2s ease;
 }
 
@@ -104,7 +104,7 @@
 .t4e-nav-group.open .t4e-nav-trigger,
 .t4e-nav-trigger:hover,
 .t4e-nav-group:hover .t4e-nav-trigger {
-    color: #0f172a;
+    color: var(--color-fog);
 }
 
 .t4e-nav-group {
@@ -283,15 +283,16 @@
 .t4e-btn-ghost {
     font-size: 14px;
     font-weight: 500;
-    color: #0f172a;
+    color: #fff;
     text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 6px;
+    padding: 10px 25px;
+    border-radius: 100px;
     transition: background-color 0.15s ease;
 }
 
 .t4e-btn-ghost:hover {
-    background: #f1f5f9;
+    background: #2750B6;
+    
 }
 
 .t4e-cta {
@@ -301,18 +302,17 @@
     justify-content: center;
     padding: 10px 25px;
     border-radius: 50px;
-    background: #093cad;
-    color: #ffffff;
-    font-weight: 500;
+    background: var(--color-fog);
+    color: var(--color-blue);
+    font-weight: 600;
     text-decoration: none;
     box-shadow: 0 4px 6px -1px rgba(9, 60, 173, 0.25);
-    transition: filter 0.15s ease, transform 0.15s ease;
+    transition: background .3s ease;
     white-space: nowrap;
 }
 
 .t4e-cta:hover {
-    filter: brightness(0.95);
-    background: rgba(9, 60, 173, 0.9);
+    background: #F3F4F6;
 }
 
 .modern-mobile-menu-toggle {

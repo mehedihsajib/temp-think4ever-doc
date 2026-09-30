@@ -170,7 +170,7 @@ body {
 }
 
 .onboarding-nav-item.active .nav-item-title {
-    color: var(--primary);
+    color: var(--color-orange);
 }
 
 .onboarding-nav-item.active .material-symbols-outlined {
