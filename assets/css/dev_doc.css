@@ -7,7 +7,7 @@ body {
 
 /* Premium Modern Header Styles */
 .modern-header {
-    font-family: "Inter", sans-serif;
+    font-family: "DM Sans", sans-serif;
     position: fixed;
     top: 0;
     left: 0;
@@ -81,7 +81,7 @@ body {
     background-color: #f4f4f5;
     border: 1px solid transparent;
     border-radius: 8px;
-    font-family: "Inter", sans-serif;
+    font-family: "DM Sans", sans-serif;
     font-size: 0.875rem;
     color: #71717a;
     cursor: pointer;
@@ -133,7 +133,7 @@ body {
     color: #ffffff;
     border: 1px solid #000;
     border-radius: 8px;
-    font-family: "Inter", sans-serif;
+    font-family: "DM Sans", sans-serif;
     font-size: 0.875rem;
     font-weight: 500;
     cursor: pointer;
@@ -194,7 +194,7 @@ body {
 .cd-sidebar-header h3 {
     color: #0f172a !important;
     /* Slate 900 */
-    font-family: "Inter", sans-serif !important;
+    font-family: "DM Sans", sans-serif !important;
     font-size: 0.9375rem !important;
     font-weight: 600 !important;
     letter-spacing: -0.01em !important;
@@ -215,7 +215,7 @@ body {
 }
 
 .cd-sidebar-section-label {
-    font-family: "Inter", sans-serif !important;
+    font-family: "DM Sans", sans-serif !important;
     font-size: 0.725rem !important;
     font-weight: 600 !important;
     color: #64748b !important;
@@ -233,7 +233,7 @@ body {
 
 .cd-sidebar-nav li a {
     padding: 8px 12px !important;
-    font-family: "Inter", sans-serif !important;
+    font-family: "DM Sans", sans-serif !important;
     font-size: 0.875rem !important;
     color: #475569 !important;
     /* Slate 600 */
@@ -615,7 +615,7 @@ main.cd-main-content {
 }
 
 .step-caption {
-    font-family: 'Inter', sans-serif;
+    font-family: "DM Sans", sans-serif;
     font-size: 0.95rem;
     font-weight: 500;
     color: #334155;
@@ -625,7 +625,7 @@ main.cd-main-content {
 }
 
 .step-subhead {
-    font-family: 'Inter', sans-serif;
+    font-family: "DM Sans", sans-serif;
     font-size: 1.05rem;
     font-weight: 700;
     color: #0f172a;
@@ -643,7 +643,7 @@ main.cd-main-content {
     font-weight: 700;
     margin-top: 36px;
     margin-bottom: 16px;
-    font-family: 'Inter', sans-serif;
+    font-family: "DM Sans", sans-serif;
 }
 
 .image-wrapper {
@@ -690,7 +690,7 @@ main.cd-main-content {
 }
 
 .cd-overview-ul > li {
-    font-family: 'Inter', sans-serif;
+    font-family: "DM Sans", sans-serif;
     font-size: 0.95rem;
     line-height: 1.6;
     color: #334155;
@@ -710,7 +710,7 @@ main.cd-main-content {
 }
 
 .cd-overview-ol > li {
-    font-family: 'Inter', sans-serif;
+    font-family: "DM Sans", sans-serif;
     font-size: 0.95rem;
     line-height: 1.6;
     color: #334155;
@@ -730,7 +730,7 @@ main.cd-main-content {
 }
 
 .sub-list > li {
-    font-family: 'Inter', sans-serif;
+    font-family: "DM Sans", sans-serif;
     font-size: 0.9rem;
     line-height: 1.5;
     color: #475569;

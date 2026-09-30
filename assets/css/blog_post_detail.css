@@ -262,7 +262,7 @@
 
 /* Post Content */
 .bpd-post-content {
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 1rem;
   line-height: 1.75;
   color: #334155;
@@ -686,7 +686,7 @@
   border: 1px solid #bfdbfe;
   border-radius: 8px;
   font-size: 1rem;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   color: #334155;
   background: white;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
@@ -772,7 +772,7 @@
   border-radius: 8px;
   font-size: 1rem;
   font-weight: 600;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   cursor: pointer;
   transition: all 0.15s ease;
   margin-top: 8px;

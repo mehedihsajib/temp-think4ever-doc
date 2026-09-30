@@ -226,7 +226,7 @@
 }
 
 .not-found-message {
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 1.0625rem;
   color: #64748b;
   line-height: 1.625;
@@ -257,7 +257,7 @@
 .not-found-search-input {
   width: 100%;
   padding: 14px 48px 14px 44px;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 1rem;
   color: #334155;
   background: #ffffff;
@@ -325,7 +325,7 @@
   align-items: center;
   gap: 8px;
   padding: 12px 28px;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   color: #ffffff;
@@ -360,7 +360,7 @@
 }
 
 .not-found-links-label {
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -421,14 +421,14 @@
 }
 
 .not-found-link-card-title {
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   color: #1e3a8a;
 }
 
 .not-found-link-card-desc {
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.75rem;
   color: #64748b;
   line-height: 1.4;
@@ -450,7 +450,7 @@
 }
 
 .not-found-footer-text {
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.8125rem;
   color: #64748b;
 }
@@ -461,7 +461,7 @@
 }
 
 .not-found-footer-links a {
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.8125rem;
   color: #64748b;
   text-decoration: none;

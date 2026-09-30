@@ -74,7 +74,7 @@
   cursor: pointer;
   background: none;
   border: none;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 .header-nav-link:hover {
@@ -261,7 +261,7 @@
   font-weight: 600;
   color: #334155;
   margin-bottom: 8px;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 .form-label .required {
@@ -280,7 +280,7 @@
 .form-select,
 .form-textarea {
   width: 100%;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 1rem;
   color: #334155;
   background: #fff;
@@ -567,7 +567,7 @@
   gap: 8px;
   background: var(--color-primary, #2563eb);
   color: #fff;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   padding: 12px 28px;
@@ -639,7 +639,7 @@
   gap: 8px;
   background: var(--color-surface, #eff6ff);
   color: var(--color-primary, #2563eb);
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   padding: 10px 20px;

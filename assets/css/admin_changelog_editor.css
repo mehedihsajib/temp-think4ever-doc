@@ -242,7 +242,7 @@
   cursor: pointer;
   border: none;
   transition: all 0.15s ease;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   line-height: 1.5;
   white-space: nowrap;
 }
@@ -412,7 +412,7 @@
   font-size: 0.875rem;
   color: #334155;
   width: 100%;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 .filter-bar .search-box input::placeholder {
@@ -427,7 +427,7 @@
   color: #334155;
   background: #f8fafc;
   cursor: pointer;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 .filter-select:focus {
@@ -858,7 +858,7 @@
   font-size: 0.875rem;
   color: #334155;
   background: #ffffff;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   transition: all 0.15s ease;
   box-sizing: border-box;
 }

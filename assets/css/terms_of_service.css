@@ -74,7 +74,7 @@
   cursor: pointer;
   background: none;
   border: none;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 .tos-header-nav-link:hover {
@@ -114,7 +114,7 @@
   cursor: pointer;
   background: none;
   border: none;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.875rem;
   padding: 0;
   transition: color 150ms ease;
@@ -369,7 +369,7 @@
   align-items: center;
   gap: 8px;
   padding: 10px 20px;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   color: #ffffff;
@@ -402,7 +402,7 @@
   align-items: center;
   gap: 8px;
   padding: 10px 20px;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--color-primary, #2563eb);

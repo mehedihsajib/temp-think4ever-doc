@@ -73,7 +73,7 @@
   transition: background 150ms ease, color 150ms ease;
   border: none;
   background: none;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 .header-nav-link:hover {
@@ -146,7 +146,7 @@
 }
 
 .changelog-description {
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 1.125rem;
   color: #64748b;
   line-height: 1.6;
@@ -172,7 +172,7 @@
 }
 
 .filter-label {
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.8125rem;
   font-weight: 600;
   color: #64748b;
@@ -194,7 +194,7 @@
   border: 1px solid var(--color-border, #bfdbfe);
   border-radius: 8px;
   background: #fff;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   color: #334155;
@@ -228,7 +228,7 @@
   border-radius: 20px;
   border: 1px solid var(--color-border, #bfdbfe);
   background: #fff;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.8125rem;
   font-weight: 500;
   color: #64748b;
@@ -304,7 +304,7 @@
   border-radius: 6px;
   border: none;
   background: none;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.8125rem;
   font-weight: 500;
   color: var(--color-primary, #2563eb);
@@ -461,7 +461,7 @@
   background: #22c55e;
   color: #fff;
   border-radius: 4px;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.6875rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -475,7 +475,7 @@
   gap: 5px;
   padding: 4px 10px;
   border-radius: 6px;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
 }
@@ -497,7 +497,7 @@
 
 /* Release Date */
 .release-date {
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.8125rem;
   color: #64748b;
   display: flex;
@@ -520,7 +520,7 @@
   gap: 4px;
   padding: 3px 10px;
   border-radius: 20px;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.6875rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -566,7 +566,7 @@
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 1rem;
   color: #334155;
   line-height: 1.6;
@@ -644,7 +644,7 @@
   border-radius: 8px;
   border: 1px solid var(--color-border, #bfdbfe);
   background: #fff;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--color-primary, #2563eb);
@@ -672,7 +672,7 @@
   border-radius: 8px;
   border: 1px solid var(--color-border, #bfdbfe);
   background: #fff;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--color-primary, #2563eb);

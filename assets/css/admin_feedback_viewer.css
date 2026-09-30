@@ -334,7 +334,7 @@
   border: 1px solid #bfdbfe;
   border-radius: 8px;
   font-size: 0.875rem;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   color: #334155;
   background: #ffffff;
   transition: all 150ms ease;
@@ -381,7 +381,7 @@
   border-radius: 8px;
   font-size: 0.875rem;
   font-weight: 600;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   cursor: pointer;
   transition: all 150ms ease;
   border: 1px solid transparent;
@@ -975,7 +975,7 @@
   padding: 12px;
   border: 1px solid #bfdbfe;
   border-radius: 8px;
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 0.875rem;
   color: #334155;
   resize: vertical;
