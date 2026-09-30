@@ -422,19 +422,6 @@ function loadComponent({ id, url, onLoaded }) {
         initAccordionMenus(el);
       }
 
-      // Restore accordion state from sessionStorage
-      const accState = sessionStorage.getItem("acc_create_project");
-      if (accState) {
-        const accParent = el.querySelector(".accordion-parent");
-        if (accParent) {
-          if (accState === "open") {
-            accParent.classList.add("open");
-          } else {
-            accParent.classList.remove("open");
-          }
-        }
-      }
-
       if (id.toLowerCase().includes("sidebar")) {
         const sidebarEl =
           el.querySelector(".cgs-sidebar, .cd-sidebar, .admin-sidebar") ||

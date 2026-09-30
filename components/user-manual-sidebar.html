@@ -30,13 +30,10 @@
             aria-hidden="true"></i>
           <span data-i18n="dev_sidebar.dashboard">Dashboard</span></a>
       </li>
-      <li class="accordion-parent">
-        <a class="cgs-nav-link accordion-trigger"
-          onclick="event.preventDefault(); event.stopImmediatePropagation(); var p = this.closest('.accordion-parent'); if (p.classList.contains('open')) { p.classList.remove('open'); sessionStorage.setItem('acc_create_project','closed'); } else { p.classList.add('open'); sessionStorage.setItem('acc_create_project','open'); load_page('manual_create_project'); }">
+      <li class="accordion-parent open">
+        <a class="cgs-nav-link" onclick="load_page('manual_create_project')">
           <i class="fa-solid fa-folder-plus" aria-hidden="true"></i>
           <span data-i18n="dev_sidebar.create_project">Create a new Project</span>
-          <i class="fa-solid fa-chevron-down accordion-icon"
-            style="margin-left: auto; font-size: 0.8em; transition: transform 0.3s;"></i>
         </a>
         <ul class="accordion-menu">
           <li>
