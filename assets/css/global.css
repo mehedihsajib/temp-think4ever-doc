@@ -236,7 +236,7 @@ h6 {
   font-family: var(--font-heading);
   font-weight: var(--font-bold);
   line-height: var(--leading-tight);
-  color: var(--lp-text);
+  color: var(--color-ink);
 }
 
 p {

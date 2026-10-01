@@ -17,6 +17,7 @@
     text-decoration: none;
     cursor: pointer;
     flex: 0 0 auto;
+    max-width: 200px;
 }
 
 .t4e-logo-img {
@@ -197,7 +198,7 @@
     justify-content: center;
     background: #f1f5f9;
     border: 1px solid rgba(226, 232, 240, 0.5);
-    color: #2563eb;
+    color: var(--color-deep-blue);
     margin-top: 2px;
     font-size: 12px;
 }
@@ -217,7 +218,7 @@
     align-items: center;
     font-size: 12px;
     font-weight: 700;
-    color: #09090d;
+    color: var(--color-ink);
     margin-bottom: 2px;
     transition: color 0.15s ease;
 }
@@ -230,7 +231,7 @@
     display: block;
     font-size: 10px;
     font-weight: 500;
-    color: #71849c;
+    color: var(--color-deep-blue);
     line-height: 1.25;
 }
 
