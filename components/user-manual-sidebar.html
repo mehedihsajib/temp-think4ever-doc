@@ -30,25 +30,28 @@
             aria-hidden="true"></i>
           <span data-i18n="dev_sidebar.dashboard">Dashboard</span></a>
       </li>
-      <li class="accordion-parent open">
+      <li class="accordion-parent open create-project-submenu">
         <a class="cgs-nav-link" onclick="load_page('manual_create_project')">
           <i class="fa-solid fa-folder-plus" aria-hidden="true"></i>
           <span data-i18n="dev_sidebar.create_project">Create a new Project</span>
         </a>
         <ul class="accordion-menu">
           <li>
-            <a class="cgs-nav-link" onclick="load_page('manual_analyze_code')">
-              <span>Analyze Existing Code</span>
+            <a class="cgs-nav-link cgs-nav-link-split" onclick="load_page('manual_analyze_code')">
+              <span class="cgs-nav-title">Reverse Engineering</span>
+              <span class="cgs-nav-badge">Analyze Code</span>
             </a>
           </li>
           <li>
-            <a class="cgs-nav-link" onclick="load_page('manual_production_hardening')">
-              <span>Production Hardening</span>
+            <a class="cgs-nav-link cgs-nav-link-split" onclick="load_page('manual_production_hardening')">
+              <span class="cgs-nav-title">Production Hardening</span>
+              <span class="cgs-nav-badge">Prod Readiness</span>
             </a>
           </li>
           <li>
-            <a class="cgs-nav-link" onclick="load_page('manual_design_from_intent')">
-              <span>Design from Intent</span>
+            <a class="cgs-nav-link cgs-nav-link-split" onclick="load_page('manual_design_from_intent')">
+              <span class="cgs-nav-title">Design from Intent</span>
+              <span class="cgs-nav-badge">Design from scratch</span>
             </a>
           </li>
         </ul>
@@ -79,11 +82,11 @@
             aria-hidden="true"></i>
           <span data-i18n="dev_sidebar.version_control">Version Control</span></a>
       </li>
-      <li>
+      <!-- <li>
         <a class="cgs-nav-link" onclick="load_page('portal/marketplace')" data-target="marketplace.html"><i
             class="fa-solid fa-store" aria-hidden="true"></i>
           <span>Marketplace</span></a>
-      </li>
+      </li> -->
       <li>
         <a class="cgs-nav-link" onclick="load_page('view-and-share')"><i class="fa-solid fa-share-nodes"
             aria-hidden="true"></i>

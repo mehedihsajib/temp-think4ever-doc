@@ -5384,3 +5384,58 @@ body.dark .theme-toggle-thumb {
 .accordion-menu .cgs-nav-link:hover i {
   color: #2563eb !important;
 }
+
+.doc-nav-wrapper {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+
+.doc-nav-wrapper .doc-nav-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: var(--color-blue-header);
+  border-radius: 100px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+/* Sidebar Nav Badge Styling */
+.cgs-nav-link-split {
+  justify-content: space-between !important;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cgs-nav-title {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.cgs-nav-badge {
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--color-blue, #1D63E0);
+  background: rgba(29, 99, 224, 0.1);
+  padding: 2px 6px;
+  border-radius: 12px;
+  margin-left: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.create-project-submenu .accordion-menu .cgs-nav-link{
+  gap: 0 !important;
+}
+
+.create-project-submenu .accordion-menu .cgs-nav-link {
+  font-size: 12px !important;
+}
