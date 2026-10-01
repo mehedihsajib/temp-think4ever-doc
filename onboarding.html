@@ -669,7 +669,7 @@
           // Update Buttons
           btnBack.disabled = index === 0;
           if (index === totalSteps - 1) {
-            btnContinueText.textContent = "Finish";
+            btnContinueText.textContent = "Customer Workspace";
           } else if (index === 1) {
             btnContinueText.textContent = "Create New Project";
           } else {
@@ -700,12 +700,7 @@
         if (currentStepIndex < totalSteps - 1) {
           updateStep(currentStepIndex + 1);
         } else {
-          // Show Modal
-          successModal.style.display = "flex";
-          // Small delay to allow display block to apply before adding opacity class for transition
-          setTimeout(() => {
-            successModal.classList.add("show");
-          }, 10);
+          window.location.href = "portal/workspace.html";
         }
       });
 
