@@ -17,6 +17,7 @@
     text-decoration: none;
     cursor: pointer;
     flex: 0 0 auto;
+    max-width: 200px;
 }
 
 .t4e-logo-img {
