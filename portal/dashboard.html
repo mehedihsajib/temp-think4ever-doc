@@ -70,153 +70,135 @@
 
         <!-- Overview Section -->
         <section class="cd-overview" id="cdHomeOverview">
+          <h3 class="h3">Overview & Navigation Sidebar</h3>
           <p class="cd-overview-text">
-            The Think4ever Portal Dashboard serves as your central control hub for monitoring
-            platform resource consumption, tracking active builds, and
-            accessing your agent workspaces.
+            The main dashboard provides an operational summary of your workspace activities, available credits, and
+            server status. Navigate using the left-hand menu bar:
           </p>
-
           <div class="image-wrapper">
-            <img src="../assets/images/portal/00-dashboard.png" alt="Dashboard" class="demo-img" />
+            <img src="../assets/images/portal/dashboard-1.png" alt="Overview Navigation Sidebar" class="demo-img" />
           </div>
 
-          <h3 class="h3">Metrics Bar</h3>
-          <p>
-            This section gives you an at-a-glance overview of your current
-            usage data and active projects:
-          </p>
+          <h4 class="h4">Main Navigation</h4>
           <ul class="cd-overview-ul">
-            <li>
-              <strong>Today's Requests:</strong>
-              <span>Displays the count of AI agent actions processed during the
-                current calendar day.</span>
+            <li><strong>Dashboard:</strong> Primary hub displaying real-time metrics, credit balances, and active
+              workspace environments.</li>
+            <li><strong>Workspace:</strong> Dedicated workspace area to build projects, design concepts, and deploy AI
+              applications.</li>
+            <li><strong>Usage & Analytics:</strong> Track resource usage, request volumes, and active process trends.
             </li>
-            <li>
-              <strong>Credits Used (Month):</strong>
-              <span>Shows your cumulative credit consumption for the current
-                billing cycle, along with the corresponding equivalent token
-                volume (e.g., 19.5M tokens).
-              </span>
-            </li>
-            <li>
-              <strong>Active Projects:</strong>
-              <span>Indicates the total number of live development workspaces
-                currently configured on your account.
-              </span>
-            </li>
-            <li>
-              <strong>Available Credits:</strong>
-              <span>Shows your total remaining credit balance across your
-                account.
-              </span>
-            </li>
+            <li><strong>Marketplace:</strong> Access pre-built templates, extensions, and AI tools.</li>
           </ul>
 
-          <div class="section-details">
-            <h3 class="h3">Credits Breakdown Section</h3>
-            <p class="cd-overview-text">
-              This card provides a detailed look at your subscription plan
-              allowances and consumption vs. included credits:
-            </p>
-            <ul class="cd-overview-ul">
-              <li>
-                <strong>Available:</strong>
-                <span>Your absolute remaining credits ready for allocation.</span>
-              </li>
-              <li>
-                <strong>This Month:</strong>
-                <span>Tracks your usage for the current billing cycle against
-                  your baseline. A red visual progress bar indicates high
-                  resource consumption relative to your base plan.
-                </span>
-              </li>
-              <li>
-                <strong>Plan: </strong>
-                <span>Displays your current active subscription tier (e.g., Think
-                  New).
-                </span>
-              </li>
-              <li>
-                <strong>Included / Month: </strong>
-                <span>The standard baseline credit allocation assigned to your
-                  specific plan tier each month.
-                </span>
-              </li>
-              <li>
-                <strong>Buy More Credits: </strong>
-                <span>Click this blue button to immediately add individual top-up
-                  credits to your balance without changing your base tier
-                  plan.
-                </span>
-              </li>
-            </ul>
+          <h4 class="h4">Account & Support</h4>
+          <ul class="cd-overview-ul">
+            <li><strong>Plans:</strong> View, upgrade, or modify subscription tiers.</li>
+            <li><strong>Billing:</strong> Manage payment methods, billing address, and invoice history.</li>
+            <li><strong>Auto Top-up:</strong> Configure automatic credit reloads when balances drop below threshold
+              limits.</li>
+            <li><strong>Support:</strong> Access support tickets, help resources, and system documentation.</li>
+            <li><strong>Settings:</strong> Manage account preferences and security configurations.</li>
+          </ul>
 
-            <h3 class="h3">Server Status & Workspace Access</h3>
-            <p>
-              This card lets you track your underlying infrastructure status
-              and directly access your agent pipelines:
-            </p>
+          <div class="section-details" style="margin-top: 40px;">
+            <h3 class="h3">Key Operational Metrics</h3>
+            <p>The top metrics panel displays quick-view key performance indicators (KPIs):</p>
 
-            <ul class="cd-overview-ul">
-              <li>
-                <strong>Infrastructure ID: :</strong>
-                <span>Displays your active background server cluster identifier
-                  (e.g., child-20260510-0753) along with an immediate
-                  operational status tag (e.g., Health: healthy).
-                </span>
-              </li>
-              <li>
-                <strong>Assigned User:</strong>
-                <span>Shows the primary registered administrator email address
-                  managing the server node.
-                </span>
-              </li>
-              <li>
-                <strong>Last Heartbeat:</strong>
-                <span>Tracks the exact time elapsed since the server last
-                  communicated and verified its active status with the
-                  platform (e.g., 2m ago).
-                </span>
-              </li>
-              <li>
-                <strong>Enter Workspace:</strong>
-                <span>Click this large blue button to jump straight into your
-                  end-to-end SDLC pipeline, agent configurations, and
-                  deployment settings.
-                </span>
-              </li>
-              <li>
-                <strong>View Detailed Analytics:</strong>
-                <span>Click this button to review granular, time-series data
-                  charts regarding your infrastructure usage and token
-                  distributions over time.
-                </span>
-              </li>
-            </ul>
+            <table class="config-table">
+              <thead>
+                <tr>
+                  <th>Metric</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Today's Requests</td>
+                  <td>Number of API calls or processing executions submitted today.</td>
+                </tr>
+                <tr>
+                  <td>Credits Used (Month)</td>
+                  <td>Total credits consumed during the current billing cycle.</td>
+                </tr>
+                <tr>
+                  <td>Active Projects</td>
+                  <td>Total number of ongoing deployments or workspace instances.</td>
+                </tr>
+                <tr>
+                  <td>Available Credits</td>
+                  <td>Remaining balance available for execution tasks.</td>
+                </tr>
+              </tbody>
+            </table>
 
-            <h3 class="h3">Buy More Credits</h3>
-            <p>
-              Tapping the Buy more credits button will display a list of
-              available credit packages for purchase.
-            </p>
-            <div class="image-wrapper">
-              <img src="../assets/images/portal/00-buy-credits-1.png" alt="Buy More Credits" class="demo-img" />
-              <img src="../assets/images/portal/00-buy-credits-2.png" alt="Buy More Credits" class="demo-img"
-                style="margin-top: 20px" />
+            <div class="image-wrapper" style="margin-top: 20px;">
+              <img src="../assets/images/portal/dashboard-2.png" alt="Key Operational Metrics" class="demo-img" />
             </div>
-            <h3 class="h3">Enter Workspace</h3>
-            <p>
-              User will be taken to Think4Ever Dev site where projects can be
-              created and managed.
-            </p>
+
+            <h3 class="h3" style="margin-top: 20px;">Core Modules & Management</h3>
+            <h4 class="h4">Credits Breakdown</h4>
+            <p>The Credits module outlines credit sources and usage breakdown:</p>
+            <ul class="cd-overview-ul">
+              <li><strong>Available:</strong> Total usable credits.</li>
+              <li><strong>This Month:</strong> Usage counter showing monthly plan allotment consumption.</li>
+              <li><strong>Plan:</strong> Details of current active tier.</li>
+              <li><strong>Free Trial / Bonus:</strong> Promotional or one-time promotional credit balance.</li>
+              <li><strong>Upgrade Button:</strong> Quickly navigate to plan options to purchase additional capacity.
+              </li>
+            </ul>
+
             <div class="image-wrapper">
-              <img src="../assets/images/portal/00-enter-workspace.png" alt="Enter Workspace" class="demo-img" />
-              <img src="../assets/images/portal/00-workspace-loading.png" alt="Enter Workspace" class="demo-img"
-                style="margin-top: 20px" />
+              <img src="../assets/images/portal/dashboard-3.png" alt="Credits Breakdown" class="demo-img" />
+            </div>
+
+            <h4 class="h4" style="margin-top: 20px;">Server Status & Workspace Access</h4>
+            <p>Monitors server instances and assigned workspace details:</p>
+            <ul class="cd-overview-ul">
+              <li><strong>Instance ID / Name:</strong> Identifier of your assigned server instance.</li>
+              <li><strong>Assigned User:</strong> Linked user email associated with the instance.</li>
+              <li><strong>Last Heartbeat:</strong> Real-time health status and last server activity sync.</li>
+              <li><strong>Enter Workspace:</strong> Action button to launch directly into the AI development canvas.
+              </li>
+              <li><strong>View Detailed Analytics:</strong> Expands full server metrics and logs.</li>
+            </ul>
+
+            <div class="image-wrapper">
+              <img src="../assets/images/portal/dashboard-4.png" alt="Server Status" class="demo-img" />
+            </div>
+
+            <h3 class="h3" style="margin-top: 20px;">Subscription & Checkout Guide</h3>
+            <p>To upgrade your subscription plan (e.g., switching to Think New at $25.00/month):</p>
+
+            <h4 class="h4" style="margin-top: 20px;">Payment & Checkout Steps</h4>
+            <div class="image-wrapper">
+              <img src="../assets/images/portal/dashboard-5.png" alt="Payment Steps" class="demo-img" />
+            </div>
+
+            <ul class="cd-overview-ul">
+              <li>Click Upgrade from the Credits module or select Plans from the sidebar.</li>
+              <li>Review chosen plan details in the modal checkout window.</li>
+              <li>
+                <strong>Payment Details:</strong>
+                <ul>
+                  <li>Enter Card Number, Expiration Date (MM/YY), and Security Code (CVC).</li>
+                  <li>Select your Country.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Faster Checkout (Optional):</strong>
+                <ul>
+                  <li>Provide an Email, Mobile number, and Full Name to save details securely via Link.</li>
+                </ul>
+              </li>
+              <li>Click Subscribe & Start to complete payment and immediately release upgraded credit allowances.</li>
+            </ul>
+
+            <div class="image-wrapper">
+              <img src="../assets/images/portal/dashboard-6.png" alt="Subscribe and Start" class="demo-img" />
             </div>
           </div>
 
-          <div class="doc-nav-wrapper" style="margin-top: 40px;">
+          <div class="doc-nav-wrapper" style="margin-top: 20px;">
             <a href="../mcp_vscode.html" class="doc-nav-button">
               Think VS Code
               <i class="fas fa-arrow-right"></i>
