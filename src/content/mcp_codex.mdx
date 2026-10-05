@@ -1,0 +1,70 @@
+# Codex
+
+Codex configures MCP servers using a local configuration file. For a remote HTTP server like
+ Think4Ever, Codex utilizes
+ the `mcp-remote` bridge utility to translate the HTTP endpoint into its local
+ transport
+ protocol.
+
+![Codex](/images/mcp/mcp-codex.png)
+
+### Technical Integration
+
+Follow these steps to add the Think4Ever MCP server to your local Codex environment.
+
+### Codex (OpenAI CLI)
+
+Codex configures MCP servers in `~/.codex/config.toml.` For a remote HTTP server,
+ use
+ the mcp-remote bridge (it turns the
+ HTTP endpoint into the local transport Codex speaks).
+
+### Step 1
+
+Add this block to `~/.codex/config.toml` :
+
+```toml
+[mcp_servers.Think4Ever]
+command = "npx"
+args = [
+  "-y", "mcp-remote",
+  "https://cell-ssm-use1-0005.us.portal.think4ever.com/mcp",
+  "--header", "Authorization: Bearer tf_71b84ebb8284f86491f24b85311a55dfd2b0c9e74c678c7e"
+]
+```
+
+### Step 2
+
+Requires Node.js (for `npx` ). Restart Codex; the `Think4Ever` tools
+ become available to the agent.
+
+### Step 3
+
+Verify inside a Codex session — ask it to list its available tools, or just give it a
+ think4ever-touching instruction and watch the tool calls.
+
+### Tips
+
+Codex reads `AGENTS.md` for standing instructions — add a line like
+ “*Specs and tasks live in Think4Ever(MCP server Think4Ever); read the
+ active concept before structural changes.* ” so every session starts
+ anchored.
+
+## Codex Use Cases & Sample Prompts
+
+Codex is designed for autonomous, sandboxed runs and parallel cloud tasks. Using the
+ Think4Ever MCP server keeps these
+ standalone tasks completely aligned with your central product specifications.
+
+| Objective | Sample Prompt to Try |
+| :--- | :--- |
+| **Spec-First Autonomous Runs** | *"Implement the Think4Ever technical requirement 'CSV export' end-to-end, tests included, and mark it implemented when the suite passes."* |
+| **Parallel Runs** | *"For each open Think4Ever task labeled 'api', implement the stored API contract exactly — don't invent fields that aren't in the spec."* |
+| **Batch Through Backlog** | *"Work through all open Think4Ever tasks labeled 'small'; set each to done or blocked with a comment explaining the outcome."* |
+| **Repro & Fix from Issues** | *"Take Think4Ever issue #42, reproduce it, fix it, and comment on the issue with exactly what you changed and why."* |
+| **Greenfield from Concept** | *"Read the Think4Ever concept and tech stack, then bootstrap this empty repo to match — structure, dependencies, and base modules."* |
+| **Compliance Sweep** | *"Audit this codebase against every named business rule in Think4Ever and file a Think4Ever issue for each violation you find."* |
+| **Drift Report** | *"Compare this repo against the Think4Ever concept and produce a drift report: code without spec, spec without code, and contracts that don't match."* |
+| **Role-Access Enforcement** | *"Check every route in this app against the Think4Ever roleAccess definitions and fix any missing permission checks."* |
+| **Log-Driven Diagnosis** | *"Fetch the latest Think4Ever developer logs and tell me why last night's build agent failed, then fix the cause."* |
+| **Document What It Built** | *"After finishing, create a Think4Ever technical requirement documenting the new module's behavior and link it to the task you completed."* |

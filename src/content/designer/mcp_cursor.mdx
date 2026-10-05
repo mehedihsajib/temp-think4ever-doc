@@ -1,0 +1,69 @@
+# Cursor
+
+Cursor supports remote HTTP MCP servers natively using an `mcp.json` 
+ configuration file. This
+ allows Cursor's Composer or
+ Agent mode to reference your product specifications seamlessly as you edit code.
+
+![Cursor](/images/mcp/mcp_cursor.png)
+
+### Technical Integration
+
+Follow these configuration steps to register the Think4Ever MCP server within your Cursor IDE
+ environment.
+
+### Step 1
+
+Add to `~/.cursor/mcp.json` (global) or `.cursor/mcp.json` (per
+ project):
+
+```json
+{
+  "mcpServers": {
+    "Think4Ever": {
+      "url": "https://cell-ssm-use1-0005.us.portal.think4ever.com/mcp",
+      "headers": { "Authorization": "Bearer tf_71b84ebb8284f86491f24b85311a55dfd2b0c9e74c678c7e" }
+    }
+  }
+}
+```
+
+### Step 2
+
+Open **Settings → MCP** in Cursor to confirm `Think4Ever` shows
+ a green status and lists its tools.
+
+### Step 3
+
+Use it from **Agent** mode in the chat panel — Cursor decides when to call
+ the tools, and asks before each call unless you enable auto-run for the server.
+
+### Tips
+
+Add a Cursor rule (`.cursor/rules` ) such as “*Product specs, tasks and
+ issues live in the Think4Ever MCP server — consult the active concept before
+ structural edits, and file issues there instead of TODO comments.* ”
+
+<Callout type="warning" title="Security Warning">
+Do not commit a real API token in a per-project
+ `.cursor/mcp.json` file on a shared repository. Prefer using the global file in
+ your home directory for private tokens.
+</Callout>
+
+## Cursor Use Cases & Sample Prompts
+
+Cursor operates human-in-the-loop directly inside your editor. Connecting it to Think4Ever
+ allows every edit, refactor, and review to be driven by a centralized product brain.
+
+| Objective | Sample Prompt to Try |
+| :--- | :--- |
+| **UI Designs to Components** | *"Get the 'Customer Dashboard' UI design from Think4Ever and implement it as a React page in this repo, matching it pixel for pixel."* |
+| **The Design Contract, Enforced** | *"Fetch the Think4Ever design contract and restyle this component to comply — colors, spacing, navigation, and accessibility rules."* |
+| **Concept as Living Context** | *"What does the Think4Ever concept say the notifications module is responsible for? Does this file match it?"* |
+| **ERD-Aware Edits** | *"Before we change this model, check the Think4Ever data object for 'reservations' — relationships, cardinalities, and sensitivities."* |
+| **Rule Lookup Before Risky Edits** | *"Pull the Think4Ever business rules covering cancellations before we change this function, and confirm the change violates none of them."* |
+| **Tasks Without Tab-Switching** | *"Create a Think4Ever task for refactoring this service, medium priority, assigned to me — and link it to the concept block it touches."* |
+| **Inline Issue Filing** | *"File a Think4Ever issue: this query has an N+1 problem — include this file and line in the description and tag it performance."* |
+| **Two-Way Sync** | *"We merged auth and sessions into one service — update the Think4Ever concept blocks accordingly."* |
+| **Day-One Ramp-Up** | *"I'm new here — walk me through the Think4Ever concept for this project, then show me how this repo maps to it."* |
+| **Spec-Cited Reviews** | *"Summarize this change set citing the Think4Ever requirements and tasks it implements, ready to paste into the PR."* |

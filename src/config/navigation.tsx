@@ -1,3 +1,4 @@
+import React from "react";
 import { 
   Play, Code, Palette, Puzzle, Globe, Settings, 
   Rocket, Briefcase, FolderPlus, Terminal,
@@ -7,8 +8,38 @@ import {
   Plug, ListChecks, Network, Lightbulb, Workflow,
   ShieldCheck, Scale, Layers, Boxes, Map, RefreshCw,
   Zap, Sliders, FileText,
-  PlusCircle, PlayCircle, CheckCircle2, Bug, Database, FileCode
+  PlusCircle, PlayCircle, CheckCircle2, Bug, Database, FileCode,
+  BookOpen, MessageSquare, Wrench
 } from "lucide-react";
+
+// MCP Custom Brand SVG Icons
+const ClaudeIcon = ({ className }: { className?: string }) => (
+  <img src="/images/icons/claude.svg" alt="Claude" className={`${className || "h-4 w-4"} object-contain`} />
+);
+const CodexIcon = ({ className }: { className?: string }) => (
+  <img src="/images/icons/codex.svg" alt="Codex" className={`${className || "h-4 w-4"} object-contain`} />
+);
+const CursorIcon = ({ className }: { className?: string }) => (
+  <img src="/images/icons/cursor.svg" alt="Cursor" className={`${className || "h-4 w-4"} object-contain`} />
+);
+const ClaudeDesktopIcon = ({ className }: { className?: string }) => (
+  <img src="/images/icons/claude-desktop.svg" alt="Claude Desktop" className={`${className || "h-4 w-4"} object-contain`} />
+);
+const VSCodeIcon = ({ className }: { className?: string }) => (
+  <img src="/images/icons/vscode.svg" alt="VS Code" className={`${className || "h-4 w-4"} object-contain`} />
+);
+const WindsurfIcon = ({ className }: { className?: string }) => (
+  <img src="/images/icons/windsurf.svg" alt="Windsurf" className={`${className || "h-4 w-4"} object-contain`} />
+);
+const GeminiIcon = ({ className }: { className?: string }) => (
+  <img src="/images/icons/gemini.svg" alt="Gemini" className={`${className || "h-4 w-4"} object-contain`} />
+);
+const AmazonQIcon = ({ className }: { className?: string }) => (
+  <img src="/images/icons/amazonq.svg" alt="Amazon Q" className={`${className || "h-4 w-4"} object-contain`} />
+);
+const KiroIcon = ({ className }: { className?: string }) => (
+  <img src="/images/icons/kiro.svg" alt="Kiro" className={`${className || "h-4 w-4"} object-contain`} />
+);
 
 export type NavItem = {
   title: string;
@@ -408,6 +439,116 @@ export const docsSidebarNav: SidebarGroup[] = [
         title: "Agents Documents",
         href: "/docs/agents-documents",
         icon: Bot,
+      },
+    ],
+  },
+  {
+    title: "MCP Connect and Tools",
+    items: [
+      {
+        title: "Overview",
+        href: "/docs/mcp_overview",
+        icon: Layers,
+      },
+      {
+        title: "Claude Code",
+        href: "/docs/mcp_claude_code",
+        icon: ClaudeIcon,
+      },
+      {
+        title: "Codex",
+        href: "/docs/mcp_codex",
+        icon: CodexIcon,
+      },
+      {
+        title: "Cursor",
+        href: "/docs/mcp_cursor",
+        icon: CursorIcon,
+      },
+      {
+        title: "Claude Desktop",
+        href: "/docs/mcp_claude_desktop",
+        icon: ClaudeDesktopIcon,
+      },
+      {
+        title: "VS Code",
+        href: "/docs/mcp_vscode",
+        icon: VSCodeIcon,
+      },
+      {
+        title: "Windsurf",
+        href: "/docs/mcp_windsurf",
+        icon: WindsurfIcon,
+      },
+      {
+        title: "Gemini CLI",
+        href: "/docs/mcp_gemini",
+        icon: GeminiIcon,
+      },
+      {
+        title: "Amazon Q",
+        href: "/docs/mcp_amazonq",
+        icon: AmazonQIcon,
+      },
+      {
+        title: "Kiro",
+        href: "/docs/mcp_kiro",
+        icon: KiroIcon,
+      },
+      {
+        title: "Test & Tools",
+        href: "/docs/mcp_test_and_tools",
+        icon: Wrench,
+      },
+    ],
+  },
+  {
+    title: "Development",
+    items: [
+      {
+        title: "Tasks",
+        href: "/docs/tasks",
+        icon: ListChecks,
+      },
+    ],
+  },
+  {
+    title: "Integration",
+    items: [
+      {
+        title: "Jira",
+        href: "/docs/jira",
+        icon: Plug,
+      },
+    ],
+  },
+  {
+    title: "Knowledge and Feedback",
+    items: [
+      {
+        title: "Knowledge and Feedback",
+        href: "/docs/knowledge-and-feedback",
+        icon: BookOpen,
+      },
+      {
+        title: "Feedback",
+        href: "/docs/feedback",
+        icon: MessageSquare,
+      },
+      {
+        title: "Collaboration",
+        href: "/docs/collaboration",
+        icon: Users,
+      },
+    ],
+  },
+  {
+    title: "Console & Docs",
+    items: [
+      {
+        title: "Think API",
+        href: "/docs/think_api",
+        icon: Terminal,
       },
     ],
   },
