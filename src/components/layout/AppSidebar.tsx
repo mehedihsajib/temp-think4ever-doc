@@ -31,7 +31,7 @@ export function AppSidebar() {
       className={`select-none sticky top-20 self-start shrink-0 h-[calc(100vh-5.5rem)] flex flex-col transition-all duration-300 ease-in-out ${
         isCollapsed 
           ? "w-10 overflow-hidden" 
-          : "w-72"
+          : "w-[270px]"
       }`}
     >
       {isCollapsed ? (
@@ -46,7 +46,7 @@ export function AppSidebar() {
           </button>
         </div>
       ) : (
-        <div className="w-[270px] flex flex-col h-full">
+        <div className="w-full flex flex-col h-full">
           {/* Top Header of Sidebar - FIXED at the top of the sidebar, never scrolls away and never under a scrollbar */}
           <div className="flex items-center justify-between pb-3 mb-2 shrink-0 pr-2">
             <div className="flex items-center gap-2">
@@ -66,7 +66,7 @@ export function AppSidebar() {
           </div>
 
           {/* Navigation Groups - ONLY this section scrolls */}
-          <nav className="flex-1 overflow-y-auto overflow-x-hidden custom-scrollbar pr-3 pb-8 space-y-6">
+          <nav className="flex-1 overflow-y-auto overflow-x-hidden custom-scrollbar pr-2 pb-8 space-y-6">
             {docsSidebarNav.map((group, groupIdx) => (
               <div key={groupIdx}>
                 {group.title && (

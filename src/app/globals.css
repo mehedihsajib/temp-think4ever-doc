@@ -178,6 +178,10 @@
     margin-top: 1rem !important;
     margin-bottom: 1rem !important;
   }
+  .prose p:has(img) {
+    margin-top: 0.375rem !important;
+    margin-bottom: 0.75rem !important;
+  }
   .prose p.lead {
     font-size: 1.125rem !important;
     line-height: 1.75 !important;
@@ -189,18 +193,18 @@
   width: 4px;
 }
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: transparent;
+  background: rgb(235, 235, 235, .2);
+  border: none;
+  box-shadow: none;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(148, 163, 184, 0.3);
+  background: rgb(212, 212, 212, .4);
   border-radius: 9999px;
+  border: none;
+  box-shadow: none;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgba(100, 116, 139, 0.5);
-}
-.custom-scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(148, 163, 184, 0.3) transparent;
+  background: #b5b5b5;
 }
 
 /* Header Dropdown Smooth Glide & Fade Animation */

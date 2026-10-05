@@ -42,9 +42,9 @@ const components = {
     return (
       <h2 id={id} className="scroll-mt-24 group flex items-center" {...props}>
         <span>{children}</span>
-        <a 
-          href={`#${id}`} 
-          className="ml-2 text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer hover:text-blue-600" 
+        <a
+          href={`#${id}`}
+          className="ml-2 text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer hover:text-blue-600"
           aria-label="Link to section"
         >
           #
@@ -57,9 +57,9 @@ const components = {
     return (
       <h3 id={id} className="scroll-mt-24 group flex items-center" {...props}>
         <span>{children}</span>
-        <a 
-          href={`#${id}`} 
-          className="ml-2 text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer hover:text-blue-600" 
+        <a
+          href={`#${id}`}
+          className="ml-2 text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer hover:text-blue-600"
           aria-label="Link to section"
         >
           #
@@ -68,13 +68,13 @@ const components = {
     );
   },
   img: (props: any) => (
-    <span className="block mt-8 mb-8 rounded-xl overflow-hidden border border-border shadow-sm">
-      <Image 
-        src={props.src} 
-        alt={props.alt || "Documentation Image"} 
+    <span className="block my-1 rounded-xl overflow-hidden border border-border shadow-sm">
+      <Image
+        src={props.src}
+        alt={props.alt || "Documentation Image"}
         width={1200}
         height={800}
-        className="w-full h-auto object-cover"
+        className="w-full h-auto object-cover block"
       />
     </span>
   ),
@@ -85,7 +85,11 @@ import { OnThisPage, HeadingItem } from "@/components/layout/OnThisPage";
 export default async function DocsPage({ params }: DocsPageProps) {
   const resolvedParams = await params;
   const slug = resolvedParams.slug || ["introduction"];
-  const filePath = path.join(process.cwd(), "src/content", `${slug.join("/")}.mdx`);
+  const filePath = path.join(
+    process.cwd(),
+    "src/content",
+    `${slug.join("/")}.mdx`,
+  );
 
   if (!fs.existsSync(filePath)) {
     notFound();
@@ -96,7 +100,10 @@ export default async function DocsPage({ params }: DocsPageProps) {
   // Extract top-level headings directly from MDX source for SSR table of contents (no submenus)
   const headingLines = source.match(/^##\s+(.*)$/gm) || [];
   const headings: HeadingItem[] = headingLines.map((line) => {
-    const rawTitle = line.replace(/^##\s+/, "").replace(/[*_`]/g, "").trim();
+    const rawTitle = line
+      .replace(/^##\s+/, "")
+      .replace(/[*_`]/g, "")
+      .trim();
     const id = slugify(rawTitle);
     return {
       id,
@@ -116,7 +123,5 @@ export default async function DocsPage({ params }: DocsPageProps) {
 }
 
 export function generateStaticParams() {
-  return [
-    { slug: ["introduction"] },
-  ];
+  return [{ slug: ["introduction"] }];
 }

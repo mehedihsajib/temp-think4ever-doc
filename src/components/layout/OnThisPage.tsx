@@ -81,7 +81,7 @@ export function OnThisPage({ initialHeadings = [] }: OnThisPageProps) {
   };
 
   return (
-    <div className="hidden xl:block w-64 shrink-0 sticky top-20 self-start h-[calc(100vh-5.5rem)] overflow-y-auto pl-6 border-l border-slate-100 custom-scrollbar">
+    <div className="hidden xl:block w-[270px] shrink-0 sticky top-20 self-start h-[calc(100vh-5.5rem)] overflow-y-auto pl-6 border-l border-slate-100 custom-scrollbar">
       <div className="flex items-center gap-2 text-xs font-semibold text-slate-800 tracking-wide mb-3">
         <AlignLeft className="h-3.5 w-3.5 text-slate-500 cursor-pointer" />
         <span>On this page</span>
