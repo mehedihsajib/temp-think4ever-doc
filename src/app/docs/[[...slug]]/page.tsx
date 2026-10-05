@@ -28,6 +28,8 @@ function slugify(text: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
+import { DocImage } from "@/components/ui/DocImage";
+
 const components = {
   h1: ({ children, ...props }: any) => {
     const id = slugify(textContent(children));
@@ -67,17 +69,7 @@ const components = {
       </h3>
     );
   },
-  img: (props: any) => (
-    <span className="block my-1 rounded-xl overflow-hidden border border-border shadow-sm">
-      <Image
-        src={props.src}
-        alt={props.alt || "Documentation Image"}
-        width={1200}
-        height={800}
-        className="w-full h-auto object-cover block"
-      />
-    </span>
-  ),
+  img: DocImage,
 };
 
 import { OnThisPage, HeadingItem } from "@/components/layout/OnThisPage";
