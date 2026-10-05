@@ -1,7 +1,7 @@
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { AppSidebar } from "@/components/layout/AppSidebar";
+import React from "react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { AppSidebar } from "@/components/layout/AppSidebar";
 
 export default function DocsLayout({
   children,
@@ -9,27 +9,27 @@ export default function DocsLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex min-h-screen w-full flex-col bg-brand-fog">
+    <div className="flex min-h-screen flex-col bg-white">
+      {/* Top Header */}
       <Header />
-      <div className="mx-auto flex w-full max-w-[1600px] flex-1 overflow-hidden relative">
-        <SidebarProvider>
+
+      {/* Main Container - strictly matching Header max-width and horizontal padding */}
+      <div className="mx-auto flex w-full max-w-[1600px] flex-1 px-4 sm:px-6 lg:px-8">
+        <div className="flex w-full gap-8 pt-8 pb-16 items-start">
+          {/* Sidebar - Inside container, starts below header at exact same vertical offset as main content */}
           <AppSidebar />
-          <div className="flex flex-1 flex-col overflow-hidden">
-            <div className="flex-1 overflow-y-auto">
-              <div className="flex items-center px-8 pt-8 md:px-12 md:pt-12 lg:px-16 lg:pt-16 max-w-5xl mx-auto pb-4">
-                <SidebarTrigger className="text-slate-500 hover:text-slate-900 mr-2 -ml-2" />
-                <span className="text-sm text-slate-500 font-medium">Toggle Sidebar</span>
-              </div>
-              <main className="px-8 pb-8 md:px-12 md:pb-12 lg:px-16 lg:pb-16 max-w-5xl mx-auto w-full">
-                <div className="prose prose-slate dark:prose-invert max-w-none">
-                  {children}
-                </div>
-              </main>
-              <Footer />
+
+          {/* Main Content Area - Same top content gap, takes remaining width */}
+          <main className="min-w-0 flex-1">
+            <div className="prose prose-slate max-w-none">
+              {children}
             </div>
-          </div>
-        </SidebarProvider>
+          </main>
+        </div>
       </div>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

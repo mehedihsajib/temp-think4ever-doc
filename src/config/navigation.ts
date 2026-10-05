@@ -1,7 +1,12 @@
 import { 
   Play, Code, Palette, Puzzle, Globe, Settings, 
   Rocket, Briefcase, FolderPlus, Terminal,
-  ShieldHalf, Users, Store
+  ShieldHalf, Users, Store,
+  Info, Star, LayoutDashboard, SlidersHorizontal,
+  Key, GitBranch, Share2, MoreHorizontal, Bot,
+  Plug, ListChecks, Network, Lightbulb, Workflow,
+  ShieldCheck, Scale, Layers, Boxes, Map, RefreshCw,
+  Zap, Sliders, FileText
 } from "lucide-react";
 
 export type NavItem = {
@@ -12,6 +17,19 @@ export type NavItem = {
   color?: string;
   columns?: number;
   items?: NavItem[];
+};
+
+export type SidebarItem = {
+  title: string;
+  href: string;
+  badge?: string;
+  icon?: any;
+  items?: SidebarItem[];
+};
+
+export type SidebarGroup = {
+  title?: string;
+  items: SidebarItem[];
 };
 
 export const headerNav: NavItem[] = [
@@ -199,3 +217,198 @@ export const footerNav = {
     },
   ],
 };
+
+export const docsSidebarNav: SidebarGroup[] = [
+  {
+    items: [
+      {
+        title: "Introduction",
+        href: "/docs/introduction",
+        icon: Info,
+      },
+      {
+        title: "Key Features",
+        href: "/docs/manual_key_features",
+        icon: Star,
+      },
+      {
+        title: "Theme",
+        href: "/docs/manual_theme",
+        icon: Palette,
+      },
+      {
+        title: "Dashboard",
+        href: "/docs/manual_dashboard",
+        icon: LayoutDashboard,
+      },
+      {
+        title: "Create a new Project",
+        href: "/docs/manual_create_project",
+        icon: FolderPlus,
+        items: [
+          {
+            title: "Reverse Engineering",
+            badge: "Analyze Existing Code",
+            href: "/docs/manual_analyze_code",
+          },
+          {
+            title: "Production Hardening",
+            badge: "Prod Readiness check",
+            href: "/docs/manual_production_hardening",
+          },
+          {
+            title: "Design from Intent",
+            badge: "Design from scratch",
+            href: "/docs/manual_design_from_intent",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Getting Started",
+    items: [
+      {
+        title: "Project Settings",
+        href: "/docs/manual_project_settings",
+        icon: SlidersHorizontal,
+      },
+      {
+        title: "API Keys",
+        href: "/docs/manual_api_keys",
+        icon: Key,
+      },
+      {
+        title: "Version Control",
+        href: "/docs/manual_version_control",
+        icon: GitBranch,
+      },
+      {
+        title: "Marketplace",
+        href: "/docs/portal/marketplace",
+        icon: Store,
+      },
+      {
+        title: "View & Share",
+        href: "/docs/view-and-share",
+        icon: Share2,
+      },
+      {
+        title: "Other",
+        href: "/docs/others",
+        icon: MoreHorizontal,
+      },
+      {
+        title: "Sidekick",
+        href: "/docs/manual_sidekick",
+        icon: Bot,
+      },
+      {
+        title: "Third-party Ecosystem Integration",
+        href: "/docs/manual_ecosystem_integration",
+        icon: Plug,
+      },
+    ],
+  },
+  {
+    title: "Structure and Ideation",
+    items: [
+      {
+        title: "Requirements",
+        href: "/docs/manual_requirements",
+        icon: ListChecks,
+      },
+      {
+        title: "Functional Architecture",
+        href: "/docs/functional-architecture",
+        icon: Network,
+      },
+      {
+        title: "Concept",
+        href: "/docs/manual_concept",
+        icon: Lightbulb,
+      },
+      {
+        title: "Business Flow",
+        href: "/docs/manual_business_flow",
+        icon: Workflow,
+      },
+      {
+        title: "Roles & Permissions",
+        href: "/docs/manual_roles_permissions",
+        icon: ShieldCheck,
+      },
+      {
+        title: "Business Rules",
+        href: "/docs/manual_business_rules",
+        icon: Scale,
+      },
+    ],
+  },
+  {
+    title: "More Options",
+    items: [
+      {
+        title: "Concept Summary",
+        href: "/docs/concept-summary",
+        icon: Layers,
+      },
+      {
+        title: "Data Objects",
+        href: "/docs/manual_data_objects",
+        icon: Boxes,
+      },
+      {
+        title: "Integration Maps",
+        href: "/docs/manual_integration_maps",
+        icon: Map,
+      },
+      {
+        title: "API Endpoints",
+        href: "/docs/manual_api_endpoints",
+        icon: Code,
+      },
+      {
+        title: "State & Lifecycle",
+        href: "/docs/manual_state_lifecycle",
+        icon: RefreshCw,
+      },
+      {
+        title: "Events & Jobs",
+        href: "/docs/manual_events_jobs",
+        icon: Zap,
+      },
+      {
+        title: "Environment & Config",
+        href: "/docs/manual_environment_config",
+        icon: Sliders,
+      },
+    ],
+  },
+  {
+    title: "Design and Docs",
+    items: [
+      {
+        title: "UI Design",
+        href: "/docs/manual_ui_design",
+        icon: Palette,
+      },
+      {
+        title: "Technical Diagrams",
+        href: "/docs/manual_technical_diagrams",
+        icon: Network,
+      },
+      {
+        title: "Requirements Docs",
+        href: "/docs/manual_requirements_docs",
+        icon: FileText,
+      },
+      {
+        title: "Agents Documents",
+        href: "/docs/agents-documents",
+        icon: Bot,
+      },
+    ],
+  },
+];
+

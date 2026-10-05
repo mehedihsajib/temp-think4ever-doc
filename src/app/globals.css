@@ -145,6 +145,11 @@
   html {
     @apply font-sans;
   }
+  button, 
+  a, 
+  [role="button"] {
+    cursor: pointer;
+  }
 }
 
 /* Typography Constraints */
@@ -177,4 +182,23 @@
     font-size: 1.125rem !important;
     line-height: 1.75 !important;
   }
+}
+
+/* Minimal sleek scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 9999px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.5);
+}
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.3) transparent;
 }

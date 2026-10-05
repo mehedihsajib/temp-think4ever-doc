@@ -12,7 +12,7 @@ export function Footer() {
       <div className="absolute top-0 left-1/4 w-[600px] h-[300px] rounded-full bg-brand-blue/5 blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-[400px] h-[200px] rounded-full bg-brand-blue/5 blur-3xl pointer-events-none" />
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-8 lg:gap-12">
           {/* Brand Column */}
           <div className="flex flex-col items-start gap-5 md:col-span-4 lg:col-span-5">
