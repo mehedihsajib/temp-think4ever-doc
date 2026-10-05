@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronRight, Home } from "lucide-react";
-import { docsSidebarNav, devSidebarNav } from "@/config/navigation";
+import { docsSidebarNav, devSidebarNav, portalSidebarNav } from "@/config/navigation";
 
 export interface BreadcrumbCrumb {
   label: string;
@@ -42,11 +42,19 @@ function resolveBreadcrumbs(pathname: string): BreadcrumbCrumb[] {
 
   // Portal Mode
   if (pathname.startsWith("/docs/portal")) {
-    crumbs.push({ label: "Think4Ever Portal" });
+    crumbs.push({
+      label: "Think4Ever Portal",
+      href: "/docs/portal/dashboard",
+    });
 
-    if (pathname.includes("marketplace")) {
-      crumbs.push({ label: "Marketplace" });
-      return crumbs;
+    // Search portalSidebarNav
+    for (const group of portalSidebarNav) {
+      for (const item of group.items) {
+        if (item.href === pathname) {
+          crumbs.push({ label: item.title });
+          return crumbs;
+        }
+      }
     }
 
     const filename = pathname.split("/").pop() || "";

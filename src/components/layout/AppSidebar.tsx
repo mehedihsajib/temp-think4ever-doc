@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { docsSidebarNav, devSidebarNav } from "@/config/navigation";
+import { docsSidebarNav, devSidebarNav, portalSidebarNav } from "@/config/navigation";
 import { 
   BookOpen,
   Code,
@@ -21,9 +21,21 @@ export function AppSidebar() {
   });
 
   const isDevMode = pathname.startsWith("/docs/dev");
-  const navGroups = isDevMode ? devSidebarNav : docsSidebarNav;
-  const sidebarTitle = isDevMode ? "Think4Ever Developer" : "Think4Ever Designer";
-  const SidebarIcon = isDevMode ? Code : BookOpen;
+  const isPortalMode = pathname.startsWith("/docs/portal");
+
+  let navGroups = docsSidebarNav;
+  let sidebarTitle = "Think4Ever Designer";
+  let SidebarIcon = BookOpen;
+
+  if (isDevMode) {
+    navGroups = devSidebarNav;
+    sidebarTitle = "Think4Ever Developer";
+    SidebarIcon = Code;
+  } else if (isPortalMode) {
+    navGroups = portalSidebarNav;
+    sidebarTitle = "Think4Ever Portal";
+    SidebarIcon = BookOpen;
+  }
 
   const toggleSubmenu = (title: string) => {
     setOpenSubmenus((prev) => ({

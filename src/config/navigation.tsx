@@ -9,7 +9,8 @@ import {
   ShieldCheck, Scale, Layers, Boxes, Map, RefreshCw,
   Zap, Sliders, FileText,
   PlusCircle, PlayCircle, CheckCircle2, Bug, Database, FileCode,
-  BookOpen, MessageSquare, Wrench
+  BookOpen, MessageSquare, Wrench,
+  Home, CreditCard, Coins, BarChart3, Headphones, FolderOpen
 } from "lucide-react";
 
 // MCP Custom Brand SVG Icons
@@ -621,3 +622,64 @@ export const devSidebarNav: SidebarGroup[] = [
   },
 ];
 
+export const portalSidebarNav: SidebarGroup[] = [
+  {
+    items: [
+      {
+        title: "Dashboard",
+        href: "/docs/portal/dashboard",
+        icon: Home,
+      },
+      {
+        title: "Multi-Language Support",
+        href: "/docs/portal/multilang",
+        icon: Globe,
+      },
+      {
+        title: "Workspace",
+        href: "/docs/portal/workspace",
+        icon: FolderOpen,
+      },
+      {
+        title: "API Keys & Usage",
+        href: "/docs/portal/api_keys_usages",
+        icon: Key,
+      },
+      {
+        title: "Marketplace",
+        href: "/docs/portal/marketplace",
+        icon: Store,
+      },
+      {
+        title: "Usage & Analysis",
+        href: "/docs/portal/usage_and_analysis",
+        icon: BarChart3,
+      },
+      {
+        title: "Billing",
+        href: "/docs/portal/billing",
+        icon: CreditCard,
+      },
+      {
+        title: "Buy More Credits",
+        href: "/docs/portal/buy_more_credits",
+        icon: Coins,
+      },
+      {
+        title: "Auto-Top Up",
+        href: "/docs/portal/auto-topup",
+        icon: RefreshCw,
+      },
+      {
+        title: "Support",
+        href: "/docs/portal/support",
+        icon: Headphones,
+      },
+      {
+        title: "Settings",
+        href: "/docs/portal/settings",
+        icon: Settings,
+      },
+    ],
+  },
+];

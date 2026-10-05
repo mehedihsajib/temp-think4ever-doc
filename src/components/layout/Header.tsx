@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { headerNav, docsSidebarNav, devSidebarNav } from '@/config/navigation';
+import { headerNav, docsSidebarNav, devSidebarNav, portalSidebarNav } from '@/config/navigation';
 import { 
   ChevronDown, 
   ChevronRight, 
@@ -11,6 +11,7 @@ import {
   X, 
   BookOpen, 
   Code, 
+  LayoutDashboard,
   Compass,
   ArrowRight
 } from 'lucide-react';
@@ -25,8 +26,9 @@ export function Header() {
   });
 
   const isDevMode = pathname.startsWith("/docs/dev");
+  const isPortalMode = pathname.startsWith("/docs/portal");
   const isDocsPage = pathname.startsWith("/docs");
-  const docGroups = isDevMode ? devSidebarNav : docsSidebarNav;
+  const docGroups = isDevMode ? devSidebarNav : isPortalMode ? portalSidebarNav : docsSidebarNav;
 
   // Auto-select docs tab if on docs route
   useEffect(() => {
@@ -278,12 +280,12 @@ export function Header() {
                   <div className="text-[10px] font-bold uppercase tracking-wider text-blue-800/70 mb-1.5 px-1">
                     Documentation Mode
                   </div>
-                  <div className="grid grid-cols-2 gap-1.5">
+                  <div className="grid grid-cols-3 gap-1.5">
                     <Link
                       href="/docs/introduction"
                       onClick={() => setMobileMenuOpen(false)}
-                      className={`flex items-center justify-center gap-1.5 py-2 px-2 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
-                        !isDevMode
+                      className={`flex items-center justify-center gap-1 py-2 px-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                        !isDevMode && !isPortalMode
                           ? "bg-[#1D63E0] text-white shadow-xs font-bold"
                           : "bg-white text-slate-700 hover:bg-slate-50 border border-slate-200/80"
                       }`}
@@ -294,7 +296,7 @@ export function Header() {
                     <Link
                       href="/docs/dev/developer_mode"
                       onClick={() => setMobileMenuOpen(false)}
-                      className={`flex items-center justify-center gap-1.5 py-2 px-2 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                      className={`flex items-center justify-center gap-1 py-2 px-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                         isDevMode
                           ? "bg-[#1D63E0] text-white shadow-xs font-bold"
                           : "bg-white text-slate-700 hover:bg-slate-50 border border-slate-200/80"
@@ -302,6 +304,18 @@ export function Header() {
                     >
                       <Code className="h-3.5 w-3.5 shrink-0" />
                       <span>Developer</span>
+                    </Link>
+                    <Link
+                      href="/docs/portal/dashboard"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={`flex items-center justify-center gap-1 py-2 px-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                        isPortalMode
+                          ? "bg-[#1D63E0] text-white shadow-xs font-bold"
+                          : "bg-white text-slate-700 hover:bg-slate-50 border border-slate-200/80"
+                      }`}
+                    >
+                      <LayoutDashboard className="h-3.5 w-3.5 shrink-0" />
+                      <span>Portal</span>
                     </Link>
                   </div>
                 </div>

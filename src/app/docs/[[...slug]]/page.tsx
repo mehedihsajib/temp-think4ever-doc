@@ -180,6 +180,11 @@ export default async function DocsPage({ params }: DocsPageProps) {
     redirect("/docs/dev/developer_mode");
   }
 
+  // If navigating to /docs/portal -> redirect to /docs/portal/dashboard
+  if (slug.length === 1 && slug[0] === "portal") {
+    redirect("/docs/portal/dashboard");
+  }
+
   // If navigating to legacy /docs/manual_* -> redirect to /docs/*
   if (slug.length === 1 && slug[0].startsWith("manual_")) {
     redirect(`/docs/${slug[0].replace(/^manual_/, "")}`);
