@@ -119,35 +119,35 @@ export const headerNav: NavItem[] = [
       {
         title: "Build a New Project",
         description: "3 - Create your new project.",
-        href: "/docs/manual_create_project",
+        href: "/docs/create_project",
         icon: FolderPlus,
         color: "text-emerald-500",
       },
       {
         title: "Think MCP",
         description: "9 - Claude, Codex and Cursor.",
-        href: "/docs/manual_think_mcp",
+        href: "/docs/think_mcp",
         icon: Puzzle,
         color: "text-amber-500",
       },
       {
         title: "Reverse Engineering",
         description: "4 - Analyze your existing codebase.",
-        href: "/docs/manual_analyze_code",
+        href: "/docs/analyze_code",
         icon: Settings,
         color: "text-slate-500",
       },
       {
         title: "Think API",
         description: "10 - Programmatically manage tokens.",
-        href: "/docs/manual_think_api",
+        href: "/docs/think_api",
         icon: Terminal,
         color: "text-emerald-500",
       },
       {
         title: "Production Hardening",
         description: "5 - Assess your project's production readiness.",
-        href: "/docs/manual_production_hardening",
+        href: "/docs/production_hardening",
         icon: ShieldHalf,
         color: "text-rose-500",
       },
@@ -229,38 +229,38 @@ export const docsSidebarNav: SidebarGroup[] = [
       },
       {
         title: "Key Features",
-        href: "/docs/manual_key_features",
+        href: "/docs/key_features",
         icon: Star,
       },
       {
         title: "Theme",
-        href: "/docs/manual_theme",
+        href: "/docs/theme",
         icon: Palette,
       },
       {
         title: "Dashboard",
-        href: "/docs/manual_dashboard",
+        href: "/docs/dashboard",
         icon: LayoutDashboard,
       },
       {
         title: "Create a new Project",
-        href: "/docs/manual_create_project",
+        href: "/docs/create_project",
         icon: FolderPlus,
         items: [
           {
             title: "Reverse Engineering",
             badge: "Analyze Existing Code",
-            href: "/docs/manual_analyze_code",
+            href: "/docs/analyze_code",
           },
           {
             title: "Production Hardening",
             badge: "Prod Readiness check",
-            href: "/docs/manual_production_hardening",
+            href: "/docs/production_hardening",
           },
           {
             title: "Design from Intent",
             badge: "Design from scratch",
-            href: "/docs/manual_design_from_intent",
+            href: "/docs/design_from_intent",
           },
         ],
       },
@@ -271,17 +271,17 @@ export const docsSidebarNav: SidebarGroup[] = [
     items: [
       {
         title: "Project Settings",
-        href: "/docs/manual_project_settings",
+        href: "/docs/project_settings",
         icon: SlidersHorizontal,
       },
       {
         title: "API Keys",
-        href: "/docs/manual_api_keys",
+        href: "/docs/api_keys",
         icon: Key,
       },
       {
         title: "Version Control",
-        href: "/docs/manual_version_control",
+        href: "/docs/version_control",
         icon: GitBranch,
       },
       {
@@ -301,12 +301,12 @@ export const docsSidebarNav: SidebarGroup[] = [
       },
       {
         title: "Sidekick",
-        href: "/docs/manual_sidekick",
+        href: "/docs/sidekick",
         icon: Bot,
       },
       {
         title: "Third-party Ecosystem Integration",
-        href: "/docs/manual_ecosystem_integration",
+        href: "/docs/ecosystem_integration",
         icon: Plug,
       },
     ],
@@ -316,7 +316,7 @@ export const docsSidebarNav: SidebarGroup[] = [
     items: [
       {
         title: "Requirements",
-        href: "/docs/manual_requirements",
+        href: "/docs/requirements",
         icon: ListChecks,
       },
       {
@@ -326,22 +326,22 @@ export const docsSidebarNav: SidebarGroup[] = [
       },
       {
         title: "Concept",
-        href: "/docs/manual_concept",
+        href: "/docs/concept",
         icon: Lightbulb,
       },
       {
         title: "Business Flow",
-        href: "/docs/manual_business_flow",
+        href: "/docs/business_flow",
         icon: Workflow,
       },
       {
         title: "Roles & Permissions",
-        href: "/docs/manual_roles_permissions",
+        href: "/docs/roles_permissions",
         icon: ShieldCheck,
       },
       {
         title: "Business Rules",
-        href: "/docs/manual_business_rules",
+        href: "/docs/business_rules",
         icon: Scale,
       },
     ],
@@ -356,32 +356,32 @@ export const docsSidebarNav: SidebarGroup[] = [
       },
       {
         title: "Data Objects",
-        href: "/docs/manual_data_objects",
+        href: "/docs/data_objects",
         icon: Boxes,
       },
       {
         title: "Integration Maps",
-        href: "/docs/manual_integration_maps",
+        href: "/docs/integration_maps",
         icon: Map,
       },
       {
         title: "API Endpoints",
-        href: "/docs/manual_api_endpoints",
+        href: "/docs/api_endpoints",
         icon: Code,
       },
       {
         title: "State & Lifecycle",
-        href: "/docs/manual_state_lifecycle",
+        href: "/docs/state_lifecycle",
         icon: RefreshCw,
       },
       {
         title: "Events & Jobs",
-        href: "/docs/manual_events_jobs",
+        href: "/docs/events_jobs",
         icon: Zap,
       },
       {
         title: "Environment & Config",
-        href: "/docs/manual_environment_config",
+        href: "/docs/environment_config",
         icon: Sliders,
       },
     ],
@@ -391,17 +391,17 @@ export const docsSidebarNav: SidebarGroup[] = [
     items: [
       {
         title: "UI Design",
-        href: "/docs/manual_ui_design",
+        href: "/docs/ui_design",
         icon: Palette,
       },
       {
         title: "Technical Diagrams",
-        href: "/docs/manual_technical_diagrams",
+        href: "/docs/technical_diagrams",
         icon: Network,
       },
       {
         title: "Requirements Docs",
-        href: "/docs/manual_requirements_docs",
+        href: "/docs/requirements_docs",
         icon: FileText,
       },
       {
