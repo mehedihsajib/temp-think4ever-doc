@@ -15,31 +15,31 @@ import {
 
 // MCP Custom Brand SVG Icons
 const ClaudeIcon = ({ className }: { className?: string }) => (
-  <img src="/images/icons/claude.svg" alt="Claude" className={`${className || "h-4 w-4"} object-contain`} />
+  <img src="/docs/images/icons/claude.svg" alt="Claude" className={`${className || "h-4 w-4"} object-contain`} />
 );
 const CodexIcon = ({ className }: { className?: string }) => (
-  <img src="/images/icons/codex.svg" alt="Codex" className={`${className || "h-4 w-4"} object-contain`} />
+  <img src="/docs/images/icons/codex.svg" alt="Codex" className={`${className || "h-4 w-4"} object-contain`} />
 );
 const CursorIcon = ({ className }: { className?: string }) => (
-  <img src="/images/icons/cursor.svg" alt="Cursor" className={`${className || "h-4 w-4"} object-contain`} />
+  <img src="/docs/images/icons/cursor.svg" alt="Cursor" className={`${className || "h-4 w-4"} object-contain`} />
 );
 const ClaudeDesktopIcon = ({ className }: { className?: string }) => (
-  <img src="/images/icons/claude-desktop.svg" alt="Claude Desktop" className={`${className || "h-4 w-4"} object-contain`} />
+  <img src="/docs/images/icons/claude-desktop.svg" alt="Claude Desktop" className={`${className || "h-4 w-4"} object-contain`} />
 );
 const VSCodeIcon = ({ className }: { className?: string }) => (
-  <img src="/images/icons/vscode.svg" alt="VS Code" className={`${className || "h-4 w-4"} object-contain`} />
+  <img src="/docs/images/icons/vscode.svg" alt="VS Code" className={`${className || "h-4 w-4"} object-contain`} />
 );
 const WindsurfIcon = ({ className }: { className?: string }) => (
-  <img src="/images/icons/windsurf.svg" alt="Windsurf" className={`${className || "h-4 w-4"} object-contain`} />
+  <img src="/docs/images/icons/windsurf.svg" alt="Windsurf" className={`${className || "h-4 w-4"} object-contain`} />
 );
 const GeminiIcon = ({ className }: { className?: string }) => (
-  <img src="/images/icons/gemini.svg" alt="Gemini" className={`${className || "h-4 w-4"} object-contain`} />
+  <img src="/docs/images/icons/gemini.svg" alt="Gemini" className={`${className || "h-4 w-4"} object-contain`} />
 );
 const AmazonQIcon = ({ className }: { className?: string }) => (
-  <img src="/images/icons/amazonq.svg" alt="Amazon Q" className={`${className || "h-4 w-4"} object-contain`} />
+  <img src="/docs/images/icons/amazonq.svg" alt="Amazon Q" className={`${className || "h-4 w-4"} object-contain`} />
 );
 const KiroIcon = ({ className }: { className?: string }) => (
-  <img src="/images/icons/kiro.svg" alt="Kiro" className={`${className || "h-4 w-4"} object-contain`} />
+  <img src="/docs/images/icons/kiro.svg" alt="Kiro" className={`${className || "h-4 w-4"} object-contain`} />
 );
 
 export type NavItem = {
@@ -123,84 +123,84 @@ export const headerNav: NavItem[] = [
       {
         title: "Customer Onboarding",
         description: "1 - Get Started with Think4ever.",
-        href: "/docs/onboarding",
+        href: "/onboarding",
         icon: Rocket,
         color: "text-blue-500",
       },
       {
         title: "Think4ever Designer",
         description: "7 - Learn how to map systems.",
-        href: "/docs/introduction",
+        href: "/introduction",
         icon: Palette,
         color: "text-blue-500",
       },
       {
         title: "Customer Workspace",
         description: "2 - Managing your Workspace",
-        href: "/docs/portal/workspace",
+        href: "/portal/workspace",
         icon: Briefcase,
         color: "text-indigo-500",
       },
       {
         title: "Think4ever Developer",
         description: "8 - Technical guide for developers.",
-        href: "/docs/dev/developer_mode",
+        href: "/dev/developer_mode",
         icon: Code,
         color: "text-indigo-500",
       },
       {
         title: "Build a New Project",
         description: "3 - Create your new project.",
-        href: "/docs/create_project",
+        href: "/create_project",
         icon: FolderPlus,
         color: "text-emerald-500",
       },
       {
         title: "Think MCP",
         description: "9 - Claude, Codex and Cursor.",
-        href: "/docs/think_mcp",
+        href: "/think_mcp",
         icon: Puzzle,
         color: "text-amber-500",
       },
       {
         title: "Reverse Engineering",
         description: "4 - Analyze your existing codebase.",
-        href: "/docs/analyze_code",
+        href: "/analyze_code",
         icon: Settings,
         color: "text-slate-500",
       },
       {
         title: "Think API",
         description: "10 - Programmatically manage tokens.",
-        href: "/docs/think_api",
+        href: "/think_api",
         icon: Terminal,
         color: "text-emerald-500",
       },
       {
         title: "Production Hardening",
         description: "5 - Assess your project's production readiness.",
-        href: "/docs/production_hardening",
+        href: "/production_hardening",
         icon: ShieldHalf,
         color: "text-rose-500",
       },
       {
         title: "Think4ever Portal",
         description: "11 - Manage your team dashboard",
-        href: "/docs/portal/dashboard",
+        href: "/portal/dashboard",
         icon: Users,
         color: "text-blue-500",
       },
       {
         title: "Marketplace",
         description: "6 - Find freelancers, hire, or get hired.",
-        href: "/docs/portal/marketplace",
+        href: "/portal/marketplace",
         icon: Store,
         color: "text-amber-500",
       },
       {
         title: "VS Code Plugin",
         description: "12 - Access T4E inside VS Code.",
-        href: "/docs/dev/vs_code_integration",
+        href: "/dev/vs_code_integration",
         icon: Code,
         color: "text-blue-500",
       },
@@ -256,43 +256,43 @@ export const docsSidebarNav: SidebarGroup[] = [
     items: [
       {
         title: "Introduction",
-        href: "/docs/introduction",
+        href: "/introduction",
         icon: Info,
       },
       {
         title: "Key Features",
-        href: "/docs/key_features",
+        href: "/key_features",
         icon: Star,
       },
       {
         title: "Theme",
-        href: "/docs/theme",
+        href: "/theme",
         icon: Palette,
       },
       {
         title: "Dashboard",
-        href: "/docs/dashboard",
+        href: "/dashboard",
         icon: LayoutDashboard,
       },
       {
         title: "Create a new Project",
-        href: "/docs/create_project",
+        href: "/create_project",
         icon: FolderPlus,
         items: [
           {
             title: "Reverse Engineering",
             badge: "Analyze Existing Code",
-            href: "/docs/analyze_code",
+            href: "/analyze_code",
           },
           {
             title: "Production Hardening",
             badge: "Prod Readiness check",
-            href: "/docs/production_hardening",
+            href: "/production_hardening",
           },
           {
             title: "Design from Intent",
             badge: "Design from scratch",
-            href: "/docs/design_from_intent",
+            href: "/design_from_intent",
           },
         ],
       },
@@ -303,42 +303,42 @@ export const docsSidebarNav: SidebarGroup[] = [
     items: [
       {
         title: "Project Settings",
-        href: "/docs/project_settings",
+        href: "/project_settings",
         icon: SlidersHorizontal,
       },
       {
         title: "API Keys",
-        href: "/docs/api_keys",
+        href: "/api_keys",
         icon: Key,
       },
       {
         title: "Version Control",
-        href: "/docs/version_control",
+        href: "/version_control",
         icon: GitBranch,
       },
       {
         title: "Marketplace",
-        href: "/docs/portal/marketplace",
+        href: "/portal/marketplace",
         icon: Store,
       },
       {
         title: "View & Share",
-        href: "/docs/view-and-share",
+        href: "/view-and-share",
         icon: Share2,
       },
       {
         title: "Other",
-        href: "/docs/others",
+        href: "/others",
         icon: MoreHorizontal,
       },
       {
         title: "Sidekick",
-        href: "/docs/sidekick",
+        href: "/sidekick",
         icon: Bot,
       },
       {
         title: "Third-party Ecosystem Integration",
-        href: "/docs/ecosystem_integration",
+        href: "/ecosystem_integration",
         icon: Plug,
       },
     ],
@@ -348,32 +348,32 @@ export const docsSidebarNav: SidebarGroup[] = [
     items: [
       {
         title: "Requirements",
-        href: "/docs/requirements",
+        href: "/requirements",
         icon: ListChecks,
       },
       {
         title: "Functional Architecture",
-        href: "/docs/functional-architecture",
+        href: "/functional-architecture",
         icon: Network,
       },
       {
         title: "Concept",
-        href: "/docs/concept",
+        href: "/concept",
         icon: Lightbulb,
       },
       {
         title: "Business Flow",
-        href: "/docs/business_flow",
+        href: "/business_flow",
         icon: Workflow,
       },
       {
         title: "Roles & Permissions",
-        href: "/docs/roles_permissions",
+        href: "/roles_permissions",
         icon: ShieldCheck,
       },
       {
         title: "Business Rules",
-        href: "/docs/business_rules",
+        href: "/business_rules",
         icon: Scale,
       },
     ],
@@ -383,37 +383,37 @@ export const docsSidebarNav: SidebarGroup[] = [
     items: [
       {
         title: "Concept Summary",
-        href: "/docs/concept-summary",
+        href: "/concept-summary",
         icon: Layers,
       },
       {
         title: "Data Objects",
-        href: "/docs/data_objects",
+        href: "/data_objects",
         icon: Boxes,
       },
       {
         title: "Integration Maps",
-        href: "/docs/integration_maps",
+        href: "/integration_maps",
         icon: Map,
       },
       {
         title: "API Endpoints",
-        href: "/docs/api_endpoints",
+        href: "/api_endpoints",
         icon: Code,
       },
       {
         title: "State & Lifecycle",
-        href: "/docs/state_lifecycle",
+        href: "/state_lifecycle",
         icon: RefreshCw,
       },
       {
         title: "Events & Jobs",
-        href: "/docs/events_jobs",
+        href: "/events_jobs",
         icon: Zap,
       },
       {
         title: "Environment & Config",
-        href: "/docs/environment_config",
+        href: "/environment_config",
         icon: Sliders,
       },
     ],
@@ -423,22 +423,22 @@ export const docsSidebarNav: SidebarGroup[] = [
     items: [
       {
         title: "UI Design",
-        href: "/docs/ui_design",
+        href: "/ui_design",
         icon: Palette,
       },
       {
         title: "Technical Diagrams",
-        href: "/docs/technical_diagrams",
+        href: "/technical_diagrams",
         icon: Network,
       },
       {
         title: "Requirements Docs",
-        href: "/docs/requirements_docs",
+        href: "/requirements_docs",
         icon: FileText,
       },
       {
         title: "Agents Documents",
-        href: "/docs/agents-documents",
+        href: "/agents-documents",
         icon: Bot,
       },
     ],
@@ -448,57 +448,57 @@ export const docsSidebarNav: SidebarGroup[] = [
     items: [
       {
         title: "Overview",
-        href: "/docs/mcp_overview",
+        href: "/mcp_overview",
         icon: Layers,
       },
       {
         title: "Claude Code",
-        href: "/docs/mcp_claude_code",
+        href: "/mcp_claude_code",
         icon: ClaudeIcon,
       },
       {
         title: "Codex",
-        href: "/docs/mcp_codex",
+        href: "/mcp_codex",
         icon: CodexIcon,
       },
       {
         title: "Cursor",
-        href: "/docs/mcp_cursor",
+        href: "/mcp_cursor",
         icon: CursorIcon,
       },
       {
         title: "Claude Desktop",
-        href: "/docs/mcp_claude_desktop",
+        href: "/mcp_claude_desktop",
         icon: ClaudeDesktopIcon,
       },
       {
         title: "VS Code",
-        href: "/docs/mcp_vscode",
+        href: "/mcp_vscode",
         icon: VSCodeIcon,
       },
       {
         title: "Windsurf",
-        href: "/docs/mcp_windsurf",
+        href: "/mcp_windsurf",
         icon: WindsurfIcon,
       },
       {
         title: "Gemini CLI",
-        href: "/docs/mcp_gemini",
+        href: "/mcp_gemini",
         icon: GeminiIcon,
       },
       {
         title: "Amazon Q",
-        href: "/docs/mcp_amazonq",
+        href: "/mcp_amazonq",
         icon: AmazonQIcon,
       },
       {
         title: "Kiro",
-        href: "/docs/mcp_kiro",
+        href: "/mcp_kiro",
         icon: KiroIcon,
       },
       {
         title: "Test & Tools",
-        href: "/docs/mcp_test_and_tools",
+        href: "/mcp_test_and_tools",
         icon: Wrench,
       },
     ],
@@ -508,7 +508,7 @@ export const docsSidebarNav: SidebarGroup[] = [
     items: [
       {
         title: "Tasks",
-        href: "/docs/tasks",
+        href: "/tasks",
         icon: ListChecks,
       },
     ],
@@ -518,7 +518,7 @@ export const docsSidebarNav: SidebarGroup[] = [
     items: [
       {
         title: "Jira",
-        href: "/docs/jira",
+        href: "/jira",
         icon: Plug,
       },
     ],
@@ -528,17 +528,17 @@ export const docsSidebarNav: SidebarGroup[] = [
     items: [
       {
         title: "Knowledge and Feedback",
-        href: "/docs/knowledge-and-feedback",
+        href: "/knowledge-and-feedback",
         icon: BookOpen,
       },
       {
         title: "Feedback",
-        href: "/docs/feedback",
+        href: "/feedback",
         icon: MessageSquare,
       },
       {
         title: "Collaboration",
-        href: "/docs/collaboration",
+        href: "/collaboration",
         icon: Users,
       },
     ],
@@ -548,7 +548,7 @@ export const docsSidebarNav: SidebarGroup[] = [
     items: [
       {
         title: "Think API",
-        href: "/docs/think_api",
+        href: "/think_api",
         icon: Terminal,
       },
     ],
@@ -560,62 +560,62 @@ export const devSidebarNav: SidebarGroup[] = [
     items: [
       {
         title: "Developer Mode",
-        href: "/docs/dev/developer_mode",
+        href: "/dev/developer_mode",
         icon: Code,
       },
       {
         title: "Start a New Project",
-        href: "/docs/dev/start_new_project",
+        href: "/dev/start_new_project",
         icon: PlusCircle,
       },
       {
         title: "Generating Concepts and Designs",
-        href: "/docs/dev/generating_concepts",
+        href: "/dev/generating_concepts",
         icon: Lightbulb,
       },
       {
         title: "Run the Application",
-        href: "/docs/dev/run_application",
+        href: "/dev/run_application",
         icon: PlayCircle,
       },
       {
         title: "Testing the Application",
-        href: "/docs/dev/testing_application",
+        href: "/dev/testing_application",
         icon: CheckCircle2,
       },
       {
         title: "Structure",
-        href: "/docs/dev/structure",
+        href: "/dev/structure",
         icon: Network,
       },
       {
         title: "Issues",
-        href: "/docs/dev/issues",
+        href: "/dev/issues",
         icon: Bug,
       },
       {
         title: "Database",
-        href: "/docs/dev/database",
+        href: "/dev/database",
         icon: Database,
       },
       {
         title: "Terminal",
-        href: "/docs/dev/terminal",
+        href: "/dev/terminal",
         icon: Terminal,
       },
       {
         title: "AI Assistant",
-        href: "/docs/dev/ai_assistant",
+        href: "/dev/ai_assistant",
         icon: Bot,
       },
       {
         title: "Public Access",
-        href: "/docs/dev/public_access",
+        href: "/dev/public_access",
         icon: Globe,
       },
       {
         title: "VS Code Integration",
-        href: "/docs/dev/vs_code_integration",
+        href: "/dev/vs_code_integration",
         icon: FileCode,
       },
     ],
@@ -627,57 +627,57 @@ export const portalSidebarNav: SidebarGroup[] = [
     items: [
       {
         title: "Dashboard",
-        href: "/docs/portal/dashboard",
+        href: "/portal/dashboard",
         icon: Home,
       },
       {
         title: "Multi-Language Support",
-        href: "/docs/portal/multilang",
+        href: "/portal/multilang",
         icon: Globe,
       },
       {
         title: "Workspace",
-        href: "/docs/portal/workspace",
+        href: "/portal/workspace",
         icon: FolderOpen,
       },
       {
         title: "API Keys & Usage",
-        href: "/docs/portal/api_keys_usages",
+        href: "/portal/api_keys_usages",
         icon: Key,
       },
       {
         title: "Marketplace",
-        href: "/docs/portal/marketplace",
+        href: "/portal/marketplace",
         icon: Store,
       },
       {
         title: "Usage & Analysis",
-        href: "/docs/portal/usage_and_analysis",
+        href: "/portal/usage_and_analysis",
         icon: BarChart3,
       },
       {
         title: "Billing",
-        href: "/docs/portal/billing",
+        href: "/portal/billing",
         icon: CreditCard,
       },
       {
         title: "Buy More Credits",
-        href: "/docs/portal/buy_more_credits",
+        href: "/portal/buy_more_credits",
         icon: Coins,
       },
       {
         title: "Auto-Top Up",
-        href: "/docs/portal/auto-topup",
+        href: "/portal/auto-topup",
         icon: RefreshCw,
       },
       {
         title: "Support",
-        href: "/docs/portal/support",
+        href: "/portal/support",
         icon: Headphones,
       },
       {
         title: "Settings",
-        href: "/docs/portal/settings",
+        href: "/portal/settings",
         icon: Settings,
       },
     ],

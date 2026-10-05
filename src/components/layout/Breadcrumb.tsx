@@ -15,10 +15,10 @@ function resolveBreadcrumbs(pathname: string): BreadcrumbCrumb[] {
   const crumbs: BreadcrumbCrumb[] = [];
 
   // Developer Mode
-  if (pathname.startsWith("/docs/dev")) {
+  if (pathname.startsWith("/dev")) {
     crumbs.push({
       label: "Think4Ever Developer",
-      href: "/docs/dev/developer_mode",
+      href: "/dev/developer_mode",
     });
 
     // Search devSidebarNav
@@ -41,10 +41,10 @@ function resolveBreadcrumbs(pathname: string): BreadcrumbCrumb[] {
   }
 
   // Portal Mode
-  if (pathname.startsWith("/docs/portal")) {
+  if (pathname.startsWith("/portal")) {
     crumbs.push({
       label: "Think4Ever Portal",
-      href: "/docs/portal/dashboard",
+      href: "/portal/dashboard",
     });
 
     // Search portalSidebarNav
@@ -66,7 +66,7 @@ function resolveBreadcrumbs(pathname: string): BreadcrumbCrumb[] {
   }
 
   // Designer Mode (Default)
-  crumbs.push({ label: "Think4Ever Designer", href: "/docs/introduction" });
+  crumbs.push({ label: "Think4Ever Designer", href: "/introduction" });
 
   // Search docsSidebarNav
   for (const group of docsSidebarNav) {
@@ -99,7 +99,7 @@ function resolveBreadcrumbs(pathname: string): BreadcrumbCrumb[] {
   // Fallback for any other doc slug
   const lastPart =
     pathname
-      .replace(/^\/docs\/?/, "")
+      .replace(/^\/?/, "")
       .split("/")
       .pop() || "";
   if (lastPart && lastPart !== "introduction") {
@@ -114,7 +114,7 @@ function resolveBreadcrumbs(pathname: string): BreadcrumbCrumb[] {
 
 export function Breadcrumb({ customPath }: { customPath?: string }) {
   const currentPath = usePathname();
-  const path = customPath || currentPath || "/docs/introduction";
+  const path = customPath || currentPath || "/introduction";
   const crumbs = resolveBreadcrumbs(path);
 
   return (

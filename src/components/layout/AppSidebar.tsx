@@ -20,8 +20,8 @@ export function AppSidebar() {
     "Create a new Project": true,
   });
 
-  const isDevMode = pathname.startsWith("/docs/dev");
-  const isPortalMode = pathname.startsWith("/docs/portal");
+  const isDevMode = pathname.startsWith("/dev");
+  const isPortalMode = pathname.startsWith("/portal");
 
   let navGroups = docsSidebarNav;
   let sidebarTitle = "Think4Ever Designer";

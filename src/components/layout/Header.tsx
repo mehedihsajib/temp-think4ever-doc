@@ -25,18 +25,14 @@ export function Header() {
     "Create a new Project": true,
   });
 
-  const isDevMode = pathname.startsWith("/docs/dev");
-  const isPortalMode = pathname.startsWith("/docs/portal");
-  const isDocsPage = pathname.startsWith("/docs");
+  const isDevMode = pathname.startsWith("/dev");
+  const isPortalMode = pathname.startsWith("/portal");
+  const isDocsPage = true;
   const docGroups = isDevMode ? devSidebarNav : isPortalMode ? portalSidebarNav : docsSidebarNav;
 
   // Auto-select docs tab if on docs route
   useEffect(() => {
-    if (pathname.startsWith('/docs')) {
-      setActiveMobileTab('docs');
-    } else {
-      setActiveMobileTab('menu');
-    }
+    setActiveMobileTab('docs');
   }, [pathname]);
 
   // Lock body scroll when mobile menu is open
@@ -88,7 +84,7 @@ export function Header() {
               className="flex items-center transition-opacity hover:opacity-90 cursor-pointer"
             >
               <img 
-                src="/images/think4ever-logo.svg" 
+                src="/docs/images/think4ever-logo.svg" 
                 alt="Think4Ever" 
                 className="h-7 sm:h-8 w-auto" 
               />
@@ -225,7 +221,7 @@ export function Header() {
               className="flex items-center"
             >
               <img 
-                src="/images/think4ever-logo.svg" 
+                src="/docs/images/think4ever-logo.svg" 
                 alt="Think4Ever" 
                 className="h-7 w-auto" 
               />
@@ -282,7 +278,7 @@ export function Header() {
                   </div>
                   <div className="grid grid-cols-3 gap-1.5">
                     <Link
-                      href="/docs/introduction"
+                      href="/introduction"
                       onClick={() => setMobileMenuOpen(false)}
                       className={`flex items-center justify-center gap-1 py-2 px-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                         !isDevMode && !isPortalMode
@@ -294,7 +290,7 @@ export function Header() {
                       <span>Designer</span>
                     </Link>
                     <Link
-                      href="/docs/dev/developer_mode"
+                      href="/dev/developer_mode"
                       onClick={() => setMobileMenuOpen(false)}
                       className={`flex items-center justify-center gap-1 py-2 px-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                         isDevMode
@@ -306,7 +302,7 @@ export function Header() {
                       <span>Developer</span>
                     </Link>
                     <Link
-                      href="/docs/portal/dashboard"
+                      href="/portal/dashboard"
                       onClick={() => setMobileMenuOpen(false)}
                       className={`flex items-center justify-center gap-1 py-2 px-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                         isPortalMode

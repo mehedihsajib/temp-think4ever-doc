@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { notFound, redirect } from "next/navigation";
+import type { Metadata } from "next";
 import Image from "next/image";
 import remarkGfm from "remark-gfm";
 
@@ -173,21 +174,24 @@ import { Breadcrumb } from "@/components/layout/Breadcrumb";
 
 export default async function DocsPage({ params }: DocsPageProps) {
   const resolvedParams = await params;
-  let slug = resolvedParams.slug || ["introduction"];
+  let slug = resolvedParams.slug;
+  if (!slug || slug.length === 0) {
+    slug = ["introduction"];
+  }
 
-  // If navigating to /docs/dev -> redirect to /docs/dev/developer_mode
+  // If navigating to /dev -> redirect to /dev/developer_mode
   if (slug.length === 1 && slug[0] === "dev") {
-    redirect("/docs/dev/developer_mode");
+    redirect("/dev/developer_mode");
   }
 
-  // If navigating to /docs/portal -> redirect to /docs/portal/dashboard
+  // If navigating to /portal -> redirect to /portal/dashboard
   if (slug.length === 1 && slug[0] === "portal") {
-    redirect("/docs/portal/dashboard");
+    redirect("/portal/dashboard");
   }
 
-  // If navigating to legacy /docs/manual_* -> redirect to /docs/*
+  // If navigating to legacy /manual_* -> redirect to /*
   if (slug.length === 1 && slug[0].startsWith("manual_")) {
-    redirect(`/docs/${slug[0].replace(/^manual_/, "")}`);
+    redirect(`/${slug[0].replace(/^manual_/, "")}`);
   }
 
   // Resolve file in src/content
@@ -231,7 +235,7 @@ export default async function DocsPage({ params }: DocsPageProps) {
     };
   });
 
-  const currentPath = `/docs/${slug.join("/")}`;
+  const currentPath = `/${slug.join("/")}`;
 
   return (
     <div className="flex w-full gap-8 items-start">
@@ -250,6 +254,33 @@ export default async function DocsPage({ params }: DocsPageProps) {
       <OnThisPage initialHeadings={headings} />
     </div>
   );
+}
+
+export async function generateMetadata({
+  params,
+}: DocsPageProps): Promise<Metadata> {
+  const resolvedParams = await params;
+  const slug = resolvedParams.slug || ["introduction"];
+
+  let title = "Think4Ever - Designer Documentation";
+
+  if (slug.length > 0) {
+    if (slug[0] === "dev") {
+      title = "Think4Ever - Developer Documentation";
+    } else if (slug[0] === "portal") {
+      title = "Think4Ever - Portal Documentation";
+    }
+  }
+
+  return {
+    title,
+    openGraph: {
+      title,
+    },
+    twitter: {
+      title,
+    },
+  };
 }
 
 export function generateStaticParams() {
@@ -271,6 +302,9 @@ export function generateStaticParams() {
   }
 
   scanDir(contentDir);
+
+  // Also include root / (empty slug) which renders introduction
+  params.push({ slug: [] });
 
   // Also include default introduction if not scanned
   if (!params.some((p) => p.slug.join("/") === "introduction")) {

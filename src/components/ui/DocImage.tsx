@@ -11,6 +11,9 @@ interface DocImageProps {
 }
 
 export function DocImage({ src, alt = "Documentation Image" }: DocImageProps) {
+  const normalizedSrc = src.startsWith("/") && !src.startsWith("/docs/")
+    ? `/docs${src}`
+    : src;
   const [isOpen, setIsOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -62,7 +65,7 @@ export function DocImage({ src, alt = "Documentation Image" }: DocImageProps) {
         title="Click to zoom in"
       >
         <Image
-          src={src}
+          src={normalizedSrc}
           alt={alt}
           width={1200}
           height={800}
@@ -118,7 +121,7 @@ export function DocImage({ src, alt = "Documentation Image" }: DocImageProps) {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={src}
+                src={normalizedSrc}
                 alt={alt}
                 className="max-w-full max-h-[85vh] w-auto h-auto object-contain rounded-xl shadow-2xl ring-1 ring-white/10"
               />
