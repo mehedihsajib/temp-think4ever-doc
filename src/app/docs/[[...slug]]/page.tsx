@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import Image from "next/image";
 
 interface DocsPageProps {
@@ -84,12 +84,32 @@ import { OnThisPage, HeadingItem } from "@/components/layout/OnThisPage";
 
 export default async function DocsPage({ params }: DocsPageProps) {
   const resolvedParams = await params;
-  const slug = resolvedParams.slug || ["introduction"];
-  const filePath = path.join(
+  let slug = resolvedParams.slug || ["introduction"];
+
+  // If navigating to /docs/dev -> redirect to /docs/dev/developer_mode
+  if (slug.length === 1 && slug[0] === "dev") {
+    redirect("/docs/dev/developer_mode");
+  }
+
+  // Resolve file in src/content
+  let filePath = path.join(
     process.cwd(),
     "src/content",
     `${slug.join("/")}.mdx`,
   );
+
+  // Fallback checks for designer / root paths
+  if (!fs.existsSync(filePath)) {
+    const designerPath = path.join(
+      process.cwd(),
+      "src/content",
+      "designer",
+      `${slug.join("/")}.mdx`,
+    );
+    if (fs.existsSync(designerPath)) {
+      filePath = designerPath;
+    }
+  }
 
   if (!fs.existsSync(filePath)) {
     notFound();
@@ -97,7 +117,7 @@ export default async function DocsPage({ params }: DocsPageProps) {
 
   const source = fs.readFileSync(filePath, "utf-8");
 
-  // Extract top-level headings directly from MDX source for SSR table of contents (no submenus)
+  // Extract top-level headings directly from MDX source for SSR table of contents
   const headingLines = source.match(/^##\s+(.*)$/gm) || [];
   const headings: HeadingItem[] = headingLines.map((line) => {
     const rawTitle = line
@@ -123,5 +143,29 @@ export default async function DocsPage({ params }: DocsPageProps) {
 }
 
 export function generateStaticParams() {
-  return [{ slug: ["introduction"] }];
+  const contentDir = path.join(process.cwd(), "src/content");
+  const params: { slug: string[] }[] = [];
+
+  function scanDir(dir: string) {
+    if (!fs.existsSync(dir)) return;
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    for (const entry of entries) {
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {
+        scanDir(fullPath);
+      } else if (entry.isFile() && entry.name.endsWith(".mdx")) {
+        const rel = path.relative(contentDir, fullPath).replace(/\.mdx$/, "");
+        params.push({ slug: rel.split(path.sep) });
+      }
+    }
+  }
+
+  scanDir(contentDir);
+
+  // Also include default introduction if not scanned
+  if (!params.some((p) => p.slug.join("/") === "introduction")) {
+    params.push({ slug: ["introduction"] });
+  }
+
+  return params;
 }

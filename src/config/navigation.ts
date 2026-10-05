@@ -6,7 +6,8 @@ import {
   Key, GitBranch, Share2, MoreHorizontal, Bot,
   Plug, ListChecks, Network, Lightbulb, Workflow,
   ShieldCheck, Scale, Layers, Boxes, Map, RefreshCw,
-  Zap, Sliders, FileText
+  Zap, Sliders, FileText,
+  PlusCircle, PlayCircle, CheckCircle2, Bug, Database, FileCode
 } from "lucide-react";
 
 export type NavItem = {
@@ -407,6 +408,73 @@ export const docsSidebarNav: SidebarGroup[] = [
         title: "Agents Documents",
         href: "/docs/agents-documents",
         icon: Bot,
+      },
+    ],
+  },
+];
+
+export const devSidebarNav: SidebarGroup[] = [
+  {
+    items: [
+      {
+        title: "Developer Mode",
+        href: "/docs/dev/developer_mode",
+        icon: Code,
+      },
+      {
+        title: "Start a New Project",
+        href: "/docs/dev/start_new_project",
+        icon: PlusCircle,
+      },
+      {
+        title: "Generating Concepts and Designs",
+        href: "/docs/dev/generating_concepts",
+        icon: Lightbulb,
+      },
+      {
+        title: "Run the Application",
+        href: "/docs/dev/run_application",
+        icon: PlayCircle,
+      },
+      {
+        title: "Testing the Application",
+        href: "/docs/dev/testing_application",
+        icon: CheckCircle2,
+      },
+      {
+        title: "Structure",
+        href: "/docs/dev/structure",
+        icon: Network,
+      },
+      {
+        title: "Issues",
+        href: "/docs/dev/issues",
+        icon: Bug,
+      },
+      {
+        title: "Database",
+        href: "/docs/dev/database",
+        icon: Database,
+      },
+      {
+        title: "Terminal",
+        href: "/docs/dev/terminal",
+        icon: Terminal,
+      },
+      {
+        title: "AI Assistant",
+        href: "/docs/dev/ai_assistant",
+        icon: Bot,
+      },
+      {
+        title: "Public Access",
+        href: "/docs/dev/public_access",
+        icon: Globe,
+      },
+      {
+        title: "VS Code Integration",
+        href: "/docs/dev/vs_code_integration",
+        icon: FileCode,
       },
     ],
   },

@@ -3,9 +3,10 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { docsSidebarNav } from "@/config/navigation";
+import { docsSidebarNav, devSidebarNav } from "@/config/navigation";
 import { 
   BookOpen,
+  Code,
   ChevronDown, 
   ChevronRight, 
   PanelLeftClose, 
@@ -18,6 +19,11 @@ export function AppSidebar() {
   const [openSubmenus, setOpenSubmenus] = useState<Record<string, boolean>>({
     "Create a new Project": true,
   });
+
+  const isDevMode = pathname.startsWith("/docs/dev");
+  const navGroups = isDevMode ? devSidebarNav : docsSidebarNav;
+  const sidebarTitle = isDevMode ? "Think4Ever Developer" : "Think4Ever Designer";
+  const SidebarIcon = isDevMode ? Code : BookOpen;
 
   const toggleSubmenu = (title: string) => {
     setOpenSubmenus((prev) => ({
@@ -50,9 +56,9 @@ export function AppSidebar() {
           {/* Top Header of Sidebar - FIXED at the top of the sidebar, never scrolls away and never under a scrollbar */}
           <div className="flex items-center justify-between pb-3 mb-2 shrink-0 pr-2">
             <div className="flex items-center gap-2">
-              <BookOpen className="h-4 w-4 text-[#1D63E0] cursor-pointer" />
+              <SidebarIcon className="h-4 w-4 text-[#1D63E0] cursor-pointer" />
               <span className="text-sm font-bold text-slate-800 tracking-tight cursor-default">
-                Think4Ever Designer
+                {sidebarTitle}
               </span>
             </div>
             <button
@@ -67,7 +73,7 @@ export function AppSidebar() {
 
           {/* Navigation Groups - ONLY this section scrolls */}
           <nav className="flex-1 overflow-y-auto overflow-x-hidden custom-scrollbar pr-2 pb-8 space-y-6">
-            {docsSidebarNav.map((group, groupIdx) => (
+            {navGroups.map((group, groupIdx) => (
               <div key={groupIdx}>
                 {group.title && (
                   <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-400 px-2 mb-2">
