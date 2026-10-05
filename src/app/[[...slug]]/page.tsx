@@ -34,6 +34,7 @@ import { DocImage } from "@/components/ui/DocImage";
 import { Callout } from "@/components/ui/Callout";
 import { CodeBlock } from "@/components/ui/CodeBlock";
 import { YouTube } from "@/components/ui/YouTube";
+import { DocNavButton } from "@/components/ui/DocNavButton";
 
 const components = {
   h1: ({ children, ...props }: any) => {
@@ -81,6 +82,8 @@ const components = {
   Warning: (props: any) => <Callout type="warning" {...props} />,
   Tip: (props: any) => <Callout type="tip" {...props} />,
   YouTube,
+  DocNavButton,
+  DocNav: DocNavButton,
   pre: CodeBlock,
   code: ({ children, className, ...props }: any) => {
     if (className?.includes("language-")) {
