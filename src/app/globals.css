@@ -237,3 +237,70 @@
   pointer-events: auto;
   transform: translateX(-50%) translateY(0);
 }
+
+/* Light Theme Code Syntax Highlighting */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.token.punctuation {
+  color: #64748b;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol {
+  color: #0369a1;
+  font-weight: 600;
+}
+
+.token.boolean {
+  color: #be185d;
+  font-weight: 600;
+}
+
+.token.number {
+  color: #d97706;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin {
+  color: #0d9488;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+  color: #475569;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #0f766e;
+  font-weight: 600;
+}
+
+.token.function,
+.token.class-name {
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+.token.parameter,
+.token.variable {
+  color: #4f46e5;
+}
+
+.token.regex,
+.token.important {
+  color: #ea580c;
+}

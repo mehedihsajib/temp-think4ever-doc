@@ -3,6 +3,7 @@ import path from "path";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { notFound, redirect } from "next/navigation";
 import Image from "next/image";
+import remarkGfm from "remark-gfm";
 
 interface DocsPageProps {
   params: Promise<{
@@ -82,7 +83,11 @@ const components = {
   pre: CodeBlock,
   code: ({ children, className, ...props }: any) => {
     if (className?.includes("language-")) {
-      return <code className={className} {...props}>{children}</code>;
+      return (
+        <code className={className} {...props}>
+          {children}
+        </code>
+      );
     }
     return (
       <code
@@ -95,13 +100,19 @@ const components = {
   },
   table: ({ children, ...props }: any) => (
     <div className="my-6 w-full overflow-x-auto rounded-xl border border-slate-200 shadow-xs">
-      <table className="w-full text-left text-sm border-collapse" {...props}>
+      <table
+        className="mt-0 mb-0 w-full text-left text-sm border-collapse"
+        {...props}
+      >
         {children}
       </table>
     </div>
   ),
   thead: ({ children, ...props }: any) => (
-    <thead className="bg-slate-50/90 border-b border-slate-200 text-xs font-semibold uppercase tracking-wider text-slate-700" {...props}>
+    <thead
+      className="bg-slate-50/90 border-b border-slate-200 text-xs font-semibold uppercase tracking-wider text-slate-700"
+      {...props}
+    >
       {children}
     </thead>
   ),
@@ -111,12 +122,18 @@ const components = {
     </th>
   ),
   td: ({ children, ...props }: any) => (
-    <td className="px-5 py-3.5 border-b border-slate-100 text-slate-600 align-top text-sm leading-relaxed" {...props}>
+    <td
+      className="px-5 py-3.5 border-b border-slate-100 text-slate-600 align-top text-sm leading-relaxed"
+      {...props}
+    >
       {children}
     </td>
   ),
   tr: ({ children, ...props }: any) => (
-    <tr className="hover:bg-slate-50/60 transition-colors last:border-b-0" {...props}>
+    <tr
+      className="hover:bg-slate-50/60 transition-colors last:border-b-0"
+      {...props}
+    >
       {children}
     </tr>
   ),
@@ -125,17 +142,26 @@ const components = {
     if (text.startsWith("[!NOTE]") || text.toLowerCase().startsWith("note:")) {
       return <Callout type="note">{children}</Callout>;
     }
-    if (text.startsWith("[!WARNING]") || text.toLowerCase().startsWith("warning:")) {
+    if (
+      text.startsWith("[!WARNING]") ||
+      text.toLowerCase().startsWith("warning:")
+    ) {
       return <Callout type="warning">{children}</Callout>;
     }
-    if (text.startsWith("[!IMPORTANT]") || text.toLowerCase().startsWith("important:")) {
+    if (
+      text.startsWith("[!IMPORTANT]") ||
+      text.toLowerCase().startsWith("important:")
+    ) {
       return <Callout type="important">{children}</Callout>;
     }
     if (text.startsWith("[!TIP]") || text.toLowerCase().startsWith("tip:")) {
       return <Callout type="tip">{children}</Callout>;
     }
     return (
-      <blockquote className="my-4 border-l-4 border-slate-300 pl-4 italic text-slate-600" {...props}>
+      <blockquote
+        className="my-4 border-l-4 border-slate-300 pl-4 italic text-slate-600"
+        {...props}
+      >
         {children}
       </blockquote>
     );
@@ -206,7 +232,15 @@ export default async function DocsPage({ params }: DocsPageProps) {
     <div className="flex w-full gap-8 items-start">
       <div className="min-w-0 flex-1">
         <Breadcrumb customPath={currentPath} />
-        <MDXRemote source={source} components={components} />
+        <MDXRemote
+          source={source}
+          components={components}
+          options={{
+            mdxOptions: {
+              remarkPlugins: [remarkGfm],
+            },
+          }}
+        />
       </div>
       <OnThisPage initialHeadings={headings} />
     </div>
