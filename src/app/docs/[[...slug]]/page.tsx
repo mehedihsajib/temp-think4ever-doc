@@ -143,6 +143,7 @@ const components = {
 };
 
 import { OnThisPage, HeadingItem } from "@/components/layout/OnThisPage";
+import { Breadcrumb } from "@/components/layout/Breadcrumb";
 
 export default async function DocsPage({ params }: DocsPageProps) {
   const resolvedParams = await params;
@@ -199,9 +200,12 @@ export default async function DocsPage({ params }: DocsPageProps) {
     };
   });
 
+  const currentPath = `/docs/${slug.join("/")}`;
+
   return (
     <div className="flex w-full gap-8 items-start">
       <div className="min-w-0 flex-1">
+        <Breadcrumb customPath={currentPath} />
         <MDXRemote source={source} components={components} />
       </div>
       <OnThisPage initialHeadings={headings} />

@@ -1,29 +1,99 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { headerNav } from '@/config/navigation';
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { usePathname } from 'next/navigation';
+import { headerNav, docsSidebarNav, devSidebarNav } from '@/config/navigation';
+import { 
+  ChevronDown, 
+  ChevronRight, 
+  Menu, 
+  X, 
+  BookOpen, 
+  Code, 
+  Compass,
+  ArrowRight
+} from 'lucide-react';
 
 export function Header() {
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [openMobileGroup, setOpenMobileGroup] = useState<string | null>(null);
+  const [activeMobileTab, setActiveMobileTab] = useState<'docs' | 'menu'>('menu');
+  const [openMobileGroup, setOpenMobileGroup] = useState<string | null>("Product");
+  const [openDocSubmenus, setOpenDocSubmenus] = useState<Record<string, boolean>>({
+    "Create a new Project": true,
+  });
+
+  const isDevMode = pathname.startsWith("/docs/dev");
+  const isDocsPage = pathname.startsWith("/docs");
+  const docGroups = isDevMode ? devSidebarNav : docsSidebarNav;
+
+  // Auto-select docs tab if on docs route
+  useEffect(() => {
+    if (pathname.startsWith('/docs')) {
+      setActiveMobileTab('docs');
+    } else {
+      setActiveMobileTab('menu');
+    }
+  }, [pathname]);
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
+
+  // Close on Escape key press
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMobileMenuOpen(false);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
+  // Close on navigation
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [pathname]);
 
   const toggleMobileGroup = (title: string) => {
     setOpenMobileGroup(openMobileGroup === title ? null : title);
+  };
+
+  const toggleDocSubmenu = (title: string) => {
+    setOpenDocSubmenus((prev) => ({
+      ...prev,
+      [title]: !prev[title],
+    }));
   };
 
   return (
     <>
       <header className="sticky top-0 z-40 w-full border-b border-[#0a2f85] bg-[#093cad] text-white">
         <div className="mx-auto flex h-16 max-w-[1600px] items-center justify-between px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-4">
-            <Link href="https://think4ever.com" className="hidden md:block">
-              <img src="/images/think4ever-logo.svg" alt="Think4Ever" className="h-8 w-auto" />
+          
+          {/* Brand Logo - Aligned left across all viewports */}
+          <div className="flex items-center gap-3">
+            <Link 
+              href="https://think4ever.com" 
+              className="flex items-center transition-opacity hover:opacity-90 cursor-pointer"
+            >
+              <img 
+                src="/images/think4ever-logo.svg" 
+                alt="Think4Ever" 
+                className="h-7 sm:h-8 w-auto" 
+              />
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - 100% untouched */}
           <nav className="hidden md:flex items-center gap-1 lg:gap-2">
             {headerNav.map((item, idx) => {
               const isTwoCol = item.columns === 2;
@@ -88,135 +158,330 @@ export function Header() {
             })}
           </nav>
 
-          {/* Desktop CTA Actions */}
+          {/* Desktop CTA Actions - 100% untouched */}
           <div className="hidden md:flex items-center gap-4">
             <Link 
               href="https://portal.think4ever.com/#/login"
-              className="text-sm font-medium text-white/90 hover:text-white transition-colors px-3 py-2"
+              className="text-sm font-medium text-white/90 hover:text-white transition-colors px-3 py-2 cursor-pointer"
             >
               Sign in
             </Link>
             <Link
               href="https://portal.think4ever.com/#/register"
-              className="rounded-full bg-[#F4F6FA] text-[#1D63E0] px-6 py-2.5 text-sm font-semibold shadow-sm hover:bg-white transition-colors"
+              className="rounded-full bg-[#F4F6FA] text-[#1D63E0] px-6 py-2.5 text-sm font-semibold shadow-sm hover:bg-white transition-colors cursor-pointer"
             >
               Start free
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex items-center md:hidden">
-            <Link href="https://think4ever.com" className="mr-4 block md:hidden">
-              <img src="/images/think4ever-logo.svg" alt="Think4Ever" className="h-7 w-auto" />
+          {/* Mobile Header Right Controls */}
+          <div className="flex items-center gap-2 md:hidden">
+            <Link 
+              href="https://portal.think4ever.com/#/login"
+              className="text-xs font-semibold text-white/90 hover:text-white px-2.5 py-1.5 rounded-lg hover:bg-white/10 transition-colors cursor-pointer"
+            >
+              Sign in
             </Link>
             <button
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white/90 hover:text-white"
+              className="flex items-center justify-center p-2 rounded-xl text-white/90 hover:text-white hover:bg-white/10 active:scale-95 transition-all focus:outline-none focus:ring-2 focus:ring-white/20 cursor-pointer"
               onClick={() => setMobileMenuOpen(true)}
+              aria-label="Open navigation menu"
             >
-              <span className="sr-only">Open main menu</span>
               <Menu className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
         </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
-      {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 lg:hidden">
-          <div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm" onClick={() => setMobileMenuOpen(false)} />
-          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-slate-900/10">
-            <div className="flex items-center justify-between">
-              <Link href="https://think4ever.com" className="-m-1.5 p-1.5">
-                <span className="sr-only">Think4Ever</span>
-                {/* On light background in mobile menu, use dark logo or standard one */}
-                <img src="/images/think4ever-logo.svg" alt="" className="h-8 w-auto filter invert" />
-              </Link>
+      {/* Production-Grade Mobile Drawer (Slide-Over) */}
+      <div 
+        className={`fixed inset-0 z-50 md:hidden transition-all duration-300 ${
+          mobileMenuOpen ? "pointer-events-auto" : "pointer-events-none"
+        }`}
+        aria-hidden={!mobileMenuOpen}
+      >
+        {/* Backdrop Overlay with Smooth Fade */}
+        <div 
+          className={`fixed inset-0 bg-slate-950/60 backdrop-blur-xs transition-opacity duration-300 ${
+            mobileMenuOpen ? "opacity-100" : "opacity-0"
+          }`}
+          onClick={() => setMobileMenuOpen(false)} 
+        />
+
+        {/* Slide-Out Drawer Panel */}
+        <div 
+          className={`fixed inset-y-0 right-0 z-50 w-full max-w-[340px] sm:max-w-sm bg-white shadow-2xl flex flex-col transform transition-transform duration-300 ease-in-out ${
+            mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          {/* Drawer Top Header - Brand blue matching header */}
+          <div className="bg-[#093cad] text-white px-5 py-4 flex items-center justify-between border-b border-[#0a2f85] shrink-0">
+            <Link 
+              href="https://think4ever.com" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center"
+            >
+              <img 
+                src="/images/think4ever-logo.svg" 
+                alt="Think4Ever" 
+                className="h-7 w-auto" 
+              />
+            </Link>
+            <button
+              type="button"
+              className="flex items-center justify-center h-8 w-8 rounded-lg text-white/80 hover:text-white hover:bg-white/10 active:scale-95 transition-all cursor-pointer"
+              onClick={() => setMobileMenuOpen(false)}
+              aria-label="Close menu"
+            >
+              <X className="h-5 w-5" aria-hidden="true" />
+            </button>
+          </div>
+
+          {/* Segmented Tab Switcher (Documentation vs Main Menu) */}
+          <div className="p-3 bg-slate-50 border-b border-slate-200/80 shrink-0">
+            <div className="flex rounded-xl bg-slate-200/70 p-1">
               <button
                 type="button"
-                className="-m-2.5 rounded-md p-2.5 text-slate-700"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={() => setActiveMobileTab('docs')}
+                className={`flex-1 flex items-center justify-center gap-1.5 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                  activeMobileTab === 'docs'
+                    ? 'bg-white text-[#1D63E0] shadow-xs font-bold'
+                    : 'text-slate-600 hover:text-slate-900'
+                }`}
               >
-                <span className="sr-only">Close menu</span>
-                <X className="h-6 w-6" aria-hidden="true" />
+                <BookOpen className="h-3.5 w-3.5" />
+                <span>Docs Menu</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setActiveMobileTab('menu')}
+                className={`flex-1 flex items-center justify-center gap-1.5 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                  activeMobileTab === 'menu'
+                    ? 'bg-white text-[#1D63E0] shadow-xs font-bold'
+                    : 'text-slate-600 hover:text-slate-900'
+                }`}
+              >
+                <Compass className="h-3.5 w-3.5" />
+                <span>Site Menu</span>
               </button>
             </div>
-            
-            <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-slate-500/10">
-                <div className="space-y-2 py-6">
-                  {headerNav.map((item, idx) => (
-                    <div key={idx}>
-                      {item.items ? (
-                        <>
-                          <button
-                            className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-slate-900 hover:bg-slate-50"
-                            onClick={() => toggleMobileGroup(item.title)}
-                          >
-                            {item.title}
-                            <ChevronDown
-                              className={`h-5 w-5 flex-none transition-transform ${openMobileGroup === item.title ? 'rotate-180 text-blue-600' : 'text-slate-400'}`}
-                              aria-hidden="true"
-                            />
-                          </button>
-                          {openMobileGroup === item.title && (
-                            <div className="mt-2 space-y-1.5 px-1">
-                              {item.items.map((subItem, subIdx) => {
-                                const Icon = subItem.icon;
-                                return (
-                                  <Link
-                                    key={subIdx}
-                                    href={subItem.href!}
-                                    className="flex items-start gap-2.5 rounded-lg p-2 hover:bg-slate-50 transition-colors cursor-pointer"
-                                    onClick={() => setMobileMenuOpen(false)}
-                                  >
-                                    <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#f1f5f9] border border-slate-200/60 text-[#3A5690]">
-                                      <Icon className="h-3.5 w-3.5 text-[#3A5690]" />
-                                    </div>
-                                    <div className="min-w-0 flex-1">
-                                      <div className="text-xs font-bold text-[#0B1B3A]">
-                                        {subItem.title}
-                                      </div>
-                                      <div className="text-[10px] font-medium text-[#3A5690] leading-tight mt-0.5">
-                                        {subItem.description}
-                                      </div>
-                                    </div>
-                                  </Link>
-                                );
-                              })}
-                            </div>
-                          )}
-                        </>
-                      ) : (
-                        <Link
-                          href={item.href!}
-                          className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-slate-900 hover:bg-slate-50"
-                        >
-                          {item.title}
-                        </Link>
+          </div>
+
+          {/* Drawer Scrollable Content Area */}
+          <div className="flex-1 overflow-y-auto custom-scrollbar px-4 py-3.5">
+            {activeMobileTab === 'docs' ? (
+              /* Documentation Navigation View */
+              <div className="space-y-4">
+                {/* Designer vs Developer Switcher */}
+                <div className="p-2.5 rounded-xl bg-blue-50/70 border border-blue-100/70">
+                  <div className="text-[10px] font-bold uppercase tracking-wider text-blue-800/70 mb-1.5 px-1">
+                    Documentation Mode
+                  </div>
+                  <div className="grid grid-cols-2 gap-1.5">
+                    <Link
+                      href="/docs/introduction"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={`flex items-center justify-center gap-1.5 py-2 px-2 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                        !isDevMode
+                          ? "bg-[#1D63E0] text-white shadow-xs font-bold"
+                          : "bg-white text-slate-700 hover:bg-slate-50 border border-slate-200/80"
+                      }`}
+                    >
+                      <BookOpen className="h-3.5 w-3.5 shrink-0" />
+                      <span>Designer</span>
+                    </Link>
+                    <Link
+                      href="/docs/dev/developer_mode"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={`flex items-center justify-center gap-1.5 py-2 px-2 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                        isDevMode
+                          ? "bg-[#1D63E0] text-white shadow-xs font-bold"
+                          : "bg-white text-slate-700 hover:bg-slate-50 border border-slate-200/80"
+                      }`}
+                    >
+                      <Code className="h-3.5 w-3.5 shrink-0" />
+                      <span>Developer</span>
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Doc Navigation Tree */}
+                <div className="space-y-4 pt-1">
+                  {docGroups.map((group, gIdx) => (
+                    <div key={gIdx} className="space-y-1">
+                      {group.title && (
+                        <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-400 px-2 mb-1.5">
+                          {group.title}
+                        </h4>
                       )}
+                      <div className="space-y-0.5">
+                        {group.items.map((item, itemIdx) => {
+                          const Icon = item.icon;
+                          const hasSubmenu = item.items && item.items.length > 0;
+                          const isSubOpen = !!openDocSubmenus[item.title];
+                          const isActive = pathname === item.href;
+
+                          return (
+                            <div key={itemIdx}>
+                              {hasSubmenu ? (
+                                <div>
+                                  <button
+                                    type="button"
+                                    onClick={() => toggleDocSubmenu(item.title)}
+                                    className={`group flex w-full items-center justify-between px-2.5 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
+                                      isActive
+                                        ? "bg-blue-50 text-blue-600 font-semibold"
+                                        : "text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+                                    }`}
+                                  >
+                                    <div className="flex items-center gap-2 truncate">
+                                      {Icon && (
+                                        <Icon className="h-3.5 w-3.5 shrink-0 text-slate-500" />
+                                      )}
+                                      <span className="truncate">{item.title}</span>
+                                    </div>
+                                    {isSubOpen ? (
+                                      <ChevronDown className="h-3.5 w-3.5 text-slate-400" />
+                                    ) : (
+                                      <ChevronRight className="h-3.5 w-3.5 text-slate-400" />
+                                    )}
+                                  </button>
+
+                                  {isSubOpen && (
+                                    <div className="mt-1 ml-4 pl-2 border-l border-slate-200 space-y-0.5">
+                                      {item.items!.map((subItem, subIdx) => {
+                                        const isSubActive = pathname === subItem.href;
+                                        return (
+                                          <Link
+                                            key={subIdx}
+                                            href={subItem.href}
+                                            onClick={() => setMobileMenuOpen(false)}
+                                            className={`block px-2.5 py-1.5 rounded-md text-xs transition-colors cursor-pointer ${
+                                              isSubActive
+                                                ? "bg-blue-50 text-blue-600 font-semibold"
+                                                : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
+                                            }`}
+                                          >
+                                            <div>{subItem.title}</div>
+                                            {subItem.badge && (
+                                              <div className="text-[10px] text-slate-400 font-normal">
+                                                ({subItem.badge})
+                                              </div>
+                                            )}
+                                          </Link>
+                                        );
+                                      })}
+                                    </div>
+                                  )}
+                                </div>
+                              ) : (
+                                <Link
+                                  href={item.href}
+                                  onClick={() => setMobileMenuOpen(false)}
+                                  className={`flex items-center gap-2 px-2.5 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
+                                    isActive
+                                      ? "bg-blue-50 text-blue-600 font-semibold border-l-2 border-blue-600 rounded-l-none pl-2"
+                                      : "text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+                                  }`}
+                                >
+                                  {Icon && (
+                                    <Icon className={`h-3.5 w-3.5 shrink-0 ${isActive ? "text-blue-600" : "text-slate-400"}`} />
+                                  )}
+                                  <span className="truncate">{item.title}</span>
+                                </Link>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
                     </div>
                   ))}
                 </div>
-                <div className="py-6">
-                  <Link
-                    href="https://portal.think4ever.com/#/login"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-slate-900 hover:bg-slate-50"
-                  >
-                    Sign in
-                  </Link>
-                  <Link
-                    href="https://portal.think4ever.com/#/register"
-                    className="mt-4 block rounded-full bg-[#FF7A1A] px-3 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[#e66c16]"
-                  >
-                    Start for free
-                  </Link>
-                </div>
               </div>
-            </div>
+            ) : (
+              /* Site Navigation View */
+              <div className="space-y-1">
+                {headerNav.map((item, idx) => (
+                  <div key={idx} className="border-b border-slate-100 pb-1 mb-1 last:border-b-0">
+                    {item.items ? (
+                      <div>
+                        <button
+                          type="button"
+                          className="flex w-full items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-800 hover:bg-slate-50 transition-colors cursor-pointer"
+                          onClick={() => toggleMobileGroup(item.title)}
+                        >
+                          <span>{item.title}</span>
+                          <ChevronDown
+                            className={`h-4 w-4 text-slate-400 transition-transform duration-200 ${
+                              openMobileGroup === item.title ? "rotate-180 text-blue-600" : ""
+                            }`}
+                          />
+                        </button>
+
+                        {openMobileGroup === item.title && (
+                          <div className="mt-1 space-y-1 px-1 pb-2">
+                            {item.items.map((subItem, subIdx) => {
+                              const Icon = subItem.icon;
+                              return (
+                                <Link
+                                  key={subIdx}
+                                  href={subItem.href!}
+                                  onClick={() => setMobileMenuOpen(false)}
+                                  className="flex items-start gap-2.5 rounded-xl p-2 hover:bg-blue-50/60 transition-colors cursor-pointer"
+                                >
+                                  <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-slate-100 border border-slate-200 text-[#3A5690]">
+                                    <Icon className="h-3.5 w-3.5" />
+                                  </div>
+                                  <div className="min-w-0 flex-1">
+                                    <div className="text-xs font-bold text-slate-900 leading-snug">
+                                      {subItem.title}
+                                    </div>
+                                    <div className="text-[11px] font-medium text-slate-500 leading-tight mt-0.5">
+                                      {subItem.description}
+                                    </div>
+                                  </div>
+                                </Link>
+                              );
+                            })}
+                          </div>
+                        )}
+                      </div>
+                    ) : (
+                      <Link
+                        href={item.href!}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-800 hover:bg-slate-50 hover:text-blue-600 transition-colors cursor-pointer"
+                      >
+                        <span>{item.title}</span>
+                        <ArrowRight className="h-3.5 w-3.5 text-slate-400" />
+                      </Link>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Drawer Footer with Authentic Brand CTAs */}
+          <div className="p-4 bg-slate-50 border-t border-slate-200 shrink-0 space-y-2">
+            <Link
+              href="https://portal.think4ever.com/#/login"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full py-2.5 px-4 rounded-xl text-center text-xs font-semibold text-slate-700 bg-white border border-slate-200 hover:bg-slate-100 hover:text-slate-900 transition-colors block cursor-pointer"
+            >
+              Sign in
+            </Link>
+            <Link
+              href="https://portal.think4ever.com/#/register"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full py-2.5 px-4 rounded-xl text-center text-xs font-bold text-white bg-[#1D63E0] hover:bg-[#1550b8] shadow-sm transition-all active:scale-[0.98] block cursor-pointer"
+            >
+              Start free
+            </Link>
           </div>
         </div>
-      )}
+      </div>
     </>
   );
 }

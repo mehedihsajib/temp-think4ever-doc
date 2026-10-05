@@ -34,7 +34,7 @@ export function AppSidebar() {
 
   return (
     <aside 
-      className={`select-none sticky top-20 self-start shrink-0 h-[calc(100vh-5.5rem)] flex flex-col transition-all duration-300 ease-in-out ${
+      className={`select-none sticky top-20 self-start shrink-0 h-[calc(100vh-5.5rem)] hidden md:flex flex-col transition-all duration-300 ease-in-out ${
         isCollapsed 
           ? "w-10 overflow-hidden" 
           : "w-[270px]"
