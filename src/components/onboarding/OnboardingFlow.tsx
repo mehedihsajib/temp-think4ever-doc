@@ -225,7 +225,7 @@ export function OnboardingFlow() {
                           isActive
                             ? "bg-[#1D63E0] text-white shadow-sm ring-4 ring-blue-500/15"
                             : isCompleted
-                            ? "bg-emerald-500 text-white"
+                            ? "bg-[#0B1B3A] text-white"
                             : "bg-white text-slate-500 border-2 border-slate-200 group-hover:border-slate-300"
                         }`}
                       >
@@ -459,11 +459,11 @@ function Step0Introduction() {
             </h4>
             <ul className="space-y-2 text-sm text-slate-700">
               <li className="flex items-start gap-2.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#1D63E0] mt-2 shrink-0" />
                 <span><strong>Sign In</strong> – Redirects users to the login page.</span>
               </li>
               <li className="flex items-start gap-2.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2 shrink-0" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#1D63E0] mt-2 shrink-0" />
                 <span><strong>Get Started</strong> – Begins the onboarding or registration process for new users.</span>
               </li>
             </ul>
@@ -473,7 +473,7 @@ function Step0Introduction() {
         {/* How to Use the Home Page Card */}
         <div className="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-xs space-y-4">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold">
+            <div className="w-10 h-10 rounded-xl bg-blue-50 text-[#1D63E0] flex items-center justify-center font-bold">
               <Layers className="w-5 h-5" />
             </div>
             <div>
@@ -484,7 +484,7 @@ function Step0Introduction() {
 
           <div className="space-y-4 text-sm">
             <div>
-              <span className="font-semibold text-slate-800 text-xs uppercase tracking-wide text-blue-700">
+              <span className="font-semibold text-xs uppercase tracking-wide text-blue-900">
                 For Existing Users
               </span>
               <ol className="mt-1.5 space-y-1 list-decimal list-inside text-slate-600">
@@ -495,7 +495,7 @@ function Step0Introduction() {
             </div>
 
             <div className="pt-2 border-t border-slate-100">
-              <span className="font-semibold text-slate-800 text-xs uppercase tracking-wide text-emerald-700">
+              <span className="font-semibold text-xs uppercase tracking-wide text-blue-900">
                 For New Users
               </span>
               <ol className="mt-1.5 space-y-1 list-decimal list-inside text-slate-600">
@@ -506,20 +506,20 @@ function Step0Introduction() {
             </div>
 
             <div className="pt-2 border-t border-slate-100">
-              <span className="font-semibold text-slate-800 text-xs uppercase tracking-wide text-purple-700">
+              <span className="font-semibold text-xs uppercase tracking-wide text-blue-900">
                 To Learn About the Platform
               </span>
               <ul className="mt-1.5 space-y-1 text-slate-600">
                 <li className="flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2 shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#1D63E0] mt-2 shrink-0" />
                   <span>Use the Features menu to explore platform capabilities.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2 shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#1D63E0] mt-2 shrink-0" />
                   <span>Select How It Works to understand the AI-assisted workflow.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-2 shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#1D63E0] mt-2 shrink-0" />
                   <span>Review Packages for available plans and services.</span>
                 </li>
               </ul>
@@ -566,52 +566,52 @@ function Step1CustomerOnboarding() {
       {/* Overview Cards (Purpose & Prerequisites) */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-xs space-y-3">
-          <div className="flex items-center gap-2.5 text-blue-700">
+          <div className="flex items-center gap-2.5 text-[#1D63E0]">
             <ShieldCheck className="w-5 h-5 text-[#1D63E0]" />
             <h3 className="text-base font-bold text-slate-900">Purpose of Onboarding</h3>
           </div>
           <p className="text-xs text-slate-500">The onboarding journey ensures that:</p>
           <ul className="space-y-2 text-sm text-slate-700">
             <li className="flex items-start gap-2.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />
+              <CheckCircle2 className="w-4 h-4 text-[#1D63E0] mt-0.5 shrink-0" />
               <span>Your account details and identity are verified for data security and privacy compliance.</span>
             </li>
             <li className="flex items-start gap-2.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />
+              <CheckCircle2 className="w-4 h-4 text-[#1D63E0] mt-0.5 shrink-0" />
               <span>Your profile and organizational preferences are correctly established.</span>
             </li>
             <li className="flex items-start gap-2.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />
+              <CheckCircle2 className="w-4 h-4 text-[#1D63E0] mt-0.5 shrink-0" />
               <span>You select the subscription plan that best aligns with your team or personal requirements.</span>
             </li>
             <li className="flex items-start gap-2.5">
-              <CheckCircle2 className="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" />
+              <CheckCircle2 className="w-4 h-4 text-[#1D63E0] mt-0.5 shrink-0" />
               <span>You gain immediate access to your customized Think4ever workspace.</span>
             </li>
           </ul>
         </div>
 
         <div className="bg-white rounded-2xl border border-slate-200/80 p-6 shadow-xs space-y-3">
-          <div className="flex items-center gap-2.5 text-amber-700">
-            <Zap className="w-5 h-5 text-amber-500" />
+          <div className="flex items-center gap-2.5 text-[#1D63E0]">
+            <Zap className="w-5 h-5 text-[#1D63E0]" />
             <h3 className="text-base font-bold text-slate-900">What You Will Need Before Starting</h3>
           </div>
           <p className="text-xs text-slate-500">Before you begin, ensure you have:</p>
           <ul className="space-y-2 text-sm text-slate-700">
             <li className="flex items-start gap-2.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#1D63E0] mt-2 shrink-0" />
               <span>A valid business or personal email address.</span>
             </li>
             <li className="flex items-start gap-2.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#1D63E0] mt-2 shrink-0" />
               <span>Access to your email inbox to receive verification security codes (OTP).</span>
             </li>
             <li className="flex items-start gap-2.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#1D63E0] mt-2 shrink-0" />
               <span>Basic organizational details (such as company/team name and your role).</span>
             </li>
             <li className="flex items-start gap-2.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2 shrink-0" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#1D63E0] mt-2 shrink-0" />
               <span>Payment information if opting for a paid subscription tier.</span>
             </li>
           </ul>
