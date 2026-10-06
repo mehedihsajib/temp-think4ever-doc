@@ -3,7 +3,7 @@ import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { AppSidebar } from "@/components/layout/AppSidebar";
+import { DocsLayoutShell } from "@/components/layout/DocsLayoutShell";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -60,16 +60,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col font-sans">
         <div className="flex min-h-screen flex-col bg-white">
           <Header />
-          <div className="mx-auto flex w-full max-w-[1600px] flex-1 px-4 sm:px-6 lg:px-8">
-            <div className="flex w-full gap-8 pt-8 pb-16 items-start">
-              <AppSidebar />
-              <main className="min-w-0 flex-1">
-                <div className="prose prose-slate max-w-none">
-                  {children}
-                </div>
-              </main>
-            </div>
-          </div>
+          <DocsLayoutShell>{children}</DocsLayoutShell>
           <Footer />
         </div>
       </body>
