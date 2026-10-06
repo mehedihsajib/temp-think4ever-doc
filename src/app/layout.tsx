@@ -13,6 +13,19 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "Think4Ever - Designer Documentation",
   description: "Official documentation for Think4Ever Platform.",
+  icons: {
+    icon: [
+      { url: "/docs/favicon.ico", sizes: "any" },
+      { url: "/docs/favicon.svg", type: "image/svg+xml" },
+      { url: "/docs/favicon-48.png", sizes: "48x48", type: "image/png" },
+      { url: "/docs/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/docs/favicon-16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [
+      { url: "/docs/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  manifest: "/docs/site.webmanifest",
 };
 
 export default function RootLayout({
