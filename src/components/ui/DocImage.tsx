@@ -61,7 +61,7 @@ export function DocImage({ src, alt = "Documentation Image" }: DocImageProps) {
     <>
       <span
         onClick={openModal}
-        className="group relative block my-2 max-w-[800px] rounded-xl overflow-hidden border border-border shadow-sm cursor-zoom-in select-none bg-slate-50 transition-all duration-200 hover:shadow-md hover:border-slate-300"
+        className="group relative block my-2 max-w-[800px] rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm cursor-zoom-in select-none bg-slate-50 dark:bg-slate-900/60 transition-all duration-200 hover:shadow-md hover:border-slate-300 dark:hover:border-slate-700"
         title="Click to zoom in"
       >
         <Image

@@ -20,7 +20,7 @@ export function DocNavButton({
   const displayLabel = label || title || "Continue";
 
   return (
-    <div className="not-prose mt-12 pt-8 border-t border-slate-200/80 flex justify-end">
+    <div className="not-prose mt-12 pt-8 border-t border-slate-200/80 dark:border-slate-800 flex justify-end">
       <Link
         href={href}
         className="group inline-flex items-center gap-3.5 px-6 py-3 rounded-full bg-[#1D63E0] text-white shadow-xs hover:bg-[#1554c2] hover:shadow-md hover:shadow-blue-500/15 active:scale-[0.99] transition-all duration-200 cursor-pointer"

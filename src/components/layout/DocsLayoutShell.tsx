@@ -21,7 +21,7 @@ export function DocsLayoutShell({ children }: DocsLayoutShellProps) {
       <div className="flex w-full gap-8 pt-8 pb-16 items-start">
         <AppSidebar />
         <main className="min-w-0 flex-1">
-          <div className="prose prose-slate max-w-none">
+          <div className="prose prose-slate dark:prose-invert max-w-none">
             {children}
           </div>
         </main>

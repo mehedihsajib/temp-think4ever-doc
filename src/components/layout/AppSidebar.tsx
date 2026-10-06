@@ -57,26 +57,26 @@ export function AppSidebar() {
           <button
             type="button"
             onClick={() => setIsCollapsed(false)}
-            className="flex items-center justify-center p-2 rounded-lg border border-slate-200 bg-white text-slate-700 shadow-sm hover:bg-slate-50 hover:text-blue-600 transition-colors cursor-pointer"
+            className="flex items-center justify-center p-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 shadow-sm hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer"
             title="Expand sidebar"
           >
-            <PanelLeftOpen className="h-4 w-4 text-slate-600 cursor-pointer" />
+            <PanelLeftOpen className="h-4 w-4 text-slate-600 dark:text-slate-400 cursor-pointer" />
           </button>
         </div>
       ) : (
         <div className="w-full flex flex-col h-full">
-          {/* Top Header of Sidebar - FIXED at the top of the sidebar, never scrolls away and never under a scrollbar */}
+          {/* Top Header of Sidebar */}
           <div className="flex items-center justify-between pb-3 mb-2 shrink-0 pr-2">
             <div className="flex items-center gap-2">
               <SidebarIcon className="h-4 w-4 text-[#1D63E0] cursor-pointer" />
-              <span className="text-sm font-bold text-slate-800 tracking-tight cursor-default">
+              <span className="text-sm font-bold text-slate-800 dark:text-slate-100 tracking-tight cursor-default">
                 {sidebarTitle}
               </span>
             </div>
             <button
               type="button"
               onClick={() => setIsCollapsed(true)}
-              className="p-1.5 rounded-md text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer"
+              className="p-1.5 rounded-md text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
               title="Collapse sidebar"
             >
               <PanelLeftClose className="h-4 w-4 cursor-pointer" />
@@ -88,7 +88,7 @@ export function AppSidebar() {
             {navGroups.map((group, groupIdx) => (
               <div key={groupIdx}>
                 {group.title && (
-                  <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-400 px-2 mb-2">
+                  <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 px-2 mb-2">
                     {group.title}
                   </h4>
                 )}
@@ -108,8 +108,8 @@ export function AppSidebar() {
                               onClick={() => toggleSubmenu(item.title)}
                               className={`group flex w-full items-center justify-between px-2.5 py-1.5 rounded-lg text-[13px] font-medium transition-colors cursor-pointer ${
                                 isActive
-                                  ? "bg-blue-50 text-blue-600 font-semibold"
-                                  : "text-slate-700 hover:bg-slate-100/70 hover:text-slate-900"
+                                  ? "bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 font-semibold"
+                                  : "text-slate-700 dark:text-slate-300 hover:bg-slate-100/70 dark:hover:bg-slate-800/60 hover:text-slate-900 dark:hover:text-white"
                               }`}
                             >
                               <div className="flex items-center gap-2.5 truncate">
@@ -117,22 +117,22 @@ export function AppSidebar() {
                                   <Icon
                                     className={`h-4 w-4 shrink-0 transition-colors cursor-pointer ${
                                       isActive
-                                        ? "text-blue-600"
-                                        : "text-slate-400 group-hover:text-slate-600"
+                                        ? "text-blue-600 dark:text-blue-400"
+                                        : "text-slate-400 dark:text-slate-500 group-hover:text-slate-600 dark:group-hover:text-slate-300"
                                     }`}
                                   />
                                 )}
                                 <span className="truncate">{item.title}</span>
                               </div>
                               {isSubmenuOpen ? (
-                                <ChevronDown className="h-3.5 w-3.5 text-slate-400 cursor-pointer" />
+                                <ChevronDown className="h-3.5 w-3.5 text-slate-400 dark:text-slate-500 cursor-pointer" />
                               ) : (
-                                <ChevronRight className="h-3.5 w-3.5 text-slate-400 cursor-pointer" />
+                                <ChevronRight className="h-3.5 w-3.5 text-slate-400 dark:text-slate-500 cursor-pointer" />
                               )}
                             </button>
 
                             {isSubmenuOpen && (
-                              <ul className="mt-1 ml-4 pl-3 space-y-1 list-none">
+                              <ul className="mt-1 ml-4 pl-3 space-y-1 list-none border-l border-slate-200 dark:border-slate-800">
                                 {item.items!.map((subItem, subIdx) => {
                                   const isSubActive = pathname === subItem.href;
                                   return (
@@ -141,15 +141,15 @@ export function AppSidebar() {
                                         href={subItem.href}
                                         className={`group block px-2.5 py-1.5 rounded-md text-xs transition-colors cursor-pointer ${
                                           isSubActive
-                                            ? "bg-blue-50 text-blue-600 font-semibold"
-                                            : "text-slate-600 hover:bg-slate-100/70 hover:text-slate-900"
+                                            ? "bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 font-semibold"
+                                            : "text-slate-600 dark:text-slate-400 hover:bg-slate-100/70 dark:hover:bg-slate-800/60 hover:text-slate-900 dark:hover:text-white"
                                         }`}
                                       >
                                         <div className="font-medium">
                                           {subItem.title}
                                         </div>
                                         {subItem.badge && (
-                                          <div className="text-[11px] text-slate-400 mt-0.5 font-normal">
+                                          <div className="text-[11px] text-slate-400 dark:text-slate-500 mt-0.5 font-normal">
                                             ({subItem.badge})
                                           </div>
                                         )}
@@ -165,16 +165,16 @@ export function AppSidebar() {
                             href={item.href}
                             className={`group flex items-center gap-2.5 px-2.5 py-1.5 rounded-lg text-[13px] font-medium transition-colors cursor-pointer ${
                               isActive
-                                ? "bg-blue-50 text-blue-600 font-semibold border-l-2 border-blue-600 rounded-l-none pl-2"
-                                : "text-slate-600 hover:bg-slate-100/70 hover:text-slate-900"
+                                ? "bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 font-semibold border-l-2 border-blue-600 dark:border-blue-400 rounded-l-none pl-2"
+                                : "text-slate-600 dark:text-slate-400 hover:bg-slate-100/70 dark:hover:bg-slate-800/60 hover:text-slate-900 dark:hover:text-white"
                             }`}
                           >
                             {Icon && (
                               <Icon
                                 className={`h-4 w-4 shrink-0 transition-colors cursor-pointer ${
                                   isActive
-                                    ? "text-blue-600"
-                                    : "text-slate-400 group-hover:text-slate-600"
+                                    ? "text-blue-600 dark:text-blue-400"
+                                    : "text-slate-400 dark:text-slate-500 group-hover:text-slate-600 dark:group-hover:text-slate-300"
                                 }`}
                               />
                             )}

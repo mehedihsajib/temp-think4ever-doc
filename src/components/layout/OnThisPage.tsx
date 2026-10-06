@@ -81,9 +81,9 @@ export function OnThisPage({ initialHeadings = [] }: OnThisPageProps) {
   };
 
   return (
-    <div className="hidden xl:block w-[270px] shrink-0 sticky top-20 self-start h-[calc(100vh-5.5rem)] overflow-y-auto pl-6 border-l border-slate-100 custom-scrollbar">
-      <div className="flex items-center gap-2 text-xs font-semibold text-slate-800 tracking-wide mb-3">
-        <AlignLeft className="h-3.5 w-3.5 text-slate-500 cursor-pointer" />
+    <div className="hidden xl:block w-[270px] shrink-0 sticky top-20 self-start h-[calc(100vh-5.5rem)] overflow-y-auto pl-6 border-l border-slate-100 dark:border-slate-800/80 custom-scrollbar">
+      <div className="flex items-center gap-2 text-xs font-semibold text-slate-800 dark:text-slate-200 tracking-wide mb-3">
+        <AlignLeft className="h-3.5 w-3.5 text-slate-500 dark:text-slate-400 cursor-pointer" />
         <span>On this page</span>
       </div>
 
@@ -102,8 +102,8 @@ export function OnThisPage({ initialHeadings = [] }: OnThisPageProps) {
                   onClick={() => scrollToHeading(heading.id)}
                   className={`block w-full text-left py-1.5 px-2.5 rounded-md text-xs transition-colors cursor-pointer ${
                     isActive
-                      ? "text-blue-600 font-semibold bg-blue-50/80"
-                      : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
+                      ? "text-blue-600 dark:text-blue-400 font-semibold bg-blue-50/80 dark:bg-blue-950/40"
+                      : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/60"
                   }`}
                 >
                   <span className="line-clamp-2">{heading.title}</span>

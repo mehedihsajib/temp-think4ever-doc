@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { DocsLayoutShell } from "@/components/layout/DocsLayoutShell";
+import { ThemeProvider } from "@/components/layout/ThemeProvider";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -56,13 +57,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${dmSans.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col font-sans">
-        <div className="flex min-h-screen flex-col bg-white">
-          <Header />
-          <DocsLayoutShell>{children}</DocsLayoutShell>
-          <Footer />
-        </div>
+    <html lang="en" className={`${dmSans.variable} h-full antialiased`} suppressHydrationWarning>
+      <body className="min-h-full flex flex-col font-sans bg-white dark:bg-[#0B0F19] text-slate-900 dark:text-slate-100 transition-colors duration-200">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <div className="flex min-h-screen flex-col bg-white dark:bg-[#0B0F19] text-slate-900 dark:text-slate-100">
+            <Header />
+            <DocsLayoutShell>{children}</DocsLayoutShell>
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -122,7 +122,7 @@ export function Breadcrumb({ customPath }: { customPath?: string }) {
       <ol
         itemScope
         itemType="https://schema.org/BreadcrumbList"
-        className="flex flex-wrap items-center gap-1.5 text-xs text-slate-500 list-none m-0 p-0 mt-0"
+        className="flex flex-wrap items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400 list-none m-0 p-0 mt-0"
       >
         {/* Home Root Icon */}
         <li
@@ -134,7 +134,7 @@ export function Breadcrumb({ customPath }: { customPath?: string }) {
           <Link
             href="/"
             itemProp="item"
-            className="flex items-center text-slate-400 hover:text-blue-600 transition-colors cursor-pointer p-0.5 rounded-sm hover:bg-slate-100"
+            className="flex items-center text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer p-0.5 rounded-sm hover:bg-slate-100 dark:hover:bg-slate-800"
             title="Home"
             aria-label="Home"
           >
@@ -154,7 +154,7 @@ export function Breadcrumb({ customPath }: { customPath?: string }) {
             <React.Fragment key={idx}>
               <li
                 aria-hidden="true"
-                className="flex items-center text-slate-300"
+                className="flex items-center text-slate-300 dark:text-slate-600"
               >
                 <ChevronRight className="h-3 w-3 stroke-[2]" />
               </li>
@@ -169,7 +169,7 @@ export function Breadcrumb({ customPath }: { customPath?: string }) {
                   <span
                     itemProp="name"
                     aria-current="page"
-                    className="font-medium text-slate-800 truncate"
+                    className="font-medium text-slate-800 dark:text-slate-200 truncate"
                   >
                     {crumb.label}
                   </span>
@@ -177,14 +177,14 @@ export function Breadcrumb({ customPath }: { customPath?: string }) {
                   <Link
                     href={crumb.href}
                     itemProp="item"
-                    className="text-slate-500 hover:text-blue-600 font-medium transition-colors cursor-pointer truncate"
+                    className="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors cursor-pointer truncate"
                   >
                     <span itemProp="name">{crumb.label}</span>
                   </Link>
                 ) : (
                   <span
                     itemProp="name"
-                    className="text-slate-500 font-medium truncate"
+                    className="text-slate-500 dark:text-slate-400 font-medium truncate"
                   >
                     {crumb.label}
                   </span>
