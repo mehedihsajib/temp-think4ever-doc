@@ -4,7 +4,7 @@ import { footerNav } from '@/config/navigation';
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-slate-50 dark:bg-[#070B14] border-t border-slate-200 dark:border-slate-800/80 pt-16 pb-8 font-sans transition-colors duration-200">
+    <footer className="relative overflow-hidden bg-slate-50 dark:bg-[#090A0B] border-t border-slate-200 dark:border-neutral-800 pt-16 pb-8 font-sans transition-colors duration-200">
       {/* Decorative Gradient Line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand-blue/60 to-transparent" />
       
@@ -17,13 +17,20 @@ export function Footer() {
           {/* Brand Column */}
           <div className="flex flex-col items-start gap-5 md:col-span-4 lg:col-span-5">
             <Link href="https://think4ever.com/" className="inline-block">
+              {/* Light mode: dark footer logo */}
               <img 
                 src="https://think4ever.com/docs/assets/images/think4ever-logo-footer.png" 
                 alt="Think4Ever" 
-                className="h-10 w-auto object-contain mb-1 dark:brightness-110"
+                className="h-10 w-auto object-contain mb-1 dark:hidden"
+              />
+              {/* Dark mode: light logo (same as header) */}
+              <img 
+                src="/docs/images/think4ever-logo.svg" 
+                alt="Think4Ever" 
+                className="h-7 sm:h-8 w-auto object-contain mb-1 hidden dark:block"
               />
             </Link>
-            <p className="text-sm leading-relaxed text-slate-600 dark:text-slate-400 max-w-sm">
+            <p className="text-sm leading-relaxed text-slate-600 dark:text-neutral-400 max-w-sm">
               {footerNav.brand.description}
             </p>
             <div className="flex items-center gap-3 mt-1">
@@ -34,7 +41,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.name}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/80 text-slate-500 dark:text-slate-400 transition-all duration-300 hover:border-brand-blue dark:hover:border-blue-400 hover:bg-brand-blue/10 dark:hover:bg-blue-500/10 hover:text-brand-blue dark:hover:text-blue-400"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 dark:border-neutral-800 bg-slate-50 dark:bg-white/[0.04] text-slate-500 dark:text-neutral-400 transition-all duration-300 hover:border-brand-blue dark:hover:border-blue-400 hover:bg-brand-blue/10 dark:hover:bg-blue-500/10 hover:text-brand-blue dark:hover:text-blue-400"
                 >
                   {social.icon === 'youtube' && (
                     <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
@@ -55,14 +62,14 @@ export function Footer() {
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 md:col-span-8 lg:col-span-7">
             {footerNav.groups.map((group, idx) => (
               <div key={idx} className="flex flex-col gap-3 text-sm">
-                <h4 className="mb-2 text-xs font-bold uppercase tracking-widest text-slate-900 dark:text-slate-200">
+                <h4 className="mb-2 text-xs font-bold uppercase tracking-widest text-slate-900 dark:text-neutral-200">
                   {group.title}
                 </h4>
                 {group.links.map((link, linkIdx) => (
                   <Link
                     key={linkIdx}
                     href={link.href}
-                    className="text-slate-600 dark:text-slate-400 transition-colors duration-200 hover:text-blue-600 dark:hover:text-blue-400"
+                    className="text-slate-600 dark:text-neutral-400 transition-colors duration-200 hover:text-blue-600 dark:hover:text-white"
                   >
                     {link.title}
                   </Link>
@@ -73,13 +80,13 @@ export function Footer() {
         </div>
 
         {/* Bottom Footer */}
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-slate-200 dark:border-slate-800/80 pt-8 md:flex-row">
-          <p className="text-xs font-medium text-slate-500 dark:text-slate-400 m-0">
+        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-slate-200 dark:border-white/[0.08] pt-8 md:flex-row">
+          <p className="text-xs font-medium text-slate-500 dark:text-neutral-500 m-0">
             © 2026 Think4Ever Global Inc. All Rights Reserved.
           </p>
-          <div className="flex items-center gap-2 rounded-full border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/60 px-4 py-2">
+          <div className="flex items-center gap-2 rounded-full border border-slate-200 dark:border-white/[0.08] bg-slate-50 dark:bg-white/[0.04] px-4 py-2">
             <span className="h-1.5 w-1.5 rounded-full bg-brand-blue dark:bg-blue-400 animate-pulse" />
-            <span className="text-xs font-semibold text-slate-600 dark:text-slate-300">
+            <span className="text-xs font-semibold text-slate-600 dark:text-neutral-300">
               Think4Ever Inc.
             </span>
           </div>

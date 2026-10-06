@@ -84,18 +84,18 @@ export function CodeBlock({ children, className, ...props }: CodeBlockProps) {
   };
 
   return (
-    <div className="group relative my-6 overflow-hidden rounded-xl border border-slate-200/90 dark:border-slate-800 bg-[#fafafa] dark:bg-[#111827] shadow-xs transition-all duration-200 hover:border-slate-300 dark:hover:border-slate-700 hover:shadow-sm">
+    <div className="group relative my-6 overflow-hidden rounded-xl border border-slate-200/90 dark:border-white/[0.08] bg-[#fafafa] dark:bg-[#121316] shadow-xs transition-all duration-200 hover:border-slate-300 dark:hover:border-white/[0.12] hover:shadow-sm">
       {/* Header Bar */}
-      <div className="flex items-center justify-between border-b border-slate-200/80 dark:border-slate-800 px-4 py-2.5 bg-slate-50/90 dark:bg-slate-900/90 select-none">
+      <div className="flex items-center justify-between border-b border-slate-200/80 dark:border-white/[0.08] px-4 py-2.5 bg-slate-50/90 dark:bg-[#16171B] select-none">
         <div className="flex items-center gap-3">
           {/* Mac-style Window Dots */}
           <div className="flex items-center gap-1.5">
-            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 dark:bg-slate-700 transition-colors group-hover:bg-[#ff5f56]" />
-            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 dark:bg-slate-700 transition-colors group-hover:bg-[#ffbd2e]" />
-            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 dark:bg-slate-700 transition-colors group-hover:bg-[#27c93f]" />
+            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 dark:bg-white/[0.15] transition-colors group-hover:bg-[#ff5f56]" />
+            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 dark:bg-white/[0.15] transition-colors group-hover:bg-[#ffbd2e]" />
+            <span className="h-2.5 w-2.5 rounded-full bg-slate-200 dark:bg-white/[0.15] transition-colors group-hover:bg-[#27c93f]" />
           </div>
           {/* Language Badge */}
-          <span className="text-[11px] font-bold font-mono uppercase tracking-wider text-slate-500 dark:text-slate-400">
+          <span className="text-[11px] font-bold font-mono uppercase tracking-wider text-slate-500 dark:text-neutral-400">
             {lang === "text" ? "Code" : lang}
           </span>
         </div>
@@ -104,7 +104,7 @@ export function CodeBlock({ children, className, ...props }: CodeBlockProps) {
         <button
           type="button"
           onClick={handleCopy}
-          className="flex items-center gap-1.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-2.5 py-1 text-xs font-semibold text-slate-600 dark:text-slate-300 shadow-xs hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-white active:scale-95 transition-all cursor-pointer"
+          className="flex items-center gap-1.5 rounded-lg border border-slate-200 dark:border-white/[0.08] bg-white dark:bg-white/[0.06] px-2.5 py-1 text-xs font-semibold text-slate-600 dark:text-neutral-300 shadow-xs hover:bg-slate-50 dark:hover:bg-white/[0.1] hover:text-slate-900 dark:hover:text-white active:scale-95 transition-all cursor-pointer"
           title="Copy code"
           aria-label="Copy code to clipboard"
         >
@@ -115,7 +115,7 @@ export function CodeBlock({ children, className, ...props }: CodeBlockProps) {
             </>
           ) : (
             <>
-              <Copy className="h-3.5 w-3.5 text-slate-500 dark:text-slate-400" />
+              <Copy className="h-3.5 w-3.5 text-slate-500 dark:text-neutral-400" />
               <span className="font-mono text-[11px]">Copy</span>
             </>
           )}
@@ -123,10 +123,10 @@ export function CodeBlock({ children, className, ...props }: CodeBlockProps) {
       </div>
 
       {/* Code Body */}
-      <div className="overflow-x-auto p-4 text-[13px] leading-relaxed font-mono text-slate-800 dark:text-slate-200 bg-white dark:bg-[#0B0F19]">
-        <pre className="!bg-transparent !p-0 !m-0 !border-0 font-mono text-slate-800 dark:text-slate-200" {...props}>
+      <div className="overflow-x-auto p-4 text-[13px] leading-relaxed font-mono text-slate-800 dark:text-neutral-200 bg-white dark:bg-[#0C0D0E]">
+        <pre className="!bg-transparent !p-0 !m-0 !border-0 font-mono text-slate-800 dark:text-neutral-200" {...props}>
           <code 
-            className={`font-mono text-slate-800 dark:text-slate-200 language-${lang}`}
+            className={`font-mono text-slate-800 dark:text-neutral-200 language-${lang}`}
             dangerouslySetInnerHTML={{ __html: highlightedHtml || rawCode }}
           />
         </pre>

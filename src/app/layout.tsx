@@ -58,9 +58,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${dmSans.variable} h-full antialiased`} suppressHydrationWarning>
-      <body className="min-h-full flex flex-col font-sans bg-white dark:bg-[#0B0F19] text-slate-900 dark:text-slate-100 transition-colors duration-200">
+      <body className="min-h-full flex flex-col font-sans bg-white dark:bg-[#0C0D0E] text-slate-900 dark:text-[#E4E4E7] transition-colors duration-200">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <div className="flex min-h-screen flex-col bg-white dark:bg-[#0B0F19] text-slate-900 dark:text-slate-100">
+          <div className="flex min-h-screen flex-col bg-white dark:bg-[#0C0D0E] text-slate-900 dark:text-[#E4E4E7]">
             <Header />
             <DocsLayoutShell>{children}</DocsLayoutShell>
             <Footer />

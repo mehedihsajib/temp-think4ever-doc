@@ -95,7 +95,7 @@ const components = {
     }
     return (
       <code
-        className="px-1.5 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-mono text-[13px] font-medium border border-slate-200/80 dark:border-slate-700"
+        className="px-1.5 py-0.5 rounded-md bg-slate-100 dark:bg-white/[0.06] text-slate-800 dark:text-neutral-200 font-mono text-[13px] font-medium border border-slate-200/80 dark:border-white/[0.08]"
         {...props}
       >
         {children}
@@ -103,7 +103,7 @@ const components = {
     );
   },
   table: ({ children, ...props }: any) => (
-    <div className="my-6 w-full overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800 shadow-xs">
+    <div className="my-6 w-full overflow-x-auto rounded-xl border border-slate-200 dark:border-white/[0.08] shadow-xs">
       <table
         className="mt-0 mb-0 w-full text-left text-sm border-collapse"
         {...props}
@@ -114,20 +114,20 @@ const components = {
   ),
   thead: ({ children, ...props }: any) => (
     <thead
-      className="bg-slate-50/90 dark:bg-slate-900/90 border-b border-slate-200 dark:border-slate-800 text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300"
+      className="bg-slate-50/90 dark:bg-white/[0.03] border-b border-slate-200 dark:border-white/[0.08] text-xs font-semibold uppercase tracking-wider text-slate-700 dark:text-neutral-300"
       {...props}
     >
       {children}
     </thead>
   ),
   th: ({ children, ...props }: any) => (
-    <th className="px-5 py-3 font-semibold text-slate-700 dark:text-slate-300" {...props}>
+    <th className="px-5 py-3 font-semibold text-slate-700 dark:text-neutral-200" {...props}>
       {children}
     </th>
   ),
   td: ({ children, ...props }: any) => (
     <td
-      className="px-5 py-3.5 border-b border-slate-100 dark:border-slate-800/70 text-slate-600 dark:text-slate-300 align-top text-sm leading-relaxed"
+      className="px-5 py-3.5 border-b border-slate-100 dark:border-white/[0.06] text-slate-600 dark:text-neutral-300 align-top text-sm leading-relaxed"
       {...props}
     >
       {children}
@@ -135,7 +135,7 @@ const components = {
   ),
   tr: ({ children, ...props }: any) => (
     <tr
-      className="hover:bg-slate-50/60 dark:hover:bg-slate-800/40 transition-colors last:border-b-0"
+      className="hover:bg-slate-50/60 dark:hover:bg-white/[0.03] transition-colors last:border-b-0"
       {...props}
     >
       {children}
@@ -163,7 +163,7 @@ const components = {
     }
     return (
       <blockquote
-        className="my-4 border-l-4 border-slate-300 dark:border-slate-700 pl-4 italic text-slate-600 dark:text-slate-400"
+        className="my-4 border-l-4 border-slate-300 dark:border-white/[0.15] pl-4 italic text-slate-600 dark:text-neutral-300"
         {...props}
       >
         {children}

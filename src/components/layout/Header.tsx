@@ -112,7 +112,7 @@ export function Header() {
 
                       {/* Dropdown Panel with Smooth Glide & Fade Transition */}
                       <div 
-                        className={`absolute top-full mt-1.5 z-50 rounded-2xl bg-white p-2 shadow-2xl border border-slate-200/90 before:absolute before:-top-3 before:left-0 before:right-0 before:h-3 before:content-[''] ${
+                        className={`absolute top-full mt-1.5 z-50 rounded-2xl bg-white dark:bg-[#121316] p-2 shadow-2xl border border-slate-200/90 dark:border-white/[0.1] before:absolute before:-top-3 before:left-0 before:right-0 before:h-3 before:content-[''] ${
                           isCentered ? 'left-1/2 t4e-dropdown-menu-centered' : 'left-0 t4e-dropdown-menu'
                         } ${isTwoCol ? 'w-[590px]' : 'w-[270px]'}`}
                         role="menu"
@@ -124,17 +124,17 @@ export function Header() {
                               <Link
                                 key={subIdx}
                                 href={subItem.href!}
-                                className="group/item flex items-start gap-2.5 rounded-xl p-2 transition-colors hover:bg-[#2563eb]/10 cursor-pointer"
+                                className="group/item flex items-start gap-2.5 rounded-xl p-2 transition-colors hover:bg-[#2563eb]/10 dark:hover:bg-white/[0.06] cursor-pointer"
                                 role="menuitem"
                               >
-                                <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#f1f5f9] border border-slate-200/60 text-[#3A5690] group-hover/item:bg-white transition-colors">
-                                  <Icon className="h-3.5 w-3.5 text-[#3A5690]" />
+                                <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#f1f5f9] dark:bg-white/[0.06] border border-slate-200/60 dark:border-white/[0.08] text-[#3A5690] dark:text-blue-400 group-hover/item:bg-white dark:group-hover/item:bg-white/[0.12] transition-colors">
+                                  <Icon className="h-3.5 w-3.5 text-[#3A5690] dark:text-blue-400" />
                                 </div>
                                 <div className="min-w-0 flex-1">
-                                  <div className="text-xs font-bold text-[#0B1B3A] group-hover/item:text-[#1D63E0] transition-colors leading-snug">
+                                  <div className="text-xs font-bold text-[#0B1B3A] dark:text-neutral-100 group-hover/item:text-[#1D63E0] dark:group-hover/item:text-blue-400 transition-colors leading-snug">
                                     {subItem.title}
                                   </div>
-                                  <div className="text-[10px] font-medium text-[#3A5690] leading-tight mt-0.5">
+                                  <div className="text-[10px] font-medium text-[#3A5690] dark:text-neutral-400 leading-tight mt-0.5">
                                     {subItem.description}
                                   </div>
                                 </div>
@@ -159,7 +159,6 @@ export function Header() {
 
           {/* Desktop CTA Actions */}
           <div className="hidden md:flex items-center gap-3">
-            <ThemeToggle />
             <Link 
               href="https://portal.think4ever.com/#/login"
               className="text-sm font-medium text-white/90 hover:text-white transition-colors px-3 py-2 cursor-pointer"
@@ -172,6 +171,8 @@ export function Header() {
             >
               Start free
             </Link>
+            <div className="h-4 w-px bg-white/20 mx-0.5" />
+            <ThemeToggle />
           </div>
 
           {/* Mobile Header Right Controls */}
@@ -212,7 +213,7 @@ export function Header() {
 
         {/* Slide-Out Drawer Panel */}
         <div 
-          className={`fixed inset-y-0 right-0 z-50 w-full max-w-[340px] sm:max-w-sm bg-white dark:bg-[#0F172A] shadow-2xl flex flex-col transform transition-transform duration-300 ease-in-out ${
+          className={`fixed inset-y-0 right-0 z-50 w-full max-w-[340px] sm:max-w-sm bg-white dark:bg-[#0C0D0E] border-l border-transparent dark:border-white/[0.08] shadow-2xl flex flex-col transform transition-transform duration-300 ease-in-out ${
             mobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
@@ -240,15 +241,15 @@ export function Header() {
           </div>
 
           {/* Segmented Tab Switcher (Documentation vs Main Menu) */}
-          <div className="p-3 bg-slate-50 dark:bg-slate-900 border-b border-slate-200/80 dark:border-slate-800 shrink-0">
-            <div className="flex rounded-xl bg-slate-200/70 dark:bg-slate-800 p-1">
+          <div className="p-3 bg-slate-50 dark:bg-[#121316] border-b border-slate-200/80 dark:border-white/[0.08] shrink-0">
+            <div className="flex rounded-xl bg-slate-200/70 dark:bg-white/[0.05] p-1">
               <button
                 type="button"
                 onClick={() => setActiveMobileTab('docs')}
                 className={`flex-1 flex items-center justify-center gap-1.5 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                   activeMobileTab === 'docs'
-                    ? 'bg-white dark:bg-[#1E293B] text-[#1D63E0] dark:text-blue-400 shadow-xs font-bold'
-                    : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                    ? 'bg-white dark:bg-white/[0.1] text-[#1D63E0] dark:text-white shadow-xs font-bold'
+                    : 'text-slate-600 dark:text-neutral-400 hover:text-slate-900 dark:hover:text-white'
                 }`}
               >
                 <BookOpen className="h-3.5 w-3.5" />
@@ -259,8 +260,8 @@ export function Header() {
                 onClick={() => setActiveMobileTab('menu')}
                 className={`flex-1 flex items-center justify-center gap-1.5 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                   activeMobileTab === 'menu'
-                    ? 'bg-white dark:bg-[#1E293B] text-[#1D63E0] dark:text-blue-400 shadow-xs font-bold'
-                    : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                    ? 'bg-white dark:bg-white/[0.1] text-[#1D63E0] dark:text-white shadow-xs font-bold'
+                    : 'text-slate-600 dark:text-neutral-400 hover:text-slate-900 dark:hover:text-white'
                 }`}
               >
                 <Compass className="h-3.5 w-3.5" />
@@ -275,8 +276,8 @@ export function Header() {
               /* Documentation Navigation View */
               <div className="space-y-4">
                 {/* Designer vs Developer Switcher */}
-                <div className="p-2.5 rounded-xl bg-blue-50/70 border border-blue-100/70">
-                  <div className="text-[10px] font-bold uppercase tracking-wider text-blue-800/70 mb-1.5 px-1">
+                <div className="p-2.5 rounded-xl bg-blue-50/70 dark:bg-white/[0.04] border border-blue-100/70 dark:border-white/[0.08]">
+                  <div className="text-[10px] font-bold uppercase tracking-wider text-blue-800/70 dark:text-neutral-400 mb-1.5 px-1">
                     Documentation Mode
                   </div>
                   <div className="grid grid-cols-3 gap-1.5">
@@ -286,7 +287,7 @@ export function Header() {
                       className={`flex items-center justify-center gap-1 py-2 px-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                         !isDevMode && !isPortalMode
                           ? "bg-[#1D63E0] text-white shadow-xs font-bold"
-                          : "bg-white text-slate-700 hover:bg-slate-50 border border-slate-200/80"
+                          : "bg-white dark:bg-white/[0.05] text-slate-700 dark:text-neutral-300 hover:bg-slate-50 dark:hover:bg-white/[0.08] border border-slate-200/80 dark:border-white/[0.08]"
                       }`}
                     >
                       <BookOpen className="h-3.5 w-3.5 shrink-0" />
@@ -298,7 +299,7 @@ export function Header() {
                       className={`flex items-center justify-center gap-1 py-2 px-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                         isDevMode
                           ? "bg-[#1D63E0] text-white shadow-xs font-bold"
-                          : "bg-white text-slate-700 hover:bg-slate-50 border border-slate-200/80"
+                          : "bg-white dark:bg-white/[0.05] text-slate-700 dark:text-neutral-300 hover:bg-slate-50 dark:hover:bg-white/[0.08] border border-slate-200/80 dark:border-white/[0.08]"
                       }`}
                     >
                       <Code className="h-3.5 w-3.5 shrink-0" />
@@ -310,7 +311,7 @@ export function Header() {
                       className={`flex items-center justify-center gap-1 py-2 px-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                         isPortalMode
                           ? "bg-[#1D63E0] text-white shadow-xs font-bold"
-                          : "bg-white text-slate-700 hover:bg-slate-50 border border-slate-200/80"
+                          : "bg-white dark:bg-white/[0.05] text-slate-700 dark:text-neutral-300 hover:bg-slate-50 dark:hover:bg-white/[0.08] border border-slate-200/80 dark:border-white/[0.08]"
                       }`}
                     >
                       <LayoutDashboard className="h-3.5 w-3.5 shrink-0" />
@@ -324,7 +325,7 @@ export function Header() {
                   {docGroups.map((group, gIdx) => (
                     <div key={gIdx} className="space-y-1">
                       {group.title && (
-                        <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-400 px-2 mb-1.5">
+                        <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-neutral-100 px-2 mb-1.5">
                           {group.title}
                         </h4>
                       )}
@@ -344,25 +345,25 @@ export function Header() {
                                     onClick={() => toggleDocSubmenu(item.title)}
                                     className={`group flex w-full items-center justify-between px-2.5 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
                                       isActive
-                                        ? "bg-blue-50 text-blue-600 font-semibold"
-                                        : "text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+                                        ? "bg-blue-50 dark:bg-white/[0.08] text-blue-600 dark:text-white font-semibold"
+                                        : "text-slate-700 dark:text-neutral-400 hover:bg-slate-100 dark:hover:bg-white/[0.04] hover:text-slate-900 dark:hover:text-white"
                                     }`}
                                   >
                                     <div className="flex items-center gap-2 truncate">
                                       {Icon && (
-                                        <Icon className="h-3.5 w-3.5 shrink-0 text-slate-500" />
+                                        <Icon className="h-3.5 w-3.5 shrink-0 text-slate-500 dark:text-neutral-400" />
                                       )}
                                       <span className="truncate">{item.title}</span>
                                     </div>
                                     {isSubOpen ? (
-                                      <ChevronDown className="h-3.5 w-3.5 text-slate-400" />
+                                      <ChevronDown className="h-3.5 w-3.5 text-slate-400 dark:text-neutral-400" />
                                     ) : (
-                                      <ChevronRight className="h-3.5 w-3.5 text-slate-400" />
+                                      <ChevronRight className="h-3.5 w-3.5 text-slate-400 dark:text-neutral-400" />
                                     )}
                                   </button>
 
                                   {isSubOpen && (
-                                    <div className="mt-1 ml-4 pl-2 border-l border-slate-200 space-y-0.5">
+                                    <div className="mt-1 ml-4 pl-2 border-l border-slate-200 dark:border-white/[0.08] space-y-0.5">
                                       {item.items!.map((subItem, subIdx) => {
                                         const isSubActive = pathname === subItem.href;
                                         return (
@@ -372,13 +373,13 @@ export function Header() {
                                             onClick={() => setMobileMenuOpen(false)}
                                             className={`block px-2.5 py-1.5 rounded-md text-xs transition-colors cursor-pointer ${
                                               isSubActive
-                                                ? "bg-blue-50 text-blue-600 font-semibold"
-                                                : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
+                                                ? "bg-blue-50 dark:bg-white/[0.08] text-blue-600 dark:text-white font-semibold"
+                                                : "text-slate-600 dark:text-neutral-400 hover:bg-slate-100 dark:hover:bg-white/[0.04] hover:text-slate-900 dark:hover:text-white"
                                             }`}
                                           >
                                             <div>{subItem.title}</div>
                                             {subItem.badge && (
-                                              <div className="text-[10px] text-slate-400 font-normal">
+                                              <div className="text-[10px] text-slate-400 dark:text-neutral-500 font-normal">
                                                 ({subItem.badge})
                                               </div>
                                             )}
@@ -394,12 +395,12 @@ export function Header() {
                                   onClick={() => setMobileMenuOpen(false)}
                                   className={`flex items-center gap-2 px-2.5 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
                                     isActive
-                                      ? "bg-blue-50 text-blue-600 font-semibold border-l-2 border-blue-600 rounded-l-none pl-2"
-                                      : "text-slate-700 hover:bg-slate-100 hover:text-slate-900"
+                                      ? "bg-blue-50 dark:bg-white/[0.08] text-blue-600 dark:text-white font-semibold border-l-2 border-blue-600 dark:border-white rounded-l-none pl-2"
+                                      : "text-slate-700 dark:text-neutral-400 hover:bg-slate-100 dark:hover:bg-white/[0.04] hover:text-slate-900 dark:hover:text-white"
                                   }`}
                                 >
                                   {Icon && (
-                                    <Icon className={`h-3.5 w-3.5 shrink-0 ${isActive ? "text-blue-600" : "text-slate-400"}`} />
+                                    <Icon className={`h-3.5 w-3.5 shrink-0 ${isActive ? "text-blue-600 dark:text-white" : "text-slate-400 dark:text-neutral-400"}`} />
                                   )}
                                   <span className="truncate">{item.title}</span>
                                 </Link>
@@ -416,18 +417,18 @@ export function Header() {
               /* Site Navigation View */
               <div className="space-y-1">
                 {headerNav.map((item, idx) => (
-                  <div key={idx} className="border-b border-slate-100 pb-1 mb-1 last:border-b-0">
+                  <div key={idx} className="border-b border-slate-100 dark:border-white/[0.08] pb-1 mb-1 last:border-b-0">
                     {item.items ? (
                       <div>
                         <button
                           type="button"
-                          className="flex w-full items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-800 hover:bg-slate-50 transition-colors cursor-pointer"
+                          className="flex w-full items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-800 dark:text-neutral-200 hover:bg-slate-50 dark:hover:bg-white/[0.04] transition-colors cursor-pointer"
                           onClick={() => toggleMobileGroup(item.title)}
                         >
                           <span>{item.title}</span>
                           <ChevronDown
-                            className={`h-4 w-4 text-slate-400 transition-transform duration-200 ${
-                              openMobileGroup === item.title ? "rotate-180 text-blue-600" : ""
+                            className={`h-4 w-4 text-slate-400 dark:text-neutral-400 transition-transform duration-200 ${
+                              openMobileGroup === item.title ? "rotate-180 text-blue-600 dark:text-blue-400" : ""
                             }`}
                           />
                         </button>
@@ -441,16 +442,16 @@ export function Header() {
                                   key={subIdx}
                                   href={subItem.href!}
                                   onClick={() => setMobileMenuOpen(false)}
-                                  className="flex items-start gap-2.5 rounded-xl p-2 hover:bg-blue-50/60 transition-colors cursor-pointer"
+                                  className="flex items-start gap-2.5 rounded-xl p-2 hover:bg-blue-50/60 dark:hover:bg-white/[0.04] transition-colors cursor-pointer"
                                 >
-                                  <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-slate-100 border border-slate-200 text-[#3A5690]">
+                                  <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-slate-100 dark:bg-white/[0.06] border border-slate-200 dark:border-white/[0.08] text-[#3A5690] dark:text-blue-400">
                                     <Icon className="h-3.5 w-3.5" />
                                   </div>
                                   <div className="min-w-0 flex-1">
-                                    <div className="text-xs font-bold text-slate-900 leading-snug">
+                                    <div className="text-xs font-bold text-slate-900 dark:text-neutral-100 leading-snug">
                                       {subItem.title}
                                     </div>
-                                    <div className="text-[11px] font-medium text-slate-500 leading-tight mt-0.5">
+                                    <div className="text-[11px] font-medium text-slate-500 dark:text-neutral-400 leading-tight mt-0.5">
                                       {subItem.description}
                                     </div>
                                   </div>
@@ -464,10 +465,10 @@ export function Header() {
                       <Link
                         href={item.href!}
                         onClick={() => setMobileMenuOpen(false)}
-                        className="flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-800 hover:bg-slate-50 hover:text-blue-600 transition-colors cursor-pointer"
+                        className="flex items-center justify-between px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-800 dark:text-neutral-200 hover:bg-slate-50 dark:hover:bg-white/[0.04] hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer"
                       >
                         <span>{item.title}</span>
-                        <ArrowRight className="h-3.5 w-3.5 text-slate-400" />
+                        <ArrowRight className="h-3.5 w-3.5 text-slate-400 dark:text-neutral-400" />
                       </Link>
                     )}
                   </div>
@@ -477,14 +478,14 @@ export function Header() {
           </div>
 
           {/* Drawer Footer with Authentic Brand CTAs & Theme Selector */}
-          <div className="p-4 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 shrink-0 space-y-2">
+          <div className="p-4 bg-slate-50 dark:bg-[#121316] border-t border-slate-200 dark:border-white/[0.08] shrink-0 space-y-2">
             <div className="mb-2">
               <MobileThemeSegment />
             </div>
             <Link
               href="https://portal.think4ever.com/#/login"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full py-2.5 px-4 rounded-xl text-center text-xs font-semibold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-white transition-colors block cursor-pointer"
+              className="w-full py-2.5 px-4 rounded-xl text-center text-xs font-semibold text-slate-700 dark:text-neutral-200 bg-white dark:bg-white/[0.06] border border-slate-200 dark:border-white/[0.08] hover:bg-slate-100 dark:hover:bg-white/[0.1] hover:text-slate-900 dark:hover:text-white transition-colors block cursor-pointer"
             >
               Sign in
             </Link>

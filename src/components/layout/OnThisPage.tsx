@@ -81,15 +81,15 @@ export function OnThisPage({ initialHeadings = [] }: OnThisPageProps) {
   };
 
   return (
-    <div className="hidden xl:block w-[270px] shrink-0 sticky top-20 self-start h-[calc(100vh-5.5rem)] overflow-y-auto pl-6 border-l border-slate-100 dark:border-slate-800/80 custom-scrollbar">
-      <div className="flex items-center gap-2 text-xs font-semibold text-slate-800 dark:text-slate-200 tracking-wide mb-3">
-        <AlignLeft className="h-3.5 w-3.5 text-slate-500 dark:text-slate-400 cursor-pointer" />
+    <div className="hidden xl:block w-[270px] shrink-0 sticky top-20 self-start h-[calc(100vh-5.5rem)] overflow-y-auto pl-6 border-l border-slate-200 dark:border-neutral-800 custom-scrollbar">
+      <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-neutral-100 px-2 mb-2">
+        <AlignLeft className="h-3.5 w-3.5 text-slate-400 dark:text-neutral-400" />
         <span>On this page</span>
       </div>
 
       <nav>
         {/* Strictly flat list with zero dots and identical alignment for all items */}
-        <ul className="space-y-1 list-none m-0 p-0">
+        <ul className="space-y-0.5 list-none m-0 p-0">
           {headings.map((heading) => {
             const isActive = activeId === heading.id;
             return (
@@ -100,10 +100,10 @@ export function OnThisPage({ initialHeadings = [] }: OnThisPageProps) {
                 <button
                   type="button"
                   onClick={() => scrollToHeading(heading.id)}
-                  className={`block w-full text-left py-1.5 px-2.5 rounded-md text-xs transition-colors cursor-pointer ${
+                  className={`block w-full text-left py-1.5 px-2.5 rounded-lg text-[13px] font-medium transition-colors cursor-pointer ${
                     isActive
-                      ? "text-blue-600 dark:text-blue-400 font-semibold bg-blue-50/80 dark:bg-blue-950/40"
-                      : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/60"
+                      ? "bg-blue-50 dark:bg-white/[0.08] text-blue-600 dark:text-white font-semibold"
+                      : "text-slate-600 dark:text-neutral-400 hover:bg-slate-100/70 dark:hover:bg-white/[0.06] hover:text-slate-900 dark:hover:text-neutral-100"
                   }`}
                 >
                   <span className="line-clamp-2">{heading.title}</span>
