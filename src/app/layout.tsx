@@ -11,8 +11,30 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://think4ever.com/docs"),
   title: "Think4Ever - Designer Documentation",
   description: "Official documentation for Think4Ever Platform.",
+  openGraph: {
+    title: "Think4Ever - Designer Documentation",
+    description: "Official documentation for Think4Ever Platform.",
+    url: "https://think4ever.com/docs",
+    siteName: "Think4Ever Documentation",
+    images: [
+      {
+        url: "https://think4ever.com/docs/images/og-image.jpg",
+        width: 1080,
+        height: 1081,
+        alt: "Think4Ever Documentation",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Think4Ever - Designer Documentation",
+    description: "Official documentation for Think4Ever Platform.",
+    images: ["https://think4ever.com/docs/images/og-image.jpg"],
+  },
   icons: {
     icon: [
       { url: "/docs/favicon.ico", sizes: "any" },

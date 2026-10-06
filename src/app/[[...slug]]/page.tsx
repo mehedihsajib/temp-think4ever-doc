@@ -275,13 +275,33 @@ export async function generateMetadata({
     }
   }
 
+  const ogImage = "https://think4ever.com/docs/images/og-image.jpg";
+  const pageUrl = `https://think4ever.com/docs/${slug.join("/")}`;
+  const description = "Official documentation for Think4Ever Platform.";
+
   return {
     title,
+    description,
     openGraph: {
       title,
+      description,
+      url: pageUrl,
+      siteName: "Think4Ever Documentation",
+      images: [
+        {
+          url: ogImage,
+          width: 1080,
+          height: 1081,
+          alt: title,
+        },
+      ],
+      type: "website",
     },
     twitter: {
+      card: "summary_large_image",
       title,
+      description,
+      images: [ogImage],
     },
   };
 }
