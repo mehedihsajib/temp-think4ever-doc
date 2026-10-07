@@ -159,6 +159,8 @@ export function Header() {
 
           {/* Desktop CTA Actions */}
           <div className="hidden md:flex items-center gap-3">
+            <ThemeToggle />
+            <div className="h-4 w-px bg-white/20 mx-0.5" />
             <Link 
               href="https://portal.think4ever.com/#/login"
               className="text-sm font-medium text-white/90 hover:text-white transition-colors px-3 py-2 cursor-pointer"
@@ -171,8 +173,6 @@ export function Header() {
             >
               Start free
             </Link>
-            <div className="h-4 w-px bg-white/20 mx-0.5" />
-            <ThemeToggle />
           </div>
 
           {/* Mobile Header Right Controls */}

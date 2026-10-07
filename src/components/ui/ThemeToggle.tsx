@@ -63,7 +63,7 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-38 rounded-2xl bg-white dark:bg-[#131417] border border-slate-200 dark:border-neutral-800 shadow-2xl p-1.5 z-50 animate-in fade-in zoom-in-95 duration-150">
+        <div className="absolute right-0 md:left-1/2 md:-translate-x-1/2 mt-2 w-38 rounded-2xl bg-white dark:bg-[#131417] border border-slate-200 dark:border-neutral-800 shadow-2xl p-1.5 z-50 animate-in fade-in zoom-in-95 duration-150">
           {THEME_OPTIONS.map(({ key, label, icon: Icon }) => {
             const isSelected = theme === key;
             return (
