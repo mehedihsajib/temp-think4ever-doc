@@ -309,120 +309,297 @@
         <!-- Overview Section -->
         <section class="cd-overview" id="cdHomeOverview">
           <div class="para-box doc-step-block">
-            <p class="cd-overview-p">The Production Hardening automatically evaluates your codebase against a
-              comprehensive production-readiness checklist. Reviewer agents scan your project structure and source files
-              in real time, allowing you to monitor progress live or safely navigate away while the review runs in the
-              background.</p>
-
-            <ul class="cd-overview-ul">
-              <li><strong>Category:</strong> Code →Production Ready</li>
-              <li><strong>Best For:</strong> Teams preparing to deploy applications to production or conducting security
-                and compliance audits.</li>
-              <li><strong>Function:</strong> Imports your codebase and maps the system architecture, then deploys
-                reviewer agents to audit against key production readiness domains (including security, configuration,
-                reliability, data management, and observability).</li>
-              <li><strong>Action:</strong> Click Harden a project →to proceed.</li>
-            </ul>
-            <div class="image-wrapper img-sm">
-              <img src="assets/images/create-project/product-hardening-1.png" alt="Create Project" class="demo-img">
-            </div>
-            <p class="cd-overview-p">The Production Hardening screen allows you to import your codebase into the
-              platform. Once imported, the system maps your architecture and automatically executes a
-              <strong>production-readiness review</strong>.
-            </p>
+            <p class="cd-overview-p">Audit an AI-generated codebase for production readiness, review the findings, and
+              fix them with Think4Ever or your own coding agent.</p>
             <div class="image-wrapper">
-              <img src="assets/images/create-project/product-hardening-2.png" alt="Create Project" class="demo-img">
+              <img src="assets/images/production-hardening/ph-hero.png" alt="Production Hardening" class="demo-img">
+            </div>
+
+            <h3 class="h3">Overview</h3>
+            <p class="cd-overview-p">Production Hardening reviews a codebase against a 39-check production-readiness
+              checklist across nine pillars: Security; Configuration & Environment; Reliability & Error Handling; Data &
+              Database; Observability; Performance & Scalability; Build, Deploy & Operations; Testing & Quality; and
+              Privacy & Compliance. It works on code from any source, whether built on a vibe coding platform such as
+              Lovable, with a coding agent, or by a conventional team.</p>
+            <p class="cd-overview-p">Each review produces a Production Readiness Score, a verdict with cited evidence
+              for every check, and fix requests you can apply with Think4Ever’s developer agent or with Claude Code,
+              Cursor or Codex over MCP.</p>
+          </div>
+
+          <div class="para-box doc-step-block">
+            <h3 class="h3">How to Run a Production Readiness Review</h3>
+            <ol class="cd-overview-ol">
+              <li>On the Think4Ever onboarding screen, choose <strong>Production Hardening.</strong>
+                <div class="image-wrapper">
+                  <img src="assets/images/production-hardening/ph-step1.png" alt="Production Hardening Step 1"
+                    class="demo-img">
+                </div>
+              </li>
+              <li>Import the codebase from a public GitHub repository URL (optionally a specific
+                branch) or upload a ZIP file. Import private repositories as a ZIP.
+                <div class="image-wrapper">
+                  <img src="assets/images/production-hardening/ph-step2.png" alt="Production Hardening Step 2"
+                    class="demo-img">
+                </div>
+              </li>
+              <li>Think4Ever detects the technology stack and runs its code analysis to build the
+                concept structure: business flows with the role, screen and data objects of every step, roles and
+                permissions, and data objects. The review waits for this to finish, because every check is graded
+                against those flows.
+                <div class="image-wrapper">
+                  <img src="assets/images/production-hardening/ph-step3.png" alt="Production Hardening Step 3"
+                    class="demo-img">
+                </div>
+              </li>
+              <li>One reviewer agent per pillar then works through that pillar’s checks. Progress
+                updates live for each pillar (Figure 2). You can close the window; the review keeps running.
+                <div class="image-wrapper">
+                  <img src="assets/images/production-hardening/ph-step4.png" alt="Production Hardening Step 4"
+                    class="demo-img">
+                </div>
+              </li>
+            </ol>
+            <p class="cd-overview-p">Each pillar reviewer receives the concept summary, the detected technology profile,
+              the workspace file tree and the key files: dependency manifests, Dockerfile, CI configuration, README and
+              entry points. Values in .env files are redacted so only variable names are visible. The reviewer can
+              request further source files in up to three rounds of eight files each.</p>
+            <p class="cd-overview-p">The review is a static reading of the source. It does not build or run the
+              application or execute its tests.</p>
+            <div class="image-wrapper">
+              <img src="assets/images/production-hardening/ph-static-reading.png" alt="Static Reading" class="demo-img">
             </div>
           </div>
 
           <div class="para-box doc-step-block">
-            <h3 class="h3">Import Options</h3>
-            <p class="cd-overview-p">Select one of the three available methods to bring in your source code:</p>
+            <h3 class="h3">Read the Report</h3>
+            <p class="cd-overview-p">Each check resolves to one of four statuses:</p>
             <ul class="cd-overview-ul">
-              <li><strong>Upload a ZIP (Local Project):</strong> Upload an archived file directly from your local
-                machine without authenticating or connecting a source-control account. Click Choose a file → to select a
-                compressed .zip archive.
+              <li><strong style="color: #109864">Passed:</strong> the check is met, with the evidence that confirms it.
+              </li>
+              <li><strong style="color: #E5A613;">Warning:</strong> a partial gap, with a severity.</li>
+              <li><strong style="color: #DE0F10;">Failed:</strong> a clear gap, with a severity.</li>
+              <li><strong style="color: #6D6A67;">Not applicable:</strong> the check does not apply. Checks that
+                structurally cannot apply to
+                the detected stack (for example, Row Level Security for a project with no client-exposed database) are
+                marked Not applicable before any agent call. If a reviewer returns no verdict for a check, it is
+                recorded as an error and shown under Not applicable.</li>
+            </ul>
+            <p class="cd-overview-p">Every result explains its reasoning and cites files and line ranges, so an engineer
+              can verify it directly. Use the filters above the checklist to show failed, warning, passed or
+              not-applicable checks.</p>
+            <div class="image-wrapper">
+              <img src="assets/images/production-hardening/ph-report-filters.png" alt="Report Filters" class="demo-img">
+            </div>
+            <p class="cd-overview-p">The report header shows the score, grade, counts for each status and a
+              plain-language summary of the most urgent issues. It also records when the run started and how long it
+              took, the detected stack, the number of files scanned, the model used and the number of model calls.</p>
+            <div class="image-wrapper">
+              <img src="assets/images/production-hardening/ph-report-header.png" alt="Report Header" class="demo-img">
+            </div>
+            <p class="cd-overview-p">Select <strong>Run again</strong> to start a new run, or <strong>PDF</strong> to
+              export the report.
+              Past runs appear
+              in the review history.</p>
+            <div class="image-wrapper">
+              <img src="assets/images/production-hardening/ph-report-actions.png" alt="Report Actions" class="demo-img">
+            </div>
+          </div>
+
+          <div class="para-box doc-step-block">
+            <h3 class="h3">Score and Grades</h3>
+            <p class="cd-overview-p">The score is the share of applicable checks that pass, with a warning counting as
+              half a pass:</p>
+            <div class="callout callout-info"
+              style="font-size: 1rem; padding: 16px 20px; margin: 16px 0; font-family: monospace; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px;">
+              <p style="margin: 0; text-align: center;">score = 100 × (passed + 0.5 × warnings) ÷ (passed + warnings +
+                failed), rounded to a whole number.</p>
+            </div>
+            <p class="cd-overview-p">Not applicable checks, and checks with no verdict, are excluded from both sides of
+              the fraction, so they neither raise nor lower the score. Severity does not change the score; it orders the
+              fixes.</p>
+            <div class="image-wrapper">
+              <img src="assets/images/production-hardening/ph-score-grades.png" alt="Score and Grades" class="demo-img">
+            </div>
+          </div>
+
+          <div class="para-box doc-step-block">
+            <h3 class="h3">Fix Findings</h3>
+            <p class="cd-overview-p">Select Fix findings to fix in bulk, or Fix this check on a single finding, then
+              choose where to fix. A bulk hand-off covers every failed check plus critical- and high-severity warnings,
+              up to 12 findings at a time.</p>
+            <div class="image-wrapper">
+              <img src="assets/images/production-hardening/ph-fix-findings.png" alt="Fix Findings" class="demo-img">
+              <p style="text-align: center; margin-top: 8px; color: #64748b; font-size: 0.9rem;">Figure: Fix Findings
+              </p>
+            </div>
+            <div class="image-wrapper">
+              <img src="assets/images/production-hardening/ph-fix-this-check.png" alt="Fix this check" class="demo-img">
+              <p style="text-align: center; margin-top: 8px; color: #64748b; font-size: 0.9rem;">Figure: Fix this check
+              </p>
+            </div>
+          </div>
+
+          <div class="para-box doc-step-block">
+            <h3 class="h3">Fix with Think4Ever’s developer agent (DEV mode)</h3>
+            <ol class="cd-overview-ol">
+              <li>The developer agent reads the cited evidence files.</li>
+              <li>Before its first change, it presents a plan listing every file it will create, update or delete, what
+                each change does and which checks it addresses.
                 <div class="image-wrapper">
-                  <img src="assets/images/create-project/ph-upload-as-zip.png" alt="Create Project" class="demo-img">
+                  <img src="assets/images/production-hardening/ph-dev-plan.png" alt="Developer Agent Plan"
+                    class="demo-img">
                 </div>
               </li>
-              <li><strong>Public GitHub URL (Public Repository):</strong> Paste a link to any public repository, and the
-                system will download a snapshot of your designated branch. Click Import from GitHub → to proceed.
+              <li>Select <strong>Confirm & Apply</strong> to proceed, or Reject to discard the plan. Nothing is modified
+                until you
+                confirm.
                 <div class="image-wrapper">
-                  <img src="assets/images/create-project/ph-github-url.png" alt="Create Project" class="demo-img">
+                  <img src="assets/images/production-hardening/ph-dev-confirm.png" alt="Confirm and Apply"
+                    class="demo-img">
                 </div>
               </li>
-              <li><strong>Connect a repository (Version Control):</strong> Authorize private or public repositories
-                using account credentials. Click Connect → to link repositories hosted on GitHub, GitLab, Bitbucket,
-                Git, or SVN.
+            </ol>
+            <p class="cd-overview-p">DEV mode uses platform credits. Changes are written directly to the project’s
+              workspace files, not as a pull request or an automatic commit; commit and push to GitHub, GitLab or
+              Bitbucket from the Version Control window. The agent is instructed to run the project’s existing tests or
+              lint after a change when they exist. It does not run the build or tests before proposing changes, and does
+              not generate tests before refactoring untested code.</p>
+          </div>
+
+          <div class="para-box doc-step-block">
+            <h3 class="h3">Fix With your own coding agent (MCP)</h3>
+            <p class="cd-overview-p">Copy the fix request into Claude Code, Cursor or Codex. It contains the findings
+              with their evidence and recommendations, plus the thinkMCP calls that fetch the full results and grading
+              rules. The external tool edits your local checkout under its own subscription, and no platform credits are
+              used.</p>
+            <p class="cd-overview-p" style="margin-top: 20px;"><strong>Note:</strong> The review audits the copy of the
+              code in the Think4Ever
+              workspace. After fixing locally, import the code again (or write it back through the files API) before
+              re-running.</p>
+          </div>
+
+          <div class="para-box doc-step-block">
+            <h3 class="h3">Verifying fixes</h3>
+            <p class="cd-overview-p">The verification of a fix is the next review run. Re-run after each round of
+              changes, and before each release, to catch regressions such as a reintroduced secret or a removed
+              authorization check.</p>
+          </div>
+
+          <div class="para-box doc-step-block">
+            <h3 class="h3">Automate with the REST API and MCP</h3>
+            <p class="cd-overview-p">Reviews can be started and read from the app, the REST API and MCP, so you can
+              trigger them from your own tooling.</p>
+            <ul class="cd-overview-ul">
+              <li><strong>Start a run:</strong> POST /v1/projects/{id}/hardening/run with a scoped access token.</li>
+              <li><strong>Read a review:</strong> requires a token with the projects:read scope.</li>
+              <li><strong>Start or stop a review:</strong> requires the agents:submit scope.</li>
+              <li><strong>Get the checklist with grading instructions:</strong> get_hardening_checklist with
+                include_instructions (API and MCP).</li>
+            </ul>
+            <p class="cd-overview-p">Tokens can be limited to specific projects.</p>
+          </div>
+
+          <div class="para-box doc-step-block">
+            <h3 class="h3">Data Handling</h3>
+            <ul class="cd-overview-ul">
+              <li><strong>What is ingested:</strong> The imported repository archive or uploaded ZIP is extracted into
+                the project’s workspace folder on the Think4Ever cell that hosts your account, where it stays with the
+                project. The review reads that workspace copy only; it never connects to your local machine or to the
+                original repository.</li>
+              <li><strong>What the model sees:</strong> For each pillar, the reviewer receives the concept summary, the
+                file tree (at most 700 entries, six levels deep), the key files (up to 6,000 characters each, with .env
+                values redacted to variable names) and at most 24 further requested files (eight per round, three
+                rounds). Files larger than 400 KB are never read. The whole repository is not sent to the model.</li>
+              <li><strong>What is stored:</strong> The run headline (score, grade, counts, stack, model, call count and
+                duration) and every verdict with its finding, evidence snippets and recommendation are stored in the
+                platform database with the project’s other data, so runs can be compared and exported.</li>
+              <li><strong>Which models:</strong> The model is selected per work type from the platform defaults or your
+                own per-work-type preference, and is recorded on every run. The platform default is an Anthropic Claude
+                model for cells in the Americas and Europe, and GLM-5.2 for cells in Asia-Pacific. Customers on a
+                personal-key plan run the review with their own provider key.</li>
+              <li><strong>Access:</strong> Every read and write goes through the platform’s company-aware ownership
+                check. API and MCP access requires the scopes listed above.</li>
+            </ul>
+          </div>
+
+          <div class="para-box doc-step-block">
+            <h3 class="h3">The Checklist</h3>
+            <p class="cd-overview-p">The 39 checks below are the checklist as implemented on 24 September 2026. The
+              default severity applies to a failure unless the reviewer raises or lowers it for the specific finding.
+              Each check also carries detailed grading instructions for the reviewer, available through the API and MCP.
+            </p>
+            <ul class="cd-overview-ul" style="list-style-type: none; padding-left: 0;">
+              <li><strong>Security Checks (11 checks)</strong>
                 <div class="image-wrapper">
-                  <img src="assets/images/create-project/ph-connect-git-repo.png" alt="Create Project" class="demo-img">
+                  <img src="assets/images/production-hardening/checklist-security.png" alt="Security Checks"
+                    class="demo-img">
+                </div>
+              </li>
+              <li><strong>Configurations & Environment (3 checks)</strong>
+                <div class="image-wrapper">
+                  <img src="assets/images/production-hardening/checklist-config.png" alt="Configurations & Environment"
+                    class="demo-img">
+                </div>
+              </li>
+              <li><strong>Reliability & Error Handling (4 checks)</strong>
+                <div class="image-wrapper">
+                  <img src="assets/images/production-hardening/checklist-reliability.png"
+                    alt="Reliability & Error Handling" class="demo-img">
+                </div>
+              </li>
+              <li><strong>Data & Database (5 checks)</strong>
+                <div class="image-wrapper">
+                  <img src="assets/images/production-hardening/checklist-data.png" alt="Data & Database"
+                    class="demo-img">
+                </div>
+              </li>
+              <li><strong>Observability (5 checks)</strong>
+                <div class="image-wrapper">
+                  <img src="assets/images/production-hardening/checklist-observability.png" alt="Observability"
+                    class="demo-img">
+                </div>
+              </li>
+              <li><strong>Performance & Scalability (4 checks)</strong>
+                <div class="image-wrapper">
+                  <img src="assets/images/production-hardening/checklist-performance.png"
+                    alt="Performance & Scalability" class="demo-img">
+                </div>
+              </li>
+              <li><strong>Build, Deploy & Operations (4 checks)</strong>
+                <div class="image-wrapper">
+                  <img src="assets/images/production-hardening/checklist-build.png" alt="Build, Deploy & Operations"
+                    class="demo-img">
+                </div>
+              </li>
+              <li><strong>Testing & Quality (3 checks)</strong>
+                <div class="image-wrapper">
+                  <img src="assets/images/production-hardening/checklist-testing.png" alt="Testing & Quality"
+                    class="demo-img">
+                </div>
+              </li>
+              <li><strong>Privacy & Compliance (2 checks)</strong>
+                <div class="image-wrapper">
+                  <img src="assets/images/production-hardening/checklist-privacy.png" alt="Privacy & Compliance"
+                    class="demo-img">
                 </div>
               </li>
             </ul>
           </div>
 
           <div class="para-box doc-step-block">
-            <h3 class="h3">Step by step process</h3>
-            <ul class="cd-overview-ul" style="list-style-type: none; padding-left: 0;">
-              <li><strong>Step 1:</strong> Select your preferred import method and complete the upload or authorization
-                prompt.
-                <div class="image-wrapper">
-                  <img src="assets/images/create-project/step-1.png" alt="Create Project" class="demo-img">
-                </div>
-              </li>
-              <li><strong>Step 2:</strong> Upload the file to be imported.
-                <div class="image-wrapper">
-                  <img src="assets/images/create-project/step-2.png" alt="Create Project" class="demo-img">
-                </div>
-              </li>
-              <li><strong>Step 3:</strong> Analysis of the codebase will begin
-                <div class="image-wrapper">
-                  <img src="assets/images/create-project/step-3.png" alt="Create Project" class="demo-img">
-                </div>
-              </li>
-              <li><strong>Step 4:</strong> System will build the concept from the uploaded codebase
-                <div class="image-wrapper">
-                  <img src="assets/images/create-project/step-4.png" alt="Create Project" class="demo-img">
-                </div>
-              </li>
-              <li><strong>Step 5:</strong> Once codebase concept is built, the production hardening process will start
-                by reviewing your existing codebase.
-                <div class="image-wrapper">
-                  <img src="assets/images/create-project/step-5.png" alt="Create Project" class="demo-img">
-                </div>
-              </li>
-              <li><strong>Step 6:</strong> View the overall readiness summary, showing the exact percentage of
-                completion and passed checks across all categories.
-                <div class="image-wrapper">
-                  <img src="assets/images/create-project/step-6.png" alt="Create Project" class="demo-img">
-                </div>
-              </li>
-              <li><strong>Step 7:</strong> The system will give you the option to Fix Findings, tap the button to start
-                fixing the issues. Or you can also click on Run again button to re-run the analysis of your codebase.
-                <div class="image-wrapper">
-                  <img src="assets/images/create-project/step-7.png" alt="Create Project" class="demo-img">
-                </div>
-              </li>
-              <li><strong>Step 8:</strong> Click on Fix Findings - then choose which agent to use.
-                <div class="image-wrapper img-sm">
-                  <img src="assets/images/create-project/step-8.png" alt="Create Project" class="demo-img">
-                </div>
-              </li>
-              <li><strong>Step 9:</strong> Wait for the system to fix each issues one by one.
-                <div class="image-wrapper">
-                  <img src="assets/images/create-project/step-9.png" alt="Create Project" class="demo-img">
-                </div>
-              </li>
-              <li><strong>Step 10:</strong> As the system addresses each issue, it will prompt proposed fixes or planned
-                changes; you need to confirm the changes before the system can proceed further.
-                <div class="image-wrapper img-sm">
-                  <img src="assets/images/create-project/step-10.png" alt="Create Project" class="demo-img">
-                </div>
-              </li>
-            </ul>
-            <p class="cd-overview-p">Once all the fixes are done, you can continue generating UI screens and bulding the
-              app.</p>
+            <h3 class="h3">FAQ (Frequently asked questions)</h3>
+            <p class="cd-overview-p"><strong>Does this replace my platform’s built-in security scan?</strong><br>
+              No. Keep using it. Platform scanners check security configuration on that platform; Production Hardening
+              covers all nine pillars and works on code from any source.</p>
+            <p class="cd-overview-p" style="margin-top: 16px;"><strong>Is the readiness report a SOC 2
+                certification?</strong><br>
+              No. SOC 2 is an attestation issued by an independent auditor about an organization’s controls. The report
+              is evidence: it documents what was checked and found, and several checks (such as SEC-03, SEC-09, PRIV-01
+              and PRIV-02) cover controls that SOC 2 and GDPR reviews examine.</p>
+            <p class="cd-overview-p" style="margin-top: 16px;"><strong>Should I still run a penetration
+                test?</strong><br>
+              Yes, before a major release. Production Hardening is a static review of the source; a penetration test
+              exercises the running application.</p>
           </div>
 
           <div class="doc-nav-wrapper">
