@@ -70,15 +70,19 @@ export function OnboardingFlow() {
 
   const totalSteps = stepsMeta.length;
 
+  // Automatically scroll to the top whenever the step changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, [currentStep]);
+
   const goToStep = (stepIndex: number) => {
     if (stepIndex === currentStep || stepIndex < 0 || stepIndex >= totalSteps) return;
     setIsTransitioning(true);
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     setTimeout(() => {
       setCurrentStep(stepIndex);
       setIsTransitioning(false);
-      if (contentTopRef.current) {
-        contentTopRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     }, 180);
   };
 
@@ -225,7 +229,7 @@ export function OnboardingFlow() {
                           isActive
                             ? "bg-[#1D63E0] text-white shadow-sm ring-4 ring-blue-500/15 dark:ring-blue-500/25"
                             : isCompleted
-                            ? "bg-[#0B1B3A] dark:bg-blue-500/20 text-white dark:text-blue-400 dark:border dark:border-blue-500/30"
+                            ? "bg-[#0B1B3A] dark:bg-[#192438] text-white dark:text-blue-400 border border-transparent dark:border-blue-500/40"
                             : "bg-white dark:bg-[#18191D] text-slate-500 dark:text-neutral-400 border-2 border-slate-200 dark:border-neutral-800 group-hover:border-slate-300 dark:group-hover:border-neutral-700 dark:group-hover:text-neutral-200"
                         }`}
                       >
