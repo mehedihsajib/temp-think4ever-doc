@@ -475,7 +475,7 @@ export const docsSidebarNav: SidebarGroup[] = [
     items: [
       {
         title: "Concept Summary",
-        href: "/concept-summary",
+        href: "/concept_summary",
         icon: Layers,
       },
       {

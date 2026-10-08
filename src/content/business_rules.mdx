@@ -33,7 +33,13 @@ Centralizing these rules makes it easier to maintain business logic and reduces 
 
 A business rule generally consists of two parts:
 
-ConditionActionThe **Condition** determines when the rule should be applied, while the **Action** defines what the system should do when the condition is satisfied.
+<div className="my-5 flex flex-wrap items-center justify-center gap-3 sm:gap-5 rounded-xl border border-blue-200 dark:border-blue-500/30 bg-blue-50/90 dark:bg-blue-500/[0.1] py-3.5 px-6 text-center text-base font-bold text-blue-600 dark:text-blue-400 shadow-xs">
+  <span>Condition</span>
+  <span className="text-blue-500 font-semibold text-lg">&rarr;</span>
+  <span>Action</span>
+</div>
+
+The **Condition** determines when the rule should be applied, while the **Action** defines what the system should do when the condition is satisfied.
 
 ### Example
 
@@ -66,7 +72,8 @@ Using configurable business rules provides several benefits:
 - **Better Governance** – Rules provide a structured way to define and maintain operational policies.
 - **Scalability** – New rules can be introduced as the application and business processes evolve.
 
-**Best Practice:** When creating or reviewing business rules:
+<Callout type="tip" title="Best Practice">
+When creating or reviewing business rules:
 
 - Use clear and descriptive rule names.
 - Define conditions precisely to avoid unexpected behavior.
@@ -75,3 +82,4 @@ Using configurable business rules provides several benefits:
 - Review thresholds and limits regularly as business requirements change.
 - Deactivate obsolete rules rather than leaving outdated logic active.
 - Test rules against both valid and invalid scenarios before deploying them.
+</Callout>

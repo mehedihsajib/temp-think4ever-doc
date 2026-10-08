@@ -169,34 +169,30 @@ Use this filter when reviewing roles and permissions based on
 
 A role's access is determined by the combination of its:
 
-Screen AccessData AccessFlow AccessFor example:
+<div className="my-5 flex flex-wrap items-center justify-center gap-3 sm:gap-5 rounded-xl border border-blue-200 dark:border-blue-500/30 bg-blue-50/90 dark:bg-blue-500/[0.1] py-3.5 px-6 text-center text-base font-bold text-blue-600 dark:text-blue-400 shadow-xs">
+  <span>Screen Access</span>
+  <span className="text-blue-500 font-semibold">+</span>
+  <span>Data Access</span>
+  <span className="text-blue-500 font-semibold">+</span>
+  <span>Flow Access</span>
+</div>
 
-A Finance Officer may have **Full Access** to
- finance-related screens,
- **Read/Update** permissions for financial records,
- and permission to perform specific finance-related workflow
- actions.
+For example:
 
-This layered permission model helps maintain appropriate
- **security, access control, and separation of responsibilities
- across the platform.**
+A Finance Officer may have **Full Access** to finance-related screens, **Read/Update** permissions for financial records, and permission to perform specific finance-related workflow actions.
 
-**Best Practice:** When reviewing or
- configuring roles and permissions:
+This layered permission model helps maintain appropriate **security, access control, and separation of responsibilities across the platform.**
 
-- Grant users only the access required for their
- responsibilities.
-- Use **Read-Only** access when users only need
- to view information.
-- Review
- **Create, Update, and Delete** permissions
- carefully, as these allow users to modify platform data.
-- Verify workflow permissions to ensure users can only
- perform authorized business actions.
-- Use **Matrix View** when comparing
- permissions across multiple roles.
-- Use the **Phases (Roadmap)** filter when
- reviewing permissions by implementation phase.
+<Callout type="tip" title="Best Practice">
+When reviewing or configuring roles and permissions:
+
+- Grant users only the access required for their responsibilities.
+- Use **Read-Only** access when users only need to view information.
+- Review **Create, Update, and Delete** permissions carefully, as these allow users to modify platform data.
+- Verify workflow permissions to ensure users can only perform authorized business actions.
+- Use **Matrix View** when comparing permissions across multiple roles.
+- Use the **Phases (Roadmap)** filter when reviewing permissions by implementation phase.
+</Callout>
 
 This version is more suitable for a
  **client-facing User Manual** because it explains
