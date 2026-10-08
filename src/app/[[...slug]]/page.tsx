@@ -76,6 +76,8 @@ const components = {
     );
   },
   img: DocImage,
+  DocImage,
+  Image: DocImage,
   Callout,
   Note: (props: any) => <Callout type="note" {...props} />,
   Important: (props: any) => <Callout type="important" {...props} />,

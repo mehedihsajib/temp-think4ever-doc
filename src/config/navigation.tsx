@@ -1,45 +1,121 @@
 import React from "react";
-import { 
-  Play, Code, Palette, Puzzle, Globe, Settings, 
-  Rocket, Briefcase, FolderPlus, Terminal,
-  ShieldHalf, Users, Store,
-  Info, Star, LayoutDashboard, SlidersHorizontal,
-  Key, GitBranch, Share2, MoreHorizontal, Bot,
-  Plug, ListChecks, Network, Lightbulb, Workflow,
-  ShieldCheck, Scale, Layers, Boxes, Map, RefreshCw,
-  Zap, Sliders, FileText,
-  PlusCircle, PlayCircle, CheckCircle2, Bug, Database, FileCode,
-  BookOpen, MessageSquare, Wrench,
-  Home, CreditCard, Coins, BarChart3, Headphones, FolderOpen
+import {
+  Play,
+  Code,
+  Palette,
+  Puzzle,
+  Globe,
+  Settings,
+  Rocket,
+  Briefcase,
+  FolderPlus,
+  Terminal,
+  ShieldHalf,
+  Users,
+  Store,
+  Info,
+  Star,
+  LayoutDashboard,
+  SlidersHorizontal,
+  Key,
+  GitBranch,
+  Share2,
+  MoreHorizontal,
+  Bot,
+  Plug,
+  ListChecks,
+  Network,
+  Lightbulb,
+  Workflow,
+  ShieldCheck,
+  Scale,
+  Layers,
+  Boxes,
+  Map,
+  RefreshCw,
+  Zap,
+  Sliders,
+  FileText,
+  PlusCircle,
+  PlayCircle,
+  CheckCircle2,
+  Bug,
+  Database,
+  FileCode,
+  BookOpen,
+  MessageSquare,
+  Wrench,
+  Home,
+  CreditCard,
+  Coins,
+  BarChart3,
+  Headphones,
+  FolderOpen,
 } from "lucide-react";
 
 // MCP Custom Brand SVG Icons
 const ClaudeIcon = ({ className }: { className?: string }) => (
-  <img src="/docs/images/icons/claude.svg" alt="Claude" className={`${className || "h-4 w-4"} object-contain`} />
+  <img
+    src="/docs/images/icons/claude.svg"
+    alt="Claude"
+    className={`${className || "h-4 w-4"} object-contain`}
+  />
 );
 const CodexIcon = ({ className }: { className?: string }) => (
-  <img src="/docs/images/icons/codex.svg" alt="Codex" className={`${className || "h-4 w-4"} object-contain`} />
+  <img
+    src="/docs/images/icons/codex.svg"
+    alt="Codex"
+    className={`${className || "h-4 w-4"} object-contain`}
+  />
 );
 const CursorIcon = ({ className }: { className?: string }) => (
-  <img src="/docs/images/icons/cursor.svg" alt="Cursor" className={`${className || "h-4 w-4"} object-contain`} />
+  <img
+    src="/docs/images/icons/cursor.svg"
+    alt="Cursor"
+    className={`${className || "h-4 w-4"} object-contain`}
+  />
 );
 const ClaudeDesktopIcon = ({ className }: { className?: string }) => (
-  <img src="/docs/images/icons/claude-desktop.svg" alt="Claude Desktop" className={`${className || "h-4 w-4"} object-contain`} />
+  <img
+    src="/docs/images/icons/claude-desktop.svg"
+    alt="Claude Desktop"
+    className={`${className || "h-4 w-4"} object-contain`}
+  />
 );
 const VSCodeIcon = ({ className }: { className?: string }) => (
-  <img src="/docs/images/icons/vscode.svg" alt="VS Code" className={`${className || "h-4 w-4"} object-contain`} />
+  <img
+    src="/docs/images/icons/vscode.svg"
+    alt="VS Code"
+    className={`${className || "h-4 w-4"} object-contain`}
+  />
 );
 const WindsurfIcon = ({ className }: { className?: string }) => (
-  <img src="/docs/images/icons/windsurf.svg" alt="Windsurf" className={`${className || "h-4 w-4"} object-contain`} />
+  <img
+    src="/docs/images/icons/windsurf.svg"
+    alt="Windsurf"
+    className={`${className || "h-4 w-4"} object-contain`}
+  />
 );
 const GeminiIcon = ({ className }: { className?: string }) => (
-  <img src="/docs/images/icons/gemini.svg" alt="Gemini" className={`${className || "h-4 w-4"} object-contain`} />
+  <img
+    src="/docs/images/icons/gemini.svg"
+    alt="Gemini"
+    className={`${className || "h-4 w-4"} object-contain`}
+  />
 );
 const AmazonQIcon = ({ className }: { className?: string }) => (
-  <img src="/docs/images/icons/amazonq.svg" alt="Amazon Q" className={`${className || "h-4 w-4"} object-contain`} />
+  <img
+    src="/docs/images/icons/amazonq.svg"
+    alt="Amazon Q"
+    className={`${className || "h-4 w-4"} object-contain`}
+  />
 );
 const KiroIcon = ({ className }: { className?: string }) => (
-  <img src="/docs/images/icons/kiro.svg" alt="Kiro" className={`${className || "h-4 w-4"} object-contain`} />
+  <img
+    src="/docs/images/icons/kiro.svg"
+    alt="Kiro"
+    className={`${className || "h-4 w-4"} object-contain`}
+  />
 );
 
 export type NavItem = {
@@ -214,10 +290,19 @@ export const headerNav: NavItem[] = [
 
 export const footerNav = {
   brand: {
-    description: "Turn a codebase into a shared, reviewable system map in minutes—then keep every change aligned with business intent.",
+    description:
+      "Turn a codebase into a shared, reviewable system map in minutes—then keep every change aligned with business intent.",
     socials: [
-      { name: "YouTube", href: "https://www.youtube.com/@Think4EverInc", icon: "youtube" },
-      { name: "LinkedIn", href: "https://www.linkedin.com/company/think4ever-global-inc/", icon: "linkedin" },
+      {
+        name: "YouTube",
+        href: "https://www.youtube.com/@Think4EverInc",
+        icon: "youtube",
+      },
+      {
+        name: "LinkedIn",
+        href: "https://www.linkedin.com/company/think4ever-global-inc/",
+        icon: "linkedin",
+      },
     ],
   },
   groups: [
@@ -225,8 +310,14 @@ export const footerNav = {
       title: "Product",
       links: [
         { title: "How it works", href: "https://think4ever.com/how-it-works" },
-        { title: "Code → Design", href: "https://think4ever.com/code-to-design" },
-        { title: "Design → Code", href: "https://think4ever.com/design-to-code" },
+        {
+          title: "Code → Design",
+          href: "https://think4ever.com/code-to-design",
+        },
+        {
+          title: "Design → Code",
+          href: "https://think4ever.com/design-to-code",
+        },
         { title: "Integrations", href: "https://think4ever.com/integrations" },
         { title: "Pricing", href: "https://think4ever.com/pricing" },
       ],
@@ -244,8 +335,14 @@ export const footerNav = {
       title: "Legal & Privacy",
       links: [
         { title: "Contact Us", href: "https://think4ever.com/contact-us" },
-        { title: "Privacy Policy", href: "https://think4ever.com/privacy-policy" },
-        { title: "Terms & Conditions", href: "https://think4ever.com/terms-and-conditions" },
+        {
+          title: "Privacy Policy",
+          href: "https://think4ever.com/privacy-policy",
+        },
+        {
+          title: "Terms & Conditions",
+          href: "https://think4ever.com/terms-and-conditions",
+        },
       ],
     },
   ],
@@ -315,11 +412,6 @@ export const docsSidebarNav: SidebarGroup[] = [
         title: "Version Control",
         href: "/version_control",
         icon: GitBranch,
-      },
-      {
-        title: "Marketplace",
-        href: "/portal/marketplace",
-        icon: Store,
       },
       {
         title: "View & Share",

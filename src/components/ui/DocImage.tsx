@@ -5,15 +5,100 @@ import Image from "next/image";
 import { createPortal } from "react-dom";
 import { X, ZoomIn } from "lucide-react";
 
-interface DocImageProps {
+const SIZE_PRESETS: Record<string, string> = {
+  xs: "160px",
+  sm: "240px",
+  md: "420px",
+  lg: "640px",
+  xl: "800px",
+  full: "100%",
+};
+
+export interface DocImageProps {
   src: string;
   alt?: string;
+  width?: number | string;
+  height?: number | string;
+  maxWidth?: number | string;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
-export function DocImage({ src, alt = "Documentation Image" }: DocImageProps) {
-  const normalizedSrc = src.startsWith("/") && !src.startsWith("/docs/")
-    ? `/docs${src}`
-    : src;
+export function DocImage({
+  src,
+  alt = "Documentation Image",
+  width,
+  height,
+  maxWidth,
+  className,
+  style,
+}: DocImageProps) {
+  let cleanSrc = src || "";
+  let effectiveMaxWidth: string | number | undefined =
+    maxWidth ?? (style as any)?.maxWidth ?? (style as any)?.width;
+
+  // If width is provided (and not maxWidth)
+  if (!effectiveMaxWidth && width) {
+    effectiveMaxWidth = width;
+  }
+
+  // Parse size from URL hash: e.g. /image.png#200px, /image.png#w=200, /image.png#200, /image.png#sm
+  if (cleanSrc.includes("#")) {
+    const [base, hash] = cleanSrc.split("#");
+    if (hash) {
+      cleanSrc = base;
+      if (!effectiveMaxWidth) {
+        const lowerHash = hash.toLowerCase();
+        if (SIZE_PRESETS[lowerHash]) {
+          effectiveMaxWidth = SIZE_PRESETS[lowerHash];
+        } else if (/^\d+(px|%|rem)?$/.test(hash)) {
+          effectiveMaxWidth = /^\d+$/.test(hash) ? `${hash}px` : hash;
+        } else if (hash.startsWith("w=") || hash.startsWith("max-w=")) {
+          const val = hash.split("=")[1];
+          effectiveMaxWidth = /^\d+$/.test(val) ? `${val}px` : val;
+        }
+      }
+    }
+  }
+
+  // Parse size from URL query string: e.g. /image.png?w=200 or /image.png?maxWidth=200
+  if (cleanSrc.includes("?")) {
+    const [base, search] = cleanSrc.split("?");
+    const params = new URLSearchParams(search);
+    const queryWidth =
+      params.get("w") ||
+      params.get("width") ||
+      params.get("maxWidth") ||
+      params.get("max-w");
+    if (queryWidth && !effectiveMaxWidth) {
+      const lowerQuery = queryWidth.toLowerCase();
+      effectiveMaxWidth = SIZE_PRESETS[lowerQuery] || (/^\d+$/.test(queryWidth) ? `${queryWidth}px` : queryWidth);
+    }
+    cleanSrc = base;
+  }
+
+  // Check preset string
+  if (
+    effectiveMaxWidth &&
+    typeof effectiveMaxWidth === "string" &&
+    SIZE_PRESETS[effectiveMaxWidth.toLowerCase()]
+  ) {
+    effectiveMaxWidth = SIZE_PRESETS[effectiveMaxWidth.toLowerCase()];
+  }
+
+  // Format parsed maxWidth
+  const parsedMaxWidth = effectiveMaxWidth
+    ? typeof effectiveMaxWidth === "number"
+      ? `${effectiveMaxWidth}px`
+      : /^\d+$/.test(effectiveMaxWidth)
+      ? `${effectiveMaxWidth}px`
+      : effectiveMaxWidth
+    : undefined;
+
+  const normalizedSrc =
+    cleanSrc.startsWith("/") && !cleanSrc.startsWith("/docs/")
+      ? `/docs${cleanSrc}`
+      : cleanSrc;
   const [isOpen, setIsOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -61,7 +146,15 @@ export function DocImage({ src, alt = "Documentation Image" }: DocImageProps) {
     <>
       <span
         onClick={openModal}
-        className="group relative block my-2 max-w-[800px] rounded-xl overflow-hidden border border-slate-200 dark:border-white/[0.08] shadow-sm cursor-zoom-in select-none bg-slate-50 dark:bg-white/[0.02] transition-all duration-200 hover:shadow-md hover:border-slate-300 dark:hover:border-white/[0.15]"
+        style={{
+          ...style,
+          maxWidth: parsedMaxWidth || undefined,
+        }}
+        className={`group relative block my-2 ${
+          parsedMaxWidth ? "" : "max-w-[800px]"
+        } rounded-xl overflow-hidden border border-slate-200 dark:border-white/[0.08] shadow-sm cursor-zoom-in select-none bg-slate-50 dark:bg-white/[0.02] transition-all duration-200 hover:shadow-md hover:border-slate-300 dark:hover:border-white/[0.15] ${
+          className || ""
+        }`}
         title="Click to zoom in"
       >
         <Image

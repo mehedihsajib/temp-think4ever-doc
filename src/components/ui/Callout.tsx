@@ -63,6 +63,7 @@ const config = {
 export function Callout({ type = "note", title, children }: CalloutProps) {
   const c = config[type] || config.note;
   const Icon = c.icon;
+  const displayTitle = title !== undefined ? title : c.defaultTitle;
 
   return (
     <div className={`my-5 flex gap-3.5 rounded-xl border p-4 shadow-xs transition-colors ${c.borderColor} ${c.bgColor}`}>
@@ -70,9 +71,9 @@ export function Callout({ type = "note", title, children }: CalloutProps) {
         <Icon className={`h-5 w-5 ${c.iconColor}`} />
       </div>
       <div className="min-w-0 flex-1 text-sm leading-relaxed text-slate-800 dark:text-neutral-300">
-        {title && (
+        {displayTitle && (
           <div className={`font-semibold mb-1 ${c.titleColor}`}>
-            {title}
+            {displayTitle}
           </div>
         )}
         <div className="prose-p:my-1 prose-p:leading-relaxed [&>p:first-child]:mt-0 [&>p:last-child]:mb-0">
