@@ -38,10 +38,10 @@ The review is a static reading of the source. It does not build or run the appli
 
 Each check resolves to one of four statuses:
 
-- **Passed:** The check is met, with the evidence that confirms it.
-- **Warning:** A partial gap, with a severity.
-- **Failed:** A clear gap, with a severity.
-- **Not applicable:** The check does not apply. Checks that structurally cannot apply to the detected stack (for example, Row Level Security for a project with no client-exposed database) are marked Not applicable before any agent call. If a reviewer returns no verdict for a check, it is recorded as an error and shown under Not applicable.
+- <span className="font-bold text-[#109864]" style={{ color: "#109864" }}>Passed:</span> the check is met, with the evidence that confirms it.
+- <span className="font-bold text-[#E5A613]" style={{ color: "#E5A613" }}>Warning:</span> a partial gap, with a severity.
+- <span className="font-bold text-[#DE0F10]" style={{ color: "#DE0F10" }}>Failed:</span> a clear gap, with a severity.
+- <span className="font-bold text-[#6D6A67]" style={{ color: "#6D6A67" }}>Not applicable:</span> the check does not apply. Checks that structurally cannot apply to the detected stack (for example, Row Level Security for a project with no client-exposed database) are marked Not applicable before any agent call. If a reviewer returns no verdict for a check, it is recorded as an error and shown under Not applicable.
 
 Every result explains its reasoning and cites files and line ranges, so an engineer can verify it directly. Use the filters above the checklist to show failed, warning, passed or not-applicable checks.
 

@@ -143,6 +143,16 @@ const components = {
       {children}
     </tr>
   ),
+  strong: ({ children, className, style, ...props }: any) => (
+    <strong className={className} style={style} {...props}>
+      {children}
+    </strong>
+  ),
+  span: ({ children, className, style, ...props }: any) => (
+    <span className={className} style={style} {...props}>
+      {children}
+    </span>
+  ),
   blockquote: ({ children, ...props }: any) => {
     const text = textContent(children).trim();
     if (text.startsWith("[!NOTE]") || text.toLowerCase().startsWith("note:")) {
