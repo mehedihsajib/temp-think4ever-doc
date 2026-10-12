@@ -32,16 +32,8 @@ claude mcp add Think4Ever \
   --header "Authorization: Bearer tf_71b84ebb8284f86491f24b85311a55dfd2b0c9e74c678c7e"
 ```
 
-- **Global Access:** 
-
- Append `--scope user` to make the Think4Ever tools available across all
- of your
- projects.
-- **Project Specific:** 
-
- Append `--scope project` to write a shared `.mcp.json` file
- into your active repository
- root.
+- **Global Access:** Append `--scope user` to make the Think4Ever tools available across all of your projects.
+- **Project Specific:** Append `--scope project` to write a shared `.mcp.json` file into your active repository root.
 
 ### Step 2
 
@@ -72,7 +64,6 @@ Or commit a project config file `.mcp.json` at the repo root:
 }
 ```
 
-**Tip:** Mention the Think4Ever project by name (or ID) in your first prompt so
- the agent calls `list_projects` / `get_project` and anchors itself.
- You can also add a line to your `CLAUDE.md` like “Project specs live in
- Think4Ever project #163 — read the active concept before large changes.”
+<Callout type="tip" title="Tip">
+Mention the Think4Ever project by name (or ID) in your first prompt so the agent calls `list_projects` / `get_project` and anchors itself. You can also add a line to your `CLAUDE.md` like "Project specs live in Think4Ever project #163 — read the active concept before large changes."
+</Callout>

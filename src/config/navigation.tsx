@@ -530,7 +530,7 @@ export const docsSidebarNav: SidebarGroup[] = [
       },
       {
         title: "Agents Documents",
-        href: "/agents-documents",
+        href: "/agents_documents",
         icon: Bot,
       },
     ],

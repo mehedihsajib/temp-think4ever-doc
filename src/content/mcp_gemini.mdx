@@ -21,11 +21,9 @@ Before configuring the CLI, you must generate a secure access
  panel.
 - Copy the generated token immediately.
 
-⚠️ **Important Security Note:** The token configuration snippet fills in
- automatically upon creation and is only displayed once. Do not commit your
- active token to a shared repository. If you are using a per-project configuration file
- within a shared repository,
- prefer using a global file in your home directory instead.
+<Callout type="warning" title="Important Security Note">
+The token configuration snippet fills in automatically upon creation and is only displayed once. Do not commit your active token to a shared repository. If you are using a per-project configuration file within a shared repository, prefer using a global file in your home directory instead.
+</Callout>
 
 ### Configuration Setup
 
@@ -35,10 +33,8 @@ Gemini CLI reads its server profiles from a JSON configuration file. You can def
 
 **Configuration File Paths**
 
-- **Global Configuration:** 
-`~/.gemini/settings.json`
-- **Per-Project Configuration:** 
-`./.gemini/settings.json`
+- **Global Configuration:** `~/.gemini/settings.json`
+- **Per-Project Configuration:** `./.gemini/settings.json`
 
 ### JSON Configuration Block
 
