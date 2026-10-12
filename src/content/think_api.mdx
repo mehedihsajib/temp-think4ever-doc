@@ -147,6 +147,10 @@ Standardized HTTP endpoints designed to retrieve project
 
 ![Rest Methodd](/images/api-rest-methods.png)
 
+![Rest Methods](/images/api-rest-methods-2.png)
+
+![Rest Method](/images/api-rest-methods-3.png)
+
 ## Concepts & Blocks
 
 Direct granular endpoints that allow external applications to
@@ -155,6 +159,8 @@ Direct granular endpoints that allow external applications to
  processing the entire system layout in bulk.
 
 ![Concept Block](/images/api-concept-block-1.png)
+
+![Concept Block](/images/api-concept-block-2.png)
 
 ## Agents & Tasks
 
@@ -217,91 +223,39 @@ When an external pipeline script, curl command, or integration
 
 **401 UNAUTHORIZED / Missing or Invalid Token**
 
-- **The Problem:** The API cannot validate your credentials. The token is
- either missing from the headers, malformed, or has expired.
-- **How to Fix:** * Open the Access Tokens tab in the console and verify if
- your token is still active. If it has expired or been
- revoked, generate a new one.
- 
-
- Check your script or curl syntax. Ensure the token is
- passed exactly as an HTTP header with the proper
- capitalization and spacing: Authorization: Bearer
- tf_YOUR_TOKEN.
+- **The Problem:** The API cannot validate your credentials. The token is either missing from the headers, malformed, or has expired.
+- **How to Fix:** Open the Access Tokens tab in the console and verify if your token is still active. If it has expired or been revoked, generate a new one.
+  - Check your script or curl syntax. Ensure the token is passed exactly as an HTTP header with the proper capitalization and spacing: `Authorization: Bearer tf_YOUR_TOKEN`.
 
 **403 FORBIDDEN / Token Missing a Scope**
 
-- **The Problem:** Your token is cryptographically valid, but it does not have
- permission to execute this specific action or access this
- specific project. For example, you sent a POST request to
- create a task using a token restricted only to read actions.
-- **How to Fix:** * Review the Scope column in your console references to see
- what permission your endpoint requires (e.g., agents:submit
- or tasks:write).
- 
-
- Navigate to the Access Tokens tab and create a new token.
- Explicitly check the required method scopes (read/write
- per resource) and make sure the token is authorized to
- access the specific project ID you are targetting.
+- **The Problem:** Your token is cryptographically valid, but it does not have permission to execute this specific action or access this specific project. For example, you sent a POST request to create a task using a token restricted only to read actions.
+- **How to Fix:** Review the Scope column in your console references to see what permission your endpoint requires (e.g., `agents:submit` or `tasks:write`).
+  - Navigate to the Access Tokens tab and create a new token. Explicitly check the required method scopes (read/write per resource) and make sure the token is authorized to access the specific project ID you are targeting.
 
 **402 INSUFFICIENT_CREDITS / Out of Credits**
 
-- **The Problem:** Your authentication is completely correct, but the system
- blocked your background task or agent execution run because
- the project's credit balance is empty.
-- **How to Fix:** * Check the top-right corner of the Think4Ever web platform
- to view your active Credits balance.
- 
-
- If the balance is depleted, navigate to your account
- billing management settings to top up your infrastructure
- allocation before re-triggering programmatic queue
- operations.
+- **The Problem:** Your authentication is completely correct, but the system blocked your background task or agent execution run because the project's credit balance is empty.
+- **How to Fix:** Check the top-right corner of the Think4Ever web platform to view your active Credits balance.
+  - If the balance is depleted, navigate to your account billing management settings to top up your infrastructure allocation before re-triggering programmatic queue operations.
 
 **400 BAD_REQUEST / Missing or Invalid Parameters**
 
-- **The Problem:** The platform server received your payload, but the JSON
- data structure failed validation requirements.
-- **How to Fix:** * Check for syntax errors such as missing commas, unmatched
- brackets, or trailing spaces in your payload JSON.
- 
-
- Look beneath your example scripts in the console to ensure
- you are referencing existing, live platform parameters. If
- you are submitting an agent run, you must pass valid,
- numerical IDs for agent_type_id and folder_id. Query
- /v1/agent-types and /v1/projects/:id/folders first to
- cache real environment values.
+- **The Problem:** The platform server received your payload, but the JSON data structure failed validation requirements.
+- **How to Fix:** Check for syntax errors such as missing commas, unmatched brackets, or trailing spaces in your payload JSON.
+  - Look beneath your example scripts in the console to ensure you are referencing existing, live platform parameters. If you are submitting an agent run, you must pass valid, numerical IDs for `agent_type_id` and `folder_id`. Query `/v1/agent-types` and `/v1/projects/:id/folders` first to cache real environment values.
 
 **404 NOT_FOUND / Resource Missing or Not Accessible**
 
-- **The Problem:** The server cannot locate the specific URL path, project ID,
- block component, or task ID specified in your request.
-- **How to Fix:** * Double-check your URL parameter variables. For example,
- ensure that :id in your path matches your actual project ID
- (e.g., changing /v1/projects/:id/tasks to
- /v1/projects/160/tasks).
- 
-
- If you are querying a specific block inside Concepts &
- blocks, verify through the web interface that the
- component hasn't been deleted or renamed by another
- teammate.
+- **The Problem:** The server cannot locate the specific URL path, project ID, block component, or task ID specified in your request.
+- **How to Fix:** Double-check your URL parameter variables. For example, ensure that `:id` in your path matches your actual project ID (e.g., changing `/v1/projects/:id/tasks` to `/v1/projects/160/tasks`).
+  - If you are querying a specific block inside Concepts & blocks, verify through the web interface that the component hasn't been deleted or renamed by another teammate.
 
 **409 CONFLICT / State Conflict**
 
-- **The Problem:** The payload values you sent conflict with the current state
- of your project architecture. This frequently happens if
- your script attempts to inject a block with a duplicate ID
- that already exists in the blueprint.
-- **How to Fix:** * Run a GET request on your concept blocks layout to verify
- existing assets before issuing a write command.
- 
-
- Ensure that your external automated changes strictly
- respect the structural rules mapped out in your Think4Ever
- workspace to prevent architecture fragmentation.
+- **The Problem:** The payload values you sent conflict with the current state of your project architecture. This frequently happens if your script attempts to inject a block with a duplicate ID that already exists in the blueprint.
+- **How to Fix:** Run a GET request on your concept blocks layout to verify existing assets before issuing a write command.
+  - Ensure that your external automated changes strictly respect the structural rules mapped out in your Think4Ever workspace to prevent architecture fragmentation.
 
 **Quick Diagnostics Checklist**
 

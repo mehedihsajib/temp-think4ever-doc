@@ -620,7 +620,7 @@ export const docsSidebarNav: SidebarGroup[] = [
     items: [
       {
         title: "Knowledge and Feedback",
-        href: "/knowledge-and-feedback",
+        href: "/knowledge_and_feedback",
         icon: BookOpen,
       },
       {
