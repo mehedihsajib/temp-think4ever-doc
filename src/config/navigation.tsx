@@ -752,14 +752,14 @@ export const portalSidebarNav: SidebarGroup[] = [
         href: "/portal/billing",
         icon: CreditCard,
       },
-      {
-        title: "Buy More Credits",
-        href: "/portal/buy_more_credits",
-        icon: Coins,
-      },
+      // {
+      //   title: "Buy More Credits",
+      //   href: "/portal/buy_more_credits",
+      //   icon: Coins,
+      // },
       {
         title: "Auto-Top Up",
-        href: "/portal/auto-topup",
+        href: "/portal/auto_topup",
         icon: RefreshCw,
       },
       {
