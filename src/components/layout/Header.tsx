@@ -1,39 +1,54 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { headerNav, docsSidebarNav, devSidebarNav, portalSidebarNav } from '@/config/navigation';
-import { 
-  ChevronDown, 
-  ChevronRight, 
-  Menu, 
-  X, 
-  BookOpen, 
-  Code, 
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import {
+  headerNav,
+  docsSidebarNav,
+  devSidebarNav,
+  portalSidebarNav,
+} from "@/config/navigation";
+import {
+  ChevronDown,
+  ChevronRight,
+  Menu,
+  X,
+  BookOpen,
+  Code,
   LayoutDashboard,
   Compass,
-  ArrowRight
-} from 'lucide-react';
-import { ThemeToggle, MobileThemeSegment } from '@/components/ui/ThemeToggle';
+  ArrowRight,
+} from "lucide-react";
+import { ThemeToggle, MobileThemeSegment } from "@/components/ui/ThemeToggle";
 
 export function Header() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeMobileTab, setActiveMobileTab] = useState<'docs' | 'menu'>('menu');
-  const [openMobileGroup, setOpenMobileGroup] = useState<string | null>("Product");
-  const [openDocSubmenus, setOpenDocSubmenus] = useState<Record<string, boolean>>({
+  const [activeMobileTab, setActiveMobileTab] = useState<"docs" | "menu">(
+    "menu",
+  );
+  const [openMobileGroup, setOpenMobileGroup] = useState<string | null>(
+    "Product",
+  );
+  const [openDocSubmenus, setOpenDocSubmenus] = useState<
+    Record<string, boolean>
+  >({
     "Create a new Project": true,
   });
 
   const isDevMode = pathname.startsWith("/dev");
   const isPortalMode = pathname.startsWith("/portal");
   const isDocsPage = true;
-  const docGroups = isDevMode ? devSidebarNav : isPortalMode ? portalSidebarNav : docsSidebarNav;
+  const docGroups = isDevMode
+    ? devSidebarNav
+    : isPortalMode
+      ? portalSidebarNav
+      : docsSidebarNav;
 
   // Auto-select docs tab if on docs route
   useEffect(() => {
-    setActiveMobileTab('docs');
+    setActiveMobileTab("docs");
   }, [pathname]);
 
   // Lock body scroll when mobile menu is open
@@ -77,17 +92,16 @@ export function Header() {
     <>
       <header className="sticky top-0 z-40 w-full border-b border-[#0a2f85] bg-[#093cad] text-white">
         <div className="mx-auto flex h-16 max-w-[1600px] items-center justify-between px-4 sm:px-6 lg:px-8">
-          
           {/* Brand Logo - Aligned left across all viewports */}
           <div className="flex items-center gap-3">
-            <Link 
-              href="https://think4ever.com" 
+            <Link
+              href="https://think4ever.com"
               className="flex items-center transition-opacity hover:opacity-90 cursor-pointer"
             >
-              <img 
-                src="/docs/images/think4ever-logo.svg" 
-                alt="Think4Ever" 
-                className="h-7 sm:h-8 w-auto" 
+              <img
+                src="/docs/images/think4ever-logo.png"
+                alt="Think4Ever"
+                className="max-w-[200px]"
               />
             </Link>
           </div>
@@ -102,7 +116,7 @@ export function Header() {
                 <div key={idx} className="relative group">
                   {item.items ? (
                     <>
-                      <button 
+                      <button
                         type="button"
                         className="flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
                       >
@@ -111,13 +125,17 @@ export function Header() {
                       </button>
 
                       {/* Dropdown Panel with Smooth Glide & Fade Transition */}
-                      <div 
+                      <div
                         className={`absolute top-full mt-1.5 z-50 rounded-2xl bg-white dark:bg-[#121316] p-2 shadow-2xl border border-slate-200/90 dark:border-white/[0.1] before:absolute before:-top-3 before:left-0 before:right-0 before:h-3 before:content-[''] ${
-                          isCentered ? 'left-1/2 t4e-dropdown-menu-centered' : 'left-0 t4e-dropdown-menu'
-                        } ${isTwoCol ? 'w-[590px]' : 'w-[270px]'}`}
+                          isCentered
+                            ? "left-1/2 t4e-dropdown-menu-centered"
+                            : "left-0 t4e-dropdown-menu"
+                        } ${isTwoCol ? "w-[590px]" : "w-[270px]"}`}
                         role="menu"
                       >
-                        <div className={`grid gap-1 ${isTwoCol ? 'grid-cols-2' : 'grid-cols-1'}`}>
+                        <div
+                          className={`grid gap-1 ${isTwoCol ? "grid-cols-2" : "grid-cols-1"}`}
+                        >
                           {item.items.map((subItem, subIdx) => {
                             const Icon = subItem.icon;
                             return (
@@ -161,7 +179,7 @@ export function Header() {
           <div className="hidden md:flex items-center gap-3">
             <ThemeToggle />
             <div className="h-4 w-px bg-white/20 mx-0.5" />
-            <Link 
+            <Link
               href="https://portal.think4ever.com/#/login"
               className="text-sm font-medium text-white/90 hover:text-white transition-colors px-3 py-2 cursor-pointer"
             >
@@ -178,7 +196,7 @@ export function Header() {
           {/* Mobile Header Right Controls */}
           <div className="flex items-center gap-2 md:hidden">
             <ThemeToggle />
-            <Link 
+            <Link
               href="https://portal.think4ever.com/#/login"
               className="text-xs font-semibold text-white/90 hover:text-white px-2 py-1.5 rounded-lg hover:bg-white/10 transition-colors cursor-pointer"
             >
@@ -197,37 +215,37 @@ export function Header() {
       </header>
 
       {/* Production-Grade Mobile Drawer (Slide-Over) */}
-      <div 
+      <div
         className={`fixed inset-0 z-50 md:hidden transition-all duration-300 ${
           mobileMenuOpen ? "pointer-events-auto" : "pointer-events-none"
         }`}
         aria-hidden={!mobileMenuOpen}
       >
         {/* Backdrop Overlay with Smooth Fade */}
-        <div 
+        <div
           className={`fixed inset-0 bg-slate-950/60 backdrop-blur-xs transition-opacity duration-300 ${
             mobileMenuOpen ? "opacity-100" : "opacity-0"
           }`}
-          onClick={() => setMobileMenuOpen(false)} 
+          onClick={() => setMobileMenuOpen(false)}
         />
 
         {/* Slide-Out Drawer Panel */}
-        <div 
+        <div
           className={`fixed inset-y-0 right-0 z-50 w-full max-w-[340px] sm:max-w-sm bg-white dark:bg-[#0C0D0E] border-l border-transparent dark:border-white/[0.08] shadow-2xl flex flex-col transform transition-transform duration-300 ease-in-out ${
             mobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
           {/* Drawer Top Header - Brand blue matching header */}
           <div className="bg-[#093cad] text-white px-5 py-4 flex items-center justify-between border-b border-[#0a2f85] shrink-0">
-            <Link 
-              href="https://think4ever.com" 
+            <Link
+              href="https://think4ever.com"
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center"
             >
-              <img 
-                src="/docs/images/think4ever-logo.svg" 
-                alt="Think4Ever" 
-                className="h-7 w-auto" 
+              <img
+                src="/docs/images/think4ever-logo.png"
+                alt="Think4Ever"
+                className="h-7 w-auto"
               />
             </Link>
             <button
@@ -245,11 +263,11 @@ export function Header() {
             <div className="flex rounded-xl bg-slate-200/70 dark:bg-white/[0.05] p-1">
               <button
                 type="button"
-                onClick={() => setActiveMobileTab('docs')}
+                onClick={() => setActiveMobileTab("docs")}
                 className={`flex-1 flex items-center justify-center gap-1.5 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
-                  activeMobileTab === 'docs'
-                    ? 'bg-white dark:bg-white/[0.1] text-[#1D63E0] dark:text-white shadow-xs font-bold'
-                    : 'text-slate-600 dark:text-neutral-400 hover:text-slate-900 dark:hover:text-white'
+                  activeMobileTab === "docs"
+                    ? "bg-white dark:bg-white/[0.1] text-[#1D63E0] dark:text-white shadow-xs font-bold"
+                    : "text-slate-600 dark:text-neutral-400 hover:text-slate-900 dark:hover:text-white"
                 }`}
               >
                 <BookOpen className="h-3.5 w-3.5" />
@@ -257,11 +275,11 @@ export function Header() {
               </button>
               <button
                 type="button"
-                onClick={() => setActiveMobileTab('menu')}
+                onClick={() => setActiveMobileTab("menu")}
                 className={`flex-1 flex items-center justify-center gap-1.5 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
-                  activeMobileTab === 'menu'
-                    ? 'bg-white dark:bg-white/[0.1] text-[#1D63E0] dark:text-white shadow-xs font-bold'
-                    : 'text-slate-600 dark:text-neutral-400 hover:text-slate-900 dark:hover:text-white'
+                  activeMobileTab === "menu"
+                    ? "bg-white dark:bg-white/[0.1] text-[#1D63E0] dark:text-white shadow-xs font-bold"
+                    : "text-slate-600 dark:text-neutral-400 hover:text-slate-900 dark:hover:text-white"
                 }`}
               >
                 <Compass className="h-3.5 w-3.5" />
@@ -272,7 +290,7 @@ export function Header() {
 
           {/* Drawer Scrollable Content Area */}
           <div className="flex-1 overflow-y-auto custom-scrollbar px-4 py-3.5">
-            {activeMobileTab === 'docs' ? (
+            {activeMobileTab === "docs" ? (
               /* Documentation Navigation View */
               <div className="space-y-4">
                 {/* Designer vs Developer Switcher */}
@@ -332,7 +350,8 @@ export function Header() {
                       <div className="space-y-0.5">
                         {group.items.map((item, itemIdx) => {
                           const Icon = item.icon;
-                          const hasSubmenu = item.items && item.items.length > 0;
+                          const hasSubmenu =
+                            item.items && item.items.length > 0;
                           const isSubOpen = !!openDocSubmenus[item.title];
                           const isActive = pathname === item.href;
 
@@ -353,7 +372,9 @@ export function Header() {
                                       {Icon && (
                                         <Icon className="h-3.5 w-3.5 shrink-0 text-slate-500 dark:text-neutral-400" />
                                       )}
-                                      <span className="truncate">{item.title}</span>
+                                      <span className="truncate">
+                                        {item.title}
+                                      </span>
                                     </div>
                                     {isSubOpen ? (
                                       <ChevronDown className="h-3.5 w-3.5 text-slate-400 dark:text-neutral-400" />
@@ -365,12 +386,15 @@ export function Header() {
                                   {isSubOpen && (
                                     <div className="mt-1 ml-4 pl-2 border-l border-slate-200 dark:border-white/[0.08] space-y-0.5">
                                       {item.items!.map((subItem, subIdx) => {
-                                        const isSubActive = pathname === subItem.href;
+                                        const isSubActive =
+                                          pathname === subItem.href;
                                         return (
                                           <Link
                                             key={subIdx}
                                             href={subItem.href}
-                                            onClick={() => setMobileMenuOpen(false)}
+                                            onClick={() =>
+                                              setMobileMenuOpen(false)
+                                            }
                                             className={`block px-2.5 py-1.5 rounded-md text-xs transition-colors cursor-pointer ${
                                               isSubActive
                                                 ? "bg-blue-50 dark:bg-white/[0.08] text-blue-600 dark:text-white font-semibold"
@@ -400,7 +424,9 @@ export function Header() {
                                   }`}
                                 >
                                   {Icon && (
-                                    <Icon className={`h-3.5 w-3.5 shrink-0 ${isActive ? "text-blue-600 dark:text-white" : "text-slate-400 dark:text-neutral-400"}`} />
+                                    <Icon
+                                      className={`h-3.5 w-3.5 shrink-0 ${isActive ? "text-blue-600 dark:text-white" : "text-slate-400 dark:text-neutral-400"}`}
+                                    />
                                   )}
                                   <span className="truncate">{item.title}</span>
                                 </Link>
@@ -417,7 +443,10 @@ export function Header() {
               /* Site Navigation View */
               <div className="space-y-1">
                 {headerNav.map((item, idx) => (
-                  <div key={idx} className="border-b border-slate-100 dark:border-white/[0.08] pb-1 mb-1 last:border-b-0">
+                  <div
+                    key={idx}
+                    className="border-b border-slate-100 dark:border-white/[0.08] pb-1 mb-1 last:border-b-0"
+                  >
                     {item.items ? (
                       <div>
                         <button
@@ -428,7 +457,9 @@ export function Header() {
                           <span>{item.title}</span>
                           <ChevronDown
                             className={`h-4 w-4 text-slate-400 dark:text-neutral-400 transition-transform duration-200 ${
-                              openMobileGroup === item.title ? "rotate-180 text-blue-600 dark:text-blue-400" : ""
+                              openMobileGroup === item.title
+                                ? "rotate-180 text-blue-600 dark:text-blue-400"
+                                : ""
                             }`}
                           />
                         </button>
