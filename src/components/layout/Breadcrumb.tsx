@@ -5,13 +5,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronRight, Home } from "lucide-react";
 import { docsSidebarNav, devSidebarNav, portalSidebarNav } from "@/config/navigation";
+import { normalizePath, isPathActive } from "@/lib/utils";
 
 export interface BreadcrumbCrumb {
   label: string;
   href?: string;
 }
 
-function resolveBreadcrumbs(pathname: string): BreadcrumbCrumb[] {
+function resolveBreadcrumbs(rawPathname: string): BreadcrumbCrumb[] {
+  const pathname = normalizePath(rawPathname);
   const crumbs: BreadcrumbCrumb[] = [];
 
   // Developer Mode
@@ -24,7 +26,7 @@ function resolveBreadcrumbs(pathname: string): BreadcrumbCrumb[] {
     // Search devSidebarNav
     for (const group of devSidebarNav) {
       for (const item of group.items) {
-        if (item.href === pathname) {
+        if (isPathActive(pathname, item.href)) {
           crumbs.push({ label: item.title });
           return crumbs;
         }
@@ -50,7 +52,7 @@ function resolveBreadcrumbs(pathname: string): BreadcrumbCrumb[] {
     // Search portalSidebarNav
     for (const group of portalSidebarNav) {
       for (const item of group.items) {
-        if (item.href === pathname) {
+        if (isPathActive(pathname, item.href)) {
           crumbs.push({ label: item.title });
           return crumbs;
         }
@@ -72,7 +74,7 @@ function resolveBreadcrumbs(pathname: string): BreadcrumbCrumb[] {
   for (const group of docsSidebarNav) {
     for (const item of group.items) {
       // Check direct match
-      if (item.href === pathname) {
+      if (isPathActive(pathname, item.href)) {
         if (group.title) {
           crumbs.push({ label: group.title });
         }
@@ -83,7 +85,7 @@ function resolveBreadcrumbs(pathname: string): BreadcrumbCrumb[] {
       // Check nested sub-items (e.g. Create a new Project -> Reverse Engineering)
       if (item.items) {
         for (const subItem of item.items) {
-          if (subItem.href === pathname) {
+          if (isPathActive(pathname, subItem.href)) {
             if (group.title) {
               crumbs.push({ label: group.title });
             }

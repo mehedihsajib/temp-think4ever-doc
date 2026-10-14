@@ -3,6 +3,7 @@
 import React from "react";
 import { usePathname } from "next/navigation";
 import { AppSidebar } from "@/components/layout/AppSidebar";
+import { normalizePath } from "@/lib/utils";
 
 interface DocsLayoutShellProps {
   children: React.ReactNode;
@@ -10,7 +11,10 @@ interface DocsLayoutShellProps {
 
 export function DocsLayoutShell({ children }: DocsLayoutShellProps) {
   const pathname = usePathname();
-  const isOnboarding = pathname === "/onboarding" || pathname.startsWith("/onboarding/");
+  const normalizedPath = normalizePath(pathname);
+  const isOnboarding =
+    normalizedPath === "/onboarding" ||
+    normalizedPath.startsWith("/onboarding/");
 
   if (isOnboarding) {
     return <main className="flex-1 w-full">{children}</main>;

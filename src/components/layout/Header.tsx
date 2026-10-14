@@ -21,9 +21,11 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { ThemeToggle, MobileThemeSegment } from "@/components/ui/ThemeToggle";
+import { normalizePath, isPathActive } from "@/lib/utils";
 
 export function Header() {
   const pathname = usePathname();
+  const normalizedPath = normalizePath(pathname);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeMobileTab, setActiveMobileTab] = useState<"docs" | "menu">(
     "menu",
@@ -37,14 +39,31 @@ export function Header() {
     "Create a new Project": true,
   });
 
-  const isDevMode = pathname.startsWith("/dev");
-  const isPortalMode = pathname.startsWith("/portal");
+  const isDevMode = normalizedPath.startsWith("/dev");
+  const isPortalMode = normalizedPath.startsWith("/portal");
   const isDocsPage = true;
   const docGroups = isDevMode
     ? devSidebarNav
     : isPortalMode
       ? portalSidebarNav
       : docsSidebarNav;
+
+  // Automatically expand parent submenu if any child is active
+  useEffect(() => {
+    docGroups.forEach((group) => {
+      group.items.forEach((item) => {
+        if (
+          item.items &&
+          item.items.some((sub) => isPathActive(pathname, sub.href))
+        ) {
+          setOpenDocSubmenus((prev) => ({
+            ...prev,
+            [item.title]: true,
+          }));
+        }
+      });
+    });
+  }, [pathname, docGroups]);
 
   // Auto-select docs tab if on docs route
   useEffect(() => {
@@ -353,7 +372,7 @@ export function Header() {
                           const hasSubmenu =
                             item.items && item.items.length > 0;
                           const isSubOpen = !!openDocSubmenus[item.title];
-                          const isActive = pathname === item.href;
+                          const isActive = isPathActive(pathname, item.href);
 
                           return (
                             <div key={itemIdx}>
@@ -387,7 +406,7 @@ export function Header() {
                                     <div className="mt-1 ml-4 pl-2 border-l border-slate-200 dark:border-white/[0.08] space-y-0.5">
                                       {item.items!.map((subItem, subIdx) => {
                                         const isSubActive =
-                                          pathname === subItem.href;
+                                          isPathActive(pathname, subItem.href);
                                         return (
                                           <Link
                                             key={subIdx}

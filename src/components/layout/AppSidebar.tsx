@@ -1,9 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { docsSidebarNav, devSidebarNav, portalSidebarNav } from "@/config/navigation";
+import { normalizePath, isPathActive } from "@/lib/utils";
 import { 
   BookOpen,
   Code,
@@ -15,13 +16,14 @@ import {
 
 export function AppSidebar() {
   const pathname = usePathname();
+  const normalizedPath = normalizePath(pathname);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [openSubmenus, setOpenSubmenus] = useState<Record<string, boolean>>({
     "Create a new Project": true,
   });
 
-  const isDevMode = pathname.startsWith("/dev");
-  const isPortalMode = pathname.startsWith("/portal");
+  const isDevMode = normalizedPath.startsWith("/dev");
+  const isPortalMode = normalizedPath.startsWith("/portal");
 
   let navGroups = docsSidebarNav;
   let sidebarTitle = "Think4Ever Designer";
@@ -36,6 +38,23 @@ export function AppSidebar() {
     sidebarTitle = "Think4Ever Portal";
     SidebarIcon = BookOpen;
   }
+
+  // Automatically expand parent submenu if any child is active
+  useEffect(() => {
+    navGroups.forEach((group) => {
+      group.items.forEach((item) => {
+        if (
+          item.items &&
+          item.items.some((sub) => isPathActive(pathname, sub.href))
+        ) {
+          setOpenSubmenus((prev) => ({
+            ...prev,
+            [item.title]: true,
+          }));
+        }
+      });
+    });
+  }, [pathname, navGroups]);
 
   const toggleSubmenu = (title: string) => {
     setOpenSubmenus((prev) => ({
@@ -97,7 +116,7 @@ export function AppSidebar() {
                     const Icon = item.icon;
                     const hasSubmenu = item.items && item.items.length > 0;
                     const isSubmenuOpen = !!openSubmenus[item.title];
-                    const isActive = pathname === item.href;
+                    const isActive = isPathActive(pathname, item.href);
 
                     return (
                       <li key={itemIdx} className="list-none m-0 p-0">
@@ -134,7 +153,7 @@ export function AppSidebar() {
                             {isSubmenuOpen && (
                               <ul className="mt-1 ml-4 pl-3 space-y-1 list-none border-l border-slate-200 dark:border-neutral-800">
                                 {item.items!.map((subItem, subIdx) => {
-                                  const isSubActive = pathname === subItem.href;
+                                  const isSubActive = isPathActive(pathname, subItem.href);
                                   return (
                                     <li key={subIdx} className="list-none">
                                       <Link

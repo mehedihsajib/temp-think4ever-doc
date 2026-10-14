@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { DocsLayoutShell } from "@/components/layout/DocsLayoutShell";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
+import { TopProgressBar } from "@/components/ui/TopProgressBar";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -60,6 +61,7 @@ export default function RootLayout({
     <html lang="en" className={`${dmSans.variable} h-full antialiased`} suppressHydrationWarning>
       <body className="min-h-full flex flex-col font-sans bg-white dark:bg-[#0C0D0E] text-slate-900 dark:text-[#E4E4E7] transition-colors duration-200">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+          <TopProgressBar />
           <div className="flex min-h-screen flex-col bg-white dark:bg-[#0C0D0E] text-slate-900 dark:text-[#E4E4E7]">
             <Header />
             <DocsLayoutShell>{children}</DocsLayoutShell>
