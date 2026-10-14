@@ -289,6 +289,35 @@ export const headerNav: NavItem[] = [
     ],
   },
   {
+    title: "Tutorials",
+    items: [
+      {
+        title: "Design in Think, Code in Claude",
+        description: "Connect Claude Code and build your project",
+        href: "https://think4ever.com/tutorials/how-to-design-in-think/",
+        icon: Code,
+      },
+      {
+        title: "Add Co-developers and Collaborators",
+        description: "Add team members as company users",
+        href: "https://think4ever.com/tutorials/add-co-developers-and-collaborators/",
+        icon: Users,
+      },
+      {
+        title: "Turn Existing Code into a Living Blueprint",
+        description: "Analyze your repository and create design artifacts",
+        href: "https://think4ever.com/tutorials/turn-existing-code-into-a-living-blueprint/",
+        icon: BookOpen,
+      },
+      {
+        title: "Build an Application from Intent",
+        description: "Start from a business outcome to build an app",
+        href: "https://think4ever.com/tutorials/build-an-application-from-intent-in-think4ever/",
+        icon: Puzzle,
+      },
+    ],
+  },
+  {
     title: "Pricing",
     href: "https://think4ever.com/pricing",
   },

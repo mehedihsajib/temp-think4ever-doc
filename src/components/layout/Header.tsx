@@ -101,7 +101,7 @@ export function Header() {
               <img
                 src="/docs/images/think4ever-logo.png"
                 alt="Think4Ever"
-                className="max-w-[200px]"
+                className="max-w-[150px] md:max-w-[200px]"
               />
             </Link>
           </div>
@@ -245,7 +245,7 @@ export function Header() {
               <img
                 src="/docs/images/think4ever-logo.png"
                 alt="Think4Ever"
-                className="h-7 w-auto"
+                className="max-w-[150px]"
               />
             </Link>
             <button
