@@ -290,12 +290,25 @@ export const headerNav: NavItem[] = [
   },
   {
     title: "Tutorials",
+    columns: 2,
     items: [
       {
         title: "Design in Think, Code in Claude",
         description: "Connect Claude Code and build your project",
         href: "https://think4ever.com/tutorials/how-to-design-in-think/",
         icon: Code,
+      },
+      {
+        title: "Design in Think, Code in Codex",
+        description: "Connect OpenAI Codex and build your project",
+        href: "https://think4ever.com/tutorials/design-in-think-code-in-codex/",
+        icon: Code,
+      },
+      {
+        title: "Make Vibe-Coded Apps Production Ready",
+        description: "Harden and audit AI-generated code for enterprise",
+        href: "https://think4ever.com/tutorials/make-vibe-coded-applications-production-ready/",
+        icon: Shield,
       },
       {
         title: "Add Co-developers and Collaborators",
@@ -781,6 +794,11 @@ export const portalSidebarNav: SidebarGroup[] = [
         title: "Usage & Analysis",
         href: "/portal/usage_and_analysis",
         icon: BarChart3,
+      },
+      {
+        title: "Plans",
+        href: "/portal/plans",
+        icon: FileText,
       },
       {
         title: "Billing",
