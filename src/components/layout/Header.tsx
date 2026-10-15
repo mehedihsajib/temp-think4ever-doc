@@ -19,6 +19,7 @@ import {
   LayoutDashboard,
   Compass,
   ArrowRight,
+  Rocket,
 } from "lucide-react";
 import { ThemeToggle, MobileThemeSegment } from "@/components/ui/ThemeToggle";
 import { normalizePath, isPathActive } from "@/lib/utils";
@@ -41,6 +42,9 @@ export function Header() {
 
   const isDevMode = normalizedPath.startsWith("/dev");
   const isPortalMode = normalizedPath.startsWith("/portal");
+  const isOnboardingMode =
+    normalizedPath === "/onboarding" ||
+    normalizedPath.startsWith("/onboarding/");
   const isDocsPage = true;
   const docGroups = isDevMode
     ? devSidebarNav
@@ -110,7 +114,7 @@ export function Header() {
   return (
     <>
       <header className="sticky top-0 z-40 w-full border-b border-[#0a2f85] bg-[#093cad] text-white">
-        <div className="mx-auto flex h-16 max-w-[1600px] items-center justify-between px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex h-18 max-w-[1600px] items-center justify-between px-4 sm:px-6 lg:px-8">
           {/* Brand Logo - Aligned left across all viewports */}
           <div className="flex items-center gap-3">
             <Link
@@ -125,8 +129,8 @@ export function Header() {
             </Link>
           </div>
 
-          {/* Desktop Navigation - 100% untouched */}
-          <nav className="hidden md:flex items-center gap-1 lg:gap-2">
+          {/* Desktop Navigation */}
+          <nav className="hidden xl:flex items-center gap-1 lg:gap-2">
             {headerNav.map((item, idx) => {
               const isTwoCol = item.columns === 2;
               const isCentered = isTwoCol || item.title === "Resources";
@@ -195,7 +199,7 @@ export function Header() {
           </nav>
 
           {/* Desktop CTA Actions */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden xl:flex items-center gap-3">
             <ThemeToggle />
             <div className="h-4 w-px bg-white/20 mx-0.5" />
             <Link
@@ -212,14 +216,20 @@ export function Header() {
             </Link>
           </div>
 
-          {/* Mobile Header Right Controls */}
-          <div className="flex items-center gap-2 md:hidden">
+          {/* Mobile / Tablet Header Right Controls */}
+          <div className="flex items-center gap-2 xl:hidden">
             <ThemeToggle />
             <Link
               href="https://portal.think4ever.com/#/login"
-              className="text-xs font-semibold text-white/90 hover:text-white px-2 py-1.5 rounded-lg hover:bg-white/10 transition-colors cursor-pointer"
+              className="text-xs sm:text-sm font-semibold text-white/90 hover:text-white px-2.5 py-1.5 rounded-lg hover:bg-white/10 transition-colors cursor-pointer"
             >
               Sign in
+            </Link>
+            <Link
+              href="https://portal.think4ever.com/#/register"
+              className="hidden sm:inline-flex rounded-full bg-[#F4F6FA] text-[#1D63E0] px-4 py-1.5 text-xs font-semibold shadow-sm hover:bg-white transition-colors cursor-pointer"
+            >
+              Start free
             </Link>
             <button
               type="button"
@@ -233,9 +243,9 @@ export function Header() {
         </div>
       </header>
 
-      {/* Production-Grade Mobile Drawer (Slide-Over) */}
+      {/* Production-Grade Mobile / Tablet Drawer (Slide-Over) */}
       <div
-        className={`fixed inset-0 z-50 md:hidden transition-all duration-300 ${
+        className={`fixed inset-0 z-50 xl:hidden transition-all duration-300 ${
           mobileMenuOpen ? "pointer-events-auto" : "pointer-events-none"
         }`}
         aria-hidden={!mobileMenuOpen}
@@ -255,7 +265,7 @@ export function Header() {
           }`}
         >
           {/* Drawer Top Header - Brand blue matching header */}
-          <div className="bg-[#093cad] text-white px-5 py-4 flex items-center justify-between border-b border-[#0a2f85] shrink-0">
+          <div className="bg-[#093cad] text-white px-5 py-1 flex items-center justify-between border-b border-[#0a2f85] shrink-0">
             <Link
               href="https://think4ever.com"
               onClick={() => setMobileMenuOpen(false)}
@@ -312,17 +322,29 @@ export function Header() {
             {activeMobileTab === "docs" ? (
               /* Documentation Navigation View */
               <div className="space-y-4">
-                {/* Designer vs Developer Switcher */}
+                {/* Documentation Mode Switcher */}
                 <div className="p-2.5 rounded-xl bg-blue-50/70 dark:bg-white/[0.04] border border-blue-100/70 dark:border-white/[0.08]">
                   <div className="text-[10px] font-bold uppercase tracking-wider text-blue-800/70 dark:text-neutral-400 mb-1.5 px-1">
                     Documentation Mode
                   </div>
-                  <div className="grid grid-cols-3 gap-1.5">
+                  <div className="grid grid-cols-2 gap-1.5">
+                    <Link
+                      href="/onboarding"
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={`flex items-center justify-center gap-1.5 py-2 px-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                        isOnboardingMode
+                          ? "bg-[#1D63E0] text-white shadow-xs font-bold"
+                          : "bg-white dark:bg-white/[0.05] text-slate-700 dark:text-neutral-300 hover:bg-slate-50 dark:hover:bg-white/[0.08] border border-slate-200/80 dark:border-white/[0.08]"
+                      }`}
+                    >
+                      <Rocket className="h-3.5 w-3.5 shrink-0" />
+                      <span>Onboarding</span>
+                    </Link>
                     <Link
                       href="/introduction"
                       onClick={() => setMobileMenuOpen(false)}
-                      className={`flex items-center justify-center gap-1 py-2 px-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
-                        !isDevMode && !isPortalMode
+                      className={`flex items-center justify-center gap-1.5 py-2 px-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                        !isDevMode && !isPortalMode && !isOnboardingMode
                           ? "bg-[#1D63E0] text-white shadow-xs font-bold"
                           : "bg-white dark:bg-white/[0.05] text-slate-700 dark:text-neutral-300 hover:bg-slate-50 dark:hover:bg-white/[0.08] border border-slate-200/80 dark:border-white/[0.08]"
                       }`}
@@ -333,7 +355,7 @@ export function Header() {
                     <Link
                       href="/dev/developer_mode"
                       onClick={() => setMobileMenuOpen(false)}
-                      className={`flex items-center justify-center gap-1 py-2 px-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                      className={`flex items-center justify-center gap-1.5 py-2 px-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                         isDevMode
                           ? "bg-[#1D63E0] text-white shadow-xs font-bold"
                           : "bg-white dark:bg-white/[0.05] text-slate-700 dark:text-neutral-300 hover:bg-slate-50 dark:hover:bg-white/[0.08] border border-slate-200/80 dark:border-white/[0.08]"
@@ -345,7 +367,7 @@ export function Header() {
                     <Link
                       href="/portal/dashboard"
                       onClick={() => setMobileMenuOpen(false)}
-                      className={`flex items-center justify-center gap-1 py-2 px-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                      className={`flex items-center justify-center gap-1.5 py-2 px-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                         isPortalMode
                           ? "bg-[#1D63E0] text-white shadow-xs font-bold"
                           : "bg-white dark:bg-white/[0.05] text-slate-700 dark:text-neutral-300 hover:bg-slate-50 dark:hover:bg-white/[0.08] border border-slate-200/80 dark:border-white/[0.08]"
@@ -529,9 +551,6 @@ export function Header() {
 
           {/* Drawer Footer with Authentic Brand CTAs & Theme Selector */}
           <div className="p-4 bg-slate-50 dark:bg-[#121316] border-t border-slate-200 dark:border-white/[0.08] shrink-0 space-y-2">
-            <div className="mb-2">
-              <MobileThemeSegment />
-            </div>
             <Link
               href="https://portal.think4ever.com/#/login"
               onClick={() => setMobileMenuOpen(false)}
@@ -546,6 +565,9 @@ export function Header() {
             >
               Start free
             </Link>
+            <div className="pt-1.5 border-t border-slate-200/70 dark:border-white/[0.06]">
+              <MobileThemeSegment />
+            </div>
           </div>
         </div>
       </div>

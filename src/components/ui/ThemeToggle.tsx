@@ -115,7 +115,7 @@ export function MobileThemeSegment() {
   }
 
   return (
-    <div className="flex items-center p-1 rounded-xl bg-slate-100 dark:bg-[#18191D] border border-slate-200/80 dark:border-neutral-800">
+    <div className="flex items-center p-1 rounded-xl bg-slate-100 dark:bg-[#18191D] border border-slate-200/80 dark:border-neutral-800 mt-2">
       {THEME_OPTIONS.map(({ key, label, icon: Icon }) => {
         const isSelected = theme === key;
         return (
