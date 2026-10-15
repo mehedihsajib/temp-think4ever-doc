@@ -87,7 +87,7 @@ export function Footer() {
           <div className="flex items-center gap-2 rounded-full border border-slate-200 dark:border-white/[0.08] bg-slate-50 dark:bg-white/[0.04] px-4 py-2">
             <span className="h-1.5 w-1.5 rounded-full bg-brand-blue dark:bg-blue-400 animate-pulse" />
             <span className="text-xs font-semibold text-slate-600 dark:text-neutral-300">
-              Think4Ever Inc.
+              Think4Ever Global Inc.
             </span>
           </div>
         </div>
