@@ -176,6 +176,10 @@ export const headerNav: NavItem[] = [
     href: "https://think4ever.com/integrations",
   },
   {
+    title: "Apps",
+    href: "https://think4ever.com/apps",
+  },
+  {
     title: "Resources",
     items: [
       {
@@ -327,6 +331,12 @@ export const headerNav: NavItem[] = [
         description: "Start from a business outcome to build an app",
         href: "https://think4ever.com/tutorials/build-an-application-from-intent-in-think4ever/",
         icon: Puzzle,
+      },
+      {
+        title: "Put the Blueprint to Work",
+        description: "How to use Think4Ever design artifacts across the SDLC",
+        href: "https://think4ever.com/tutorials/design-artifacts-guide/",
+        icon: BookOpen,
       },
     ],
   },
@@ -796,7 +806,7 @@ export const portalSidebarNav: SidebarGroup[] = [
         icon: BarChart3,
       },
       {
-        title: "Plans",
+        title: "Plans/Pricing",
         href: "/portal/plans",
         icon: FileText,
       },
