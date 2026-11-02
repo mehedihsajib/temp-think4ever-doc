@@ -344,6 +344,10 @@ export const headerNav: NavItem[] = [
     title: "Pricing",
     href: "https://think4ever.com/pricing",
   },
+  {
+    title: "Customers",
+    href: "https://think4ever.com/customers",
+  },
 ];
 
 export const footerNav = {
