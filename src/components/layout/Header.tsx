@@ -130,7 +130,7 @@ export function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center gap-1 lg:gap-2">
+          <nav className="hidden xl:flex items-center gap-1 lg:gap-1">
             {headerNav.map((item, idx) => {
               const isTwoCol = item.columns === 2;
               const isCentered = isTwoCol || item.title === "Resources";
@@ -141,7 +141,7 @@ export function Header() {
                     <>
                       <button
                         type="button"
-                        className="flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
+                        className="flex items-center gap-1.5 rounded-md px-2 py-2 text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
                       >
                         {item.title}
                         <ChevronDown className="h-4 w-4 text-white/70 group-hover:text-white transition-transform duration-200 group-hover:rotate-180" />
@@ -188,7 +188,7 @@ export function Header() {
                   ) : (
                     <Link
                       href={item.href!}
-                      className="rounded-md px-3 py-2 text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
+                      className="rounded-md px-2 py-2 text-sm font-medium text-white/90 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
                     >
                       {item.title}
                     </Link>

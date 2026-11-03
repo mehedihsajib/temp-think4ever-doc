@@ -348,6 +348,10 @@ export const headerNav: NavItem[] = [
     title: "Customers",
     href: "https://think4ever.com/customers",
   },
+  {
+    title: "Marketplace",
+    href: "https://think4ever.com/marketplace",
+  },
 ];
 
 export const footerNav = {
@@ -388,8 +392,13 @@ export const footerNav = {
       title: "Resources",
       links: [
         { title: "Resource Library", href: "https://think4ever.com/resources" },
+        { title: "Customer stories", href: "https://think4ever.com/customers" },
         { title: "Blog", href: "https://think4ever.com/blog" },
         { title: "FAQ", href: "https://think4ever.com/faq" },
+        {
+          title: "Put the Blueprint to Work",
+          href: "https://think4ever.com/tutorials/design-artifacts-guide/",
+        },
         { title: "Security & Trust", href: "https://think4ever.com/security" },
       ],
     },
