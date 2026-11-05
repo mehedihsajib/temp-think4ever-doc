@@ -172,6 +172,10 @@ export const headerNav: NavItem[] = [
     ],
   },
   {
+    title: "Marketplace",
+    href: "https://think4ever.com/marketplace",
+  },
+  {
     title: "Integrations",
     href: "https://think4ever.com/integrations",
   },
@@ -347,10 +351,6 @@ export const headerNav: NavItem[] = [
   {
     title: "Customers",
     href: "https://think4ever.com/customers",
-  },
-  {
-    title: "Marketplace",
-    href: "https://think4ever.com/marketplace",
   },
 ];
 
