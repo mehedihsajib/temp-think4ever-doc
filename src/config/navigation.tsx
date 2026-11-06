@@ -809,6 +809,16 @@ export const portalSidebarNav: SidebarGroup[] = [
         icon: Key,
       },
       {
+        title: "Users",
+        href: "/portal/users",
+        icon: Users,
+      },
+      {
+        title: "Agent Skills",
+        href: "/portal/agent_skills",
+        icon: Bot,
+      },
+      {
         title: "Marketplace",
         href: "/portal/marketplace",
         icon: Store,
