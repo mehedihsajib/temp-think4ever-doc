@@ -462,6 +462,11 @@ export const docsSidebarNav: SidebarGroup[] = [
             badge: "Design from scratch",
             href: "/design_from_intent",
           },
+          {
+            title: "Import .thinkp file",
+            badge: "Use existing think4ever project",
+            href: "/import_thinkp",
+          },
         ],
       },
     ],
