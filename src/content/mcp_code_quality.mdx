@@ -1,0 +1,183 @@
+# Code Quality
+
+## What is Code Quality?
+
+Code Quality is a built-in analysis tool in think4ever that automatically scans your project's generated source code and reports on its health. It checks the code for errors, security weaknesses and hard-to-maintain patterns, then gives you a clear pass or fail result called the Quality Gate.
+
+Use Code Quality to catch problems early, before they reach production, and to keep your application reliable, secure and easy to maintain.
+
+## What Code Quality Measures
+
+- **Bugs:** code that is likely to behave incorrectly or break at runtime.
+- **Vulnerabilities:** security weaknesses that could be exploited, such as hard-coded passwords.
+- **Security Hotspots:** security-sensitive code that needs a manual review.
+- **Code Smells:** code that works but is hard to read, change or maintain.
+- **Duplication:** the percentage of repeated code across the project.
+- **Lines of Code:** the total size of the scanned codebase.
+- **Coverage:** the percentage of code covered by automated tests.
+- **Tech Debt:** the estimated time needed to fix all maintainability issues.
+
+## Quality Ratings
+
+Each project receives a letter rating from A (best) to E (worst) in three areas:
+
+- **Reliability:** how likely the code is to run without errors.
+- **Security:** how well the code protects against vulnerabilities.
+- **Maintainability:** how easy the code is to understand and change.
+
+## Issue Severity Levels
+
+- **Blocker:** must be fixed immediately. High risk of failure.
+- **Critical:** a serious problem that should be fixed soon.
+- **Major:** a significant issue that affects quality or security.
+- **Minor:** a small issue with low impact.
+- **Info:** an informational note. No action required.
+
+## How to Perform a Code Quality Scan
+
+### Step 1: Open the Code Quality tool
+
+1. Open your project in think4ever.
+2. In the top navigation bar, click MCP & Tools.
+3. In the dropdown menu, under the QUALITY section, click Code Quality.
+
+![Figure 1: MCP & Tools menu with Code Quality highlighted under QUALITY](/images/mcp/code-quality/figure-1.png)
+
+<p className="text-center text-sm text-slate-500 dark:text-neutral-400 mt-1.5 mb-6">Figure 1: MCP & Tools menu with Code Quality highlighted under QUALITY</p>
+
+The Code Quality window opens. On your first scan you will see the message: "No scan results yet. Press Start Scan to analyze this project's source code."
+
+![Figure 2: Code Quality window before the first scan](/images/mcp/code-quality/figure-2.png)
+
+<p className="text-center text-sm text-slate-500 dark:text-neutral-400 mt-1.5 mb-6">Figure 2: Code Quality window before the first scan</p>
+
+### Step 2: Start the scan
+
+Click the blue Start Scan button at the top right of the window.
+
+A notification appears: "Code quality scan started."
+
+A progress bar shows the scan status and the button changes to Scanning...
+
+To cancel at any time, click Stop.
+
+![Figure 3: Scan in progress with the Stop button available](/images/mcp/code-quality/figure-3.png)
+
+<p className="text-center text-sm text-slate-500 dark:text-neutral-400 mt-1.5 mb-6">Figure 3: Scan in progress with the Stop button available</p>
+
+<Callout type="note" title="Note">
+A scan usually takes under a minute. The example scan finished in 36 seconds.
+</Callout>
+
+### Step 3: Review the scan summary
+
+When the scan finishes, the window shows:
+
+- The Quality Gate status. A green Quality Gate Passed badge means your project meets the required quality standard.
+- The scan date, time and duration.
+- Metric cards for Bugs, Vulnerabilities, Security Hotspots, Code Smells, Duplication, Lines of Code, Coverage and Tech
+- Rating badges for Reliability, Security and Maintainability (A to E).
+
+![Figure 4: Scan summary with metrics, ratings and issues list](/images/mcp/code-quality/figure-4.png)
+
+<p className="text-center text-sm text-slate-500 dark:text-neutral-400 mt-1.5 mb-6">Figure 4: Scan summary with metrics, ratings and issues list</p>
+
+### Step 4: Review the issues list
+
+Scroll down to the ISSUES section. Each issue shows:
+
+- A description of the problem.
+- The issue type: Bug, Vulnerability or Code Smell.
+- The severity: Blocker, Critical, Major or Minor.
+- The file name and line number, for example lib/helpers.js:21.
+- The estimated time to fix, for example 15min.
+
+### Step 5: Filter the issues
+
+Use the two dropdown filters on the right side of the Issues section.
+
+**Filter by severity:**
+1. Click the All severities dropdown.
+2. Choose between Blocker, Critical, Major, Minor or Info.
+
+![Figure 5: Severity dropdown options, choose Critical](/images/mcp/code-quality/figure-5.png#320)
+
+<p className="text-center text-sm text-slate-500 dark:text-neutral-400 mt-1.5 mb-6">Figure 5: Severity dropdown options, choose Critical</p>
+
+![Figure 6: Issues filtered to Critical severity](/images/mcp/code-quality/figure-6.png)
+
+<p className="text-center text-sm text-slate-500 dark:text-neutral-400 mt-1.5 mb-6">Figure 6: Issues filtered to Critical severity</p>
+
+**Filter by type:**
+1. Click the **All types** dropdown.
+2. Choose between Bugs, Vulnerabilities or Code Smells.
+
+![Figure 7: Type dropdown options](/images/mcp/code-quality/figure-7.png#320)
+
+<p className="text-center text-sm text-slate-500 dark:text-neutral-400 mt-1.5 mb-6">Figure 7: Type dropdown options</p>
+
+![Figure 8: Issues filtered to Vulnerabilities](/images/mcp/code-quality/figure-8.png)
+
+<p className="text-center text-sm text-slate-500 dark:text-neutral-400 mt-1.5 mb-6">Figure 8: Issues filtered to Vulnerabilities</p>
+
+<Callout type="tip" title="Tip">
+Start with Blocker severity and Bugs, then move on to Vulnerabilities. These carry the highest risk, so fix them first.
+</Callout>
+
+### Step 6: Send issues to your issue tracker
+
+1. Tick the checkbox next to each issue you want to act on. To select every issue shown, tick Select all.
+2. Click Move to Issues to send the selected items to the project's Issues list.
+3. To send a single issue, click the Issues button on the right side of that row.
+
+Your team can then assign, track and resolve these items.
+
+### Step 7: Fix and re-scan
+
+- Fix the reported issues in your code.
+- Return to MCP & Tools, then Code Quality.
+- Click Start Scan again to confirm the fixes worked.
+- Check the Scan History section at the bottom of the window to compare results over time.
+<Callout type="tip" title="Tip">
+Click the refresh icon next to Start Scan to reload the latest results.
+</Callout>
+
+## Understanding Your Results: Example
+
+In the sample project Transient Facility Management System, the scan returned:
+
+- **Quality Gate:** Passed
+- **Bugs:** 2 (both Blocker severity)
+- **Vulnerabilities:** 7 (6 Major, 1 Minor)
+- **Security Hotspots:** 0
+- **Code Smells:** 352
+- **Duplication:** 13%
+- **Lines of Code:** 7,778
+- **Coverage:** 0%
+- **Tech Debt:** 5 days
+- **Ratings:** Reliability E, Security C, Maintainability A
+
+![Figure 9: Example Scan Results](/images/mcp/code-quality/figure-9.png)
+
+<p className="text-center text-sm text-slate-500 dark:text-neutral-400 mt-1.5 mb-6">Figure 9: Example Scan Results</p>
+
+**What this means:**
+- The project passed the **Quality Gate**, so it meets the minimum standard.
+- The two **Blocker** bugs should still be fixed first, since they lower the Reliability rating to E.
+- The vulnerabilities include potentially hard-coded passwords and unsafe random number generation. Review them and replace them with secure alternatives, such as environment variables and secure random generators.
+- Most code smells are high Cognitive Complexity warnings. This means some functions are too complicated and should be split into smaller ones.
+- 0% coverage means no automated tests were detected. Adding tests will improve confidence in the code.
+
+## Best Practices
+
+- Scan regularly, especially after major changes and before a release.
+- Fix in order of severity: Blockers first, then Critical, then Major.
+- Never keep real passwords or keys in code. Use secure configuration instead.
+- Keep functions short and simple to reduce Cognitive Complexity.
+- Add automated tests to raise your Coverage percentage.
+- Re-scan after every round of fixes to confirm improvement.
+
+## Final Remarks
+
+Code Quality gives you a fast, objective view of the health of your application, with no extra tools or setup required. A passed Quality Gate is a good sign, but the detailed issue list shows where you can still improve. By scanning often, fixing high-severity items first and tracking progress through Scan History, you can steadily improve the reliability, security and maintainability of your project.
+

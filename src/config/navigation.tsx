@@ -669,6 +669,11 @@ export const docsSidebarNav: SidebarGroup[] = [
         href: "/mcp_test_and_tools",
         icon: Wrench,
       },
+      {
+        title: "Code Quality",
+        href: "/mcp_code_quality",
+        icon: ShieldCheck,
+      },
     ],
   },
   {
