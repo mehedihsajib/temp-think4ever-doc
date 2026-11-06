@@ -48,30 +48,16 @@ const components = {
   h2: ({ children, ...props }: any) => {
     const id = slugify(textContent(children));
     return (
-      <h2 id={id} className="scroll-mt-24 group flex items-center" {...props}>
-        <span>{children}</span>
-        <a
-          href={`#${id}`}
-          className="ml-2 text-slate-300 dark:text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer hover:text-blue-600 dark:hover:text-blue-400"
-          aria-label="Link to section"
-        >
-          #
-        </a>
+      <h2 id={id} className="scroll-mt-24" {...props}>
+        {children}
       </h2>
     );
   },
   h3: ({ children, ...props }: any) => {
     const id = slugify(textContent(children));
     return (
-      <h3 id={id} className="scroll-mt-24 group flex items-center" {...props}>
-        <span>{children}</span>
-        <a
-          href={`#${id}`}
-          className="ml-2 text-slate-300 dark:text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer hover:text-blue-600 dark:hover:text-blue-400"
-          aria-label="Link to section"
-        >
-          #
-        </a>
+      <h3 id={id} className="scroll-mt-24" {...props}>
+        {children}
       </h3>
     );
   },
