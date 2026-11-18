@@ -1,90 +1,65 @@
-<style dangerouslySetInnerHTML={{ __html: `
-  .lock-design-wrapper h3,
-  .lock-design-wrapper .prose h3 {
-    margin-top: 1rem !important;
-    margin-bottom: 0.5rem !important;
-  }
-` }} />
+<div className="ld-page">
 
-<div className="lock-design-wrapper [&_h3]:!mt-4 [&_h3]:!mb-2">
-
-<div className="relative overflow-hidden rounded-2xl bg-gradient-to-b from-blue-50/70 via-slate-50/50 to-transparent dark:from-blue-950/20 dark:via-neutral-900/40 dark:to-transparent border border-blue-100/80 dark:border-blue-900/30 p-8 sm:p-10 mb-8 shadow-xs">
-  <div className="max-w-3xl">
-    <div className="border-l-4 border-blue-600 pl-4 py-1">
-      <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white m-0">
-        Lock Design
-      </h1>
-      <p className="mt-2.5 text-base sm:text-lg text-slate-600 dark:text-neutral-300 leading-relaxed m-0 font-normal">
-        Freeze your concept, UI designs and requirements so you can avoid making changes by accident.
-      </p>
-      <div className="mt-3">
-        <span className="inline-flex items-center text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline cursor-pointer">
-          Design Protection
-        </span>
-      </div>
-    </div>
+<div className="ld-hero">
+  <div className="ld-hero-inner">
+    <h1 className="ld-hero-title">Lock Design</h1>
+    <p className="ld-hero-lead">Freeze your concept, UI designs and requirements so you can avoid making changes by accident.</p>
+    <span className="ld-hero-eyebrow">Design Protection</span>
   </div>
 </div>
 
+<section className="ld-section">
+
 ## What is Lock Design?
 
-<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 my-6 items-start">
-  <div className="lg:col-span-2 space-y-4">
-    <p className="m-0 leading-relaxed">
-      Lock Design is a built-in protection feature in Think4ever that lets you freeze the core design layers of your project once they reach a confirmed or approved state. When locked, concepts, UI screens, flows, and requirements cannot be edited, moved, or deleted by accident.
-    </p>
-    <p className="m-0 leading-relaxed">
-      This helps teams establish clear stage gates, protect signed-off deliverables during developer handoff, and ensure that AI agents or team members do not introduce unintentional changes during implementation sprints.
-    </p>
-
-    <h4 className="text-base font-semibold text-slate-900 dark:text-neutral-100 pt-2 m-0">Best for:</h4>
-    <ul className="list-disc pl-5 space-y-1.5 text-sm m-0">
+<div className="ld-intro">
+  <div>
+    <p className="ld-text">Lock Design is a built-in protection feature in Think4ever that lets you freeze the core design layers of your project once they reach a confirmed or approved state. When locked, concepts, UI screens, flows, and requirements cannot be edited, moved, or deleted by accident.</p>
+    <p className="ld-text">This helps teams establish clear stage gates, protect signed-off deliverables during developer handoff, and ensure that AI agents or team members do not introduce unintentional changes during implementation sprints.</p>
+    <div className="ld-subhead">Best for:</div>
+    <ul className="ld-list">
       <li>Fast-track sign-off and client approval before development handoff.</li>
       <li>Preventing drift between approved designs and ongoing developer sprints.</li>
       <li>Maintaining team alignment when multiple collaborators work on the same project.</li>
     </ul>
   </div>
 
-  <div className="rounded-xl border border-slate-200 dark:border-white/[0.08] bg-slate-50/70 dark:bg-white/[0.02] p-5 shadow-xs">
-    <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-neutral-300 m-0 pb-3 border-b border-slate-200/80 dark:border-white/[0.08]">
-      At a glance
-    </h4>
-    <div className="mt-3 space-y-3 text-xs">
-      <div>
-        <span className="block font-semibold text-slate-700 dark:text-neutral-300">Where:</span>
-        <span className="text-slate-500 dark:text-neutral-400">Project menu (top right context menu)</span>
-      </div>
-      <div>
-        <span className="block font-semibold text-slate-700 dark:text-neutral-300">Who can unlock:</span>
-        <span className="text-slate-500 dark:text-neutral-400">Project Owner or Company Administrator</span>
-      </div>
-      <div>
-        <span className="block font-semibold text-slate-700 dark:text-neutral-300">Lock status:</span>
-        <span className="text-slate-500 dark:text-neutral-400">Unchanged until an authorized user unlocks it</span>
-      </div>
+  <aside className="ld-glance">
+    <div className="ld-glance-title">At a glance</div>
+    <div className="ld-glance-row">
+      <span className="ld-glance-label">Where:</span>
+      <span className="ld-glance-value">Project menu (top right context menu)</span>
     </div>
-  </div>
+    <div className="ld-glance-row">
+      <span className="ld-glance-label">Who can unlock:</span>
+      <span className="ld-glance-value">Project Owner or Company Administrator</span>
+    </div>
+    <div className="ld-glance-row">
+      <span className="ld-glance-label">Lock status:</span>
+      <span className="ld-glance-value">Unchanged until an authorized user unlocks it</span>
+    </div>
+  </aside>
 </div>
+
+</section>
+
+<section className="ld-section">
 
 ## What is frozen and what still works
 
-<div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-  <div className="rounded-xl border border-rose-200 dark:border-rose-500/20 bg-rose-50/60 dark:bg-rose-500/[0.04] p-5">
-    <h4 className="text-base font-bold text-rose-700 dark:text-rose-400 m-0 pb-2">
-      Frozen
-    </h4>
-    <ul className="list-disc pl-5 space-y-1.5 text-sm text-slate-700 dark:text-neutral-300 m-0">
+<div className="ld-grid-2">
+  <div className="ld-state ld-state--frozen">
+    <div className="ld-state-title"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>Frozen</div>
+    <ul className="ld-list ld-list--red">
       <li>Project structure and dependencies</li>
       <li>All designs & UI screens</li>
       <li>Requirements and system invariants</li>
     </ul>
   </div>
 
-  <div className="rounded-xl border border-emerald-200 dark:border-emerald-500/20 bg-emerald-50/60 dark:bg-emerald-500/[0.04] p-5">
-    <h4 className="text-base font-bold text-emerald-700 dark:text-emerald-400 m-0 pb-2">
-      Still available
-    </h4>
-    <ul className="list-disc pl-5 space-y-1.5 text-sm text-slate-700 dark:text-neutral-300 m-0">
+  <div className="ld-state ld-state--open">
+    <div className="ld-state-title"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg>Still available</div>
+    <ul className="ld-list ld-list--green">
       <li>Viewing the project</li>
       <li>Reviewing designs and flows</li>
       <li>Read-only navigation</li>
@@ -95,284 +70,280 @@
   </div>
 </div>
 
-<Callout type="note" title="Note">
-Developers can continue working on code in Developer Mode or via MCP. Locking only protects the conceptual and visual design models from modification.
-</Callout>
+<div className="ld-callout ld-callout--note">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg>
+  <div>
+    <span className="ld-callout-title">Note</span>
+    <span className="ld-callout-text">Developers can continue working on code in Developer Mode or via MCP. Locking only protects the conceptual and visual design models from modification.</span>
+  </div>
+</div>
+
+</section>
+
+<section className="ld-section">
 
 ## Who can unlock
 
-<p className="text-sm text-slate-600 dark:text-neutral-300 mb-4">
-  To unlock the design, your role must be one of:
-</p>
+<p className="ld-eyebrow">To unlock the design, your role must be one of:</p>
 
-<div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
-  <div className="rounded-xl border border-slate-200 dark:border-white/[0.08] bg-slate-50/60 dark:bg-white/[0.02] p-5">
-    <h4 className="text-sm font-bold text-slate-900 dark:text-neutral-100 m-0">Project owner</h4>
-    <p className="text-xs text-slate-500 dark:text-neutral-400 mt-1 mb-0">The person who created the project.</p>
+<div className="ld-grid-2">
+  <div className="ld-card ld-card--tall">
+    <h4 className="ld-card-title">Project owner</h4>
+    <span className="ld-card-text">The person who created the project.</span>
   </div>
-  <div className="rounded-xl border border-slate-200 dark:border-white/[0.08] bg-slate-50/60 dark:bg-white/[0.02] p-5">
-    <h4 className="text-sm font-bold text-slate-900 dark:text-neutral-100 m-0">Company administrator</h4>
-    <p className="text-xs text-slate-500 dark:text-neutral-400 mt-1 mb-0">An admin in your company workspace.</p>
+  <div className="ld-card ld-card--tall">
+    <h4 className="ld-card-title">Company administrator</h4>
+    <span className="ld-card-text">An admin in your company workspace.</span>
   </div>
 </div>
 
-<Callout type="tip" title="Tip">
-If you need to make changes but are not an owner or admin, request an unlock from your project administrator.
-</Callout>
+<div className="ld-callout ld-callout--tip">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /><path d="M9 18h6" /><path d="M10 22h4" /></svg>
+  <div>
+    <span className="ld-callout-title">Tip</span>
+    <span className="ld-callout-text">If you need to make changes but are not an owner or admin, request an unlock from your project administrator.</span>
+  </div>
+</div>
 
-<Callout type="important" title="Important">
-Unlocked designs allow full editing capabilities. Make sure to re-lock the design after completing updates.
-</Callout>
+<div className="ld-callout ld-callout--important">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><line x1="12" x2="12" y1="8" y2="12" /><line x1="12" x2="12.01" y1="16" y2="16" /></svg>
+  <div>
+    <span className="ld-callout-title">Important</span>
+    <span className="ld-callout-text">Unlocked designs allow full editing capabilities. Make sure to re-lock the design after completing updates.</span>
+  </div>
+</div>
+
+</section>
+
+<section className="ld-section">
 
 ## How to lock the design
 
-<p className="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-neutral-500 mb-4">Steps 1 and 2</p>
+<p className="ld-eyebrow">Steps 1 and 2</p>
 
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start my-6">
-  <div className="space-y-6">
-    <div className="flex items-start gap-3.5">
-      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white font-bold text-xs shadow-xs mt-0.5">
-        1
-      </span>
-      <div>
-        <h4 className="text-base font-bold text-slate-900 dark:text-neutral-100 m-0">Open the Project menu</h4>
-        <p className="text-sm text-slate-600 dark:text-neutral-300 mt-1 mb-0 leading-relaxed">
-          Click the project menu in the top bar.
-        </p>
+<div className="ld-split">
+  <div>
+    <div className="ld-steps">
+      <div className="ld-step">
+        <span className="ld-step-num">1</span>
+        <div className="ld-step-body">
+          <h4 className="ld-step-title">Open the Project menu</h4>
+          <span className="ld-step-text">Click the project menu in the top bar.</span>
+        </div>
+      </div>
+      <div className="ld-step">
+        <span className="ld-step-num">2</span>
+        <div className="ld-step-body">
+          <h4 className="ld-step-title">Choose Lock Design</h4>
+          <span className="ld-step-text">In the dropdown menu, click Lock Design. It has a lock icon next to it.</span>
+        </div>
       </div>
     </div>
 
-    <div className="flex items-start gap-3.5">
-      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white font-bold text-xs shadow-xs mt-0.5">
-        2
-      </span>
+    <div className="ld-callout ld-callout--tip">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /><path d="M9 18h6" /><path d="M10 22h4" /></svg>
       <div>
-        <h4 className="text-base font-bold text-slate-900 dark:text-neutral-100 m-0">Choose Lock Design</h4>
-        <p className="text-sm text-slate-600 dark:text-neutral-300 mt-1 mb-0 leading-relaxed">
-          In the dropdown menu, click Lock Design. It has a lock icon next to it.
-        </p>
+        <span className="ld-callout-title">Tip</span>
+        <span className="ld-callout-text">Ensure all pending edits or concept generations are finished before locking.</span>
       </div>
     </div>
-
-    <Callout type="tip" title="Tip">
-      Ensure all pending edits or concept generations are finished before locking.
-    </Callout>
   </div>
 
-  <div>
+  <figure className="ld-figure">
     <DocImage src="/images/lock-design/figure-1.png" alt="Figure 1: Project menu with Lock Design option" />
-    <p className="text-center text-sm text-slate-500 dark:text-neutral-400 mt-1.5 mb-2">Figure 1: Project menu with Lock Design option</p>
-  </div>
+    <figcaption className="ld-caption">Figure 1: Project menu with Lock Design option</figcaption>
+  </figure>
 </div>
 
-<p className="text-xs font-semibold uppercase tracking-wider text-slate-400 dark:text-neutral-500 mb-4 pt-4">Steps 3 to 5</p>
-
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start my-6">
-  <div className="space-y-6">
-    <div className="flex items-start gap-3.5">
-      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white font-bold text-xs shadow-xs mt-0.5">
-        3
-      </span>
-      <div>
-        <h4 className="text-base font-bold text-slate-900 dark:text-neutral-100 m-0">Read the confirmation</h4>
-        <p className="text-sm text-slate-600 dark:text-neutral-300 mt-1 mb-0 leading-relaxed">
-          A dialog titled &quot;Lock the design of this project?&quot; explains what will be frozen and who can unlock it.
-        </p>
-      </div>
-    </div>
-
-    <div className="flex items-start gap-3.5">
-      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white font-bold text-xs shadow-xs mt-0.5">
-        4
-      </span>
-      <div>
-        <h4 className="text-base font-bold text-slate-900 dark:text-neutral-100 m-0">Confirm</h4>
-        <p className="text-sm text-slate-600 dark:text-neutral-300 mt-1 mb-0 leading-relaxed">
-          Click Lock Design to confirm, or Cancel to go back without changes.
-        </p>
-      </div>
-    </div>
-
-    <div className="flex items-start gap-3.5">
-      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white font-bold text-xs shadow-xs mt-0.5">
-        5
-      </span>
-      <div>
-        <h4 className="text-base font-bold text-slate-900 dark:text-neutral-100 m-0">Check the result</h4>
-        <p className="text-sm text-slate-600 dark:text-neutral-300 mt-1 mb-0 leading-relaxed">
-          A green message appears: &quot;Design locked. The concept, the UI screens and the requirements can no longer be changed.&quot;
-        </p>
-      </div>
-    </div>
-  </div>
-
+<div className="ld-split">
   <div>
-    <DocImage src="/images/lock-design/figure-2.png" alt="Figure 2: Lock confirmation modal and result notice" />
-    <p className="text-center text-sm text-slate-500 dark:text-neutral-400 mt-1.5 mb-2">Figure 2: Confirmation modal and result notice</p>
+    <p className="ld-eyebrow">Steps 3 to 5</p>
+    <div className="ld-steps">
+      <div className="ld-step">
+        <span className="ld-step-num">3</span>
+        <div className="ld-step-body">
+          <h4 className="ld-step-title">Read the confirmation</h4>
+          <span className="ld-step-text">A dialog titled &quot;Lock the design of this project?&quot; explains what will be frozen and who can unlock it.</span>
+        </div>
+      </div>
+      <div className="ld-step">
+        <span className="ld-step-num">4</span>
+        <div className="ld-step-body">
+          <h4 className="ld-step-title">Confirm</h4>
+          <span className="ld-step-text">Click Lock Design to confirm, or Cancel to go back without changes.</span>
+        </div>
+      </div>
+      <div className="ld-step">
+        <span className="ld-step-num">5</span>
+        <div className="ld-step-body">
+          <h4 className="ld-step-title">Check the result</h4>
+          <span className="ld-step-text">A green message appears: &quot;Design locked. The concept, the UI screens and the requirements can no longer be changed.&quot;</span>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <figure className="ld-figure">
+    <DocImage src="/images/lock-design/figure-2.png" alt="Figure 2: Lock confirmation modal and result notice" />
+    <figcaption className="ld-caption">Figure 2: Confirmation modal and result notice</figcaption>
+  </figure>
 </div>
+
+</section>
+
+<section className="ld-section">
 
 ## How to tell the design is locked
 
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start my-6">
-  <div className="space-y-6">
-    <div className="flex items-start gap-3.5">
-      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white font-bold text-xs shadow-xs mt-0.5">
-        1
-      </span>
-      <div>
-        <h4 className="text-base font-bold text-slate-900 dark:text-neutral-100 m-0">&quot;Design locked&quot; badge</h4>
-        <p className="text-sm text-slate-600 dark:text-neutral-300 mt-1 mb-0 leading-relaxed">
-          Appears in the top bar, next to the theme toggle.
-        </p>
+<div className="ld-split">
+  <div className="ld-steps">
+    <div className="ld-step">
+      <span className="ld-step-num">1</span>
+      <div className="ld-step-body">
+        <h4 className="ld-step-title">&quot;Design locked&quot; badge</h4>
+        <span className="ld-step-text">Appears in the top bar, next to the theme toggle.</span>
       </div>
     </div>
-
-    <div className="flex items-start gap-3.5">
-      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white font-bold text-xs shadow-xs mt-0.5">
-        2
-      </span>
-      <div>
-        <h4 className="text-base font-bold text-slate-900 dark:text-neutral-100 m-0">Assistant notice</h4>
-        <p className="text-sm text-slate-600 dark:text-neutral-300 mt-1 mb-0 leading-relaxed">
-          A yellow banner above the chat box says the assistant can answer questions but cannot change the design.
-        </p>
+    <div className="ld-step">
+      <span className="ld-step-num">2</span>
+      <div className="ld-step-body">
+        <h4 className="ld-step-title">Assistant notice</h4>
+        <span className="ld-step-text">A yellow banner above the chat box says the assistant can answer questions but cannot change the design.</span>
       </div>
     </div>
-
-    <div className="flex items-start gap-3.5">
-      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white font-bold text-xs shadow-xs mt-0.5">
-        3
-      </span>
-      <div>
-        <h4 className="text-base font-bold text-slate-900 dark:text-neutral-100 m-0">Confirmation message</h4>
-        <p className="text-sm text-slate-600 dark:text-neutral-300 mt-1 mb-0 leading-relaxed">
-          The green message shown right after you lock.
-        </p>
+    <div className="ld-step">
+      <span className="ld-step-num">3</span>
+      <div className="ld-step-body">
+        <h4 className="ld-step-title">Confirmation message</h4>
+        <span className="ld-step-text">The green message shown right after you lock.</span>
       </div>
     </div>
   </div>
 
-  <div>
+  <figure className="ld-figure">
     <DocImage src="/images/lock-design/figure-3.png" alt="Figure 3: Header badge and assistant notice" />
-    <p className="text-center text-sm text-slate-500 dark:text-neutral-400 mt-1.5 mb-2">Figure 3: Header badge and assistant notice</p>
-  </div>
+    <figcaption className="ld-caption">Figure 3: Header badge and assistant notice</figcaption>
+  </figure>
 </div>
+
+</section>
+
+<section className="ld-section">
 
 ## How to unlock the design
 
-<p className="text-sm text-slate-600 dark:text-neutral-300 mb-4">
-  Only the project owner or a company administrator can unlock the design.
-</p>
+<p className="ld-eyebrow">Only the project owner or a company administrator can unlock the design.</p>
 
-<div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-  <Callout type="note" title="Permission">
-    To unlock the design, you must be the project owner who created it or a company administrator in your company workspace.
-  </Callout>
-  <Callout type="tip" title="Tip">
-    When unlocked, team members and the assistant can resume making changes to the concept, UI screens and requirements.
-  </Callout>
-</div>
-
-<div className="space-y-6 my-6">
-  <div className="flex items-start gap-3.5">
-    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white font-bold text-xs shadow-xs mt-0.5">
-      1
-    </span>
+<div className="ld-grid-2 ld-callout-pair">
+  <div className="ld-callout ld-callout--note">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg>
     <div>
-      <h4 className="text-base font-bold text-slate-900 dark:text-neutral-100 m-0">Open the Project menu</h4>
-      <p className="text-sm text-slate-600 dark:text-neutral-300 mt-1 mb-0 leading-relaxed">
-        Click the project menu in the top bar.
-      </p>
+      <span className="ld-callout-title">Permission</span>
+      <span className="ld-callout-text">To unlock the design, you must be the project owner who created it or a company administrator in your company workspace.</span>
     </div>
   </div>
-
-  <div className="flex items-start gap-3.5">
-    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white font-bold text-xs shadow-xs mt-0.5">
-      2
-    </span>
+  <div className="ld-callout ld-callout--tip">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" /><path d="M9 18h6" /><path d="M10 22h4" /></svg>
     <div>
-      <h4 className="text-base font-bold text-slate-900 dark:text-neutral-100 m-0">Choose Unlock design</h4>
-      <p className="text-sm text-slate-600 dark:text-neutral-300 mt-1 mb-0 leading-relaxed">
-        In the dropdown menu, click Unlock design. It shows an open lock icon.
-      </p>
-    </div>
-  </div>
-
-  <div className="flex items-start gap-3.5">
-    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white font-bold text-xs shadow-xs mt-0.5">
-      3
-    </span>
-    <div>
-      <h4 className="text-base font-bold text-slate-900 dark:text-neutral-100 m-0">Confirm</h4>
-      <p className="text-sm text-slate-600 dark:text-neutral-300 mt-1 mb-0 leading-relaxed">
-        Click Unlock in the dialog that appears.
-      </p>
-    </div>
-  </div>
-
-  <div className="flex items-start gap-3.5">
-    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white font-bold text-xs shadow-xs mt-0.5">
-      4
-    </span>
-    <div>
-      <h4 className="text-base font-bold text-slate-900 dark:text-neutral-100 m-0">Check the result</h4>
-      <p className="text-sm text-slate-600 dark:text-neutral-300 mt-1 mb-0 leading-relaxed">
-        A green message appears: &quot;Design unlocked. You can now edit the concept, the UI screens and the requirements.&quot;
-      </p>
+      <span className="ld-callout-title">Tip</span>
+      <span className="ld-callout-text">When unlocked, team members and the assistant can resume making changes to the concept, UI screens and requirements.</span>
     </div>
   </div>
 </div>
+
+<div className="ld-steps">
+  <div className="ld-step">
+    <span className="ld-step-num">1</span>
+    <div className="ld-step-body">
+      <h4 className="ld-step-title">Open the Project menu</h4>
+      <span className="ld-step-text">Click the project menu in the top bar.</span>
+    </div>
+  </div>
+  <div className="ld-step">
+    <span className="ld-step-num">2</span>
+    <div className="ld-step-body">
+      <h4 className="ld-step-title">Choose Unlock design</h4>
+      <span className="ld-step-text">In the dropdown menu, click Unlock design. It shows an open lock icon.</span>
+    </div>
+  </div>
+  <div className="ld-step">
+    <span className="ld-step-num">3</span>
+    <div className="ld-step-body">
+      <h4 className="ld-step-title">Confirm</h4>
+      <span className="ld-step-text">Click Unlock in the dialog that appears.</span>
+    </div>
+  </div>
+  <div className="ld-step">
+    <span className="ld-step-num">4</span>
+    <div className="ld-step-body">
+      <h4 className="ld-step-title">Check the result</h4>
+      <span className="ld-step-text">A green message appears: &quot;Design unlocked. You can now edit the concept, the UI screens and the requirements.&quot;</span>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<section className="ld-section">
 
 ## Tips and best practices
 
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-6">
-  <div className="rounded-xl border border-slate-200 dark:border-white/[0.08] bg-slate-50/50 dark:bg-white/[0.02] p-5">
-    <h4 className="text-sm font-bold text-slate-900 dark:text-neutral-100 m-0">Lock after sign-off</h4>
-    <p className="text-xs text-slate-500 dark:text-neutral-400 mt-1.5 mb-0 leading-relaxed">
-      Freeze designs as soon as stakeholders sign off to establish an unambiguous contract.
-    </p>
+<div className="ld-grid-3">
+  <div className="ld-card">
+    <h4 className="ld-card-title">Lock after sign-off</h4>
+    <span className="ld-card-text">Freeze designs as soon as stakeholders sign off to establish an unambiguous contract.</span>
   </div>
-  <div className="rounded-xl border border-slate-200 dark:border-white/[0.08] bg-slate-50/50 dark:bg-white/[0.02] p-5">
-    <h4 className="text-sm font-bold text-slate-900 dark:text-neutral-100 m-0">Review first</h4>
-    <p className="text-xs text-slate-500 dark:text-neutral-400 mt-1.5 mb-0 leading-relaxed">
-      Run a final check across requirements and flows prior to engaging the lock.
-    </p>
+  <div className="ld-card">
+    <h4 className="ld-card-title">Review first</h4>
+    <span className="ld-card-text">Run a final check across requirements and flows prior to engaging the lock.</span>
   </div>
-  <div className="rounded-xl border border-slate-200 dark:border-white/[0.08] bg-slate-50/50 dark:bg-white/[0.02] p-5">
-    <h4 className="text-sm font-bold text-slate-900 dark:text-neutral-100 m-0">Keep coding</h4>
-    <p className="text-xs text-slate-500 dark:text-neutral-400 mt-1.5 mb-0 leading-relaxed">
-      Continue development freely; locking does not block coding or implementation workflows.
-    </p>
+  <div className="ld-card">
+    <h4 className="ld-card-title">Keep coding</h4>
+    <span className="ld-card-text">Continue development freely; locking does not block coding or implementation workflows.</span>
   </div>
-  <div className="rounded-xl border border-slate-200 dark:border-white/[0.08] bg-slate-50/50 dark:bg-white/[0.02] p-5">
-    <h4 className="text-sm font-bold text-slate-900 dark:text-neutral-100 m-0">Tell your team</h4>
-    <p className="text-xs text-slate-500 dark:text-neutral-400 mt-1.5 mb-0 leading-relaxed">
-      Notify collaborators when a baseline is locked so everyone references the same state.
-    </p>
+  <div className="ld-card">
+    <h4 className="ld-card-title">Tell your team</h4>
+    <span className="ld-card-text">Notify collaborators when a baseline is locked so everyone references the same state.</span>
   </div>
-  <div className="rounded-xl border border-slate-200 dark:border-white/[0.08] bg-slate-50/50 dark:bg-white/[0.02] p-5">
-    <h4 className="text-sm font-bold text-slate-900 dark:text-neutral-100 m-0">Plan changes</h4>
-    <p className="text-xs text-slate-500 dark:text-neutral-400 mt-1.5 mb-0 leading-relaxed">
-      Batch future design modifications into planned review cycles before unlocking.
-    </p>
+  <div className="ld-card">
+    <h4 className="ld-card-title">Plan changes</h4>
+    <span className="ld-card-text">Batch future design modifications into planned review cycles before unlocking.</span>
   </div>
-  <div className="rounded-xl border border-slate-200 dark:border-white/[0.08] bg-slate-50/50 dark:bg-white/[0.02] p-5">
-    <h4 className="text-sm font-bold text-slate-900 dark:text-neutral-100 m-0">Export a baseline</h4>
-    <p className="text-xs text-slate-500 dark:text-neutral-400 mt-1.5 mb-0 leading-relaxed">
-      Export your locked blueprint or `.thinkp` archive to preserve a milestone snapshot.
-    </p>
+  <div className="ld-card">
+    <h4 className="ld-card-title">Export a baseline</h4>
+    <span className="ld-card-text">Export your locked blueprint or <code className="ld-code">.thinkp</code> archive to preserve a milestone snapshot.</span>
   </div>
 </div>
 
+</section>
+
+<section className="ld-section">
+
 ## Troubleshooting and FAQ
 
-| Question | Answer |
-| :--- | :--- |
-| **Why can't I see the Lock Design option?** | You must be a Project Owner or Company Administrator to access the lock controls. |
-| **Why did the modal tell me someone else is editing?** | If another team member has unsaved active edits, resolve those changes before locking. |
-| **I locked it by mistake. Can I undo it?** | Yes. Simply choose Unlock Design from the project menu if you have appropriate permissions. |
-| **Can I still use the API or MCP when locked?** | Yes. Read operations and dev tools continue to function normally. |
-| **Does locking stop developers from coding?** | No. Developers can build and edit code in Developer Mode or via connected IDEs over MCP. |
+<div className="ld-faq">
+  <div className="ld-faq-item">
+    <h4 className="ld-faq-q">Why can&apos;t I see the Lock Design option?</h4>
+    <span className="ld-faq-a">You must be a Project Owner or Company Administrator to access the lock controls.</span>
+  </div>
+  <div className="ld-faq-item">
+    <h4 className="ld-faq-q">Why did the modal tell me someone else is editing?</h4>
+    <span className="ld-faq-a">If another team member has unsaved active edits, resolve those changes before locking.</span>
+  </div>
+  <div className="ld-faq-item">
+    <h4 className="ld-faq-q">I locked it by mistake. Can I undo it?</h4>
+    <span className="ld-faq-a">Yes. Simply choose Unlock Design from the project menu if you have appropriate permissions.</span>
+  </div>
+  <div className="ld-faq-item">
+    <h4 className="ld-faq-q">Can I still use the API or MCP when locked?</h4>
+    <span className="ld-faq-a">Yes. Read operations and dev tools continue to function normally.</span>
+  </div>
+  <div className="ld-faq-item">
+    <h4 className="ld-faq-q">Does locking stop developers from coding?</h4>
+    <span className="ld-faq-a">No. Developers can build and edit code in Developer Mode or via connected IDEs over MCP.</span>
+  </div>
+</div>
+
+</section>
 
 </div>
