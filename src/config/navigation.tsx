@@ -21,6 +21,7 @@ import {
   GitBranch,
   Share2,
   MoreHorizontal,
+  Lock,
   Bot,
   Plug,
   ListChecks,
@@ -346,7 +347,7 @@ export const headerNav: NavItem[] = [
   },
   {
     title: "Pricing",
-    href: "https://think4ever.com/pricing",
+    href: "https://think4ever.com/price",
   },
   {
     title: "Customers",
@@ -385,7 +386,7 @@ export const footerNav = {
           href: "https://think4ever.com/design-to-code",
         },
         { title: "Integrations", href: "https://think4ever.com/integrations" },
-        { title: "Pricing", href: "https://think4ever.com/pricing" },
+        { title: "Pricing", href: "https://think4ever.com/price" },
       ],
     },
     {
@@ -498,6 +499,11 @@ export const docsSidebarNav: SidebarGroup[] = [
         title: "Other",
         href: "/others",
         icon: MoreHorizontal,
+      },
+      {
+        title: "Lock Design",
+        href: "/lock_design",
+        icon: Lock,
       },
       {
         title: "Sidekick",
