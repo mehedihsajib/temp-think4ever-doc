@@ -9,6 +9,7 @@ export function TopProgressBar() {
   const [visible, setVisible] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const completeTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const lastLocationRef = useRef<string>("");
 
   const startProgress = () => {
     if (completeTimerRef.current) {
@@ -54,6 +55,7 @@ export function TopProgressBar() {
 
   // Complete progress on pathname change
   useEffect(() => {
+    lastLocationRef.current = window.location.pathname + window.location.search;
     finishProgress();
   }, [pathname]);
 
@@ -116,6 +118,10 @@ export function TopProgressBar() {
     };
 
     const handlePopState = () => {
+      const current = window.location.pathname + window.location.search;
+      if (current === lastLocationRef.current) {
+        return;
+      }
       startProgress();
     };
 

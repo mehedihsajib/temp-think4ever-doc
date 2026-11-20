@@ -20,8 +20,6 @@
   --ga-red: #dc2626;
   --ga-amber: #ca8a04;
   --ga-green: #16a34a;
-  --ga-shot-bg: #f8fafc;
-  --ga-shot-border: #cbd5e1;
 
   color: var(--ga-body);
 }
@@ -40,8 +38,6 @@
   --ga-red: #f87171;
   --ga-amber: #facc15;
   --ga-green: #4ade80;
-  --ga-shot-bg: rgba(255, 255, 255, 0.02);
-  --ga-shot-border: rgba(255, 255, 255, 0.14);
 }
 
 /* ---------- Hero ---------- */
@@ -160,13 +156,11 @@
 
 /* ---------- In-page navigation ---------- */
 .ga-page .ga-toc-title {
-  display: inline-block;
+  display: block;
   font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--ga-blue);
-  padding-bottom: 0.375rem;
-  border-bottom: 3px solid var(--ga-orange);
-  margin-bottom: 1.25rem;
+  font-weight: 600;
+  color: var(--ga-ink);
+  margin-bottom: 1rem;
 }
 .ga-page .ga-toc {
   display: grid;
@@ -199,7 +193,7 @@
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 9999px;
-  background: var(--ga-orange);
+  background: var(--ga-blue);
   flex-shrink: 0;
 }
 
@@ -288,39 +282,12 @@
 
 /* ---------- Figures / screenshot placeholders ---------- */
 .ga-page .ga-figure { margin: 0 0 1.75rem; }
-.ga-page .ga-figure > span { margin: 0 !important; }
-.ga-page .ga-shot {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.375rem;
-  aspect-ratio: 16 / 8;
-  min-height: 10rem;
-  border: 2px dashed var(--ga-shot-border);
-  border-radius: 0.875rem;
-  background: var(--ga-shot-bg);
-  text-align: center;
-  padding: 1rem;
-}
-.ga-page .ga-shot svg { width: 2rem; height: 2rem; color: var(--ga-muted); opacity: 0.7; }
-.ga-page .ga-shot-label {
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: var(--ga-muted);
-}
-.ga-page .ga-shot-file {
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 0.75rem;
-  color: var(--ga-muted);
-  opacity: 0.8;
-}
 .ga-page .ga-caption {
   display: block;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   line-height: 1.55;
   color: var(--ga-muted);
-  margin-top: 0.625rem;
+  margin-top: 0.8rem;
 }
 .ga-page .ga-caption--center { text-align: center; font-style: italic; }
 .ga-page .ga-caption .ga-green { color: var(--ga-green); }
@@ -431,15 +398,8 @@
     max-width: 38rem;
   }
   .prose .ga-page .ga-section > h2 {
-    display: inline-block;
-    font-size: 1.875rem !important;
-    font-weight: 800 !important;
-    line-height: 1.25 !important;
-    letter-spacing: -0.02em !important;
-    color: var(--ga-blue) !important;
-    padding-bottom: 0.5rem;
-    border-bottom: 3px solid var(--ga-orange);
-    margin: 0 0 1.5rem !important;
+    margin-top: 0 !important;
+    margin-bottom: 1.25rem !important;
   }
   .prose .ga-page p.ga-text {
     font-size: 1rem !important;
@@ -459,6 +419,5 @@
   }
   @media (max-width: 639px) {
     .prose .ga-page h1.ga-hero-title { font-size: 1.875rem !important; }
-    .prose .ga-page .ga-section > h2 { font-size: 1.5rem !important; }
   }
 }
