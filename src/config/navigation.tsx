@@ -22,6 +22,7 @@ import {
   Share2,
   MoreHorizontal,
   Lock,
+  SearchCheck,
   Bot,
   Plug,
   ListChecks,
@@ -504,6 +505,11 @@ export const docsSidebarNav: SidebarGroup[] = [
         title: "Lock Design",
         href: "/lock_design",
         icon: Lock,
+      },
+      {
+        title: "Gap Analysis",
+        href: "/gap_analysis",
+        icon: SearchCheck,
       },
       {
         title: "Sidekick",

@@ -1,0 +1,464 @@
+/* ==========================================================================
+   Gap Analysis page (src/content/gap_analysis.mdx) — page-scoped styles.
+   Every selector is prefixed with .ga-page so nothing leaks to other pages.
+   Lives here because next-mdx-remote strips JS expressions from MDX, so an
+   inline <style dangerouslySetInnerHTML> in the .mdx renders empty.
+   ========================================================================== */
+
+.ga-page {
+  --ga-ink: #0f172a;
+  --ga-body: #475569;
+  --ga-muted: #64748b;
+  --ga-blue: #1d63e0;
+  --ga-blue-strong: #093cad;
+  --ga-blue-soft: #eaf1fd;
+  --ga-orange: #ff7a1a;
+  --ga-orange-soft: #fff4ea;
+  --ga-orange-border: #fbd3b0;
+  --ga-border: #e2e8f0;
+  --ga-card: #f4f7fb;
+  --ga-red: #dc2626;
+  --ga-amber: #ca8a04;
+  --ga-green: #16a34a;
+  --ga-shot-bg: #f8fafc;
+  --ga-shot-border: #cbd5e1;
+
+  color: var(--ga-body);
+}
+
+.dark .ga-page {
+  --ga-ink: #f4f4f5;
+  --ga-body: #a1a1aa;
+  --ga-muted: #8e929e;
+  --ga-blue: #60a5fa;
+  --ga-blue-soft: rgba(59, 130, 246, 0.1);
+  --ga-orange: #fb923c;
+  --ga-orange-soft: rgba(251, 146, 60, 0.08);
+  --ga-orange-border: rgba(251, 146, 60, 0.28);
+  --ga-border: rgba(255, 255, 255, 0.08);
+  --ga-card: rgba(255, 255, 255, 0.03);
+  --ga-red: #f87171;
+  --ga-amber: #facc15;
+  --ga-green: #4ade80;
+  --ga-shot-bg: rgba(255, 255, 255, 0.02);
+  --ga-shot-border: rgba(255, 255, 255, 0.14);
+}
+
+/* ---------- Hero ---------- */
+.ga-page .ga-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #0b2a6b 0%, #0f3fa8 55%, #1d63e0 100%);
+  border-bottom: 4px solid var(--ga-orange);
+  padding: 2.5rem 2.5rem 1.75rem;
+  color: #fff;
+  margin: 0 0 2.5rem;
+}
+.ga-page .ga-hero::before,
+.ga-page .ga-hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+.ga-page .ga-hero::before { width: 26rem; height: 26rem; right: -5rem; top: -8rem; }
+.ga-page .ga-hero::after { width: 34rem; height: 34rem; right: -9rem; top: -12rem; }
+.ga-page .ga-hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .ga-page .ga-hero-grid { grid-template-columns: minmax(0, 1fr) auto; }
+}
+.ga-page .ga-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
+  border: 3px solid var(--ga-orange);
+  border-radius: 1rem;
+  padding: 0.75rem 1.5rem 0.75rem 0.875rem;
+}
+.ga-page .ga-badge-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  background: #1d63e0;
+  color: #fff;
+  flex-shrink: 0;
+}
+.ga-page .ga-badge-icon svg { width: 1.625rem; height: 1.625rem; }
+.ga-page .ga-hero-tagline {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 1.5rem;
+}
+.ga-page .ga-ring {
+  position: relative;
+  width: 11rem;
+  height: 11rem;
+  justify-self: center;
+}
+.ga-page .ga-ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+.ga-page .ga-ring-track { stroke: rgba(255, 255, 255, 0.18); }
+.ga-page .ga-ring-value { stroke: #22c55e; }
+.ga-page .ga-ring-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.ga-page .ga-ring-num {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+.ga-page .ga-ring-sub {
+  font-size: 0.8125rem;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 0.375rem;
+  max-width: 6.5rem;
+}
+.ga-page .ga-scale {
+  position: relative;
+  z-index: 1;
+  margin-top: 2rem;
+}
+.ga-page .ga-scale-bar {
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #dc2626 0%, #ea7a1a 35%, #d4b106 55%, #22c55e 100%);
+}
+.ga-page .ga-scale-labels {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.ga-page .ga-scale-labels span:nth-child(1) { color: #fca5a5; }
+.ga-page .ga-scale-labels span:nth-child(2) { color: #fde68a; }
+.ga-page .ga-scale-labels span:nth-child(3) { color: #86efac; }
+
+/* ---------- In-page navigation ---------- */
+.ga-page .ga-toc-title {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--ga-blue);
+  padding-bottom: 0.375rem;
+  border-bottom: 3px solid var(--ga-orange);
+  margin-bottom: 1.25rem;
+}
+.ga-page .ga-toc {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.625rem;
+}
+@media (min-width: 640px) {
+  .ga-page .ga-toc { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.ga-page a.ga-toc-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--ga-border);
+  border-radius: 0.625rem;
+  background: var(--ga-card);
+  color: var(--ga-ink);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 150ms ease, background-color 150ms ease;
+}
+.ga-page a.ga-toc-link:hover {
+  border-color: var(--ga-blue);
+  background: var(--ga-blue-soft);
+}
+.ga-page a.ga-toc-link::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: var(--ga-orange);
+  flex-shrink: 0;
+}
+
+/* ---------- Sections ---------- */
+.ga-page .ga-section {
+  border-top: 1px solid var(--ga-border);
+  margin-top: 3rem;
+  padding-top: 2.75rem;
+}
+.ga-page .ga-section--boxed {
+  border: 1px solid var(--ga-border);
+  border-radius: 1rem;
+  padding: 2.25rem 2rem;
+}
+.ga-page .ga-subhead {
+  display: block;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--ga-ink);
+  margin: 1.75rem 0 0.75rem;
+}
+
+/* ---------- Steps ---------- */
+.ga-page .ga-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  margin: 0 0 1.5rem;
+}
+.ga-page .ga-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+}
+.ga-page .ga-step-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  flex-shrink: 0;
+  border-radius: 9999px;
+  background: #1d63e0;
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  margin-top: 0.0625rem;
+}
+.ga-page .ga-step-text {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ga-body);
+}
+.ga-page .ga-step-text + .ga-step-text { margin-top: 0.375rem; }
+.ga-page .ga-step strong,
+.ga-page .ga-text strong,
+.ga-page .ga-list strong,
+.ga-page .ga-caption strong { color: var(--ga-ink); font-weight: 700; }
+
+/* ---------- Lists ---------- */
+.ga-page ul.ga-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+}
+.ga-page ul.ga-list > li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ga-body);
+}
+.ga-page ul.ga-list > li:last-child { margin-bottom: 0; }
+.ga-page ul.ga-list > li::before {
+  content: "";
+  position: absolute;
+  left: 0.125rem;
+  top: 0.6em;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: var(--ga-orange);
+}
+
+/* ---------- Figures / screenshot placeholders ---------- */
+.ga-page .ga-figure { margin: 0 0 1.75rem; }
+.ga-page .ga-figure > span { margin: 0 !important; }
+.ga-page .ga-shot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  aspect-ratio: 16 / 8;
+  min-height: 10rem;
+  border: 2px dashed var(--ga-shot-border);
+  border-radius: 0.875rem;
+  background: var(--ga-shot-bg);
+  text-align: center;
+  padding: 1rem;
+}
+.ga-page .ga-shot svg { width: 2rem; height: 2rem; color: var(--ga-muted); opacity: 0.7; }
+.ga-page .ga-shot-label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--ga-muted);
+}
+.ga-page .ga-shot-file {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+  color: var(--ga-muted);
+  opacity: 0.8;
+}
+.ga-page .ga-caption {
+  display: block;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--ga-muted);
+  margin-top: 0.625rem;
+}
+.ga-page .ga-caption--center { text-align: center; font-style: italic; }
+.ga-page .ga-caption .ga-green { color: var(--ga-green); }
+.ga-page .ga-caption .ga-red { color: var(--ga-red); }
+.ga-page .ga-pair {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0 1.25rem;
+}
+@media (min-width: 1024px) {
+  .ga-page .ga-pair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* ---------- Colour legend ---------- */
+.ga-page .ga-legend-scale {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  color: var(--ga-body);
+  margin: 0.5rem 0 1rem;
+}
+.ga-page .ga-legend-scale .ga-scale-bar { flex: 1; }
+.ga-page .ga-legend {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+@media (min-width: 640px) {
+  .ga-page .ga-legend { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.ga-page .ga-legend-chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.625rem;
+  padding: 0.875rem 1rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+.ga-page .ga-legend-chip--red { background: #dc2626; }
+.ga-page .ga-legend-chip--orange { background: #ca8a04; }
+.ga-page .ga-legend-chip--green { background: #16a34a; }
+
+/* ---------- Prompt examples ---------- */
+.ga-page .ga-prompts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.ga-page .ga-prompt {
+  border: 1px solid color-mix(in srgb, var(--ga-blue) 25%, var(--ga-border));
+  border-left: 4px solid var(--ga-blue);
+  border-radius: 0.625rem;
+  background: var(--ga-blue-soft);
+  color: var(--ga-ink);
+  font-size: 0.9375rem;
+  padding: 0.75rem 1rem;
+}
+
+/* ---------- Callout ---------- */
+.ga-page .ga-remember {
+  display: block;
+  border: 1px solid var(--ga-orange-border);
+  border-left: 4px solid var(--ga-orange);
+  border-radius: 0.75rem;
+  background: var(--ga-orange-soft);
+  padding: 1rem 1.25rem;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--ga-body);
+  margin-top: 1.5rem;
+}
+.ga-page .ga-remember strong { color: var(--ga-ink); }
+
+@media (max-width: 639px) {
+  .ga-page .ga-hero { padding: 1.75rem 1.25rem 1.5rem; }
+  .ga-page .ga-section--boxed { padding: 1.5rem 1.125rem; }
+  .ga-page .ga-badge { padding: 0.5rem 1rem 0.5rem 0.625rem; }
+  .ga-page .ga-ring { width: 9rem; height: 9rem; }
+  .ga-page .ga-ring-num { font-size: 2.25rem; }
+  .ga-page .ga-scale-labels { font-size: 0.75rem; }
+}
+
+/* --------------------------------------------------------------------------
+   Overrides for the global ".prose h1/h2/p" rules, which are declared with
+   !important inside @layer components. They must live in the same layer with
+   higher specificity to win. Still scoped to .ga-page only.
+   -------------------------------------------------------------------------- */
+@layer components {
+  .prose .ga-page h1.ga-hero-title {
+    font-size: 2.5rem !important;
+    font-weight: 800 !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.02em !important;
+    color: #1d63e0 !important;
+    margin: 0 !important;
+  }
+  .prose .ga-page p.ga-hero-lead {
+    font-size: 1.0625rem !important;
+    line-height: 1.65 !important;
+    color: rgba(255, 255, 255, 0.88) !important;
+    margin: 0.75rem 0 0 !important;
+    max-width: 38rem;
+  }
+  .prose .ga-page .ga-section > h2 {
+    display: inline-block;
+    font-size: 1.875rem !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.02em !important;
+    color: var(--ga-blue) !important;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--ga-orange);
+    margin: 0 0 1.5rem !important;
+  }
+  .prose .ga-page p.ga-text {
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+    color: var(--ga-body) !important;
+    margin: 0 0 1.25rem !important;
+  }
+  .prose .ga-page p.ga-lead {
+    font-size: 1.0625rem !important;
+    line-height: 1.6 !important;
+    font-weight: 700 !important;
+    color: var(--ga-ink) !important;
+    margin: 2rem 0 1rem !important;
+  }
+  .prose .ga-page p.ga-text--after {
+    margin-top: 1.5rem !important;
+  }
+  @media (max-width: 639px) {
+    .prose .ga-page h1.ga-hero-title { font-size: 1.875rem !important; }
+    .prose .ga-page .ga-section > h2 { font-size: 1.5rem !important; }
+  }
+}

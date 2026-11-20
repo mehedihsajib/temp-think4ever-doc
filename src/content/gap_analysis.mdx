@@ -1,0 +1,424 @@
+<div className="ga-page">
+
+<div className="ga-hero">
+  <div className="ga-hero-grid">
+    <div>
+      <div className="ga-badge">
+        <span className="ga-badge-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m8 11 2 2 4-4" /><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg></span>
+        <h1 className="ga-hero-title">Gap Analysis</h1>
+      </div>
+      <span className="ga-hero-tagline">See what is built and what is still missing.</span>
+      <p className="ga-hero-lead">Your concept says what has to be built. Gap Analysis compares it with the code and puts a percentage on every part of the concept, so you can see at a glance what is done, what is half done and what is missing.</p>
+    </div>
+    <div className="ga-ring">
+      <svg viewBox="0 0 120 120" aria-hidden="true"><circle className="ga-ring-track" cx="60" cy="60" r="52" fill="none" strokeWidth="10" /><circle className="ga-ring-value" cx="60" cy="60" r="52" fill="none" strokeWidth="10" strokeLinecap="round" strokeDasharray="284.2 326.7" /></svg>
+      <div className="ga-ring-label"><span className="ga-ring-num">87%</span><span className="ga-ring-sub">of the plan is in the code</span></div>
+    </div>
+  </div>
+  <div className="ga-scale">
+    <div className="ga-scale-bar"></div>
+    <div className="ga-scale-labels"><span>0 % Mostly missing</span><span>Partly built</span><span>Built 100 %</span></div>
+  </div>
+</div>
+
+<div className="ga-toc-title">On this page</div>
+
+<nav className="ga-toc" aria-label="On this page">
+  <a className="ga-toc-link" href="#how-to-start-a-gap-analysis">How to start Gap Analysis</a>
+  <a className="ga-toc-link" href="#while-it-runs">While it runs</a>
+  <a className="ga-toc-link" href="#how-to-read-the-result">How to read the result</a>
+  <a className="ga-toc-link" href="#how-to-see-the-code-behind-a-result">How to see the code behind a result</a>
+  <a className="ga-toc-link" href="#how-to-check-a-previous-analysis">How to check a previous analysis</a>
+  <a className="ga-toc-link" href="#how-to-check-only-one-phase">How to check only one phase</a>
+  <a className="ga-toc-link" href="#how-to-check-a-task">How to check a task</a>
+  <a className="ga-toc-link" href="#all-results-in-one-window">All results in one window</a>
+  <a className="ga-toc-link" href="#how-to-ask-a-question">How to ask a question</a>
+  <a className="ga-toc-link" href="#how-to-build-what-is-missing">How to build what is missing</a>
+  <a className="ga-toc-link" href="#from-claude-code-codex-or-cursor">From Claude Code, Codex or Cursor</a>
+</nav>
+
+<section className="ga-section">
+
+## How to start a Gap Analysis
+
+<div className="ga-steps">
+  <div className="ga-step"><span className="ga-step-num">1</span><div><span className="ga-step-text">Open your project and go to any <strong>MCP Tools</strong>, then under section Quality choose <strong>Gap Analysis</strong></span></div></div>
+  <div className="ga-step"><span className="ga-step-num">2</span><div><span className="ga-step-text">Click <strong>Gap Analysis</strong> in the toolbar.</span></div></div>
+</div>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-01.png" alt="Gap Analysis button in the Concept toolbar" /> */}
+  <div className="ga-shot" role="img" aria-label="Gap Analysis button in the Concept toolbar"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-01.png</span></div>
+  <figcaption className="ga-caption">The Gap Analysis button is in the toolbar, next to Phases (Roadmap).</figcaption>
+</figure>
+
+<div className="ga-steps">
+  <div className="ga-step"><span className="ga-step-num">3</span><div><span className="ga-step-text">Click <strong>New analysis</strong>. If there&rsquo;s no existing analysis done for the project yet, the Gap Analysis window opens right away.</span><span className="ga-step-text">If you&rsquo;ve previously run an analysis, you will be able to view each as listed in the dropdown below</span></div></div>
+</div>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-02.png" alt="Gap Analysis dropdown with earlier analyses and the New analysis button" /> */}
+  <div className="ga-shot" role="img" aria-label="Gap Analysis dropdown with earlier analyses and the New analysis button"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-02.png</span></div>
+  <figcaption className="ga-caption">The button opened: earlier analyses, and &ldquo;New analysis&rdquo; at the bottom.</figcaption>
+</figure>
+
+<div className="ga-steps">
+  <div className="ga-step"><span className="ga-step-num">4</span><div><span className="ga-step-text">Everything is ticked. Untick the parts you do not need, or leave it as it is.</span></div></div>
+</div>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-03.png" alt="Gap Analysis window with the parts of the concept to check" /> */}
+  <div className="ga-shot" role="img" aria-label="Gap Analysis window with the parts of the concept to check"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-03.png</span></div>
+  <figcaption className="ga-caption">Choose what to check, then click &ldquo;<strong>Start gap analysis</strong>&rdquo;.</figcaption>
+</figure>
+
+<div className="ga-steps">
+  <div className="ga-step"><span className="ga-step-num">5</span><div><span className="ga-step-text">Click <strong>Start gap analysis</strong>.</span></div></div>
+</div>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-04.png" alt="Gap Analysis window after starting an analysis" /> */}
+  <div className="ga-shot" role="img" aria-label="Gap Analysis window after starting an analysis"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-04.png</span></div>
+</figure>
+
+</section>
+
+<section className="ga-section">
+
+## While it runs
+
+<p className="ga-text">The window shows how far the analysis is. Results appear on the right as soon as they are ready.</p>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-05.png" alt="Gap Analysis window while the analysis is running" /> */}
+  <div className="ga-shot" role="img" aria-label="Gap Analysis window while the analysis is running"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-05.png</span></div>
+  <figcaption className="ga-caption">The analysis is running.</figcaption>
+</figure>
+
+<ul className="ga-list">
+  <li>You do not have to wait. Minimize or close the window and keep working; the analysis goes on, and the percentages appear on your concept one by one.</li>
+  <li>To stop it, click <strong>Stop</strong>. Everything finished so far is kept.</li>
+</ul>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-06.png" alt="Minimized Gap Analysis window with percentages appearing on the concept" /> */}
+  <div className="ga-shot" role="img" aria-label="Minimized Gap Analysis window with percentages appearing on the concept"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-06.png</span></div>
+  <figcaption className="ga-caption">The window is minimized (bottom right). The percentages are already appearing on the concept.</figcaption>
+</figure>
+
+<p className="ga-text">When it is finished you see the overall percentage, a short summary, and the score of each part of the concept.</p>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-07.png" alt="A finished gap analysis" /> */}
+  <div className="ga-shot" role="img" aria-label="A finished gap analysis"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-07.png</span></div>
+  <figcaption className="ga-caption ga-caption--center">A finished analysis.</figcaption>
+</figure>
+
+</section>
+
+<section className="ga-section">
+
+## How to read the result
+
+<p className="ga-text">Every item of your concept now has a percentage and a colour.</p>
+
+<div className="ga-legend-scale"><span>0 %</span><div className="ga-scale-bar"></div><span>100 %</span></div>
+
+<div className="ga-legend">
+  <div className="ga-legend-chip ga-legend-chip--red">Red: mostly missing</div>
+  <div className="ga-legend-chip ga-legend-chip--orange">Orange: partly built</div>
+  <div className="ga-legend-chip ga-legend-chip--green">Green: built</div>
+</div>
+
+<p className="ga-lead">Screens. Each screen has its percentage. Each field, button and list inside it has a small dot of its own.</p>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-08.png" alt="Concept canvas with a red unbuilt screen next to a green finished screen" /> */}
+  <div className="ga-shot" role="img" aria-label="Concept canvas with a red unbuilt screen next to a green finished screen"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-08.png</span></div>
+  <figcaption className="ga-caption">A screen that is planned and not built (red) next to a finished screen (green).</figcaption>
+</figure>
+
+<p className="ga-lead">Business flows. The flow has a percentage, and so does each step. You see exactly which step is missing.</p>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-09.png" alt="Business Flows canvas with partly built flows" /> */}
+  <div className="ga-shot" role="img" aria-label="Business Flows canvas with partly built flows"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-09.png</span></div>
+  <figcaption className="ga-caption">Two flows that are partly built: green steps are done, the red step is missing.</figcaption>
+</figure>
+
+<p className="ga-lead">Data objects. Each object has a percentage, and each field has a dot.</p>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-10.png" alt="Data Objects canvas with a field marked missing" /> */}
+  <div className="ga-shot" role="img" aria-label="Data Objects canvas with a field marked missing"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-10.png</span></div>
+  <figcaption className="ga-caption">This object is built, but its last field is missing (red dot).</figcaption>
+</figure>
+
+<p className="ga-lead">All other pages work the same way: Architecture, Roles, Integrations, Business Rules, API Endpoints, State &amp; Lifecycle, Events &amp; Jobs, Environment &amp; Config.</p>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-11.png" alt="API Endpoints canvas with percentages" /> */}
+  <div className="ga-shot" role="img" aria-label="API Endpoints canvas with percentages"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-11.png</span></div>
+  <figcaption className="ga-caption">API Endpoints with their percentages.</figcaption>
+</figure>
+
+<p className="ga-text"><strong>To see the details, click any percentage.</strong> A panel opens with a comment, what is missing, what was found, and the date and time of the analysis.</p>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-12.png" alt="Details panel of one item" /> */}
+  <div className="ga-shot" role="img" aria-label="Details panel of one item"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-12.png</span></div>
+  <figcaption className="ga-caption">The details of one item, opened with a click on its percentage.</figcaption>
+</figure>
+
+</section>
+
+<section className="ga-section">
+
+## How to see the code behind a result
+
+<div className="ga-steps">
+  <div className="ga-step"><span className="ga-step-num">1</span><div><span className="ga-step-text">On the Business Flows page, click the percentage of a step. Or open the details of any item and click a file name.</span></div></div>
+  <div className="ga-step"><span className="ga-step-num">2</span><div><span className="ga-step-text">The code opens with a comment that explains it. The lines that matter are marked.</span></div></div>
+  <div className="ga-step"><span className="ga-step-num">3</span><div><span className="ga-step-text">The list on the left shows every step with its code. Click another one to jump to it.</span></div></div>
+</div>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-13.png" alt="Code view with the lines that do what the step asks for marked green" /> */}
+  <div className="ga-shot" role="img" aria-label="Code view with the lines that do what the step asks for marked green"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-13.png</span></div>
+  <figcaption className="ga-caption"><strong className="ga-green">Green:</strong> this code does what the step asks for.</figcaption>
+</figure>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-14.png" alt="Code view with the gap marked red" /> */}
+  <div className="ga-shot" role="img" aria-label="Code view with the gap marked red"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-14.png</span></div>
+  <figcaption className="ga-caption"><strong className="ga-red">Red:</strong> this is where the gap is. Here the function is empty.</figcaption>
+</figure>
+
+<p className="ga-text">If the code was changed after the analysis, you are told so. Click <strong>As analysed</strong> to see the code as it was, or <strong>Now</strong> to see it as it is today.</p>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-15.png" alt="Code view showing that the code changed since the analysis" /> */}
+  <div className="ga-shot" role="img" aria-label="Code view showing that the code changed since the analysis"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-15.png</span></div>
+  <figcaption className="ga-caption">The code has changed since the analysis.</figcaption>
+</figure>
+
+</section>
+
+<section className="ga-section">
+
+## How to check a previous analysis
+
+<div className="ga-steps">
+  <div className="ga-step"><span className="ga-step-num">1</span><div><span className="ga-step-text">Click the <strong>Gap Analysis</strong> button. It shows the date and time of the analysis you are looking at.</span></div></div>
+  <div className="ga-step"><span className="ga-step-num">2</span><div><span className="ga-step-text">Pick another date and time from the list.</span></div></div>
+  <div className="ga-step"><span className="ga-step-num">3</span><div><span className="ga-step-text">The concept now shows that analysis.</span></div></div>
+</div>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-16.png" alt="List of analyses with date, time and result" /> */}
+  <div className="ga-shot" role="img" aria-label="List of analyses with date, time and result"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-16.png</span></div>
+  <figcaption className="ga-caption">All analyses with their date, time and result. The newest is on top.</figcaption>
+</figure>
+
+<p className="ga-text">This is how you see your progress. Run a new analysis after you have worked on the project and compare it with the earlier one.</p>
+
+<div className="ga-pair">
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-17.png" alt="State and Lifecycle page in the earlier analysis" /> */}
+  <div className="ga-shot" role="img" aria-label="State and Lifecycle page in the earlier analysis"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-17.png</span></div>
+  <figcaption className="ga-caption">Earlier analysis: 82 % overall.</figcaption>
+</figure>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-18.png" alt="State and Lifecycle page in the later analysis" /> */}
+  <div className="ga-shot" role="img" aria-label="State and Lifecycle page in the later analysis"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-18.png</span></div>
+  <figcaption className="ga-caption">Later analysis of the same page: 87 % overall.</figcaption>
+</figure>
+
+</div>
+
+<p className="ga-text">To see your concept without any percentages, pick <strong>Hide</strong> at the top of the list. Your choice is remembered the next time you open the project.</p>
+
+</section>
+
+<section className="ga-section">
+
+## How to check only one phase
+
+<p className="ga-text">If your concept is split into phases, you can check one phase at a time.</p>
+
+<div className="ga-steps">
+  <div className="ga-step"><span className="ga-step-num">1</span><div><span className="ga-step-text">Click <strong>Gap Analysis</strong>, then <strong>New analysis</strong>.</span></div></div>
+  <div className="ga-step"><span className="ga-step-num">2</span><div><span className="ga-step-text">Pick the phase in the <strong>Phase</strong> box. The list below now shows only what belongs to that phase.</span></div></div>
+  <div className="ga-step"><span className="ga-step-num">3</span><div><span className="ga-step-text">Click <strong>Start gap analysis</strong>.</span></div></div>
+</div>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-19.png" alt="Gap Analysis window with one phase chosen" /> */}
+  <div className="ga-shot" role="img" aria-label="Gap Analysis window with one phase chosen"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-19.png</span></div>
+  <figcaption className="ga-caption">One phase is chosen: 27 items instead of the whole concept.</figcaption>
+</figure>
+
+<p className="ga-text">In the list of analyses, a phase analysis shows the name of its phase next to the date. On the concept, only the items of that phase get a percentage.</p>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-20.png" alt="List of analyses with a phase analysis on top" /> */}
+  <div className="ga-shot" role="img" aria-label="List of analyses with a phase analysis on top"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-20.png</span></div>
+  <figcaption className="ga-caption">The newest analysis in this list covers one phase.</figcaption>
+</figure>
+
+</section>
+
+<section className="ga-section">
+
+## How to check a task
+
+<p className="ga-text">Gap Analysis also works on the Tasks page. Here the text of the task is what is asked, and the check tells you how much of it is really in the code.</p>
+
+<div className="ga-steps">
+  <div className="ga-step"><span className="ga-step-num">1</span><div><span className="ga-step-text">Open <strong>Tasks</strong>.</span></div></div>
+  <div className="ga-step"><span className="ga-step-num">2</span><div><span className="ga-step-text">Click <strong>Check gaps</strong> next to the task.</span></div></div>
+  <div className="ga-step"><span className="ga-step-num">3</span><div><span className="ga-step-text">Wait about half a minute. The percentage appears next to the task.</span></div></div>
+</div>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-21.png" alt="Task with the Check gaps button" /> */}
+  <div className="ga-shot" role="img" aria-label="Task with the Check gaps button"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-21.png</span></div>
+  <figcaption className="ga-caption">A task that was never checked has the &ldquo;Check gaps&rdquo; button.</figcaption>
+</figure>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-22.png" alt="Tasks with their percentages" /> */}
+  <div className="ga-shot" role="img" aria-label="Tasks with their percentages"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-22.png</span></div>
+  <figcaption className="ga-caption">Tasks with their percentages. All of them are marked &ldquo;<strong>Completed</strong>&rdquo;, but the last one shown has nothing in the code.</figcaption>
+</figure>
+
+<p className="ga-lead">Click the percentage to see the details: what the task asks for, point by point, what is missing, and the code.</p>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-23.png" alt="Details of a task that is marked completed but not built" /> */}
+  <div className="ga-shot" role="img" aria-label="Details of a task that is marked completed but not built"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-23.png</span></div>
+  <figcaption className="ga-caption">The details of a task that is marked completed but is not built.</figcaption>
+</figure>
+
+<p className="ga-text"><strong>A task with sub-tasks. &ldquo;Check gaps&rdquo; on such a task checks every sub-task.</strong> The task shows the average, and the details list the sub-tasks with their percentages. Click a <strong>sub-task</strong> to open it.</p>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-24.png" alt="Details of a task with four sub-tasks" /> */}
+  <div className="ga-shot" role="img" aria-label="Details of a task with four sub-tasks"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-24.png</span></div>
+  <figcaption className="ga-caption">A task with four sub-tasks: two are built, two are missing, so the task is at 50 %.</figcaption>
+</figure>
+
+<p className="ga-lead">The code. Under each point of a task there are file names. Click one to see the code behind that point.</p>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-25.png" alt="Code behind one point of a task" /> */}
+  <div className="ga-shot" role="img" aria-label="Code behind one point of a task"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-25.png</span></div>
+  <figcaption className="ga-caption">The code behind one point of a task.</figcaption>
+</figure>
+
+<ul className="ga-list">
+  <li>After you have worked on a task, click <strong>Check again</strong>. The earlier checks stay in the details, so you see the progress.</li>
+  <li>If the text of a task was changed after its check, a small pencil appears next to the percentage. Check it again.</li>
+  <li>A task that is not about the software (for example &ldquo;order a certificate&rdquo;) is marked &ldquo;n/a&rdquo;.</li>
+</ul>
+
+</section>
+
+<section className="ga-section">
+
+## All results in one window
+
+<div className="ga-steps">
+  <div className="ga-step"><span className="ga-step-num">1</span><div><span className="ga-step-text">Click the <strong>Gap Analysis</strong> button, then <strong>Open results</strong>.</span></div></div>
+  <div className="ga-step"><span className="ga-step-num">2</span><div><span className="ga-step-text">Click <strong>Mostly missing</strong>, <strong>Partly built</strong> or <strong>Built</strong> to see only those items. Use the search box to find one item.</span></div></div>
+  <div className="ga-step"><span className="ga-step-num">3</span><div><span className="ga-step-text">Click an item to open its details.</span></div></div>
+</div>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-26.png" alt="Gap Analysis results window" /> */}
+  <div className="ga-shot" role="img" aria-label="Gap Analysis results window"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-26.png</span></div>
+  <figcaption className="ga-caption">The results window. The weakest items are listed first.</figcaption>
+</figure>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-27.png" alt="Results filtered to mostly missing items with one item opened" /> */}
+  <div className="ga-shot" role="img" aria-label="Results filtered to mostly missing items with one item opened"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-27.png</span></div>
+  <figcaption className="ga-caption">Only the mostly missing items, with one of them opened.</figcaption>
+</figure>
+
+<p className="ga-text">At the bottom of the left side you find the list of all your analyses. Click <strong>View</strong> to open one, or <strong>Delete</strong> to remove it.</p>
+
+</section>
+
+<section className="ga-section">
+
+## How to ask a question
+
+<div className="ga-steps">
+  <div className="ga-step"><span className="ga-step-num">1</span><div><span className="ga-step-text">Open the results window.</span></div></div>
+  <div className="ga-step"><span className="ga-step-num">2</span><div><span className="ga-step-text">To ask about one item, open it and click <strong>Ask about this</strong>. To ask about the whole analysis, go straight to the box &ldquo;Ask about the gaps&rdquo;.</span></div></div>
+  <div className="ga-step"><span className="ga-step-num">3</span><div><span className="ga-step-text">Type your question and click <strong>Ask</strong>. The answer appears below and stays there for later.</span></div></div>
+</div>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-28.png" alt="A question about one flow and the answer" /> */}
+  <div className="ga-shot" role="img" aria-label="A question about one flow and the answer"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-28.png</span></div>
+  <figcaption className="ga-caption">A question about one flow, and the answer.</figcaption>
+</figure>
+
+</section>
+
+<section className="ga-section">
+
+## How to build what is missing
+
+<div className="ga-steps">
+  <div className="ga-step"><span className="ga-step-num">1</span><div><span className="ga-step-text">Click the percentage of an item that is not finished.</span></div></div>
+  <div className="ga-step"><span className="ga-step-num">2</span><div><span className="ga-step-text">Click <strong>Build the missing parts</strong>.</span></div></div>
+  <div className="ga-step"><span className="ga-step-num">3</span><div><span className="ga-step-text">Confirm. DEV mode opens and the developer agent starts on the missing parts.</span></div></div>
+</div>
+
+<figure className="ga-figure">
+  {/* Replace the placeholder below with: <DocImage src="/images/gap-analysis/figure-29.png" alt="Build the missing parts confirmation dialog" /> */}
+  <div className="ga-shot" role="img" aria-label="Build the missing parts confirmation dialog"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2" /><circle cx="9" cy="9" r="2" /><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /></svg><span className="ga-shot-label">Screenshot placeholder</span><span className="ga-shot-file">/images/gap-analysis/figure-29.png</span></div>
+  <figcaption className="ga-caption">Confirm, and the missing parts go to DEV mode.</figcaption>
+</figure>
+
+<p className="ga-text">When the work is done, start a new analysis to see the new result.</p>
+
+</section>
+
+<section className="ga-section ga-section--boxed">
+
+## From Claude Code, Codex or Cursor
+
+<p className="ga-text">If your coding tool is connected to think4ever (MCP &amp; Tools &rarr; MCP Connect), you can do all of this without leaving the tool. Just ask it in your own words.</p>
+
+<span className="ga-subhead">The whole concept, or a part of it:</span>
+
+<div className="ga-prompts">
+  <div className="ga-prompt">&ldquo;Start a gap analysis of this project.&rdquo;</div>
+  <div className="ga-prompt">&ldquo;Run a gap analysis of Phase 3 only.&rdquo;</div>
+  <div className="ga-prompt">&ldquo;Analyse only the business flows and the business rules.&rdquo;</div>
+  <div className="ga-prompt">&ldquo;Show me the results of the last gap analysis, the weakest items first.&rdquo;</div>
+  <div className="ga-prompt">&ldquo;What is missing in the Export My Posts flow? Show me the code.&rdquo;</div>
+  <div className="ga-prompt">&ldquo;Compare the last two analyses.&rdquo;</div>
+</div>
+
+<span className="ga-subhead">One task:</span>
+
+<div className="ga-prompts">
+  <div className="ga-prompt">&ldquo;Check the gaps of task 4312.&rdquo;</div>
+  <div className="ga-prompt">&ldquo;Which of my tasks still have gaps?&rdquo;</div>
+  <div className="ga-prompt">&ldquo;Close the gaps of this task and check it again.&rdquo;</div>
+</div>
+
+<p className="ga-text ga-text--after">The tool starts the analysis, waits for it, reads what is missing and where, and can run it again after its changes. An analysis started this way is the same one you see on your concept and on the Tasks page, with the same percentages.</p>
+
+<div className="ga-remember"><strong>One thing to remember:</strong> the analysis reads the code that is in your think4ever project. Send your latest code to the project first.</div>
+
+</section>
+
+</div>
