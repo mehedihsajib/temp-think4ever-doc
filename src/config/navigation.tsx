@@ -507,11 +507,6 @@ export const docsSidebarNav: SidebarGroup[] = [
         icon: Lock,
       },
       {
-        title: "Gap Analysis",
-        href: "/gap_analysis",
-        icon: SearchCheck,
-      },
-      {
         title: "Sidekick",
         href: "/sidekick",
         icon: Bot,
@@ -555,6 +550,11 @@ export const docsSidebarNav: SidebarGroup[] = [
         title: "Business Rules",
         href: "/business_rules",
         icon: Scale,
+      },
+      {
+        title: "Gap Analysis",
+        href: "/gap_analysis",
+        icon: SearchCheck,
       },
     ],
   },

@@ -424,14 +424,14 @@
   }
   .prose .ld-page .ld-section > h2 {
     font-size: 1.75rem !important;
-    font-weight: 800 !important;
+    font-weight: 600 !important;
     line-height: 1.25 !important;
     letter-spacing: -0.02em !important;
     color: var(--ld-ink) !important;
     margin: 0 0 1.25rem !important;
   }
   .prose .ld-page .ld-section > h2:has(+ .ld-eyebrow) {
-    margin-bottom: 0.25rem !important;
+    margin-bottom: 1rem !important;
   }
   .prose .ld-page p.ld-text {
     font-size: 1rem !important;
