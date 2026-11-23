@@ -8,6 +8,7 @@ import {
   docsSidebarNav,
   devSidebarNav,
   portalSidebarNav,
+  type NavItem,
 } from "@/config/navigation";
 import {
   ChevronDown,
@@ -156,10 +157,8 @@ export function Header() {
                         } ${isTwoCol ? "w-[590px]" : "w-[270px]"}`}
                         role="menu"
                       >
-                        <div
-                          className={`grid gap-1 ${isTwoCol ? "grid-cols-2" : "grid-cols-1"}`}
-                        >
-                          {item.items.map((subItem, subIdx) => {
+                        {(() => {
+                          const renderSubItem = (subItem: NavItem, subIdx: number) => {
                             const Icon = subItem.icon;
                             return (
                               <Link
@@ -181,8 +180,32 @@ export function Header() {
                                 </div>
                               </Link>
                             );
-                          })}
-                        </div>
+                          };
+
+                          const subItems = item.items!;
+
+                          if (isTwoCol && item.firstColumnCount) {
+                            const split = item.firstColumnCount;
+                            return (
+                              <div className="grid grid-cols-2 gap-1">
+                                <div className="flex flex-col gap-1">
+                                  {subItems.slice(0, split).map((sub, i) => renderSubItem(sub, i))}
+                                </div>
+                                <div className="flex flex-col gap-1">
+                                  {subItems.slice(split).map((sub, i) => renderSubItem(sub, split + i))}
+                                </div>
+                              </div>
+                            );
+                          }
+
+                          return (
+                            <div
+                              className={`grid gap-1 ${isTwoCol ? "grid-cols-2" : "grid-cols-1"}`}
+                            >
+                              {subItems.map((sub, i) => renderSubItem(sub, i))}
+                            </div>
+                          );
+                        })()}
                       </div>
                     </>
                   ) : (

@@ -127,6 +127,13 @@ export type NavItem = {
   icon?: any;
   color?: string;
   columns?: number;
+  /**
+   * Two-column dropdowns only: how many items go in the first column.
+   * When set, items are listed in reading order (top-to-bottom, left column
+   * first) instead of row by row, so the array order matches the numbering
+   * and the mobile menu order.
+   */
+  firstColumnCount?: number;
   items?: NavItem[];
 };
 
@@ -211,19 +218,13 @@ export const headerNav: NavItem[] = [
   {
     title: "Docs",
     columns: 2,
+    firstColumnCount: 6,
     items: [
       {
         title: "Customer Onboarding",
         description: "1 - Get Started with Think4ever.",
         href: "/onboarding",
         icon: Rocket,
-        color: "text-blue-500",
-      },
-      {
-        title: "Think4ever Designer",
-        description: "7 - Learn how to map systems.",
-        href: "/introduction",
-        icon: Palette,
         color: "text-blue-500",
       },
       {
@@ -234,25 +235,11 @@ export const headerNav: NavItem[] = [
         color: "text-indigo-500",
       },
       {
-        title: "Think4ever Developer",
-        description: "8 - Technical guide for developers.",
-        href: "/dev/developer_mode",
-        icon: Code,
-        color: "text-indigo-500",
-      },
-      {
         title: "Build a New Project",
         description: "3 - Create your new project.",
         href: "/create_project",
         icon: FolderPlus,
         color: "text-emerald-500",
-      },
-      {
-        title: "Think MCP",
-        description: "9 - Claude, Codex and Cursor.",
-        href: "/think_mcp",
-        icon: Puzzle,
-        color: "text-amber-500",
       },
       {
         title: "Reverse Engineering",
@@ -262,25 +249,11 @@ export const headerNav: NavItem[] = [
         color: "text-slate-500",
       },
       {
-        title: "Think API",
-        description: "10 - Programmatically manage tokens.",
-        href: "/think_api",
-        icon: Terminal,
-        color: "text-emerald-500",
-      },
-      {
         title: "Production Hardening",
         description: "5 - Assess your project's production readiness.",
         href: "/production_hardening",
         icon: Shield,
         color: "text-rose-500",
-      },
-      {
-        title: "Think4ever Portal",
-        description: "11 - Manage your team dashboard",
-        href: "/portal/dashboard",
-        icon: Users,
-        color: "text-blue-500",
       },
       {
         title: "Marketplace",
@@ -290,8 +263,50 @@ export const headerNav: NavItem[] = [
         color: "text-amber-500",
       },
       {
+        title: "Think4ever Designer",
+        description: "7 - Learn how to map systems.",
+        href: "/introduction",
+        icon: Palette,
+        color: "text-blue-500",
+      },
+      {
+        title: "Think4ever Developer",
+        description: "8 - Technical guide for developers.",
+        href: "/dev/developer_mode",
+        icon: Code,
+        color: "text-indigo-500",
+      },
+      {
+        title: "Think MCP",
+        description: "9 - Claude, Codex and Cursor.",
+        href: "/think_mcp",
+        icon: Puzzle,
+        color: "text-amber-500",
+      },
+      {
+        title: "Gap Analysis",
+        description: "10 - See what is built and what is missing.",
+        href: "/gap_analysis",
+        icon: SearchCheck,
+        color: "text-emerald-500",
+      },
+      {
+        title: "Think API",
+        description: "11 - Programmatically manage tokens.",
+        href: "/think_api",
+        icon: Terminal,
+        color: "text-emerald-500",
+      },
+      {
+        title: "Think4ever Portal",
+        description: "12 - Manage your team dashboard",
+        href: "/portal/dashboard",
+        icon: Users,
+        color: "text-blue-500",
+      },
+      {
         title: "VS Code Plugin",
-        description: "12 - Access T4E inside VS Code.",
+        description: "13 - Access T4E inside VS Code.",
         href: "/dev/vs_code_integration",
         icon: Code,
         color: "text-blue-500",
