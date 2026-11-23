@@ -371,6 +371,75 @@
 }
 .ga-page .ga-remember strong { color: var(--ga-ink); }
 
+/* ---------- Screen Look Check ---------- */
+.ga-page .ga-section-sub {
+  display: block;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: var(--ga-muted);
+  margin: -0.25rem 0 1.25rem;
+}
+.ga-page .ga-slc h3 { scroll-margin-top: 6rem; }
+.ga-page .ga-match {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--ga-ink);
+}
+.ga-page .ga-match::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  flex-shrink: 0;
+}
+.ga-page .ga-match--green::before { background: #16a34a; }
+.ga-page .ga-match--lime::before { background: #84cc16; }
+.ga-page .ga-match--orange::before { background: #ea7a1a; }
+.ga-page .ga-match--red::before { background: #dc2626; }
+
+.ga-page .ga-compare {
+  border: 1px solid var(--ga-border);
+  border-radius: 0.875rem;
+  background: var(--ga-card);
+  padding: 1rem 1.125rem 1.125rem;
+  margin: 0 0 1.25rem;
+}
+.ga-page .ga-compare-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.ga-page .ga-compare-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ga-ink);
+}
+.ga-page .ga-compare-score { font-size: 0.875rem; color: var(--ga-muted); }
+.ga-page .ga-compare-before { color: var(--ga-red); font-weight: 600; }
+.ga-page .ga-compare-after { color: var(--ga-green); font-weight: 600; }
+.ga-page .ga-compare-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.75rem;
+}
+@media (min-width: 640px) {
+  .ga-page .ga-compare-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.ga-page .ga-compare-item { margin: 0; }
+.ga-page .ga-compare-item figcaption {
+  text-align: center;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--ga-ink);
+  margin-top: 0.25rem;
+}
+.ga-page .ga-compare > .ga-caption { margin-top: 0.75rem; }
+
 @media (max-width: 639px) {
   .ga-page .ga-hero { padding: 1.75rem 1.25rem 1.5rem; }
   .ga-page .ga-badge { padding: 0.5rem 1rem 0.5rem 0.625rem; }

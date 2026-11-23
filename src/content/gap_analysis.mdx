@@ -376,4 +376,275 @@
 
 </section>
 
+<section className="ga-section ga-slc">
+
+## Screen Look Check
+
+<span className="ga-section-sub">Does every built screen look like the screen that was designed for it?</span>
+
+<p className="ga-text">Screen Look Check is one more layer of Gap Analysis. Gap Analysis tells you what is built and what is missing. Screen Look Check looks at the pictures: it puts each designed screen next to the same screen of the built application, lists every difference in look, and lets you send the differences you choose to the developer agent to fix.</p>
+
+<figure className="ga-figure">
+  <DocImage src="/images/gap-analysis/screen-lock-check/01-window-overview.png" alt="The Screen Look Check window" />
+  <figcaption className="ga-caption">The Screen Look Check window: the screens on the left, the design and the built screen side by side, the problems below.</figcaption>
+</figure>
+
+### 1. How to open it
+
+<p className="ga-text">There are two ways.</p>
+
+<div className="ga-steps">
+  <div className="ga-step"><span className="ga-step-num">1</span><div><span className="ga-step-text">In the top menu open <strong>MCP &amp; Tools</strong> and choose <strong>Screen Look Check</strong> under Quality.</span></div></div>
+  <div className="ga-step"><span className="ga-step-num">2</span><div><span className="ga-step-text">Or open <strong>Gap Analysis</strong> and press <strong>Screen look</strong> at the top of its window.</span></div></div>
+</div>
+
+<figure className="ga-figure">
+  <DocImage src="/images/gap-analysis/screen-lock-check/02-menu.png" alt="Screen Look Check in the Quality menu" maxWidth="360px" />
+  <figcaption className="ga-caption">Screen Look Check in the menu, next to Gap Analysis.</figcaption>
+</figure>
+
+<figure className="ga-figure">
+  <DocImage src="/images/gap-analysis/screen-lock-check/03-screen-look-button.png" alt="The Screen look button in the Gap Analysis window" />
+  <figcaption className="ga-caption">The Screen look button in the Gap Analysis window.</figcaption>
+</figure>
+
+### 2. How to start a check
+
+<div className="ga-steps">
+  <div className="ga-step"><span className="ga-step-num">1</span><div><span className="ga-step-text">Press <strong>Check the screens</strong>.</span></div></div>
+  <div className="ga-step"><span className="ga-step-num">2</span><div><span className="ga-step-text">Choose which screens to check: all designed screens, only the screens that had problems, or your own choice.</span></div></div>
+  <div className="ga-step"><span className="ga-step-num">3</span><div><span className="ga-step-text">If your application asks to sign in, type a test account. It is used for this check only and is not saved. If the application&apos;s own data already has a demo account, the check finds and uses it by itself.</span></div></div>
+  <div className="ga-step"><span className="ga-step-num">4</span><div><span className="ga-step-text">Press <strong>Start the check</strong>.</span></div></div>
+</div>
+
+<figure className="ga-figure">
+  <DocImage src="/images/gap-analysis/screen-lock-check/04-start-panel.png" alt="The Check the screens start panel" maxWidth="360px" />
+  <figcaption className="ga-caption">The start panel.</figcaption>
+</figure>
+
+<p className="ga-text">You do not have to start the application yourself. If it is not running, the check starts it, takes the pictures and stops it again.</p>
+
+<p className="ga-text">While the check runs you see how many screens are done. You can close the window and come back later; the check goes on.</p>
+
+<figure className="ga-figure">
+  <DocImage src="/images/gap-analysis/screen-lock-check/05-check-in-progress.png" alt="A Screen Look Check in progress" />
+  <figcaption className="ga-caption">A check in progress. Screens that are being compared show a small circle.</figcaption>
+</figure>
+
+### 3. How to read the result
+
+<p className="ga-text">Every screen has its own card.</p>
+
+<ul className="ga-list">
+  <li><strong>Design, the target</strong> is the picture of the screen as it was designed.</li>
+  <li><strong>Built application</strong> is the picture of the same screen in the running application, with its address.</li>
+  <li>The <strong>percentage</strong> says how close the two look.</li>
+</ul>
+
+| Match | What it means |
+| :--- | :--- |
+| <span className="ga-match ga-match--green">90 to 100 %</span> | The same look. Only small polish is left, or nothing. |
+| <span className="ga-match ga-match--lime">70 to 89 %</span> | The same structure, with differences in style that you can see. |
+| <span className="ga-match ga-match--orange">40 to 69 %</span> | Parts are missing or laid out in another way. |
+| <span className="ga-match ga-match--red">Below 40 %</span> | A different screen. |
+
+<figure className="ga-figure">
+  <DocImage src="/images/gap-analysis/screen-lock-check/06-one-screen.png" alt="One screen card with the design and the built screen" />
+  <figcaption className="ga-caption">One screen: the design on the left, the built screen on the right. Here the row of filter chips is missing and the heading is different.</figcaption>
+</figure>
+
+<p className="ga-text">Click a picture to see both pictures large, side by side.</p>
+
+<figure className="ga-figure">
+  <DocImage src="/images/gap-analysis/screen-lock-check/07-both-pictures-large.png" alt="Both pictures large, side by side" />
+  <figcaption className="ga-caption">Both pictures large.</figcaption>
+</figure>
+
+<span className="ga-subhead">The problems</span>
+
+<p className="ga-text">Under the pictures is the list of problems found on that screen. Each problem says:</p>
+
+<ul className="ga-list">
+  <li>how serious it is: <strong>High</strong> (a part is missing or the layout is different), <strong>Medium</strong> (a clear difference in style) or <strong>Low</strong> (small polish);</li>
+  <li><strong>Design</strong>: what the designed screen shows;</li>
+  <li><strong>Built</strong>: what the built screen shows;</li>
+  <li><strong>Change</strong>: what to change, and in which file.</li>
+</ul>
+
+<figure className="ga-figure">
+  <DocImage src="/images/gap-analysis/screen-lock-check/08-problems-list.png" alt="The problems of one screen, each with its checkbox" />
+  <figcaption className="ga-caption">The problems of one screen, each with its checkbox.</figcaption>
+</figure>
+
+<p className="ga-text">Example content is not a problem. A design is filled with sample names, numbers and rows. If your application shows other data, the check does not report it.</p>
+
+### 4. How to choose what to fix
+
+<p className="ga-text">All problems are ticked when the result opens. Untick the ones you do not want to fix now. The line at the bottom always shows how many problems on how many screens are selected.</p>
+
+<figure className="ga-figure">
+  <DocImage src="/images/gap-analysis/screen-lock-check/09-one-problem-unticked.png" alt="One problem unticked, 9 of 10 problems selected" />
+  <figcaption className="ga-caption">One problem is unticked. The line at the bottom now says 9 of 10 problems selected.</figcaption>
+</figure>
+
+<p className="ga-text"><strong>Tick all</strong> and <strong>Untick all</strong> work for one screen (above its list) or for everything (at the bottom).</p>
+
+### 5. How to fix the problems
+
+<div className="ga-steps">
+  <div className="ga-step"><span className="ga-step-num">1</span><div><span className="ga-step-text">Press <strong>Fix the selected problems</strong>.</span></div></div>
+  <div className="ga-step"><span className="ga-step-num">2</span><div><span className="ga-step-text">Confirm. DEV mode opens and the developer agent gets the selected problems.</span></div></div>
+</div>
+
+<figure className="ga-figure">
+  <DocImage src="/images/gap-analysis/screen-lock-check/10-fix-confirmation.png" alt="Fix the selected problems confirmation dialog" maxWidth="520px" />
+  <figcaption className="ga-caption">The confirmation before the problems are sent.</figcaption>
+</figure>
+
+<p className="ga-text">The agent does not only get the text. For every screen it also gets the two pictures: the designed screen and the screen as it is built now. The chat shows a line that says so.</p>
+
+<figure className="ga-figure">
+  <DocImage src="/images/gap-analysis/screen-lock-check/11-dev-mode-chat.png" alt="The DEV mode chat showing the pictures sent with the request" />
+  <figcaption className="ga-caption">The chat in DEV mode: the pictures went along with the request.</figcaption>
+</figure>
+
+<p className="ga-text">Before it changes anything, the agent shows the list of changes it wants to make. Read it and press <strong>Confirm &amp; Apply</strong>, or <strong>Reject</strong> to change the plan.</p>
+
+<figure className="ga-figure">
+  <DocImage src="/images/gap-analysis/screen-lock-check/12-planned-changes.png" alt="The agent's list of planned changes" maxWidth="520px" />
+  <figcaption className="ga-caption">The agent&apos;s list of planned changes. Nothing changes until you confirm.</figcaption>
+</figure>
+
+<p className="ga-text">When it is done, the agent says which file it changed for which problem. It fixes the problems you selected and leaves the others alone.</p>
+
+<figure className="ga-figure">
+  <DocImage src="/images/gap-analysis/screen-lock-check/13-agent-report.png" alt="The agent's report of the changes it made" maxWidth="640px" />
+  <figcaption className="ga-caption">The agent&apos;s report. Two problems were selected and fixed; the third, which was unticked, was left as it is.</figcaption>
+</figure>
+
+<p className="ga-text">One request carries up to six screens, so the agent can look at every picture. If you selected more, the screens furthest from the design go first and the others can be sent after that.</p>
+
+### 6. How to confirm the fix
+
+<div className="ga-steps">
+  <div className="ga-step"><span className="ga-step-num">1</span><div><span className="ga-step-text">Open Screen Look Check again and press <strong>Check the screens</strong>.</span></div></div>
+  <div className="ga-step"><span className="ga-step-num">2</span><div><span className="ga-step-text">Choose <strong>Only the screens with problems</strong> and start. Or press <strong>Check again</strong> on one screen.</span></div></div>
+</div>
+
+<figure className="ga-figure">
+  <DocImage src="/images/gap-analysis/screen-lock-check/14-start-panel-problems-only.png" alt="Start panel with Only the screens with problems chosen" maxWidth="360px" />
+  <figcaption className="ga-caption">Checking only the screens that had problems.</figcaption>
+</figure>
+
+<p className="ga-text">The new result shows the progress of every screen:</p>
+
+<ul className="ga-list">
+  <li>the arrow next to the percentage says how much the match went up or down since the check before;</li>
+  <li><strong>Fixed since the check before</strong> lists the problems that are gone;</li>
+  <li>problems that are still there, or new ones, are listed with checkboxes again, ready for the next round.</li>
+</ul>
+
+<figure className="ga-figure">
+  <DocImage src="/images/gap-analysis/screen-lock-check/15-result-after-fix.png" alt="A result after a fix" />
+  <figcaption className="ga-caption">A result after a fix: six screens match now. One screen went up by 18 points and still lists smaller problems, ready to be sent again.</figcaption>
+</figure>
+
+<figure className="ga-figure">
+  <DocImage src="/images/gap-analysis/screen-lock-check/16-everything-fixed.png" alt="Every screen matches its design" />
+  <figcaption className="ga-caption">When everything is fixed: every screen matches, and each card lists what was fixed.</figcaption>
+</figure>
+
+### 7. An example from start to finish
+
+<p className="ga-text">The application is a student to-do app with 7 designed screens. It was built exactly like its design. Then 10 things were changed in the code of 6 screens, so that these screens no longer look like the design. One screen (Login) was left as it was. After that the check was started, the problems it found were sent to the developer agent, and the screens were checked again.</p>
+
+<span className="ga-subhead">Step 1. What was changed, and what the check found</span>
+
+| Screen | Changed on purpose | Reported by the check |
+| :--- | :--- | :--- |
+| Dashboard | The four statistic cards stand in two columns (2 x 2) instead of one row of four | **High.** Stat cards wrap into a 2×2 grid |
+| Dashboard | The primary colour is green (#16a34a) instead of purple (#7c3aed) | **Medium.** Primary accent shows green instead of violet |
+| Task List | The row of quick filter chips (All Tasks / Pending / In Progress / Completed / Overdue) is missing | **High.** Quick filter chips row missing |
+| Task List | The section heading reads "Task Overview" instead of "Your Tasks" | **Medium.** Page heading text and gradient accent differ |
+| Settings | The left navigation sidebar is missing | **High.** Left sidebar navigation missing |
+| Task Detail | Headings are set in a serif font (Georgia) instead of Plus Jakarta Sans | **Medium.** Headings use a serif font instead of Plus Jakarta Sans |
+| Task Detail | Cards have square corners and a heavy dark border instead of rounded corners with a light border | **Medium.** Cards drawn with square corners and thick dark border |
+| Create/Edit Task | The "Live preview" summary panel on the right is missing | **High.** Live preview panel missing |
+| Create/Edit Task | The main button reads "Submit" instead of "Save changes" | **Medium.** Primary button label differs |
+| Register | The left brand panel is flat dark blue (#0f172a) instead of the purple-to-pink gradient | **Medium.** Brand panel background is dark navy instead of violet→pink gradient |
+| Login | Nothing | 98 % match, no problems |
+
+<p className="ga-text ga-text--after">The check found 10 of the 10 changes and reported nothing that had not been changed. The screen that was left alone came out as matching. The check took about a minute and a half.</p>
+
+<span className="ga-subhead">Step 2. The screens before and after the fix</span>
+
+<p className="ga-text">All 10 problems were left ticked and sent to the developer agent with <strong>Fix the selected problems</strong>. The agent received 12 pictures with the request, two for each of the 6 screens, showed its list of planned changes, and made the changes after they were confirmed.</p>
+
+<div className="ga-compare">
+  <div className="ga-compare-head"><span className="ga-compare-title">Settings</span><span className="ga-compare-score"><span className="ga-compare-before">65 % before</span>, <span className="ga-compare-after">97 % after</span></span></div>
+  <div className="ga-compare-grid">
+    <figure className="ga-compare-item"><DocImage src="/images/gap-analysis/screen-lock-check/settings-design.png" alt="Settings: design" /><figcaption>Design</figcaption></figure>
+    <figure className="ga-compare-item"><DocImage src="/images/gap-analysis/screen-lock-check/settings-before.png" alt="Settings: built, before the fix" /><figcaption>Built, before the fix</figcaption></figure>
+    <figure className="ga-compare-item"><DocImage src="/images/gap-analysis/screen-lock-check/settings-design.png" alt="Settings: built, after the fix" /><figcaption>Built, after the fix</figcaption></figure>
+  </div>
+  <span className="ga-caption">The navigation on the left was taken out. The check reported it as one problem of high severity.</span>
+</div>
+
+<div className="ga-compare">
+  <div className="ga-compare-head"><span className="ga-compare-title">Dashboard</span><span className="ga-compare-score"><span className="ga-compare-before">80 % before</span>, <span className="ga-compare-after">98 % after</span></span></div>
+  <div className="ga-compare-grid">
+    <figure className="ga-compare-item"><DocImage src="/images/gap-analysis/screen-lock-check/dashboard-design.png" alt="Dashboard: design" /><figcaption>Design</figcaption></figure>
+    <figure className="ga-compare-item"><DocImage src="/images/gap-analysis/screen-lock-check/dashboard-before.png" alt="Dashboard: built, before the fix" /><figcaption>Built, before the fix</figcaption></figure>
+    <figure className="ga-compare-item"><DocImage src="/images/gap-analysis/screen-lock-check/dashboard-design.png" alt="Dashboard: built, after the fix" /><figcaption>Built, after the fix</figcaption></figure>
+  </div>
+  <span className="ga-caption">The four cards at the top were put in two columns, and the main colour was changed from purple to green.</span>
+</div>
+
+<div className="ga-compare">
+  <div className="ga-compare-head"><span className="ga-compare-title">Task Detail</span><span className="ga-compare-score"><span className="ga-compare-before">80 % before</span>, <span className="ga-compare-after">98 % after</span></span></div>
+  <div className="ga-compare-grid">
+    <figure className="ga-compare-item"><DocImage src="/images/gap-analysis/screen-lock-check/task-detail-design.png" alt="Task Detail: design" /><figcaption>Design</figcaption></figure>
+    <figure className="ga-compare-item"><DocImage src="/images/gap-analysis/screen-lock-check/task-detail-before.png" alt="Task Detail: built, before the fix" /><figcaption>Built, before the fix</figcaption></figure>
+    <figure className="ga-compare-item"><DocImage src="/images/gap-analysis/screen-lock-check/task-detail-design.png" alt="Task Detail: built, after the fix" /><figcaption>Built, after the fix</figcaption></figure>
+  </div>
+  <span className="ga-caption">The headings were set in another font and the cards got square corners with a dark border.</span>
+</div>
+
+<div className="ga-compare">
+  <div className="ga-compare-head"><span className="ga-compare-title">Task List</span><span className="ga-compare-score"><span className="ga-compare-before">80 % before</span>, <span className="ga-compare-after">97 % after</span></span></div>
+  <div className="ga-compare-grid">
+    <figure className="ga-compare-item"><DocImage src="/images/gap-analysis/screen-lock-check/task-list-design.png" alt="Task List: design" /><figcaption>Design</figcaption></figure>
+    <figure className="ga-compare-item"><DocImage src="/images/gap-analysis/screen-lock-check/task-list-before.png" alt="Task List: built, before the fix" /><figcaption>Built, before the fix</figcaption></figure>
+    <figure className="ga-compare-item"><DocImage src="/images/gap-analysis/screen-lock-check/task-list-design.png" alt="Task List: built, after the fix" /><figcaption>Built, after the fix</figcaption></figure>
+  </div>
+  <span className="ga-caption">The row of filter chips under the heading was taken out and the heading text was changed.</span>
+</div>
+
+<span className="ga-subhead">Step 3. The result of each check</span>
+
+| Screen | First check | After fix 1 | After fix 2 |
+| :--- | :--- | :--- | :--- |
+| Login | 98 %, matches | | |
+| Register | 82 %, 1 problem | 98 %, matches | |
+| Dashboard | 80 %, 2 problems | 98 %, matches | |
+| Task List | 80 %, 2 problems | 97 %, matches | |
+| Create/Edit Task | 62 %, 2 problems | 96 %, 1 problem | 99 %, matches |
+| Task Detail | 80 %, 2 problems | 98 %, matches | |
+| Settings | 65 %, 1 problem | 97 %, matches | |
+
+<p className="ga-text ga-text--after">After the first fix the 10 problems were listed as fixed and 6 of the 7 screens matched. On Create/Edit Task the agent had put the missing part back, but not exactly like the design, so the check listed 1 smaller difference there. It was sent in a second round, and after that every screen matches.</p>
+
+### 8. Good to know
+
+<ul className="ga-list">
+  <li><strong>Screens without a design.</strong> Only screens that have a built UI design are compared. A screen without one is shown as &quot;No design&quot;.</li>
+  <li><strong>When no picture can be taken.</strong> Some screens cannot be opened in a browser: a mobile or desktop application, or a screen behind a sign-in when no test account is known. The check then compares the design with the code of the screen and says so on the card (&quot;compared through the code&quot;). It is more careful there and reports only what the code proves.</li>
+  <li><strong>Sign-in screens.</strong> The application&apos;s own sign-in and register screens are opened signed out, the other screens signed in.</li>
+  <li><strong>Parts that cannot be compared.</strong> A dialog that opens only after a click, or the part of a long page below the picture, is listed under &quot;Could not be compared&quot; and is not counted as a problem.</li>
+  <li><strong>Your design stays as it is.</strong> The check never changes the concept or the UI screens. Fixes are made in the code of the application, by the developer agent, after you confirm them.</li>
+  <li><strong>Earlier checks are kept.</strong> Each screen shows its newest result, and the result before it is used for the comparison.</li>
+</ul>
+
+</section>
+
 </div>
